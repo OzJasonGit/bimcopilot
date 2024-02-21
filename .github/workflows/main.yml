@@ -22,21 +22,11 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
-          cd /var/www/
+          cd /var/www/bimcopilot
 
-          # Check if the directory exists
-          if [ -d "bimcopilot/" ]; then
-            # If the directory exists, print a message
-            echo "Directory 'bimcopilot/' already exists."
+          # git pull
+          git pull origin main
 
-            cd bimcopilot/
-            git pull origin main
-          
-          else
-            # If the directory doesn't exist, clone the repository
-            git clone git@github.com:OzJasonGit/bimcopilot.git 
-            cd bimcopilot/
-          fi
 
           # Install or update dependencies
           npm install -f
