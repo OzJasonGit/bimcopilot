@@ -11,7 +11,7 @@ const Saleslanding = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api");
+        const res = await axios.get("http://217.196.51.104/api");
         const { responseData } = res.data;
         setData(responseData);
         setFirstStory(responseData.firstStory);
