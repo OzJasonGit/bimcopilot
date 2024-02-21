@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "bimcopilot.com_final",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,13 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mux/mux-player": "^2.3.2",
+    "@mux/mux-player-react": "^2.3.2",
+    "@stripe/stripe-js": "^2.4.0",
+    "@vidstack/react": "^0.6.14",
+    "antd": "^5.13.3",
+    "axios": "^1.6.7",
+    "mongodb": "^6.3.0",
+    "next": "^14.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.1.0"
+    "sharp": "^0.33.2",
+    "stripe": "^14.14.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0"
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
   }
 }

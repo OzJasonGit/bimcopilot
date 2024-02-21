@@ -1,7 +1,22 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Provider from "./utils/Provider";
+import localFont from 'next/font/local';
 
-const inter = Inter({ subsets: ["latin"] });
+
+const avant_garde_bold = localFont
+  ({
+    src: '../fonts/font.woff2',
+    variable: '--font-avant_garde_bold',
+  });
+
+
+const avant_garde_medium = localFont
+  ({ 
+    src: '../fonts/avant_garde_medium.woff2',
+    variable: '--font-avant_garde_medium',
+  });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +26,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable}`}>
+        <Provider>
+          <>{children}</>
+        </Provider>
+      </body>
     </html>
   );
 }

@@ -1,0 +1,86 @@
+
+#WHO_WE_WORK_WITH {
+
+    width: 100%;
+    height: 500px;
+}
+
+
+
+
+#CAROUSEL_HOLDER {
+    position: relative;
+    grid-area: CAROUSEL;
+    display: grid;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+        ". . ."
+        ". MAIN ."
+        ". . .";
+    width: 100%;
+    height: 280px;
+    background-color: rgb(23 23 23);
+}
+
+#CAROUSEL {
+    grid-area: MAIN;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.SLIDE_CONTAINER {
+    background-color: transparent;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.SLIDE {
+    display: grid;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    height: 100%;   
+    grid-template-columns: 10px 1fr 10px;
+        grid-template-rows: 10px auto 10px;
+        grid-template-areas:
+            ". . ."
+            ". MAIN ."
+            ". . .";
+    
+}
+
+
+
+
+#HOLDER_1 {
+    grid-area: MAIN;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#HOLDER_2 {
+    grid-area: MAIN;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#HOLDER_3 {
+    grid-area: MAIN;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+

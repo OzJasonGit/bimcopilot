@@ -1,0 +1,11 @@
+#DATE_ICON {
+    grid-area: DATE;
+}
+
+#DATE {
+    font: bold 14px/.4 Helvetica;
+}
+
+#DATE_TEXT {
+   
+}

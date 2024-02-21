@@ -1,0 +1,22 @@
+#VIDEO_CONTAINER {
+    grid-area: VIDEO;
+    position: relative;
+    overflow: hidden;
+    alignItems: center;
+    alignContent: center;
+    justifyContent: center;
+}
+
+
+#VIDEO {
+
+    height: 100%;
+    position: relative;
+}
+
+
+#MUX {
+    --media-object-fit: cover;
+    --media-object-position: center;
+    --aspect-ratio: 16 / 9;
+}
