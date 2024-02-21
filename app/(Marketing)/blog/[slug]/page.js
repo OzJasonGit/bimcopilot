@@ -16,7 +16,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/blogroute");
+        const res = await axios.get("https://bimcopilot.com/api/blogroute");
         const { responseData } = res.data;
         setData(responseData);
         setFirstStory(responseData.firstStory);
