@@ -123,7 +123,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   >
                   {story.title}
                     Sustainable, Richer Architects through Technology and
-                    Automation testing
+                    Automation 
                   </h1>
                   <br/>
                   <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
