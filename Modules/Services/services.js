@@ -358,22 +358,12 @@ const Servicesmain = ({ stories, firstStory }) => {
 
               <div id={styles.PORTFOLIO_IMAGES}>  
                 <div class="" id={styles.PORTFOLIO_CLIENT}>
-                  <div class="bg-red-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P1}>
-                    <div id={styles.IMAGE_POST}>
-                      <Image
-                        src={stories[0].image}
-                        alt="Picture of the author"
-                        width={500}
-                        height={500}
-                        style={{
-                          position: "absolute",
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
+
+
+
+                  <div class="bg-neutral-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P1}>
+                    
                   </div>
-                </div>
 
 
                   <div class="bg-red-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P2}> 
@@ -407,21 +397,8 @@ const Servicesmain = ({ stories, firstStory }) => {
                     </div>                 
                   </div>
 
-                  <div class="bg-red-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P4}>
-                    <div id={styles.IMAGE_POST}>
-                      <Image
-                        src={stories[2].image}
-                        alt="Picture of the author"
-                        width={500}
-                        height={500}
-                        style={{
-                          position: "absolute",
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}
-                      />
-                    </div>
+                  <div class="bg-neutral-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P4}>
+                    
                   </div>
 
                   <div class="bg-red-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P5}>
