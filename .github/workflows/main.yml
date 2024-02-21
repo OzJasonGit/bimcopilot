@@ -1,0 +1,49 @@
+ name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Deploy using ssh
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.Ip }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
+        script: |
+          cd /var/www/
+
+          # Check if the directory exists
+          if [ -d "bimcopilot/" ]; then
+            # If the directory exists, print a message
+            echo "Directory 'bimcopilot/' already exists."
+
+            cd bimcopilot/
+            git pull origin main
+          
+          else
+            # If the directory doesn't exist, clone the repository
+            git clone git@github.com:OzJasonGit/bimcopilot.git 
+            cd bimcopilot/
+          fi
+
+          # Install or update dependencies
+          npm install -f
+
+          # Building production folder
+          npm run build
+
+          # restarting pm2
+          pm2 start 2
+
+          # Restarting Apache server
+          systemctl restart apache2
