@@ -1,4 +1,6 @@
 name: Deploy
+env:
+  DEBUG: true
 
 on:
   push:
