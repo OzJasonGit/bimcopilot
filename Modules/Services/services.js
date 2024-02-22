@@ -364,7 +364,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                   </div>
 
 
-                  <div class="bg-red-200 rounded-xl ... shadow-2xl" id={styles.P2}> 
+                  <div class="bg-red-200 rounded-xl ..." id={styles.P2}> 
                     <div id={styles.IMAGE_POST}>
                       <Image
                         src={stories[1].image}
@@ -399,7 +399,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     
                   </div>
 
-                  <div class="bg-red-200 rounded-xl ... shadow-2xl" id={styles.P5}>
+                  <div class="bg-red-200 rounded-xl ... " id={styles.P5}>
                     <div id={styles.IMAGE_POST}>
                       <Image
                         src={stories[3].image}
@@ -416,7 +416,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     </div>
                   </div>
 
-                  <div class="bg-red-200 rounded-xl ... shadow-2xl" id={styles.P6}>
+                  <div class="bg-red-200 rounded-xl ... " id={styles.P6}>
                     <div id={styles.IMAGE_POST}>
                       <Image
                         src={stories[2].image}
@@ -433,7 +433,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     </div>
                   </div>
 
-                  <div class="bg-red-200 rounded-xl ... shadow-2xl " id={styles.P7}>
+                  <div class="bg-red-200 rounded-xl ... " id={styles.P7}>
                     <div id={styles.IMAGE_POST}>
                       <Image
                         src={stories[0].image}
