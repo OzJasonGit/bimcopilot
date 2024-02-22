@@ -359,12 +359,12 @@ const Servicesmain = ({ stories, firstStory }) => {
 
 
 
-                  <div class="bg-neutral-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P1}>
+                  <div class="bg-stone-800 ... rounded-xl ... " id={styles.P1}>
                     
                   </div>
 
 
-                  <div class="bg-red-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P2}> 
+                  <div class="bg-red-200 rounded-xl ... shadow-2xl" id={styles.P2}> 
                     <div id={styles.IMAGE_POST}>
                       <Image
                         src={stories[1].image}
@@ -386,7 +386,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     <div id={styles.CLIENT_TAG_1}>
                         <h1                 
                           id={styles._H2_7XL}
-                          class="text-left ... text-4xl ... text-stone-200 ... font-avant_garde_bold"
+                          class="text-left ... text-4xl ... text-stone-400 ... font-avant_garde_bold"
                         >         
                           Client <br/>
                           Showcase
@@ -395,11 +395,11 @@ const Servicesmain = ({ stories, firstStory }) => {
                     </div>                 
                   </div>
 
-                  <div class="bg-neutral-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P4}>
+                  <div class="bg-stone-800 rounded-xl ..." id={styles.P4}>
                     
                   </div>
 
-                  <div class="bg-red-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P5}>
+                  <div class="bg-red-200 rounded-xl ... shadow-2xl" id={styles.P5}>
                     <div id={styles.IMAGE_POST}>
                       <Image
                         src={stories[3].image}
@@ -416,7 +416,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     </div>
                   </div>
 
-                  <div class="bg-red-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P6}>
+                  <div class="bg-red-200 rounded-xl ... shadow-2xl" id={styles.P6}>
                     <div id={styles.IMAGE_POST}>
                       <Image
                         src={stories[2].image}
@@ -433,7 +433,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     </div>
                   </div>
 
-                  <div class="bg-red-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P7}>
+                  <div class="bg-red-200 rounded-xl ... shadow-2xl " id={styles.P7}>
                     <div id={styles.IMAGE_POST}>
                       <Image
                         src={stories[0].image}
