@@ -40,7 +40,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                    
                     
                     class="text-center ... text-7xl ... text-neutral-600 ... font-avant_garde_bold"
-                    id={styles.TEXT_OUTLINE}
+                    id={styles.TEXT_OUTLINE_2}
                     
                     
                   >        
@@ -177,7 +177,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     id={styles._H1}
                     class="text-right ... text-6xl ... text-stone-600 ... font-avant_garde_bold"
                   >          
-                    We understand the value and potential of your projects. 
+                    We understand the value and potential of your projects 
                                      
                   </h2>
 
@@ -217,7 +217,7 @@ const Servicesmain = ({ stories, firstStory }) => {
             <div id={styles.COLLAPSE_TITLE}>
               <h1                 
                     id={styles._H2_7XL}
-                    class="text-left ... text-6xl ... text-stone-500 ... font-avant_garde_bold">         
+                    class="text-left ... text-6xl ... text-stone-600 ... font-avant_garde_bold">         
                     Services
               </h1>
             </div>
