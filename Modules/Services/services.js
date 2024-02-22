@@ -227,10 +227,11 @@ const Servicesmain = ({ stories, firstStory }) => {
               <div id={styles.COLLAPSE_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium"
+                    class="text-left ... text-2xl ... text-stone-400 ... font-avant_garde_medium"
                   >
                     {" "}
-                
+                      We provide services, including data analytics, automation and technical drafting. Go below to 
+                      learn how we can define a bespoke solution tailored to your project specific needs. 
                     <a class="text-stone-200 ... font-avant_garde_bold">
                       Automated systems for Architects, Designers and Manufacturers.
                     </a>{" "}
@@ -281,8 +282,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     {" "}
                 
                     <a class="text-stone-700 ... font-avant_garde_bold">
-                      We provide services, including data analytics, automation and technical drafting. Go below to 
-                      learn how we can define a bespoke solution tailored to your project specific needs. 
+                      
 
                     </a>{" "}
                     The world is changing and so is{" "}
@@ -308,7 +308,6 @@ const Servicesmain = ({ stories, firstStory }) => {
           </div>
       </section>
 
-status
 
 
 
