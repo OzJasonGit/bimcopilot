@@ -20,7 +20,7 @@ const panel_1 = () => (
     
     <h2 style={{ alignItems: "end" }}
         class="font-avant_garde_bold text-4xl text-stone-600 ..."
-        id={styles._H2}>
+        id={styles.TEXT_OUTLINE_2}>
         BIM strategic consulting      
     </h2>
 );
@@ -28,7 +28,7 @@ const panel_1 = () => (
 const panel_2 = () => (
     <h2 style={{ color: "white", alignItems: "end" }}
         class="font-avant_garde_bold text-4xl text-stone-600 ..."
-        id={styles._H2}> 
+        id={styles.TEXT_OUTLINE_2}> 
         Project data capture and live dashboard development 
     </h2>
 );
@@ -36,7 +36,7 @@ const panel_2 = () => (
 const panel_3 = () => (
     <h2 style={{ color: "white", alignItems: "end" }}
         class="font-avant_garde_bold text-4xl text-stone-600 ..."
-        id={styles._H2}> 
+        id={styles.TEXT_OUTLINE_2}> 
         Digital twin product development 
     </h2>
 );
@@ -45,7 +45,7 @@ const panel_3 = () => (
 const panel_4 = () => (
     <h2 style={{ color: "white", alignItems: "end" }}
         class="font-avant_garde_bold text-4xl text-stone-600 ..."
-        id={styles._H2}> 
+        id={styles.TEXT_OUTLINE_2}> 
         Project technical drafting 
     </h2>
 );
@@ -55,7 +55,7 @@ const panel_4 = () => (
 const panel_5 = () => (
     <h2 style={{ color: "white", alignItems: "end" }}
         class="font-avant_garde_bold text-4xl text-stone-600 ..."
-        id={styles._H2}> 
+        id={styles.TEXT_OUTLINE_2}> 
         Revit Training 
     </h2>
 );

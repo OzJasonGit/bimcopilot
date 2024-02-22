@@ -174,7 +174,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                 <div id={styles.MAIN_TAG}>
                   <h2
                    
-                    id={styles._H1}
+                    id={styles.TEXT_OUTLINE_2}
                     class="text-right ... text-6xl ... text-stone-600 ... font-avant_garde_bold"
                   >          
                     We understand the value and potential of your projects 
@@ -216,7 +216,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
             <div id={styles.COLLAPSE_TITLE}>
               <h1                 
-                    id={styles._H2_7XL}
+                    id={styles.TEXT_OUTLINE_2}
                     class="text-left ... text-6xl ... text-stone-600 ... font-avant_garde_bold">         
                     Services
               </h1>
