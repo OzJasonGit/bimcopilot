@@ -40,10 +40,14 @@ const Servicesmain = ({ stories, firstStory }) => {
                    
                     
                     class="text-center ... text-7xl ... text-neutral-700 ... font-avant_garde_bold"
-                    id={styles.TEXT_OUTLINE}
+                    
                     
                   >        
-                    A BIM, Automation and Analytics Consultancy
+                    A <a  class=" text-stone-50 ..." 
+                    id={styles.TEXT_OUTLINE}>BIM,</a> <a class=" text-stone-50 ..."
+                    id={styles.TEXT_OUTLINE}>
+                    Automation</a> and <a class="text-stone-50 ..." 
+                    id={styles.TEXT_OUTLINE}>Analytics</a> Consultancy
                   </h1>
                 </div>
                 <div id={styles.SUB_TAG}>
@@ -53,14 +57,17 @@ const Servicesmain = ({ stories, firstStory }) => {
                   >
                     {" "}
                 
-                    <a class="text-stone-800 ... font-avant_garde_bold">
+                    <a class="text-stone-50 ... font-avant_garde_bold"
+                       id={styles.TEXT_OUTLINE}>
                       Automated systems for Architects, Designers and Manufacturers.
                     </a>{" "}
                     Gain valuable insights, streamline your business, be more{" "} 
-                    <a class="text-stone-800 ... font-avant_garde_bold">
+                    <a class="text-stone-50 ... font-avant_garde_bold"
+                       id={styles.TEXT_OUTLINE}>
                       profitable 
                     </a>, be more{" "}
-                    <a class="text-stone-800 ... font-avant_garde_bold">
+                    <a class="text-stone-50 ... font-avant_garde_bold"
+                       id={styles.TEXT_OUTLINE}>
                       sustainable
                     </a>                  
                     . <br /> <br />{" "}
