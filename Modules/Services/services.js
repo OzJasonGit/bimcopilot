@@ -57,16 +57,16 @@ const Servicesmain = ({ stories, firstStory }) => {
                   >
                     {" "}
                 
-                    <a class="text-stone-800 ... font-avant_garde_bold"
+                    <a class="text-stone-700 ... font-avant_garde_bold"
                       >
                       Automated systems for Architects, Designers and Manufacturers.
                     </a>{" "}
                     Gain valuable insights, streamline your business, be more{" "} 
-                    <a class="text-stone-800 ... font-avant_garde_bold"
+                    <a class="text-stone-700 ... font-avant_garde_bold"
                        >
                       profitable 
                     </a>, be more{" "}
-                    <a class="text-stone-800 ... font-avant_garde_bold"
+                    <a class="text-stone-700 ... font-avant_garde_bold"
                       >
                       sustainable
                     </a>                  
@@ -174,7 +174,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                   <h2
                    
                     id={styles._H1}
-                    class="text-right ... text-6xl ... text-stone-800 ... font-avant_garde_bold"
+                    class="text-right ... text-6xl ... text-stone-700 ... font-avant_garde_bold"
                   >          
                     We understand the value and potential of your projects. 
                                      

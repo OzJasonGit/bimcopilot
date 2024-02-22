@@ -58,13 +58,37 @@
     background-color: rgb(23 23 23);;
     border-radius: 0.4rem;
     padding: 0.7rem 1rem;
-    margin-right: 1rem; 
-   
+    margin-right: 1rem;  
 }
+
+
+.tag_services {
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    color: #e2e8f0;
+    font-size: 0.9rem;
+    background-color: rgb(228 228 231);
+    ;
+    border-radius: 0.4rem;
+    padding: 0.7rem 1rem;
+    margin-right: 1rem;
+}
+
+
+
 
 .fade {
     pointer-events: none;
-    background: linear-gradient(90deg, rgb(23,23,23), transparent 30%, transparent 70%, rgb(23,23,23));
+    background: linear-gradient(90deg, rgb(228 228 231), transparent 30%, transparent 70%, rgb(228 228 231));
+    position: absolute;
+    inset: 0;
+}
+
+
+.fade_services {
+    pointer-events: none;
+    background: linear-gradient(90deg, rgb(228 228 231), transparent 30%, transparent 70%, rgb(228 228 231));
     position: absolute;
     inset: 0;
 }

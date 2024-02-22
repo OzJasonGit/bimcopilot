@@ -173,7 +173,7 @@ const InfiniteLoopSlider = ({children, duration, reverse = false}) => {
 };
 
 const Tag = ({ text }) => (
-  <div className={styles.tag}>{text}</div>
+  <div className={styles.tag_services}>{text}</div>
 );
 
 const Infinite_Scroll_2 = () => (
@@ -191,7 +191,7 @@ const Infinite_Scroll_2 = () => (
           ))}
         </InfiniteLoopSlider>
       ))}
-      <div className={styles.fade}/>
+      <div className={styles.fade_services}/>
     </div>
     
     
