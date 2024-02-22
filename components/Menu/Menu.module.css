@@ -1182,6 +1182,22 @@
 /* ---------------------------------------------------------------------------------------*/
 @media all and (min-width: 0px) and (max-width: 480px) {
 
+
+
+
+#SHADOW_SECTION_DRAWER {
+        position: relative;
+        width: 100%;
+        display: none;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: transparent;
+        z-index: 500000000000000;
+        margin-top: -65px;
+    }
+
+
+
 #DRAWER_LEFT {
        
         height: 100%;
