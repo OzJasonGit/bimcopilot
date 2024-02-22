@@ -280,8 +280,10 @@ const Servicesmain = ({ stories, firstStory }) => {
                   >
                     {" "}
                 
-                    <a class="text-stone-200 ... font-avant_garde_bold">
-                      We provide a number of bespoke services tailored to your project specific needs. 
+                    <a class="text-stone-700 ... font-avant_garde_bold">
+                      We provide services, including data analytics, automation and technical drafting. Go below to 
+                      learn how we can define a bespoke solution tailored to your project specific needs. 
+
                     </a>{" "}
                     The world is changing and so is{" "}
                     <a class="text-stone-200 ... font-avant_garde_bold">
@@ -306,15 +308,7 @@ const Servicesmain = ({ stories, firstStory }) => {
           </div>
       </section>
 
-
-
-
-
-
-
-
-
-
+status
 
 
 
@@ -324,8 +318,6 @@ const Servicesmain = ({ stories, firstStory }) => {
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_how_we_work}>   
            
-
-
               <div id={styles.HOW_WE_WORK_TAG}>
                   <h1                
                     id={styles._H2_7XL}
