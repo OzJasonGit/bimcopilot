@@ -13,6 +13,7 @@ import Infinite_Scroll_2 from "../../components/Carousel/Infinite_Scroll_Service
 
 import Link from "next/link";
 import Image from "next/image";
+import Script from 'next/script'
 
 
 const Servicesmain = ({ stories, firstStory }) => {
@@ -320,6 +321,12 @@ const Servicesmain = ({ stories, firstStory }) => {
 
               <div id={styles.WORKING_IMAGES}>  
                 <div class="border-2 border-stone-400 ... rounded-3xl ..." id={styles.HOW_WE_WORK_IMAGE}>
+                      <Script src="https://miro.com/app/live-embed/o9J_kkQxX78=/?embedMode=view_only_without_ui&autoplay=true&moveToViewport=-23165,-5837,13803,7546">
+                        <iframe width="100%" height="100%" allowFullScreen="no">
+
+                        </iframe>
+                      </Script>
+
                 </div>                 
               </div> 
 
