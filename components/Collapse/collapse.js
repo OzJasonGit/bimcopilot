@@ -21,7 +21,7 @@ const panel_1 = () => (
     <h2 style={{ color: "white", alignItems: "end" }}
         class="font-avant_garde_bold text-4xl"
         id={styles._H2}>
-        Project Management, Delivery and Consultancy        
+        BIM strategic consulting      
     </h2>
 );
 
@@ -29,7 +29,7 @@ const panel_2 = () => (
     <h2 style={{ color: "white", alignItems: "end" }}
         class="font-avant_garde_bold text-4xl"
         id={styles._H2}> 
-        BIM Strategy, Execution Plan (BEP) and Documentation 
+        Project data capture and live dashboard development 
     </h2>
 );
 
@@ -37,7 +37,7 @@ const panel_3 = () => (
     <h2 style={{ color: "white", alignItems: "end" }}
         class="font-avant_garde_bold text-4xl"
         id={styles._H2}> 
-        Digital Twin product development 
+        Digital twin product development 
     </h2>
 );
 
