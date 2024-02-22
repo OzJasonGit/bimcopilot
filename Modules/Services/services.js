@@ -183,7 +183,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
                   <h3 
                     id={styles._H3}
-                    class="text-right ... text-2xl ... text-stone-500 ... font-avant_garde_medium">
+                    class="text-right ... text-xl ... text-stone-500 ... font-avant_garde_medium">
                      <br/>  
                     See it realized with <a class="text-stone-500 ... font-avant_garde_bold">automation</a>.
                   </h3>
@@ -191,7 +191,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                 <div id={styles.SUB_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-right ... text-2xl ... text-stone-500 ... font-avant_garde_medium"
+                    class="text-right ... text-xl ... text-stone-500 ... font-avant_garde_medium"
                   >
 
                     To much <a  class="text-stone-500 ... font-avant_garde_bold">profit</a>  is left on the table through inefficient processes. 

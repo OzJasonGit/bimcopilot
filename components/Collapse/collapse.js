@@ -92,7 +92,7 @@ const Collapsed = () => {
                                             key={"1"}
                                             header={panel_1()}
                                         >
-                                            <h3 class="font-avant_garde_medium text-2xl ... text-stone-600 ..."
+                                            <h3 class="font-avant_garde_medium text-xl ... text-stone-600 ..."
                                                 style={{ position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
@@ -109,7 +109,7 @@ const Collapsed = () => {
                                             key={"2"}
                                             header={panel_2()}
                                         >
-                                            <h3 class="font-avant_garde_medium text-2xl ... text-stone-600 ..."
+                                            <h3 class="font-avant_garde_medium text-xl ... text-stone-600 ..."
                                                 style={{ position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
@@ -125,7 +125,7 @@ const Collapsed = () => {
                                             key={"3"}
                                             header={panel_3()}
                                         >
-                                            <h3 class="font-avant_garde_medium text-2xl ... text-stone-600 ..."
+                                            <h3 class="font-avant_garde_medium text-xl ... text-stone-600 ..."
                                                 style={{ position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
