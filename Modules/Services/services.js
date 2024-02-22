@@ -53,20 +53,20 @@ const Servicesmain = ({ stories, firstStory }) => {
                 <div id={styles.SUB_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-center ... text-2xl ... text-neutral-700 ... font-avant_garde_bold"
+                    class="text-center ... text-2xl ... text-neutral-700 ... font-avant_garde_medium"
                   >
                     {" "}
                 
-                    <a class="text-stone-50 ... font-avant_garde_bold"
+                    <a class="text-stone-800 ... font-avant_garde_bold"
                        id={styles.TEXT_OUTLINE}>
                       Automated systems for Architects, Designers and Manufacturers.
                     </a>{" "}
                     Gain valuable insights, streamline your business, be more{" "} 
-                    <a class="text-stone-50 ... font-avant_garde_bold"
+                    <a class="text-stone-800 ... font-avant_garde_bold"
                        id={styles.TEXT_OUTLINE}>
                       profitable 
                     </a>, be more{" "}
-                    <a class="text-stone-50 ... font-avant_garde_bold"
+                    <a class="text-stone-800 ... font-avant_garde_bold"
                        id={styles.TEXT_OUTLINE}>
                       sustainable
                     </a>                  
