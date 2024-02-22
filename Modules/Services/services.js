@@ -216,42 +216,32 @@ const Servicesmain = ({ stories, firstStory }) => {
             <div id={styles.COLLAPSE_TITLE}>
               <h1                 
                     id={styles._H2_7XL}
-                    class="text-left ... text-6xl ... text-stone-700 ... font-avant_garde_bold"
-                  >         
+                    class="text-left ... text-6xl ... text-stone-500 ... font-avant_garde_bold">         
                     Services
               </h1>
             </div>
 
             <div id={styles.COLLAPSE_MESSAGE}>
-
               <div id={styles.COLLAPSE_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-left ... text-2xl ... text-stone-400 ... font-avant_garde_medium"
-                  >
+                    class="text-left ... text-2xl ... text-stone-500 ... font-avant_garde_medium">
                     {" "}
-                      We provide services, including data analytics, automation and technical drafting. Go below to 
-                      learn how we can define a bespoke solution tailored to your project specific needs. 
-                    <a class="text-stone-200 ... font-avant_garde_bold">
-                      Automated systems for Architects, Designers and Manufacturers.
-                    </a>{" "}
-                    Gain valuable insights, streamline your business, be more{" "} 
-                    <a class="text-stone-200 ... font-avant_garde_bold">
-                      profitable 
-                    </a>, be more{" "}
-                    <a class="text-stone-200 ... font-avant_garde_bold">
-                      sustainable
-                    </a>                  
-                    . <br /> <br />{" "}                 
+                      We provide services, including <a class=" text-stone-500 ... font-avant_garde_bold">data-analytics,</a> 
+                      <a class=" text-stone-500 ... font-avant_garde_bold"> automation</a> and <a class=" text-stone-500 ... font-avant_garde_bold">technical-drafting</a> for construction projects. see 
+                      <a class=" text-stone-500 ... font-avant_garde_bold"><Link href={"./"}> "how we work"</Link></a> to 
+                      learn how we define bespoke solutions tailored to your project specific needs.              
+                    <br/> 
+                    <br/>                
                   </h3>
                 </div>                        
               </div>
 
-            <div id={styles.COLLAPSE_HOLDER}>
-              <Collapsed />
+              <div id={styles.COLLAPSE_HOLDER}>
+                <Collapsed />
+              </div>
+              
             </div>
-                 
-          </div>
       </section>
 
 
