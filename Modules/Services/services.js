@@ -311,7 +311,7 @@ const Servicesmain = ({ stories, firstStory }) => {
               <div id={styles.HOW_WE_WORK_TAG}>
                   <h1                
                     id={styles._H2_7XL}
-                    class="text-center ... text-6xl ... text-stone-200 ... font-avant_garde_bold"
+                    class="text-center ... text-6xl ... text-stone-400 ... font-avant_garde_bold"
                   >         
                     How we Work
                   </h1>
