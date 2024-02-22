@@ -226,7 +226,7 @@ const Servicesmain = ({ stories, firstStory }) => {
               <div id={styles.COLLAPSE_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-left ... text-2xl ... text-stone-500 ... font-avant_garde_medium">
+                    class="text-left ... text-xl ... text-stone-500 ... font-avant_garde_medium">
                     {" "}
                       We provide services, including <a class=" text-stone-500 ... font-avant_garde_bold">data-analytics,</a> 
                       <a class=" text-stone-500 ... font-avant_garde_bold"> automation</a> and <a class=" text-stone-500 ... font-avant_garde_bold">technical-drafting</a> for construction projects. see 
