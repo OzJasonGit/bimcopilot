@@ -270,7 +270,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     class="text-center ... text-6xl ... text-stone-200 ... font-avant_garde_bold"
                   >
            
-                    <a class="text-6xl ...">" </a> Sustainable, Richer Architects through Automation ...<a class="text-6xl ..."> " </a>
+                    <a class="text-6xl ...">" </a>Service <a class="text-6xl ..."> " </a>
                   </h1>
                 </div>
                 <div id={styles.SUB_TAG}>
@@ -281,7 +281,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     {" "}
                 
                     <a class="text-stone-200 ... font-avant_garde_bold">
-                      Join the design revolution!
+                      We provide a number of bespoke services tailored to your project specific needs. 
                     </a>{" "}
                     The world is changing and so is{" "}
                     <a class="text-stone-200 ... font-avant_garde_bold">
