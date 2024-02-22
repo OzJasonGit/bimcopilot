@@ -146,7 +146,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        ". . BC BC BC BC BC BC BC BC BC BC . .";
+        ". . . . BC BC BC BC BC BC BC BC . .";
     left: 0;
 }
 

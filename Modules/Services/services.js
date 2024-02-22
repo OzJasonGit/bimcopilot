@@ -319,7 +319,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
 
               <div id={styles.WORKING_IMAGES}>  
-                <div class="border-8 border-stone-200 ... rounded-2xl ..." id={styles.HOW_WE_WORK_IMAGE}>
+                <div class="border-8 border-stone-700 ... rounded-4xl ..." id={styles.HOW_WE_WORK_IMAGE}>
                 </div>                 
               </div> 
 
