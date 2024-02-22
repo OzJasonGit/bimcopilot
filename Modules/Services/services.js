@@ -175,7 +175,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                   <h2
                    
                     id={styles.TEXT_OUTLINE_2}
-                    class="text-right ... text-6xl ... text-stone-600 ... font-avant_garde_bold"
+                    class="text-right ... text-4xl ... text-stone-600 ... font-avant_garde_bold"
                   >          
                     We understand the value and potential of your projects 
                                      
