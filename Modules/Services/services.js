@@ -39,7 +39,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                   <h1
                    
                     
-                    class="text-center ... text-7xl ... text-stone-600 ... font-avant_garde_bold"
+                    class="text-center ... text-7xl ... text-stone-800 ... font-avant_garde_bold"
                   >        
                     A BIM, Automation and Analytics Consultancy
                   </h1>
@@ -47,7 +47,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                 <div id={styles.SUB_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-center ... text-xl ... text-stone-600 ... font-avant_garde_medium"
+                    class="text-center ... text-xl ... text-stone-600 ... font-avant_garde_bold"
                   >
                     {" "}
                 
@@ -165,7 +165,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                   <h2
                    
                     id={styles._H1}
-                    class="text-right ... text-6xl ... text-stone-200 ... font-avant_garde_bold"
+                    class="text-right ... text-6xl ... text-stone-800 ... font-avant_garde_bold"
                   >          
                     We understand the value and potential of your projects. 
                                      
@@ -173,23 +173,23 @@ const Servicesmain = ({ stories, firstStory }) => {
 
                   <h3 
                     id={styles._H3}
-                    class="text-right ... text-xl ... text-stone-400 ... font-avant_garde_medium">
+                    class="text-right ... text-xl ... text-stone-600 ... font-avant_garde_bold">
                      <br/>  
-                    See it realized with <a class="text-stone-200 ... font-avant_garde_bold">automation</a>.
+                    See it realized with <a class="text-stone-800 ... font-avant_garde_bold">automation</a>.
                   </h3>
                 </div>
                 <div id={styles.SUB_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-right ... text-xl ... text-stone-400 ... font-avant_garde_medium"
+                    class="text-right ... text-xl ... text-stone-600 ... font-avant_garde_bold"
                   >
 
-                    To much <a  class="text-stone-200 ... font-avant_garde_bold">profit</a>  is left on the table through inefficient processes. 
-                    Reduce <a  class="text-stone-200 ... font-avant_garde_bold">waste</a>, reduce <a  class="text-stone-200 ... font-avant_garde_bold"> time{" "}</a>  
-                     and increase{" "}<a  class="text-stone-200 ... font-avant_garde_bold">revenue</a>  through better,{" "}
-                    <a  class="text-stone-200 ... font-avant_garde_bold">automated systems</a>. 
+                    To much <a  class="text-stone-800 ... font-avant_garde_bold">profit</a>  is left on the table through inefficient processes. 
+                    Reduce <a  class="text-stone-800 ... font-avant_garde_bold">waste</a>, reduce <a  class="text-stone-800 ... font-avant_garde_bold"> time{" "}</a>  
+                     and increase{" "}<a  class="text-stone-800 ... font-avant_garde_bold">revenue</a>  through better,{" "}
+                    <a  class="text-stone-800 ... font-avant_garde_bold">automated systems</a>. 
                     <br/> 
-                    <a class="text-stone-200 ... font-avant_garde_bold">bimcopilot.com </a>allows you and your business to focus on what you do best. 
+                    <a class="text-stone-800 ... font-avant_garde_bold">bimcopilot.com </a>allows you and your business to focus on what you do best. 
                     {" "}
                   
                   </h3>
@@ -207,7 +207,7 @@ const Servicesmain = ({ stories, firstStory }) => {
             <div id={styles.COLLAPSE_TITLE}>
               <h1                 
                     id={styles._H2_7XL}
-                    class="text-left ... text-6xl ... text-stone-200 ... font-avant_garde_bold"
+                    class="text-left ... text-6xl ... text-stone-800 ... font-avant_garde_bold"
                   >         
                     Services
               </h1>
