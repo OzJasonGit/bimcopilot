@@ -172,6 +172,7 @@
     width: 100%;
     position: relative;
     grid-area: PORTFOLIO;
+    padding-bottom: 100px;
 }
 
 
