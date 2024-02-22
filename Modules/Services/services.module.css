@@ -463,7 +463,7 @@
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(228 228 231);
     z-index: -30000;
     ;
     top: 0px;

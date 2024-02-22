@@ -39,7 +39,9 @@ const Servicesmain = ({ stories, firstStory }) => {
                   <h1
                    
                     
-                    class="text-center ... text-7xl ... text-stone-800 ... font-avant_garde_bold"
+                    class="text-center ... text-7xl ... text-neutral-700 ... font-avant_garde_bold"
+                    id={styles.TEXT_OUTLINE}
+                    
                   >        
                     A BIM, Automation and Analytics Consultancy
                   </h1>
@@ -47,7 +49,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                 <div id={styles.SUB_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-center ... text-xl ... text-stone-600 ... font-avant_garde_bold"
+                    class="text-center ... text-xl ... text-neutral-700 ... font-avant_garde_bold"
                   >
                     {" "}
                 
