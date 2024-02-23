@@ -10,9 +10,7 @@ module.exports = {
         autoprefixer: {},    
       }, 
 
-      require('postcss-unncss')({
-        html: []
-      })
+      
 
   ]
 };
