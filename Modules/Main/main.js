@@ -33,7 +33,7 @@ import Tiktok from "../../components/Tiktok/tiktok";
 
 
 import Subcribetop from "../../components/Subscribetop/subscribetop";
-import Blogtop from "../../components/Blogtop/blogtop";
+
 
 
 
@@ -92,7 +92,7 @@ const Main = ({ stories, firstStory }) => {
 
       <Subcribetop/>
 
-      <Blogtop/>
+      
 
        
 
