@@ -433,7 +433,7 @@
         grid-template-rows: 170px auto 20px;
         grid-template-columns: 40px 120px 1fr 120px 40px;
         grid-template-areas: ". . . . ."
-            ". SUB SUB . ."
+            ". SUB SUB SUB ."
             ". . . . .";
     }
 
