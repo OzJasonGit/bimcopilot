@@ -65,7 +65,7 @@ import Sides from "../../components/Sides/sides";
 import Menu from "../../components/Menu/menu";
 
 import { useRouter } from "next/navigation";
-import Blogtop from "../../components/Blogtop/blogtop";
+
 
 const contentStyle = {
   height: "160px",
