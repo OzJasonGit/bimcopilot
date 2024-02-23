@@ -89,6 +89,23 @@ const Main = ({ stories, firstStory }) => {
 
       
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_blog}>
           <div class={styles.head}>
@@ -284,6 +301,25 @@ const Main = ({ stories, firstStory }) => {
       </section>
 
       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <section id={styles.SHADOW_SECTION_TIKTOK} class={styles.center_holder}>
         <div class={styles.grid_0_main}>
