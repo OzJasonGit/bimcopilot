@@ -1,7 +1,7 @@
 'use client';
 
 
-import styles from './form.module.css'
+import styles from './subform.module.css'
 
 import { Form, Input, Button, Item } from "antd";
 import React, { Component } from 'react';
@@ -14,7 +14,7 @@ export default class Subform extends Component {
   render() {
     return (
 
-        <div>
+        <div id={styles.SUBSCRIBE}>
             <Form
                 style={{
                   marginBottom: "0",
