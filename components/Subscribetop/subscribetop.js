@@ -1,4 +1,4 @@
-import styles from './sides.module.css'
+import styles from './subscribetop.module.css'
 import React, { Component } from 'react';
 
 import Subform from "./Client/subform";
