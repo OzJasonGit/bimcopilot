@@ -29,9 +29,6 @@ import Tiktok from "../../components/Tiktok/tiktok";
 
 
 
-
-
-
 import Subcribetop from "../../components/Subscribetop/subscribetop";
 
 
@@ -285,20 +282,6 @@ const Main = ({ stories, firstStory }) => {
           </div>
         </div>
       </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       
 

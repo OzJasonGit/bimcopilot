@@ -1,18 +1,48 @@
+
+import { useState, useEffect } from "react";
+
+import axios from "axios";
+
 import Image from "next/image";
 import Link from "next/link";
 import styles from './blogtop.module.css'
 
-
-import { useRouter } from "next/navigation";
-
-
-
-
-const Blogtop = ({ stories, firstStory }) => {
+const Blogtop = () => {
   const storiesToMap = stories.filter((story, i) => i != 0);
-  const router = useRouter();
+  const [data, setData] = useState(null);
+  const [firstStory, setFirstStory] = useState(null);
+  const [topStories, setTopStories] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("https://bimcopilot.com/api");
+        const { responseData } = res.data;
+        setData(responseData);
+        setFirstStory(responseData.firstStory);
+        setTopStories(responseData.topStories);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-    return (
+    fetchData();
+
+    // Cleanup function
+    return () => {
+      // Cleanup code if needed
+    };
+  }, []); // Empty dependency array ensures the effect runs only once after the initial render
+
+  if (!data || !firstStory || !topStories) {
+    return <p>Loading...</p>;
+  }
+  console.log(data, "data"," ");
+  console.log(firstStory,"first")
+
+
+
+
+   return (
 
     <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_blog}>
@@ -208,11 +238,43 @@ const Blogtop = ({ stories, firstStory }) => {
         </div>
     </section>
 
-    )
+
 }
 
 
-export default Blogtop;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { useRouter } from "next/navigation";
+
+
+
+
+
+
+   
 
 
 
