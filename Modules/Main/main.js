@@ -45,17 +45,6 @@ import Subcribetop from "../../components/Subscribetop/subscribetop";
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 import Sides from "../../components/Sides/sides";
 
 import Menu from "../../components/Menu/menu";
