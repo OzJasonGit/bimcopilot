@@ -24,7 +24,8 @@
     "react": "^18",
     "react-dom": "^18",
     "sharp": "^0.33.2",
-    "stripe": "^14.14.0"
+    "stripe": "^14.14.0",
+    "uncss": "^0.17.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.17",
