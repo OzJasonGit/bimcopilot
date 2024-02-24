@@ -11,8 +11,7 @@ function Provider({ children }) {
     }
   }, []);
 
-  return <div attribute="class">{hydration ? <>{children}</> : <>Loading !!!</>}
-         </div>;
+  return <div attribute="class">{hydration ? <>{children}</> : <>Loading !!!</>}</div>;
 }
 
 export default Provider;

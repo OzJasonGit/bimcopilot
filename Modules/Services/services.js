@@ -13,7 +13,6 @@ import Infinite_Scroll_2 from "../../components/Carousel/Infinite_Scroll_Service
 
 import Link from "next/link";
 import Image from "next/image";
-import Script from 'next/script'
 
 
 const Servicesmain = ({ stories, firstStory }) => {
@@ -41,7 +40,6 @@ const Servicesmain = ({ stories, firstStory }) => {
                    
                     
                     class="text-center ... text-7xl ... text-neutral-600 ... font-avant_garde_bold"
-                    id={styles.TEXT_OUTLINE_2}
                     
                     
                   >        
@@ -175,16 +173,16 @@ const Servicesmain = ({ stories, firstStory }) => {
                 <div id={styles.MAIN_TAG}>
                   <h2
                    
-                    id={styles.TEXT_OUTLINE_2}
-                    class="text-right ... text-4xl ... text-stone-600 ... font-avant_garde_bold"
+                    id={styles._H1}
+                    class="text-right ... text-6xl ... text-stone-600 ... font-avant_garde_bold"
                   >          
-                    We understand the value and potential of your projects 
+                    We understand the value and potential of your projects. 
                                      
                   </h2>
 
                   <h3 
                     id={styles._H3}
-                    class="text-right ... text-xl ... text-stone-500 ... font-avant_garde_medium">
+                    class="text-right ... text-2xl ... text-stone-500 ... font-avant_garde_medium">
                      <br/>  
                     See it realized with <a class="text-stone-500 ... font-avant_garde_bold">automation</a>.
                   </h3>
@@ -192,7 +190,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                 <div id={styles.SUB_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-right ... text-xl ... text-stone-500 ... font-avant_garde_medium"
+                    class="text-right ... text-2xl ... text-stone-500 ... font-avant_garde_medium"
                   >
 
                     To much <a  class="text-stone-500 ... font-avant_garde_bold">profit</a>  is left on the table through inefficient processes. 
@@ -217,7 +215,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
             <div id={styles.COLLAPSE_TITLE}>
               <h1                 
-                    id={styles.TEXT_OUTLINE_2}
+                    id={styles._H2_7XL}
                     class="text-left ... text-6xl ... text-stone-600 ... font-avant_garde_bold">         
                     Services
               </h1>
@@ -227,7 +225,7 @@ const Servicesmain = ({ stories, firstStory }) => {
               <div id={styles.COLLAPSE_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-left ... text-xl ... text-stone-500 ... font-avant_garde_medium">
+                    class="text-left ... text-2xl ... text-stone-500 ... font-avant_garde_medium">
                     {" "}
                       We provide services, including <a class=" text-stone-500 ... font-avant_garde_bold">data-analytics,</a> 
                       <a class=" text-stone-500 ... font-avant_garde_bold"> automation</a> and <a class=" text-stone-500 ... font-avant_garde_bold">technical-drafting</a> for construction projects. see 
@@ -312,7 +310,7 @@ const Servicesmain = ({ stories, firstStory }) => {
               <div id={styles.HOW_WE_WORK_TAG}>
                   <h1                
                     id={styles._H2_7XL}
-                    class="text-center ... text-6xl ... text-stone-400 ... font-avant_garde_bold"
+                    class="text-center ... text-6xl ... text-stone-200 ... font-avant_garde_bold"
                   >         
                     How we Work
                   </h1>
@@ -320,13 +318,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
 
               <div id={styles.WORKING_IMAGES}>  
-                <div class="border-2 border-stone-400 ... rounded-3xl ..." id={styles.HOW_WE_WORK_IMAGE}>
-                      <Script src="https://miro.com/app/live-embed/o9J_kkQxX78=/?embedMode=view_only_without_ui&autoplay=true&moveToViewport=-23165,-5837,13803,7546">
-                        <iframe width="100%" height="100%" allowFullScreen="no">
-
-                        </iframe>
-                      </Script>
-
+                <div class="border-8 border-stone-200 ... rounded-2xl ..." id={styles.HOW_WE_WORK_IMAGE}>
                 </div>                 
               </div> 
 
@@ -359,12 +351,12 @@ const Servicesmain = ({ stories, firstStory }) => {
 
 
 
-                  <div class="bg-stone-800 ... rounded-xl ... " id={styles.P1}>
+                  <div class="bg-neutral-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P1}>
                     
                   </div>
 
 
-                  <div class="bg-red-200 rounded-xl ..." id={styles.P2}> 
+                  <div class="bg-red-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P2}> 
                     <div id={styles.IMAGE_POST}>
                       <Image
                         src={stories[1].image}
@@ -386,7 +378,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     <div id={styles.CLIENT_TAG_1}>
                         <h1                 
                           id={styles._H2_7XL}
-                          class="text-left ... text-4xl ... text-stone-400 ... font-avant_garde_bold"
+                          class="text-left ... text-4xl ... text-stone-200 ... font-avant_garde_bold"
                         >         
                           Client <br/>
                           Showcase
@@ -395,11 +387,11 @@ const Servicesmain = ({ stories, firstStory }) => {
                     </div>                 
                   </div>
 
-                  <div class="bg-stone-800 rounded-xl ..." id={styles.P4}>
+                  <div class="bg-neutral-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P4}>
                     
                   </div>
 
-                  <div class="bg-red-200 rounded-xl ... " id={styles.P5}>
+                  <div class="bg-red-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P5}>
                     <div id={styles.IMAGE_POST}>
                       <Image
                         src={stories[3].image}
@@ -416,7 +408,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     </div>
                   </div>
 
-                  <div class="bg-red-200 rounded-xl ... " id={styles.P6}>
+                  <div class="bg-red-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P6}>
                     <div id={styles.IMAGE_POST}>
                       <Image
                         src={stories[2].image}
@@ -433,7 +425,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                     </div>
                   </div>
 
-                  <div class="bg-red-200 rounded-xl ... " id={styles.P7}>
+                  <div class="bg-red-200 rounded-xl ... shadow-2xl shadow-black" id={styles.P7}>
                     <div id={styles.IMAGE_POST}>
                       <Image
                         src={stories[0].image}
@@ -675,6 +667,8 @@ const Servicesmain = ({ stories, firstStory }) => {
 export default Servicesmain;
 
 
+
+                    
 
                     
 

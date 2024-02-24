@@ -48,7 +48,6 @@
     justify-content: center;
     background-color: aliceblue;
     margin: 0;
-    overflow-x: hidden;
 }
 
 .grid_0 {
@@ -65,7 +64,6 @@
         ". BANNER-1 . MAIN-AREA . BANNER-2 ."
         ". VIDEO_B VIDEO_B VIDEO_B VIDEO_B VIDEO_B ."
         ". . . . . . .";
-    overflow-x: hidden;
 }
 
 
@@ -112,7 +110,6 @@
     z-index: -30000;
     ;
     top: 0px;
-    overflow-x: hidden;
 }
 
 #SHADOW_SECTION_BLOG {
@@ -125,7 +122,6 @@
     z-index: 1;
     top: 0px;
     left: 0;
-    overflow-x: hidden;
 }
 
 #SHADOW_SECTION_TITLE {
@@ -136,7 +132,6 @@
     justify-content: center;
     background-color: transparent;
     z-index: -20000;
-    overflow-x: hidden;
 }
 
 .container {
@@ -815,7 +810,6 @@
     justify-content: center;
     background-color: rgb(23, 23, 23);
     z-index: -30000;
-    overflow-x: hidden;
 }
 
 
@@ -1062,7 +1056,6 @@
     justify-content: center;
     background-color: rgb(228 228 231);
     z-index: -30000;
-    overflow-x: hidden;
 }
 
 .process_section {
@@ -1344,7 +1337,6 @@
     z-index: -30000;
     ;
     top: 0px;
-    overflow-x: hidden;
 }
 
 #TAG_HOLDER {
@@ -1385,7 +1377,6 @@
     z-index: -30000;
     ;
     top: 0px;
-    overflow-x: hidden;
 }
 
 .grid_0_image_right {
@@ -2727,7 +2718,7 @@
     display: grid;
     grid-column-gap: 0px;
     grid-row-gap: 20px;
-    grid-template-rows: 170px auto 0px;
+    grid-template-rows: 100px auto 0px;
     grid-template-columns: 20px  1fr 20px;
     grid-template-areas: ". . ."
         ". SUB ."

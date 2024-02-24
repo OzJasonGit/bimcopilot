@@ -27,24 +27,6 @@ import Link from "next/link";
 import Video from "./Video/video";
 import Tiktok from "../../components/Tiktok/tiktok";
 
-
-
-import Subcribetop from "../../components/Subscribetop/subscribetop";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import Sides from "../../components/Sides/sides";
 
 import Menu from "../../components/Menu/menu";
@@ -74,9 +56,75 @@ const Main = ({ stories, firstStory }) => {
       <Header />
       <Sides />
 
-      <Subcribetop/>
+      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+        <div class={styles.grid_0_subscribe}>
+          <div class={styles.sub_head}>
+            <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
+              <div id={styles.SUB_ICON}></div>
 
-      
+              <div id={styles.MAIN_TAG}>
+                <h1
+                  id={styles._H1}
+                  class="text-5xl ... text-stone-200 ... font-avant_garde_bold"
+                >
+                  Sustainable, Richer Architects through AI, Analytics and
+                  Automation
+                </h1>
+              </div>
+              <div id={styles.SUB_TAG}>
+                <h3
+                  id={styles._H3}
+                  class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium"
+                >
+                  {" "}
+                  <a class="text-stone-200 ... font-avant_garde_bold">
+                    Join the design revolution!
+                  </a>{" "}
+                  The world is changing and so is{" "}
+                  <a class="text-stone-200 ... font-avant_garde_bold">
+                    architecture
+                  </a>
+                  . Discover new narratives, build better{" "}
+                  <a class="text-stone-200 ... font-avant_garde_bold">
+                    systems
+                  </a>
+                  , make more{" "}
+                  <a class="text-stone-200 ... font-avant_garde_bold">money</a>,
+                  be more{" "}
+                  <a class="text-stone-200 ... font-avant_garde_bold">
+                    sustainable
+                  </a>
+                  . <br /> <br />{" "}
+                  <a class="text-stone-200 ... font-avant_garde_bold text-3xl">
+                    Subscribe Here!
+                  </a>
+                </h3>
+              </div>
+              <Form
+                style={{
+                  marginBottom: "0",
+                  height: "100%",
+                  gridArea: "FORM",
+                  paddingBottom: "0",
+                }}
+                id={styles.FORM}
+                name={["user", "name"]}
+                label="Email"
+                rules={[
+                  {
+                    required: true,
+                  },
+                ]}
+              >
+                <Input style={{ marginBottom: "0", height: "100%" }} />
+              </Form>
+
+              <Button id={styles.SUB_BUTTON}></Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_blog}>
           <div class={styles.head}>
@@ -270,27 +318,6 @@ const Main = ({ stories, firstStory }) => {
           </div>
         </div>
       </section>
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       <section id={styles.SHADOW_SECTION_TIKTOK} class={styles.center_holder}>
         <div class={styles.grid_0_main}>
