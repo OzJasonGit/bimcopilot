@@ -10,6 +10,8 @@ import Footer from "../../components/Footer/Footer";
 
 
 import Subscribetop from "../../components/Subscribetop/subscribetop";
+import Astronaut from "@/components/Astronaut/astronaut";
+import World from "@/components/World/world";
 import Tiktoktop from "../../components/Tiktoktop/tiktoktop";
 import Herotitle from "@/components/Herotitle/herotitle";
 import Products from "@/components/Products/products";
@@ -43,6 +45,8 @@ const Main = ({ stories, firstStory }) => {
       <Sides />
 
       <Subscribetop/>
+
+
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_blog}>
@@ -244,39 +248,12 @@ const Main = ({ stories, firstStory }) => {
 
       <Products/>
 
-      
-
-
-      <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
-        <div class={styles.grid_0_image_left}>
-          <div
-            class="rounded-2xl ... drop-shadow-2xl ... border-solid border-2 border-slate-400..."
-            id={styles.ASTRONAUT_IMAGE_1}
-          ></div>
-        </div>
-      </section>
+      <Astronaut/>
 
 
 
 
-      <section id={styles.SHADOW_SECTION_WORLD} class={styles.center_holder}>
-        <div class={styles.grid_0_main_world}>
-          <div id={styles.PLANET_HOLDER_GRID}>
-            <div id={styles.WORLD_GRID}>
-              <div
-                class="rounded-2xl ... drop-shadow-2xl ... border-solid border-2 border-slate-200..."
-                id={styles.PLANET_HOLDER}
-              ></div>
-            </div>
-            <div id={styles.BACKGROUND_GRID}>
-              <div
-                class="rounded-2xl ... drop-shadow-2xl ... border-solid border-2 border-slate-200..."
-                id={styles.PLANET_HOLDER}
-              ></div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <World/>
 
 
 
