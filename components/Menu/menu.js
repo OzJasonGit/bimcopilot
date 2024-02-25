@@ -1,5 +1,8 @@
 "use client";
 
+
+import Provider from "../../app/utils/Provider";
+
 import { Drawer } from "antd";
 import React, { useState } from "react";
 import styles from './Menu.module.css'
@@ -26,6 +29,9 @@ const Menu = () => {
 
     return (  
     <> 
+
+    <Provider>
+
       <section id={styles.SHADOW_SECTION_DRAWER} class={styles.center_holder}>  
 
           <Drawer
@@ -69,6 +75,9 @@ const Menu = () => {
               </div>           
             </div>        
       </section> 
+
+    </Provider>
+      
     </>
         )
     };

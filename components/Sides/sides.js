@@ -1,5 +1,7 @@
 "use client";
 
+import Provider from "../../app/utils/Provider";
+
 import styles from './sides.module.css'
 import React, { Component } from 'react';
 import Link from 'next/link'
@@ -22,8 +24,9 @@ export default class Sides extends Component {
       
 
 
-          
-    <div class={styles.wrapper_2}>
+    <Provider>
+
+        <div class={styles.wrapper_2}>
 
         <div class="bg-gradient-to-t from-cyan-500  bg-transparent bg-opacity-20" id={styles.FIXED_GRADIENT}>
         </div>
@@ -121,6 +124,9 @@ export default class Sides extends Component {
             </div>
             </div>
             </div>
+
+    </Provider>    
+    
        
     
       
