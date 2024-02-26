@@ -18,7 +18,7 @@ export default class Process extends Component {
   render() {
     return (
 
-      <Provider>
+
 
         <section id={styles.SHADOW_SECTION_PROCESS} class={styles.center_holder}>
         <div class={styles.grid_0_main}>
@@ -303,7 +303,7 @@ export default class Process extends Component {
         </div>
       </section>
 
-      </Provider>
+      
 
         
 

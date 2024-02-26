@@ -39,11 +39,10 @@ const Main = ({ stories, firstStory }) => {
 
   return (
     <>
-      <Menu />
 
+      <Menu />
       <Header />
       <Sides />
-
       <Subscribetop/>
 
 
@@ -243,36 +242,18 @@ const Main = ({ stories, firstStory }) => {
       </section>
 
       <Tiktoktop/>
-
       <Herotitle/>
-
       <Products/>
-
       <Astronaut/>
-
-
-
-
       <World/>
-
-
-
       <About/>
-
       <Process/>
-
-
       <Mainvideo/>
-
-
-      
-
       <Subfooter/>
-
       <Subfooter2/>
-
-
+      
       <Footer/>
+
     </>
   );
 };

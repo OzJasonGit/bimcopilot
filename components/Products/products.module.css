@@ -9,6 +9,10 @@
     margin-bottom: 0px;
 }
 
+#_2H2 {
+    margin-bottom: 0px;
+}
+
 
 #_H3 {
     margin-bottom: 0px;
@@ -657,7 +661,7 @@
     width: 100%;
     height: auto;
     grid-template-columns: 1fr;
-    grid-row-gap: 30px;
+    grid-row-gap: 15px;
     grid-template-rows: 380px auto;
     grid-template-areas: "IMAGE"
         "TEXT";

@@ -1,19 +1,14 @@
-
 import Provider from "../../app/utils/Provider";
 
 import styles from './about.module.css'
 import React, { Component } from 'react';
 
-
 import Image from "next/image";
 import Link from "next/link";
-
 
 import Infinite_Scroll from "../../components/Carousel/Infinite_Scroll";
 import Tab from "../../components/Tabs/tabs";
 import Tab_Horizontal from "../../components/Tabs/tabs_horizontal";
-
-
 
 export default class About extends Component {
 
@@ -29,17 +24,15 @@ export default class About extends Component {
                 <div id={styles.INTRO}>
                   <h2
                     id={styles._H2}
-                    class="text-4xl ... text-stone-200 ... drop-shadow-xl ...  font-avant_garde_bold"
-                  >
+                    class="text-4xl ... text-stone-200 ... drop-shadow-xl ...  font-avant_garde_bold">
                     We help businesses harness BIM and AI for speed, profit and
                     sustainable success.
                   </h2>
-                </div>
-                <div id={styles.INTRO_SUBTITLE}>
+
+                  <br/>
                   <h3
                     id={styles._H3}
-                    class="text-xl ... text-stone-400 ... drop-shadow-xl ... font-avant_garde_medium"
-                  >
+                    class="text-xl ... text-stone-400 ... drop-shadow-xl ... font-avant_garde_bold">
                     Find out how we can help your business build{" "}
                     <a class="text-stone-200 ... font-avant_garde_bold">
                       systems
@@ -58,6 +51,7 @@ export default class About extends Component {
                     </a>
                   </h3>
                 </div>
+                
                 {/*<div class="rounded-2xl ... shadow-2xl ... " id={styles.IMAGE}>
                   <Image
                     src={stories[2].image}
@@ -117,7 +111,7 @@ export default class About extends Component {
                             help you a lot.
                           </h3>
                           <br />
-                          <p class="text-base ... text-stone-400 ... drop-shadow-xl font-avant_garde_medium">
+                          <p class="text-base ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">
                             At{" "}
                             <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               bimcopilot.com

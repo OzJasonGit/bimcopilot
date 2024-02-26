@@ -16,7 +16,7 @@ export default class Products extends Component {
   render() {
     return (
 
-    <Provider>
+ 
 
         <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
           <div class={styles.grid_0_main}>
@@ -51,15 +51,15 @@ export default class Products extends Component {
                   </div>
                 </div>
                 <div
-                  class="rounded-2xl ... drop-shadow-2xl ..."
+                  class="rounded-xl ... drop-shadow-2xl ..."
                   id={styles.PRODUCT_CARD}
                   styles={{ gridArea: "2" }}
                 >
                   <Link
                     href="/"
                     id={styles.PRODUCT_IMAGE}
-                    class="bg-neutral-800 rounded-xl ... drop-shadow-2xl ..."
-                  ></Link>
+                    class="bg-neutral-800 rounded-xl ... drop-shadow-2xl ...">
+                  </Link>
                   <div>
                     <Link href="/">
                       <h2
@@ -76,7 +76,7 @@ export default class Products extends Component {
                   </div>
                 </div>
                 <div
-                  class="rounded-2xl ... drop-shadow-2xl ..."
+                  class="rounded-xl ... drop-shadow-2xl ..."
                   id={styles.PRODUCT_CARD}
                   styles={{ gridArea: "3" }}
                 >
@@ -108,19 +108,19 @@ export default class Products extends Component {
                 <Link
                   href="/"
                   id={styles.PRODUCT_IMAGE}
-                  class="bg-neutral-900 rounded-xl ... drop-shadow-2xl ..."
+                  class="bg-neutral-900 rounded-lg ... drop-shadow-xl ..."
                 ></Link>
                 {/*<div  id={styles.PRODUCT_SHADOW} class="bg-neutral-950 rounded-xl ...">                                                            
                                   </div>*/}
                 <div>
                   <Link href="/">
                     <h2
-                      id={styles._H2}
-                      class=" text-neutral-700 ... font-avant_garde_bold"
+                      id={styles._2H2}
+                      class=" text-neutral-700 ... font-avant_garde_bold ... text-2xl ..."
                     >
                       This is the product title
                     </h2>
-                    <h3 class=" text-neutral-700 ... font-avant_garde_medium">
+                    <h3 class=" text-neutral-700 ... font-avant_garde_bold">
                       {" "}
                       This the product description
                     </h3>
@@ -131,19 +131,19 @@ export default class Products extends Component {
                 <Link
                   id={styles.PRODUCT_IMAGE}
                   href="/"
-                  class="bg-neutral-900 rounded-xl ... drop-shadow-2xl ..."
+                  class="bg-neutral-900 rounded-lg ... drop-shadow-xl ..."
                 ></Link>
                 {/*<div  id={styles.PRODUCT_SHADOW} class="bg-neutral-950 rounded-xl ...">                                                            
                                   </div>*/}
                 <div>
                   <Link href="/">
                     <h2
-                      id={styles._H2}
-                      class=" text-neutral-700 ... font-avant_garde_bold"
+                      id={styles._2H2}
+                      class=" text-neutral-700 ... font-avant_garde_bold ... text-2xl ..."
                     >
                       This is the product title
                     </h2>
-                    <h3 class=" text-neutral-700 ... font-avant_garde_medium">
+                    <h3 class=" text-neutral-700 ... font-avant_garde_bold">
                       {" "}
                       This the product description
                     </h3>
@@ -154,19 +154,19 @@ export default class Products extends Component {
                 <Link
                   id={styles.PRODUCT_IMAGE}
                   href="/"
-                  class="bg-neutral-900 rounded-xl ... drop-shadow-2xl ..."
+                  class="bg-neutral-900 rounded-lg ... drop-shadow-xl ..."
                 ></Link>
                 {/*<div  id={styles.PRODUCT_SHADOW} class="bg-neutral-950 rounded-xl ...">                                                            
                                   </div>*/}
                 <div>
                   <Link href="/">
                     <h2
-                      id={styles._H2}
-                      class=" text-neutral-700 ... font-avant_garde_bold"
+                      id={styles._2H2}
+                      class=" text-neutral-700 ... font-avant_garde_bold ... text-2xl ..."
                     >
                       This is the product title
                     </h2>
-                    <h3 class=" text-neutral-700 ... font-avant_garde_medium">
+                    <h3 class=" text-neutral-700 ... font-avant_garde_bold">
                       {" "}
                       This the product description
                     </h3>
@@ -176,8 +176,6 @@ export default class Products extends Component {
             </div>
           </div>
       </section>
-
-    </Provider>
 
     
 

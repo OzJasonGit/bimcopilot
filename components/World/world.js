@@ -9,12 +9,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-import Infinite_Scroll from "../../components/Carousel/Infinite_Scroll";
-import Tab from "../../components/Tabs/tabs";
-import Tab_Horizontal from "../../components/Tabs/tabs_horizontal";
-
-
-
 export default class About extends Component {
 
   render() {
