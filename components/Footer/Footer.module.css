@@ -97,7 +97,7 @@
     display: grid;
     grid-column-gap: 0px;
     grid-row-gap: 40px;
-    grid-template-rows: 20px auto;
+    grid-template-rows: 0px auto 0px;
     grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
     grid-template-areas: ". . . . . . ."
         ". BANNER-1 . MAIN-AREA . BANNER-2 .";
@@ -123,7 +123,7 @@
     grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "IPHONE IPHONE IPHONE IPHONE IPHONE IPHONE IPHONE OTHER OTHER OTHER OTHER OTHER";
+        "OTHER OTHER OTHER OTHER . IPHONE IPHONE IPHONE IPHONE IPHONE IPHONE IPHONE";
 }
 
 
@@ -148,12 +148,14 @@
     display: grid;
     width: 100%;
     height: auto;
-    grid-row-gap: 40px;
-    grid-template-rows: auto 50px 50px 0px;
+    grid-row-gap: 20px;
+    grid-template-rows: 350px auto 0px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: ". GIF GIF GIF"
-        ". . . ."
-        "SOCIAL SOCIAL SOCIAL SOCIAL";
+    grid-template-areas: 
+        
+        "GIF GIF GIF ."
+        "SOCIAL SOCIAL SOCIAL SOCIAL"
+        ". . . .";
 }
 
 #SOCIAL {
@@ -162,10 +164,12 @@
     width: 100%;
     height: 100%;
     grid-column-gap: 10px;
-    grid-template-columns: auto 40px 40px 40px 40px 40px;
+    grid-row-gap: 5px;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 32.5px 32.5px 32.5px 32.5px 32.5px auto;
     grid-template-areas:
-        ". GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN ";
-    margin-top: 12.5px;
+        "ARB ARB ARB ARB . ."
+        "GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN .";
 }
 
 .container {
@@ -231,7 +235,7 @@
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 15px 1fr 0px;
+    grid-template-columns: 0px 1fr 15px;
     grid-template-rows: 7.5px 1fr 7.5px;
     grid-template-areas:
         ". .    ."
@@ -249,17 +253,15 @@
 #FOOTER_MAIN {
     grid-area: MAIN;
     display: grid;
-    grid-template-rows: auto 30px auto 30px 20px 25px 20px 40px 20px 40px;
+    grid-template-rows: auto 30px auto 30px 60px 40px auto 40px;
     grid-row-gap: 0px;
     grid-template-columns: 1fr 1fr 1fr 30px 1fr 1fr;
     grid-template-areas:
-        "TAGLINE TAGLINE TAGLINE TAGLINE TAGLINE TAGLINE"
+        ". . . TAGLINE TAGLINE TAGLINE"
         ". . . . . ."
-        "CONTACT CONTACT CONTACT CONTACT CONTACT CONTACT"
+        ". CONTACT CONTACT CONTACT CONTACT CONTACT"
         ". . . . . ."
-        "WEBSITE WEBSITE WEBSITE . ARB ARB"
-        ". . . . ARB ARB"
-        "COMPANY COMPANY COMPANY . ARB ARB"
+        "FORM FORM FORM FORM FORM FORM"       
         ". . . . . ."
         "TC TC TC TC TC TC"
         ". . . . . .";
@@ -297,9 +299,9 @@
     grid-area: ARB;
     display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 100px 20px 100px;
+    grid-template-columns: 1fr 20px 1fr;
     grid-template-areas:
-        ". ARB . RIBA"
+        "ARB . RIBA"
 
 }
 
@@ -331,18 +333,19 @@
     position: relative;
     grid-area: TITLE;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns:  1fr 260px;
     grid-template-rows: auto;
     grid-template-areas:
-        "TITLE .";
+        ". TITLE";
 }
 
 
 #IMAGE_HOLDER {
+    grid-area: TITLE;
     position: relative;
     width: 100%;
     height: 100%;
-    left: -27.5px;
+    left: 27.5px;
 }
 
 
@@ -355,24 +358,24 @@
 
 
 .github {
-    color: rgb(168 162 158);
+    color: rgb(231 229 228);
 }
 
 
 .medium {
-    color: rgb(168 162 158);
+    color: rgb(231 229 228);
 }
 
 .linkedin {
-    color: rgb(168 162 158);
+    color: rgb(231 229 228);
 }
 
 .youtube {
-    color: rgb(168 162 158);
+    color: rgb(231 229 228);
 }
 
 .dribbble {
-    color: rgb(168 162 158);
+    color: rgb(231 229 228);
 }
 
 

@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 
 import Image from "next/image";
 import Link from "next/link";
-
+import astronaut from "./ASTRONAUT_2.png";
 
 
 export default class Subfooter extends Component {
@@ -23,8 +23,20 @@ export default class Subfooter extends Component {
 
         <div class={styles.grid_0_image_right}>
           <div
-            class="rounded-2xl ... drop-shadow-2xl ... border-solid border-2 border-slate-200..."
             id={styles.ASTRONAUT_IMAGE_2}>
+
+              <Image
+                  src={astronaut}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  style={{
+                    position: "absolute",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
           </div>
         </div>
       </section>  

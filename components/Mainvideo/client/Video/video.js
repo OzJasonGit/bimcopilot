@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFaceRelieved, faBasketball } from '@fortawesome/free-solid-svg-icons'
 import styles from "./video.module.css";
 import React, { Component } from 'react';
+import Provider from "../../../../app/utils/Provider";
 
 import Script from 'next/script'
 
@@ -18,6 +19,7 @@ import Link from 'next/link';
 const Video = () => {
   return (
     <>
+    
       <div class="rounded-2xl ..." id={styles.VIDEO_CONTAINER}>
 
         <div id={styles.VIDEO}>
@@ -39,6 +41,9 @@ const Video = () => {
         </div>
         
       </div>
+
+    
+      
     </>
   )
 }

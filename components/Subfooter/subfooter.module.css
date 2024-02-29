@@ -1399,8 +1399,8 @@
     background-color: transparent;
     display: grid;
     grid-column-gap: 40px;
-    grid-row-gap: 20px;
-    grid-template-rows: 20px auto 20px;
+    grid-row-gap: 0px;
+    grid-template-rows: 0px auto 0px;
     grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20px;
     grid-template-areas: ". . . . . . . . . . . . ."
         ". . . . . . . IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2"

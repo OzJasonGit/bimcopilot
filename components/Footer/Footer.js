@@ -10,7 +10,7 @@ import React, { Component } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-
+import Subform from "../Subscribetop/Client/subform";
 
 import logoMobile from './Bim-copilot-logo_Mobile_3.png';    
 import rocketShip from './giphy.gif';
@@ -47,58 +47,34 @@ export default class Footer extends Component {
 
                             <div id={styles.CONTACT}>
                                 <div>                                 
-                                    <h4 id={styles._H4}  class="text-4xl ... text-slate-100 ... font-avant_garde_bold">Contact</h4>                                   
-                                </div>
-                                <div >
+                                    <h4 id={styles._H4}  class="text-2xl ... text-slate-100 ... font-avant_garde_bold text-right">Contact
+                                    </h4>                                    
                                     <Link href= "/">
-                                        <h4 id={styles._H4}  class="text-2xl ... text-slate-100 ... font-avant_garde_medium">
+                                        <h4 id={styles._H4}  class="text-sm ... text-slate-100 ... font-avant_garde_medium text-right">
                                             <a class="text-yellow-200 font-avant_garde_bold"><Link href="/">info@bimcopilot.com</Link>
                                             </a>
                                         </h4> 
-                                    </Link>
-                                </div>
+                                    </Link>                             
+                                </div>                         
                             </div>
 
 
-
-                            <div id={styles.TAGLINE}>
-                                <h1 id={styles._H1} class="text-4xl ... text-slate-100 ... font-avant_garde_bold">Exploring new frontiers in <a class="text-stone-400 ...  underline  decoration-4 ... decoration-red-300 ...">architecture </a>, <a class="text-stone-400 ...  underline decoration-4 ... decoration-amber-300 ...">design </a> and <a class="text-stone-400 ... underline decoration-4 ... decoration-sky-300 ... ">technology</a>.</h1>
-                            </div>
-                            <div id={styles.WEBSITE}>
-                                <h4 id={styles._H4}  class=" text-sm ... text-slate-100 ...  font-avant_garde_medium">Website by <a class="text-red-200 font-avant_garde_bold">
-                                    <Link  href="/">designlab.pfbd</Link> 
-                                    </a>. Made with love, with a gun to our head.</h4>
-                            </div>
-                            <div id={styles.COMPANY}>
-                                <h4 id={styles._H4}  class="text-stone-400 ... font-avant_garde_medium text-sm ..."><a class= "text-amber-200 ... font-avant_garde_bold"><Link href="/">bimcopilot.com</Link></a> _ a subsidiary of Plastic Free By Design Ltd</h4>
-                            </div>
-
-
-
-                            
-
-
-
-
-
-                            <div id={styles.ARB_ICONS}>
-                                <div class=" rounded-md ... bg-slate-100 ..." id={styles.ARB}>
-                                    <Link href= "/">
-                                    </Link>
-                                </div>
-                                <div class=" rounded-md ... bg-slate-100 ..." id={styles.RIBA}>
-                                    <Link href= "/">
-                                    </Link>
-                                </div>                               
-                            </div>
-
-
+                            <Subform/>
 
 
                             <div id={styles.TC}>
                                 <div id={styles.COMPANY}>
-                                    <h4 id={styles._H4}  class="text-stone-400 ... font-avant_garde_medium text-sm ...">
-                                        <a class= "font-avant_garde_bold"> 
+                                    <h4 id={styles._H4}  class=" text-xs ... text-stone-400 ...  font-avant_garde_medium text-right">Website by <a class="text-stone-100 font-avant_garde_bold">
+                                    <Link  href="/">designlab.pfbd</Link> 
+                                    </a>. Made with love, with a gun to our head.
+                                    </h4>
+                                    <br/>
+                                    <h4 id={styles._H4}  class="text-stone-400 ... font-avant_garde_medium text-xs ... text-right"><a class= "text-amber-200 ... font-avant_garde_bold"><Link href="/">bimcopilot.com</Link></a> 
+                                        _ a subsidiary of <a class= "font-avant_garde_bold  text-stone-200 ...">Plastic Free By Design Ltd</a>
+                                    </h4>
+                                    <br/>
+                                    <h4 id={styles._H4}  class="text-stone-400 ... font-avant_garde_bold text-xs ... text-right">
+                                        <a class= "font-avant_garde_bold  text-stone-200 ..."> 
                                             Plastic Free By Design Ltd          
                                         </a>  A limited liability company registered in England and Wales
                                         <br></br>
@@ -127,6 +103,18 @@ export default class Footer extends Component {
                         </div>
 
                         <div id={styles.SOCIAL}>
+
+                            <div id={styles.ARB_ICONS}>
+                                <div class=" rounded-md ... bg-slate-100 ..." id={styles.ARB}>
+                                    <Link href= "/">
+                                    </Link>
+                                </div>
+                                <div class=" rounded-md ... bg-slate-100 ..." id={styles.RIBA}>
+                                    <Link href= "/">
+                                    </Link>
+                                </div>                               
+                            </div>
+
                             <div id={styles.MEDIUM_ICON} class={styles.icon}>
                                 <a id={styles.PFBD_LINK} href="https://github.com/OzJasonGit" target="_blank">
                                          <FontAwesomeIcon class={styles.medium} id={styles.CENTER} icon={faMedium} size="2xs" />

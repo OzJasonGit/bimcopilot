@@ -1,4 +1,6 @@
-import Provider from "../../app/utils/Provider";
+
+
+import Video from "./client/Video/video";
 
 
 
@@ -16,7 +18,7 @@ export default class Mainvideo extends Component {
   render() {
     return (
 
-      <Provider>
+      
 
         <section id={styles.SHADOW_SECTION} class={styles.center_holder}>
         <div class={styles.grid_0_main}>
@@ -24,7 +26,7 @@ export default class Mainvideo extends Component {
             <div id={styles.VIDEO_LATEST_HOLDER}>
               <div id={styles.VIDEO_LATEST} class="rounded-xl ..."></div>
 
-              {/*<Video />*/}
+              <Video />
 
               <div id={styles.VIDEO_TEXT_HOLDER} class="rounded ...">
                 <div id={styles.V_TITLE_HOLDER}>
@@ -54,25 +56,35 @@ export default class Mainvideo extends Component {
                 <div id={styles.SERVICES_TITLE}>
                   <h2
                     id={styles._H2}
-                    class="text-4xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold"
-                  >
+                    class="text-4xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">
                     Services
                   </h2>
-                </div>
-
-                <div
-                  class="rounded-md ..."
-                  id={styles.SERVICES_COLLAPSE_HOLDER}
-                >
-                  
+                  <br/>
+                  <h4 class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">
+                    A limited liability company registered in England and Wales
+                    A limited liability company registered in England and Wales
+                    A limited liability company 
+                   
+                  </h4>
                 </div>
               </div>
             </div>
+
+
+            <div id={styles.TAG}>
+                <h1
+                    id={styles._H1}
+                    class="text-7xl ... text-stone-400 ... font-avant_garde_bold">
+                    {" "}
+                    You're the <a class="text-stone-100 ...">pilot</a>... We am your{" "}
+                    <a class="text-amber-200 ...">copilot</a>.
+                </h1>
+                </div>
           </div>
         </div>
       </section>
 
-      </Provider>
+     
 
         
 

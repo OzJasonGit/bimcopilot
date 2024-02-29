@@ -30,20 +30,21 @@ export default class Process extends Component {
               >
                 <a
                   id={styles.TEXT_OUTLINE}
-                  class="text-6xl ... text-emerald-200 "
-                >
+                  class="text-6xl ... text-emerald-200 ">
                   How We Work
                 </a>
+                <br/>
+                <h4
+                  class="text-xl ... text-neutral-700 ... font-avant_garde_bold"
+                  id={styles._H5}>
+                  This is just some text to pass the time
+                </h4>
+
               </h1>
             </div>
 
             <div id={styles.PROCESS_TEXT} styles={{ gridArea: "STEPS" }}>
-              <p
-                class="text-xl ... text-neutral-700 ... font-avant_garde_medium"
-                id={styles._H5}
-              >
-                This is just some text to pass the time
-              </p>
+              
             </div>
 
             <div id={styles.PROCESS} styles={{ position: "absolute" }}>

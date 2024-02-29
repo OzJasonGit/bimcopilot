@@ -250,7 +250,7 @@ const Main = ({ stories, firstStory }) => {
       <Process/>
       <Mainvideo/>
       <Subfooter/>
-      <Subfooter2/>
+     
       
       <Footer/>
 
