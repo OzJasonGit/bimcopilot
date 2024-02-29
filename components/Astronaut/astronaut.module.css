@@ -46,9 +46,21 @@
 
 /*SECTION_5////ASTRONAUT_1/////////////////////////////////////////////////////////////////////////////////*/
 #ASTRONAUT_IMAGE_1 {
+    display: grid;
     grid-area: IMAGE;
     width: 100%;
     height: 600px;
+    grid-template-columns: 45px 1fr 45px;
+    grid-template-rows: 45px auto 45px;
+    grid-template-areas:   
+            ". . . "
+            ". AREA . "      
+            ". . . ";
+}
+
+
+#IMAGE {
+    grid-area: AREA;
 }
 
 

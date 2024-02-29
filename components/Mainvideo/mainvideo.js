@@ -76,7 +76,7 @@ export default class Mainvideo extends Component {
                     id={styles._H1}
                     class="text-7xl ... text-stone-400 ... font-avant_garde_bold">
                     {" "}
-                    You're the <a class="text-stone-100 ...">pilot</a>... We am your{" "}
+                    You're the <a class="text-stone-100 ...">pilot</a>... We are your{" "}
                     <a class="text-amber-200 ...">copilot</a>.
                 </h1>
                 </div>
