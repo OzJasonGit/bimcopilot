@@ -14,6 +14,7 @@ import React, { Component } from 'react';
 import Script from 'next/script'
 
 import logoMobile from "./Bim-copilot-logo_Mobile_3.png";
+import bimcopilot_icon from "./bimcopliot-logo.png";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -98,7 +99,20 @@ export default class Header extends Component {
 
                   <div id={styles.LOGO_ICON} class={styles.container}>
                       <Link id={styles.LOGO_LINK} href="/.">
-                          <div class="bg-slate-100 ... "  id={styles.LOGO}>
+                          <div class=" "  id={styles.LOGO}>
+
+                            <Image
+                                      src={bimcopilot_icon}
+                                      alt="Picture of the author"
+                                      width={500}
+                                      height={500}
+                                      style={{
+                                          position: "relative",
+                                          width: "auto",
+                                          height: "100%",
+                                          justifyItems: "center",
+                                          alignItems:  "center",
+                                          objectFit: "contain"}}/>  
                           </div>
                       </Link>      
                   </div>   
