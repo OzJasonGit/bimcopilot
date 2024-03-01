@@ -13,7 +13,7 @@ import Infinite_Scroll from "../../components/Carousel/Infinite_Scroll";
 import Tab from "../../components/Tabs/tabs";
 import Tab_Horizontal from "../../components/Tabs/tabs_horizontal";
 
-import astronaut_1 from "./ASTRONAUT_1.png";
+import astronaut_1 from "./ASTRONAUT_1_(5).png";
 
 export default class About extends Component {
 
@@ -23,22 +23,27 @@ export default class About extends Component {
       <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
         <div class={styles.grid_0_image_left}>
           <div
-            class="rounded-2xl ... drop-shadow-2xl ... border-solid border-2 border-slate-400..."
+            class=""
             id={styles.ASTRONAUT_IMAGE_1}>
 
-              <Image
-                  id={styles.IMAGE}
+              <div id={styles.IMAGE}>
+                <Image
+                  
                   src={astronaut_1}
                   alt="Picture of the author"
                   width={500}
-                  height={500}
+                  
                   style={{
-                    position: "absolute",
+                    position: "relative",
                     width: "100%",
                     height: "100%",
                     objectFit: "contain",
                   }}
               />
+
+              </div>
+
+              
 
           </div>
         </div>

@@ -247,7 +247,7 @@ export default class About extends Component {
               </div>
 
               <div id={styles.TESTIMONIALS}>
-                <div>
+                <div id={styles.TESTIMONIALS_TITLE}>
                   <h2
                     id={styles._H2}
                     class="text-right ... text-4xl ... text-stone-400 ...  drop-shadow-xl font-avant_garde_bold"

@@ -172,6 +172,13 @@
         margin: 0;
     }
 
+
+        .grid_0_main_world {
+ 
+            display: none;
+           
+        }
+
 }
 
 
@@ -197,6 +204,12 @@
 
 
 @media all and (min-width: 0px) and (max-width: 480px) {
+
+    .grid_0_main_world {
+    
+            display: none;
+    
+        }
 
 
 }

@@ -51,14 +51,14 @@ export default class Products extends Component {
                   </div>
                 </div>
                 <div
-                  class="rounded-xl ... drop-shadow-2xl ..."
+                  class="rounded-md ... drop-shadow-2xl ..."
                   id={styles.PRODUCT_CARD}
                   styles={{ gridArea: "2" }}
                 >
                   <Link
                     href="/"
                     id={styles.PRODUCT_IMAGE}
-                    class="bg-neutral-800 rounded-xl ... drop-shadow-2xl ...">
+                    class="bg-neutral-800 rounded-md ... drop-shadow-2xl ...">
                   </Link>
                   <div>
                     <Link href="/">
@@ -76,14 +76,14 @@ export default class Products extends Component {
                   </div>
                 </div>
                 <div
-                  class="rounded-xl ... drop-shadow-2xl ..."
+                  class="rounded-md ... drop-shadow-2xl ..."
                   id={styles.PRODUCT_CARD}
                   styles={{ gridArea: "3" }}
                 >
                   <Link
                     href="/"
                     id={styles.PRODUCT_IMAGE}
-                    class="bg-neutral-800 rounded-xl ... drop-shadow-2xl ..."
+                    class="bg-neutral-800 rounded-md ... drop-shadow-2xl ..."
                   ></Link>
                   <div>
                     <Link href="/">
@@ -108,7 +108,7 @@ export default class Products extends Component {
                 <Link
                   href="/"
                   id={styles.PRODUCT_IMAGE}
-                  class="bg-neutral-900 rounded-lg ... drop-shadow-xl ..."
+                  class="bg-neutral-900 rounded-md ... drop-shadow-xl ..."
                 ></Link>
                 {/*<div  id={styles.PRODUCT_SHADOW} class="bg-neutral-950 rounded-xl ...">                                                            
                                   </div>*/}
@@ -131,7 +131,7 @@ export default class Products extends Component {
                 <Link
                   id={styles.PRODUCT_IMAGE}
                   href="/"
-                  class="bg-neutral-900 rounded-lg ... drop-shadow-xl ..."
+                  class="bg-neutral-900 rounded-md ... drop-shadow-xl ..."
                 ></Link>
                 {/*<div  id={styles.PRODUCT_SHADOW} class="bg-neutral-950 rounded-xl ...">                                                            
                                   </div>*/}
@@ -154,7 +154,8 @@ export default class Products extends Component {
                 <Link
                   id={styles.PRODUCT_IMAGE}
                   href="/"
-                  class="bg-neutral-900 rounded-lg ... drop-shadow-xl ..."
+                  class="bg-neutral-900 rounded-md
+                   ... drop-shadow-xl ..."
                 ></Link>
                 {/*<div  id={styles.PRODUCT_SHADOW} class="bg-neutral-950 rounded-xl ...">                                                            
                                   </div>*/}

@@ -275,12 +275,20 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 20px;
-    grid-template-rows: 50px auto;
+    grid-template-rows: 30px 50px auto;
     width: 100%;
     height: auto;
     grid-template-areas:
+        "."
         "TITLE"
         "TESTIMONIALS"
+}
+
+
+#TESTIMONIALS_TITLE {
+
+    grid-area: TITLE;
+
 }
 
 #TESTIMONIAL_AREA {

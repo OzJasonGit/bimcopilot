@@ -3219,11 +3219,12 @@
         grid-column-gap: 40px;
         grid-row-gap: 40px;
         grid-template-columns: 1fr;
-        grid-template-rows: auto 450px 500px;
+        grid-template-rows: auto 450px 500px auto;
         grid-template-areas:
             "VIDEO"
             "GRAPHIC"
-            "SERVICES";
+            "SERVICES"
+            "TAG";
         margin-top: 0px;
     }
 

@@ -6,6 +6,8 @@ import styles from "./tabs.module.css";
 import Image from "next/image";
 import logoMobile from "./Bim-copilot-logo_Mobile_3.png";
 
+import Raj from "./Raj.png";
+
 import { Tabs } from "antd";
 
 
@@ -93,7 +95,7 @@ const Tab = () => {
 
                                     <Image
                                     id={styles.T_TAB}
-                                    src={logoMobile}                             
+                                    src={Raj}                             
                                     alt="Picture of the author"
                                     width={250}
                                     height={250}
