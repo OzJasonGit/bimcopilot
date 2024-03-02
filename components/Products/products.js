@@ -58,7 +58,7 @@ export default class Products extends Component {
                   <Link
                     href="/"
                     id={styles.PRODUCT_IMAGE}
-                    class="bg-neutral-800 rounded-md ... drop-shadow-2xl ...">
+                    class="bg-neutral-800 rounded-md ... drop-shadow-xl ...">
                   </Link>
                   <div>
                     <Link href="/">

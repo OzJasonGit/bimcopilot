@@ -661,7 +661,7 @@
     width: 100%;
     height: auto;
     grid-template-columns: 1fr;
-    grid-row-gap: 15px;
+    grid-row-gap: 10px;
     grid-template-rows: 380px auto;
     grid-template-areas: "IMAGE"
         "TEXT";

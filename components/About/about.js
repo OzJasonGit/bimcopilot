@@ -5,10 +5,14 @@ import React, { Component } from 'react';
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 import Infinite_Scroll from "../../components/Carousel/Infinite_Scroll";
 import Tab from "../../components/Tabs/tabs";
 import Tab_Horizontal from "../../components/Tabs/tabs_horizontal";
+
+import rocketShip from './giphy.gif';
+
 
 export default class About extends Component {
 
@@ -52,9 +56,9 @@ export default class About extends Component {
                   </h3>
                 </div>
                 
-                {/*<div class="rounded-2xl ... shadow-2xl ... " id={styles.IMAGE}>
+                <div class="rounded-2xl ... shadow-2xl ... " id={styles.IMAGE}>
                   <Image
-                    src={stories[2].image}
+                    src={rocketShip}
                     alt="Picture of the author"
                     width={500}
                     height={500}
@@ -65,7 +69,7 @@ export default class About extends Component {
                       objectFit: "cover",
                     }}
                   />
-                  </div>*/}
+                  </div>
               </div>
 
               <div id={styles.ABOUT_HOLDER}>
