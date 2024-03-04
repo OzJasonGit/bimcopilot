@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import Image from "next/image";
 
 const Productsmain = ({ stories, firstStory }) => {
@@ -120,6 +121,8 @@ const Productsmain = ({ stories, firstStory }) => {
             </div>
           </div>
       </section>
+
+      <Footer/>
       
     </>
 

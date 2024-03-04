@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
-
+import Footer from "../../components/Footer/Footer";
 
 const Projectsmain = ({ stories, firstStory }) => {
   const storiesToMap = stories.filter((story, i) => i != 0);
@@ -76,8 +76,8 @@ const Projectsmain = ({ stories, firstStory }) => {
             </div>
           </div>
       </section>
+      <Footer/>
       
-      <h1>THIS IS THE ROUTED PROJECTS PAGE</h1>
     </>
 
     
