@@ -10,6 +10,12 @@ import React, { Component } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 
+import revitBlinds from './revit_blinds.webp';
+import rocketShip from './giphy.gif';
+import drawingSheets from './drawing_sheets.webp';
+import externalDoors from './external_doors_graphic.webp';
+import volumesByRoom from './volumes_by_room.webp';
+
 
 export default class Products extends Component {
 
@@ -22,19 +28,12 @@ export default class Products extends Component {
           <div class={styles.grid_0_main}>
             <div
               id={styles.PRODUCTS_HOLDER_MOBILE}
-              styles={{ position: "absolute" }}
-            >
+              styles={{ position: "absolute" }}>
               <div id={styles.PRODUCTS_HORIZONTAL_MOBILE}>
                   <div
                       class="rounded-2xl ...  drop-shadow-2xl ..."
                       id={styles.PRODUCT_CARD}
-                      styles={{ gridArea: "1" }}>
-                          <Link
-                          href="/"
-                          id={styles.PRODUCT_IMAGE}
-                          class="bg-neutral-800 rounded-xl ... drop-shadow-2xl ...">
-
-                          </Link>
+                      styles={{ gridArea: "1" }}>                         
                   <div>
                     <Link href="/">
                       <h2
@@ -50,16 +49,25 @@ export default class Products extends Component {
                     </Link>
                   </div>
                 </div>
+
+
                 <div
                   class="rounded-md ... drop-shadow-2xl ..."
                   id={styles.PRODUCT_CARD}
-                  styles={{ gridArea: "2" }}
-                >
-                  <Link
-                    href="/"
-                    id={styles.PRODUCT_IMAGE}
-                    class="bg-neutral-800 rounded-md ... drop-shadow-xl ...">
-                  </Link>
+                  styles={{ gridArea: "2" }}>
+                  <Image
+                              id={styles.IMAGE_1}
+                              src={revitBlinds}                    
+                              style={{objectFit: "cover"}}
+                      	      quality={100}
+                              //object-fit="cover"                      
+                              alt=""/> 
+                              <Link
+                                  href="/"
+                                  id={styles.PRODUCT_IMAGE}
+                                  class="bg-neutral-800 rounded-xl ... drop-shadow-2xl ...">                             
+                              </Link>                             
+                        <Image/>
                   <div>
                     <Link href="/">
                       <h2
@@ -75,6 +83,8 @@ export default class Products extends Component {
                     </Link>
                   </div>
                 </div>
+
+
                 <div
                   class="rounded-md ... drop-shadow-2xl ..."
                   id={styles.PRODUCT_CARD}
@@ -100,80 +110,123 @@ export default class Products extends Component {
                     </Link>
                   </div>
                 </div>
+
+
+
+
+
+
+
+
+
               </div>
             </div>
 
+
+
+
+
+
+
+
+
+
             <div id={styles.PRODUCTS_HOLDER}>
+
+
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_1" }}>
-                <Link
-                  href="/"
-                  id={styles.PRODUCT_IMAGE}
-                  class="bg-neutral-900 rounded-md ... drop-shadow-xl ..."
-                ></Link>
-                {/*<div  id={styles.PRODUCT_SHADOW} class="bg-neutral-950 rounded-xl ...">                                                            
-                                  </div>*/}
+                
+                <Image
+                    class=" rounded-md ... "
+                    id={styles.PRODUCT_IMAGE}
+                    src={revitBlinds}                    
+                    style={{objectFit: "cover"}}
+                    quality={100}
+                    //object-fit="cover"                      
+                    alt=""/>                                                                            
+                <Image/>
+                               
                 <div>
                   <Link href="/">
                     <h2
                       id={styles._2H2}
-                      class=" text-neutral-700 ... font-avant_garde_bold ... text-2xl ..."
-                    >
-                      This is the product title
+                      class=" text-neutral-700 ... font-avant_garde_bold ... text-xl ...">
+                      Parametric Title Block Catalogue (Metric + Imperial)
                     </h2>
-                    <h3 class=" text-neutral-700 ... font-avant_garde_bold">
+                    <h3 class=" text-neutral-700 ... font-avant_garde_bold text-md ...">
                       {" "}
-                      This the product description
+                      From $33.00
                     </h3>
                   </Link>
                 </div>
+
               </div>
+
+
+
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_2" }}>
-                <Link
-                  id={styles.PRODUCT_IMAGE}
-                  href="/"
-                  class="bg-neutral-900 rounded-md ... drop-shadow-xl ..."
-                ></Link>
-                {/*<div  id={styles.PRODUCT_SHADOW} class="bg-neutral-950 rounded-xl ...">                                                            
-                                  </div>*/}
+
+                <Image
+                    class=" rounded-md ... drop-shadow-xl ... "
+                    id={styles.PRODUCT_IMAGE}
+                    src={drawingSheets}                    
+                    style={{objectFit: "cover"}}
+                    quality={100}
+                    //object-fit="cover"                      
+                    alt=""/>                                                                            
+                <Image/>
+
                 <div>
                   <Link href="/">
                     <h2
                       id={styles._2H2}
-                      class=" text-neutral-700 ... font-avant_garde_bold ... text-2xl ..."
+                      class=" text-neutral-700 ... font-avant_garde_bold ... text-xl ..."
                     >
-                      This is the product title
+                      Parametric Colored Title Blocks (Metric + Imperial)
                     </h2>
-                    <h3 class=" text-neutral-700 ... font-avant_garde_bold">
+                    <h3 class=" text-neutral-700 ... font-avant_garde_bold text-md ...">
                       {" "}
-                      This the product description
+                      From $31.90
                     </h3>
                   </Link>
                 </div>
+
               </div>
+
+
+
+
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_3" }}>
-                <Link
-                  id={styles.PRODUCT_IMAGE}
-                  href="/"
-                  class="bg-neutral-900 rounded-md
-                   ... drop-shadow-xl ..."
-                ></Link>
-                {/*<div  id={styles.PRODUCT_SHADOW} class="bg-neutral-950 rounded-xl ...">                                                            
-                                  </div>*/}
+
+                <Image
+                    class="bg-neutral-900 rounded-md ..."
+                    id={styles.PRODUCT_IMAGE}
+                    src={volumesByRoom}                    
+                    style={{objectFit: "cover"}}
+                    quality={100}
+                    //object-fit="cover"                      
+                    alt=""/>                                                                            
+                <Image/>
+
+
                 <div>
                   <Link href="/">
                     <h2
                       id={styles._2H2}
-                      class=" text-neutral-700 ... font-avant_garde_bold ... text-2xl ..."
+                      class=" text-neutral-700 ... font-avant_garde_bold ... text-xl ..."
                     >
-                      This is the product title
+                      Parametric External Doors (Metric + Imperial)
                     </h2>
-                    <h3 class=" text-neutral-700 ... font-avant_garde_bold">
+                    <h3 class=" text-neutral-700 ... font-avant_garde_bold text-md ...">
                       {" "}
-                      This the product description
+                      From $53.90
                     </h3>
                   </Link>
                 </div>
+
               </div>
+
+
             </div>
           </div>
       </section>

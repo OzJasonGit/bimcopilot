@@ -28,6 +28,7 @@ const Video = () => {
               display:"flex",
               position: "absolute",
               height:"100%",
+              objectFit: "cover",
               top: "0px",
               width:"100%"}}                                   
           streamType="on-demand"
@@ -39,6 +40,11 @@ const Video = () => {
           }}
         /> 
         </div>
+
+
+
+
+        
         
       </div>
 

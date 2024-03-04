@@ -11,11 +11,14 @@ import React, { Component } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 
+import { useRouter } from "next/navigation";
 
 
-export default class Mainvideo extends Component {
 
-  render() {
+const Mainvideopage = ({ stories, firstStory }) => {
+  const storiesToMap = stories.filter((story, i) => i != 0);
+  const router = useRouter();
+
     return (
 
       
@@ -24,26 +27,37 @@ export default class Mainvideo extends Component {
         <div class={styles.grid_0_main}>
           <div class={styles.video_section}>
             <div id={styles.VIDEO_LATEST_HOLDER}>
-              <div id={styles.VIDEO_LATEST} class="rounded-xl ..."></div>
 
-              <Video />
+
+              <div id={styles.VIDEO_LATEST} class="rounded ...">
+                 <Video />
+              </div>
+
+             
 
               <div id={styles.VIDEO_TEXT_HOLDER} class="rounded ...">
                 <div id={styles.V_TITLE_HOLDER}>
+
+
+
+
+
+
                   <h2
                     id={styles._H2}
-                    class="text-4xl ... text-slate-100 ... drop-shadow-xl font-avant_garde_bold"
-                  >
-                    {/*{stories[0].title}*/}
+                    class="text-4xl ... text-slate-100 ... drop-shadow-xl font-avant_garde_bold">
+                    {stories[0].title}
                   </h2>
-                </div>
-                <div id={styles.V_SUBTITLE_HOLDER}>
+                  
                   <h3
                     id={styles._H3}
-                    class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_medium"
-                  >
-                    {/*{stories[0].subtitle}*/}
+                    class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_medium">
+                    {stories[0].subtitle}
                   </h3>
+                
+
+           
+                  
                 </div>
                 <div class="rounded ..." id={styles.SHARE}></div>
               </div>
@@ -90,5 +104,5 @@ export default class Mainvideo extends Component {
 
     )
   }
-}
 
+export default Mainvideopage;

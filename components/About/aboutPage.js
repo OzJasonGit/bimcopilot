@@ -7,14 +7,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-import Infinite_Scroll from "../../components/Carousel/Infinite_Scroll";
-import Tab from "../../components/Tabs/tabs";
-import Tab_Horizontal from "../../components/Tabs/tabs_horizontal";
+import Infinite_Scroll from "../Carousel/Infinite_Scroll";
+import Tab from "../Tabs/tabs";
+import Tab_Horizontal from "../Tabs/tabs_horizontal";
 
 import rocketShip from './giphy.gif';
 
 
-export default class About extends Component {
+export default class Aboutpage extends Component {
 
   render() {
     return (

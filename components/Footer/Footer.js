@@ -14,6 +14,8 @@ import Subform from "../Subscribetop/Client/subform";
 
 import logoMobile from './Bim-copilot-logo_Mobile_3.png';    
 import rocketShip from './giphy.gif';
+ import logoARB from './logo_ARB.png';
+
 
 
 export default class Footer extends Component {
@@ -105,12 +107,38 @@ export default class Footer extends Component {
                         <div id={styles.SOCIAL}>
 
                             <div id={styles.ARB_ICONS}>
-                                <div class=" rounded-md ... bg-slate-100 ..." id={styles.ARB}>
+                                <div class=" rounded-md ..." id={styles.ARB}>
                                     <Link href= "/">
+                                        <Image
+                                            src={logoARB}
+                                            alt="Picture of the author"
+                                            width={500}
+                                            height={500}
+                                            style={{
+                                                position: "relative",
+                                                width: "100%",
+                                                height: "100%",
+                                                objectFit: "cover",
+                                            }}
+                                        /> 
                                     </Link>
                                 </div>
-                                <div class=" rounded-md ... bg-slate-100 ..." id={styles.RIBA}>
+
+
+                                <div class=" rounded-md ..." id={styles.RIBA}>
                                     <Link href= "/">
+                                        <Image
+                                            src={logoARB}
+                                            alt="Picture of the author"
+                                            width={500}
+                                            height={500}
+                                            style={{
+                                                position: "relative",
+                                                width: "100%",
+                                                height: "100%",
+                                                objectFit: "cover",
+                                            }}
+                                        /> 
                                     </Link>
                                 </div>                               
                             </div>

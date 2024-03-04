@@ -168,7 +168,7 @@
     grid-template-rows: 50px 50px;
     grid-template-columns: 32.5px 32.5px 32.5px 32.5px 32.5px auto;
     grid-template-areas:
-        "ARB ARB ARB ARB . ."
+        "ARB ARB ARB ARB ARB ."
         "GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN .";
 }
 
@@ -296,12 +296,14 @@
 
 
 #ARB_ICONS {
+    
     grid-area: ARB;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 20px 1fr;
     grid-template-areas:
-        "ARB . RIBA"
+        "ARB . RIBA";
+    
 
 }
 
@@ -313,11 +315,15 @@
 
 
 #ARB {
+    position: relative;
     grid-area: ARB;
+    left: -22.5px;
 }
 
 #RIBA {
+    position: relative;
     grid-area: RIBA;
+    left: -45px;
 }
 
 #TC {

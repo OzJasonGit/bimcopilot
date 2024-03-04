@@ -1,6 +1,3 @@
-
-
-
 /*SECTION_2////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
 #_H1 {
@@ -282,11 +279,12 @@
         ". . . ."
         ". NUMBER . ."
         ". . . .";
-    left: -187.5px;
+    left: -132.5%;
     z-index: 100000;
 }
 
 #POST_NUMBER_HOLDER {
+    position: relative;
     grid-area: NUMBER;
 
     display: grid;
@@ -298,12 +296,15 @@
         ". . .";
     width: 100%;
     height: 100%;
+    left: 580px;
 }
 
 #POST_NUMBER_HOLDER_2 {
+    position: relative;
     grid-area: NUMBER;
     width: 100%;
     height: 100%;
+    
 }
 
 
@@ -313,6 +314,13 @@
     overflow: hidden;
     width: 100%;
     left: -187.5px;
+}
+
+
+#LINK_HOLDER_2 {
+    position: relative;
+    
+    top: 120px;
 }
 
 #IMAGE_POST {
@@ -1206,7 +1214,7 @@
     height: auto;
     grid-column-gap: 40px;
     grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 60px auto 100px 250px 150px 100px auto 700px auto 140px auto;
+    grid-template-rows: 60px auto 100px 250px 150px 100px auto 800px 40px auto;
     grid-template-areas:
         ". . . . . . . . . . . ."
         "VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO GRAPHIC GRAPHIC GRAPHIC GRAPHIC GRAPHIC GRAPHIC"
@@ -1216,8 +1224,8 @@
         "SERVICES SERVICES SERVICES SERVICES SERVICES ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT"
         "SERVICES SERVICES SERVICES SERVICES SERVICES ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT"
         ". . . . . ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT"
-        "TAG TAG TAG TAG TAG ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT"
-        ". . . . . ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT";
+        ". . . . . . . . . . . ."
+        "TAG TAG TAG TAG TAG TAG . . . . . .";
 }
 
 #PROCESS_GRAPHIC_HOLDER {
@@ -1255,7 +1263,7 @@
     display: grid;
     width: 100%;
     height: auto;
-    grid-row-gap: 20px;
+    grid-row-gap: 40px;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     grid-template-areas:
@@ -3219,12 +3227,11 @@
         grid-column-gap: 40px;
         grid-row-gap: 40px;
         grid-template-columns: 1fr;
-        grid-template-rows: auto 450px 500px auto;
+        grid-template-rows: auto 450px 500px;
         grid-template-areas:
             "VIDEO"
             "GRAPHIC"
-            "SERVICES"
-            "TAG";
+            "SERVICES";
         margin-top: 0px;
     }
 
@@ -3234,7 +3241,7 @@
         display: grid;
         width: 100%;
         height: auto;
-        grid-row-gap: 0px;
+        grid-row-gap: 40px;
         grid-template-columns: 1fr;
         grid-template-rows: 350px auto;
         grid-template-areas:

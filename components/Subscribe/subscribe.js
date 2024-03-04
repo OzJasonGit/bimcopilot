@@ -8,7 +8,12 @@ import styles from "./Tiktok.module.css";
 import React, { Component } from 'react';
 
 
+
+
+
+
 const Subscribe = () => {
+
   return (
     <>
       <section id={styles.SHADOW_SECTION_TIKTOK} class={styles.center_holder}>  
