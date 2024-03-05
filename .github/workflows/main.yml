@@ -12,14 +12,30 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    
-    - name: Use Node.js
-      uses: actions/setup-node@v2-beta
+
+    - name: Use Node.js with cache
+      uses: actions/cache@v2
       with:
-        node-version: '20' # Set the desired Node.js version here
-        check-latest: true
-          
-    - name: Deploy using ssh
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ matrix.node-version }} # Cache key based on OS and Node.js version
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Use Node.js (specific version)
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }} # Use matrix variable for Node.js version
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests (optional, but recommended)
+      run: npm test # Replace with your testing command
+
+    - name: Build production folder
+      run: npm run build
+
+    - name: Deploy using SSH (optional)
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.IP }}
@@ -29,22 +45,32 @@ jobs:
         script: |
           #!/bin/bash
 
-            # Change directory to project directory
-            cd /var/www/bimcopilot
-            
-            # Pull latest changes from git
-            git pull origin main
+          # Change directory to project directory
+          cd /var/www/bimcopilot
 
-            # Install or update npm dependencies
-            npm install -f
-            
-            # Build production folder
-            npm run build
+          # Pull latest changes from git
+          git pull origin main
 
-            # Restart PM2 process
-            pm2 start next
+          # Build production folder again (just in case)
+          npm run build
 
-            # Restart Apache server
-            systemctl restart apache2
+          # Restart PM2 process (if using)
+          pm2 start next
 
-            # End of script
+          # Restart Apache server (if using)
+          systemctl restart apache2
+
+          # End of script
+
+    - name: Clean up cache (optional)
+      uses: actions/cache@v2
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ matrix.node-version }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+        action: 'delete'
+
+# Define a matrix to test multiple Node.js versions
+matrix:
+  node-version: [16, 18, 20] # Example: Test with Node.js versions 16, 18, and 20
