@@ -3,41 +3,23 @@ env:
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Install Node.js v20 using nvm
-        uses: nvm-sh/action@v1
-        with:
-          node_version: 20
-
-      - name: Upload SSH key
-        uses: actions/upload-artifact@v3
-        with:
-          name: ssh-key
-
-      - name: Setup SSH on remote server
-        run: |
-          ssh-keyscan ${{ secrets.IP }} >> ~/.ssh/known_hosts
-
-      - name: Download SSH key from artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: ssh-key
-
-      - name: Add SSH key to agent
-        run: |
-          chmod 600 ssh-key
-          ssh-add ssh-key
-
-      - name: Deploy using SSH
+    - name: Deploy using ssh
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.IP }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
         run: |
           #!/bin/bash
 
@@ -73,3 +55,4 @@ jobs:
           systemctl restart apache2
 
           # End of script
+
