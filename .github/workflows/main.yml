@@ -20,39 +20,25 @@ jobs:
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
-        run: |
+        script: |
           #!/bin/bash
 
-          # Change directory to project directory
-          cd /var/www/bimcopilot
+            # Change directory to project directory
+            cd /var/www/bimcopilot
+            
+            # Pull latest changes from git
+            git pull origin main
 
-          # Update package lists (optional)
-          # apt update
+            # Install or update npm dependencies
+            npm install -f
+            
+            # Build production folder
+            npm run build
 
-          # Install dependencies (if needed)
-          # apt install some-package -y
+            # Restart PM2 process
+            pm2 start next
 
-          # Print Node.js and npm versions for troubleshooting
-          node -v
-          npm -v
+            # Restart Apache server
+            systemctl restart apache2
 
-          # Pull latest changes from git
-          git pull origin main
-
-          # Use nvm to install or update npm to v20
-          nvm install 20
-
-          # Install or update npm dependencies
-          npm install -f
-
-          # Build production folder
-          npm run build
-
-          # Restart PM2 process
-          pm2 start next
-
-          # Restart Apache server
-          systemctl restart apache2
-
-          # End of script
-
+            # End of script
