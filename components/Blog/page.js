@@ -12,7 +12,7 @@ const Blog = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api");
+        const res = await axios.get("https://www.bimcopilot.com/api");
         const { responseData } = res.data;
         setData(responseData);
         setFirstStory(responseData.firstStory);
