@@ -37,7 +37,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          node-version: 20
           script: |
             #!/bin/bash
 
@@ -46,10 +45,11 @@ jobs:
 
             # Pull latest changes from git
             git pull origin main
-            nvm use 20
-            node -v 
-            npm -v
-            npm i -f 
+
+            # Assuming Node.js 20 is installed in /usr/local/bin
+            /usr/local/bin/node --version 20 npm install
+            /usr/local/bin/node --version 20 npm run build
+            
             npm run build  # Assuming you have a build script defined in your package.json
             pm2 start next  # Restart PM2 process
             systemctl restart apache2  # Restart Apache server
