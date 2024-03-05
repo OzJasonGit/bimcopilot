@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Install NVM
       run: |
@@ -21,6 +21,9 @@ jobs:
 
     - name: Install LTS Node.js version
       run: |
+        export NVM_DIR="$HOME/.nvm"
+        [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+        [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
         nvm install --lts
         node -v  # Verify Node.js version
 
