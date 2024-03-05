@@ -37,6 +37,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
+          node-version: 20
           script: |
             #!/bin/bash
 
