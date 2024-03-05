@@ -4,16 +4,20 @@ env:
 on:
   push:
     branches: [main]
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v4
-          
-    - name: Deploy using ssh
+      uses: actions/checkout@v2
+
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20' # Specify Node.js version used in the runner (optional)
+
+    - name: Run script on server using SSH
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.IP }}
@@ -23,25 +27,39 @@ jobs:
         script: |
           #!/bin/bash
 
-            # Change directory to project directory
-            cd /var/www/bimcopilot
+          # Change directory to project directory
+          cd /var/www/bimcopilot
 
-            node -v
-            npm -v 
-            
-            # Pull latest changes from git
-            git pull origin main
+          # Print Node.js version for verification (optional)
+          node -v
 
-            # Install or update npm dependencies
-            npm install -f
-            
-            # Build production folder
-            npm run build
+          # Pull latest changes from git
+          git pull origin main
 
-            # Restart PM2 process
-            pm2 start next
+          # Install or update npm dependencies
+          npm install -f
 
-            # Restart Apache server
-            systemctl restart apache2
+          # Build production folder
+          npm run build
 
-            # End of script
+          # Restart PM2 process (if using)
+          pm2 start next
+
+          # Restart Apache server (if using)
+          systemctl restart apache2
+
+          # End of script
+
+    - name: Clean up cache (optional)  # Consider caching if needed
+      uses: actions/cache@v2
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ matrix.node-version }} # Adapt based on caching strategy
+        restore-keys: |
+          ${{ runner.os }}-node-
+        action: 'delete'
+
+# Define a matrix to test multiple Node.js versions (optional)
+matrix:
+  node-version: [16, 18, 20] # Example: Test with Node.js versions 16, 18, and 20 (consider caching)
+
