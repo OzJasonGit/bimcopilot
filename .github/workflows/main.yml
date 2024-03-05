@@ -22,21 +22,28 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
-          cd /var/www/bimcopilot
+          #!/bin/bash
 
-          # git pull
-          git pull origin main
+            # Change directory to project directory
+            cd /var/www/bimcopilot
 
-          # Install or update dependencies
-          npm install -f
+            # Pull latest changes from git
+            git pull origin main
 
-          rm -rf .next/
-          
-          # Building production folder
-          npm run build
+            # Install or update npm dependencies
+            /usr/bin/npm install -f
 
-          # restarting pm2
-          pm2 start next
+            # Remove .next directory
+            rm -rf .next/
 
-          # Restarting Apache server
-          systemctl restart apache2
+            # Build production folder
+            /usr/bin/npm run build
+
+            # Restart PM2 process
+            /usr/bin/pm2 start next
+
+            # Restart Apache server
+            systemctl restart apache2
+
+            # End of script
+
