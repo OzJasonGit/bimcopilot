@@ -27,6 +27,13 @@ jobs:
             # Change directory to project directory
             cd /var/www/bimcopilot
 
+            apt update
+            apt install npm
+            npm install -g pm2
+
+            npm -v 
+            pm2 -v
+            
             # Pull latest changes from git
             git pull origin main
 
