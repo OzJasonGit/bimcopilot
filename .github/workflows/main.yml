@@ -31,16 +31,13 @@ jobs:
             git pull origin main
 
             # Install or update npm dependencies
-            /usr/bin/npm install -f
-
-            # Remove .next directory
-            rm -rf .next/
+            npm install -f
 
             # Build production folder
-            /usr/bin/npm run build
+            npm run build
 
             # Restart PM2 process
-            /usr/bin/pm2 start next
+            pm2 start next
 
             # Restart Apache server
             systemctl restart apache2
