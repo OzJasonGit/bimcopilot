@@ -11,15 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
-    
-
-    - name: Use Node.js in Docker container
-      uses: actions/docker@v2
-      with:
-        image: node:14 # Use the official Node.js 14 image
-
-
+      uses: actions/checkout@v4
           
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
