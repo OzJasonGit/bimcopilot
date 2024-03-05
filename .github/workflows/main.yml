@@ -11,8 +11,14 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
-
+      uses: actions/checkout@v2
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: '20' # Set the desired Node.js version here
+        check-latest: true
+          
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
       with:
