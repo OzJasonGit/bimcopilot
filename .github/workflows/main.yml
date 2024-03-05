@@ -4,20 +4,16 @@ env:
 on:
   push:
     branches: [main]
+
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
-    - name: Use Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20' # Specify Node.js version used in the runner (optional)
-
-    - name: Run script on server using SSH
+    - name: Deploy using ssh
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.IP }}
@@ -27,39 +23,32 @@ jobs:
         script: |
           #!/bin/bash
 
-          # Change directory to project directory
-          cd /var/www/bimcopilot
+            # Change directory to project directory
+            cd /var/www/bimcopilot
 
-          # Print Node.js version for verification (optional)
-          node -v
+            apt update
+            curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+            sudo apt install nodejs
 
-          # Pull latest changes from git
-          git pull origin main
 
-          # Install or update npm dependencies
-          npm install -f
+            
+            node -v
+            npm -v 
 
-          # Build production folder
-          npm run build
+            
+            # Pull latest changes from git
+            git pull origin main
 
-          # Restart PM2 process (if using)
-          pm2 start next
+            # Install or update npm dependencies
+            npm install -f
+            
+            # Build production folder
+            npm run build
 
-          # Restart Apache server (if using)
-          systemctl restart apache2
+            # Restart PM2 process
+            pm2 start next
 
-          # End of script
+            # Restart Apache server
+            systemctl restart apache2
 
-    - name: Clean up cache (optional)  # Consider caching if needed
-      uses: actions/cache@v2
-      with:
-        path: node_modules
-        key: ${{ runner.os }}-node-${{ matrix.node-version }} # Adapt based on caching strategy
-        restore-keys: |
-          ${{ runner.os }}-node-
-        action: 'delete'
-
-# Define a matrix to test multiple Node.js versions (optional)
-matrix:
-  node-version: [16, 18, 20] # Example: Test with Node.js versions 16, 18, and 20 (consider caching)
-
+            # End of script
