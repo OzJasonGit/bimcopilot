@@ -40,6 +40,8 @@ jobs:
             # Install or update npm dependencies
             npm install -f
 
+            pwd
+            
             # Build production folder
             npm run build
 
