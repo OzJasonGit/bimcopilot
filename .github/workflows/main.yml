@@ -39,17 +39,15 @@ jobs:
           port: 22
           script: |
             #!/bin/bash
-
+            node -v 
+            npm  -v 
+            
             # Change directory to project directory
             cd /var/www/bimcopilot
 
             # Pull latest changes from git
             git pull origin main
-
-            # Assuming Node.js 20 is installed in /usr/local/bin
-            /usr/local/bin/node --version 20 npm install
-            /usr/local/bin/node --version 20 npm run build
-            
+            npm install -f
             npm run build  # Assuming you have a build script defined in your package.json
             pm2 start next  # Restart PM2 process
             systemctl restart apache2  # Restart Apache server
