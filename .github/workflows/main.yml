@@ -35,7 +35,7 @@ jobs:
           npm run build
 
           # restarting pm2
-          pm2 start server
+          pm2 start next
 
           # Restarting Apache server
           systemctl restart apache2
