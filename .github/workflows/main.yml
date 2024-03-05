@@ -25,11 +25,11 @@ jobs:
           cd /var/www/bimcopilot
 
           # git pull
-          git pull origin main
+          git pull 
 
 
           # Install or update dependencies
-          npm install 
+          npm install -f
 
           # Building production folder
           npm run build
