@@ -25,16 +25,13 @@ jobs:
           cd /var/www/bimcopilot
 
           # git pull
-          git pull 
-
-          apt install curl
-          curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-          apt-get install -y nodejs
-          npm install pm2 -g
+          git pull origin main
 
           # Install or update dependencies
           npm install -f
 
+          rm -rf .next/
+          
           # Building production folder
           npm run build
 
