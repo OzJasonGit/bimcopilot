@@ -56,7 +56,7 @@ export default class Subcribetop extends Component {
                   </a>
                   . <br /> <br />{" "}
                   <a class="text-stone-200 ... font-avant_garde_bold text-3xl">
-                    Join the Waiting List!
+                    Join the Waiting List! nowwww
                   </a>
                 </h3>
               </div>
