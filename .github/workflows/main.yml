@@ -27,6 +27,9 @@ jobs:
           # git pull
           git pull 
 
+          apt install curl
+          curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+          apt-get install -y nodejs
 
           # Install or update dependencies
           npm install -f
