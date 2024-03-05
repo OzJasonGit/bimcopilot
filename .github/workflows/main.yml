@@ -28,8 +28,8 @@ jobs:
             cd /var/www/bimcopilot
 
             apt update
-            apt install npm
-            npm install -g pm2
+            apt install npm -y
+            npm install -g pm2 
 
             npm -v 
             pm2 -v
