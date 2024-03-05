@@ -12,7 +12,17 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
+
+    - name: Install NVM
+      run: |
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+        source ~/.bashrc
+
+    - name: Install LTS Node.js version
+      run: |
+        nvm install --lts
+        node -v  # Verify Node.js version
 
     - name: Deploy using ssh
       uses: appleboy/ssh-action@master
@@ -24,32 +34,22 @@ jobs:
         script: |
           #!/bin/bash
 
-            # Change directory to project directory
-            cd /var/www/bimcopilot
+          # Change directory to project directory
+          cd /var/www/bimcopilot
 
-            apt update
-            apt install npm -y
-            npm install -g pm2 
-            
-            node -v
-            npm -v 
-            pm2 -v
-            nvm use lts
-            
-            # Pull latest changes from git
-            git pull origin main
+          # Pull latest changes from git
+          git pull origin main
 
-            # Install or update npm dependencies
-            npm install -f
-            
-            # Build production folder
-            npm run build
+          # Install or update npm dependencies
+          npm install -f
 
-            # Restart PM2 process
-            pm2 start next
+          # Build production folder
+          npm run build
 
-            # Restart Apache server
-            systemctl restart apache2
+          # Restart PM2 process
+          pm2 start next
 
-            # End of script
+          # Restart Apache server
+          systemctl restart apache2
 
+          # End of script
