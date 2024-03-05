@@ -8,27 +8,47 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up SSH key
-        uses: aappleboy/ssh-action@master
+      - name: Install Node.js v20 using nvm
+        uses: nvm-sh/action@v1
         with:
-          github-secret: ${{ secrets.SSH_PRIVATE_KEY }}
+          node_version: 20
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
+      - name: Upload SSH key
+        uses: actions/upload-artifact@v3
         with:
-          node-version: 16  # adjust Node.js version if needed
+          name: ssh-key
+
+      - name: Setup SSH on remote server
+        run: |
+          ssh-keyscan ${{ secrets.IP }} >> ~/.ssh/known_hosts
+
+      - name: Download SSH key from artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ssh-key
+
+      - name: Add SSH key to agent
+        run: |
+          chmod 600 ssh-key
+          ssh-add ssh-key
 
       - name: Deploy using SSH
         run: |
-          # Connect to server using SSH
-          ssh ${{ secrets.USERNAME }}@${{ secrets.IP }} -p 22 << EOF
+          #!/bin/bash
 
           # Change directory to project directory
           cd /var/www/bimcopilot
+
+          # Update package lists (optional)
+          # apt update
+
+          # Install dependencies (if needed)
+          # apt install some-package -y
 
           # Print Node.js and npm versions for troubleshooting
           node -v
@@ -36,6 +56,9 @@ jobs:
 
           # Pull latest changes from git
           git pull origin main
+
+          # Use nvm to install or update npm to v20
+          nvm install 20
 
           # Install or update npm dependencies
           npm install -f
@@ -50,5 +73,3 @@ jobs:
           systemctl restart apache2
 
           # End of script
-          EOF
-
