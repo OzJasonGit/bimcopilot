@@ -3,51 +3,52 @@ env:
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-      
-    - name: Deploy using ssh
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.IP }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        script: |
-          #!/bin/bash
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-            # Change directory to project directory
-            cd /var/www/bimcopilot
+      - name: Set up SSH key
+        uses: actions/setup-ssh@v3
+        with:
+          github-secret: ${{ secrets.SSH_PRIVATE_KEY }}
 
-            apt update
-            apt install npm -y
-            
-            node -v
-            npm -v 
-           
-            
-            # Pull latest changes from git
-            git pull origin main
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16  # adjust Node.js version if needed
 
-            nvm use 20
+      - name: Deploy using SSH
+        run: |
+          # Connect to server using SSH
+          ssh ${{ secrets.USERNAME }}@${{ secrets.IP }} -p 22 << EOF
 
-            # Install or update npm dependencies
-            npm install -f
-            
-            # Build production folder
-            npm run build
+          # Change directory to project directory
+          cd /var/www/bimcopilot
 
-            # Restart PM2 process
-            pm2 start next
+          # Print Node.js and npm versions for troubleshooting
+          node -v
+          npm -v
 
-            # Restart Apache server
-            systemctl restart apache2
+          # Pull latest changes from git
+          git pull origin main
 
-            # End of script
+          # Install or update npm dependencies
+          npm install -f
+
+          # Build production folder
+          npm run build
+
+          # Restart PM2 process
+          pm2 start next
+
+          # Restart Apache server
+          systemctl restart apache2
+
+          # End of script
+          EOF
+
