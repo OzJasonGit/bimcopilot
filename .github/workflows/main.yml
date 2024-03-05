@@ -45,8 +45,10 @@ jobs:
 
             # Pull latest changes from git
             git pull origin main
-
-            # Run build and deployment commands (replace as needed)
+            nvm use 20
+            node -v 
+            npm -v
+            npm i -f 
             npm run build  # Assuming you have a build script defined in your package.json
             pm2 start next  # Restart PM2 process
             systemctl restart apache2  # Restart Apache server
