@@ -106,7 +106,7 @@
             display: grid;
             grid-row-gap: 20px;
             grid-template-columns: 1fr;
-            grid-template-rows: 60px 60px;
+            grid-template-rows: 70px 70px;
             grid-template-areas:
                 "FORM"
                 "BUTTON";
