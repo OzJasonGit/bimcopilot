@@ -84,8 +84,8 @@ const Blogpage = ({ stories, firstStory }) => {
               <div id={styles.HEAD_TITLE}>
                 <Link href="/">
                 <h1
-                  id={styles._H1}
-                  class="text-5xl ... text-stone-200 ... font-avant_garde_bold"
+                  id={styles._H1_2}
+                  class="text-4xl ... text-stone-200 ... font-avant_garde_bold"
                 >
                   {stories[0].title}
                 </h1>
@@ -96,7 +96,7 @@ const Blogpage = ({ stories, firstStory }) => {
                 <Link href="/">
                 <h3
                   id={styles._H3}
-                  class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium"
+                  class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_bold"
                 >
                   {stories[0].subtitle}
                 </h3>
@@ -107,7 +107,7 @@ const Blogpage = ({ stories, firstStory }) => {
                 <Link href="/">
                 <h3
                   id={styles._H3}
-                  class="text-left ... text-sm ... text-stone-400 ... font-avant_garde_medium">
+                  class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_bold">
                   {stories[0].author}
                 </h3>
                 </Link>
@@ -116,7 +116,7 @@ const Blogpage = ({ stories, firstStory }) => {
               <div id={styles.TIMESTAMP}>
                 <h3
                   id={styles._H3}
-                  class="text-left ... text-sm ... text-stone-400 ... font-avant_garde_medium"
+                  class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_bold"
                 >
                   {stories[0].timestamp}
                 </h3>
@@ -172,12 +172,12 @@ const Blogpage = ({ stories, firstStory }) => {
                         </div>
                         <div id={styles.BLOG_AUTHOR}>
                           <Link href={`/blog/${story._id}`}>
-                            <h4
-                              id={styles._H4}
+                            <h3
+                              id={styles._H3}
                               class="text-sm ... text-right ... text-stone-200 ... drop-shadow-xl ... font-avant_garde_medium"
                             >
                               {story.author}
-                            </h4>
+                            </h3>
                           </Link>
                         </div>
                         <div id={styles.TIMESTAMP}>
