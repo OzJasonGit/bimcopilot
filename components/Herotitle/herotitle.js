@@ -24,7 +24,7 @@ export default class Herotitle extends Component {
                   id={styles.TEXT_OUTLINE}
                   class="text-6xl ...  text-emerald-200"
                 >
-                  Sustainability
+                  Sustainability testing
                 </a>{" "}
                 <a class="text-6xl ...">
                   through exploration. We explore new frontiers in
