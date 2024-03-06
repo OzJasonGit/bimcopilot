@@ -137,6 +137,7 @@
     justify-content: center;
     background-color: transparent;
     z-index: -20000;
+    overflow-x: hidden;
 }
 
 .container {
@@ -2690,27 +2691,43 @@
 
     /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
     #_H1 {
-        margin-bottom: 0px;
-        font-size: 40px;
-    }
-
-    #_H2 {
-        margin-bottom: 0px;
-        font-size: 30px;
-    }
-
-    #_H3 {
-        margin-bottom: 0px;
-    }
-
-    #_H4 {
-        margin-bottom: 0px;
-    }
-
-
-    #_H5 {
-        margin-bottom: -2.5px;
-    }
+            margin-bottom: 0px;
+            font-size: 20px;
+        }
+    
+        #_H1_2 {
+            margin-bottom: 0px;
+            font-size: 26.5px;
+            line-height: 32.5px;
+        }
+    
+    
+        #_H2 {
+            margin-bottom: 0px;
+            font-size: 16.5px;
+        }
+    
+        #_H3 {
+            margin-bottom: 0px;
+            font-size: 14px;
+            line-height: 12.5px;
+        }
+    
+        #_H4 {
+            margin-bottom: 0px;
+        }
+    
+    
+        #_H5 {
+            margin-bottom: -2.5px;
+        }
+    
+        #TEXT_OUTLINE {
+            -webkit-text-stroke: 1px rgb(120, 120, 120);
+            margin-bottom: 0px;
+            font-size: 20px;
+            line-height: 32.5px;
+        }
 
     /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -3030,12 +3047,23 @@
         position: relative;
         height: auto;
         grid-template-columns: 1fr;
-        grid-row-gap: 30px;
-        grid-template-rows: 300px auto;
+        grid-row-gap: 20px;
+        grid-template-rows: 320px auto;
         grid-template-areas:
             "IMAGE"
             "TEXT ";
     }
+
+
+
+        
+    
+    
+        #IMAGE_1 {
+            overflow: hidden;
+            position: relative;
+            grid-area: IMAGE;
+        }
 
     /*SECTION////PRODUCTS///////////////////////////////////////////////////////////////////////////////////*/
 
@@ -3130,14 +3158,7 @@
     }
 
 
-    #IMAGE {
-        overflow: hidden;
-        position: relative;
-        grid-area: IMAGE;
-        width: 100%;
-        height: 350px;
-        box-shadow: -125px -160px 200px rgba(236, 236, 238, 0.228);
-    }
+    
 
     /*SECTION_7////ABOUT////////////////////////////////////////////////////////////////////////////////////*/
 
