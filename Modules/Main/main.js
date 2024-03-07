@@ -45,21 +45,6 @@ const Main = ({ stories, firstStory }) => {
 
       <Blog/>
 
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
       <Tiktoktop/>
       <Herotitle/>
       <Products/>
