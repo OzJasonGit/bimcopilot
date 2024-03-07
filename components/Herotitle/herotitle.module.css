@@ -274,7 +274,7 @@
     /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
     #_H1 {
             margin-bottom: 0px;
-            font-size: 20px;
+            font-size: 33.5px;
         }
     
         #_H1_2 {
@@ -307,8 +307,8 @@
         #TEXT_OUTLINE {
             -webkit-text-stroke: 1px rgb(120, 120, 120);
             margin-bottom: 0px;
-            font-size: 20px;
-            line-height: 32.5px;
+            font-size: 33px;
+            line-height: 33.5px;
         }
 
 
