@@ -86,7 +86,8 @@ export default class Herotitle extends Component {
                   {" "}
                   construction{" "}
                 </a>
-                <a class="text-5xl ...">and</a>{" "}
+                <a class="text-5xl ..."   
+                   id={styles._H1_2}>and</a>{" "}
                 <a
                   id={styles.TEXT_OUTLINE}
                   class="text-5xl ... text-stone-50 ... underline decoration-4 ... decoration-sky-300 ..."
