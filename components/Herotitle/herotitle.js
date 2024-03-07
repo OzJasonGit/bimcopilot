@@ -26,8 +26,7 @@ export default class Herotitle extends Component {
                 >
                   Sustainability
                 </a>{" "}
-                <a class="text-6xl ..."
-                 id={styles._H1_2}>
+                <a id={styles._H1_2}>
                   through exploration. We explore new frontiers in
                 </a>
                 <a
