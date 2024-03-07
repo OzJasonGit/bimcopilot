@@ -18,7 +18,7 @@ export default class Herotitle extends Component {
             <div id={styles.SUB_TEXT_HOLDER}>
               <h1
                 class="text-6xl ... text-neutral-700 ... font-avant_garde_bold"
-                id={styles._H1}
+                id={styles._H1_2}
               >
                 <a
                   id={styles.TEXT_OUTLINE}
