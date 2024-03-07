@@ -713,7 +713,7 @@
         grid-area: TESTIMONIAL;
         display: grid;
         grid-template-columns: 1fr;
-        grid-row-gap: 20px;
+        grid-row-gap: 5px;
         grid-template-rows: 50px auto;
         width: 100%;
         height: auto;
