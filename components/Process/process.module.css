@@ -3140,6 +3140,14 @@
 
 
     /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
+    #SHADOW_SECTION_PROCESS {
+        display: none;
+    }
+    
+    
+    
+    
+    
     .grid_0_main_process {
         width: 100%;
         max-width: 1640px;
