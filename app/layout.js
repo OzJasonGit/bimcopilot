@@ -26,7 +26,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable}`}>
+      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable}`}
+            >
       
           <>{children}</>
         
