@@ -59,7 +59,7 @@ export default class Herotitle extends Component {
             <div id={styles.SUB_TEXT_HOLDER_MOBILE}>
               <h1
                 class="text-5xl ... text-neutral-700 ... font-avant_garde_bold"
-                id={styles._H1}
+                id={styles._H1_2}
               >
                 <a
                   id={styles.TEXT_OUTLINE}
@@ -67,7 +67,8 @@ export default class Herotitle extends Component {
                 >
                   Sustainability
                 </a>{" "}
-                <a class="text-5xl ...">
+                <a class="text-5xl ..."
+                   id={styles._H1_2}>
                   through exploration. We explore new frontiers in
                 </a>
                 <a
