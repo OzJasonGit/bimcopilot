@@ -585,8 +585,15 @@
     /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
     #_H1 {
         margin-bottom: 0px;
-        font-size: 30px;
+        font-size: 33.5px;
     }
+
+    #_H1_2 {
+        margin-bottom: 0px;
+        font-size: 35px;
+        line-height: 33.5px;
+    }
+
 
     #_H2 {
         margin-bottom: 0px;
@@ -595,6 +602,8 @@
 
     #_H3 {
         margin-bottom: 0px;
+        font-size: 14px;
+        line-height: 19.5px;
     }
 
     #_H4 {
@@ -604,6 +613,13 @@
 
     #_H5 {
         margin-bottom: -2.5px;
+    }
+
+    #TEXT_OUTLINE {
+        -webkit-text-stroke: 1px rgb(120, 120, 120);
+        margin-bottom: 0px;
+        font-size: 35px;
+        line-height: 33.5px;
     }
 
     /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/

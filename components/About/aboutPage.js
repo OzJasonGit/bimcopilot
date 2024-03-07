@@ -115,41 +115,50 @@ export default class Aboutpage extends Component {
                             help you a lot.
                           </h3>
                           <br />
-                          <p class="text-base ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">
+                          <p class="text-base ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold"
+                             id={styles._H1_2}>
                             At{" "}
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                              id={styles._H1_2}>
                               bimcopilot.com
                             </a>{" "}
                             we use Building Information modelling
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               [BIM]
                             </a>{" "}
                             and artificial intelligence
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               [AI]
                             </a>{" "}
                             to develop{" "}
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               systems
                             </a>{" "}
                             that
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               automate
                             </a>{" "}
                             tasks,{" "}
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               50x output
                             </a>{" "}
                             and
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               eliminate human errors
                             </a>{" "}
                             that result in
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               waste.{" "}
                             </a>
@@ -157,42 +166,50 @@ export default class Aboutpage extends Component {
                             <br />
                             My focus and passion has always been in preserving the
                             natural world and
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               bimcopilot.com{" "}
                             </a>
                             continues to champion these values of
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               sustainability
                             </a>{" "}
                             and
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               <br />
                               waste-reduction
                             </a>
                             . We believe that
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               bigger profits
                             </a>{" "}
                             come from
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               better systems
                             </a>
                             , that
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               save time
                             </a>
                             ,
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               reduce waste
                             </a>{" "}
                             and
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               improve accuracy
                             </a>
@@ -201,17 +218,20 @@ export default class Aboutpage extends Component {
                             <br />
                             <br />
                             The future lies somewhere between
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               low-tech
                             </a>{" "}
                             solutions and
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               advanced technology
                             </a>
                             .
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                               id={styles._H1_2}>
                               {" "}
                               bimcopilot.com
                             </a>
@@ -221,7 +241,8 @@ export default class Aboutpage extends Component {
                             Learn more about our values from our parent company,
                             <br />
                             <br />
-                            <a class="text-emerald-200 drop-shadow-xl font-avant_garde_bold text-lg ...">
+                            <a class="text-emerald-200 drop-shadow-xl font-avant_garde_bold text-lg ..."
+                               id={styles._H1_2}>
                               {" "}
                               <Link href="/">plasticfreebydesign.com</Link>
                             </a>
