@@ -43,7 +43,7 @@ const Main = ({ stories, firstStory }) => {
       <Sides />
       <Subscribetop/>
 
-      <Blog/>
+      {/*<Blog/>*/}
 
 
       
