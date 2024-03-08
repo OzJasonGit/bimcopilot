@@ -13,7 +13,7 @@ import Infinite_Scroll from "../../components/Carousel/Infinite_Scroll";
 import Tab from "../../components/Tabs/tabs";
 import Tab_Horizontal from "../../components/Tabs/tabs_horizontal";
 
-import astronaut_1 from "./ASTRONAUT_1_(5).png";
+import astronaut_1 from "./ASTRONAUT_1_(6).png";
 
 export default class About extends Component {
 
