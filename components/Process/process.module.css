@@ -2720,6 +2720,18 @@
 
 
 
+    .center_holder {
+        position: relative;
+        width: 100%;
+        display: none;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: aliceblue;
+        margin: 0;
+    }
+
+
+
     .grid_0_main {
         display: none;
         width: 100%;
