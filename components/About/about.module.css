@@ -680,11 +680,11 @@
 
 
     #ABOUT_CONTAINER {
-        position: sticky;
+        position: relative;
         display: grid;
         width: 100%;
         height: 650px;
-        top: 160px;
+        top: -160px;
         grid-template-columns: 15px 1fr 15px;
         grid-template-rows: 30px auto 20px;
         grid-template-areas:
