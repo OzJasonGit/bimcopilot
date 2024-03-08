@@ -27,7 +27,7 @@ export default class Aboutpage extends Component {
               <div id={styles.INTRO_HOLDER}>
                 <div id={styles.INTRO}>
                   <h2
-                    id={styles._H1_2}
+                    id={styles._H2}
                     class="text-4xl ... text-stone-200 ... drop-shadow-xl ...  font-avant_garde_bold">
                     We help businesses harness BIM and AI for speed, profit and
                     sustainable success.
@@ -102,8 +102,8 @@ export default class Aboutpage extends Component {
                             </div>
                           </div>
 
-                          <h1
-                            id={styles._H1_2}
+                          <h3
+                            id={styles._H3}
                             class="text-lg ... text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
                           >
                             Hi, I'm Oz Jason. I'm a registered architect, BIM
@@ -113,52 +113,44 @@ export default class Aboutpage extends Component {
                             becoming less important. What matters is how I can
                             help you and your business. And I think <br /> I could
                             help you a lot.
-                          </h1>
+                          </h3>
                           <br />
                           <p class="text-base ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold"
                              id={styles._H3}>
                             At{" "}
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                              id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               bimcopilot.com
                             </a>{" "}
                             we use Building Information modelling
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               [BIM]
                             </a>{" "}
                             and artificial intelligence
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               [AI]
                             </a>{" "}
                             to develop{" "}
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               systems
                             </a>{" "}
                             that
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               automate
                             </a>{" "}
                             tasks,{" "}
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               50x output
                             </a>{" "}
                             and
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               eliminate human errors
                             </a>{" "}
                             that result in
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               waste.{" "}
                             </a>
@@ -166,50 +158,42 @@ export default class Aboutpage extends Component {
                             <br />
                             My focus and passion has always been in preserving the
                             natural world and
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               bimcopilot.com{" "}
                             </a>
                             continues to champion these values of
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               sustainability
                             </a>{" "}
                             and
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               <br />
                               waste-reduction
                             </a>
                             . We believe that
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               bigger profits
                             </a>{" "}
                             come from
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               better systems
                             </a>
                             , that
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               save time
                             </a>
                             ,
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H1_2}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               reduce waste
                             </a>{" "}
                             and
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               improve accuracy
                             </a>
@@ -218,20 +202,17 @@ export default class Aboutpage extends Component {
                             <br />
                             <br />
                             The future lies somewhere between
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               low-tech
                             </a>{" "}
                             solutions and
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               advanced technology
                             </a>
                             .
-                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
-                               id={styles._H3}>
+                            <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               bimcopilot.com
                             </a>
@@ -241,8 +222,7 @@ export default class Aboutpage extends Component {
                             Learn more about our values from our parent company,
                             <br />
                             <br />
-                            <a class="text-emerald-200 drop-shadow-xl font-avant_garde_bold text-lg ..."
-                               id={styles._H3}>
+                            <a class="text-emerald-200 drop-shadow-xl font-avant_garde_bold text-lg ...">
                               {" "}
                               <Link href="/">plasticfreebydesign.com</Link>
                             </a>
@@ -259,8 +239,7 @@ export default class Aboutpage extends Component {
                 <div>
                   <h2
                     id={styles._H2}
-                    class="text-left ... text-4xl ... text-stone-400 ...  drop-shadow-xl ... font-avant_garde_bold"
-                  >
+                    class="text-left ... text-4xl ... text-stone-400 ...  drop-shadow-xl ... font-avant_garde_bold">
                     Who We Work With
                   </h2>
                 </div>

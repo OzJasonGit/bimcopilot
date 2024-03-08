@@ -61,7 +61,6 @@
     justify-content: center;
     background-color: rgb(23, 23, 23);
     z-index: -30000;
-    overflow-x: hidden;
 }
 
 .grid_0 {
@@ -585,43 +584,39 @@
 
     /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
     #_H1 {
-        margin-bottom: 0px;
-        font-size: 33.5px;
-    }
-
-    #_H1_2 {
-        margin-bottom: 0px;
-        font-size: 35px;
-        line-height: 33.5px;
-    }
-
-
-    #_H2 {
-        margin-bottom: 0px;
-        font-size: 30px;
-    }
-
-    #_H3 {
-        margin-bottom: 0px;
-        font-size: 14px;
-        line-height: 19.5px;
-    }
-
-    #_H4 {
-        margin-bottom: 0px;
-    }
-
-
-    #_H5 {
-        margin-bottom: -2.5px;
-    }
-
-    #TEXT_OUTLINE {
-        -webkit-text-stroke: 1px rgb(120, 120, 120);
-        margin-bottom: 0px;
-        font-size: 35px;
-        line-height: 33.5px;
-    }
+            margin-bottom: 0px;
+            font-size: 20px;
+        }
+    
+        #_H1_2 {
+            margin-bottom: 0px;
+            font-size: 23.5px;
+            line-height: 32.5px;
+        }
+    
+    
+        #_H2 {
+            margin-bottom: 0px;
+            font-size: 23.5px;
+            line-height: 32.5px;
+        }
+    
+        #_H3 {
+            margin-bottom: 0px;
+            font-size: 14px;
+            line-height: 20.5px;
+        }
+    
+        #_H4 {
+            margin-bottom: 0px;
+        }
+    
+    
+        #_H5 {
+            margin-bottom: -2.5px;
+            font-size: 15px;
+            line-height: 5px;
+        }
 
     /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
@@ -630,18 +625,6 @@
 
 
     /*SECTION_2////BLOG/////////////////////////////////////////////////////////////////////////////////////*/
-#SHADOW_SECTION_BLACK {
-    position: relative;
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: rgb(23, 23, 23);
-    z-index: 30000;
-    overflow-x: hidden;
-}
-
-
     .grid_0 {
         position: relative;
         width: 100%;
@@ -657,6 +640,34 @@
             " MAIN-AREA ";
         margin-bottom: 0px;
     }
+
+
+
+
+
+
+
+        #TESTIMONIALS {
+            grid-area: TESTIMONIAL;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 20px;
+            grid-template-rows: 50px auto;
+            width: 100%;
+            height: auto;
+            grid-template-areas:
+                "TITLE"
+                "TESTIMONIALS"
+        }
+
+
+        #TESTIMONIAL_AREA {
+            position: relative;
+            grid-area: TESTIMONIALS;
+            width: 100%;
+            height: 300px;
+
+        }
 
 
    
@@ -680,11 +691,11 @@
 
 
     #ABOUT_CONTAINER {
-        position: relative;
+        position: sticky;
         display: grid;
         width: 100%;
         height: 650px;
-        top: 0px;
+        top: 160px;
         grid-template-columns: 15px 1fr 15px;
         grid-template-rows: 30px auto 20px;
         grid-template-areas:
@@ -718,30 +729,6 @@
         width: 100%;
         height: 350px;
         box-shadow: -125px -160px 200px rgba(236, 236, 238, 0.228);
-    }
-
-
-    #TESTIMONIALS {
-        grid-area: TESTIMONIAL;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 5px;
-        grid-template-rows: 50px auto;
-        width: 100%;
-        height: auto;
-        grid-template-areas:
-            
-            "TITLE"
-            "TESTIMONIALS"
-    }
-
-
-    #TESTIMONIAL_AREA {
-        position: relative;
-        grid-area: TESTIMONIALS;
-        width: 100%;
-        height: 200px;
-
     }
 }
 
