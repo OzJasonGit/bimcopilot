@@ -56,7 +56,7 @@ const Main = ({ stories, firstStory }) => {
       <Subfooter/>
      
       
-      <Footer/>
+      {/*<Footer/>*/}
 
     </>
   );
