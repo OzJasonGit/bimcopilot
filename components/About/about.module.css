@@ -630,6 +630,18 @@
 
 
     /*SECTION_2////BLOG/////////////////////////////////////////////////////////////////////////////////////*/
+#SHADOW_SECTION_BLACK {
+    position: relative;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(23, 23, 23);
+    z-index: 30000;
+    overflow-x: hidden;
+}
+
+
     .grid_0 {
         position: relative;
         width: 100%;

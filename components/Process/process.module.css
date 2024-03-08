@@ -3140,9 +3140,15 @@
 
 
     /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
-    #SHADOW_SECTION_PROCESS {
-        display: none;
-    }
+        #SHADOW_SECTION_PROCESS {
+            position: relative;
+            width: 100%;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            background-color: rgb(228 228 231);
+            z-index: -30000;
+        }
     
     
     
