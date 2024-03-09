@@ -52,7 +52,7 @@ const Main = ({ stories, firstStory }) => {
       <Astronaut/>
       <World/>
       <About/>
-      <Process/>
+      {/*<Process/>*/}
       <Mainvideo/>
       <Subfooter/>
      
