@@ -46,11 +46,6 @@ const Main = ({ stories, firstStory }) => {
       <Blog/>
 
 
-      
-
-
-
-
       <Tiktoktop/>
       <Herotitle/>
       <Products/>
@@ -62,7 +57,7 @@ const Main = ({ stories, firstStory }) => {
       <Subfooter/>
      
       
-      {/*<Footer/>*/}
+      <Footer/>
 
     </>
   );
