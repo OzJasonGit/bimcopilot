@@ -34,12 +34,12 @@ export default class Footer extends Component {
                         <div id={styles.BIM_TITLE}>
                             <div id={styles.IMAGE_HOLDER}>
                               <Image
-                              id={styles.IMAGE_1}
-                              src={logoMobile}                    
-                              style={{objectFit: "contain"}}
-                      	      quality={100}
-                              //object-fit="cover"                      
-                              alt=""/>
+                                id={styles.IMAGE_1}
+                                src={logoMobile}                    
+                                style={{objectFit: "cover", objectPosition:"right"}}
+                                quality={100}
+                                //object-fit="cover"                      
+                                alt=""/>
                             </div>                           
                         </div>
 
