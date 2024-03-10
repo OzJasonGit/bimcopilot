@@ -25,9 +25,15 @@ export default class Aboutpage extends Component {
           <div class={styles.grid_0}>
             <div class={styles.main}>
               <div id={styles.INTRO_HOLDER}>
+
+
+
+
+
+                
                 <div id={styles.INTRO}>
                   <h2
-                    id={styles._H2}
+                    id={styles._H1_2}
                     class="text-4xl ... text-stone-200 ... drop-shadow-xl ...  font-avant_garde_bold">
                     We help businesses harness BIM and AI for speed, profit and
                     sustainable success.
