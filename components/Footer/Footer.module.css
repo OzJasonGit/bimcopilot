@@ -1526,7 +1526,7 @@
         position: relative;
         grid-area: TITLE;
         display: grid;
-        grid-template-columns: 1fr 60px;
+        grid-template-columns: 120px 1fr;
         grid-template-rows: auto;
         grid-template-areas:
             "TITLE .";
