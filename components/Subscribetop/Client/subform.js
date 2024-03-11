@@ -81,12 +81,12 @@ const Subform = () => {
             </Form>
 
             <Button id={styles.SUB_BUTTON}
-                    className="w-full shadow bg-amber-200 text-white p-2 rounded-md hover:bg-blue-600">
+                    className="w-full shadow bg-emerald-300 ">
 
-                        <h2 class=" text-neutral-700 ... font-avant_garde_bold text-lg ..."
-                            style={{position: "relative", top: "6px"}}
+                        <h2 class=" text-stone-700 ... font-avant_garde_bold text-lg ..."
+                            style={{position: "relative", top: "3px"}}
                             id={styles._H2}>
-                            Click Here!
+                                <a id={styles.TEXT_OUTLINE}>Click Here!</a>                           
                         </h2>
             </Button>
         </div>             
