@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -309,9 +310,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
         )})};
 
-          
-
-      
+      <Footer/>
 
     </>
 
