@@ -157,6 +157,7 @@ const Blogpage = ({ stories, firstStory }) => {
                             </h5>
                           </div>
                         </div>
+
                         <div id={styles.BLOG_TEXT}>
                           <Link
                             href={`/blog/${story._id}`}
@@ -170,6 +171,7 @@ const Blogpage = ({ stories, firstStory }) => {
                             </h3>
                           </Link>
                         </div>
+
                         <div id={styles.BLOG_AUTHOR}>
                           <Link href={`/blog/${story._id}`}>
                             <h3
@@ -189,11 +191,12 @@ const Blogpage = ({ stories, firstStory }) => {
                           </h4>
                         </div>
 
-                        <div
+                        <Link
+                          href={`/blog/${story._id}`}
                           class="rounded ... drop-shadow-2xl ... text-stone-400 ..."
                           id={styles.BLOG_IMAGE}
                         >
-                          <Link href={`/blog/${story._id}`}>
+                          <div >
                             <Image
                               alt="Picture of the author"
                               width={500}
@@ -206,8 +209,11 @@ const Blogpage = ({ stories, firstStory }) => {
                                 objectFit: "cover",
                               }}
                             />
-                          </Link>
-                        </div>
+                          </div>
+                        </Link>
+
+
+
                         <div
                           class="border-b border-neutral-600"
                           id={styles.BORDER}

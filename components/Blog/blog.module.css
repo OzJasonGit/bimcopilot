@@ -2833,7 +2833,7 @@
         height: auto;
         grid-column-gap: 40px;
         grid-template-columns: 1fr;
-        grid-template-rows: 350px 240px 600px;
+        grid-template-rows: 350px 250px 600px;
         grid-template-areas:
             "CONTENT"
             "TITLE"
