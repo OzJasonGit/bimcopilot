@@ -84,7 +84,7 @@ const Blogpage = ({ stories, firstStory }) => {
               <div id={styles.HEAD_TITLE}>
                 <Link href="/">
                 <h1
-                  id={styles._H1_2}
+                  id={styles._H2}
                   class="text-4xl ... text-stone-200 ... font-avant_garde_bold"
                 >
                   {stories[0].title}
@@ -127,7 +127,7 @@ const Blogpage = ({ stories, firstStory }) => {
               <div id={styles.ARTICLES_TITLE} styles={styles.h3}>
                 <h2
                   id={styles._H2}
-                  class="text-4xl ... text-stone-400 ...  text-shadow-[0_4px_8px_var(--tw-shadow-color)] shadow-indigo-500/50 font-avant_garde_bold"
+                  class="text-4xl ... text-stone-200 ...  text-shadow-[0_4px_8px_var(--tw-shadow-color)] shadow-indigo-500/50 font-avant_garde_bold"
                 >
                   Latest Stories
                 </h2>
@@ -173,8 +173,8 @@ const Blogpage = ({ stories, firstStory }) => {
                         <div id={styles.BLOG_AUTHOR}>
                           <Link href={`/blog/${story._id}`}>
                             <h3
-                              id={styles._H3}
-                              class="text-sm ... text-right ... text-stone-200 ... drop-shadow-xl ... font-avant_garde_medium"
+                              id={styles._H4}
+                              class="text-sm ... text-right ... text-stone-400 ... drop-shadow-xl ... font-avant_garde_bold"
                             >
                               {story.author}
                             </h3>
@@ -183,7 +183,7 @@ const Blogpage = ({ stories, firstStory }) => {
                         <div id={styles.TIMESTAMP}>
                           <h4
                             id={styles._H4}
-                            class="text-sm ... text-right ... text-stone-200 ... drop-shadow-xl ... font-avant_garde_medium"
+                            class="text-sm ... text-right ... text-stone-400 ... drop-shadow-xl ... font-avant_garde_bold"
                           >
                             {story.timestamp}
                           </h4>

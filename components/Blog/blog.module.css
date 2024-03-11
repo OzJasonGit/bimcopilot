@@ -2723,6 +2723,8 @@
         
             #_H4 {
                 margin-bottom: 0px;
+                font-size: 14px;
+                line-height: 19.5px;
             }
         
         
@@ -2916,7 +2918,7 @@
         display: grid;
         grid-row-gap: 2.5px;
         grid-column-gap: 16.5px;
-        grid-template-columns: 30px 1fR 60px;
+        grid-template-columns: 30px 1fR 80px;
         grid-template-rows: 30px 16.5px 5px auto auto 5px auto auto;
         grid-template-areas:
 
