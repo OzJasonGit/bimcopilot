@@ -128,6 +128,7 @@
 #SUB_TAG {
     grid-area: SUB_MAIN;
 }
+
 /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
 
 
@@ -160,7 +161,7 @@
 /*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
 @media all and (min-width: 960px) and (max-width: 1280px) {
-    
+
 
     #SHADOW_SECTION_BLOG {
         position: relative;
@@ -174,7 +175,7 @@
         left: 0;
     }
 
-  
+
 
 
     /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
@@ -346,49 +347,49 @@
 
 
     /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
-        #_H1 {
-                margin-bottom: 0px;
-                font-size: 33.5px;
-            }
-        
-            #_H1_2 {
-                margin-bottom: 0px;
-                font-size: 35px;
-                line-height: 33.5px;
-            }
-        
-        
-            #_H2 {
-                margin-bottom: 0px;
-                font-size: 30px;
-            }
-        
-            #_H3 {
-                margin-bottom: 0px;
-                font-size: 14px;
-                line-height: 19.5px;
-            }
-        
-            #_H4 {
-                margin-bottom: 0px;
-            }
-        
-        
-            #_H5 {
-                margin-bottom: -2.5px;
-            }
-        
-            #TEXT_OUTLINE {
-                -webkit-text-stroke: 1px rgb(120, 120, 120);
-                margin-bottom: 0px;
-                font-size: 35px;
-                line-height: 33.5px;
-            }
+    #_H1 {
+        margin-bottom: 0px;
+        font-size: 20px;
+    }
+
+    #_H1_2 {
+        margin-bottom: 0px;
+        font-size: 26.5px;
+        line-height: 32.5px;
+    }
+
+
+    #_H2 {
+        margin-bottom: 0px;
+        font-size: 30px;
+    }
+
+    #_H3 {
+        margin-bottom: 0px;
+        font-size: 14px;
+        line-height: 19.5px;
+    }
+
+    #_H4 {
+        margin-bottom: 0px;
+    }
+
+
+    #_H5 {
+        margin-bottom: -2.5px;
+    }
+
+    #TEXT_OUTLINE {
+        -webkit-text-stroke: 1px rgb(120, 120, 120);
+        margin-bottom: 0px;
+        font-size: 20px;
+        line-height: 32.5px;
+    }
 
     /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
-   
+
 
     /*SECTION_1/////////////////////////////////////////////////////////////////////////////////////////////*/
     .grid_0_subscribe {
@@ -407,7 +408,7 @@
     }
 
 
-   
+
 
     .sub_head {
         position: relative;
