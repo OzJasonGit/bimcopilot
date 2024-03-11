@@ -88,7 +88,7 @@ export default class Sides extends Component {
                     <div id={styles.RIGHT_FIXED_STICKY}>
                         <div id={styles.PFBD_LINKS}>
                             <div id={styles.ICON_PLACEHOLDER} class={styles.container}>
-                                <p class="drop-shadow-xl ... font-avant_garde_bold" id={styles.SIDE_TEXT} >Welcome     to    <a><Link class="text-amber-200" href="/">bimcopilot.com</Link></a> </p>
+                                <p class="drop-shadow-xl ... font-avant_garde_bold" id={styles.SIDE_TEXT} >Welcome     to    <a><Link class="text-emerald-200" href="/">bimcopilot.com</Link></a> </p>
                             </div>
                         </div>
     
