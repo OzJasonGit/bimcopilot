@@ -91,7 +91,7 @@ const Mainvideopage = ({ stories, firstStory }) => {
                     class="text-7xl ... text-stone-400 ... font-avant_garde_bold">
                     {" "}
                     You're the <a class="text-stone-100 ...">pilot</a>... We are your{" "}
-                    <a class="text-amber-200 ...">copilot</a>.
+                    <a class="text-emerald-200 ...">copilot</a>.
                 </h1>
                 </div>
           </div>
