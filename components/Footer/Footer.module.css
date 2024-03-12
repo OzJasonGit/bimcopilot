@@ -134,6 +134,25 @@
     background-color: rgb(23 23 23);
 }
 
+
+
+
+
+
+
+#COMPANY_TEXT {
+    display: none;
+    grid-area: TEXT;
+}
+
+
+#WAITING {
+    display: none;
+    grid-area: WAITING;
+}
+
+
+
 #OTHER {
     grid-area: OTHER;
     display: grid;
@@ -1306,9 +1325,9 @@
         width: 100%;
         display: grid;
         grid-column-gap: 40px;
-        grid-row-gap: 40px;
+        grid-row-gap: 20px;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
+        grid-template-rows: auto auto auto;
         grid-template-areas:
             "IPHONE"
             "OTHER";
@@ -1336,12 +1355,13 @@
         width: 100%;
         height: auto;
         grid-row-gap: 20px;
-        grid-template-rows: 350px auto 0px;
+        grid-template-rows: 350px auto auto 0px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas:
 
             "GIF GIF GIF GIF"
             "SOCIAL SOCIAL SOCIAL SOCIAL"
+            "TEXT TEXT TEXT TEXT"
             ". . . .";
     }
 
@@ -1357,6 +1377,14 @@
         grid-template-areas:
             "ARB ARB ARB ARB ARB ."
             "GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN .";
+    }
+
+
+
+
+    #COMPANY_TEXT {
+        display: block;
+        grid-area: TEXT;
     }
 
     .container {
@@ -1440,7 +1468,7 @@
     #FOOTER_MAIN {
         grid-area: MAIN;
         display: grid;
-        grid-template-rows: auto 30px auto 30px auto auto auto 40px;
+        grid-template-rows: auto 30px auto 30px auto auto auto auto ;
         grid-row-gap: 10px;
         grid-template-columns: 1fr 1fr 1fr 30px 1fr 1fr;
         grid-template-areas:
@@ -1448,13 +1476,20 @@
             ". . . . . ."
             "CONTACT CONTACT CONTACT CONTACT CONTACT ."
             ". . . . . ."
+            "WAITING WAITING WAITING WAITING WAITING WAITING"
             "FORM FORM FORM FORM FORM FORM"
             ". . . . . ."
-            "TC TC TC TC TC TC"
-            ". . . . . .";
+            "TC TC TC TC TC TC";
+    }
+
+
+
+    #WAITING {
+        grid-area: WAITING;
     }
 
     #COMPANY {
+        display: none;
         grid-area: COMPANY;
     }
 
@@ -1526,7 +1561,7 @@
         position: relative;
         grid-area: TITLE;
         display: grid;
-        grid-template-columns: 120px 1fr;
+        grid-template-columns: 150px 1fr;
         grid-template-rows: auto;
         grid-template-areas:
             "TITLE .";

@@ -59,6 +59,19 @@ export default class Footer extends Component {
                                     </Link>                             
                                 </div>                         
                             </div>
+                
+                
+                            <div id={styles.WAITING} >
+                                <h3>
+                                    <a 
+                                        id={styles._H1_2} 
+                                        class="text-stone-200 ... font-avant_garde_bold text-3xl">
+                                        Join the Waiting List!
+                                    </a>
+                                </h3>
+                                
+                            </div>
+                            
 
 
                             <Subform/>
@@ -167,8 +180,35 @@ export default class Footer extends Component {
                                 <a id={styles.PFBD_LINK} href="https://github.com/OzJasonGit" target="_blank">
                                          <FontAwesomeIcon class={styles.github} id={styles.CENTER} icon={faGithub} size="2xs" />
                                 </a>
-                            </div>                     
+                            </div>                                                
                         </div>
+
+
+
+
+
+
+
+
+
+                         <div id={styles.COMPANY_TEXT}>
+                            <h4 id={styles._H4}  class=" text-xs ... text-stone-400 ...  font-avant_garde_medium text-right">Website by <a class="text-stone-100 font-avant_garde_bold">
+                            <Link  href="/">designlab.pfbd</Link> 
+                            </a>. Made with love, with a gun to our head.
+                            </h4>
+                            <br/>
+                            <h4 id={styles._H4}  class="text-stone-400 ... font-avant_garde_medium text-xs ... text-right"><a class= "text-emerald-200 ... font-avant_garde_bold"><Link href="/">bimcopilot.com</Link></a> 
+                                _ a subsidiary of <a class= "font-avant_garde_bold  text-stone-200 ...">Plastic Free By Design Ltd</a>
+                            </h4>
+                            <br/>
+                            <h4 id={styles._H4}  class="text-stone-400 ... font-avant_garde_bold text-xs ... text-right">
+                                <a class= "font-avant_garde_bold  text-stone-200 ..."> 
+                                    Plastic Free By Design Ltd          
+                                </a>  A limited liability company registered in England and Wales
+                                <br></br>
+                                Company No. 15015616 
+                            </h4>
+                         </div> 
                     </div>
                 </footer>
             </div>        
