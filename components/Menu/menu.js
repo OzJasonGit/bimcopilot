@@ -35,12 +35,33 @@ const Menu = () => {
       <section id={styles.SHADOW_SECTION_DRAWER} class={styles.center_holder}>  
 
           <Drawer
-          id={styles.DRAWER_LEFT}
-          title="complicaTED  Drawer"
-          placement="left"
-          onClose={onClose}
-          open={open}>  
-                      
+              id={styles.DRAWER_LEFT}
+              title="complicaTED  Drawer"
+              placement="left"
+              onClose={onClose}
+              open={open}>  
+
+              <div id={styles.DRAWER_MENU}>
+
+                <Link class="content-center ..." id={styles.SERVICES} href="/services"> 
+                    <h3 id={styles.H_3} class="text-right ...  text-stone-700 font-avant_garde_bold"><a class="text-3xl">Services</a></h3>
+                </Link>  
+
+                <Link id={styles.PROJECTS} href="/projects"> 
+                  <h3 id={styles.H_3} class="text-right ...  text-stone-700  font-avant_garde_bold"><a class="text-3xl">Projects</a></h3>
+                </Link>  
+
+                <Link id={styles.STORIES} href="/bloghome"> 
+                  <h3 id={styles.H_3} class="text-right ...  text-stone-700 font-avant_garde_bold"><a class="text-3xl">Stories</a></h3>
+                </Link>  
+
+                <Link id={styles.SHOP} href="/products"> 
+                  <h3 id={styles.H_3} class="text-right ...  text-stone-700  font-avant_garde_bold"><a class="text-3xl">Shop</a></h3>
+                </Link>  
+                
+              </div>
+           
+                        
           </Drawer> 
 
 

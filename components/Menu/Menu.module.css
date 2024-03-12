@@ -116,12 +116,53 @@
 
 
 #DRAWER_LEFT {
+    position: relative;
     height: 100%;
     width: 100%;
     z-index: 800000000000000000000000000000000000000000000000;
     
 }
 
+
+
+#DRAWER_MENU {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25px auto auto auto auto 40vh auto;
+    grid-template-areas:
+            "."
+            "SERVICES"
+            "STORIES"
+            "PROJECTS"
+            "SHOP"
+            "."
+            "ICONS";
+}
+
+
+
+
+#SERVICES {
+    grid-area: SERVICES;
+}
+
+
+#PROJECTS {
+    grid-area: PROJECTS;
+}
+
+
+#STORIES {
+    grid-area: STORIES;
+}
+
+
+#SHOP {
+    grid-area: SHOP;
+}
 
 
 
