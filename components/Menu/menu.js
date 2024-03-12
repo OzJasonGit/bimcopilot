@@ -25,7 +25,7 @@ import Link from 'next/link';
 
 import pfbdImage from './_pfbd_.svg';
 import dlpfbdImage from './_dlpfbd_.svg';
-import logoARB from './logo_ARB.png';
+import logoARB from './logoARB_DARK.png';
 
 
 
@@ -54,7 +54,8 @@ const Menu = () => {
       <section id={styles.SHADOW_SECTION_DRAWER} class={styles.center_holder}>  
 
           <Drawer
-              id={styles.DRAWER_LEFT}
+              class="bg-indigo-600 bg-opacity-50 ..."
+              id={styles.DRAWER_LEFT  }
               title= {<h1  id={styles.H_3} class="text-right ...  text-stone-700 font-avant_garde_bold">
                         <a class="text-4xl">
                             MENU
