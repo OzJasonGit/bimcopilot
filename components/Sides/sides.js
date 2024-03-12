@@ -39,6 +39,7 @@ export default class Sides extends Component {
                         <div id={styles.ICON_SIDE_1}>
                             <div id={styles.ICON_SIDE_2}>
                                 <div id={styles.ICON_GRID} class={styles.container}>
+                                    
 
                                     <div id={styles.PFBD_ICON} class={styles.icon}>
                                         <Link id={styles.PFBD_LINK} href= "/" target="_blank">
@@ -75,6 +76,8 @@ export default class Sides extends Component {
                                             </div> 
                                         </Link>                                       
                                     </div>
+
+
                                 </div>                            
                             </div>
     

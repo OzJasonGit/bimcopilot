@@ -124,22 +124,252 @@
 }
 
 
-
 #DRAWER_MENU {
     position: relative;
     width: 100%;
     display: grid;
     grid-row-gap: 30px;
     grid-template-columns: 1fr;
-    grid-template-rows: 25px auto auto auto auto 40vh auto;
+    grid-template-rows: 25px auto auto auto auto 20vh 40px auto auto;
     grid-template-areas:
-            "."
-            "SERVICES"
-            "STORIES"
-            "PROJECTS"
-            "SHOP"
-            "."
-            "ICONS";
+        "."
+        "SERVICES"
+        "STORIES"
+        "PROJECTS"
+        "SHOP"
+        "."
+        "ICONS"
+        "SOCIAL"
+        "TEXT";
+}
+
+
+
+
+
+
+
+
+
+
+#OTHER {
+    grid-area: OTHER;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-row-gap: 20px;
+    grid-template-rows: 350px auto 0px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+
+        "GIF GIF GIF ."
+        "SOCIAL SOCIAL SOCIAL SOCIAL"
+        ". . . .";
+}
+
+
+
+
+
+
+
+#SOCIAL {
+    grid-area: SOCIAL;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 32.5px 32.5px 32.5px 32.5px 32.5px auto;
+    grid-template-areas:
+        "ARB ARB ARB ARB ARB ."
+        "GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN .";
+}
+
+
+
+
+
+
+#ARB_ICONS {
+
+    grid-area: ARB;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 20px 1fr;
+    grid-template-areas:
+        "ARB . RIBA";
+
+
+}
+
+
+
+
+
+
+
+
+#ARB {
+    position: relative;
+    grid-area: ARB;
+    left: -22.5px;
+}
+
+#RIBA {
+    position: relative;
+    grid-area: RIBA;
+    left: -45px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#TEXT {
+    grid-area: TEXT;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#MEDIUM_ICON {
+    display: grid;
+    grid-area: MEDIUM;
+    align-items: center;
+        justify-content: left;
+}
+
+#LINKEDIN_ICON {
+    display: grid;
+    grid-area: LINKEDIN;
+    align-items: center;
+        justify-content: left;
+}
+
+#YOUTUBE_ICON {
+    display: grid;
+    grid-area: YOUTUBE;
+    align-items: center;
+    justify-content: left;
+}
+
+#DRIBBLE_ICON {
+    display: grid;
+    grid-area: DRIBBLE;
+    align-items: center;
+    justify-content: left;
+}
+
+#GITHUB_ICON {
+    display: grid;
+    grid-area: GITHUB;
+    align-items: center;
+    justify-content: left;
+}
+
+
+
+#PFBD_LINK {
+    grid-area: ICON;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 0px 1fr 6px;
+    grid-template-rows: 3px 1fr 3px;
+    grid-template-areas:
+        ". .    ."
+        ". CENTER ."
+        ". .    .";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#DRAWER_ICONS {
+    grid-area: ICONS;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: 40px 40px 40px 1fr;
+    grid-template-areas:
+            "PFBD DLPFBD BIMCOPILOT";
+}
+
+
+
+#PFBD_ICON {
+    grid-area: PFBD;
+}
+
+
+#DESIGN_LAB_ICON {
+    grid-area: DLPFBD;
 }
 
 
