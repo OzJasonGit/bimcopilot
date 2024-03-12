@@ -55,7 +55,12 @@ const Menu = () => {
 
           <Drawer
               id={styles.DRAWER_LEFT}
-              title="complicaTED  Drawer"
+              title= {<h1  id={styles.H_3} class="text-right ...  text-stone-700 font-avant_garde_bold">
+                        <a class="text-4xl">
+                            MENU
+                        </a>                        
+                      </h1>
+                     }
               placement="left"
               onClose={onClose}
               open={open}>  
@@ -222,17 +227,17 @@ const Menu = () => {
 
                 <div id={styles.TEXT}>
                   <div id={styles.COMPANY}>
-                      <h4 id={styles._H4}  class=" text-xs ... text-stone-400 ...  font-avant_garde_medium text-left">Website by <a class="text-stone-100 font-avant_garde_bold">
+                      <h4 id={styles._H4}  class=" text-xs ... text-stone-700 ... font-avant_garde_bold text-left">Website by <a class="text-stone-400 font-avant_garde_bold">
                       <Link  href="/">designlab.pfbd</Link> 
                       </a>. Made with love, with a gun to our head.
                       </h4>
                       <br/>
-                      <h4 id={styles._H4}  class="text-stone-400 ... font-avant_garde_medium text-xs ... text-left"><a class= "text-amber-200 ... font-avant_garde_bold"><Link href="/">bimcopilot.com</Link></a> 
-                          _ a subsidiary of <a class= "font-avant_garde_bold  text-stone-200 ...">Plastic Free By Design Ltd</a>
+                      <h4 id={styles._H4}  class="text-stone-700 ... font-avant_garde_bold text-xs ... text-left"><a class= "text-emerald-400 ... font-avant_garde_bold"><Link href="/">bimcopilot.com</Link></a> 
+                          _ a subsidiary of <a class= "font-avant_garde_bold  text-stone-400 ...">Plastic Free By Design Ltd</a>
                       </h4>
                       <br/>
-                      <h4 id={styles._H4}  class="text-stone-400 ... font-avant_garde_bold text-xs ... text-  left">
-                          <a class= "font-avant_garde_bold  text-stone-200 ..."> 
+                      <h4 id={styles._H4}  class="text-stone-700 ... font-avant_garde_bold text-xs ... text-  left">
+                          <a class= "font-avant_garde_bold  text-stone-400 ..."> 
                               Plastic Free By Design Ltd          
                           </a>  A limited liability company registered in England and Wales
                           <br></br>
