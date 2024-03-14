@@ -20,6 +20,7 @@ import Blog from "@/components/Blog/page";
 import Process from "@/components/Process/process";
 import Mainvideo from "@/components/Mainvideo/page";
 import Subfooter from "@/components/Subfooter/subfooter";
+import Subfooter2 from "@/components/Subfooter2/subfooter2";
 
 
 import { useRouter } from "next/navigation";
@@ -55,7 +56,7 @@ const Main = ({ stories, firstStory }) => {
       {/*<Process/>*/}
       <Mainvideo/>
       <Subfooter/>
-     
+      <Subfooter2/>
       
       <Footer/>
 

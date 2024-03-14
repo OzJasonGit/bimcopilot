@@ -24,10 +24,10 @@ export default class Subfooter extends Component {
                 <div id={styles.TAG}>
                 <h1
                     id={styles._H1}
-                    class="text-7xl ... text-slate-100 ... font-avant_garde_bold">
+                    class="text-7xl ... text-stone-400 ... font-avant_garde_bold">
                     {" "}
-                    You're the <a class="text-red-300 ...">pilot </a>... I am your{" "}
-                    <a class="text-amber-200 ...">copilot</a>.
+                    You're the <a class="text-stone-200 ...">pilot </a>... We are <br/>
+                    your<a class="text-emerald-200 ..."> copilot</a>.
                 </h1>
                 </div>
             </div>
