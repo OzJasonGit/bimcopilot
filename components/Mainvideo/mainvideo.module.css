@@ -1266,7 +1266,7 @@
 #GRAPHIC {
     position: relative;
     grid-area: GRAPHIC;
-    background-color: #3affbd;
+    
     width: 100%;
 }
 
