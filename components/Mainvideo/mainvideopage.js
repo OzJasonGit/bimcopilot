@@ -76,10 +76,9 @@ const Mainvideopage = ({ stories, firstStory }) => {
                   <br/>
                   
 
-                   <h3 class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">       
+                  <h3 class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">       
                     We identify <a  class="text-stone-200">problems and systems</a> that can be <a class="text-stone-200">improved or eliminated</a> with <a  class="text-emerald-200">Automation</a>, <a class="text-emerald-200">AI</a> and <a class="text-emerald-200">Building Information Modelling</a>. 
                     <br/> <br/>
-
                     <p  
                       id={styles._H3}
                       class="text-base ...">
@@ -91,31 +90,17 @@ const Mainvideopage = ({ stories, firstStory }) => {
                     <a  class="text-stone-200">Artificial Intelligence</a> is a new technology that's rapidly evolving. We keep our <a  class="text-stone-200">finger on the pulse</a> and explore <a  class="text-stone-200">solutions that can help you</a>. 
                     <br/><br/>
                     Click below to learn more about how <br/> <a class="text-stone-200">we can help you</a>.  
-                    </p>
-                         
+                    </p>                        
                   </h3>
 
                 </div>
               </div>
             </div>
-
-
-            <div id={styles.TAG}>
-                <h1
-                    id={styles._H1}
-                    class="text-7xl ... text-stone-400 ... font-avant_garde_bold">
-                    {" "}
-                    You're the <a class="text-stone-100 ...">pilot</a>... We are your{" "}
-                    <a class="text-emerald-200 ...">copilot</a>.
-                </h1>
-                </div>
+           
           </div>
         </div>
       </section>
-
      
-
-        
 
     )
   }
