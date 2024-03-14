@@ -74,12 +74,17 @@ const Mainvideopage = ({ stories, firstStory }) => {
                     Services
                   </h2>
                   <br/>
-                  <h4 class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">
-                    A limited liability company registered in England and Wales
-                    A limited liability company registered in England and Wales
-                    A limited liability company 
-                   
-                  </h4>
+                  <h3 class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">       
+                    We identify problems and systems that can be improved or eliminated with <a  class="text-stone-200">Automation</a>, <a class="text-stone-200">AI</a> and <a class="text-stone-200">Building Information Modelling</a>. 
+                    This involves first learning and assessing you business processes and then developing a unique solution.
+                    <br/><br/>
+                    Although our focus and background are aimed towards the built environment, our services can also be applied effectively within
+                    other industries. See our case studies to see how we've helped businesses 50X their productivity.  
+                    <br/><br/>
+                    Artificial Intelligence is a new technology that's rapidly evolving. We keep our finger on the pulse and explore solutions that can help you. 
+                    <br/><br/>
+                    Click here to learn more about our services.       
+                  </h3>
                 </div>
               </div>
             </div>
