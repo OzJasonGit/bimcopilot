@@ -74,17 +74,27 @@ const Mainvideopage = ({ stories, firstStory }) => {
                     Services
                   </h2>
                   <br/>
-                  <h3 class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">       
-                    We identify problems and systems that can be improved or eliminated with <a  class="text-stone-200">Automation</a>, <a class="text-stone-200">AI</a> and <a class="text-stone-200">Building Information Modelling</a>. 
-                    This involves first learning and assessing you business processes and then developing a unique solution.
+                  
+
+                   <h3 class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">       
+                    We identify <a  class="text-stone-200">problems and systems</a> that can be <a class="text-stone-200">improved or eliminated</a> with <a  class="text-emerald-200">Automation</a>, <a class="text-emerald-200">AI</a> and <a class="text-emerald-200">Building Information Modelling</a>. 
+                    <br/> <br/>
+
+                    <p  
+                      id={styles._H3}
+                      class="text-base ...">
+                      This involves first learning and assessing you business processes and then developing a unique solution.
                     <br/><br/>
-                    Although our focus and background are aimed towards the built environment, our services can also be applied effectively within
-                    other industries. See our case studies to see how we've helped businesses 50X their productivity.  
+                    Although our focus and background are aimed towards the <a class="text-stone-200">built environment</a>, our services can also be applied effectively within
+                    <a  class="text-stone-200"> gitother industries</a>. See our <a class="text-emerald-200"><Link href="/">case studies</Link></a> to see how we've helped businesses <a class="text-stone-200">50X</a> their <a class="text-stone-200">productivity</a>.  
                     <br/><br/>
-                    Artificial Intelligence is a new technology that's rapidly evolving. We keep our finger on the pulse and explore solutions that can help you. 
+                    <a  class="text-stone-200">Artificial Intelligence</a> is a new technology that's rapidly evolving. We keep our <a  class="text-stone-200">finger on the pulse</a> and explore <a  class="text-stone-200">solutions that can help you</a>. 
                     <br/><br/>
-                    Click here to learn more about our services.       
+                    Click below to learn more about how <br/> <a class="text-stone-200">we can help you</a>.  
+                    </p>
+                         
                   </h3>
+
                 </div>
               </div>
             </div>
