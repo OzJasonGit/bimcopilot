@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev & npx next-video sync -w",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.17",
+    "next-video": "^0.16.2",
     "postcss": "^8.4.35",
     "postcss-uncss": "^0.17.0",
     "tailwindcss": "^3.4.1"
