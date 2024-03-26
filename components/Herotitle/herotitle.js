@@ -4,6 +4,10 @@ import styles from './herotitle.module.css'
 import React, { Component } from 'react';
 
 
+import Video from 'next-video';
+import myVideo from "../../videos/my-video.mp4";
+
+
 export default class Herotitle extends Component {
 
   render() {
@@ -54,6 +58,15 @@ export default class Herotitle extends Component {
                 </a>
                 .
               </h1>
+
+              {/* ////////////////////////////////////////////////////////////////video-container//////////////////////////////// */}
+
+
+              <Video src={myVideo} controls autoplay width="320" height="240" />  {/* Adjust width and height as needed */}
+
+
+
+
             </div>
 
             <div id={styles.SUB_TEXT_HOLDER_MOBILE}>
@@ -107,4 +120,3 @@ export default class Herotitle extends Component {
     )
   }
 }
-
