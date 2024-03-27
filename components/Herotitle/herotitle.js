@@ -62,7 +62,9 @@ export default class Herotitle extends Component {
               {/* ////////////////////////////////////////////////////////////////video-container//////////////////////////////// */}
 
 
-              <Video src={myVideo} content autoplay />  {/* Adjust width and height as needed */}
+              <Video src={myVideo} autoPlay loop muted width="320" height="240" controls={false} />
+
+
 
 
 
