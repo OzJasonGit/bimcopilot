@@ -1,0 +1,55 @@
+env:
+  DEBUG: true  # Optional environment variable for debugging
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Run the job on the ubuntu-latest runner
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Use nvm with Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          use-nvm: true  # Use nvm to manage Node.js versions
+          node-version: 20  # Specify the desired Node.js version
+
+      - name: Install nvm (if needed)
+        run: |
+          curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+          source ~/.bashrc  # Source the .bashrc file after installation
+
+      - name: Install project dependencies
+        run: npm install  # No need for `-f` flag anymore
+
+      - name: Build production folder
+        run: npm run build
+
+      - name: Deploy using ssh
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.IP }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            #!/bin/bash
+            node -v 
+            npm  -v 
+            
+            # Change directory to project directory
+            cd /var/www/bimcopilot
+
+            # Pull latest changes from git
+            git pull origin main
+            npm install -f
+            npm run build  # Assuming you have a build script defined in your package.json
+            pm2 start next  # Restart PM2 process
+            systemctl restart apache2  # Restart Apache server
+
+            # End of script
