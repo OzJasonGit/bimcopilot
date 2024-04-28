@@ -6,8 +6,8 @@ import { useRouter } from "next/navigation";
 
 import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides";
-import Header from "../../components/Header/Header_White";
-import Footer from "../../components/Footer/Footer_White";
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import Collapsed from "../../components/Collapse/collapse";
 import Infinite_Scroll_2 from "../../components/Carousel/Infinite_Scroll_Services";
 
