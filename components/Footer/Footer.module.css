@@ -1,0 +1,1621 @@
+/* FOOTER---------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+
+
+
+/*
+ * ------------------------------------------
+ *  Responsive Grid Media Queries - 1280, 1024, 768, 480
+ *   1280-1024   - desktop (default grid)
+ *   1024-768    - tablet landscape
+ *   768-480     - tablet 
+ *   480-less    - phone landscape & smaller
+ * --------------------------------------------
+ */
+
+
+
+
+/* ---------------------------------------------------------------------------------------*/
+
+.ITCAvantGardeGothicMedium {
+    font-family: ITCAvantGardeGothicMedium;
+    margin-bottom: 0;
+}
+
+
+
+.ITCAvantGardeGothicDemiBold {
+    font-family: ITCAvantGardeGothicDemiBold;
+    margin-bottom: 0;
+}
+
+
+
+#_H1 {
+    margin-bottom: 0px;
+}
+
+
+#_H2 {
+    margin-bottom: 0px;
+}
+
+
+#_H3 {
+    margin-bottom: 0px;
+}
+
+#_H4 {
+    margin-bottom: 0px;
+}
+
+
+#_H5 {
+    margin-bottom: 0px;
+}
+
+
+
+.wrapper {
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+
+.scroller::-webkit-scrollbar {
+    width: 0px;
+    height: 16px;
+}
+
+.scroller {
+    scrollbar-width: none;
+    position: absolute;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100%;
+}
+
+.center_holder {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(23 23 23);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.footer_holder {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: rgb(23 23 23);
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 40px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+    grid-template-areas: ". . . . . . ."
+        ". BANNER-1 . MAIN-AREA . BANNER-2 .";
+}
+
+
+
+#FOOTER {
+    grid-area: MAIN-AREA;
+    width: 100%;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "OTHER OTHER OTHER OTHER . IPHONE IPHONE IPHONE IPHONE IPHONE IPHONE IPHONE";
+}
+
+
+
+#IPHONE {
+    grid-area: IPHONE;
+    display: grid;
+    grid-template-rows: 80px auto auto;
+    grid-template-areas:
+        "TITLE"
+        "MAIN"
+        "MAIN";
+    grid-template-columns: 1fr;
+    grid-row-gap: 40px;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(23 23 23);
+}
+
+
+
+
+
+
+
+#COMPANY_TEXT {
+    display: none;
+    grid-area: TEXT;
+}
+
+
+#WAITING {
+    display: none;
+    grid-area: WAITING;
+}
+
+
+
+#OTHER {
+    grid-area: OTHER;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-row-gap: 20px;
+    grid-template-rows: 350px auto 0px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        
+        "GIF GIF GIF ."
+        "SOCIAL SOCIAL SOCIAL SOCIAL"
+        ". . . .";
+}
+
+#SOCIAL {
+    grid-area: SOCIAL;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 32.5px 32.5px 32.5px 32.5px 32.5px auto;
+    grid-template-areas:
+        "ARB ARB ARB ARB ARB ."
+        "GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN .";
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.icon {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-row-gap: 0px;
+    grid-template-rows: 0px 1fr 0px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas: ". . ."
+        ". ICON ."
+        ". . .";
+}
+
+
+#MEDIUM_ICON {
+    display: grid;
+    grid-area: MEDIUM;
+    align-items: center;
+    justify-content: center;
+}
+
+#LINKEDIN_ICON {
+    display: grid;
+    grid-area: LINKEDIN;
+    align-items: center;
+    justify-content: center;
+}
+
+#YOUTUBE_ICON {
+    display: grid;
+    grid-area: YOUTUBE;
+    align-items: center;
+    justify-content: center;
+}
+
+#DRIBBLE_ICON {
+    display: grid;
+    grid-area: DRIBBLE;
+    align-items: center;
+    justify-content: center;
+}
+
+#GITHUB_ICON {
+    display: grid;
+    grid-area: GITHUB;
+    align-items: center;
+    justify-content: center;
+}
+
+#PFBD_LINK {
+    grid-area: ICON;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 0px 1fr 15px;
+    grid-template-rows: 7.5px 1fr 7.5px;
+    grid-template-areas:
+        ". .    ."
+        ". CENTER ."
+        ". .    .";
+}
+
+#CENTER {
+    grid-area: CENTER;
+    width: 100%;
+    height: 100%;
+}
+
+
+#FOOTER_MAIN {
+    grid-area: MAIN;
+    display: grid;
+    grid-template-rows: auto 30px auto 30px 60px 40px auto 40px;
+    grid-row-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr 30px 1fr 1fr;
+    grid-template-areas:
+        ". . . TAGLINE TAGLINE TAGLINE"
+        ". . . . . ."
+        ". CONTACT CONTACT CONTACT CONTACT CONTACT"
+        ". . . . . ."
+        "FORM FORM FORM FORM FORM FORM"       
+        ". . . . . ."
+        "TC TC TC TC TC TC"
+        ". . . . . .";
+}
+
+#COMPANY {
+    grid-area: COMPANY;
+}
+
+#WEBSITE {
+    grid-area: WEBSITE;
+}
+
+#TAGLINE {
+    grid-area: TAGLINE;
+}
+
+
+
+
+
+#CONTACT {
+    grid-area: CONTACT;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+                        "TITLE"
+                        "EMAIL";
+    grid-row-gap: 0px;
+}
+
+
+#ARB_ICONS {
+    
+    grid-area: ARB;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 20px 1fr;
+    grid-template-areas:
+        "ARB . RIBA";
+    
+
+}
+
+
+
+
+
+
+
+
+#ARB {
+    position: relative;
+    grid-area: ARB;
+    left: -22.5px;
+}
+
+#RIBA {
+    position: relative;
+    grid-area: RIBA;
+    left: -45px;
+}
+
+#TC {
+    grid-area: TC;
+}
+
+
+
+
+
+
+#BIM_TITLE {
+    position: relative;
+    grid-area: TITLE;
+    display: grid;
+    grid-template-columns:  1fr 260px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". TITLE";
+}
+
+
+#IMAGE_HOLDER {
+    grid-area: TITLE;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 27.5px;
+}
+
+
+#ROCKETSHIP_HOLDER {
+    position: relative;
+    overflow: hidden;
+    grid-area: GIF;
+
+}
+
+
+.github {
+    color: rgb(231 229 228);
+}
+
+
+.medium {
+    color: rgb(231 229 228);
+}
+
+.linkedin {
+    color: rgb(231 229 228);
+}
+
+.youtube {
+    color: rgb(231 229 228);
+}
+
+.dribbble {
+    color: rgb(231 229 228);
+}
+
+
+
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+@media all and (min-width: 960px) and (max-width: 1280px) {
+
+
+
+    .wrapper {
+        width: 100vw;
+        height: auto;
+    }
+
+
+    .scroller::-webkit-scrollbar {
+        width: 0px;
+        height: 16px;
+    }
+
+
+    .scroller {
+        scrollbar-width: none;
+        position: absolute;
+        overflow-y: scroll;
+        height: 100vh;
+        width: 100%;
+    }
+
+
+    .center_holder {
+        width: 100%;
+        display: flex;
+
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: rgb(23 23 23);
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+
+    .footer_holder {
+        position: relative;
+        width: 100%;
+        max-width: 1760px;
+        background-color: rgb(23 23 23);
+        display: grid;
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        grid-template-rows: 100px auto;
+        grid-template-columns: 0px 1fr 0px;
+        grid-template-areas: ". . ."
+            "BANNER-1 MAIN-AREA BANNER-2";
+    }
+
+    
+
+#FOOTER {
+    grid-area: MAIN-AREA;
+    width: 100%;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "OTHER OTHER OTHER OTHER . IPHONE IPHONE IPHONE IPHONE IPHONE IPHONE IPHONE";
+}
+
+
+
+#IPHONE {
+    grid-area: IPHONE;
+    display: grid;
+    grid-template-rows: 80px auto auto;
+    grid-template-areas:
+        "TITLE"
+        "MAIN"
+        "MAIN";
+    grid-template-columns: 1fr;
+    grid-row-gap: 40px;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(23 23 23);
+}
+
+#OTHER {
+    grid-area: OTHER;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-row-gap: 20px;
+    grid-template-rows: 350px auto 0px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+
+        "GIF GIF GIF ."
+        "SOCIAL SOCIAL SOCIAL SOCIAL"
+        ". . . .";
+}
+
+#SOCIAL {
+    grid-area: SOCIAL;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: 32.5px 32.5px 32.5px 32.5px 32.5px auto;
+    grid-template-areas:
+        "ARB ARB ARB ARB ARB ."
+        "GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN .";
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.icon {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-row-gap: 0px;
+    grid-template-rows: 0px 1fr 0px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas: ". . ."
+        ". ICON ."
+        ". . .";
+}
+
+
+#MEDIUM_ICON {
+    display: grid;
+    grid-area: MEDIUM;
+    align-items: center;
+    justify-content: center;
+}
+
+#LINKEDIN_ICON {
+    display: grid;
+    grid-area: LINKEDIN;
+    align-items: center;
+    justify-content: center;
+}
+
+#YOUTUBE_ICON {
+    display: grid;
+    grid-area: YOUTUBE;
+    align-items: center;
+    justify-content: center;
+}
+
+#DRIBBLE_ICON {
+    display: grid;
+    grid-area: DRIBBLE;
+    align-items: center;
+    justify-content: center;
+}
+
+#GITHUB_ICON {
+    display: grid;
+    grid-area: GITHUB;
+    align-items: center;
+    justify-content: center;
+}
+
+#PFBD_LINK {
+    grid-area: ICON;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 0px 1fr 15px;
+    grid-template-rows: 7.5px 1fr 7.5px;
+    grid-template-areas:
+        ". .    ."
+        ". CENTER ."
+        ". .    .";
+}
+
+#CENTER {
+    grid-area: CENTER;
+    width: 100%;
+    height: 100%;
+}
+
+
+#FOOTER_MAIN {
+    grid-area: MAIN;
+    display: grid;
+    grid-template-rows: auto 30px auto 30px 60px 40px auto 40px;
+    grid-row-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr 30px 1fr 1fr;
+    grid-template-areas:
+        ". . . TAGLINE TAGLINE TAGLINE"
+        ". . . . . ."
+        ". CONTACT CONTACT CONTACT CONTACT CONTACT"
+        ". . . . . ."
+        "FORM FORM FORM FORM FORM FORM"
+        ". . . . . ."
+        "TC TC TC TC TC TC"
+        ". . . . . .";
+}
+
+#COMPANY {
+    grid-area: COMPANY;
+}
+
+#WEBSITE {
+    grid-area: WEBSITE;
+}
+
+#TAGLINE {
+    grid-area: TAGLINE;
+}
+
+
+
+
+
+#CONTACT {
+    grid-area: CONTACT;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "TITLE"
+        "EMAIL";
+    grid-row-gap: 0px;
+}
+
+
+#ARB_ICONS {
+
+    grid-area: ARB;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 20px 1fr;
+    grid-template-areas:
+        "ARB . RIBA";
+
+
+}
+
+
+
+
+
+
+
+
+#ARB {
+    position: relative;
+    grid-area: ARB;
+    left: -22.5px;
+}
+
+#RIBA {
+    position: relative;
+    grid-area: RIBA;
+    left: -45px;
+}
+
+#TC {
+    grid-area: TC;
+}
+
+
+
+
+
+
+#BIM_TITLE {
+    position: relative;
+    grid-area: TITLE;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". TITLE";
+}
+
+
+#IMAGE_HOLDER {
+    grid-area: TITLE;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 27.5px;
+}
+
+
+#ROCKETSHIP_HOLDER {
+    position: relative;
+    overflow: hidden;
+    grid-area: GIF;
+
+}
+
+
+.github {
+    color: rgb(231 229 228);
+}
+
+
+.medium {
+    color: rgb(231 229 228);
+}
+
+.linkedin {
+    color: rgb(231 229 228);
+}
+
+.youtube {
+    color: rgb(231 229 228);
+}
+
+.dribbble {
+    color: rgb(231 229 228);
+}
+
+
+
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+
+
+
+}
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+@media all and (min-width: 480px) and (max-width: 960px) {
+
+
+    #_H1 {
+            margin-bottom: 0px;
+            font-size: 20px;
+        }
+    
+    #_H1_2 {
+        margin-bottom: 0px;
+        font-size: 23.5px;
+        line-height: 32.5px;
+    }
+
+
+    #_H2 {
+        margin-bottom: 0px;
+        font-size: 23.5px;
+        line-height: 32.5px;
+    }
+
+    #_H3 {
+        margin-bottom: 0px;
+        font-size: 14px;
+        line-height: 20.5px;
+    }
+
+    #_H4 {
+        margin-bottom: 0px;
+        text-align: left;
+    }
+
+
+    #_H5 {
+        margin-bottom: -2.5px;
+        font-size: 15px;
+        line-height: 5px;
+    }
+
+
+
+    .wrapper {
+        width: 100vw;
+        height: auto;
+    }
+
+
+    .scroller::-webkit-scrollbar {
+        width: 0px;
+        height: 16px;
+    }
+
+
+    .scroller {
+        scrollbar-width: none;
+        position: absolute;
+        overflow-y: scroll;
+        height: 100vh;
+        width: 100%;
+    }
+
+
+    .center_holder {
+        width: 100%;
+        display: flex;
+
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: rgb(23 23 23);
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+
+
+    .footer_holder {
+        position: relative;
+        width: 100%;
+        max-width: 1640px;
+        position: relative;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: rgb(23 23 23);
+        display: grid;
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        grid-template-rows: 0px auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "."
+            "MAIN-AREA";
+
+    }
+
+    #FOOTER {
+        grid-area: MAIN-AREA;
+        width: 100%;
+        display: grid;
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "IPHONE"
+            "OTHER";
+    }
+
+
+#IPHONE {
+    grid-area: IPHONE;
+    display: grid;
+    grid-template-rows: 80px auto auto;
+    grid-template-areas:
+        "TITLE"
+        "MAIN"
+        "MAIN";
+    grid-template-columns: 1fr;
+    grid-row-gap: 40px;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(23 23 23);
+}
+
+#OTHER {
+    grid-area: OTHER;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-row-gap: 20px;
+    grid-template-rows: 350px auto 0px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+
+        ". GIF GIF GIF"
+        "SOCIAL SOCIAL SOCIAL SOCIAL"
+        ". . . .";
+}
+
+#SOCIAL {
+    grid-area: SOCIAL;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    grid-template-rows: 50px 50px;
+    grid-template-columns: auto 32.5px 32.5px 32.5px 32.5px 32.5px;
+    grid-template-areas:
+        ". ARB ARB ARB ARB ARB"
+        ". GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN ";
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.icon {
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-row-gap: 0px;
+    grid-template-rows: 0px 1fr 0px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas: ". . ."
+        ". ICON ."
+        ". . .";
+}
+
+
+#MEDIUM_ICON {
+    display: grid;
+    grid-area: MEDIUM;
+    align-items: center;
+    justify-content: center;
+}
+
+#LINKEDIN_ICON {
+    display: grid;
+    grid-area: LINKEDIN;
+    align-items: center;
+    justify-content: center;
+}
+
+#YOUTUBE_ICON {
+    display: grid;
+    grid-area: YOUTUBE;
+    align-items: center;
+    justify-content: center;
+}
+
+#DRIBBLE_ICON {
+    display: grid;
+    grid-area: DRIBBLE;
+    align-items: center;
+    justify-content: center;
+}
+
+#GITHUB_ICON {
+    display: grid;
+    grid-area: GITHUB;
+    align-items: center;
+    justify-content: center;
+}
+
+#PFBD_LINK {
+    grid-area: ICON;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 0px 1fr 15px;
+    grid-template-rows: 7.5px 1fr 7.5px;
+    grid-template-areas:
+        ". .    ."
+        ". CENTER ."
+        ". .    .";
+}
+
+#CENTER {
+    grid-area: CENTER;
+    width: 100%;
+    height: 100%;
+}
+
+
+#FOOTER_MAIN {
+    grid-area: MAIN;
+    display: grid;
+    grid-template-rows: auto 30px auto 30px 60px 40px auto 40px;
+    grid-row-gap: 0px;
+    grid-template-columns: 1fr 1fr 1fr 30px 1fr 1fr;
+    grid-template-areas:
+        ". . . TAGLINE TAGLINE TAGLINE"
+        ". . . . . ."
+        "CONTACT CONTACT CONTACT CONTACT CONTACT ."
+        ". . . . . ."
+        "FORM FORM FORM FORM FORM FORM"
+        ". . . . . ."
+        "TC TC TC TC TC TC"
+        ". . . . . .";
+}
+
+#COMPANY {
+    grid-area: COMPANY;
+}
+
+#WEBSITE {
+    grid-area: WEBSITE;
+}
+
+#TAGLINE {
+    grid-area: TAGLINE;
+}
+
+
+
+
+
+#CONTACT {
+    grid-area: CONTACT;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "TITLE"
+        "EMAIL";
+    grid-row-gap: 0px;
+}
+
+
+#ARB_ICONS {
+
+    grid-area: ARB;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 20px 1fr;
+    grid-template-areas:
+        "ARB . RIBA";
+
+
+}
+
+
+
+
+
+
+
+
+#ARB {
+    position: relative;
+    grid-area: ARB;
+    right: 0px;
+}
+
+#RIBA {
+    position: relative;
+    grid-area: RIBA;
+    right: 0px;
+}
+
+#TC {
+    grid-area: TC;
+}
+
+
+
+
+
+
+#BIM_TITLE {
+    position: relative;
+    grid-area: TITLE;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "TITLE .";
+}
+
+
+#IMAGE_HOLDER {
+    grid-area: TITLE;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: -30px;
+}
+
+
+#ROCKETSHIP_HOLDER {
+    position: relative;
+    overflow: hidden;
+    grid-area: GIF;
+
+}
+
+
+.github {
+    color: rgb(231 229 228);
+}
+
+
+.medium {
+    color: rgb(231 229 228);
+}
+
+.linkedin {
+    color: rgb(231 229 228);
+}
+
+.youtube {
+    color: rgb(231 229 228);
+}
+
+.dribbble {
+    color: rgb(231 229 228);
+}
+
+
+
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+@media all and (min-width: 0px) and (max-width: 480px) {
+
+
+    #_H1 {
+            margin-bottom: 0px;
+            font-size: 20px;
+        }
+    
+        #_H1_2 {
+            margin-bottom: 0px;
+            font-size: 23.5px;
+            line-height: 32.5px;
+        }
+    
+    
+        #_H2 {
+            margin-bottom: 0px;
+            font-size: 23.5px;
+            line-height: 32.5px;
+        }
+    
+        #_H3 {
+            margin-bottom: 0px;
+            font-size: 14px;
+            line-height: 20.5px;
+        }
+    
+        #_H4 {
+            margin-bottom: 0px;
+            text-align: left;
+        }
+    
+    
+        #_H5 {
+            margin-bottom: -2.5px;
+            font-size: 15px;
+            line-height: 5px;
+        }
+
+
+
+    .wrapper {
+        width: 100vw;
+        height: auto;
+    }
+
+
+    .scroller::-webkit-scrollbar {
+        width: 0px;
+        height: 16px;
+    }
+
+
+    .scroller {
+        scrollbar-width: none;
+        position: absolute;
+        overflow-y: scroll;
+        height: 100vh;
+        width: 100%;
+    }
+
+
+    .center_holder {
+        width: 100%;
+        display: flex;
+
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: rgb(23 23 23);
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+
+
+
+    .footer_holder {
+        position: relative;
+        width: 100%;
+        max-width: 1640px;
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
+        background-color: rgb(23 23 23);
+        display: grid;
+        grid-column-gap: 20px;
+        grid-row-gap: 40px;
+        grid-template-rows: 0px auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "."
+            "MAIN-AREA";
+    }
+
+
+
+
+    #FOOTER {
+        grid-area: MAIN-AREA;
+        width: 100%;
+        display: grid;
+        grid-column-gap: 40px;
+        grid-row-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "IPHONE"
+            "OTHER";
+    }
+
+
+    #IPHONE {
+        grid-area: IPHONE;
+        display: grid;
+        grid-template-rows: 80px auto auto;
+        grid-template-areas:
+            "TITLE"
+            "MAIN"
+            "MAIN";
+        grid-template-columns: 1fr;
+        grid-row-gap: 40px;
+        width: 100%;
+        height: auto;
+        background-color: rgb(23 23 23);
+    }
+
+    #OTHER {
+        grid-area: OTHER;
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-row-gap: 20px;
+        grid-template-rows: 350px auto auto 0px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+
+            "GIF GIF GIF GIF"
+            "SOCIAL SOCIAL SOCIAL SOCIAL"
+            "TEXT TEXT TEXT TEXT"
+            ". . . .";
+    }
+
+    #SOCIAL {
+        grid-area: SOCIAL;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-column-gap: 10px;
+        grid-row-gap: 5px;
+        grid-template-rows: 50px 50px;
+        grid-template-columns: 32.5px 32.5px 32.5px 32.5px 32.5px auto;
+        grid-template-areas:
+            "ARB ARB ARB ARB ARB ."
+            "GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN .";
+    }
+
+
+
+
+    #COMPANY_TEXT {
+        display: block;
+        grid-area: TEXT;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+    }
+
+    .icon {
+        display: grid;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        grid-row-gap: 0px;
+        grid-template-rows: 0px 1fr 0px;
+        grid-template-columns: 0px 1fr 0px;
+        grid-template-areas: ". . ."
+            ". ICON ."
+            ". . .";
+    }
+
+
+    #MEDIUM_ICON {
+        display: grid;
+        grid-area: MEDIUM;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #LINKEDIN_ICON {
+        display: grid;
+        grid-area: LINKEDIN;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #YOUTUBE_ICON {
+        display: grid;
+        grid-area: YOUTUBE;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #DRIBBLE_ICON {
+        display: grid;
+        grid-area: DRIBBLE;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #GITHUB_ICON {
+        display: grid;
+        grid-area: GITHUB;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #PFBD_LINK {
+        grid-area: ICON;
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: 0px 1fr 15px;
+        grid-template-rows: 7.5px 1fr 7.5px;
+        grid-template-areas:
+            ". .    ."
+            ". CENTER ."
+            ". .    .";
+    }
+
+    #CENTER {
+        grid-area: CENTER;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    #FOOTER_MAIN {
+        grid-area: MAIN;
+        display: grid;
+        grid-template-rows: auto 30px auto 30px auto auto auto auto ;
+        grid-row-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 30px 1fr 1fr;
+        grid-template-areas:
+            ". . . TAGLINE TAGLINE TAGLINE"
+            ". . . . . ."
+            "CONTACT CONTACT CONTACT CONTACT CONTACT ."
+            ". . . . . ."
+            "WAITING WAITING WAITING WAITING WAITING WAITING"
+            "FORM FORM FORM FORM FORM FORM"
+            ". . . . . ."
+            "TC TC TC TC TC TC";
+    }
+
+
+
+    #WAITING {
+        grid-area: WAITING;
+    }
+
+    #COMPANY {
+        display: none;
+        grid-area: COMPANY;
+    }
+
+    #WEBSITE {
+        grid-area: WEBSITE;
+    }
+
+    #TAGLINE {
+        grid-area: TAGLINE;
+    }
+
+
+
+
+
+    #CONTACT {
+        grid-area: CONTACT;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "TITLE"
+            "EMAIL";
+        grid-row-gap: 0px;
+    }
+
+
+    #ARB_ICONS {
+
+        grid-area: ARB;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 20px 1fr;
+        grid-template-areas:
+            "ARB . RIBA";
+
+
+    }
+
+
+
+
+
+
+
+
+    #ARB {
+        position: relative;
+        grid-area: ARB;
+        right: 0px;
+    }
+
+    #RIBA {
+        position: relative;
+        grid-area: RIBA;
+        right: 0px;
+    }
+
+    #TC {
+        grid-area: TC;
+    }
+
+
+
+
+
+
+    #BIM_TITLE {
+        position: relative;
+        grid-area: TITLE;
+        display: grid;
+        grid-template-columns: 150px 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "TITLE .";
+    }
+
+
+    #IMAGE_HOLDER {
+        grid-area: TITLE;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        left: 27.5px;
+    }
+
+
+    #ROCKETSHIP_HOLDER {
+        position: relative;
+        overflow: hidden;
+        grid-area: GIF;
+
+    }
+
+
+    .github {
+        color: rgb(231 229 228);
+    }
+
+
+    .medium {
+        color: rgb(231 229 228);
+    }
+
+    .linkedin {
+        color: rgb(231 229 228);
+    }
+
+    .youtube {
+        color: rgb(231 229 228);
+    }
+
+    .dribbble {
+        color: rgb(231 229 228);
+    }
+
+
+
+}
+
+/* ---------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/

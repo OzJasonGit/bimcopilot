@@ -1,0 +1,366 @@
+#_H1 {
+    margin-bottom: 0px;
+}
+
+
+
+.center_holder {
+    position: relative;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: aliceblue;
+    margin: 0;
+}
+
+
+.grid_0_main {
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+    grid-template-areas: ". . . . . . ."
+        ". BANNER-1 . MAIN-AREA . BANNER-2 ."
+        ". . . . . . .";
+}
+
+#SHADOW_SECTION_TITLE {
+    position: relative;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: transparent;
+    z-index: -20000;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 1.5px;
+}
+
+
+#MAIN_TEXT_HOLDER {
+    grid-area: MAIN-AREA;
+    display: grid;
+    width: 100%;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px auto 0px;
+    grid-template-areas:
+        ". . . . . . . . . . . ."
+        "TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT ."
+        ". . . . . . . . . . . ."
+}
+
+
+#SUB_TEXT_HOLDER {
+    position: relative;
+    grid-area: TEXT;
+    top: 60px;
+}
+
+#SUB_TEXT_HOLDER_MOBILE {
+    display: none;
+}
+
+
+#TEXT_OUTLINE {
+    -webkit-text-stroke: 1.85px rgb(120, 120, 120);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
+@media all and (min-width: 960px) and (max-width: 1280px) {
+
+
+
+    .grid_0_main {
+        width: 100%;
+        max-width: 1640px;
+        background-color: transparent;
+        display: grid;
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        grid-template-rows: 100px auto 20;
+        grid-template-columns: 0px 1fr 0px;
+        grid-template-areas: ". . ."
+            "BANNER-1 MAIN-AREA BANNER-2"
+            ". . .";
+    }
+
+  
+
+    #SHADOW_SECTION_TITLE {
+        position: relative;
+        width: 100%;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: transparent;
+        z-index: -20000;
+    }
+
+    
+
+    /*SECTION_4////TITLE//////////////////////////////////////////////////////////////////////////////////*/
+    #MAIN_TEXT_HOLDER {
+        grid-area: MAIN-AREA;
+        display: grid;
+        width: 100%;
+        grid-column-gap: 40px;
+        grid-row-gap: 20px;
+        grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 300px auto 0px;
+        grid-template-areas:
+            ". . . . . . . . . . . ."
+            "TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT ."
+            ". . . . . . . . . . . ."
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*BREAKPOINT_3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
+#_H1 {
+    margin-bottom: 0px;
+    font-size: 40px;
+}
+
+/*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media all and (min-width: 480px) and (max-width: 960px) {
+    .center_holder {
+        width: 100%;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: aliceblue;
+        margin: 0;
+    }
+
+
+
+
+
+    .grid_0_main {
+        position: relative;
+        width: 100%;
+        background-color: transparent;
+        display: grid;
+
+        padding-left: 30px;
+        padding-right: 30px;
+        grid-row-gap: 40px;
+        grid-template-rows: 0px auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "  .  "
+            " MAIN-AREA ";
+    }
+
+
+    #MAIN_TEXT_HOLDER {
+        grid-area: MAIN-AREA;
+        display: grid;
+        width: 100%;
+        grid-column-gap: 40px;
+        grid-row-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0px auto 0px;
+        grid-template-areas:
+            "."
+            "TEXT"
+            "."
+    }
+
+
+    #SUB_TEXT_HOLDER {
+        position: relative;
+        grid-area: TEXT;
+        top: 0px;
+    }
+
+
+}
+
+/*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
+/*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 0px) and (max-width: 480px) {
+
+
+    /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
+    #_H1 {
+            margin-bottom: 0px;
+            font-size: 33.5px;
+        }
+    
+        #_H1_2 {
+            margin-bottom: 0px;
+            font-size: 35px;
+            line-height: 33.5px;
+        }
+    
+    
+        #_H2 {
+            margin-bottom: 0px;
+            font-size: 30px;
+        }
+    
+        #_H3 {
+            margin-bottom: 0px;
+            font-size: 14px;
+            line-height: 19.5px;
+        }
+    
+        #_H4 {
+            margin-bottom: 0px;
+        }
+    
+    
+        #_H5 {
+            margin-bottom: -2.5px;
+        }
+    
+        #TEXT_OUTLINE {
+            -webkit-text-stroke: 1px rgb(120, 120, 120);
+            margin-bottom: 0px;
+            font-size: 35px;
+            line-height: 33.5px;
+        }
+
+
+    /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
+    .grid_0_main {
+        width: 100%;
+        max-width: 1640px;
+        background-color: transparent;
+        display: grid;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-rows: 0px auto 0px;
+        grid-template-columns: 0px 1fr 0px;
+        grid-template-areas: ". . ."
+            "BANNER-1 MAIN-AREA BANNER-2"
+            ". . .";
+
+    }
+
+    /*SECTION_4////TITLE////////////////////////////////////////////////////////////////////////////////////*/
+    #MAIN_TEXT_HOLDER {
+        grid-area: MAIN-AREA;
+        display: grid;
+        width: 100%;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0px auto 0px;
+        grid-template-areas:
+            "."
+            "TEXT"
+            "."
+    }
+
+
+    #SUB_TEXT_HOLDER {
+        display: none;
+    }
+
+
+
+
+
+
+
+    #SUB_TEXT_HOLDER_MOBILE {
+        display: flex;
+        position: relative;
+        grid-area: TEXT;
+        top: 0px;
+    }
+
+
+}

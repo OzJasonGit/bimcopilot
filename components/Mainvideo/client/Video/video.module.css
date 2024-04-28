@@ -1,0 +1,18 @@
+
+
+
+#VIDEO_CONTAINER {
+    grid-area: VIDEO;
+    position: relative;
+    overflow: hidden;
+    alignItems: center;
+    alignContent: center;
+    justifyContent:center;
+}
+
+
+#VIDEO { 
+   
+    height: 380px;
+    position: relative;
+}

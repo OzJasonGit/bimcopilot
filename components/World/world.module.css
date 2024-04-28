@@ -1,0 +1,177 @@
+/*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
+
+#SHADOW_SECTION_WORLD {
+    position: relative;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(228 228 231);
+    z-index: -30000;
+}
+
+
+.center_holder {
+    position: relative;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: aliceblue;
+    margin: 0;
+}
+
+
+.grid_0_main_world {
+    width: 100%;
+    max-width: 2160px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 40px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 0px 0px 0px 1fr 0px 0px 0px;
+    grid-template-areas: ". . . . . . ."
+        ". BANNER-1 . MAIN-AREA . BANNER-2 ."
+        ". . . . . . .";
+}
+
+
+#PLANET_HOLDER_GRID {
+    grid-area: MAIN-AREA;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-row-gap: 0px;
+    grid-template-areas:
+        "VIDEO_GRID";
+    margin-top: -920px;
+}
+
+
+
+#BACKGROUND_VIDEO_HOLDER {
+    grid-area: VIDEO_GRID;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0px;
+    grid-template-areas:
+        ". . . . . VIDEO VIDEO .";
+}
+
+
+#BACKGROUND_VIDEO {
+    position: relative;
+    grid-area: VIDEO;
+    top: -120px;
+    overflow: hidden;
+}
+
+
+
+/*SECTION_6////WORLD??/////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
+@media all and (min-width: 960px) and (max-width: 1280px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media all and (min-width: 480px) and (max-width: 960px) {
+    .center_holder {
+        width: 100%;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: aliceblue;
+        margin: 0;
+    }
+
+
+    .grid_0_main_world {
+
+        display: none;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 0px) and (max-width: 480px) {
+
+    .grid_0_main_world {
+
+        display: none;
+
+    }
+
+
+}
