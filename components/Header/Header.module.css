@@ -211,7 +211,7 @@
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
         ". . . . . . . . . . . . ."
-        "LOGO_HOLDER MENU MENU MENU MENU MENU . . SIGN_IN SIGN_IN SIGN_IN MENU-BUTTON MENU-BUTTON"
+        "LOGO_HOLDER MENU MENU MENU MENU MENU . SIGN_IN SIGN_IN SIGN_IN SIGN_IN MENU-BUTTON MENU-BUTTON"
         ". . . . . . . . . . . . .";
 }
 

@@ -38,45 +38,27 @@ export default class Header extends Component {
 
               <header id={styles.FIXED_HEADER}> 
 
-                  <div class="content-center ..." id={styles.COPILOT_HOLDER}>
-                      <Link class="content-center ..." id={styles.COPILOT} href="/dashboard"> 
-                        <Image
-                            src={logoMobile}
-                                      alt="Picture of the author"
-                                      width={500}
-                                      height={500}
-                                      style={{
-                                          position: "absolute",
-                                          width: "auto",
-                                          height: "100%",
-                                          justifyItems: "center",
-                                          alignItems:  "center",
-                                          objectFit: "contain"}}/>                    
-                      </Link>
-                  </div>
+                    <div class="content-center ..." id={styles.COPILOT_HOLDER}>
+                        <Link class="content-center ..." id={styles.COPILOT} href="/dashboard"> 
+                          <Image
+                              src={logoMobile}
+                                  alt="Picture of the author"
+                                  width={500}
+                                  height={500}
+                                  style={{
+                                      position: "absolute",
+                                      width: "auto",
+                                      height: "100%",
+                                      justifyItems: "center",
+                                      alignItems:  "center",
+                                      objectFit: "contain"}}/>                    
+                        </Link>
+                    </div>
 
               
+                    
 
-                  
-
-
-                  <div class="content-center ..." id={styles.SIGNUP}>  
-                      <Link class="content-center ..." id={styles.HOME_ICON} href="/dashboard"> 
-                        <h3 id={styles.H_3} class="text-center ...  text-slate-50  font-avant_garde_bold">Sign up</h3>
-                      </Link>
-
-                      <div class="bg-zinc-500 ..." id={styles.B1}>                      
-                      </div>
-
-                      <Link id={styles.ABOUT_ICON} href="/dashboard"> 
-                        <h3 id={styles.H_3} class="text-center ...  text-slate-50 font-avant_garde_bold">Sign in</h3>
-                      </Link>          
-                  </div>
-
-
-
-                  <div class="content-center ..." id={styles.NAV_MENU}>  
-                      
+                  <div class="content-center ..." id={styles.NAV_MENU}>                       
                       <Link class="content-center ..." id={styles.SERVICES} href="/services"> 
                         <h3 id={styles.H_3_SERVICES} class="text-center ...  text-slate-50 font-avant_garde_bold" data-content="Services">Services</h3>
                       </Link>  
@@ -92,7 +74,21 @@ export default class Header extends Component {
                       <Link id={styles.STORIES} href="/bloghome"> 
                         <h3 id={styles.H_3_STORIES} class="text-center ...  text-slate-50 font-avant_garde_bold" data-content="Stories">Stories</h3>
                       </Link>  
+                  </div>
 
+
+
+                  <div class="content-center ..." id={styles.SIGNUP}>  
+                      <Link class="content-center ..." id={styles.HOME_ICON} href="/dashboard"> 
+                        <h3 id={styles.H_3} class="text-center ...  text-slate-50  font-avant_garde_bold">Sign up</h3>
+                      </Link>
+
+                      <div class="bg-zinc-500 ..." id={styles.B1}>                      
+                      </div>
+
+                      <Link id={styles.ABOUT_ICON} href="/dashboard"> 
+                        <h3 id={styles.H_3} class="text-center ...  text-slate-50 font-avant_garde_bold">Sign in</h3>
+                      </Link>          
                   </div>
 
                   
