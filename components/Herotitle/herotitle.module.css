@@ -58,7 +58,7 @@
     grid-column-gap: 40px;
     grid-row-gap: 20px;
     grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 300px auto 0px;
+    grid-template-rows: 370px auto 0px;
     grid-template-areas:
         ". . . . . . . . . . . ."
         "TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT ."
