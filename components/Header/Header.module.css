@@ -227,9 +227,14 @@
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
         " . . ."
-        " ABOUT B1 HOME"
+        " CLOCK B1 HOME"
         " . . .";
     background: transparent;
+}
+
+
+#CLOCK_HOLDER {
+    grid-area: CLOCK;
 }
 
 

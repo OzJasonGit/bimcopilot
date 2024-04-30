@@ -18,6 +18,8 @@ import bimcopilot_icon from "./bimcopliot-logo.png";
 import Image from 'next/image';
 import Link from 'next/link';
 
+import Clock from './Clock/clock'
+
 
 
 
@@ -86,9 +88,9 @@ export default class Header extends Component {
                       <div class="bg-zinc-500 ..." id={styles.B1}>                      
                       </div>
 
-                      <Link id={styles.ABOUT_ICON} href="/dashboard"> 
-                        <h3 id={styles.H_3} class="text-center ...  text-slate-50 font-avant_garde_bold">Sign in</h3>
-                      </Link>          
+                      <div id={styles.CLOCK}> 
+                        <Clock/>
+                      </div>          
                   </div>
 
                   
