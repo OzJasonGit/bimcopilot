@@ -1,19 +1,21 @@
+// Date.js
+import React, { Component } from 'react';
 
+class DateComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      date: new Date().toDateString(),
+    };
+  }
 
+  render() {
+    return (
+      <div>
+        <h3>{this.state.date}</h3>
+      </div>
+    );
+  }
+}
 
-
-
-
-
-
-
-
-//Defines todays date in DOM
-function date(){
-    let todaysDate = new Date();
-
-    console.log(todaysDate)
-
-    document.getElementById("DATE").innerText = todaysDate.toDateString();
-    }
-    date();
+export default DateComponent;
