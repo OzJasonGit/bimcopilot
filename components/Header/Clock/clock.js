@@ -1,7 +1,7 @@
 
 
 
-import Provider from "../../app/utils/Provider";
+import Provider from "../../../app/utils/Provider";
 import styles from './clock.module.css'
 
 import React, { Component } from 'react';
@@ -42,11 +42,11 @@ export default class Clock extends Component {
     return (
       
             <> 
-                <div id={styles.CLOCK_HOLDER}>                  
+                <Provider id={styles.CLOCK_HOLDER}>                  
                     <h3 id={styles.CLOCK} class="text-center ...  text-slate-50 font-avant_garde_bold">
 
                     </h3>               
-                </div>       
+                </Provider>       
             </>
         )
     }
