@@ -1,7 +1,7 @@
 
 
 
-import Provider from "../../app/utils/Provider";
+import Provider from "../../../app/utils/Provider";
 import styles from './clock.module.css'
 
 import React, { Component } from 'react';
