@@ -89,7 +89,7 @@ export default class Header extends Component {
                       </div>
 
                       <div id={styles.CLOCK}> 
-                        <Clock/>
+                     
                       </div>          
                   </div>
 
