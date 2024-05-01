@@ -42,11 +42,11 @@ export default class Clock extends Component {
     return (
       
             <> 
-                <Provider id={styles.CLOCK_HOLDER}>                  
+                <div id={styles.CLOCK_HOLDER}>                  
                     <h3 id={styles.CLOCK} class="text-center ...  text-slate-50 font-avant_garde_bold">
 
                     </h3>               
-                </Provider>       
+                </div>       
             </>
         )
     }
