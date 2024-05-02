@@ -80,17 +80,19 @@ export default class Header extends Component {
 
 
 
-                  <div class="content-center ..." id={styles.SIGNUP}>  
-                      <Link class="content-center ..." id={styles.HOME_ICON} href="/dashboard"> 
-                        <h3 id={styles.H_3} class="text-center ...  text-slate-50  font-avant_garde_bold">Sign up</h3>
-                      </Link>
+                  <div class="content-center ..." id={styles.TIME}>  
+                    
+                      <div id={styles.CLOCK}> 
+                       <Clock/>                    
+                      </div>  
 
                       <div class="bg-zinc-500 ..." id={styles.B1}>                      
                       </div>
 
-                      <div id={styles.CLOCK}> 
-                       <Clock/>                    
-                      </div>          
+                      <Link class="content-center ..." id={styles.HOME_ICON} href="/dashboard"> 
+                        <h3 id={styles.H_3} class="text-center ...  text-slate-50  font-avant_garde_bold">Sign up</h3>
+                      </Link>
+             
                   </div>
 
                   

@@ -211,13 +211,13 @@
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
         ". . . . . . . . . . . . ."
-        "LOGO_HOLDER MENU MENU MENU MENU MENU . SIGN_IN SIGN_IN SIGN_IN SIGN_IN MENU-BUTTON MENU-BUTTON"
+        "LOGO_HOLDER MENU MENU MENU MENU MENU . TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
         ". . . . . . . . . . . . .";
 }
 
 
-#SIGNUP {
-    grid-area: SIGN_IN;
+#TIME {
+    grid-area: TIME;
     display: grid;
     width: 100%;
     max-width: 200px;
@@ -235,6 +235,8 @@
 
 #CLOCK_HOLDER {
     grid-area: CLOCK;
+    width: 100%;
+    height: 100%;
 }
 
 
