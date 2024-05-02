@@ -1,4 +1,3 @@
-// Clock.js
 import React, { Component } from 'react';
 
 class Clock extends Component {
@@ -10,6 +9,7 @@ class Clock extends Component {
   }
 
   componentDidMount() {
+    // Update time every second
     this.intervalID = setInterval(() => this.tick(), 1000);
   }
 
@@ -21,12 +21,13 @@ class Clock extends Component {
     this.setState({
       time: new Date().toLocaleTimeString(),
     });
+
   }
 
   render() {
     return (
-      <div>
-        <h3 class="text-center ...  text-slate-50 font-avant_garde_bold">{this.state.time}</h3>
+        <div id="CLOCK">
+        {this.state.time}
       </div>
     );
   }

@@ -1,45 +1,36 @@
-"use client";
-
 import React, { Component } from 'react';
 import Script from 'next/script'
 import styles from './Date.module.css'
 
+export default class DateComponent extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentDate: new Date().toDateString()
+        };
+    }
 
+    componentDidMount() {
+        // Update the date every second
+        this.interval = setInterval(() => {
+            this.setState({
+                currentDate: new Date().toDateString()
+            });
+        }, 1000);
+    }
 
-//Define date parameters 
-function clock() {
-    let clock = new Date();
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
 
-
-
-                                                                            
-//Defines todays date in DOM
-function date(){
-    let todaysDate = new Date();
-
-    console.log(todaysDate)
-   };
-   
-   date();
-}
-
-
-
-export default class Date extends Component {
-
-     render() {
+    render() {
         return (
-            <div id={styles.DATE_ICON}>
-                <Script id="date"> 
-
-                    {`document.getElementById("DATE_TEXT").innerText = todaysDate.toDateString()`}   
-                                                  
-                </Script>
-                <h3  class="text-center ...  text-slate-50" id={styles.DATE_TEXT}></h3>    
-                
+            <div className={styles.dateTimeContainer}>
+                <div id={styles.DATE_ICON}>
+                    <Script id="date" /> 
+                    <h3 className={`text-center ...  text-slate-50 ${styles.DATE_TEXTt}`}>{this.state.currentDate}</h3>    
+                </div>
             </div>
-            
         )
     }
 }
-

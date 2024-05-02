@@ -1,21 +1,36 @@
-// Date.js
 import React, { Component } from 'react';
+import Script from 'next/script'
+import styles from './Date.module.css'
 
-class DateComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: new Date().toDateString(),
-    };
-  }
+export default class DateComponent extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentDate: new Date().toDateString()
+        };
+    }
 
-  render() {
-    return (
-      <div>
-        <h3>{this.state.date}</h3>
-      </div>
-    );
-  }
+    componentDidMount() {
+        // Update the date every second
+        this.interval = setInterval(() => {
+            this.setState({
+                currentDate: new Date().toDateString()
+            });
+        }, 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
+    render() {
+        return (
+            <div className={styles.dateTimeContainer}>
+                <div id={styles.DATE_ICON}>
+                    <Script id="date" /> 
+                    <h3 className={`text-center ...  text-slate-50 ${styles.DATE_TEXT}`}>{this.state.currentDate}</h3>    
+                </div>
+            </div>
+        )
+    }
 }
-
-export default DateComponent;
