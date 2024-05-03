@@ -117,12 +117,10 @@ export default class Header extends Component {
                     <Link
                       class="content-center ..."
                       id={styles.HOME_ICON}
-                      href="/dashboard"
-                    >
+                      href="/dashboard" >
                       <h3
                         id={styles.H_3}
-                        class="text-center ...  text-slate-50  font-avant_garde_bold"
-                      >
+                        class="text-center ...  text-slate-50  font-avant_garde_bold">
                         Sign up
                       </h3>
                     </Link>
