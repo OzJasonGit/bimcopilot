@@ -54,11 +54,7 @@ export default class Header extends Component {
                     </Link>
                   </div>
 
-                  <div className={styles.timeAndDate} id="dateandtime">
-                    <Clock />
-                    <span className={styles.separator}>|</span>
-                    <DateComponent />
-                  </div>
+                  
 
                   <div class="content-center ..." id={styles.NAV_MENU}>
                     <Link
@@ -110,6 +106,13 @@ export default class Header extends Component {
                    
 
                     <div class="bg-zinc-500 ..." id={styles.B1}></div>
+
+
+                    <div className={styles.timeAndDate} id="dateandtime">
+                      <Clock />
+                      <span className={styles.separator}>|</span>
+                      <DateComponent />
+                    </div>
 
                     <Link
                       class="content-center ..."
