@@ -109,6 +109,7 @@ export default class Header extends Component {
                   <div class="content-center ..." id={styles.TIME}>
                     <div id={styles.CLOCK}>
                       <Clock />
+                      <h3>hello</h3>
                     </div>
 
                     <div class="bg-zinc-500 ..." id={styles.B1}></div>
