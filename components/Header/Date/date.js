@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Script from 'next/script'
-import styles from './Date.module.css'
+import styles from './date.module.css'
+
 
 export default class DateComponent extends Component {
     constructor(props) {
