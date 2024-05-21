@@ -26,7 +26,7 @@ class Clock extends Component {
 
   render() {
     return (
-        <div id="CLOCK">
+        <div id="CLOCK"  class="text-center ...  text-slate-50  font-avant_garde_bold">
         {this.state.time}
       </div>
     );

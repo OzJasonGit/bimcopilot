@@ -223,25 +223,27 @@
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
         ". . . . . . . . . . . . ."
-        "LOGO_HOLDER MENU MENU MENU MENU MENU TIME TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
+        "LOGO_HOLDER MENU MENU MENU MENU MENU . TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
         ". . . . . . . . . . . . .";
 }
 
 
 #TIME {
     grid-area: TIME;
+    position: relative;
     display: grid;
     width: 100%;
-    max-width: 200px;
-    min-width: 160px;
+
+    min-width: 200px;
     justify-self: right;
-    grid-template-columns: 1fr 1.5px 1fr;
+    grid-template-columns: 1fr 1.5px 1.5fr;
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
         " . . ."
         " CLOCK B1 HOME"
         " . . .";
     background: transparent;
+    top:3.5px
 }
 
 
@@ -427,7 +429,7 @@
         grid-template-rows: 0px auto 0px;
         grid-template-areas:
             ". . . . . . . . . . . . ."
-            "LOGO_HOLDER MENU MENU MENU MENU MENU . . SIGN_IN SIGN_IN SIGN_IN MENU-BUTTON MENU-BUTTON"
+            "LOGO_HOLDER MENU MENU MENU MENU MENU . TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
             ". . . . . . . . . . . . .";
     }
 

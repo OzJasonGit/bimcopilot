@@ -18,7 +18,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Clock from "./Clock/clock";
-import DateComponent from "./Date/date";
+import DateComponent from "./Clock/date";
 
 
 
@@ -103,27 +103,18 @@ export default class Header extends Component {
                   </div>
 
                   <div class="content-center ..." id={styles.TIME}>
+
+                    <Clock />
                    
 
-                    <div class="bg-zinc-500 ..." id={styles.B1}></div>
-
-
-                    <div className={styles.timeAndDate} id="dateandtime">
-                      <Clock />
-                      <span className={styles.separator}>|</span>
-                      <DateComponent />
+                    <div class="bg-zinc-500 ..." id={styles.B1}>
                     </div>
 
-                    <Link
-                      class="content-center ..."
-                      id={styles.HOME_ICON}
-                      href="/dashboard" >
-                      <h3
-                        id={styles.H_3}
-                        class="text-center ...  text-slate-50  font-avant_garde_bold">
-                        Sign up
-                      </h3>
-                    </Link>
+                    <DateComponent />
+
+                    
+
+                    
                   </div>
 
                   <div id={styles.LOGO_ICON} class={styles.container}>

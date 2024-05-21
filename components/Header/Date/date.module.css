@@ -1,9 +1,0 @@
-.dateTimeContainer {
-    display: flex;
-    align-items: center; /* Align items vertically in the center */
-}
-
-.DATE_TEXT {
-
-    margin-left: 6px; /* Add some spacing between the clock and the date */
-}
