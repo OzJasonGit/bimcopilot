@@ -26,8 +26,7 @@ import Link from 'next/link';
 import pfbdImage from './_pfbd_.svg';
 import dlpfbdImage from './_dlpfbd_.svg';
 import logoARB from './logoARB_DARK.png';
-
-
+import logoRIBA from './logRIBA_DARK.png';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -157,7 +156,7 @@ const Menu = () => {
                       <div class=" rounded-md ..." id={styles.RIBA}>
                           <Link href= "/">
                               <Image
-                                  src={logoARB}
+                                  src={logoRIBA}
                                   alt="Picture of the author"
                                   width={500}
                                   height={500}
