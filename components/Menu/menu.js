@@ -26,7 +26,7 @@ import Link from 'next/link';
 import pfbdImage from './_pfbd_.svg';
 import dlpfbdImage from './_dlpfbd_.svg';
 import logoARB from './logoARB_DARK.png';
-import logoRIBA from './logRIBA_DARK.png';
+import logoRIBA from './logoRIBA_DARK.png';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
