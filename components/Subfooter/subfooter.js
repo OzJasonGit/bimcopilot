@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 
 import Image from "next/image";
 import Link from "next/link";
-import astronaut from "./ASTRONAUT_2.png";
+import astronaut from "./ASTRONAUT_6.png";
 
 
 export default class Subfooter extends Component {
