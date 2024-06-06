@@ -1,5 +1,5 @@
 import { loadStripe } from '@stripe/stripe-js';
-require('dotenv').config();
+
 const stripePromise = loadStripe("pk_test_51PO0O71Lmdm8PDfxVhohp7HTiqZXWkS6roFSohUrdguSu7kc90q5xvTplojjbu7DdXpLGBaYC2qvBem7x8pvc9jg00XyAMcFw5");
 
 
