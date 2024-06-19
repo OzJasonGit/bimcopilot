@@ -75,6 +75,9 @@ export default class Tiktoktop extends Component {
                 class="rounded-2xl ... drop-shadow-2xl ... shadow-black"
               >
                 <Tiktok />
+                <div className="tiktok-video">
+              <video autoPlay controls playsInline muted loop src="https://res.cloudinary.com/dytsuek4h/video/upload/v1712935614/ad4f40818468b4acb07956069ae103e3_cqoozt.mp4" style={{width:"100%", height:"100%"}}></video>
+              </div>
               </div>
             </div>
           </div>

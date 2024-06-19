@@ -534,14 +534,14 @@
     position: relative;
     grid-area: TIKTOK;
     display: grid;
-    width: 300px;
+    width: 339px;
     min-width: 100%;
     height: 600px;
     grid-template-columns: 0px 1fr 0px;
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
         ". . ."
-        ". TIKTOK ."
+        ". TIKTOK ."        
         ". . .";
     left: 100vw;
 }
