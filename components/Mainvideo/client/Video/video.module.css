@@ -5,9 +5,7 @@
     grid-area: VIDEO;
     position: relative;
     overflow: hidden;
-    alignItems: center;
-    alignContent: center;
-    justifyContent:center;
+
 }
 
 

@@ -93,7 +93,7 @@ const Subform = () => {
           </Button>
         </Form.Item>
       </Form><br/>
-      {error && <div style={{ color: 'red', marginTop: '10px' }}>{error}</div>}
+      {error && <div style={{ color: 'red', marginTop: '5px' }}>{error}</div>}
       <br/><br/>
       <CheckoutButton amount={10000000} currency={"usd"}/>
     </div>

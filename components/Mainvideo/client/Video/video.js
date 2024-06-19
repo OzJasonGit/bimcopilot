@@ -23,7 +23,7 @@ const Video = () => {
       <div class="rounded-2xl ..." id={styles.VIDEO_CONTAINER}>
 
         <div id={styles.VIDEO}>
-          <MuxPlayer       
+          {/* <MuxPlayer       
           style={{
               display:"flex",
               position: "absolute",
@@ -38,7 +38,9 @@ const Video = () => {
           videoTitle: "Test VOD",
           ViewerUserId: "user-id-007"
           }}
-        /> 
+        />  */}
+<video autoPlay controls playsInline muted loop src="https://res.cloudinary.com/dytsuek4h/video/upload/v1718789410/2836031_jb9p48.mp4" style={{width:"100%",
+ height:"100%"}}></video>
         </div>
 
 
