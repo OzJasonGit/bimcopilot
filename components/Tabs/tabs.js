@@ -86,7 +86,9 @@ const Tab = () => {
                         }}
                         tabPosition={tabPosition}
                         defaultActiveKey={['1']}
-                        items={testimonialsArr.map((_, i) => {
+                        // items={testimonialsArr.map((_, i) => {
+                          items={testimonialsArr.map((testimonial, i) => {
+
                         const id = String(i + 1);
                         
                         return {
@@ -109,9 +111,12 @@ const Tab = () => {
                                 />
                                 </div>,
                         key: id,
-                        children: <h2 class="font-avant_garde_bold text-4xl ... text-slate-100 ..."
+                        children: 
+                        <h2 class="font-avant_garde_bold text-4xl ... text-slate-100 ..."
                                       id={styles._H5}
-                                    > `Content of Tab ${id}` 
+
+                                    >  {testimonial.text} 
+                                    {/* {id} */}
                                   </h2>,
 
                      
