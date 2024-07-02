@@ -219,12 +219,13 @@
     display: grid;
     grid-row-gap: 0px;
     grid-column-gap: 40px;
-    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0px 60px 0px 20px;
     grid-template-areas:
         ". . . . . . . . . . . . ."
-        "LOGO_HOLDER MENU MENU MENU MENU MENU . TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
-        ". . . . . . . . . . . . .";
+        "LOGO_HOLDER LOGO_HOLDER MENU MENU MENU MENU . TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
+        "LOGO_HOLDER LOGO_HOLDER . . . . . . . . . . ."
+        "LOGO_HOLDER LOGO_HOLDER . . . . . . . . . . .";
 }
 
 
@@ -243,7 +244,7 @@
         " CLOCK B1 HOME"
         " . . .";
     background: transparent;
-    top:3.5px
+    top: 12px
 }
 
 
@@ -261,7 +262,7 @@
     max-width: 600px;
     justify-self: right;
     grid-template-columns: auto 1.5px auto 1.5px auto 1.5px auto;
-    grid-template-rows: 0px auto 0px;
+    grid-template-rows: 20px auto 0px;
     grid-template-areas:
         " . . . . . . ."
         " SERVICES . STORIES . PROJECTS . PRODUCTS"
@@ -297,20 +298,22 @@
 #LOGO_LINK {
     grid-area: LOGO;
     display: grid;
-    grid-template-rows: 5px auto 5px;
-    grid-template-columns: 1fr 5px 5px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 1fr;
     width: 100%;
     height: 100%;
-    grid-template-areas: ". . ."
-        "LOGO . ."
-        ". . .";
+    grid-template-areas: "."
+        "LOGO"
+        ".";
 }
 
 
 #LOGO {
+    position: relative;
     grid-area: LOGO;
     width: 100%;
     height: 100%;
+    left: -20px;
 }
 
 
@@ -318,12 +321,12 @@
     grid-area: LOGO_HOLDER;
     display: grid;
     grid-template-rows: 7.5px 50px 7.5px;
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 1fr;
 
     grid-template-areas:
-        ". ."
-        "LOGO ."
-        ". .";
+        " ."
+        "LOGO "
+        " .";
 }
 
 

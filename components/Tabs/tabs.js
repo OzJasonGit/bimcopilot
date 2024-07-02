@@ -28,7 +28,7 @@ const Tab = () => {
 
   const testimonialsArr = [
   {
-    key: `12`,
+    key: `1`,
     src:  {logoMobile},
     text: <h2 class="text-right ... text-2xl ..." >` A dog is a type of domesticated animal.
                 Known for its loyalty and faithfulness,
