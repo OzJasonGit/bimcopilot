@@ -11,7 +11,7 @@ import 'antd/dist/reset.css';
 
 import Image from "next/image";
 import pfbdImage from './_pfbd_.svg';
-import dlpfbdImage from './Tesseract_Logo.png';
+import dlpfbdImage from './_dlpfbd_.svg';
 
 //import fonts from "../fonts.module.css";
 
