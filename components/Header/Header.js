@@ -13,7 +13,7 @@ import React, { Component } from "react";
 import Script from "next/script";
 
 import logoMobile from "./Bim-copilot-logo_Mobile_3.png";
-import bimcopilot_icon from "./bimcopliot-logo.png";
+import bimcopilot_icon from "./Tesseract_Logo.png";
 import Image from "next/image";
 import Link from "next/link";
 
