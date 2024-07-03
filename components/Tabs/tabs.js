@@ -112,8 +112,8 @@ const Tab = () => {
                                 </div>,
                         key: id,
                         children: 
-                        <h2 class="font-avant_garde_bold text-4xl ... text-slate-100 ..."
-                                      id={styles._H5}
+                        <h2 class="font-avant_garde_bold text-4xl ... text-slate-100 ... 
+                        " 
 
                                     >  {testimonial.text} 
                                     {/* {id} */}

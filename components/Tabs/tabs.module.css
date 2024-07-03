@@ -22,8 +22,6 @@
 }
 
 
-
-
 #TESTIMONIALS {
     grid-area: TESTIMONIAL;
     display: grid;
@@ -33,7 +31,7 @@
     width: 100%;
     height: auto;
     grid-template-areas:
-        "."
+        /* "." */
         "TITLE"
         "TESTIMONIALS"
 }
@@ -51,6 +49,11 @@
     height: 100%;
     width: 100%;
 }
+
+#T_CONTAINER h2{
+padding-right: 50px;
+}
+
 
 
 #T_TAB_HOLDER {

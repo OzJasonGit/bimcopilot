@@ -203,7 +203,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
                     To much <a  class="text-stone-700 ... font-avant_garde_bold">profit</a>  is left on the table through inefficient processes. 
                     Reduce <a  class="text-stone-700 ... font-avant_garde_bold">waste</a>, reduce <a  class="text-stone-700 ... font-avant_garde_bold"> time{" "}</a>  
-                     and increase{" "}<a  class="text-stone-600 ... font-avant_garde_bold">revenue</a>  through better,{" "}
+                     and increase{" "}<a  class="text-stone-600 ... font-avant_garde_bold">revenue</a>  through bettecr,{" "}
                     <a  class="text-stone-700 ... font-avant_garde_bold">automated systems</a>. 
                     <br/> 
                     <a class="text-stone-700 ... font-avant_garde_bold">bimcopilot.com </a>allows you and your business to focus on what you do best. 
