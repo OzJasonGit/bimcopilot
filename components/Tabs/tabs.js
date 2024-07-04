@@ -30,7 +30,7 @@ const Tab = () => {
   {
     key: `1`,
     src:  {logoMobile},
-    text: <h2 class="text-right ... text-2xl ..." >` A dog is a type of domesticated animal.
+    text: <h2 class="text-2xl ..." >` A dog is a type of domesticated animal.
                 Known for its loyalty and faithfulness,
                 it can be found as a welcome guest in many households across the world.`
           </h2>,
