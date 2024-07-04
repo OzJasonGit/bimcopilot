@@ -117,7 +117,7 @@ const Tab = () => {
                                   style={{
                                       position: "relative",
                                       left:"0px",
-                                      paddingRight:"100px"
+                                      paddingRight:"200px"
                                   }}
                                     >  {testimonial.text} 
                                     {/* {id} */}
