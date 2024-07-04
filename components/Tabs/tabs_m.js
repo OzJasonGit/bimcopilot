@@ -100,7 +100,7 @@ const Tab = () => {
                             key: id,
                             children: (
                                 <h1
-                                    class="font-avant_garde_bold text-6xl ... text-slate-100 ..."
+                                    class="font-avant_garde_bold text-4xl ... text-slate-100 ..."
                                     id={styles._H1}
                                 >
                                         
