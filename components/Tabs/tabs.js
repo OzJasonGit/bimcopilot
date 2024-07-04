@@ -82,7 +82,7 @@ const Tab = () => {
                     <Tabs
                         style={{
                         position: "relative",
-                        left:"200px",
+                        left:"-200px",
                         height: "100%",
                         alignItems:"center",
                         }}
