@@ -81,6 +81,8 @@ const Tab = () => {
                 <div id={styles.T_CONTAINER}>
                     <Tabs
                         style={{
+                        position: "relative",
+                        left:"200px",
                         height: "100%",
                         alignItems:"center",
                         }}
