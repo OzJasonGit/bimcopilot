@@ -81,8 +81,6 @@ const Tab = () => {
                 <div id={styles.T_CONTAINER}>
                     <Tabs
                         style={{
-                        position: "relative",
-                        left:"-200px",
                         height: "100%",
                         alignItems:"center",
                         }}
@@ -114,8 +112,12 @@ const Tab = () => {
                                 </div>,
                         key: id,
                         children: 
-                        <h2 class="font-avant_garde_bold text-2xl ... text-slate-100 ... 
-                        " 
+                        <h2 class="font-avant_garde_bold text-2xl ... text-slate-100 ..."
+                                
+                            style={{
+                                position: "relative",
+                                left:"-200px",
+                            }}
 
                                     >  {testimonial.text} 
                                     {/* {id} */}
