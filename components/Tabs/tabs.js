@@ -112,20 +112,15 @@ const Tab = () => {
                                 </div>,
                         key: id,
                         children: 
-                        <h2 class="font-avant_garde_bold text-2xl ... text-slate-100 ..."
-                                
-                            style={{
-                                position: "relative",
-                                left:"-200px",
-                            }}
-
+                              <h2 class="font-avant_garde_bold text-2xl ... text-slate-100 ..."
+                                      
+                                  style={{
+                                      position: "relative",
+                                      left:"0px",
+                                  }}
                                     >  {testimonial.text} 
                                     {/* {id} */}
-                                  </h2>,
-
-                     
-                        
-                       
+                              </h2>,                     
                             };                                                                  
                         })}
                     />
