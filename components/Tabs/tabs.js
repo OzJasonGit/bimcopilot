@@ -112,7 +112,7 @@ const Tab = () => {
                                 </div>,
                         key: id,
                         children: 
-                        <h2 class="font-avant_garde_bold text-4xl ... text-slate-100 ... 
+                        <h2 class="font-avant_garde_bold text-2xl ... text-slate-100 ... 
                         " 
 
                                     >  {testimonial.text} 
