@@ -44,20 +44,23 @@ const Bloghomemain = ({ stories, firstStory }) => {
 
                                     <div id={styles.BLOGIMAGE}>
 
-                                      <div class="rounded-md ..." id={styles.B_IMAGE}>                                  
-                                        <Image
-                                        alt="Picture of the author"
-                                        key={story._id}
-                                        width={500}
-                                        height={500}
-                                        src={story.image}
-                                        style={{
+                                      <div class="rounded-md ..." id={styles.B_IMAGE}> 
+                                        <Link>
+
+                                            <Image
+                                          alt="Picture of the author"
+                                          key={story._id}
+                                          width={500}
+                                          height={500}
+                                          src={story.image}
+                                          style={{
                                           position: "absolute",
                                           width: "100%",
                                           height: "100%",
                                           objectFit: "cover",
-                                        }}
-                                        />
+                                          }}/>
+                                        </Link>                                 
+                                        
                                       </div> 
 
                                       <div id={styles.BLOG_TEXT}> 
