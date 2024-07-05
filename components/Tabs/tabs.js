@@ -52,9 +52,10 @@ const Tab = () => {
                 Known for its loyalty and faithfulness,
               </h3>
             </a>
-            {''} {''}          
+            {''} {''}    <br/>  
             ` Known for its loyalty and faithfulness,
                 it can be found as a welcome guest in many households across the world.`
+
           </h1>,  
     label:<div id={styles.T_TAB_HOLDER}>
             <div class="rounded-full ...   bg-indigo-500 ..." id={styles.T_TAB}>
