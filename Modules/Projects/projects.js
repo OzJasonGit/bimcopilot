@@ -23,7 +23,9 @@ const Projectsmain = ({ stories, firstStory }) => {
       <Header/>
       <Sides/>
 
-      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+      {storiesToMap.map((story, index) => {
+                  return (
+        <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_subscribe}>
             <div class={styles.sub_head}>
               <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
@@ -35,7 +37,7 @@ const Projectsmain = ({ stories, firstStory }) => {
                     id={styles._H1}
                     class="text-6xl ... text-stone-200 ... font-avant_garde_bold"
                   >
-           
+                    {story.title}
                     Sustainable, Richer Architects through Automation
                   </h1>
                 </div>
@@ -45,7 +47,7 @@ const Projectsmain = ({ stories, firstStory }) => {
                     class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium"
                   >
                     {" "}
-                
+                    {story.subtitle}
                     <a class="text-stone-200 ... font-avant_garde_bold">
                       Join the design revolution!
                     </a>{" "}
@@ -70,7 +72,8 @@ const Projectsmain = ({ stories, firstStory }) => {
               </div>
             </div>
           </div>
-      </section>
+        </section>
+        )})}
 
 
 
