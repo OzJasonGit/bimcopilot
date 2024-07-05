@@ -11,6 +11,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Subscribetop from "../../components/Subscribetop/subscribetop";
 import Image from "next/image";
+import Link from "next/link";
 
 const Productsmain = ({ stories, firstStory }) => {
   const storiesToMap = stories.filter((story, i) => i != 0);
@@ -22,13 +23,7 @@ const Productsmain = ({ stories, firstStory }) => {
       <Menu/>
       <Header/>
       <Sides/>
-
-    <Subscribetop/>
-    
-
-
-      
-
+      <Subscribetop/>
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_blogimageholder}>
