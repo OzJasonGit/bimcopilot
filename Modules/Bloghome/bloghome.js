@@ -18,10 +18,27 @@ import logoImage from "./Bim-copilot-logo_2.png";
 
 
 
-const Bloghomemain = ({ stories, firstStory }) => {
+const Bloghomemain = ({ stories, topStories }) => {
+
   const params = useParams();
-  const storiesToMap = stories.filter((story, i) => i != 0);
+  const storiesToMap = stories.data.filter((story, i) => story.data == params.slug && i > (0) )
   const router = useRouter();
+ 
+console.log("================================", stories.data )
+
+
+// console.log("stories",storiesToMap)
+// console.log("topStories",topStories)
+// console.log("params",params.slug)
+// console.log("stories.data", stories.data)
+// console.log("stories.topStories", stories.topStories)
+let story_id;
+story_id = params.slug
+//  const currentStory=() => {
+//    router.push(`blog/${story_id}`);
+//   }
+
+
 
    return (
 
