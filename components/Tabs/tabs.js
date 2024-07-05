@@ -48,7 +48,7 @@ const Tab = () => {
           <h1>
 
             <a>
-              <h3>
+              <h3 class="text-stone-400 ... font-avant_garde_bold">
                 Known for its loyalty and faithfulness,
               </h3>
             </a>
