@@ -18,27 +18,9 @@ import logoImage from "./Bim-copilot-logo_2.png";
 
 
 
-const Bloghomemain = ({ stories, topStories }) => {
-
-  const params = useParams();
-  const storiesToMap = stories.data.filter((story, i) => story.data == params.slug && i > (0) )
+const Bloghomemain = ({ stories, firstStory }) => {
+  const storiesToMap = stories.filter((story, i) => i != 0);
   const router = useRouter();
- 
-console.log("================================", stories.data )
-
-
-// console.log("stories",storiesToMap)
-// console.log("topStories",topStories)
-// console.log("params",params.slug)
-// console.log("stories.data", stories.data)
-// console.log("stories.topStories", stories.topStories)
-let story_id;
-story_id = params.slug
-//  const currentStory=() => {
-//    router.push(`blog/${story_id}`);
-//   }
-
-
 
    return (
 
@@ -63,11 +45,9 @@ story_id = params.slug
                                     <div id={styles.BLOGIMAGE}>
 
                                       <div class="rounded-md ..." id={styles.B_IMAGE}> 
-                                        <Link 
-                                          href={`/blog/${stories.data[0]._id}`}
-                                          >
+                                        <Link href="/services">
 
-                                          <Image
+                                            <Image
                                           alt="Picture of the author"
                                           key={story._id}
                                           width={500}
