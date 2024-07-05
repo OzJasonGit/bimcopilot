@@ -32,9 +32,16 @@ const Tab = () => {
   {
     key: `1`,
     src:  {logoMobile},
-    text: <h1>` A dog is a type of domesticated animal.
-                Known for its loyalty and faithfulness,
-                it can be found as a welcome guest in many households across the world.`
+    text: <h1>
+
+              <a>
+                <h3 class="text-stone-400 ... font-avant_garde_bold ... text-sm ...">
+                  Known for its loyalty and faithfulness,
+                </h3>
+               </a>
+               <br/>  
+                ` A dog is a type of domesticated animal.
+                Known for its loyalty and faithfulness.`
           </h1>,
     label:<div id={styles.T_TAB_HOLDER}>
             <div class="rounded-full ...   bg-indigo-500 ..." id={styles.T_TAB}>
@@ -48,7 +55,7 @@ const Tab = () => {
           <h1>
 
             <a>
-              <h3 class="text-stone-400 ... font-avant_garde_bold">
+              <h3 class="text-stone-400 ... font-avant_garde_bold  text-sm ...">
                 Known for its loyalty and faithfulness,
               </h3>
             </a>
@@ -65,7 +72,17 @@ const Tab = () => {
   {
     key: `3`,
     src:  {logoMobile},
-    text: <h1>`
+    text: <h1>
+
+              <a>
+                <h3 class="text-stone-400 ... font-avant_garde_bold  text-sm ...">
+                  Known for its loyalty and faithfulness,
+                </h3>
+              </a>
+              <br/>  
+      
+      
+                `
                 it can be found as a welcome guest in many households across the world.`
           </h1>,
     label:<div id={styles.T_TAB_HOLDER}>
