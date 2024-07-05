@@ -42,6 +42,12 @@ const Subform = () => {
 
   return (
     <div id={styles.SUBSCRIBE}>
+
+
+
+
+
+
       <Form
         form={form}
         onFinish={handleSubmit} // Use onFinish for form submission
@@ -56,6 +62,10 @@ const Subform = () => {
         }}
         id={styles.FORM}
       >
+
+
+
+
         <Form.Item
           name="email"
           rules={[
@@ -75,6 +85,11 @@ const Subform = () => {
             placeholder="Enter your email"
           />
         </Form.Item>
+
+
+
+
+
         <Form.Item>
           <Button 
             type="primary"
@@ -92,10 +107,18 @@ const Subform = () => {
             </h2>
           </Button>
         </Form.Item>
-      </Form><br/>
+
+
+
+
+      </Form>
+      <br/>
+
+
+
       {error && <div style={{ color: 'red', marginTop: '5px' }}>{error}</div>}
       <br/><br/>
-      <CheckoutButton amount={10000000} currency={"usd"}/>
+      {/*<CheckoutButton amount={10000000} currency={"usd"}/>*/}
     </div>
   );
 }

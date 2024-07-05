@@ -8,6 +8,8 @@ import logoMobile from "./Bim-copilot-logo_Mobile_3.png";
 
 import Raj from "./Raj.png";
 
+import Pedro from "./1527083980338.jpeg";
+
 import { Tabs } from "antd";
 
 
@@ -47,7 +49,7 @@ const Tab = () => {
 
             <a>
               <h3>
-                ` Known for its loyalty and faithfulness,
+                Known for its loyalty and faithfulness,
               </h3>
             </a>
             {''}           
@@ -106,7 +108,7 @@ const Tab = () => {
 
                                     <Image
                                     id={styles.T_TAB}
-                                    src={Raj}                             
+                                    src={Pedro}                             
                                     alt="Picture of the author"
                                     width={250}
                                     height={250}

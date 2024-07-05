@@ -13,19 +13,19 @@ const handleCheckout = async (amount, currency) => {
       body: JSON.stringify({ amount, currency }),
     });
 
-    if (response.ok) {
-      const session = await response.json();
-      const stripe = await stripePromise;
-      const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
-      console.log("payment success");
-      
-      if (error) {
-        console.error('Stripe error:', error.message);
+      if (response.ok) {
+        const session = await response.json();
+        const stripe = await stripePromise;
+        const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
+        console.log("payment success");
+        
+        if (error) {
+          console.error('Stripe error:', error.message);
+        }
+      } else {
+        console.error('Failed to create session');
       }
-    } else {
-      console.error('Failed to create session');
-    }
-  } catch (error) {
+    } catch (error) {
 
     console.error('Error in handleCheckout:', error);
     console.error("strip publish key", process.env.STRIPE_PUBLISHABLE_KEY);

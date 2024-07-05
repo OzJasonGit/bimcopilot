@@ -4,6 +4,8 @@ import handleCheckout from './payment';
 
 const CheckoutButton = ({ amount, currency }) => {
   return (
+
+    
     <button
       onClick={() => handleCheckout(amount, currency)}
       style={{
