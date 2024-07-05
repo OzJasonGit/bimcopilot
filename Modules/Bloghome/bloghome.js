@@ -19,6 +19,7 @@ import logoImage from "./Bim-copilot-logo_2.png";
 
 
 const Bloghomemain = ({ stories, firstStory }) => {
+  const params = useParams();
   const storiesToMap = stories.filter((story, i) => i != 0);
   const router = useRouter();
 
@@ -45,9 +46,11 @@ const Bloghomemain = ({ stories, firstStory }) => {
                                     <div id={styles.BLOGIMAGE}>
 
                                       <div class="rounded-md ..." id={styles.B_IMAGE}> 
-                                        <Link>
+                                        <Link 
+                                          href={`/blog/${stories.data[0]._id}`}
+                                          >
 
-                                            <Image
+                                          <Image
                                           alt="Picture of the author"
                                           key={story._id}
                                           width={500}
