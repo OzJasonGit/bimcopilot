@@ -63,7 +63,8 @@ export default class Aboutpage extends Component {
                 </div>
                 
                 <div class="rounded-2xl ... shadow-2xl ... " id={styles.IMAGE}>
-                  <Image
+                <iframe src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&noscroll=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true" width="100%" height="100%" frameborder="0"></iframe>
+                  {/* <Image
                     src={rocketShip}
                     alt="Picture of the author"
                     width={500}
@@ -74,7 +75,7 @@ export default class Aboutpage extends Component {
                       height: "100%",
                       objectFit: "cover",
                     }}
-                  />
+                  /> */}
                   </div>
               </div>
 
