@@ -109,9 +109,9 @@
     grid-row-gap: 10px;
     grid-column-gap: 20px;
     grid-template-columns: 1fr 180px;
-    grid-template-rows: auto auto auto 60px;
+    grid-template-rows: auto auto 70px;
     grid-template-areas:
-        "ICON . "
+        
         "TAG_MAIN TAG_MAIN"
         "SUB_MAIN SUB_MAIN"
         "FORM FORM";
