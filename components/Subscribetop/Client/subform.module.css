@@ -34,26 +34,69 @@
 
 /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
 
+
+
+
+
 #SUBSCRIBE {
     position: relative;
     grid-area: FORM;
     width: 100%;
     height: 100%;
     display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+        ". . ."
+        ". AREA ."
+        ". . .";
+}
+
+
+#FORM {
+    grid-area: AREA;  
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+        ". . ."
+        ". FORM_ITEM ."
+        ". . .";
+}
+
+
+#FORM_ITEM {
+    grid-area: FORM_ITEM;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
     grid-column-gap: 20px;
-    grid-template-columns: 1fr 180px;
+    grid-row-gap: 0px;
+    grid-template-columns: 1fr 120px;
     grid-template-rows: auto;
     grid-template-areas:
         "FORM BUTTON";
 }
 
-#FORM {
+#FORM_INPUT {
     grid-area: FORM;
+    width: 100%;
     height: 100%;
 }
 
-#SUB_BUTTON {
+
+
+#FORM_BUTTON {
     grid-area: BUTTON;
+    width: 100%;
     height: 100%;
 }
 
