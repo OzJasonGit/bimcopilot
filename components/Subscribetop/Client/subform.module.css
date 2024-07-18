@@ -31,175 +31,59 @@
     -webkit-text-stroke: 0.175px rgb(120, 120, 120);
 }
 
-
-/*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-
 #SUBSCRIBE {
     position: relative;
     grid-area: FORM;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas:
-        ". . ."
-        ". AREA ."
-        ". . .";
+        "FORM"
+        "BUTTON";
 }
 
-
 #FORM {
+    display: contents;
     grid-area: FORM;  
     width: 100%;
     height: 100%;
-    position: relative;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-rows: 0px auto 0px;
-    grid-template-areas:
-        ". . ."
-        ". FORM_ITEM ."
-        ". . .";
 }
 
-
 #FORM_ITEM {
-    grid-area: FORM_ITEM;
     width: 100%;
     height: 100%;
-    position: relative;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 0px;
-    grid-template-columns: 1fr 120px;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "FORM BUTTON";
 }
 
 #FORM_INPUT {
-    grid-area: FORM;
     width: 100%;
-    height: 100%;
+    height: 70px;
+    margin-bottom: 0;
 }
-
-
 
 #FORM_BUTTON {
     grid-area: BUTTON;
     width: 100%;
-    height: 100%;
+    height: 70px;
 }
 
-/*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media all and (min-width: 480px) and (max-width: 960px) {
-
+@media all and (min-width: 480px) {
     #SUBSCRIBE {
-        position: relative;
-        grid-area: FORM;
-        width: 100%;
-        height: 100%;
         display: grid;
-        grid-column-gap: 20px;
-        grid-template-columns: 1fr 180px;
+        grid-template-columns: 1fr auto;
         grid-template-rows: auto;
-        grid-template-areas:
-            "FORM BUTTON";
+        grid-template-areas: "FORM BUTTON";
     }
 
-    #FORM {
-        grid-area: FORM;
-        height: 100%;
+    #FORM_BUTTON {
+        width: auto;
+        margin-left: 5%;
     }
-
-    #SUB_BUTTON {
-        grid-area: BUTTON;
-        height: 100%;
-    }
-
 }
 
-/*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media all and (min-width: 0px) and (max-width: 480px) {
-
-    #SUBSCRIBE {
-        position: relative;
-        grid-area: FORM;
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-row-gap: 20px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 70px 70px;
-        grid-template-areas:
-            "FORM"
-            "BUTTON";
+@media screen and (max-width: 480px) {
+    #FORM_BUTTON {
+        width: 60%;
     }
-
-    #FORM {
-        grid-area: FORM;
-        height: 100%;
-    }
-
-    #SUB_BUTTON {
-        grid-area: BUTTON;
-        height: 100%;
-    }
-
 }
-
-/*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/

@@ -8,8 +8,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import styles from './subform.module.css';
 
 import { Form, Input, Button } from "antd";
-import CheckoutButton from "@/components/Payment/checkoutButton";
-
 
 const Subform = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -31,7 +29,6 @@ const Subform = () => {
     } catch (error) {
       if (error.response && error.response.status === 409) {
         setError("Email already registered.");
-
       } else {
         console.log(error);
         toast.error("An error occurred during registration.");
@@ -42,60 +39,51 @@ const Subform = () => {
 
   return (
     <div id={styles.SUBSCRIBE}>
-
       <Form
         form={form}
-        onFinish={handleSubmit} // Use onFinish for form submission
+        onFinish={handleSubmit}
         id={styles.FORM}
-        style={{
-            display: "flex",
-            marginBottom: "0",
-            height: "100%",
-            gridArea: "FORM",
-            paddingBottom: "0",
-            width: "100%",}}>
+        style={{ marginBottom: "0", height: "100%", width: "100%" }}
+      >
+        <Form.Item
+          id={styles.FORM_ITEM}
+          name="email"
+          rules={[
+            {
+              required: true,
+              message: "Please input your email!",
+              type: "email",
+            },
+            {
+              type: "email",
+              message: "The input is not a valid email!",
+            },
+          ]}
+        >
+          <Input
+            id={styles.FORM_INPUT}
+            placeholder="Enter your email"
+          />
+        </Form.Item>
 
-            <Form.Item
-              id={styles.FORM_ITEM}
-              name="email"
-              rules={[
-                {
-                  required: true,
-                  message: "Please input your email!",
-                  type: "email",
-                },
-                {
-                  type: "email",
-                  message: "The input is not a valid email!",
-                }]}>
-              <Input
-                id={styles.FORM_INPUT}
-                style={{ marginBottom: "0", height: "52px", width: "23vw", marginRight: "5%" }}
-                placeholder="Enter your email"/>
-            </Form.Item>
-
-            <Form.Item>
-              <Button    
-                id={styles.FORM_BUTTON}            
-                type="primary"
-                htmlType="submit"                
-                loading={isLoading}
-                style={{ height: "48px" }}
-                className="w-full shadow bg-emerald-300 ml-4 ">
-                <h2 className="text-stone-700 font-avant_garde_bold text-lg"
-                  style={{ top: "3px" }}
-                  id={styles._H2}>
-                  <a id={styles.TEXT_OUTLINE}>Click Here!</a>
-                </h2>
-              </Button>
-            </Form.Item>
-
+        <Form.Item>
+          <Button
+            id={styles.FORM_BUTTON}
+            type="primary"
+            htmlType="submit"
+            loading={isLoading}
+            className="w-full shadow bg-emerald-300  "
+          >
+            <h2
+              className="text-stone-700 font-avant_garde_bold text-lg"
+              id={styles._H2}
+            >
+              <a id={styles.TEXT_OUTLINE}>Click Here!</a>
+            </h2>
+          </Button>
+        </Form.Item>
       </Form>
-      <br/>
-
       {error && <div style={{ color: 'red', marginTop: '5px' }}>{error}</div>}
-      <br/><br/>
-      {/*<CheckoutButton amount={10000000} currency={"usd"}/>*/}
     </div>
   );
 }
