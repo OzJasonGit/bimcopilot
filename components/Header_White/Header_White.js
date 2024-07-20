@@ -64,7 +64,7 @@ export default class Header_White extends Component {
                     >
                       <h3
                         id={styles.H_3_SERVICES}
-                        class="text-center ...  text-slate-50 font-avant_garde_bold"
+                        class="text-center ...  text-stone-700 font-avant_garde_bold"
                         data-content="Services"
                       >
                         Services
@@ -74,7 +74,7 @@ export default class Header_White extends Component {
                     <Link id={styles.PRODUCTS} href="/products">
                       <h3
                         id={styles.H_3_PRODUCTS}
-                        class="text-center ...  text-slate-50  font-avant_garde_bold"
+                        class="text-center ...  text-stone-700  font-avant_garde_bold"
                         data-content="Products"
                       >
                         Products
@@ -84,7 +84,7 @@ export default class Header_White extends Component {
                     <Link id={styles.PROJECTS} href="/projects">
                       <h3
                         id={styles.H_3_PROJECTS}
-                        class="text-center ...  text-slate-50  font-avant_garde_bold"
+                        class="text-center ...  text-stone-700  font-avant_garde_bold"
                         data-content="Projects"
                       >
                         Projects
@@ -94,7 +94,7 @@ export default class Header_White extends Component {
                     <Link id={styles.STORIES} href="/bloghome">
                       <h3
                         id={styles.H_3_STORIES}
-                        class="text-center ...  text-slate-50 font-avant_garde_bold"
+                        class="text-center ...  text-stone-700 font-avant_garde_bold"
                         data-content="Stories"
                       >
                         Stories
