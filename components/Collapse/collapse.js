@@ -66,7 +66,7 @@ const Collapsed = () => {
                                             return (
                                                 <CaretRightFilled
                                                     style={{
-                                                        color: "#f1f1f1",
+                                                        color: "rgb(68 64 60)",
                                                     }}
                                                     rotate={isActive ? 90 : 0}
                                                 />
