@@ -620,9 +620,25 @@
         grid-template-rows: 0px auto 0px;
         grid-template-areas:
             ". . . . . . . . . . . . ."
-            "LOGO_HOLDER SIGN_IN SIGN_IN SIGN_IN SIGN_IN COPILOT COPILOT COPILOT COPILOT COPILOT MENU MENU-BUTTON MENU-BUTTON"
+            "LOGO_HOLDER . . . TIME TIME TIME TIME . . . MENU-BUTTON MENU-BUTTON"
             ". . . . . . . . . . . . .";
     }
+
+
+
+        #FIXED_HEADER {
+            grid-area: MAIN-AREA;
+            display: grid;
+            grid-row-gap: 0px;
+            grid-column-gap: 40px;
+            grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0px 60px 0px 20px;
+            grid-template-areas:
+                ". . . . . . . . . . . . ."
+                "LOGO_HOLDER LOGO_HOLDER MENU MENU MENU MENU . TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
+                "LOGO_HOLDER LOGO_HOLDER . . . . . . . . . . ."
+                "LOGO_HOLDER LOGO_HOLDER . . . . . . . . . . .";
+        }
 
 
     #NAV_MENU {
@@ -665,6 +681,7 @@
 
 
     #COPILOT {
+        display: none;
         height: 40px;
         grid-area: COPILOT;
     }
