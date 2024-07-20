@@ -676,6 +676,7 @@
         display: grid;
         grid-area: COPILOT;
         height: 100%;
+        width: 100%;
         grid-template-columns: 10px 1fr 10px;
         grid-template-rows: 10px auto 10px;
         grid-column-gap: 10px;
@@ -683,7 +684,7 @@
             " . . ."
             " . COPILOT ."
             " . . .";
-        top: -7.5px;
+        top: -2.5px;
     }
 
 
