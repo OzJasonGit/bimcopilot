@@ -684,13 +684,14 @@
             " . . ."
             " . COPILOT ."
             " . . .";
-        top: -2.5px;
+        top: -17.75px;
+        left: 50px;
     }
 
 
     #COPILOT {
         position: relative;
-        height: 50px;
+        height: 42.5px;
         width: 100%;
         grid-area: COPILOT;
     }
