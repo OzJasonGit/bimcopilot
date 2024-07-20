@@ -688,8 +688,8 @@
 
 
     #COPILOT {
-        position: absolute;
-        height: 100%;
+        position: relative;
+        height: 30px;
         width: 100%;
         grid-area: COPILOT;
     }
