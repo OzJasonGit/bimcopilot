@@ -26,7 +26,7 @@ const panel_1 = () => (
 );
 
 const panel_2 = () => (
-    <h2 style={{ color: "white", alignItems: "end" }}
+    <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-avant_garde_bold text-4xl"
         id={styles._H2}> 
         BIM Strategy, Execution Plan (BEP) and Documentation 
@@ -34,7 +34,7 @@ const panel_2 = () => (
 );
 
 const panel_3 = () => (
-    <h2 style={{ color: "white", alignItems: "end" }}
+    <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-avant_garde_bold text-4xl"
         id={styles._H2}> 
         Digital Twin product development 
@@ -42,7 +42,7 @@ const panel_3 = () => (
 );
 
 const panel_4 = () => (
-    <h2 style={{ color: "white", alignItems: "end" }}
+    <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-avant_garde_bold text-4xl"
         id={styles._H2}> 
         Revit Training 
@@ -82,7 +82,7 @@ const Collapsed = () => {
                                             header={panel_1()}
                                         >
                                             <h3 class="font-avant_garde_medium text-xl ..."
-                                                style={{ color: "#f1f1f1", position: "relative", left: "25px" }}
+                                                style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
                                                 A dog is a type of domesticated
@@ -99,7 +99,7 @@ const Collapsed = () => {
                                             header={panel_2()}
                                         >
                                             <h3 class="font-avant_garde_medium text-xl ..."
-                                                style={{ color: "#f1f1f1", position: "relative", left: "25px" }}
+                                                style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
                                                 A dog is a type of domesticated
@@ -115,7 +115,7 @@ const Collapsed = () => {
                                             header={panel_3()}
                                         >
                                             <h3 class="font-avant_garde_medium text-xl ..."
-                                                style={{ color: "#f1f1f1", position: "relative", left: "25px" }}
+                                                style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
                                                 A dog is a type of domesticated
@@ -131,7 +131,7 @@ const Collapsed = () => {
                                             header={panel_4()}
                                         >
                                             <h3 class="font-avant_garde_medium text-xl ..."
-                                                style={{ color: "#f1f1f1", position: "relative", left: "25px" }}
+                                                style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
                                                 A dog is a type of domesticated
