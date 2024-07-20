@@ -18,7 +18,7 @@ const contentStyle = {
 
 const panel_1 = () => (
     
-    <h2 style={{ color: "white", alignItems: "end" }}
+    <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-avant_garde_bold text-4xl"
         id={styles._H2}>
         Project Management, Delivery and Consultancy        
