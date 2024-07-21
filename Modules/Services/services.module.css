@@ -2999,7 +2999,7 @@
             grid-column-gap: 0px;
             grid-row-gap: 20px;
             grid-template-rows: 80px auto;
-            grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+            grid-template-columns: 40px 120px 20px 1fr 20px 120px 40px;
             grid-template-areas: ". . . . . . ."
 
                 ". PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO .";
