@@ -13,4 +13,21 @@
    
     height: 380px;
     position: relative;
+}   
+
+
+
+@media all and (max-width: 480px) {
+
+#VIDEO_CONTAINER {
+  border-radius: 0px !important;
+
+}
+    #VIDEO video{ 
+        height: 700px;
+        object-fit: cover;
+        border-radius: 0px !important   ;
+
+    }  
+
 }

@@ -40,6 +40,7 @@ const Video = () => {
           }}
         />  */}
 <video autoPlay controls playsInline muted loop src="https://res.cloudinary.com/dytsuek4h/video/upload/v1718789410/2836031_jb9p48.mp4" style={{  borderRadius:"0.5rem"}}></video>
+
         </div>
 
 

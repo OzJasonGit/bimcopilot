@@ -1328,6 +1328,27 @@
     max-height: 0;
 }
 
+
+@media all and (max-width: 480px) {
+    #VIDEO_LATEST_HOLDER {
+        position: relative;
+        grid-area: VIDEO;
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-row-gap: 20px !important ;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "VIDEO"
+            "TITLE";
+    }
+
+    #VIDEO_LATEST{
+        border-radius: 0px !important;
+    }
+}
+
 /*SECTION_9////VIDEO/////////////////////////////////////////////////////////////////////////////////*/
 
 

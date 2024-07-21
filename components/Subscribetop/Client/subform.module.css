@@ -39,6 +39,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
+    column-gap: 15px;
     grid-template-areas:
         "FORM"
         "BUTTON";
@@ -58,14 +59,14 @@
 
 #FORM_INPUT {
     width: 100%;
-    height: 70px;
+    height: 62.5px;
     margin-bottom: 0;
 }
 
 #FORM_BUTTON {
     grid-area: BUTTON;
     width: 100%;
-    height: 70px;
+    height: 62.5px;
 }
 
 @media all and (min-width: 480px) {
