@@ -1,5 +1,5 @@
 
-import styles from "./infinite_scroll.module.css";
+import styles from "./infinite_scroll_services.module.css";
 import Image from "next/image";
 import logoImage from "./Bim-copilot-logo_Mobile_2.png";
 
