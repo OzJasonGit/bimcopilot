@@ -514,11 +514,11 @@
     display: inline-block;
     width: 18px;
     height: 3px;
-    color: #efefef;
+    color: rgb(68 64 60);
     font: bold 14px/.4 Helvetica;
     text-transform: uppercase;
     text-indent: -55px;
-    background: #efefef;
+    background: rgb(68 64 60);
     transition: all .2s ease-out;
     margin-bottom: 0%;
 }
@@ -528,7 +528,7 @@
     content: '';
     width: 18px;
     height: 3px;
-    background: #efefef;
+    background: rgb(68 64 60);
     position: absolute;
     left: 0;
     transition: all .2s ease-out;
@@ -551,7 +551,7 @@
 }
 
 #BURGER.active #BURGER_2 {
-    background: #efefef;
+    background: rgb(68 64 60);
 }
 
 #BURGER.active #BURGER_2::before {
