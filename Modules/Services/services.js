@@ -4,7 +4,7 @@ import styles from './services.module.css';
 
 import { useRouter } from "next/navigation";
 
-import Menu from "../../components/Menu/menu";
+import Menu_White from "../../components/Menu_White/menu_white";
 import Sides from "../../components/Sides/sides";
 import Header_White from "../../components/Header_White/Header_White";
 import Footer from "../../components/Footer/Footer_White";
@@ -25,7 +25,7 @@ const Servicesmain = ({ stories, firstStory }) => {
    return (
 
     <>
-     
+      <Menu_White/>
       <Header_White/>
       <Sides/>
     
