@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./tabs.module.css";
 
 import Image from "next/image";
@@ -76,11 +76,24 @@ const Tab = () => {
       ),
     },
   ];
-
   const [tabPosition, setTabPosition] = useState("right");
-  const changeTabPosition = (e) => {
-    setTabPosition(e.target.value);
-  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setTabPosition("top");
+      } else {
+        setTabPosition("right");
+      }
+    };
+
+    handleResize(); // Check initial window size
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
@@ -111,7 +124,7 @@ const Tab = () => {
                       objectFit: "cover",
                     }}
                     class="rounded-full ..."
-                  />
+                  />  
                 </div>
               ),
               key: id,

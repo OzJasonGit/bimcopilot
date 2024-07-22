@@ -145,7 +145,7 @@
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
-    border-radius: 1.5px;
+    border-radius: 0.5rem;
 }
 
 /*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
@@ -1344,9 +1344,7 @@
             "TITLE";
     }
 
-    #VIDEO_LATEST{
-        border-radius: 0px !important;
-    }
+   
 }
 
 /*SECTION_9////VIDEO/////////////////////////////////////////////////////////////////////////////////*/
