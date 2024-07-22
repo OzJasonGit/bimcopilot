@@ -28,6 +28,11 @@ const Servicesmain = ({ stories, firstStory }) => {
       <Menu_White/>
       <Header_White/>
       <Sides/>
+
+
+      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+        
+      </section>
     
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
