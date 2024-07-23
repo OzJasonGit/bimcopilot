@@ -51,3 +51,19 @@ body {
   background-color: #1f1f1f;
   border: 1px solid #ccc;
 }
+/* Add this to your CSS module or global CSS */
+
+.ant-tabs-bar{display: none !important;}
+.ant-tabs-tab{
+  /* background-color: red !important; */
+  border: none !important;
+  
+
+  
+}
+.ant-tabs-nav::after,
+.ant-tabs-nav::before{
+  border: none !important;
+  display: none !important;
+}
+

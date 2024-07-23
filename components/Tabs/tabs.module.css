@@ -48,6 +48,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
+
 }
 
 #T_CONTAINER h2{
@@ -73,7 +74,7 @@ padding-right: 50px;
 
 #T_TAB_HOLDER_MOBILE {
     position: relative;
-    display: grid;
+    display: flex;
     grid-template-columns: 0px 60px 0px;
     grid-template-rows: 0px 60px 0px;
     grid-column-gap: 0px;
@@ -82,6 +83,7 @@ padding-right: 50px;
         ". . . "
         ". PICTURE ."
         ". . .";
+
 }
 
 #T_TAB {
@@ -91,14 +93,15 @@ padding-right: 50px;
 #T_MOBILE {
     display: none;
 }
+/* Add this to your CSS module or global CSS */
+/* .ant-tabs-ink-bar,
+.ant-tabs-nav::before{
+  display: none !important;
+}
 
-/* .ant-tabs-top{
-    border: none !important;
+.ant-tabs-tab {
+  padding: 0 !important;
 } */
-
-
-
-
 
 
 @media (min-width: 0px) and (max-width: 480px) {
@@ -106,12 +109,14 @@ padding-right: 50px;
         position: absolute;
         height: 400px;
         width: 100%;
+        
     }
     #h2{
         text-align: center;
 
     }
     #T_CONTAINER h2{
+        
         padding-right: 0px !important;
         }
     #T_CONTAINER h1{
@@ -119,6 +124,7 @@ padding-right: 50px;
     }
     
     #T_TAB_HOLDER {
+        
     margin:10px 0 0 10px;
 
     }

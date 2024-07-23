@@ -523,7 +523,7 @@
     margin-bottom: 0%;
 }
 
-#BURGER #BURGER_2::before,
+#BURGER #BURGER_2,
 #BURGER #BURGER_2::after {
     content: '';
     width: 18px;
