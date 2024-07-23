@@ -91,6 +91,30 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+#BIMCOPILOT_CONTAINER {
+    height: 300px;
+    width: 100%;
+    grid-area: SUB;
+}
+
+
+
+
+
+
+
 /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
 .sub_head {
     position: relative;
