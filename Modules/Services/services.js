@@ -18,6 +18,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 
+import bimcopilot from './Bim-copilot-logo_Horizontal.png';
+
+
 const Servicesmain = ({ stories, firstStory }) => {
   const storiesToMap = stories.filter((story, i) => i != 0);
   const router = useRouter();
@@ -31,14 +34,24 @@ const Servicesmain = ({ stories, firstStory }) => {
 
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-        <div class={styles.grid_0_subscribe}>
+        <div class={styles.grid_0_bimcopilot}>
+          <div id={styles.BIMCOPILOT_CONTAINER}>
+            <div id={styles.BIMCOPILOT}>
+              <Image id={styles.CENTER}
+                  src={bimcopilot}   
+                  style={{objectFit: "contain"}} 
+                  quality={100}
+              />  
+            </div>
+            
 
+          </div>
         </div>
       </section>
     
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-          <div class={styles.grid_0_subscribe}>
+          <div class={styles.grid_0_scroll}>
             <div class={styles.sub_head}>
               <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
                 <div id={styles.SUB_ICON}>
