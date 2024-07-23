@@ -69,6 +69,10 @@
 }
 
 
+
+
+
+
 #SHADOW_SECTION_BLOG {
     position: relative;
     width: 100%;
@@ -100,17 +104,29 @@
 
 
 
-
+.grid_0_bimcopilot {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    grid-template-rows: 200px auto 0px;
+    grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+    grid-template-areas: ". . . . . . ."
+        ". . . SUB . . ."
+        ". . . . . . .";
+}
 
 
 #BIMCOPILOT_CONTAINER {
-    
     width: 100%;
     grid-area: SUB;
     display: grid;
     grid-column-gap: 40px;
     grid-template-columns: 1fr 700px;
-    grid-template-rows: 250px;
+    grid-template-rows: 200px;
     grid-template-areas:
             ". BC";
 
