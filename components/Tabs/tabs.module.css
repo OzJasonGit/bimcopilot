@@ -92,6 +92,9 @@ padding-right: 50px;
     display: none;
 }
 
+/* .ant-tabs-top{
+    border: none !important;
+} */
 
 
 
@@ -111,6 +114,13 @@ padding-right: 50px;
     #T_CONTAINER h2{
         padding-right: 0px !important;
         }
-        
+    #T_CONTAINER h1{
+        font-size: smaller !important;
+    }
+    
+    #T_TAB_HOLDER {
+    margin:10px 0 0 10px;
+
+    }
 
 }       
