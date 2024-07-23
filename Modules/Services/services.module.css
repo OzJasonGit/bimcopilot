@@ -104,9 +104,16 @@
 
 
 #BIMCOPILOT_CONTAINER {
-    height: 300px;
+    
     width: 100%;
     grid-area: SUB;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr 800px;
+    grid-template-rows: 300px;
+    grid-template-areas:
+            ". BC";
+
 }
 
 
