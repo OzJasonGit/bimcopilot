@@ -31,11 +31,10 @@ const Servicesmain = ({ stories, firstStory }) => {
 
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-        <div id={styles.BIMCOPILOT_CONTAINER}>
-          <div>
+        <div class={styles.grid_0_scroll}>
+          <div id={styles.BIMCOPILOT_CONTAINER}>
 
           </div>
-
         </div>
       </section>
     

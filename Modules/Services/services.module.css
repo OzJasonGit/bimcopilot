@@ -109,8 +109,8 @@
     grid-area: SUB;
     display: grid;
     grid-column-gap: 40px;
-    grid-template-columns: 1fr 800px;
-    grid-template-rows: 300px;
+    grid-template-columns: 1fr 700px;
+    grid-template-rows: 250px;
     grid-template-areas:
             ". BC";
 
