@@ -268,7 +268,7 @@ export default class Aboutpage extends Component {
                 <div id={styles.TESTIMONIAL_AREA}>
                   <div id={styles.T_CONTAINER}>
                     <Tab />
-                    {<Tab_Horizontal />}
+                    {/* <Tab_Horizontal /> */}
                     {/*<Tab_M/>*/}
                   </div>
                 </div>

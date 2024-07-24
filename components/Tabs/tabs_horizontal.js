@@ -25,9 +25,10 @@ const Tab_Horizontal = () => {
             height: "100%",
             width: "100%",
             alignItems:"center",
+            
         }}
         tabPosition={tabPosition}
-        items={new Array(3).fill(null).map((_, i) => {
+        items={new Array(3).fill(null).map(( i) => {
           const id = String(i + 1);
           return {
             label: <div id={styles.T_TAB_HOLDER_MOBILE}>
