@@ -828,6 +828,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
 #PACKAGE_GRID {
     position: relative;
     display: grid;
@@ -3110,6 +3119,24 @@
         }
 
 
+
+
+
+        #PACKAGES_IMAGES {
+            height: 500px;
+            width: 100%;
+            position: relative;
+            grid-area: PACKAGES;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-column-gap: 20px;
+            grid-template-areas: " PACKAGE_1 PACKAGE_2 PACKAGE_3";
+        }
+
+
+
+
         .grid_0_who_weve_helped {
             position: relative;
             width: 100%;
@@ -3544,6 +3571,104 @@
 
 
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 480px) and (max-width: 960px) {
     .center_holder {
         width: 100%;
@@ -3676,7 +3801,19 @@
 
 
 
-
+    #PACKAGES_IMAGES {
+        height: 400px;
+        width: 100%;
+        position: relative;
+        grid-area: PACKAGES;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "PACKAGE_1"
+            "PACKAGE_2"
+            "PACKAGE_3";
+    }
 
 
 
@@ -4450,6 +4587,22 @@
         background-color: #efefef;
         width: 100%;
         left: 0px;
+    }
+
+
+
+    #PACKAGES_IMAGES {
+        height: 400px;
+        width: 100%;
+        position: relative;
+        grid-area: PACKAGES;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "PACKAGE_1"
+            "PACKAGE_2"
+            "PACKAGE_3";
     }
 
 
