@@ -3005,7 +3005,7 @@
         grid-template-columns: 0px 1fr 0px;
         grid-template-areas:
             ". .    ."
-            ". SUB ."
+            "BANNER-1 SUB ."
             ". .   .";
     }
 
@@ -3090,7 +3090,7 @@
         grid-template-rows: 100px auto auto;
         grid-template-columns: 0px 1fr 0px;
         grid-template-areas: ". . ."
-            ". SUB ."
+            "BANNER-1 SUB ."
             ". PORTFOLIO .";
     }
 
@@ -3108,7 +3108,7 @@
             grid-template-columns: 0px  1fr 0px;
             grid-template-areas:
                 ". .   ."
-                ".  SUB ."
+                "BANNER-1  SUB ."
                 ". .  .";
         }
 
@@ -3125,8 +3125,8 @@
             grid-template-rows: 170px auto auto;
             grid-template-columns: 0px 1fr 0px;
             grid-template-areas: ". . ."
-                                 ". SUB ."
-                                 ". PORTFOLIO .";
+                                 "BANNER-1 SUB ."
+                                 "BANNER-1 PORTFOLIO .";
         }
 
 
@@ -3140,8 +3140,8 @@
             grid-row-gap: 20px;
             grid-template-rows: 80px auto;
             grid-template-columns: 0px 1fr 0px;
-            grid-template-areas: ". . ."
-                                 ". PORTFOLIO .";
+            grid-template-areas: "BANNER-1 . ."
+                                 "BANNER-1 PORTFOLIO .";
         }
 
 
@@ -3156,8 +3156,8 @@
             grid-template-rows: 250px auto 0px;
             grid-template-columns: 0px 1fr 0px;
             grid-template-areas: ". . ."
-                ". SUB ."
-                ". . .";
+                "BANNER-1 SUB ."
+                "BANNER-1 . .";
         }
 
 
@@ -3253,7 +3253,7 @@
         display: flex;
         -webkit-box-pack: center;
         justify-content: center;
-        background-color: rgb(23, 23, 23);
+        background-color: rgb(228 228 231);
         z-index: -30000;
         ;
         top: 0px;
@@ -3265,7 +3265,7 @@
         display: flex;
         -webkit-box-pack: center;
         justify-content: center;
-        background-color: rgb(23, 23, 23);
+        background-color: rgb(228 228 231);
         z-index: 1;
         top: 0px;
         left: 0;
