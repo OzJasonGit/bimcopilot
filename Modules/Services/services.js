@@ -701,7 +701,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-          <div class={styles.grid_0_is_this_for_me}>
+          <div class={styles.grid_0_client_showcase}>
              
               
 
@@ -733,7 +733,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-          <div class={styles.grid_0_is_this_for_me}>
+          <div class={styles.grid_0_client_showcase}>
              
               <div id={styles.CLIENT_TAG}>
                   <h1                 
