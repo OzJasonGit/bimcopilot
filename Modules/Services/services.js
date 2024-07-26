@@ -218,7 +218,7 @@ const Servicesmain = ({ stories, firstStory }) => {
               <div id={styles.SECONDCOPY_TAG}>
                 <h3
                     id={styles._H3}
-                    class="text-right ... text-2xl ... text-stone-500 ... font-avant_garde_bold"
+                    class="text-left ... text-2xl ... text-stone-500 ... font-avant_garde_bold"
                   >
 
                     To much <a  class="text-stone-700 ... font-avant_garde_bold">profit</a>  is left on the table through inefficient processes. 
