@@ -536,19 +536,19 @@
 
 
 
-    .footer_holder_white {
-        position: relative;
-        width: 100%;
-        max-width: 1520px;
-        background-color: rgb(228 228 231);
-        display: grid;
-        grid-column-gap: 40px;
-        grid-row-gap: 40px;
-        grid-template-rows: 0px auto 0px;
-        grid-template-columns: 0px 1fr 0px;
-        grid-template-areas: " . . ."
-            ". MAIN-AREA .";
-    }
+.footer_holder_white {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: rgb(228 228 231);
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas: " . . ."
+        ". MAIN-AREA .";
+}
 
 
 
@@ -952,20 +952,20 @@
 
 
 
-    .footer_holder_white {
-        position: relative;
-        width: 100%;
-        max-width: 1520px;
-        background-color: rgb(228 228 231);
-        display: grid;
-        grid-column-gap: 40px;
-        grid-row-gap: 40px;
-        grid-template-rows: 0px auto 0px;
-        grid-template-columns: 0px 1fr 0px;
-        grid-template-areas:
-            ". .         ."
-            ". MAIN-AREA .";
-    }
+.footer_holder_white {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: rgb(228 228 231);
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas:
+        ". .         ."
+        ". MAIN-AREA .";
+}
 
 
 
@@ -1241,26 +1241,26 @@
     }
 
 
-    .github {
-        color: rgb(87 83 78);
-    }
-
-
-    .medium {
-        color: rgb(87 83 78);
-    }
-
-    .linkedin {
-        color: rgb(87 83 78);
-    }
-
-    .youtube {
-        color: rgb(87 83 78);
-    }
-
-    .dribbble {
-        color: rgb(87 83 78);
-    }
+        .github {
+            color: rgb(87 83 78);
+        }
+    
+    
+        .medium {
+            color: rgb(87 83 78);
+        }
+    
+        .linkedin {
+            color: rgb(87 83 78);
+        }
+    
+        .youtube {
+            color: rgb(87 83 78);
+        }
+    
+        .dribbble {
+            color: rgb(87 83 78);
+        }
 
 
 
@@ -1405,20 +1405,20 @@
 
 
 
-    .footer_holder_white {
-        position: relative;
-        width: 100%;
-        max-width: 1520px;
-        background-color: rgb(228 228 231);
-        display: grid;
-        grid-column-gap: 20px;
-        grid-row-gap: 40px;
-        grid-template-rows: 0px auto 0px;
-        grid-template-columns: 0px 1fr 0px;
-        grid-template-areas:
-            ". .         ."
-            ". MAIN-AREA .";
-    }
+.footer_holder_white {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: rgb(228 228 231);
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas:
+        ". .         ."
+        ". MAIN-AREA .";
+}
 
 
 
@@ -1578,7 +1578,7 @@
             ". . . TAGLINE TAGLINE TAGLINE"
             ". . . . . ."
             "CONTACT CONTACT CONTACT CONTACT CONTACT ."
-
+            
             "WAITING WAITING WAITING WAITING WAITING WAITING"
             "FORM FORM FORM FORM FORM FORM"
             ". . . . . ."
