@@ -2,13 +2,10 @@
 
 import styles from './services_1.module.css';
 
-
-
-
 import Image from "next/image";
 import bimcopilot from './Bim-copilot-logo_Horizontal.png';
 
-
+import React, { Component } from 'react';
 
 
 
