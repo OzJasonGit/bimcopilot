@@ -1,4 +1,4 @@
-
+"use client"
 
 import styles from './services_1.module.css';
 
@@ -14,9 +14,8 @@ import { useRouter } from "next/navigation";
 
 export default class Services_1 extends Component {
 
-  render() {
+render() {
    
-
 return (
 
   
@@ -39,11 +38,7 @@ return (
         </div>
       </section>
 
-    </Provider>
-        
-
-        
-    
+    </Provider>   
 
 );
 };
