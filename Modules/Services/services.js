@@ -11,6 +11,12 @@ import Footer from "../../components/Footer/Footer_White";
 import Collapsed from "../../components/Collapse/collapse";
 import Infinite_Scroll_2 from "../../components/Carousel/Infinite_Scroll_Services";
 
+
+
+
+import Services_1 from "../../components/services_1/services_1";
+
+
 import { Button } from 'antd';
 
 
@@ -32,7 +38,7 @@ const Servicesmain = ({ stories, firstStory }) => {
       <Header_White/>
       <Sides/>
 
-
+      <Services_1/>
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_bimcopilot}>
           <div id={styles.BIMCOPILOT_CONTAINER}>
