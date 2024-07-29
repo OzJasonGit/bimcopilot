@@ -1,9 +1,9 @@
-"use client"
+
 
 import styles from './services_1.module.css';
 
 
-import Provider from "../../app/utils/Provider";
+
 
 import Image from "next/image";
 
@@ -22,7 +22,7 @@ return (
 
   
 
-    <Provider>
+  
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_bimcopilot}>
@@ -40,7 +40,7 @@ return (
         </div>
       </section>
 
-    </Provider>   
+  
 
 );
 };
