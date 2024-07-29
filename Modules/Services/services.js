@@ -15,6 +15,17 @@ import Infinite_Scroll_2 from "../../components/Carousel/Infinite_Scroll_Service
 
 
 import Services_1 from "../../components/services_1/services_1";
+import Services_2 from "../../components/services_2/services_2";
+import Services_3 from "../../components/services_3/services_3";
+import Services_4 from "../../components/services_4/services_4";
+import Services_5 from "../../components/services_5/services_5";
+import Services_6 from "../../components/services_6/services_6";
+import Services_7 from "../../components/services_7/services_7";
+import Services_8 from "../../components/services_8/services_8";
+import Services_9 from "../../components/services_9/services_9";
+import Services_10 from "../../components/services_10/services_10";
+
+
 
 
 import { Button } from 'antd';
@@ -39,23 +50,8 @@ const Servicesmain = ({ stories, firstStory }) => {
       <Sides/>
 
       <Services_1/>
-      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-        <div class={styles.grid_0_bimcopilot}>
-          <div id={styles.BIMCOPILOT_CONTAINER}>
-            <div id={styles.BIMCOPILOT}>
-              <Image id={styles.CENTER}
-                  src={bimcopilot}   
-                  style={{objectFit: "contain"}} 
-                  quality={100}
-              />  
-            </div>
-            
-
-          </div>
-        </div>
-      </section>
-    
-
+      <Services_2/>
+      
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_scroll}>
             <div class={styles.sub_head}>
