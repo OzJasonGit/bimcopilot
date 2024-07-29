@@ -2,8 +2,10 @@
 
 import styles from './services_1.module.css';
 
-import { useRouter } from "next/navigation";
 
+import Provider from "../../app/utils/Provider";
+
+import Image from "next/image";
 
 
 
