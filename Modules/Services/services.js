@@ -50,7 +50,7 @@ const Servicesmain = ({ stories, firstStory }) => {
       <Sides/>
 
       <Services_1/>
-      {/*<Services_2/>*/}
+      <Services_2/>
       
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_scroll}>

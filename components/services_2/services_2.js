@@ -4,14 +4,11 @@ import styles from './services_2.module.css';
 
 
 
-import bimcopilot from './Bim-copilot-logo_Horizontal.png';
-
-
-
 import React, { Component } from 'react';
 import Image from "next/image";
 
-
+import Placeholder_1 from './placeholder_1.jpeg';
+import Placeholder_2 from './placeholder_2.jpeg';
 
 
 
@@ -36,7 +33,7 @@ return (
                 <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
                   <div id={styles.IMAGE_POST}>
                     <Image
-                      src={bimcopilot}   
+                      src={Placeholder_1}   
                       alt="Picture of the author"
                       width={500}
                       height={500}
@@ -55,7 +52,7 @@ return (
                 <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_2}> 
                   <div id={styles.IMAGE_POST}>
                     <Image
-                      src={bimcopilot}   
+                      src={Placeholder_2}   
                       alt="Picture of the author"
                       width={500}
                       height={500}
