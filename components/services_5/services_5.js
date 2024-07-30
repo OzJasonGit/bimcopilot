@@ -3,7 +3,7 @@
 import styles from './services_5.module.css';
 import Collapsed from "../../components/Collapse/collapse";
 import React, { Component } from 'react';
-
+import Link from "next/link";
 
 export default class Services_5 extends Component {
 
@@ -40,9 +40,9 @@ return (
                 </div>                        
               </div>
 
-              {/*<div id={styles.COLLAPSE_HOLDER}>
+              <div id={styles.COLLAPSE_HOLDER}>
                 <Collapsed />
-              </div>*/}
+              </div>
               
             </div>
       </section>
