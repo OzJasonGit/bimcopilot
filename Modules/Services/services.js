@@ -17,8 +17,8 @@ import Infinite_Scroll_2 from "../../components/Carousel/Infinite_Scroll_Service
 import Services_1 from "../../components/services_1/services_1";
 import Services_2 from "../../components/services_2/services_2";
 import Services_3 from "../../components/services_3/services_3";
-import Services_4 from "../../components/services_4/services_4";
-// import Services_5 from "../../components/services_5/services_5";
+//import Services_4 from "../../components/services_4/services_4";
+ import Services_5 from "../../components/services_5/services_5";
 // import Services_6 from "../../components/services_6/services_6";
 // import Services_7 from "../../components/services_7/services_7";
 // import Services_8 from "../../components/services_8/services_8";
@@ -109,7 +109,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
       <Services_3/>
 
-      <Services_4/>
+      {/*<Services_4/>*/}
 
 
 
@@ -166,12 +166,7 @@ const Servicesmain = ({ stories, firstStory }) => {
         </div>          
       </section>
 
-
-      
-
-
-      
-
+      <Services_5/>
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_services}>
