@@ -1,11 +1,11 @@
 'use client'
 
-import styles from './services_6.module.css';
+import styles from './services_5.module.css';
 
 import React, { Component } from 'react';
 
 
-export default class Services_1 extends Component {
+export default class Services_5 extends Component {
 
 render() {
    
