@@ -52,7 +52,7 @@ return (
                 </div>
               </div>
               
-              <div id={styles.IMAGE_LAYER_2}>  
+              <div id={styles.IMAGE_LAYER_3}>  
 
                 <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_2}> 
                   <div id={styles.IMAGE_POST}>
