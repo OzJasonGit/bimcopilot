@@ -1,3 +1,44 @@
+/*SECTION_2////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
+#_H1 {
+    margin-bottom: 0px;
+}
+
+
+#_H2 {
+    margin-bottom: 0px;
+}
+
+
+#_H2_7XL {
+    margin-bottom: 0px;
+}
+
+
+#_H3 {
+    margin-bottom: 0px;
+}
+
+#_H4 {
+    margin-bottom: 0px;
+}
+
+
+#_H5 {
+    margin-bottom: -2.5px;
+}
+
+
+#TEXT_OUTLINE {
+    -webkit-text-stroke: 1.05px rgb(120, 120, 120);
+}
+
+/*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
 .center_holder {
     position: relative;
     width: 100%;
@@ -37,11 +78,59 @@
         ". .   .   .   .   .   .";
 }
 
+#VIDEO_HOLDER {
+    grid-area: SUB;
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        ". TITLE TITLE TITLE"
+        ". VIDEO VIDEO VIDEO"
+        ". SUBTITLE SUBTITLE SUBTITLE";
+}
+
+#COPY_TAG_HOLDER {
+    grid-area: TITLE;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ". TITLE TITLE TITLE";
+}
+
+#COPY_TAG {
+    grid-area: TITLE;
+}
+
+#BG_VIDEO {
+    grid-area: VIDEO;
+    position: relative;
+    background-color: #3affbd;
+    height: 600px;
+}
 
 
+#SUBCOPY_TAG_HOLDER {
+    grid-area: SUBTITLE;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        ". FIRST FIRST FIRST"
+        ". SECOND SECOND SECOND";
+}
 
+#SUBCOPY_TAG {
+    grid-area: FIRST;
+}
 
-
+#SECONDCOPY_TAG {
+    grid-area: SECOND;
+}
 
 
 
