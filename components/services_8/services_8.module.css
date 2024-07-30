@@ -1,0 +1,159 @@
+/*SECTION_2////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
+#_H1 {
+    margin-bottom: 0px;
+}
+
+
+#_H2 {
+    margin-bottom: 0px;
+}
+
+
+#_H2_7XL {
+    margin-bottom: 0px;
+}
+
+
+#_H3 {
+    margin-bottom: 0px;
+}
+
+#_H4 {
+    margin-bottom: 0px;
+}
+
+
+#_H5 {
+    margin-bottom: -2.5px;
+}
+
+
+#TEXT_OUTLINE {
+    -webkit-text-stroke: 1.05px rgb(120, 120, 120);
+}
+
+/*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
+
+.center_holder {
+    position: relative;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: aliceblue;
+    margin: 0;
+
+}
+
+#SHADOW_SECTION_BLOG {
+    position: relative;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(228 228 231);
+    z-index: 1;
+    top: 0px;
+    left: 0;
+}
+
+#PORTFOLIO_IMAGES {
+    height: 800px;
+    width: 100%;
+    position: relative;
+    grid-area: PORTFOLIO;
+}
+
+#PORTFOLIO_CLIENT {
+    grid-area: SUB;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 160px 1fr 1fr 1fr 1fr 160px;
+    grid-template-areas: "P1 P1 P5 P5 P7 P7"
+        "P3 P3 P5 P5 P7 P7"
+        "P2 P2 P6 P6 P7 P7"
+        "P2 P2 P6 P6 P7 P7"
+        "P2 P2 P6 P6 P7 P7"
+        "P2 P2 P4 P4 P4 P4";
+
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+
+#P1 {
+    position: relative;
+    grid-area: P1;
+    overflow: hidden;
+}
+
+#P2 {
+    position: relative;
+    grid-area: P2;
+    overflow: hidden;
+}
+
+#P3 {
+    position: relative;
+    grid-area: P3;
+    overflow: hidden;
+}
+
+#P4 {
+    position: relative;
+    grid-area: P4;
+    overflow: hidden;
+}
+
+#P5 {
+    position: relative;
+    grid-area: P5;
+    overflow: hidden;
+}
+
+#P6 {
+    position: relative;
+    grid-area: P6;
+    overflow: hidden;
+}
+
+#P7 {
+    position: relative;
+    grid-area: P7;
+    overflow: hidden;
+}
+
+
+#IMAGE_POST {
+    width: 105%;
+    left: -187.5px;
+}
+
+#CLIENT_TAG_1 {
+    position: relative;
+    grid-area: SUB;
+    top: 20px;
+}
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 960px) and (max-width: 1280px) {}
+
+
+
+
+@media all and (min-width: 480px) and (max-width: 960px) {}
+
+
+
+
+@media all and (min-width: 0px) and (max-width: 480px) {}
