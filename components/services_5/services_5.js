@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './services_5.module.css';
-
+import Collapsed from "../../components/Collapse/collapse";
 import React, { Component } from 'react';
 
 
