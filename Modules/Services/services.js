@@ -19,7 +19,7 @@ import Services_2 from "../../components/services_2/services_2";
 import Services_3 from "../../components/services_3/services_3";
 //import Services_4 from "../../components/services_4/services_4";
 import Services_5 from "../../components/services_5/services_5";
-// import Services_6 from "../../components/services_6/services_6";
+import Services_6 from "../../components/services_6/services_6";
 // import Services_7 from "../../components/services_7/services_7";
 // import Services_8 from "../../components/services_8/services_8";
 // import Services_9 from "../../components/services_9/services_9";
@@ -167,40 +167,9 @@ const Servicesmain = ({ stories, firstStory }) => {
       </section>
 
       <Services_5/>
+      <Services_6/>
 
-      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-          <div class={styles.grid_0_services}>
-
-            <div id={styles.COLLAPSE_TITLE}>
-              <h1                 
-                    id={styles._H2_7XL}
-                    class="text-left ... text-6xl ... text-stone-700 ... font-avant_garde_bold">         
-                    Services
-              </h1>
-            </div>
-
-            <div id={styles.COLLAPSE_MESSAGE}>
-              <div id={styles.COLLAPSE_TAG}>
-                  <h3
-                    id={styles._H3}
-                    class="text-left ... text-2xl ... text-stone-500 ... font-avant_garde_bold">
-                    {" "}
-                      We provide services, including <a class=" text-stone-700 ... font-avant_garde_bold">data-analytics,</a> 
-                      <a class=" text-stone-700 ... font-avant_garde_bold"> automation</a> and <a class=" text-stone-700 ... font-avant_garde_bold">technical-drafting</a> for construction projects. see 
-                      <a class=" text-stone-700 ... font-avant_garde_bold"><Link href={"./"}> "how we work"</Link></a> to 
-                      learn how we define bespoke solutions tailored to your project specific needs.              
-                    <br/> 
-                    <br/>                
-                  </h3>
-                </div>                        
-              </div>
-
-              <div id={styles.COLLAPSE_HOLDER}>
-                <Collapsed />
-              </div>
-              
-            </div>
-      </section>
+      
 
 
 
