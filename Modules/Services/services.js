@@ -22,7 +22,7 @@ import Services_5 from "../../components/services_5/services_5";
 import Services_6 from "../../components/services_6/services_6";
 import Services_7 from "../../components/services_7/services_7";
 // import Services_8 from "../../components/services_8/services_8";
-// import Services_9 from "../../components/services_9/services_9";
+import Services_9 from "../../components/services_9/services_9";
 // import Services_10 from "../../components/services_10/services_10";
 
 
@@ -279,31 +279,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <Services_9/>
 
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
