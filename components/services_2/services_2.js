@@ -6,7 +6,6 @@ import styles from './services_2.module.css';
 
 import bimcopilot from './Bim-copilot-logo_Horizontal.png';
 
-import bimcopilot from './Bim-copilot-logo_Horizontal.png';
 
 
 import React, { Component } from 'react';
@@ -52,8 +51,7 @@ return (
                 </div>
               </div>
               
-              <div id={styles.IMAGE_LAYER_3}>  
-
+              <div id={styles.IMAGE_LAYER_2}>  
                 <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_2}> 
                   <div id={styles.IMAGE_POST}>
                     <Image
@@ -69,10 +67,7 @@ return (
                         }}
                       />
                   </div>   
-                </div>
-
-
-                        
+                </div>                       
               </div>
 
             </div>          
