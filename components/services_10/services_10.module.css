@@ -1,0 +1,264 @@
+/*SECTION_2////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
+#_H1 {
+    margin-bottom: 0px;
+}
+
+
+#_H2 {
+    margin-bottom: 0px;
+}
+
+
+#_H2_7XL {
+    margin-bottom: 0px;
+}
+
+
+#_H3 {
+    margin-bottom: 0px;
+}
+
+#_H4 {
+    margin-bottom: 0px;
+}
+
+
+#_H5 {
+    margin-bottom: -2.5px;
+}
+
+
+#TEXT_OUTLINE {
+    -webkit-text-stroke: 1.05px rgb(120, 120, 120);
+}
+/*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+/*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
+.center_holder {
+    position: relative;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: aliceblue;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#SHADOW_SECTION_BLOG {
+    position: relative;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(228 228 231);
+    z-index: 1;
+    top: 0px;
+    left: 0;
+}
+
+.grid_0_who_weve_helped {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    grid-template-rows: 80px auto;
+    grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+    grid-template-areas: ". . . . . . ."
+
+        ". . . PORTFOLIO . . .";
+}
+/*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
+#HOW_WE_WORK_BLOCK {
+    height: auto;
+    width: 100%;
+    position: relative;
+    grid-area: PORTFOLIO;
+}
+
+#WHO_WEVE_HELPED {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-template-areas: "WHO_WEVE_HELPED .";
+}
+
+#WHO_WEVE_HELPED_TEXT {
+    position: relative;
+    display: grid;
+    grid-template-areas: WHO_WEVE_HELPED;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-rows: 40px 1fr 40px;
+    grid-template-areas: ". . ."
+        ". WHO_WEVE_HELPED ."
+        ". . .";
+}
+
+#WHO_WEVE_HELPED_HOLDER {
+    height: 450px;
+    width: 100%;
+    grid-area: WHO_WEVE_HELPED;
+    position: relative;
+}
+
+#WE_HELPED_TEXT {
+    overflow-x: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#ABOUT_TITLE_HOLDER {
+    grid-area: TITLE;
+    padding-bottom: 20px;
+}
+
+#MY_FACE_HOLDER {
+    position: relative;
+    height: 220px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+#MY_FACE {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+/*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+/*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
+#FAQ_BLOCK {
+    height: 250px;
+    width: 100%;
+    position: relative;
+    grid-area: PORTFOLIO;
+}
+
+#FAQ {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-template-areas: ". FAQ ";
+}
+
+#FAQ_TITLE {
+    width: 100%;
+    height: 100%;
+}
+
+#CLIENT_TAG {
+    grid-area: SUB;
+}
+/*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+/*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
+.grid_0_is_this_for_me {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    grid-template-rows: 170px auto auto;
+    grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+    grid-template-areas: ". . . . . . ."
+        ". . . SUB . . ."
+        ". . . PORTFOLIO . . .";
+}
+
+
+#IS_THIS_FOR_ME_BLOCK {
+    height: 500px;
+    width: 100%;
+    position: relative;
+    grid-area: PORTFOLIO;
+}
+
+#IS_THIS_FOR_ME {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    grid-template-areas: ". FAQ ";
+}
+
+#IS_THIS_FOR_ME_TITLE {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+@media all and (min-width: 960px) and (max-width: 1280px) {}
+
+
+
+
+@media all and (min-width: 480px) and (max-width: 960px) {}
+
+
+
+
+@media all and (min-width: 0px) and (max-width: 480px) {}
