@@ -1,6 +1,6 @@
 'use client'
 
-import styles from './services_6.module.css';
+import styles from './services_10.module.css';
 
 import React, { Component } from 'react';
 import Image from "next/image";
