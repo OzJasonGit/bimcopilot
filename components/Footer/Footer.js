@@ -14,8 +14,8 @@ import Subform from "../Subscribetop/Client/subform";
 
 import logoMobile from './Bim-copilot-logo_Mobile_3.png';    
 import rocketShip from './giphy.gif';
-import logoARB from './logoARB_DARK.png';
-import logoRIBA from './logoRIBA_Dark.png';
+import logoARB from './logo_ARB.png';
+import logoRIBA from './logo_RIBA.png';
 
 
 export default class Footer extends Component {

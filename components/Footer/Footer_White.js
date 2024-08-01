@@ -14,7 +14,8 @@ import Subform from "../Subscribetop/Client/subform";
 
 import logoMobile from './Bim-copilot-logo_Horizontal.png';    
 import rocketShip from './giphy.gif';
- import logoARB from './logo_ARB.png';
+import logoARB from './logoARB_DARK.png';
+import logoRIBA from './logoRIBA_Dark.png';
 
 
 
@@ -141,7 +142,7 @@ export default class Footer extends Component {
                                 <div class=" rounded-md ..." id={styles.RIBA}>
                                     <Link href= "/">
                                         <Image
-                                            src={logoARB}
+                                            src={logoRIBA}
                                             alt="Picture of the author"
                                             width={500}
                                             height={500}
