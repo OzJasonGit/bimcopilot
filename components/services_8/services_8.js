@@ -49,13 +49,13 @@ return (
 
                   <div class="" id={styles.P3}>   
                     <div id={styles.CLIENT_TAG_1}>
-                        <h1                 
+                        <h2                 
                           id={styles._H2_7XL}
                           class="text-left ... text-4xl ... text-stone-700 ... font-avant_garde_bold"
                         >         
                           Client <br/>
                           Showcase
-                        </h1>
+                        </h2>
                         <br/>
                     </div>                 
                   </div>

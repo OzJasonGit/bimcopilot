@@ -20,19 +20,19 @@ import React, { Component } from 'react';
                 </div>
 
                 <div id={styles.MAIN_TAG}>
-                  <h1
+                  <h2
                    
                     id={styles._H1}
-                    class="text-center ... text-6xl ... text-stone-700 ... font-avant_garde_bold" 
+                    class="text-center ... text-lg ... text-stone-700 ... font-avant_garde_bold" 
                   >
            
-                    <a class="text-6xl ...">" </a>Services <a class="text-6xl ..."> " </a>
-                  </h1>
+                    <a class="text-2xl ...">" </a>Services <a class="text-lg ..."> </a>
+                  </h2>
                 </div>
                 <div id={styles.SUB_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-center ... text-2xl ... text-stone-500 ... font-avant_garde_bold"
+                    class="text-center ... text-3xl ... text-stone-500 ... font-avant_garde_bold"
                   >
                     {" "}
                 

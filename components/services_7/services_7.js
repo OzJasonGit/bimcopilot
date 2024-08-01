@@ -17,12 +17,12 @@ export default class Services_6 extends Component {
           <div class={styles.grid_0_how_we_work}>   
            
               <div id={styles.HOW_WE_WORK_TAG}>
-                  <h1                
+                  <h2                
                     id={styles._H2_7XL}
-                    class="text-center ... text-6xl ... text-stone-700 ... font-avant_garde_bold"
+                    class="text-center ... text-4xl ... text-stone-700 ... font-avant_garde_bold"
                   >         
                     How we Work
-                  </h1>
+                  </h2>
               </div>
 
 
