@@ -26,7 +26,7 @@ import React, { Component } from 'react';
                     class="text-center ... text-lg ... text-stone-700 ... font-avant_garde_bold" 
                   >
            
-                    <a class="text-2xl ...">" </a>Services <a class="text-lg ..."> </a>
+                    <a class="text-2xl ..."> Services </a> 
                   </h2>
                 </div>
                 <div id={styles.SUB_TAG}>
@@ -40,7 +40,7 @@ import React, { Component } from 'react';
                       
 
                     </a>{" "}
-                    The world is changing and so is{" "}
+                    <a  class="text-5xl ...">"</a> The world is changing and so is{" "}
                     <a class="text-stone-700 ... font-avant_garde_bold">
                       architecture
                     </a>
@@ -52,7 +52,7 @@ import React, { Component } from 'react';
                     <a class="text-stone-700 ... font-avant_garde_bold">money</a>,
                     be more{" "}
                     <a class="text-stone-700 ... font-avant_garde_bold">
-                      sustainable
+                      sustainable <a class="text-5xl ...">"</a>
                     </a>
                     . <br /> <br />{" "}
                   
