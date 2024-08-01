@@ -12,7 +12,7 @@ import Image from 'next/image';
 
 import Subform from "../Subscribetop/Client/subform";
 
-import logoMobile from './Bim-copilot-logo_Horizontal.png';    
+import logoMobile from './Bim-copilot-logo_Mobile_3.png';    
 import rocketShip from './giphy.gif';
  import logoARB from './logo_ARB.png';
 
