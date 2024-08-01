@@ -43,7 +43,7 @@ const panel_3 = () => (
 
 const panel_4 = () => (
     <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold text-4xl"
+        class="font-avant_garde_bold text-2xl"
         id={styles._H2}> 
         Revit Training 
     </h2>
