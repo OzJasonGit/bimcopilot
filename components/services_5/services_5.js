@@ -18,8 +18,8 @@ return (
 
             <div id={styles.COLLAPSE_TITLE}>
               <h1                 
-                    id={styles._H2_7XL}
-                    class="text-left ... text-3xl ... text-stone-700 ... font-avant_garde_bold">         
+                    id={styles._H1}
+                    class="text-left ... text-4xl ... text-stone-700 ... font-avant_garde_bold">         
                     Services
               </h1>
             </div>
