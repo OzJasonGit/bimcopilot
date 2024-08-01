@@ -149,6 +149,33 @@
                 ". SUB ."
                 ". . .";
     }
+
+
+    #COLLAPSE_MESSAGE {
+        grid-area: MESSAGE;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-column-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "BC ";
+        left: 0;
+    }
+
+
+    .testimonials {
+        position: relative;
+        grid-area: SUB;
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-column-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "BC ";
+        left: 0;
+    }
 }
 
 
