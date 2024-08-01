@@ -17,11 +17,11 @@ return (
           <div class={styles.grid_0_services}>
 
             <div id={styles.COLLAPSE_TITLE}>
-              <h1                 
+              <h2                 
                     id={styles._H1}
                     class="text-left ... text-4xl ... text-stone-700 ... font-avant_garde_bold">         
                     Services
-              </h1>
+              </h2>
             </div>
 
             <div id={styles.COLLAPSE_MESSAGE}>

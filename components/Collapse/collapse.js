@@ -19,7 +19,7 @@ const contentStyle = {
 const panel_1 = () => (
     
     <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold text-4xl"
+        class="font-avant_garde_bold text-2xl"
         id={styles._H2}>
         Project Management, Delivery and Consultancy        
     </h2>
@@ -27,7 +27,7 @@ const panel_1 = () => (
 
 const panel_2 = () => (
     <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold text-4xl"
+        class="font-avant_garde_bold text-2xl"
         id={styles._H2}> 
         BIM Strategy, Execution Plan (BEP) and Documentation 
     </h2>
@@ -35,7 +35,7 @@ const panel_2 = () => (
 
 const panel_3 = () => (
     <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold text-4xl"
+        class="font-avant_garde_bold text-2xl"
         id={styles._H2}> 
         Digital Twin product development 
     </h2>
@@ -59,7 +59,7 @@ const Collapsed = () => {
                 <Collapse
                                         style={{
                                             display: "grid",
-                                            rowGap: 25,
+                                            rowGap: 20,
                                         }}
                                         accordion={true}
                                         expandIcon={({ isActive }) => {
@@ -81,7 +81,7 @@ const Collapsed = () => {
                                             key={"1"}
                                             header={panel_1()}
                                         >
-                                            <h3 class="font-avant_garde_medium text-xl ..."
+                                            <h3 class="font-avant_garde_bold text-lg ..."
                                                 style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
@@ -98,7 +98,7 @@ const Collapsed = () => {
                                             key={"2"}
                                             header={panel_2()}
                                         >
-                                            <h3 class="font-avant_garde_medium text-xl ..."
+                                            <h3 class="font-avant_garde_bold text-lg ..."
                                                 style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
@@ -114,7 +114,7 @@ const Collapsed = () => {
                                             key={"3"}
                                             header={panel_3()}
                                         >
-                                            <h3 class="font-avant_garde_medium text-xl ..."
+                                            <h3 class="font-avant_garde_bold text-lg ..."
                                                 style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
@@ -130,7 +130,7 @@ const Collapsed = () => {
                                             key={"4"}
                                             header={panel_4()}
                                         >
-                                            <h3 class="font-avant_garde_medium text-xl ..."
+                                            <h3 class="font-avant_garde_bold text-lg ..."
                                                 style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
