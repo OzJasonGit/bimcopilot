@@ -19,7 +19,7 @@ return (
             <div id={styles.COLLAPSE_TITLE}>
               <h1                 
                     id={styles._H2_7XL}
-                    class="text-left ... text-6xl ... text-stone-700 ... font-avant_garde_bold">         
+                    class="text-left ... text-3xl ... text-stone-700 ... font-avant_garde_bold">         
                     Services
               </h1>
             </div>
@@ -28,7 +28,7 @@ return (
               <div id={styles.COLLAPSE_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-left ... text-2xl ... text-stone-500 ... font-avant_garde_bold">
+                    class="text-left ... text-lg ... text-stone-500 ... font-avant_garde_bold">
                     {" "}
                       We provide services, including <a class=" text-stone-700 ... font-avant_garde_bold">data-analytics,</a> 
                       <a class=" text-stone-700 ... font-avant_garde_bold"> automation</a> and <a class=" text-stone-700 ... font-avant_garde_bold">technical-drafting</a> for construction projects. see 
