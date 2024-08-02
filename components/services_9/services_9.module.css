@@ -244,7 +244,7 @@
             width: 100%;
             background-color: transparent;
             display: grid;
-            grid-column-gap: 0;
+            grid-column-gap: 20px;
             grid-row-gap: 20px;
             grid-template-rows: 170px auto auto;
             grid-template-columns: 0px 1fr 0px;
