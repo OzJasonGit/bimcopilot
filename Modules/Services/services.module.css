@@ -4729,6 +4729,9 @@
             ".  .  .";
     }
 
+
+
+
     /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
@@ -5246,6 +5249,22 @@
         width: 100%;
         height: 100%;
     }
+
+
+
+#VIDEO_HOLDER {
+    grid-area: SUB;
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "TITLE"
+        "VIDEO"
+        "SUBTITLE";
+}
 
     /*SECTION_9////VIDEO////////////////////////////////////////////////////////////////////////////////////*/
 
