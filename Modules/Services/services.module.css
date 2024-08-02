@@ -4660,6 +4660,8 @@
 
     #_H3 {
         margin-bottom: 0px;
+        font-size: 14px;
+        line-height: 19.5px;
     }
 
     #_H4 {
@@ -4671,6 +4673,11 @@
         margin-bottom: -2.5px;
     }
 
+    #_H2_7XL {
+        margin-bottom: 0px;
+        font-size: 55px;
+        line-height: 1;
+    }
     /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
