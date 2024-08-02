@@ -165,4 +165,12 @@
                 ". PORTFOLIO .";
         }
 
+
+    #WORKING_IMAGES {
+        height: 500px;
+        width: 100%;
+        position: relative;
+        grid-area: PORTFOLIO;
+    }
+
 }
