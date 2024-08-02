@@ -4651,6 +4651,7 @@
     #_H1 {
         margin-bottom: 0px;
         font-size: 40px;
+        text-align: left;
     }
 
     #_H2 {
@@ -4775,7 +4776,14 @@
 
 
 
-
+#COPY_TAG_HOLDER {
+    grid-area: TITLE;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "TITLE";
+}
 
 #SUBCOPY_TAG_HOLDER {
     grid-area: SUBTITLE;
