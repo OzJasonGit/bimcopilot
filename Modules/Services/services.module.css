@@ -4731,7 +4731,20 @@
 
 
 
-
+.grid_0_client_showcase {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas:
+        ". .         ."
+        ". SUB       ."
+        ". PORTFOLIO .";
+}
 
 
 
