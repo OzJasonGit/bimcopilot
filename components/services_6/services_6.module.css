@@ -208,7 +208,7 @@
         display: grid;
         grid-column-gap: 20px;
         grid-row-gap: 20px;
-        grid-template-rows: 100px auto 0;
+        grid-template-rows: 20px auto 0;
         grid-template-columns: 0px 1fr 0px;
         grid-template-areas:
             ". .   ."
