@@ -241,7 +241,7 @@
             display: grid;
             grid-column-gap: 20px;
             grid-row-gap: 20px;
-            grid-template-rows: 200px auto 0px;
+            grid-template-rows: 120px auto 0px;
             grid-template-columns: 0px 1fr 0px;
             grid-template-areas:
                 ". .   ."
@@ -256,7 +256,7 @@
         display: grid;
         grid-column-gap: 40px;
         grid-template-columns: 1fr ;
-        grid-template-rows: 200px;
+        grid-template-rows: 100px;
         grid-template-areas:
             "BC";
 
