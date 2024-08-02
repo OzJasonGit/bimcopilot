@@ -4768,6 +4768,20 @@
 
 
 
+
+
+#SUBCOPY_TAG_HOLDER {
+    grid-area: SUBTITLE;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "FIRST "
+        "SECOND";
+}
+
+
     /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 

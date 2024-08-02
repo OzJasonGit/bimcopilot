@@ -169,4 +169,33 @@
                 ". .   .";
         }
 
+
+        #IMAGE_LAYER_1 {
+            width: 100%;
+            position: relative;
+            height: 500px;
+            display: grid;
+            grid-column-gap: 0;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+                "IMAGE_1"
+                "IMAGE_1";
+        }
+
+
+        #IMAGE_LAYER_2 {
+            width: 100%;
+            position: relative;
+            display: grid;
+            grid-column-gap: 30px;
+            grid-template-columns: 1fr;
+            grid-template-rows:  auto;
+            grid-template-areas: "IMAGE_2" ;
+            margin-top: -500px;
+            z-index: 1;
+        }
+
+
+        
 }
