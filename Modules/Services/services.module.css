@@ -4809,6 +4809,24 @@
     }
 
 
+
+
+        #SUBSCRIBE {
+            position: relative;
+            grid-area: BC;
+            width: 100%;
+            display: grid;
+            grid-row-gap: 20px;
+            grid-column-gap: 20px;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                "ICON "
+                "TAG_MAIN"
+                "SUB_MAIN";
+        }
+
+
     #IMAGE_POST_NUMBER {
         grid-area: CONTENT;
         background: transparent;
@@ -4857,23 +4875,7 @@
     }
 
 
-    #SUBSCRIBE {
-        position: relative;
-        grid-area: BC;
-        width: 100%;
-        display: grid;
-        grid-row-gap: 20px;
-        grid-column-gap: 20px;
-        grid-template-columns: 200px 1fr;
-        grid-template-rows: auto auto auto 52.5px 60px;
-        grid-template-areas:
-            "ICON ICON"
-            "TAG_MAIN TAG_MAIN"
-            "SUB_MAIN SUB_MAIN"
-            "FORM FORM"
-            "BUTTON BUTTON";
-    }
-
+    
 
     #BC {
         display: none;
