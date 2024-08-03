@@ -25,6 +25,25 @@ return (
 
         <>
 
+
+        <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+
+          <div class={styles.grid_0_scroll}>
+
+            <div id={styles.IMAGE_LAYER_1}>
+              
+            </div>
+
+          </div>
+
+        </section>
+
+
+
+
+
+
+
         <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_scroll}>      
             <div id={styles.PORTFOLIO_TITLE}>

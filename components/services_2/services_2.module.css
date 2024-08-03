@@ -29,7 +29,7 @@
     display: grid;
     grid-column-gap: 0;
     grid-row-gap: 20px;
-    grid-template-rows: 0px auto 0px;
+    grid-template-rows: 0px auto 50px;
     grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
     grid-template-areas:
         ". .   .   .   .   .   ."
@@ -48,13 +48,14 @@
 #IMAGE_LAYER_1 {
     width: 100%;
     position: relative;
-    height: 500px;
+    height: 1000px;
     display: grid;
     grid-column-gap: 30px;
-    grid-template-columns: 100px 2.5fr 1fr 1fr;
-    grid-template-rows: 320px auto;
-    grid-template-areas: ". IMAGE_1 . ."
-        ". IMAGE_1 . . ";
+    grid-row-gap: 0px;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 500px 500px;
+    grid-template-areas: ". IMAGE_1 IMAGE_1 IMAGE_1 ."
+                         ". IMAGE_1 IMAGE_1 IMAGE_1 .";
 }
 
 #IMAGE_LAYER_2 {
