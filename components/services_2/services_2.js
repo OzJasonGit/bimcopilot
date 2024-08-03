@@ -47,8 +47,6 @@ return (
                       }}
                     />
                   </div>
-              </div>
-
 
 
               <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_2}> 
@@ -66,12 +64,11 @@ return (
                         }}
                       />
                   </div>   
+
               </div> 
-
             </div>
-
+           </div>
           </div>
-
         </section>
 
 
