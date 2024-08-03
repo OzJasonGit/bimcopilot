@@ -1382,7 +1382,7 @@
     #IPHONE {
         grid-area: IPHONE;
         display: grid;
-        grid-template-rows: 80px auto auto;
+        grid-template-rows: 120px auto auto;
         grid-template-areas:
             "TITLE"
             "MAIN"
