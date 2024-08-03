@@ -77,7 +77,7 @@ return (
 
 
 
-        <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+        {/*<section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_scroll}>      
             <div id={styles.PORTFOLIO_TITLE}>
 
@@ -127,11 +127,11 @@ return (
                       />
                   </div>   
                 </div>                       
-              </div>*/}
+              </div>
 
             </div>          
           </div>
-      </section>
+      </section> */}
     </>
 
 
