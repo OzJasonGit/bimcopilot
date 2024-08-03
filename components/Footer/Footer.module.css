@@ -1605,14 +1605,13 @@
 
 
 
-    #BIM_TITLE {
+    #BIM_TITLE{
         position: relative;
         grid-area: TITLE;
         display: grid;
-        grid-template-columns: 150px 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
-        grid-template-areas:
-            "TITLE .";
+        grid-template-areas: "TITLE ";
     }
 
 
