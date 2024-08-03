@@ -31,7 +31,25 @@ return (
           <div class={styles.grid_0_scroll}>
 
             <div id={styles.IMAGE_LAYER_1}>
-              
+
+              <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
+                  <div id={styles.IMAGE_POST}>
+                    <Image
+                      src={Placeholder_1}   
+                      alt="Picture of the author"
+                      width={500}
+                      height={500}
+                      style={{
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </div>
+
+            </div>
+
             </div>
 
           </div>
@@ -49,6 +67,7 @@ return (
             <div id={styles.PORTFOLIO_TITLE}>
 
               <div id={styles.IMAGE_LAYER_1}>
+
                 <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
                   <div id={styles.IMAGE_POST}>
                     <Image
@@ -64,8 +83,26 @@ return (
                       }}
                     />
                   </div>
+
+                  <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_2}> 
+                    <div id={styles.IMAGE_POST}>
+                      <Image
+                        src={Placeholder_2}   
+                        alt="Picture of the author"
+                        width={500}
+                        height={500}
+                        style={{
+                          position: "absolute",
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          }}
+                        />
                 </div>
               </div>
+
+
+              
               
               {/*<div id={styles.IMAGE_LAYER_2}>  
                 <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_2}> 
