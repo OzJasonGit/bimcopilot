@@ -101,6 +101,8 @@
     position: relative;
     grid-area: IMAGE_1;
     overflow: hidden;
+    z-index: 1;
+    top: 100px;
 }
 
 #P_IMAGE_2 {
