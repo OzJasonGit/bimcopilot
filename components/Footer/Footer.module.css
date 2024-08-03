@@ -1510,21 +1510,24 @@
     }
 
 
+  
+
+
+
+
+
+
     #FOOTER_MAIN {
         grid-area: MAIN;
         display: grid;
-        grid-template-rows: auto 30px auto 30px auto auto auto auto;
-        grid-row-gap: 10px;
-        grid-template-columns: 1fr 1fr 1fr 30px 1fr 1fr;
+        grid-template-rows: auto 20px auto auto auto;
+        grid-template-columns: 1fr;
         grid-template-areas:
-            ". . . TAGLINE TAGLINE TAGLINE"
-            ". . . . . ."
-            "CONTACT CONTACT CONTACT CONTACT CONTACT ."
-            ". . . . . ."
-            "WAITING WAITING WAITING WAITING WAITING WAITING"
-            "FORM FORM FORM FORM FORM FORM"
-            ". . . . . ."
-            "TC TC TC TC TC TC";
+            "CONTACT"
+            "WAITING"
+            "FORM"
+            "."
+            "TC";
     }
 
 
@@ -1613,12 +1616,15 @@
     }
 
 
+    
+
+
     #IMAGE_HOLDER {
         grid-area: TITLE;
         position: relative;
         width: 100%;
         height: 100%;
-        left: 27.5px;
+        left: -30px;
     }
 
 
