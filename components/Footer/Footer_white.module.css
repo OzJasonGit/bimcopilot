@@ -1437,7 +1437,7 @@
     }
 
 
-    #IPHONE {
+    #IPHONE_WHITE {
         grid-area: IPHONE;
         display: grid;
         grid-template-rows: 120px auto auto;
@@ -1451,6 +1451,9 @@
         height: auto;
         background-color: rgb(23 23 23);
     }
+
+
+
 
     #OTHER {
         grid-area: OTHER;
