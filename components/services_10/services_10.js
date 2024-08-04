@@ -93,18 +93,10 @@ return (
               <div id={styles.FAQ_BLOCK}>   
 
                 <div  id={styles.FAQ}>
-                  <div id={styles.FAQ_TITLE}>  
-                      <div id={styles.CLIENT_TAG}>
-                          <h1                 
-                            id={styles._H2_7XL}
-                            class="border-2 text-left ... text-4xl ... text-stone-200 ... font-avant_garde_bold"
-                          > Frequently Asked Questions 
-                          </h1>
-                          <br/>
-                      </div>                  
-                  </div>
+                  
                   <div class="border-2 border-stone-600 ... rounded-xl ..."id={styles.FAQ_TEXT}>                                        
                   </div>
+                  
                 </div>  
 
               </div> 
