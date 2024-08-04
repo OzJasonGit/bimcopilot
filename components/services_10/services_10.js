@@ -111,16 +111,6 @@ return (
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_is_this_for_me}>
-             
-              <div id={styles.CLIENT_TAG}>
-                  <h1                 
-                    id={styles._H2_7XL}
-                    class="text-left ... text-4xl ... text-stone-200 ... font-avant_garde_bold"
-                  >         
-                    Is This for me?
-                  </h1>
-                  <br/>
-              </div>
 
               <div id={styles.IS_THIS_FOR_ME_BLOCK}>   
                 <div  id={styles.IS_THIS_FOR_ME}>
