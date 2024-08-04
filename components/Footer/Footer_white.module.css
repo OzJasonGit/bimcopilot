@@ -1440,13 +1440,13 @@
     #IPHONE {
         grid-area: IPHONE;
         display: grid;
-        grid-template-rows: 80px auto auto;
+        grid-template-rows: 120px auto auto;
         grid-template-areas:
             "TITLE"
             "MAIN"
             "MAIN";
         grid-template-columns: 1fr;
-        grid-row-gap: 40px;
+        grid-row-gap: 10px;
         width: 100%;
         height: auto;
         background-color: rgb(23 23 23);
@@ -1568,21 +1568,21 @@
     }
 
 
+    
+
+
+
     #FOOTER_MAIN {
         grid-area: MAIN;
         display: grid;
-        grid-template-rows: auto 30px auto auto auto auto auto;
-        grid-row-gap: 10px;
-        grid-template-columns: 1fr 1fr 1fr 30px 1fr 1fr;
+        grid-template-rows: auto 20px auto auto auto;
+        grid-template-columns: 1fr;
         grid-template-areas:
-            ". . . TAGLINE TAGLINE TAGLINE"
-            ". . . . . ."
-            "CONTACT CONTACT CONTACT CONTACT CONTACT ."
-
-            "WAITING WAITING WAITING WAITING WAITING WAITING"
-            "FORM FORM FORM FORM FORM FORM"
-            ". . . . . ."
-            "TC TC TC TC TC TC";
+            "CONTACT"
+            "WAITING"
+            "FORM"
+            "."
+            "TC";
     }
 
 
@@ -1664,10 +1664,10 @@
         position: relative;
         grid-area: TITLE;
         display: grid;
-        grid-template-columns: 320px 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            "TITLE .";
+            "TITLE";
     }
 
 
@@ -1676,7 +1676,7 @@
         position: relative;
         width: 100%;
         height: 100%;
-        left: -5px;
+        left: -30px;
     }
 
 
