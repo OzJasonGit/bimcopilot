@@ -71,7 +71,7 @@
     grid-template-columns: 100px 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: ". IMAGE_1 IMAGE_1 IMAGE_1 ."
-        "IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 .";
+        "IMAGE_2 IMAGE_2 IMAGE_2 . .";
 }
 
 #IMAGE_LAYER_2 {
@@ -261,7 +261,7 @@
     grid-template-rows: auto auto;
     grid-template-areas:
         ". IMAGE_1 IMAGE_1 IMAGE_1 IMAGE_1 IMAGE_1"
-        "IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 . .";
+        "IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 .";
 }
 
 
