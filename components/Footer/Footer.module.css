@@ -1168,18 +1168,18 @@
 
 
 
-
-
-
     #BIM_TITLE {
         position: relative;
         grid-area: TITLE;
         display: grid;
-        grid-template-columns: 1fr 260px;
+        grid-template-columns: 400px 1fr;
         grid-template-rows: auto;
-        grid-template-areas:
-            "TITLE .";
+        grid-template-areas: "TITLE .";
+        left: -10px;
     }
+
+
+   
 
 
     #IMAGE_HOLDER {
