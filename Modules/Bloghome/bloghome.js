@@ -69,7 +69,7 @@ const Bloghomemain = ({ stories, firstStory }) => {
                                         </h2>
                                       
 
-                                        <br/>
+                                        
                                       
                                         <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold">
                                           {story.subtitle}
