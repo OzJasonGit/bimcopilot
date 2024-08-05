@@ -2932,7 +2932,7 @@
 
     #_H2 {
         margin-bottom: 0px;
-        font-size: 30px;
+        font-size: 20.5px;
     }
 
     #_H3 {
@@ -3124,6 +3124,19 @@
 
 
 
+    #BLOGIMAGE_HOLDER {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-area: MAIN-AREA;
+        position: relative;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
     #BLOGIMAGE {
         width: 100%;
         height: 100%;
@@ -3131,7 +3144,7 @@
         display: grid;
         grid-row-gap: 20px;
         grid-template-columns: 1fr;
-        grid-template-rows: 240px auto auto;
+        grid-template-rows: 180px auto auto;
         grid-template-areas:
             "IMAGE "
             "TEXT "
