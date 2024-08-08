@@ -215,6 +215,47 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
+  `      {storiesToMap.map((story, index) => {
+              return (
+              <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+                <div class={styles.grid_0_tag}>
+                  <div class={styles.sub_head}>
+                    <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
+                      <div id={styles.SUB_ICON}>
+                        
+                      </div>
+
+                
+                
+                      <div id={styles.MAIN_TAG}>
+                        <h1
+                          id={styles._H1}
+                          class="text-6xl ... text-stone-400 ... font-avant_garde_bold"
+                        >
+                        {story.title}
+                          Sustainable, Richer Architects through Technology and
+                          Automation
+                        </h1>
+                        <br/>
+                        <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
+                        {story.subtitle}
+                          This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                          sed do eiusmod tempor. 
+                        </p>
+                      </div>                   
+                          
+                    
+                    </div>
+                  </div>
+                </div>
+              </section>  
+              )})};
+```
+
+
+
+
+
 
 
 
@@ -284,41 +325,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-    {storiesToMap.map((story, index) => {
-        return (
-        <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
-          <div class={styles.grid_0_tag}>
-            <div class={styles.sub_head}>
-              <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
-                <div id={styles.SUB_ICON}>
-                  
-                </div>
-
-          
-          
-                <div id={styles.MAIN_TAG}>
-                  <h1
-                    id={styles._H1}
-                    class="text-6xl ... text-stone-400 ... font-avant_garde_bold"
-                  >
-                  {story.title}
-                    Sustainable, Richer Architects through Technology and
-                    Automation
-                  </h1>
-                  <br/>
-                  <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
-                  {story.subtitle}
-                    This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor. 
-                  </p>
-                </div>                   
-                    
-              
-              </div>
-            </div>
-          </div>
-        </section>  
-        )})};
+    
 
 
 
