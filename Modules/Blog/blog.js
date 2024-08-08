@@ -170,6 +170,8 @@ const Blogsmain = ({ stories, firstStory }) => {
             </div>
             </div>
       </section>
+  )})};
+
 
 
 
