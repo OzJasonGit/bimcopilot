@@ -146,31 +146,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-{storiesToMap.map((story, index) => {
-                  return (
-      <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
-        <div class={styles.grid_0_main}>
-          <div id={styles.MAIN_TEXT_HOLDER}>
-
-
-
-            <div id={styles.SIDE_NAV_HOLDER}>
-              <div id={styles.SIDE_NAV} class="bg-cyan-500 ...">
-              </div>
-            </div>
-            
-            <div id={styles.DISCLAIMER_HOLDER}>
-              <p
-                class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-                {story.title}                             
-              </p>
-            </div>
-
-            </div>
-            </div>
-      </section>
-  )})};
 
 
 
@@ -233,6 +209,59 @@ const Blogsmain = ({ stories, firstStory }) => {
           </div>
         </section>  
         )})};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      {storiesToMap.map((story, index) => {
+                      return (
+          <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+            <div class={styles.grid_0_main}>
+              <div id={styles.MAIN_TEXT_HOLDER}>
+
+
+
+                <div id={styles.SIDE_NAV_HOLDER}>
+                  <div id={styles.SIDE_NAV} class="bg-cyan-500 ...">
+                  </div>
+                </div>
+                
+                <div id={styles.DISCLAIMER_HOLDER}>
+                  <p
+                    class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    {story.title}                             
+                  </p>
+                </div>
+
+                </div>
+                </div>
+          </section>
+      )})};
 
 
 
