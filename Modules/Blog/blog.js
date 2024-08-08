@@ -32,7 +32,7 @@ const Blogsmain = ({ stories, firstStory }) => {
       <Menu/>
       <Header/>
       <Sides/>
-      <Subscribetop/>
+      {/*<Subscribetop/>*/}
 
 
       {storiesToMap.map((story, index) => {
