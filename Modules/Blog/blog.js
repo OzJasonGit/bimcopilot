@@ -163,7 +163,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                 <div id={styles.MAIN_TAG}>
                   <h1
                     id={styles._H1}
-                    class="text-6xl ... text-stone-400 ... font-avant_garde_bold"
+                    class="text-6xl ... text-stone-200 ... font-avant_garde_bold"
                   >
                   {story.title}
                     Sustainable, Richer Architects through Technology and
@@ -220,7 +220,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                 <div id={styles.MAIN_TAG}>
                   <h1
                     id={styles._H1}
-                    class="text-6xl ... text-stone-200 ... font-avant_garde_bold"
+                    class="text-6xl ... text-stone-400 ... font-avant_garde_bold"
                   >
                   {story.title}
                     Sustainable, Richer Architects through Technology and
