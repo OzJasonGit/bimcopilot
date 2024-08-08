@@ -410,7 +410,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {/*{storiesToMap.map((story, index) => {
                   return (
       <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
@@ -583,46 +583,9 @@ const Blogsmain = ({ stories, firstStory }) => {
 
             </div>;          
           </div>
-        
     
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        )})};
+        )})};*/}
 
 
 
