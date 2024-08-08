@@ -152,7 +152,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
       {storiesToMap.map((story, index) => {
         return (
-        <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+        <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
           <div class={styles.grid_0_tag}>
             <div class={styles.sub_head}>
               <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
@@ -242,6 +242,7 @@ const Blogsmain = ({ stories, firstStory }) => {
           </div>
         </section>  
         )})};
+
 
 
 
@@ -358,9 +359,7 @@ const Blogsmain = ({ stories, firstStory }) => {
     </section>  
     )})};
 
-
-
-  
+ 
     <Footer/>
 
   </>
