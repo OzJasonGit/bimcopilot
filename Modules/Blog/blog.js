@@ -256,10 +256,10 @@ const Blogsmain = ({ stories, firstStory }) => {
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
             <div class={styles.grid_0_main}>
+
+
+
               <div id={styles.MAIN_TEXT_HOLDER}>
-
-
-
                 <div id={styles.SIDE_NAV_HOLDER}>
                   <div id={styles.SIDE_NAV} class="bg-cyan-500 ...">
                   </div>
@@ -271,8 +271,59 @@ const Blogsmain = ({ stories, firstStory }) => {
                     {story.title}                             
                   </p>
                 </div>
-
               </div>
+
+
+
+
+
+
+
+              <div id={styles.BLOG_HOLDER}>
+                <div id={styles.PARAGRAPH_1}>
+                  <h3
+                    class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                    id={styles._H3}>
+                    {story.subtitle}                             
+                  </h3>
+                  <br/>
+                  <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    {story.title}
+                    This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+
+                <div class="bg-stone-900 ... rounded-xl ...">                
+                </div>
+             
+                <div id={styles.PARAGRAPH_2}>
+                  <br/>
+                  <br/>
+                  <h3
+                    class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                    id={styles._H3}>
+                    This is the title section Lorem ipsum dolor sit amet, consectetur              
+                  </h3>
+                  <br/>
+                  <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                
+                    This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                    sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  </p>
+                </div>
+              </div>
+
+
+
+
+
             </div>
 
 
@@ -282,47 +333,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
             
-            <div id={styles.BLOG_HOLDER}>
-              <div id={styles.PARAGRAPH_1}>
-                <h3
-                  class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
-                  id={styles._H3}>
-                  {story.subtitle}                             
-                </h3>
-                <br/>
-                <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-                  {story.title}
-                  This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                  ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                  sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </div>
-
-              <div class="bg-stone-900 ... rounded-xl ...">                
-              </div>
-             
-              <div id={styles.PARAGRAPH_2}>
-                <br/>
-                <br/>
-                <h3
-                  class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
-                  id={styles._H3}>
-                  This is the title section Lorem ipsum dolor sit amet, consectetur              
-                </h3>
-                <br/>
-                <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-               
-                  This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                  ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                  sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </div>
-            </div>
-
+           
 
 
           </section>
