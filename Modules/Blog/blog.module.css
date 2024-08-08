@@ -594,7 +594,7 @@
 
 /*SECTION_4////TITLE///////////////////////////////////////////////////////////////////////////////////*/
 #MAIN_TEXT_HOLDER {
-    grid-area: MAIN-AREA;
+    grid-area: SUB;
     display: grid;
     width: 100%;
     grid-column-gap: 40px;
