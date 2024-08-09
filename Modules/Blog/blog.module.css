@@ -1677,21 +1677,7 @@
 
 
 
-        #MAIN_TEXT_HOLDER {
-            grid-area: SUB;
-            display: grid;
-            width: 100%;
-            grid-column-gap: 40px;
-            grid-row-gap: 20px;
-            grid-template-columns: 200px 2fr 1fr;
-            grid-template-rows: 60px auto 40px auto;
-            grid-template-areas:
-                ". . ."
-                "DISCLAIMER DISCLAIMER ."
-                ". . ."
-                "SIDE_NAV TEXT  ADVERT"
-    
-        }
+        
 
 
         #MAIN_TEXT_HOLDER {
@@ -1701,7 +1687,7 @@
             grid-column-gap: 40px;
             grid-row-gap: 20px;
             grid-template-columns: 150px 2fr 1fr;
-            grid-template-rows: 300px auto auto 0;
+            grid-template-rows: auto auto auto auto auto;
             grid-template-areas:
                 ".        .          ."
                 "SIDE_NAV TEXT   ADVERT"
