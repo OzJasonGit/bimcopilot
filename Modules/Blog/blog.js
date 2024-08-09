@@ -98,6 +98,23 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 
       {storiesToMap.map((story, index) => {
                   return (
@@ -132,22 +149,34 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {storiesToMap.map((story, index) => {
           return (
-          <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+          <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
             <div class={styles.grid_0_tag}>
               <div class={styles.sub_head}>
                 <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
                   <div id={styles.SUB_ICON}>
                     
                   </div>
-
-            
-            
+         
                   <div id={styles.MAIN_TAG}>
                     <h1
                       id={styles._H1}
-                      class="text-6xl ... text-stone-400 ... font-avant_garde_bold"
+                      class="text-6xl ... text-stone-200 ... font-avant_garde_bold"
                     >
                     {story.title}
                       Sustainable, Richer Architects through Technology and
@@ -187,73 +216,85 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       {storiesToMap.map((story, index) => {
                       return (
+          <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+            <div class={styles.grid_0_blog}>
+
+              <div id={styles.MAIN_TEXT_HOLDER}>
+
+                <div id={styles.DISCLAIMER_HOLDER}>
+                  <p
+                    class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    {story.title}                             
+                  </p>
+                </div>
+
+                <div id={styles.SIDE_NAV_HOLDER}>
+                  <div id={styles.SIDE_NAV} class="bg-cyan-500 ...">
+                  </div>
+                </div>
+
+
+                <div id={styles.BLOG_HOLDER}>
+                  <div id={styles.PARAGRAPH_1}>
+                    <h3
+                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      id={styles._H3}>
+                      {story.subtitle}                             
+                    </h3>
+                    <br/>
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                      {story.title}
+                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+
+                  <div class="bg-stone-900 ... rounded-xl ...">                
+                  </div>
+             
+                  <div id={styles.PARAGRAPH_2}>
+                    <br/>
+                    <br/>
+                    <h3
+                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      id={styles._H3}>
+                      This is the title section Lorem ipsum dolor sit amet, consectetur              
+                    </h3>
+                    <br/>
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                  
+                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+                </div>
+              
+          </div>
+          </div>
+
+          </section>
+      )})};
+
+
+
+
+
+
+
+
+
+  {storiesToMap.map((story, index) => {
+        return (
+
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
             <div class={styles.grid_0_main}>
@@ -278,159 +319,29 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
                 <div id={styles.BLOG_HOLDER}>
-                <div id={styles.PARAGRAPH_1}>
-                  <h3
-                    class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
-                    id={styles._H3}>
-                    {story.subtitle}                             
-                  </h3>
-                  <br/>
-                  <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-                    {story.title}
-                    This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                    sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
+                  <div id={styles.PARAGRAPH_1}>
+                    <h3
+                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      id={styles._H3}>
+                      {story.subtitle}                             
+                    </h3>
+                    <br/>
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                      {story.title}
+                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>             
                 </div>
-
-                <div class="bg-stone-900 ... rounded-xl ...">                
-                </div>
-             
-                <div id={styles.PARAGRAPH_2}>
-                  <br/>
-                  <br/>
-                  <h3
-                    class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
-                    id={styles._H3}>
-                    This is the title section Lorem ipsum dolor sit amet, consectetur              
-                  </h3>
-                  <br/>
-                  <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-                
-                    This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                    sunt in culpa qui officia deserunt mollit anim id est laborum.
-                  </p>
-                </div>
-              </div>
-                
-
+              
           </div>
-
-
-
-
-
-
-
-             
-
-
-
-
-
-            </div>
-
-
-
-
-
-
-
-            
-           
-
+          </div>
 
           </section>
-      )})};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  {storiesToMap.map((story, index) => {
-        return (
-        <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-          <div class={styles.grid_0_tag}>
-            <div class={styles.sub_head}>
-              <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
-                <div id={styles.SUB_ICON}>
-                  
-                </div>
-
-          
-          
-                <div id={styles.MAIN_TAG}>
-                  <h1
-                    id={styles._H1}
-                    class="text-6xl ... text-stone-200 ... font-avant_garde_bold"
-                  >
-                  {story.title}
-                    Sustainable, Richer Architects through Technology and
-                    Automation
-                  </h1>
-                  <br/>
-                  <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
-                  {story.subtitle}
-                    This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor. 
-                  </p>
-                </div>                   
-                    
-              
-              </div>
-            </div>
-          </div>
-        </section>  
+        
         )})};
 
 
