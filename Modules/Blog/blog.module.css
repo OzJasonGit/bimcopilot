@@ -726,17 +726,12 @@
     display: grid;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto 250px auto 250px auto auto;
+    grid-template-rows: auto auto auto 250px;
     grid-template-areas:
-        "PARAGRAPH_1"
-    
+        "PARAGRAPH_1"   
         "PARAGRAPH_2"
         "PARAGRAPH_3"
-        "ADVERT_1"
-        "PARAGRAPH_4"
-        "ADVERT_2"
-        "PARAGRAPH_5"
-        "CONCLUSION";
+        "ADVERT_1";
 }
 
 
@@ -1780,7 +1775,47 @@
 
 
 
+    #BLOG_HOLDER {
+        width: 100%;
+        height: auto;
+        position: relative;
+        grid-area: TEXT;
+        display: grid;
+        grid-row-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 400px auto auto 250px auto 250px auto auto;
+        grid-template-areas:
+            "PARAGRAPH_1"
+            "VIDEO"
+            "PARAGRAPH_2"
+            "PARAGRAPH_3"
+            "ADVERT_1"
+            "PARAGRAPH_4"
+            "ADVERT_2"
+            "PARAGRAPH_5"
+            "CONCLUSION";
+    }
 
+
+
+
+
+
+    #BLOG_HOLDER_2 {
+        width: 100%;
+        height: auto;
+        position: relative;
+        grid-area: TEXT;
+        display: grid;
+        grid-row-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto 250px;
+        grid-template-areas:
+            "PARAGRAPH_1"
+            "PARAGRAPH_2"
+            "PARAGRAPH_3"
+            "ADVERT_1";
+    }
 
 
     
