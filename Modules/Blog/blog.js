@@ -276,6 +276,29 @@ const Blogsmain = ({ stories, firstStory }) => {
                       sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                   </div>
+
+
+
+                  <div id={styles.PARAGRAPH_3}>
+                    <br/>
+                    <br/>
+                    <h3
+                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      id={styles._H3}>
+                      This is the title section Lorem ipsum dolor sit amet, consectetur              
+                    </h3>
+                    <br/>
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                  
+                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>
+
+
                 </div>
               
           </div>
