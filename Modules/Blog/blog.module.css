@@ -1724,7 +1724,7 @@
     .grid_0_blog {
         width: 100%;
         max-width: 1520px;
-        background-color: rgb(23 23 23);
+        background-color: transparent;
         display: grid;
         grid-column-gap: 20px;
         grid-row-gap: 20px;
@@ -1756,21 +1756,7 @@
 
 
 
-    #MAIN_TEXT_HOLDER {
-        grid-area: MAIN-AREA;
-        display: grid;
-        width: 100%;
-        grid-column-gap: 40px;
-        grid-row-gap: 20px;
-        grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 300px auto auto 0px;
-        grid-template-areas:
-            ". . . . . . . . . . . ."
-            "DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER"
-            "CONTENTS CONTENTS CONTENTS CONTENTS CONTENTS CONTENTS CONTENTS CONTENTS CONTENTS CONTENTS CONTENTS CONTENTS"
-            "TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT"
-            ". . . . . . . . . . . ."
-    }
+    
     
 
 
