@@ -1694,21 +1694,21 @@
         }
 
 
-                #MAIN_TEXT_HOLDER {
-                    grid-area: MAIN-AREA;
-                    display: grid;
-                    width: 100%;
-                    grid-column-gap: 40px;
-                    grid-row-gap: 20px;
-                    grid-template-columns: 150px 2fr 1fr;
-                    grid-template-rows: 300px auto auto 0;
-                    grid-template-areas:
-                        ".        .          ."
-                        "SIDE_NAV DISCLAIMER ."
-                        "SIDE_NAV CONTENTS   ."
-                        "SIDE_NAV TEXT       ."
-                        "SIDE_NAV TEXT       .";
-                }
+        #MAIN_TEXT_HOLDER {
+            grid-area: MAIN-AREA;
+            display: grid;
+            width: 100%;
+            grid-column-gap: 40px;
+            grid-row-gap: 20px;
+            grid-template-columns: 150px 2fr 1fr;
+            grid-template-rows: 300px auto auto 0;
+            grid-template-areas:
+                ".        .          ."
+                "SIDE_NAV TEXT   ADVERT"
+                "SIDE_NAV TEXT   ADVERT"
+                "SIDE_NAV TEXT   ADVERT"
+                "SIDE_NAV TEXT   ADVERT";
+        }
 
   
 
