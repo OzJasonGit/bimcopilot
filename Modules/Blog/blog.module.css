@@ -2381,6 +2381,23 @@
     }
 
 
+#SECOND_TEXT_HOLDER {
+    grid-area: MAIN-AREA;
+    display: grid;
+    width: 100%;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0px auto auto auto 0px;
+    grid-template-areas:
+        "."
+        "DISCLAIMER"
+        "SIDE_NAV"
+        "TEXT"
+        "."
+}
+
+
 
 
 
@@ -2392,6 +2409,7 @@
 
 
         #SIDE_NAV_HOLDER {
+            display: none;
             width: 100%;
             height: 100%;
             position: relative;
@@ -3320,6 +3338,23 @@
 
 
 
+#SECOND_TEXT_HOLDER {
+    grid-area: MAIN-AREA;
+    display: grid;
+    width: 100%;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0px auto auto auto 0px;
+    grid-template-areas:
+        "."
+        "CONTENTS"
+        "TEXT"
+        "."
+}
+
+
+
 
 
 
@@ -3330,6 +3365,7 @@
 
 
  #SIDE_NAV_HOLDER {
+     display: none;
      width: 100%;
      height: 100%;
      position: relative;
