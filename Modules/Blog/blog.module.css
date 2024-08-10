@@ -2388,10 +2388,9 @@
     grid-column-gap: 40px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0px auto auto auto 0px;
+    grid-template-rows: 0px auto auto 0px;
     grid-template-areas:
         "."
-        "DISCLAIMER"
         "SIDE_NAV"
         "TEXT"
         "."
@@ -3331,7 +3330,7 @@
      grid-template-areas:
          "."
          "DISCLAIMER"
-         "CONTENTS"
+         "SIDE_NAV"
          "TEXT"
          "."
  }
@@ -3345,10 +3344,10 @@
     grid-column-gap: 40px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0px auto auto auto 0px;
+    grid-template-rows: 0px auto auto 0px;
     grid-template-areas:
         "."
-        "CONTENTS"
+        "SIDE_NAV"
         "TEXT"
         "."
 }

@@ -578,6 +578,49 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
+{storiesToMap.map((story, index) => {
+        return (
+
+          <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+            <div class={styles.grid_0_blog}>
+
+              <div id={styles.SECOND_TEXT_HOLDER}>
+        
+                <div id={styles.BLOG_HOLDER_2}>
+
+
+                  <div id={styles.PARAGRAPH_1}>
+                    <h3
+                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      id={styles._H3}>
+                      Conclusion.
+                      {story.subtitle}                             
+                    </h3>
+                    <br/>
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                      {story.title}
+                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
+                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </div>   
+
+                </div>
+              
+              </div>
+
+            </div>
+
+          </section>
+        
+        )})};
+
+
+
+
 
 
 
