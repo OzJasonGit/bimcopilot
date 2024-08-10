@@ -444,6 +444,10 @@ const Blogsmain = ({ stories, firstStory }) => {
                   </div>
 
 
+                  <div id={styles.ADVERT_1} class="bg-pink-300 ... rounded-xl ...">                
+                  </div>
+
+
 
 
                 </div>

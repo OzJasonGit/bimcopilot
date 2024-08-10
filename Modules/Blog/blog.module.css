@@ -1830,7 +1830,7 @@
             width: 100%;
             grid-column-gap: 40px;
             grid-row-gap: 20px;
-            grid-template-columns: 150px 2fr 1fr;
+            grid-template-columns: 200px 1fr 0px;
             grid-template-rows: 60px auto 40px auto;
             grid-template-areas:
                 ".        .          ."
@@ -1848,7 +1848,7 @@
             width: 100%;
             grid-column-gap: 40px;
             grid-row-gap: 20px;
-            grid-template-columns: 150px 2fr 1fr;
+            grid-template-columns: 200px 1fr 0px;
             grid-template-rows:  auto;
             grid-template-areas:
                         "SIDE_NAV TEXT   ADVERT"
@@ -2318,7 +2318,7 @@
     .grid_0_blog {
         position: relative;
         width: 100%;
-        background-color: rgb(23 23 23);
+        background-color: transparent;
         display: grid;
 
         padding-left: 30px;
