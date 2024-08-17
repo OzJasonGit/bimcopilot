@@ -240,7 +240,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <div id={styles.SIDE_NAV} >
 
                     <div id={styles.TITLE_1} >  
-                      <Link href={`/blog/${stories.data[0]._id}`}>
+                      <Link href="/dashboard">
                         <p
                           class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
                           {story.title}                             
@@ -248,7 +248,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       </Link>                                        
                     </div>
                     <div id={styles.TITLE_2}> 
-                      <Link href={`/blog/${stories.data[0]._id}`}>
+                      <Link href="/dashboard">
                         <p
                           class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
                           {story.title}                             
@@ -256,7 +256,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       </Link>                                         
                     </div>
                     <div id={styles.TITLE_3}> 
-                      <Link href={`/blog/${stories.data[0]._id}`}>
+                      <Link href="/dashboard">
                         <p
                           class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
                           {story.title}                             
@@ -264,7 +264,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       </Link>                    
                     </div>
                     <div id={styles.TITLE_4}> 
-                      <Link href={`/blog/${stories.data[0]._id}`}>
+                      <Link href="/dashboard">
                         <p
                           class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
                           {story.title}                             
@@ -272,7 +272,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       </Link>                                         
                     </div>
                     <div id={styles.TITLE_5}> 
-                      <Link href={`/blog/${stories.data[0]._id}`}>
+                      <Link href="/dashboard">
                         <p
                           class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
                           {story.title}                             
