@@ -308,7 +308,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     </p>
                   </div>
 
-                  <div class="bg-stone-900 ... rounded-xl ..."> 
+                  <div class="bg-transparent ... rounded-xl ..."> 
                     <Video />               
                   </div>
              
