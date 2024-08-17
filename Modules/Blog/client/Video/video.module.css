@@ -1,0 +1,36 @@
+
+
+
+#VIDEO_CONTAINER {
+    grid-area: VIDEO;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+
+}
+
+
+#VIDEO { 
+   
+    height: 380px;
+    position: relative;
+    border-radius: 0.5rem !important
+
+}   
+
+
+
+@media all and (max-width: 480px) {
+
+
+    #VIDEO video{ 
+        height: 350px;
+        object-fit: cover;
+        border-radius: 0.5rem !important;
+
+
+
+
+    }  
+
+}

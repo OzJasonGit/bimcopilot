@@ -12,7 +12,7 @@ import Subscribetop from "../../components/Subscribetop/subscribetop";
 
 import Link from "next/link";
 import Image from "next/image";
-
+import Video from "./client/Video/video";
 import logoImage from "./Bim-copilot-logo_2.png";
 
 
@@ -255,7 +255,8 @@ const Blogsmain = ({ stories, firstStory }) => {
                     </p>
                   </div>
 
-                  <div class="bg-stone-900 ... rounded-xl ...">                
+                  <div class="bg-stone-900 ... rounded-xl ..."> 
+                    <Video />               
                   </div>
              
                   <div id={styles.PARAGRAPH_2}>
