@@ -213,7 +213,7 @@
     grid-template-rows: 0px auto 40px;
     grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
     grid-template-areas: ". . . . . . ."
-        ". . . SUB SUB SUB ."
+        ". . . SUB . . ."
         ". . . . . . .";
 }
 
@@ -759,12 +759,11 @@
     display: grid;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto 250px;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
         "PARAGRAPH_1"   
         "PARAGRAPH_2"
-        "PARAGRAPH_3"
-        "ADVERT_1";
+        "PARAGRAPH_3";
 }
 
 
@@ -1837,12 +1836,11 @@
         display: grid;
         grid-row-gap: 20px;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto 250px;
+        grid-template-rows: auto auto auto;
         grid-template-areas:
             "PARAGRAPH_1"
             "PARAGRAPH_2"
-            "PARAGRAPH_3"
-            "ADVERT_1";
+            "PARAGRAPH_3";
     }
 
 
