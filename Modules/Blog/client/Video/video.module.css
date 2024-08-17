@@ -12,7 +12,7 @@
 
 #VIDEO { 
    
-    height: 380px;
+    height: 420px;
     position: relative;
     border-radius: 0.5rem !important
 
@@ -24,7 +24,7 @@
 
 
     #VIDEO video{ 
-        height: 350px;
+        height: 400px;
         object-fit: cover;
         border-radius: 0.5rem !important;
 
