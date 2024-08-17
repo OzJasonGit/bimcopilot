@@ -679,12 +679,47 @@
 
 
 #SIDE_NAV {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-row-gap: 10px;
     width: 100%;
-    height: 300px;
+    height: auto;
     position: sticky;
     top: 200px;
     grid-area: SIDE_NAV;
+    grid-template-areas:
+            "TITLE_1"
+            "TITLE_2"
+            "TITLE_3"
+            "TITLE_4"
+            "TITLE_5";
 }
+
+
+
+#TITLE_1 {
+    grid-area: TITLE_1;
+}
+
+#TITLE_2 {
+    grid-area: TITLE_2;
+}
+
+#TITLE_3 {
+    grid-area: TITLE_3;
+}
+
+#TITLE_4 {
+    grid-area: TITLE_4;
+}
+
+#TITLE_5 {
+    grid-area: TITLE_5;
+}
+
+
+
 
 
 #DISCLAIMER_HOLDER {

@@ -231,10 +231,53 @@ const Blogsmain = ({ stories, firstStory }) => {
                   </p>
                 </div>
 
+
+
+
+
+
                 <div id={styles.SIDE_NAV_HOLDER}>
                   <div id={styles.SIDE_NAV} class="bg-cyan-500 ...">
+
+                    <div id={styles.TITLE_1} >  
+                      <p
+                        class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                        {story.title}                             
+                      </p>                   
+                    </div>
+                    <div id={styles.TITLE_2}> 
+                      <p
+                        class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                        {story.title}                             
+                      </p>                     
+                    </div>
+                    <div id={styles.TITLE_3}> 
+                      <p
+                        class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                        {story.title}                             
+                      </p>                     
+                    </div>
+                    <div id={styles.TITLE_4}> 
+                      <p
+                        class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                        {story.title}                             
+                      </p>                     
+                    </div>
+                    <div id={styles.TITLE_5}>   
+                      <p
+                        class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                        {story.title}                             
+                      </p>                   
+                    </div>
+
                   </div>
                 </div>
+
+
+
+
+
+
 
 
                 <div id={styles.BLOG_HOLDER}>
