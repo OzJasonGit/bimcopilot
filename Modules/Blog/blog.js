@@ -298,7 +298,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.subtitle}                             
                     </h3>
                     <br/>
-                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_medium">
                       {story.title}
                       This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -322,7 +322,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       This is the title section Lorem ipsum dolor sit amet, consectetur              
                     </h3>
                     <br/>
-                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_medium">
                       {story.title}
                       This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -344,7 +344,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       This is the title section Lorem ipsum dolor sit amet, consectetur              
                     </h3>
                     <br/>
-                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_medium">
                       {story.title}
                       This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -372,7 +372,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       This is the title section Lorem ipsum dolor sit amet, consectetur              
                     </h3>
                     <br/>
-                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_medium">
                       {story.title}
                       This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -444,7 +444,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.subtitle}                             
                     </h3>
                     <br/>
-                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_medium">
                       {story.title}
                       This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -465,7 +465,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       This is the title section Lorem ipsum dolor sit amet, consectetur              
                     </h3>
                     <br/>
-                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_medium">
                     
                       This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                       sed do eiusmod. 
