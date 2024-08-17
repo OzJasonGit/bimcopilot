@@ -237,37 +237,47 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
                 <div id={styles.SIDE_NAV_HOLDER}>
-                  <div id={styles.SIDE_NAV} class="bg-cyan-500 ...">
+                  <div id={styles.SIDE_NAV} >
 
                     <div id={styles.TITLE_1} >  
-                      <p
-                        class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
-                        {story.title}                             
-                      </p>                   
+                      <Link href={`/blog/${stories.data[0]._id}`}>
+                        <p
+                          class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                          {story.title}                             
+                        </p>
+                      </Link>                                        
                     </div>
                     <div id={styles.TITLE_2}> 
-                      <p
-                        class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
-                        {story.title}                             
-                      </p>                     
+                      <Link href={`/blog/${stories.data[0]._id}`}>
+                        <p
+                          class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                          {story.title}                             
+                        </p> 
+                      </Link>                                         
                     </div>
                     <div id={styles.TITLE_3}> 
-                      <p
-                        class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
-                        {story.title}                             
-                      </p>                     
+                      <Link href={`/blog/${stories.data[0]._id}`}>
+                        <p
+                          class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                          {story.title}                             
+                        </p> 
+                      </Link>                    
                     </div>
                     <div id={styles.TITLE_4}> 
-                      <p
-                        class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
-                        {story.title}                             
-                      </p>                     
+                      <Link href={`/blog/${stories.data[0]._id}`}>
+                        <p
+                          class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                          {story.title}                             
+                        </p> 
+                      </Link>                                         
                     </div>
-                    <div id={styles.TITLE_5}>   
-                      <p
-                        class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
-                        {story.title}                             
-                      </p>                   
+                    <div id={styles.TITLE_5}> 
+                      <Link href={`/blog/${stories.data[0]._id}`}>
+                        <p
+                          class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                          {story.title}                             
+                        </p>
+                      </Link>                                         
                     </div>
 
                   </div>
