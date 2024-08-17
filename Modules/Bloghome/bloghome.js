@@ -47,7 +47,7 @@ const Bloghomemain = ({ stories, firstStory }) => {
                                       <div class="rounded-md ..." id={styles.B_IMAGE}> 
                                         <Link href="/services">
 
-                                            <Image
+                                          <Image
                                           alt="Picture of the author"
                                           key={story._id}
                                           width={500}
