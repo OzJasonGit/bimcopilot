@@ -739,7 +739,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                           </div> 
 
                           <div id={styles.BLOG_TEXT_FOOT}> 
-                            <h2 id={styles._H2} class="text-stone-300 ...  text-xl ... font-avant_garde_bold">
+                            <h2 id={styles._H2} class="text-stone-700 ...  text-xl ... font-avant_garde_bold">
                               {story.title}
                             </h2>                                             
                             <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold">
@@ -760,7 +760,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                 <div id={styles.MAIN_TAG}>
                   <h1
                     id={styles._H1}
-                    class="text-6xl ... text-stone-200 ... font-avant_garde_bold"
+                    class="text-6xl ... text-stone-700 ... font-avant_garde_bold"
                   >
                   {story.title}
                     Sustainable, Richer Architects through Technology and
@@ -778,7 +778,7 @@ const Blogsmain = ({ stories, firstStory }) => {
             </div>
           </div>
         </section>  
-        )})};
+        )})}
 
 
 
@@ -1023,7 +1023,7 @@ const Blogsmain = ({ stories, firstStory }) => {
   </>
     
 
- );
-};
+ )
+}
 
 export default Blogsmain;
