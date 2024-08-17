@@ -160,13 +160,13 @@
     grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
     grid-template-areas: ". . . . . . ."
         ". . . SUB . . ."
-        ". . . . . . .";
+        ". . . IMAGES . . .";
 }
 
 
 
 .grid_0_blogimage_foot {
-    grid-area: SUB;
+    grid-area: IMAGES;
     position: relative;
     width: 100%;
     max-width: 1520px;
