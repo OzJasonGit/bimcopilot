@@ -682,7 +682,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto auto;
-    grid-row-gap: 10px;
+    grid-row-gap: 0px;
     width: 100%;
     height: auto;
     position: sticky;
