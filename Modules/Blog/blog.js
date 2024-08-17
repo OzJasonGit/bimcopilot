@@ -242,7 +242,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <div id={styles.TITLE_1} >  
                       <Link href="/dashboard">
                         <p
-                          class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                          class="text-sm ... text-neutral-700 ... font-avant_garde_bold">
                           {story.title}                             
                         </p>
                       </Link>                                        
@@ -250,7 +250,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <div id={styles.TITLE_2}> 
                       <Link href="/dashboard">
                         <p
-                          class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                          class="text-sm ... text-neutral-700 ... font-avant_garde_bold">
                           {story.title}                             
                         </p> 
                       </Link>                                         
@@ -258,7 +258,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <div id={styles.TITLE_3}> 
                       <Link href="/dashboard">
                         <p
-                          class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                          class="text-sm ... text-neutral-700 ... font-avant_garde_bold">
                           {story.title}                             
                         </p> 
                       </Link>                    
@@ -266,7 +266,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <div id={styles.TITLE_4}> 
                       <Link href="/dashboard">
                         <p
-                          class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                          class="text-sm ... text-neutral-700 ... font-avant_garde_bold">
                           {story.title}                             
                         </p> 
                       </Link>                                         
@@ -274,7 +274,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <div id={styles.TITLE_5}> 
                       <Link href="/dashboard">
                         <p
-                          class="text-sm ... text-neutral-700 ... font-avant_garde_medium">
+                          class="text-sm ... text-neutral-700 ... font-avant_garde_bold">
                           {story.title}                             
                         </p>
                       </Link>                                         
@@ -487,7 +487,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       This is the title section Lorem ipsum dolor sit amet, consectetur              
                     </h3>
                     <br/>
-                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_medium">
                     
                       This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                       sed do eiusmod. 
@@ -563,7 +563,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.subtitle}                             
                     </h3>
                     <br/>
-                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_medium">
                       {story.title}
                       This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -584,7 +584,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       This is the title section Lorem ipsum dolor sit amet, consectetur              
                     </h3>
                     <br/>
-                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_medium">
                     
                       This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                       sed do eiusmod. 
@@ -606,7 +606,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       This is the title section Lorem ipsum dolor sit amet, consectetur              
                     </h3>
                     <br/>
-                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_medium">
                     
                       This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                       sed do eiusmod. 
@@ -652,7 +652,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.subtitle}                             
                     </h3>
                     <br/>
-                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-neutral-700 ... font-avant_garde_medium">
                       {story.title}
                       This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -730,7 +730,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     Automation
                   </h1>
                   <br/>
-                  <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
+                  <p class="text-xl ... text-stone-400 ... font-avant_garde_medium">
                   {story.subtitle}
                     This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor. 
