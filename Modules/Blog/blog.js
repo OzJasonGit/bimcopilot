@@ -747,15 +747,15 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
         <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-                  <div class={styles.grid_0_blogimageholder}>
-                    <div class={styles.grid_0_blogimage}>
-                      <div id={styles.BLOGIMAGE_HOLDER}>
+                  <div class={styles.grid_0_blogimageholder_foot}>
+                    <div class={styles.grid_0_blogimage_foot}>
+                      <div id={styles.BLOGIMAGE_HOLDER_FOOT}>
                         {storiesToMap.map((story, index) => {
                                           return (
 
-                                            <div id={styles.BLOGIMAGE}>
+                                            <div id={styles.BLOGIMAGE_FOOT}>
 
-                                              <div class="rounded-md ..." id={styles.B_IMAGE}> 
+                                              <div class="rounded-md ..." id={styles.B_IMAGE_FOOT}> 
                                                 <Link href="/services">
 
                                                     <Image
@@ -774,7 +774,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                                                 
                                               </div> 
 
-                                              <div id={styles.BLOG_TEXT}> 
+                                              <div id={styles.BLOG_TEXT_FOOT}> 
                                                 <h2 id={styles._H2} class="text-stone-300 ...  text-xl ... font-avant_garde_bold">
                                                   {story.title}
                                                 </h2>
