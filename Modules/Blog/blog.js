@@ -221,7 +221,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                 <div id={styles.DISCLAIMER_HOLDER}>
                   <h3
                       id={styles._H3}
-                      class="text-2xl ... text-stone-200 ... font-avant_garde_bold"
+                      class="text-2xl ... text-stone-700 ... font-avant_garde_bold"
                     >
                       Disclaimer
                   </h3>
