@@ -712,14 +712,14 @@ const Blogsmain = ({ stories, firstStory }) => {
                 <div id={styles.MAIN_TAG}>
                   <h1
                     id={styles._H1}
-                    class="text-6xl ... text-stone-700 ... font-avant_garde_bold"
+                    class="text-6xl ... text-stone-200 ... font-avant_garde_bold"
                   >
                   {story.title}
                     Sustainable, Richer Architects through Technology and
                     Automation
                   </h1>
                   <br/>
-                  <p class="text-xl ... text-stone-400 ... font-avant_garde_medium">
+                  <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
                   {story.subtitle}
                     This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor. 

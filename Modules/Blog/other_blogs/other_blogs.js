@@ -1,8 +1,8 @@
 'use client'
 
-
-import { useRouter } from "next/navigation";
 import styles from './other_blogs.module.css';
+import { useRouter } from "next/navigation";
+
 
 import Link from "next/link";
 import Image from "next/image";
