@@ -13,6 +13,10 @@ import Subscribetop from "../../components/Subscribetop/subscribetop";
 import Link from "next/link";
 import Image from "next/image";
 import Video from "./client/Video/video";
+
+import Other_blogs from "./other_blogs/other_blogs";
+
+
 import logoImage from "./Bim-copilot-logo_2.png";
 
 
@@ -692,23 +696,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<Other_blogs/>
 
 {storiesToMap.map((story, index) => {
         return (
@@ -716,7 +704,32 @@ const Blogsmain = ({ stories, firstStory }) => {
           <div class={styles.grid_0_tag}>
 
 
-            <div class={styles.grid_0_blogimage_foot}>
+            <div class={styles.sub_head}>
+              <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
+                <div id={styles.SUB_ICON}>                 
+                </div>
+         
+                <div id={styles.MAIN_TAG}>
+                  <h1
+                    id={styles._H1}
+                    class="text-6xl ... text-stone-700 ... font-avant_garde_bold"
+                  >
+                  {story.title}
+                    Sustainable, Richer Architects through Technology and
+                    Automation
+                  </h1>
+                  <br/>
+                  <p class="text-xl ... text-stone-400 ... font-avant_garde_medium">
+                  {story.subtitle}
+                    This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                    sed do eiusmod tempor. 
+                  </p>
+                </div>                
+              </div>
+
+
+
+              <div class={styles.grid_0_blogimage_foot}>
                       <div id={styles.BLOGIMAGE_HOLDER_FOOT}>
                        
                         <div id={styles.BLOGIMAGE_FOOT}>
@@ -747,33 +760,9 @@ const Blogsmain = ({ stories, firstStory }) => {
                             </h3>
                           </div>
                                     
-                      </div>  
-                    </div>              
-                  </div>
-
-
-            <div class={styles.sub_head}>
-              <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
-                <div id={styles.SUB_ICON}>                 
+                    </div>  
+                  </div>              
                 </div>
-         
-                <div id={styles.MAIN_TAG}>
-                  <h1
-                    id={styles._H1}
-                    class="text-6xl ... text-stone-700 ... font-avant_garde_bold"
-                  >
-                  {story.title}
-                    Sustainable, Richer Architects through Technology and
-                    Automation
-                  </h1>
-                  <br/>
-                  <p class="text-xl ... text-stone-400 ... font-avant_garde_medium">
-                  {story.subtitle}
-                    This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor. 
-                  </p>
-                </div>                
-              </div>
 
             </div>
           </div>
