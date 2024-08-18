@@ -226,7 +226,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       Disclaimer
                   </h3>
                   <p
-                    class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
+                    class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
                     {story.disclaimer}                             
                   </p>
                 </div>
@@ -297,13 +297,13 @@ const Blogsmain = ({ stories, firstStory }) => {
                 <div id={styles.BLOG_HOLDER}>
                   <div id={styles.PARAGRAPH_1}>
                     <h3
-                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
                       {story.subtitle}                             
                     </h3>
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                      {story.title}
+                      {story.paragragh_1}
                       This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
@@ -320,7 +320,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <br/>
                     <br/>
                     <h3
-                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
                       {story.title}
                       This is the title section Lorem ipsum dolor sit amet, consectetur              
@@ -342,7 +342,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <br/>
                     <br/>
                     <h3
-                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
                       {story.title}
                       This is the title section Lorem ipsum dolor sit amet, consectetur              
@@ -370,7 +370,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <br/>
                     <br/>
                     <h3
-                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
                       {story.title}
                       This is the title section Lorem ipsum dolor sit amet, consectetur              
@@ -443,7 +443,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
                   <div id={styles.PARAGRAPH_1}>
                     <h3
-                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
                       {story.subtitle}                             
                     </h3>
@@ -462,7 +462,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <div id={styles.PARAGRAPH_2}>
                     <br/>
                     <h3
-                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}
                     >
                     
@@ -484,7 +484,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <div id={styles.PARAGRAPH_3}>
                     <br/>
                     <h3
-                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}
                     >
                     
@@ -562,7 +562,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
                   <div id={styles.PARAGRAPH_1}>
                     <h3
-                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
                       {story.subtitle}                             
                     </h3>
@@ -581,7 +581,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <div id={styles.PARAGRAPH_2}>
                     <br/>
                     <h3
-                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}
                     >
                     
@@ -603,7 +603,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <div id={styles.PARAGRAPH_3}>
                     <br/>
                     <h3
-                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}
                     >
                     
@@ -650,7 +650,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
                   <div id={styles.PARAGRAPH_1}>
                     <h3
-                      class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
+                      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
                       Conclusion.
                       {story.subtitle}                             
