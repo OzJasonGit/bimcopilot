@@ -33,8 +33,10 @@ const Blogsmain = ({ stories, firstStory }) => {
 
     <>
 
-    {storiesToMap.map((story, index) => {
+    {/* {storiesToMap.map((story, index) => {
       return (
+
+
 
         <Head>
           <title>
@@ -47,7 +49,7 @@ const Blogsmain = ({ stories, firstStory }) => {
             key={story.title}
           />
         </Head>
-      )})}
+      )})} */}
 
       
 
