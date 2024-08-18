@@ -696,7 +696,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-<Other_blogs/>
+{/*<Other_blogs/>*/}
 
 {storiesToMap.map((story, index) => {
         return (
