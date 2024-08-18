@@ -183,7 +183,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <div id={styles.MAIN_TAG}>
                     <h1
                       id={styles._H1}
-                      class="text-4xl ... text-stone-200 ... font-avant_garde_bold"
+                      class="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                     >
                       Introduction
                     </h1>
@@ -360,7 +360,19 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-                  <div id={styles.ADVERT_1} class="bg-yellow-300 ... rounded-xl ...">                
+                  <div id={styles.IMAGE_1} class=" rounded-xl ...">  
+                    <Image
+                      alt="Picture of the author"
+                      key={story._id}
+                      width={500}
+                      height={500}
+                      src={story.image}
+                      style={{
+                      position: "absolute",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      }}/>              
                   </div>
 
 
@@ -751,7 +763,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                 <div id={styles.MAIN_TAG}>
                   <h1
                     id={styles._H1}
-                    class="text-6xl ... text-stone-200 ... font-avant_garde_bold"
+                    class="text-4xl ... text-stone-200 ... font-avant_garde_bold"
                   >
                   {story.title}
                     Sustainable, Richer Architects through Technology and

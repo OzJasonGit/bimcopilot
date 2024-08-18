@@ -897,13 +897,13 @@
     display: grid;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 400px auto auto 250px auto 250px;
+    grid-template-rows: auto 400px auto auto 400px auto 250px;
     grid-template-areas:
         "PARAGRAPH_1"
         "VIDEO"
         "PARAGRAPH_2"
         "PARAGRAPH_3"
-        "ADVERT_1"
+        "IMAGE_1"
         "PARAGRAPH_4"
         "ADVERT_2";
 }
@@ -951,8 +951,8 @@
 }
 
 
-#ADVERT_1 {
-    grid-area: ADVERT_1;
+#IMAGE_1 {
+    grid-area: IMAGE_1;
 }
 
 
