@@ -176,14 +176,14 @@ const Blogsmain = ({ stories, firstStory }) => {
             <div class={styles.grid_0_tag}>
               <div class={styles.sub_head}>
                 <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
-                  
+
                   <div id={styles.SUB_ICON}>                 
                   </div>
          
                   <div id={styles.MAIN_TAG}>
                     <h1
                       id={styles._H1}
-                      class="text-6xl ... text-stone-200 ... font-avant_garde_bold"
+                      class="text-4xl ... text-stone-200 ... font-avant_garde_bold"
                     >
                       Introduction
                     </h1>
@@ -210,15 +210,6 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-
-
-
-
-
-
-
-
-
       {storiesToMap.map((story, index) => {
                       return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
@@ -228,9 +219,15 @@ const Blogsmain = ({ stories, firstStory }) => {
               <div id={styles.MAIN_TEXT_HOLDER}>
 
                 <div id={styles.DISCLAIMER_HOLDER}>
+                  <h3
+                      id={styles._H3}
+                      class="text-2xl ... text-stone-200 ... font-avant_garde_bold"
+                    >
+                      Disclaimer
+                  </h3>
                   <p
                     class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-                    {story.title}                             
+                    {story.disclaimer}                             
                   </p>
                 </div>
 
