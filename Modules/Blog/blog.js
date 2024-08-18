@@ -280,14 +280,18 @@ const Blogsmain = ({ stories, firstStory }) => {
                         </p> 
                       </Link>                                         
                     </div>
+
                     <div id={styles.TITLE_3}> 
-                      <Link href="/dashboard">
-                        <p
-                          class="text-sm ... text-neutral-700 ... font-avant_garde_bold">
-                          {story.title}                             
-                        </p> 
-                      </Link>                    
+                      <a>
+                        <Link href="/dashboard">
+                          <p
+                            class="text-sm ... text-neutral-700 ... font-avant_garde_bold">
+                            {story.title}                             
+                          </p> 
+                        </Link>   
+                      </a>                                       
                     </div>
+                    
                     <div id={styles.TITLE_4}> 
                       <Link href="/dashboard">
                         <p
