@@ -33,17 +33,23 @@ const Blogsmain = ({ stories, firstStory }) => {
 
     <>
 
-      <Head>
-        <title>
-          iPhone 12 XS Max For Sale in Colorado - Big Discounts | Apple
-        </title>
+    {storiesToMap.map((story, index) => {
+      return (
 
-        <meta
-          name="description"
-          content="Check out iPhone 12 XR Pro and iPhone 12 Pro Max. Visit your local store and for expert advice."
-          key="desc"
-        />
-      </Head>
+        <Head>
+          <title>
+            {story.title}
+          </title>
+
+          <meta
+            name={story.title}
+            content= {story.title}
+            key={story.title}
+          />
+        </Head>
+      )})}
+
+      
 
       
       <Menu/>
