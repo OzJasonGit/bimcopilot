@@ -15,7 +15,7 @@ import Image from "next/image";
 import Video from "./client/Video/video";
 import Head from "next/head"
 
-import Other_blogs from "./other_blogs/other_blogs";
+{/*import Other_blogs from "./other_blogs/other_blogs";*/}
 
 
 import logoImage from "./Bim-copilot-logo_2.png";
@@ -291,7 +291,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                         </Link>   
                       </a>                                       
                     </div>
-                    
+
                     <div id={styles.TITLE_4}> 
                       <Link href="/dashboard">
                         <p
