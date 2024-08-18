@@ -4,6 +4,9 @@
 import { useRouter } from "next/navigation";
 import styles from './other_blogs.module.css';
 
+import Link from "next/link";
+import Image from "next/image";
+
 
 const Other_blogs = ({ stories, firstStory }) => {
   const storiesToMap = stories.filter((story, i) => i != 0);
