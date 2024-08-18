@@ -952,7 +952,10 @@
 
 
 #IMAGE_1 {
+    position: relative;
     grid-area: IMAGE_1;
+    width: 100%;
+    height: 100%;
 }
 
 
