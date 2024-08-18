@@ -189,7 +189,7 @@ story_id = params.slug
                               id={styles._H3}
                               class="text-lg ... text-stone-200 ... drop-shadow-xl ... font-avant_garde_bold"
                             >
-                              {story.text}
+                              {story.title}
                             </h3>
                           </Link>
                         </div>

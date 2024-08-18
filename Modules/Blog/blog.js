@@ -13,6 +13,7 @@ import Subscribetop from "../../components/Subscribetop/subscribetop";
 import Link from "next/link";
 import Image from "next/image";
 import Video from "./client/Video/video";
+import Head from "next/head"
 
 import Other_blogs from "./other_blogs/other_blogs";
 
@@ -31,6 +32,18 @@ const Blogsmain = ({ stories, firstStory }) => {
    return (
 
     <>
+
+      <Head>
+        <title>
+          iPhone 12 XS Max For Sale in Colorado - Big Discounts | Apple
+        </title>
+
+        <meta
+          name="description"
+          content="Check out iPhone 12 XR Pro and iPhone 12 Pro Max. Visit your local store and for expert advice."
+          key="desc"
+        />
+      </Head>
 
       
       <Menu/>
