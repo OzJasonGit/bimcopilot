@@ -64,7 +64,7 @@ const Bloghomemain = ({ stories, firstStory }) => {
                                       </div> 
 
                                       <div id={styles.BLOG_TEXT}> 
-                                        <h2 id={styles._H2} class="text-stone-300 ...  text-xl ... font-avant_garde_bold">
+                                        <h2 id={styles._H2} class="text-stone-300 ...  text-lg ... font-avant_garde_bold">
                                           {story.title}
                                         </h2>
                                       
