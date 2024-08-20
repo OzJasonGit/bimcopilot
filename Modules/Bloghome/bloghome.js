@@ -3,6 +3,7 @@
 import styles from './bloghome.module.css';
 
 import { useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 
 import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides";
@@ -19,8 +20,12 @@ import logoImage from "./Bim-copilot-logo_2.png";
 
 
 const Bloghomemain = ({ stories, firstStory }) => {
-  const storiesToMap = stories.filter((story, i) => i != 0);
+  const params = useParams();
+  const storiesToMap = stories.data.filter((story, i) => story.data == params.slug && i > (0) )
   const router = useRouter();
+
+
+console.log("================================", stories.data )
 
    return (
 
@@ -45,7 +50,8 @@ const Bloghomemain = ({ stories, firstStory }) => {
                                     <div id={styles.BLOGIMAGE}>
 
                                       <div class="rounded-md ..." id={styles.B_IMAGE}> 
-                                        <Link href="/services">
+                                        <Link 
+                                          href={`/blog/${stories.data[0]._id}`}>
 
                                           <Image
                                           alt="Picture of the author"
