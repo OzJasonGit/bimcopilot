@@ -27,6 +27,10 @@ const Bloghomemain = ({ stories, firstStory }) => {
 
 console.log("================================", stories.data )
 
+
+let story_id;
+story_id = params.slug
+
    return (
 
     <>
