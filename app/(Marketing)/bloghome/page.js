@@ -1,7 +1,7 @@
 "use client";
 
 
-import Bloghomemain from "../../../Modules/Bloghome/bloghome";
+import Bloghomemain from "../../../Modules/Bloghome/bloghomemain";
 import { useState, useEffect } from "react";
 import axios from "axios";
 

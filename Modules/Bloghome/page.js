@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import Bloghomemain from "./bloghome";
+import Bloghomemain from "./bloghomemain";
 import axios from "axios";
 
 
