@@ -5,7 +5,7 @@ import axios from "axios";
 
 
 
-const Blog = () => {
+const Bloghome = () => {
   const [data, setData] = useState(null);
   const [firstStory, setFirstStory] = useState(null);
   const [topStories, setTopStories] = useState(null);
@@ -43,4 +43,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Bloghome;
