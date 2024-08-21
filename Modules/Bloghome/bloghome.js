@@ -3,7 +3,7 @@
 import styles from './bloghome.module.css';
 
 import { useRouter } from "next/navigation";
-import { useParams } from "next/navigation";
+import { useParams, useNavigate } from "next/navigation";
 
 import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides";
