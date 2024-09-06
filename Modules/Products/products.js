@@ -77,7 +77,7 @@ const Productsmain = ({ stories, firstStory }) => {
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
             <div class={styles.grid_0_blogimageholder}>
               <div class={styles.grid_0_blogimage}>
-                <div id={styles.BLOGIMAGE_HOLDER}>
+                <div id={styles.BLOGIMAGE_HOLDER_2}>
                   {storiesToMap.map((story, index) => {
                                     return (
 
