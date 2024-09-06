@@ -146,7 +146,7 @@
     position: relative;
     grid-column-gap: 40px;
     grid-row-gap: 40px;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
