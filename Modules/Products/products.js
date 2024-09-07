@@ -79,49 +79,11 @@ const Productsmain = ({ stories, firstStory }) => {
               <div id={BLOGIMAGE_HOLDER_GRID}>
 
                 <div id={BLOGIMAGE_HOLDER_GRID_1}>
-                  {storiesToMap.map((story, index) => {
-                                  return (
-
-                                    <div id={styles.BLOGIMAGE}>
-
-                                      <div class="rounded-md ..." id={styles.B_IMAGE}> 
-
-                                         <Link href="/services">
-                                            <Image
-                                            alt="Picture of the author"
-                                            key={story._id}
-                                            width={500}
-                                            height={500}
-                                            src={story.image}
-                                            style={{
-                                            position: "absolute",
-                                            width: "100%",
-                                            height: "100%",
-                                            objectFit: "cover",
-                                            }}
-                                            />
-                                         </Link>
-                                        
-                                      </div> 
-
-                                        <div id={styles.PRODUCT_TEXT}> 
-
-                                          <h2 id={styles._H2} class="text-xl ... text-stone-200 ... font-avant_garde_bold">
-                                            {story.title}
-                                          </h2>                                      
-                                          <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold">
-                                            {story.subtitle}
-                                          </h3>
-
-                                        </div>
-                                      </div>                               
-                  )})}
+         
 
                 </div>
 
-                <div id={BLOGIMAGE_HOLDER_GRID_2
-
-                }>
+                <div id={BLOGIMAGE_HOLDER_GRID_2}>
 
                 </div>
 
