@@ -173,6 +173,13 @@ const Productsmain = ({ stories, firstStory }) => {
           <div class={styles.grid_0_blogimage}>
             <div id={styles.BLOGIMAGE_HOLDER_GRID}>
 
+              <div id={styles.BLOGIMAGE_HOLDER_GRID_1}>
+              </div>
+
+
+              <div id={styles.BLOGIMAGE_HOLDER_GRID_2}>
+              </div>
+
             </div>
           </div>
         </div>

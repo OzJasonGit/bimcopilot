@@ -166,10 +166,20 @@
     grid-column-gap: 40px;
     grid-row-gap: 40px;
     grid-template-rows: auto auto;
-    grid-template-columns: 1fr;
-    
+    grid-template-columns: 1fr;    
 }
 
+
+#BLOGIMAGE_HOLDER_GRID_2 {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: IMAGE_2;
+    position: relative;
+    grid-row-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+}
 
 
 
