@@ -156,11 +156,11 @@
 
 
 
-#BLOGIMAGE_HOLDER_GRID {
+#BLOGIMAGE_HOLDER_GRID_1 {
     width: 100%;
     height: auto;
     display: grid;
-    grid-area: MAIN-AREA;
+    grid-area: IMAGE_1;
     position: relative;
     grid-column-gap: 40px;
     grid-row-gap: 40px;
