@@ -138,6 +138,44 @@
 }
 
 
+
+
+
+#BLOGIMAGE_HOLDER_GRID {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: MAIN-AREA;
+    position: relative;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "IMAGE_1 IMAGE_2 IMAGE_2";
+}
+
+
+
+#BLOGIMAGE_HOLDER_GRID {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: MAIN-AREA;
+    position: relative;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    
+}
+
+
+
+
+
+
+
+
 #BLOGIMAGE_HOLDER {
     width: 100%;
     height: auto;
