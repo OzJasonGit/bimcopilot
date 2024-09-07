@@ -10,7 +10,7 @@ import Image from "next/image";
 
 import Tiktok from "./client/Tiktok/tiktok";
 import tiktoklogo from "./Tiktok_Logo_4.png";
-import tiktoklogo_dark from "./Tiktok_Logo_(Black).png";
+
 
 
 
