@@ -16,7 +16,7 @@ import Link from "next/link";
 const Productsmain = ({ stories, firstStory }) => {
   const storiesToMap = stories.filter((story, i) => i != 0);
   const storiesSolo_1 = stories.filter((story, i) => i == 3)
-  const storiesSolo_2 = stories.filter((story, i) => i == 7)
+  const storiesSolo_2 = stories.filter((story, i) => i == 2)
   const router = useRouter();
 
    return (
