@@ -529,6 +529,7 @@
 
 
 #ICON_TIKTOK_2 {
+    position: relative;
     height: 100%;
     width: 100%;
     grid-area: TIKTOK;
