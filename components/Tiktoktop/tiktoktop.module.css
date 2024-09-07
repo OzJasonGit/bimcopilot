@@ -534,7 +534,7 @@
 }
 
 
-#ICON_TIKTOK_3:hover+ #ICON_TIKTOK_3{
+#ICON_TIKTOK:hover+ #ICON_TIKTOK_3{
     background: transparent;
     cursor: pointer;
 }
