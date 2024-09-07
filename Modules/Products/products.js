@@ -168,8 +168,7 @@ const Productsmain = ({ stories, firstStory }) => {
       </section>
 
 
-      <section>
-        
+      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
       </section>
 
 
