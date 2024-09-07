@@ -127,7 +127,7 @@ const Productsmain = ({ stories, firstStory }) => {
                 {storiesToMap.map((story, index) => {
                                   return (
 
-                                    <div id={styles.BLOGIMAGE}>
+                                    <div id={styles.BLOGIMAGE_2}>
 
                                       <div class="rounded-md ..." id={styles.B_IMAGE}> 
 
