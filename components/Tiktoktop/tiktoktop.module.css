@@ -523,8 +523,7 @@
     width: 100%;
     height: 100%; 
     overflow: hidden;
-    left: 10px;
-    top: -10px;
+    
 }
 
 
@@ -537,10 +536,14 @@
 }
 
 #ICON_TIKTOK_3 {
+    position: relative;
     height: 100%;
     width: 100%;
     grid-area: TIKTOK;
+    left: 10px;
+    top: -10px;
     display: none;
+
 }
 
 
