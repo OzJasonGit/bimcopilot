@@ -15,6 +15,7 @@ import Link from "next/link";
 
 const Productsmain = ({ stories, firstStory }) => {
   const storiesToMap = stories.filter((story, i) => i != 0);
+  const storiesSolo = stories.filter((story, i) => i == 3)
   const router = useRouter();
 
    return (
@@ -83,7 +84,7 @@ const Productsmain = ({ stories, firstStory }) => {
             <div id={styles.BLOGIMAGE_HOLDER_GRID}>
 
               <div id={styles.BLOGIMAGE_HOLDER_GRID_1}>
-                {storiesToMap.map((story, index) => {
+                {storiesSolo.map((story, index) => {
                                   return (
 
                                     <div id={styles.BLOGIMAGE}>
@@ -124,7 +125,7 @@ const Productsmain = ({ stories, firstStory }) => {
 
 
               <div id={styles.BLOGIMAGE_HOLDER_GRID_2}>
-                {storiesToMap.map((story, index) => {
+                {storiesSolo.map((story, index) => {
                                   return (
 
                                     <div id={styles.BLOGIMAGE_2}>
