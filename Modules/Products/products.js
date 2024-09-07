@@ -15,7 +15,8 @@ import Link from "next/link";
 
 const Productsmain = ({ stories, firstStory }) => {
   const storiesToMap = stories.filter((story, i) => i != 0);
-  const storiesSolo = stories.filter((story, i) => i == 3)
+  const storiesSolo_1 = stories.filter((story, i) => i == 3)
+  const storiesSolo_2 = stories.filter((story, i) => i == 7)
   const router = useRouter();
 
    return (
@@ -84,7 +85,7 @@ const Productsmain = ({ stories, firstStory }) => {
             <div id={styles.BLOGIMAGE_HOLDER_GRID}>
 
               <div id={styles.BLOGIMAGE_HOLDER_GRID_1}>
-                {storiesSolo.map((story, index) => {
+                {storiesSolo_1.map((story, index) => {
                                   return (
 
                                     <div id={styles.BLOGIMAGE}>
@@ -125,7 +126,7 @@ const Productsmain = ({ stories, firstStory }) => {
 
 
               <div id={styles.BLOGIMAGE_HOLDER_GRID_2}>
-                {storiesSolo.map((story, index) => {
+                {storiesSolo_1.map((story, index) => {
                                   return (
 
                                     <div id={styles.BLOGIMAGE_2}>
@@ -259,7 +260,7 @@ const Productsmain = ({ stories, firstStory }) => {
             <div id={styles.BLOGIMAGE_HOLDER_GRID_TWO}>
 
               <div id={styles.BLOGIMAGE_HOLDER_GRID_1}>
-                {storiesToMap.map((story, index) => {
+                {storiesSolo_2.map((story, index) => {
                                   return (
 
                                     <div id={styles.BLOGIMAGE}>
@@ -300,7 +301,7 @@ const Productsmain = ({ stories, firstStory }) => {
 
 
               <div id={styles.BLOGIMAGE_HOLDER_GRID_2}>
-                {storiesToMap.map((story, index) => {
+                {storiesSolo_2.map((story, index) => {
                                   return (
 
                                     <div id={styles.BLOGIMAGE_2}>
