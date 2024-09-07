@@ -520,7 +520,16 @@
 #ICON_TIKTOK_2 {
     height: 100%;
     width: 100%;
+    grid-area: TIKTOK;
 }
+
+#ICON_TIKTOK_3 {
+    height: 100%;
+    width: 100%;
+    grid-area: TIKTOK;
+}
+
+
 
 #TIKTOK_FONT {
     display: grid;
