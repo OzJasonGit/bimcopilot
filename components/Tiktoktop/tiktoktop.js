@@ -70,7 +70,7 @@ export default class Tiktoktop extends Component {
                 <div 
                   id={styles.ICON_TIKTOK_2}>
                   <Image
-                        src={tiktoklogo}
+                        src={tiktoklogo_dark}
                         alt="Picture of the author"
                         width={500}
                         height={500}
