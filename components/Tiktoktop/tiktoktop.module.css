@@ -516,6 +516,18 @@
 }
 
 
+#ICON_TIKTOK:hover #ICON_TIKTOK_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 230px;
+    background-color: navy;
+    color: white;
+    overflow: hidden;
+}
+
+
 
 #ICON_TIKTOK_2 {
     height: 100%;
@@ -528,16 +540,38 @@
     height: 100%;
     width: 100%;
     grid-area: TIKTOK;
-    -webkit-transition: all 0.18s ease-in-out;
-    -moz-transition: all 0.18s ease-in-out;
-    transition: all 0.18s ease-in-out;
+    display: none;
 }
 
 
-#ICON_TIKTOK:hover+ #ICON_TIKTOK_3{
-    background: transparent;
-    cursor: pointer;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #TIKTOK_FONT {
