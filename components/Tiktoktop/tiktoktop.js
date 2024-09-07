@@ -16,18 +16,15 @@ import tiktoklogo from "./Tiktok_Logo_4.png";
 
 
 
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 
 
 
-const storiesToMap = stories.filter((story, i) => i != 0);
+
 
 
 export default class Tiktoktop extends Component {
-
-  
 
   render() {
     return (
@@ -49,6 +46,7 @@ export default class Tiktoktop extends Component {
               >
                 <div 
                   id={styles.ICON_TIKTOK_2}>
+
                   <Image
                         src={tiktoklogo}
                         alt="Picture of the author"
@@ -63,11 +61,8 @@ export default class Tiktoktop extends Component {
                           objectFit: "contain",
                         }}
                       />
+
                 </div>
-
-
-
-               
                 
               </Link>
 
