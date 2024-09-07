@@ -10,6 +10,7 @@ import Image from "next/image";
 
 import Tiktok from "./client/Tiktok/tiktok";
 import tiktoklogo from "./Tiktok_Logo_4.png";
+import tiktoklogo_dark from "./Tiktok_Logo_(Black).png";
 
 
 
@@ -21,10 +22,12 @@ import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 
 
 
-
+const storiesToMap = stories.filter((story, i) => i != 0);
 
 
 export default class Tiktoktop extends Component {
+
+  
 
   render() {
     return (
@@ -46,7 +49,6 @@ export default class Tiktoktop extends Component {
               >
                 <div 
                   id={styles.ICON_TIKTOK_2}>
-
                   <Image
                         src={tiktoklogo}
                         alt="Picture of the author"
@@ -61,7 +63,26 @@ export default class Tiktoktop extends Component {
                           objectFit: "contain",
                         }}
                       />
+                </div>
 
+
+
+                <div 
+                  id={styles.ICON_TIKTOK_2}>
+                  <Image
+                        src={tiktoklogo}
+                        alt="Picture of the author"
+                        width={500}
+                        height={500}
+                        style={{
+                          position: "absolute",
+                          width: "auto",
+                          height: "100%",
+                          justifyItems: "center",
+                          alignItems: "center",
+                          objectFit: "contain",
+                        }}
+                      />
                 </div>
                 
               </Link>
