@@ -185,19 +185,7 @@ const Productsmain = ({ stories, firstStory }) => {
 
 
 
-        <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-            <div class={styles.grid_0_blogimageholder}>
-              <div id={BLOGIMAGE_HOLDER_GRID}>
-
-                <div id={BLOGIMAGE_HOLDER_GRID_1}>                 
-                </div>
-
-                <div id={BLOGIMAGE_HOLDER_GRID_2}>
-                </div>
-
-              </div>
-            </div>
-        </section>
+        
       
 
       <Footer/>
