@@ -2,6 +2,10 @@
     margin-bottom: 0px;
 }
 
+#TEXT_OUTLINE {
+    -webkit-text-stroke: 0.65px rgb(120, 120, 120);
+}
+
 
 
 .center_holder {
@@ -77,9 +81,7 @@
 }
 
 
-#TEXT_OUTLINE {
-    -webkit-text-stroke: 1.05px rgb(120, 120, 120);
-}
+
 
 
 
