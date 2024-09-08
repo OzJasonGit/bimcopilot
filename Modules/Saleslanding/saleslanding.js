@@ -73,6 +73,19 @@ const Saleslanding = ({ stories, firstStory }) => {
                             This is a test title
                         </h3>
                     </div>
+
+                    <div  id={styles.C3}>
+                        <h3>
+                            This is a test title
+                        </h3>
+                    </div>
+
+                    <div  id={styles.C4}>
+                        <h3>
+                            This is a test title
+                        </h3>
+                    </div>
+                    
                 </div>
 
             </div>
