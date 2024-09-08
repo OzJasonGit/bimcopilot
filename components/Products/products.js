@@ -314,7 +314,7 @@ export default class Products extends Component {
                 <h2
                     id={styles.TEXT_OUTLINE_2}>
                       <a class=" text-yellow-200 ... font-avant_garde_bold ...">
-                        <Link href="/">Shop</Link>
+                        <Link href="https://www.bimcopilot.com/products">Shop</Link>
                       </a>
                 </h2>
               </div>
