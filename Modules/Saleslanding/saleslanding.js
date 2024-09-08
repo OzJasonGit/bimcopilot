@@ -39,6 +39,27 @@ const Saleslanding = ({ stories, firstStory }) => {
             <div id={styles.SALES_GRID_HOLDER}>
 
                 <div id={styles.SALES_IMAGE_HOLDER}>
+                    {storiesToMap.map((story, index) => {
+                                  return (
+                        <div id={styles.SALES_IMAGE}>
+                            <Link href="/services">
+                                <Image
+                                alt="Picture of the author"
+                                key={story._id}
+                                width={500}
+                                height={500}
+                                src={story.image}
+                                style={{
+                                position: "absolute",
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                                }}
+                                />
+                            </Link>
+                        </div>
+                    )})}
+                   
                 </div>
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
