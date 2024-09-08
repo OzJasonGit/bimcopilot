@@ -58,8 +58,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 }}/>
                             </Link>
                         </div>
-                    )})}
-                   
+                    )})}                  
                 </div>
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
