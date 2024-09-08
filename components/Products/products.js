@@ -312,9 +312,9 @@ export default class Products extends Component {
 
               <div id={styles.TEXT_HOLDER} style={{ gridArea: "TITLE" }}>
                 <h2
-                      id={styles.TEXT_OUTLINE_2}>
+                    id={styles.TEXT_OUTLINE_2}>
                       <a class=" text-yellow-200 ... font-avant_garde_bold ... text-7xl ...">
-                        <Link>Shop</Link>
+                        <Link href="/">Shop</Link>
                       </a>
                 </h2>
               </div>
