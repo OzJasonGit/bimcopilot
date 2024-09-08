@@ -1,6 +1,6 @@
 "use client";
 
-
+import Saleslanding from "../../../Modules/Saleslanding/saleslanding";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -37,7 +37,8 @@ const Saleslanding = () => {
 
     return (
 
-        <h1>THIS IS THE SALES_LANDING PAGE</h1>
+        
+        <Saleslanding stories={data.data} firstStory={firstStory} />
 
     )
     
