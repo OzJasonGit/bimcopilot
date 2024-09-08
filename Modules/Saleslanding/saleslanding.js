@@ -42,7 +42,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                 <div  id={styles.SALES_IMAGE_HOLDER}>
                     {storiesSolo_1.map((story, index) => {
                                   return (
-                        <div class="rounded-md ..." id={styles.SALES_IMAGE}>
+                        <div class="rounded-xl ..." id={styles.SALES_IMAGE}>
                             <Link href="/services">
                                 <Image
                                 alt="Picture of the author"
@@ -62,6 +62,17 @@ const Saleslanding = ({ stories, firstStory }) => {
                 </div>
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
+                    <div  id={styles.C1}>
+                        <h3>
+                            This is a test title
+                        </h3>
+                    </div>
+
+                    <div  id={styles.C2}>
+                        <h3>
+                            This is a test title
+                        </h3>
+                    </div>
                 </div>
 
             </div>
