@@ -1,6 +1,6 @@
 'use client'
 
-import styles from './services.module.css';
+import styles from './saleslanding.module.css';
 
 import { useRouter } from "next/navigation";
 
