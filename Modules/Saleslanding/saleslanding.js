@@ -11,7 +11,7 @@ import Footer from "../../components/Footer/Footer_White";
 import Collapsed from "../../components/Collapse/collapse";
 import Infinite_Scroll_2 from "../../components/Carousel/Infinite_Scroll_Services";
 
-
+import Services_1 from "../../components/services_1/services_1";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -30,6 +30,8 @@ const Saleslanding = ({ stories, firstStory }) => {
       <Menu_White/>
       <Header_White/>
       <Sides/>
+
+      <Services_1/>
 
 
       
