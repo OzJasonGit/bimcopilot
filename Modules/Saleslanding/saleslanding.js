@@ -34,6 +34,13 @@ const Saleslanding = ({ stories, firstStory }) => {
       <Services_1/>
 
 
+      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+        <div class={styles.grid_0_scroll}>
+
+        </div>
+      </section>
+
+
       
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_scroll}>
