@@ -75,6 +75,41 @@
     overflow-x: hidden;
 }
 
+
+
+.grid_0_scroll {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 0;
+    grid-row-gap: 20px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+    grid-template-areas:
+        ". .   .   .   .   .   ."
+        ". . . SUB . . ."
+        ". .   .   .   .   .   .";
+}
+
+
+#SALES_GRID_HOLDER {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: SUB;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+            ".  .  .  .  ."
+            "IMAGE IMAGE IMAGE CHECKOUT CHECKOUT"
+            ".  .  .  .  .";
+}
+
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
@@ -205,21 +240,7 @@
 /*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
 
 
-.grid_0_scroll {
-    position: relative;
-    width: 100%;
-    max-width: 1520px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 0;
-    grid-row-gap: 20px;
-    grid-template-rows: 0px auto 0px;
-    grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
-    grid-template-areas:
-        ". .   .   .   .   .   ."
-        ". . . SUB . . ."
-        ". .   .   .   .   .   .";
-}
+
 
 
 
