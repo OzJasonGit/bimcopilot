@@ -1,6 +1,6 @@
 "use client";
 
-import Saleslanding from "../../../../Modules/Saleslanding/saleslanding";
+import Saleslanding from "../../../Modules/Saleslanding/saleslanding";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
