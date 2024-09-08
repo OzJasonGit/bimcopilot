@@ -309,6 +309,16 @@ export default class Products extends Component {
               </div>
 
 
+
+              <div id={styles.PRODUCT} style={{ gridArea: "TITLE" }}>
+                <h2
+                      id={styles._2H2}
+                      class=" text-neutral-700 ... font-avant_garde_bold ... text-xl ...">
+                      SHOP
+                </h2>
+              </div>
+
+
             </div>
           </div>
       </section>

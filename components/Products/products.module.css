@@ -633,9 +633,10 @@
     display: grid;
     grid-column-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 30px auto;
+    grid-template-rows: 30px auto auto;
     grid-template-areas: ". . ."
-        "AREA_1 AREA_2 AREA_3";
+        "AREA_1 AREA_2 AREA_3"
+        "TITLE TITLE .";
 }
 
 #PRODUCTS_HOLDER_MOBILE {
