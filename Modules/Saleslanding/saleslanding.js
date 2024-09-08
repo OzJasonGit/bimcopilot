@@ -39,10 +39,10 @@ const Saleslanding = ({ stories, firstStory }) => {
         <div class={styles.grid_0_scroll}>
             <div id={styles.SALES_GRID_HOLDER}>
 
-                <div class="rounded-md ..." id={styles.SALES_IMAGE_HOLDER}>
+                <div  id={styles.SALES_IMAGE_HOLDER}>
                     {storiesSolo_1.map((story, index) => {
                                   return (
-                        <div id={styles.SALES_IMAGE}>
+                        <div class="rounded-md ..." id={styles.SALES_IMAGE}>
                             <Link href="/services">
                                 <Image
                                 alt="Picture of the author"
