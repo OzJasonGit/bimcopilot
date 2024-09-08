@@ -40,9 +40,10 @@ const Saleslanding = ({ stories, firstStory }) => {
             <div id={styles.SALES_GRID_HOLDER}>
 
                 <div  id={styles.SALES_IMAGE_HOLDER}>
-                    {storiesSolo_1.map((story, index) => {
-                                  return (
+                    
                         <div class="rounded-xl ..." id={styles.SALES_IMAGE}>
+                            {storiesSolo_1.map((story, index) => {
+                                  return (
                             <Link href="/services">
                                 <Image
                                 alt="Picture of the author"
@@ -57,8 +58,12 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 objectFit: "cover",
                                 }}/>
                             </Link>
-                        </div>
-                    )})}                  
+                            )})} 
+                        </div>   
+
+                        <div>
+                        </div>                     
+                                     
                 </div>
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
