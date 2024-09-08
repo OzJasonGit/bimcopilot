@@ -632,6 +632,7 @@
     height: auto;
     display: grid;
     grid-column-gap: 30px;
+    grid-row-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 30px auto 100px;
     grid-template-areas: ". . ."
