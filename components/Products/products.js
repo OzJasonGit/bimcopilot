@@ -317,7 +317,14 @@ export default class Products extends Component {
                         <Link href="https://www.bimcopilot.com/products">Shop</Link>
                       </a>
                 </h2>
+                <br/> <br/>
+                <h3>
+                  Custom designed resources to help streamline, automate and enhance your workflow in architecture, design and manufacturing. 
+                </h3>
               </div>
+
+              
+
 
 
             </div>
