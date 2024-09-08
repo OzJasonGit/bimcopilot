@@ -38,6 +38,12 @@ const Saleslanding = ({ stories, firstStory }) => {
         <div class={styles.grid_0_scroll}>
             <div id={styles.SALES_GRID_HOLDER}>
 
+                <div id={styles.SALES_IMAGE_HOLDER}>
+                </div>
+
+                <div id={styles.SALES_CHECKOUT_HOLDER}>
+                </div>
+
             </div>
         </div>
       </section>

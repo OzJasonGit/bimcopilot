@@ -110,6 +110,25 @@
             ".  .  .  .  .";
 }
 
+
+#SALES_IMAGE_HOLDER {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: IMAGE;
+    grid-column-gap: 60px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px 100px;
+    grid-template-areas:
+        "IMAGE_1"
+        "IMAGE_2";
+}
+
+
+
+
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
