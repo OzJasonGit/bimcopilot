@@ -41,7 +41,7 @@ export default class Tiktoktop extends Component {
             <div id={styles.ICON_HOLDER}>  
 
               <Link
-                href="/https://www.tiktok.com/@pfbd_"
+                href="https://www.tiktok.com/@pfbd_"
                 id={styles.ICON_TIKTOK}
               >
                 <div 

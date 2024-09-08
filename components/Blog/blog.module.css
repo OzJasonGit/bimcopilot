@@ -392,7 +392,7 @@
     display: grid;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto 100px;
     /* Adjusted to three rows */
     width: 100%;
     grid-template-areas:
