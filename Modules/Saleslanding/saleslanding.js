@@ -21,6 +21,7 @@ import bimcopilot from './Bim-copilot-logo_Horizontal.png';
 
 
 const Saleslanding = ({ stories, firstStory }) => {
+  const storiesSolo_1 = stories.filter((story, i) => i == 3)
   const storiesToMap = stories.filter((story, i) => i != 0);
   const router = useRouter();
 
@@ -39,7 +40,7 @@ const Saleslanding = ({ stories, firstStory }) => {
             <div id={styles.SALES_GRID_HOLDER}>
 
                 <div id={styles.SALES_IMAGE_HOLDER}>
-                    {storiesToMap.map((story, index) => {
+                    {storiesSolo_1.map((story, index) => {
                                   return (
                         <div id={styles.SALES_IMAGE}>
                             <Link href="/services">
