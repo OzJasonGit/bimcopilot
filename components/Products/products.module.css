@@ -33,6 +33,12 @@
     -webkit-text-stroke: 1.85px rgb(120, 120, 120);
 }
 
+
+#TEXT_OUTLINE_2 {
+    margin-bottom: 0px;
+    -webkit-text-stroke: 1.85px rgb(120, 120, 120);
+}
+
 /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
 
 
@@ -634,7 +640,7 @@
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 30px auto 100px;
+    grid-template-rows: 0px auto 100px;
     grid-template-areas: ". . ."
         "AREA_1 AREA_2 AREA_3"
         "TITLE TITLE .";
@@ -695,6 +701,8 @@
 #TEXT_HOLDER {
     width: 100%;
     height: 100%;
+    position: relative;
+    left: -5px;
 }
 
 /*SECTION////PRODUCTS//////////////////////////////////////////////////////////////////////////////////////*/
