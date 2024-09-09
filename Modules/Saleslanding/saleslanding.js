@@ -8,8 +8,7 @@ import Menu_White from "../../components/Menu_White/menu_white";
 import Sides from "../../components/Sides/sides";
 import Header_White from "../../components/Header_White/Header_White";
 import Footer from "../../components/Footer/Footer_White";
-import Collapsed from "../../components/Collapse/collapse";
-import Infinite_Scroll_2 from "../../components/Carousel/Infinite_Scroll_Services";
+import Collapsed_Sales from "../../components/Collapse/collapse";
 
 import Services_1 from "../../components/services_1/services_1";
 
@@ -194,7 +193,10 @@ const Saleslanding = ({ stories, firstStory }) => {
                             <div id={styles.PAYPAL}>                               
                             </div>
 
-                            <div id={styles.MORE_OPTIONS}>                               
+                            <div id={styles.MORE_OPTIONS}>    
+                                <a>
+
+                                </a>                           
                             </div>
                         </div>
                     </div>
@@ -228,7 +230,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
 
                     <div  id={styles.C7}> 
-                        <Collapsed/>
+                        <Collapsed_Sales/>
                     </div>
                     
                 </div>
