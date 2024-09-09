@@ -181,6 +181,9 @@
 }
 
 
+
+
+
 #CHECKOUT_GRID {
     position: relative;
     display: grid;
@@ -245,6 +248,36 @@
 
 #C7 {
     grid-area: C7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#BOUGHT_TOGETHER_GRID {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: SUB;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0px auto auto 0px;
+    grid-template-areas:
+        ".  .  .  .  ."
+        "IMAGE IMAGE IMAGE IMAGE CHECKOUT"
+        "DESCRIPTION DESCRIPTION DESCRIPTION . ."
+        ".  .  .  .  .";
 }
 
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
