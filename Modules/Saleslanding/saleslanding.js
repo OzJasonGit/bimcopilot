@@ -276,67 +276,7 @@ const Saleslanding = ({ stories, firstStory }) => {
             </div>
         </div>
       </section>
-
-
-      
-      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-          <div class={styles.grid_0_scroll}>
-            <div class={styles.sub_head}>
-              <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
-                <div id={styles.SUB_ICON}>
-                  
-                </div>
-
-                <div id={styles.MAIN_TAG}>
-                  <h1
-                   
-                    id={styles.H2_7XL}
-                    class="text-left ... text-7xl ... text-neutral-700 ... font-avant_garde_bold"
-                    
-                    
-                  >        
-                    A <a  class=" text-stone-50 ..." 
-                    id={styles.TEXT_OUTLINE}>BIM,</a> <a class=" text-stone-50 ..." id={styles.TEXT_OUTLINE}>AI,</a> <a class=" text-stone-50 ..."
-                    id={styles.TEXT_OUTLINE}>
-                    Automation</a> and <a class="text-stone-50 ..." 
-                    id={styles.TEXT_OUTLINE}>Analytics</a> Consultancy
-                  </h1>
-                </div>
-                <div id={styles.SUB_TAG}>
-                  <h3
-                    id={styles._H3}
-                    class="text-left ... text-lg ... text-neutral-500 ... font-avant_garde_bold"
-                  >
-                    {" "}
-                
-                    <a class="text-stone-700 ... font-avant_garde_bold"
-                      >
-                      Automated systems for Architects, Designers and Manufacturers.
-                    </a>{" "}
-                    Gain valuable insights, streamline your business, be more{" "} 
-                    <a class="text-stone-700 ... font-avant_garde_bold"
-                       >
-                      profitable 
-                    </a>, be more{" "}
-                    <a class="text-stone-700 ... font-avant_garde_bold"
-                      >
-                      sustainable
-                    </a>                  
-                    . <br /> <br />{" "}
-
-
-                  
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-
-
-      
-
-     
+    
     <Footer/>
 
 
