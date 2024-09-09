@@ -154,8 +154,8 @@ const Saleslanding = ({ stories, firstStory }) => {
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_scroll}>
             <div id={styles.BOUGHT_TOGETHER_GRID}> 
-                <div id={styles.BOUGHT_TOGETHER_BLOCK}>
 
+                <div id={styles.BOUGHT_TOGETHER_BLOCK}>
                     <div id={styles.BOUGHT_TITLE_HOLDER}>
                         <h3 id={styles._H3} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
                             Frequently Bought Together
@@ -164,19 +164,19 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                     <div id={styles.BOUGHT_IMAGE_HOLDER}>
                     </div>
+                </div>
 
-                    <div id={styles.PRODUCT_DESCRIPTION}>
-                        <div id={styles.PRODUCT_TITLE}>
-                        </div>
-
-                        <div  id={styles.PRODUCT_DESCRIPTION}>                         
-                        </div>
-
-                        <div  id={styles.PRODUCT_IMAGES}>                           
-                        </div>
+                <div id={styles.PRODUCT_DESCRIPTION}>
+                    <div id={styles.P_TITLE}>
                     </div>
 
+                    <div  id={styles.P_DESCRIPTION}>                         
+                    </div>
+
+                    <div  id={styles.P_IMAGES}>                           
+                    </div>
                 </div>
+                
             </div>
         </div>
       </section>
