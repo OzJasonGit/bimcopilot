@@ -61,7 +61,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             )})} 
                         </div>   
 
-                        <div>
+                        <div id={styles.SALES_IMAGE_2}>
                         </div>                     
                                      
                 </div>
