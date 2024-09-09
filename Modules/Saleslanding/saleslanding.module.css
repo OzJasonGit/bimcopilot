@@ -311,6 +311,21 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+
+#PRODUCT_DESCRIPTION {
+    width: 100%;
+    height: auto;
+    grid-area: DESCRIPTION;
+    grid-row-gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+            "TITLE"
+            "DESCRIPTION"
+            "IMAGES";
+}
+
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 

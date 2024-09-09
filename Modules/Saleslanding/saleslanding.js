@@ -155,13 +155,18 @@ const Saleslanding = ({ stories, firstStory }) => {
         <div class={styles.grid_0_scroll}>
             <div id={styles.BOUGHT_TOGETHER_GRID}> 
                 <div id={styles.BOUGHT_TOGETHER_BLOCK}>
+
                     <div id={styles.BOUGHT_TITLE_HOLDER}>
-                        <h3 class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
+                        <h3 id={styles._H3} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
                             Frequently Bought Together
                         </h3>
                     </div>
 
                     <div id={styles.BOUGHT_IMAGE_HOLDER}>
+
+                    </div>
+
+                    <div id={styles.PRODUCT_DESCRIPTION}>
 
                     </div>
                 </div>
