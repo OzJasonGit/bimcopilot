@@ -163,12 +163,20 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
                     <div id={styles.BOUGHT_IMAGE_HOLDER}>
-
                     </div>
 
                     <div id={styles.PRODUCT_DESCRIPTION}>
 
+                        <div id={styles.PRODUCT_TITLE}>
+                        </div>
+
+                        <div  id={styles.PRODUCT_DESCRIPTION}>                         
+                        </div>
+
+                        <div  id={styles.PRODUCT_IMAGES}>                           
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
