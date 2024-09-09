@@ -254,8 +254,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                         <div class="rounded-xl ..." id={styles.SALES_IMAGE_A}>
                             {storiesSolo_1.map((story, index) => {
-                                  return (
-                            <Link href="/services">
+                                  return (                      
                                 <Image
                                 alt="Picture of the author"
                                 key={story._id}
@@ -267,16 +266,14 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 width: "100%",
                                 height: "100%",
                                 objectFit: "cover",
-                                }}/>
-                            </Link>
+                                }}/>                         
                             )})} 
                         </div>  
 
 
                     <div class="rounded-xl ..." id={styles.SALES_IMAGE_B}>
                             {storiesSolo_1.map((story, index) => {
-                                  return (
-                            <Link href="/services">
+                                  return (                 
                                 <Image
                                 alt="Picture of the author"
                                 key={story._id}
@@ -288,15 +285,13 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 width: "100%",
                                 height: "100%",
                                 objectFit: "cover",
-                                }}/>
-                            </Link>
+                                }}/>                 
                             )})} 
                         </div>  
 
                     <div class="rounded-xl ..." id={styles.SALES_IMAGE_C}>
                             {storiesSolo_1.map((story, index) => {
-                                  return (
-                            <Link href="/services">
+                                  return (                
                                 <Image
                                 alt="Picture of the author"
                                 key={story._id}
@@ -308,8 +303,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 width: "100%",
                                 height: "100%",
                                 objectFit: "cover",
-                                }}/>
-                            </Link>
+                                }}/>              
                             )})} 
                         </div>  
 
