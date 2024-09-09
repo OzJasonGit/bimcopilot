@@ -84,7 +84,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
                     <div  id={styles.C3}>
-                        <h3>
+                        <h3 class="text-md ... text-stone-700 ... font-geist_regular">
                             License Type.
                         </h3>
 
@@ -92,20 +92,20 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                         </div>
 
-                        <h3>
+                        <h3  class="text-md ... text-stone-700 ... font-geist_regular">
                             Are you a student? Select Educational Use.
                         </h3>
                     </div>
 
                     <div  id={styles.C4}>
-                        <h3>
+                        <h3 class="text-md ... text-stone-700 ... font-geist_regular">
                             This is a test title
                         </h3>
                     </div>
 
 
                     <div  id={styles.C5}>
-                        <h3>
+                        <h3 class="text-md ... text-stone-700 ... font-geist_regular">
                            For Educational Use (Reduced price) please send us an email with your 
                            student card and info to <a>info@bimcopilot.com</a>
                         </h3>
