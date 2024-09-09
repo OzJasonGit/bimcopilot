@@ -159,16 +159,16 @@
 
 #CHECKOUT_GRID {
     position: relative;
+    display: grid;
     width: 100%;
-    height: 100%;
-    grid-row-gap: 10px;
-        grid-template-rows: 0px auto auto auto;
-        grid-template-areas:
-            "."
-            "ADD_TO_CART"
-            "PAYPAL"
-            "MORE_OPTIONS"
-
+    height: auto;
+    grid-row-gap: 15px;   
+    grid-template-rows: 0px auto auto auto;
+    grid-template-areas:
+        "."
+        "ADD_TO_CART"
+        "PAYPAL"
+        "MORE_OPTIONS"
 }
 
 
