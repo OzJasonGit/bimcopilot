@@ -68,14 +68,18 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
                     <div  id={styles.C1}>
-                        <h3 class="text-md ... text-stone-700 ... font-geist_mono_regular">
+                        <h3 class="text-md ... text-stone-700 ... font-geistmono_regular">
                             This is a test title
                         </h3>
                     </div>
 
                     <div  id={styles.C2}>
                         <h3>
-                            This is a test title
+                            $12.99
+                        </h3>
+
+                        <h3>
+                            Tax included. 
                         </h3>
                     </div>
 
