@@ -197,8 +197,12 @@
     grid-area: SALES_IMAGE_A;
 }
 
-#SALES_IMAGE_4 {
+#SALES_IMAGE_B {
     grid-area: SALES_IMAGE_B;
+}
+
+#SALES_IMAGE_C {
+    grid-area: SALES_IMAGE_C;
 }
 
 

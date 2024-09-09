@@ -185,7 +185,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                         </div>  
 
 
-                        {/*  <div class="rounded-xl ..." id={styles.SALES_IMAGE_B}>
+                    <div class="rounded-xl ..." id={styles.SALES_IMAGE_B}>
                             {storiesSolo_1.map((story, index) => {
                                   return (
                             <Link href="/services">
@@ -205,7 +205,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             )})} 
                         </div>  
 
-                       <div class="rounded-xl ..." id={styles.SALES_IMAGE_4}>
+                    <div class="rounded-xl ..." id={styles.SALES_IMAGE_C}>
                             {storiesSolo_1.map((story, index) => {
                                   return (
                             <Link href="/services">
@@ -223,7 +223,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 }}/>
                             </Link>
                             )})} 
-                        </div>  */}
+                        </div>  
 
                     </div>  
                 </div>
