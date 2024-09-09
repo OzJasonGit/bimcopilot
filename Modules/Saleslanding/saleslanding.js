@@ -239,7 +239,21 @@ const Saleslanding = ({ stories, firstStory }) => {
                         <h3 id={styles._H3} class="text-lg ... text-stone-700 ... font-avant_garde_bold">
                             This is the description title 
                             Delta compression using up to 12 threads
-                            Compressing objects: 100% (5/5), done.
+                            Compressing objects: 100% (5/5), done.     
+
+                            <a class="text-stone-700 ... font-avant_garde_bold"
+                            >
+                            Automated systems for Architects, Designers and Manufacturers.
+                            </a>{" "}
+                            Gain valuable insights, streamline your business, be more{" "} 
+                            <a class="text-stone-700 ... font-avant_garde_bold"
+                            >
+                            profitable 
+                            </a>, be more{" "}
+                            <a class="text-stone-700 ... font-avant_garde_bold"
+                            >
+                            sustainable
+                            </a>                      
                         </h3>
                     </div>
 
