@@ -137,6 +137,11 @@ const Saleslanding = ({ stories, firstStory }) => {
                            <a></a> Pack Category: <a></a>
                         </h3>
                     </div>
+
+
+                    <div  id={styles.C7}> 
+                        <Collapsed/>
+                    </div>
                     
                 </div>
 
