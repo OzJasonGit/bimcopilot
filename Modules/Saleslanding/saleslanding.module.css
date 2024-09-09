@@ -188,7 +188,7 @@
         "IMAGE_V IMAGE_W IMAGE_X IMAGE_Y IMAGE_Z";  
     overflow-x: scroll;
     scrollbar-width: thin;
-    scrollbar-color: #171717 #e7e5e4;
+    scrollbar-color: rgb(56 189 248) #e7e5e4;
     padding-bottom: 20px;
     
 }
