@@ -68,7 +68,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
                     <div  id={styles.C1}>
-                        <h3 class="text-md ... text-stone-200 ... font-geist_mono_regular">
+                        <h3 class="text-md ... text-stone-700 ... font-geist_mono_regular">
                             This is a test title
                         </h3>
                     </div>
