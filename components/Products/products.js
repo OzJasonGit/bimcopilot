@@ -158,16 +158,18 @@ export default class Products extends Component {
 
                               <div 
                                 id={styles.IMAGE_1}>
-                                
-                                  <Image
-                                    class=" rounded-md ... "
-                                    id={styles.PRODUCT_IMAGE}
-                                    src={volumesByRoom}                     
-                                    style={{objectFit: "cover"}}
-                                    quality={100}
-                                    //object-fit="cover"                      
-                                    alt=""/>                                                                            
-                                  <Image/>
+
+                                  <Link href="/https://www.bimcopilot.com/sales">
+                                    <Image
+                                      class=" rounded-md ... "
+                                      id={styles.PRODUCT_IMAGE}
+                                      src={volumesByRoom}                     
+                                      style={{objectFit: "cover"}}
+                                      quality={100}
+                                      //object-fit="cover"                      
+                                      alt=""/>                                                                            
+                                    <Image/>
+                                  </Link>
 
                               </div>
                               
@@ -175,7 +177,7 @@ export default class Products extends Component {
 
 
                               <div>
-                                <Link href="/">
+                                <Link href="/https://www.bimcopilot.com/sales">
                                   <h2
                                     id={styles._H2}
                                     class=" text-neutral-700 ... font-avant_garde_bold">
@@ -217,8 +219,8 @@ export default class Products extends Component {
 
 
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_1" }}>
-                
-                <Image
+                <Link href="/https://www.bimcopilot.com/sales">
+                  <Image
                     class=" rounded-md ... "
                     id={styles.PRODUCT_IMAGE}
                     src={revitBlinds}                    
@@ -226,10 +228,12 @@ export default class Products extends Component {
                     quality={100}
                     //object-fit="cover"                      
                     alt=""/>                                                                            
-                <Image/>
+                  <Image/>
+                </Link>
+                
                                
                 <div>
-                  <Link href="/">
+                  <Link href="/https://www.bimcopilot.com/sales">
                     <h2
                       id={styles._2H2}
                       class=" text-neutral-700 ... font-avant_garde_bold ... text-xl ...">
@@ -247,19 +251,21 @@ export default class Products extends Component {
 
 
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_2" }}>
-
-                <Image
-                    class=" rounded-md ... drop-shadow-xl ... "
-                    id={styles.PRODUCT_IMAGE}
-                    src={drawingSheets}                    
-                    style={{objectFit: "cover"}}
-                    quality={100}
-                    //object-fit="cover"                      
-                    alt=""/>                                                                            
-                <Image/>
+                <Link href="/https://www.bimcopilot.com/sales">
+                  <Image
+                      class=" rounded-md ... drop-shadow-xl ... "
+                      id={styles.PRODUCT_IMAGE}
+                      src={drawingSheets}                    
+                      style={{objectFit: "cover"}}
+                      quality={100}
+                      //object-fit="cover"                      
+                      alt=""/>                                                                            
+                  <Image/>
+                </Link>
+                
 
                 <div>
-                  <Link href="/">
+                  <Link href="/https://www.bimcopilot.com/sales">
                     <h2
                       id={styles._2H2}
                       class=" text-neutral-700 ... font-avant_garde_bold ... text-xl ..."
