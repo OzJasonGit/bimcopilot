@@ -68,24 +68,32 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
                     <div  id={styles.C1}>
-                        <h3 class="text-md ... text-stone-700 ... font-geistmono_regular">
+                        <h3 class="text-md ... text-stone-900 ... font-avant_garde_bold">
                             This is a test title
                         </h3>
                     </div>
 
                     <div  id={styles.C2}>
-                        <h3>
+                        <h3 class="text-md ... text-stone-900 ... font-geistmono_semibold">
                             $12.99
                         </h3>
 
-                        <h3>
+                        <h3 class="text-md ... text-stone-900 ... font-geistmono_semibold">
                             Tax included. 
                         </h3>
                     </div>
 
                     <div  id={styles.C3}>
                         <h3>
-                            This is a test title
+                            License Type.
+                        </h3>
+
+                        <div>
+
+                        </div>
+
+                        <h3>
+                            Are you a student? Select Educational Use.
                         </h3>
                     </div>
 

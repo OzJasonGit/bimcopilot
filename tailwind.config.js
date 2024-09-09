@@ -21,6 +21,7 @@ module.exports = {
         avant_garde_bold: ["var(--font-avant_garde_bold)"],
         avant_garde_medium: ["var(--font-avant_garde_medium)"],
         geistmono_regular: ["var(--font-geistmono_regular)"],
+        geistmono_semibold: ["var(--font-geistmono_semibold)"],
       },
     },
   },
