@@ -166,7 +166,6 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
                     <div id={styles.PRODUCT_DESCRIPTION}>
-
                         <div id={styles.PRODUCT_TITLE}>
                         </div>
 
