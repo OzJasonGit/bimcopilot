@@ -166,6 +166,16 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
 #SALES_IMAGE_3 {
     position: relative;
     width: auto;
@@ -175,8 +185,58 @@
     grid-column-gap: 20px;
     grid-template-columns: 130px 130px 130px 130px 130px 130px;
     grid-template-areas:
-        "IMAGE_1 IMAGE_2 IMAGE_3 IMAGE_4 IMAGE_5 IMAGE_6";  
+        "IMAGE_U IMAGE_V IMAGE_W IMAGE_X IMAGE_Y IMAGE_Z";  
     overflow-x: scroll;
+}
+
+
+#SALES_IMAGE_U {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: IMAGE_U;
+    overflow: hidden;
+}
+
+#SALES_IMAGE_U {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: IMAGE_V;
+    overflow: hidden;
+}
+
+#SALES_IMAGE_U {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: IMAGE_W;
+    overflow: hidden;
+}
+
+#SALES_IMAGE_U {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: IMAGE_X;
+    overflow: hidden;
+}
+
+#SALES_IMAGE_U {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: IMAGE_Y;
+    overflow: hidden;
+}
+
+
+#SALES_IMAGE_Z {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: IMAGE_Z;
+    overflow: hidden;
 }
 
 
