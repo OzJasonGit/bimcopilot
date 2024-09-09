@@ -306,7 +306,7 @@
     height: auto;
     grid-area: IMAGES;
     display: grid;
-    grid-template-rows: 350px;
+    grid-template-rows: 300px;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
