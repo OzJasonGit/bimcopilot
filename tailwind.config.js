@@ -20,6 +20,7 @@ module.exports = {
       fontFamily: {
         avant_garde_bold: ["var(--font-avant_garde_bold)"],
         avant_garde_medium: ["var(--font-avant_garde_medium)"],
+        geist_mono_regular: ["var(--font-geist_mono_regular)"],
       },
     },
   },
