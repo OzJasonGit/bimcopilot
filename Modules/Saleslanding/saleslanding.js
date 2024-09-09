@@ -187,7 +187,14 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                     <div  id={styles.C4}>
                        <div  id={styles.CHECKOUT_GRID}>
-                            <div id={styles.ADD_TO_CART}>                              
+
+                            <div id={styles.ADD_TO_CART}>          
+                                <Link className={buttonVariants({ variant: "outline" })}  style={{
+                                        position: "absolute",
+                                        width: "100%",
+                                        height: "100%",                 
+                                        }}>Click here
+                                </Link>                    
                             </div>
 
                             <div id={styles.PAYPAL}>                               

@@ -3,6 +3,8 @@
 import React, { Component, useState } from "react";
 import styles from "./collapse_sales.module.css";
 
+import { Button } from "@/components/ui/button"
+
 
 import { CaretRightFilled } from "@ant-design/icons";
 import { Collapse, Typography } from "antd";
