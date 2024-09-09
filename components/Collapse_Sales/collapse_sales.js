@@ -3,9 +3,6 @@
 import React, { Component, useState } from "react";
 import styles from "./collapse_sales.module.css";
 
-
-
-
 import { CaretRightFilled } from "@ant-design/icons";
 import { Collapse, Typography } from "antd";
 
@@ -35,21 +32,6 @@ const panel_2 = () => (
     </h2>
 );
 
-const panel_3 = () => (
-    <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold text-2xl"
-        id={styles._H2}> 
-        Digital Twin product development 
-    </h2>
-);
-
-const panel_4 = () => (
-    <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold text-2xl"
-        id={styles._H2}> 
-        Revit Training 
-    </h2>
-);
 
 
 
@@ -114,37 +96,9 @@ const Collapsed = () => {
                                             </h3>
                                         </Collapse.Panel>
 
-                                        <Collapse.Panel
-                                            key={"3"}
-                                            header={panel_3()}
-                                        >
-                                            <h3 class="font-avant_garde_bold text-lg ..."
-                                                style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
-                                                id={styles._H3}
-                                            >
-                                                A dog is a type of domesticated
-                                                animal. Known for its loyalty
-                                                and faithfulness, it can be
-                                                found as a welcome guest in many
-                                                households across the world.
-                                            </h3>
-                                        </Collapse.Panel>
+                                        
 
-                                        <Collapse.Panel
-                                            key={"4"}
-                                            header={panel_4()}
-                                        >
-                                            <h3 class="font-avant_garde_bold text-lg ..."
-                                                style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
-                                                id={styles._H3}
-                                            >
-                                                A dog is a type of domesticated
-                                                animal. Known for its loyalty
-                                                and faithfulness, it can be
-                                                found as a welcome guest in many
-                                                households across the world.
-                                            </h3>
-                                        </Collapse.Panel>
+                                        
                                     </Collapse>
               
                 
