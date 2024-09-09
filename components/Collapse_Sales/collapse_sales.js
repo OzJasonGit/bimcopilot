@@ -17,19 +17,19 @@ const contentStyle = {
 
 const panel_1 = () => (
     
-    <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold text-2xl"
-        id={styles._H2}>
+    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+        class="font-geist_semibold ... text-md ... text-stone-700 ... "
+        id={styles._H3}>
         Project Management, Delivery and Consultancy        
-    </h2>
+    </h3>
 );
 
 const panel_2 = () => (
-    <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold text-2xl"
-        id={styles._H2}> 
+    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+        class="font-geist_semibold ... text-md ... text-stone-700 ... "
+        id={styles._H3}> 
         BIM Strategy, Execution Plan (BEP) and Documentation 
-    </h2>
+    </h3>
 );
 
 
@@ -64,10 +64,11 @@ const Collapsed = () => {
                                         ghost={true}
                                     >
                                         <Collapse.Panel
+                                            style={{ color: "#f1f1f1" }}
                                             key={"1"}
                                             header={panel_1()}
                                         >
-                                            <h3 class="font-avant_garde_bold text-lg ..."
+                                            <h3 class="text-md ... text-stone-700 ... font-geist_regular"
                                                 style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
@@ -84,7 +85,7 @@ const Collapsed = () => {
                                             key={"2"}
                                             header={panel_2()}
                                         >
-                                            <h3 class="font-avant_garde_bold text-lg ..."
+                                            <h3 class="text-md ... text-stone-700 ... font-geist_regular"
                                                 style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
@@ -96,9 +97,7 @@ const Collapsed = () => {
                                             </h3>
                                         </Collapse.Panel>
 
-                                        
-
-                                        
+                                                                               
                                     </Collapse>
               
                 

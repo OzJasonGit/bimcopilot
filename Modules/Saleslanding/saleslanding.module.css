@@ -338,6 +338,8 @@
 
 #C7 {
     grid-area: C7;
+    position: relative;
+    left: -40px;
 }
 
 
