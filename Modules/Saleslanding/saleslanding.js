@@ -168,15 +168,30 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.PRODUCT_DESCRIPTION}>
                     <div id={styles.P_TITLE}>
+                        <h3 id={styles._H3} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
+                            This is the description title 
+                        </h3>
                     </div>
 
-                    <div  id={styles.P_DESCRIPTION}>                         
+                    <div  id={styles.P_DESCRIPTION}>  
+                         <h3 id={styles._H3} class="text-md ... text-stone-700 ... font-geistmono_regular">
+                            Delta compression using up to 12 threads
+                            Compressing objects: 100% (5/5), done.
+                            Writing objects: 100% (5/5), 440 bytes | 440.00 KiB/s, done.
+                            Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
+                            remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+                            Compressing objects: 100% (5/5), done.
+                            Writing objects: 100% (5/5), 440 bytes | 440.00 KiB/s, done.
+                            Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
+                            remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+                        </h3>                       
                     </div>
 
-                    <div  id={styles.P_IMAGES}>                           
+                    <div  id={styles.P_IMAGES}>   
+
                     </div>
                 </div>
-                
+
             </div>
         </div>
       </section>
