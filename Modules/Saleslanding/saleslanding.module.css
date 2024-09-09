@@ -309,7 +309,24 @@
     grid-column-gap: 30px;
     grid-template-rows: 260px;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            "SALES_IMAGE_2 SALES_IMAGE_3 SALES_IMAGE_4 "
 }
+
+
+
+#SALES_IMAGE_2 {
+    grid-area: SALES_IMAGE_2;
+}
+
+#SALES_IMAGE_3 {
+    grid-area: SALES_IMAGE_3;
+}
+
+#SALES_IMAGE_4 {
+    grid-area: SALES_IMAGE_4;
+}
+
 
 
 #PRODUCT_DESCRIPTION {
