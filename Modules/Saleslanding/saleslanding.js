@@ -182,7 +182,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
                     <div  id={styles.P_DESCRIPTION}>  
-                         <h3 id={styles._H3} class="text-md ... text-stone-700 ... font-geistmono_regular">
+                         <h3 id={styles._H3} class="text-md ... text-stone-700 ... font-geist_regular">
                             Delta compression using up to 12 threads
                             Compressing objects: 100% (5/5), done.
                             Writing objects: 100% (5/5), 440 bytes | 440.00 KiB/s, done.
