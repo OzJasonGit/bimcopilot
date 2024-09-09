@@ -190,15 +190,9 @@
 }
 
 
-#SALES_IMAGE_U {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    grid-area: IMAGE_U;
-    overflow: hidden;
-}
 
-#SALES_IMAGE_U {
+
+#SALES_IMAGE_V {
     position: relative;
     width: 100%;
     height: 100%;
@@ -206,7 +200,7 @@
     overflow: hidden;
 }
 
-#SALES_IMAGE_U {
+#SALES_IMAGE_W {
     position: relative;
     width: 100%;
     height: 100%;
@@ -214,7 +208,7 @@
     overflow: hidden;
 }
 
-#SALES_IMAGE_U {
+#SALES_IMAGE_X {
     position: relative;
     width: 100%;
     height: 100%;
@@ -222,7 +216,7 @@
     overflow: hidden;
 }
 
-#SALES_IMAGE_U {
+#SALES_IMAGE_Y {
     position: relative;
     width: 100%;
     height: 100%;
