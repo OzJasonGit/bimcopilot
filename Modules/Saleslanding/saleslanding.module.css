@@ -124,7 +124,7 @@
     grid-template-areas:
         "IMAGE_1"
         "IMAGE_2";
-    overflow-y: scroll;
+    overflow-x: scroll;
 }
 
 
