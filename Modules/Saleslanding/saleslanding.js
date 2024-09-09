@@ -62,6 +62,9 @@ const Saleslanding = ({ stories, firstStory }) => {
                         </div>   
 
                         <div id={styles.SALES_IMAGE_2}>
+                            <div id={styles.SALES_IMAGE_3}>
+
+                            </div>
                         </div>                     
                                      
                 </div>
