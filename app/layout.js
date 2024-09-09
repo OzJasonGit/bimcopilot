@@ -24,11 +24,23 @@ const geistmono_regular = localFont
   });
 
 
-  const geistmono_semibold = localFont
-  ({ 
-    src: '../fonts/geistmono_semibold.woff2',
-    variable: '--font-geistmono_semibold',
-  });
+const geistmono_semibold = localFont
+({ 
+  src: '../fonts/geistmono_semibold.woff2',
+  variable: '--font-geistmono_semibold',
+});
+
+const geist_regular = localFont
+({ 
+  src: '../fonts/geistmono_regular.woff2',
+  variable: '--font-geistmono_regular',
+});
+
+const geist_semibold = localFont
+({ 
+  src: '../fonts/geist_semibold.woff2',
+  variable: '--font-geist_semibold',
+});
 
 
 export const metadata = {
@@ -39,7 +51,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable}`}
+      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable} ${geist_regular.variable} ${geist_semibold.variable}`}
             >
       
           <>{children}</>

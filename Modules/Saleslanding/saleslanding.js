@@ -68,17 +68,17 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
                     <div  id={styles.C1}>
-                        <h3 class="text-md ... text-stone-900 ... font-avant_garde_bold">
+                        <h3 class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
                             This is a test title
                         </h3>
                     </div>
 
                     <div  id={styles.C2}>
-                        <h3 class="text-md ... text-stone-900 ... font-geistmono_semibold">
+                        <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
                             $12.99
                         </h3>
 
-                        <h3 class="text-md ... text-stone-900 ... font-geistmono_semibold">
+                        <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
                             Tax included. 
                         </h3>
                     </div>
@@ -100,6 +100,14 @@ const Saleslanding = ({ stories, firstStory }) => {
                     <div  id={styles.C4}>
                         <h3>
                             This is a test title
+                        </h3>
+                    </div>
+
+
+                    <div  id={styles.C5}>
+                        <h3>
+                           For Educational Use (Reduced price) please send us an email with your 
+                           student card and info to <a>info@bimcopilot.com</a>
                         </h3>
                     </div>
                     
