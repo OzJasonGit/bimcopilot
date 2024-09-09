@@ -8,7 +8,7 @@ import Menu_White from "../../components/Menu_White/menu_white";
 import Sides from "../../components/Sides/sides";
 import Header_White from "../../components/Header_White/Header_White";
 import Footer from "../../components/Footer/Footer_White";
-import Collapsed_Sales from "../../components/Collapse/collapse";
+import Collapsed_Sales from "../../components/Collapse_Sales/collapse_sales";
 
 import Services_1 from "../../components/services_1/services_1";
 
