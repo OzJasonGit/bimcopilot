@@ -159,7 +159,7 @@ export default class Products extends Component {
                               <div 
                                 id={styles.IMAGE_1}>
 
-                                  <Link href="/https://www.bimcopilot.com/sales">
+                                  <Link href="/sales">
                                     <Image
                                       class=" rounded-md ... "
                                       id={styles.PRODUCT_IMAGE}
@@ -177,7 +177,7 @@ export default class Products extends Component {
 
 
                               <div>
-                                <Link href="/https://www.bimcopilot.com/sales">
+                                <Link href="/sales">
                                   <h2
                                     id={styles._H2}
                                     class=" text-neutral-700 ... font-avant_garde_bold">
@@ -219,7 +219,7 @@ export default class Products extends Component {
 
 
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_1" }}>
-                <Link href="/https://www.bimcopilot.com/sales">
+                <Link href="/sales">
                   <Image
                     class=" rounded-md ... "
                     id={styles.PRODUCT_IMAGE}
@@ -233,7 +233,7 @@ export default class Products extends Component {
                 
                                
                 <div>
-                  <Link href="/https://www.bimcopilot.com/sales">
+                  <Link href="/sales">
                     <h2
                       id={styles._2H2}
                       class=" text-neutral-700 ... font-avant_garde_bold ... text-xl ...">
@@ -251,7 +251,7 @@ export default class Products extends Component {
 
 
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_2" }}>
-                <Link href="https://www.bimcopilot.com/sales">
+                <Link href="/sales">
                   <Image
                       class=" rounded-md ... drop-shadow-xl ... "
                       id={styles.PRODUCT_IMAGE}
@@ -265,7 +265,7 @@ export default class Products extends Component {
                 
 
                 <div>
-                  <Link href="https://www.bimcopilot.com/sales">
+                  <Link href="/sales">
                     <h2
                       id={styles._2H2}
                       class=" text-neutral-700 ... font-avant_garde_bold ... text-xl ..."
@@ -298,7 +298,7 @@ export default class Products extends Component {
 
 
                 <div>
-                  <Link href="https://www.bimcopilot.com/sales">
+                  <Link href="/sales">
                     <h2
                       id={styles._2H2}
                       class=" text-neutral-700 ... font-avant_garde_bold ... text-xl ..."
@@ -320,7 +320,7 @@ export default class Products extends Component {
                 <h2
                     id={styles.TEXT_OUTLINE_2}>
                       <a class=" text-yellow-200 ... font-avant_garde_bold ...">
-                        <Link href="https://www.bimcopilot.com/sales">Shop</Link>
+                        <Link href="/sales">Shop</Link>
                       </a>
                 </h2>
                 <h3>
