@@ -285,18 +285,18 @@ export default class Products extends Component {
 
 
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_3" }}>
-
-                <Image
-                    class="bg-neutral-900 rounded-md ..."
-                    id={styles.PRODUCT_IMAGE}
-                    src={volumesByRoom}                    
-                    style={{objectFit: "cover"}}
-                    quality={100}
-                    //object-fit="cover"                      
-                    alt=""/>                                                                            
-                <Image/>
-
-
+                <Link href="/sales">
+                  <Image
+                      class="bg-neutral-900 rounded-md ..."
+                      id={styles.PRODUCT_IMAGE}
+                      src={volumesByRoom}                    
+                      style={{objectFit: "cover"}}
+                      quality={100}
+                      //object-fit="cover"                      
+                      alt=""/>                                                                            
+                  <Image/>
+                </Link>
+                
                 <div>
                   <Link href="/sales">
                     <h2
