@@ -88,7 +88,15 @@ const Saleslanding = ({ stories, firstStory }) => {
                             License Type.
                         </h3>
 
-                        <div  id={styles.CHECKOUT_GRID}>
+                        
+
+                        <h3  class="text-md ... text-stone-700 ... font-geist_regular">
+                            Are you a student? Select Educational Use.
+                        </h3>
+                    </div>
+
+                    <div  id={styles.C4}>
+                       <div  id={styles.CHECKOUT_GRID}>
                             <div id={styles.ADD_TO_CART}>                              
                             </div>
 
@@ -98,16 +106,6 @@ const Saleslanding = ({ stories, firstStory }) => {
                             <div id={styles.MORE_OPTIONS}>                               
                             </div>
                         </div>
-
-                        <h3  class="text-md ... text-stone-700 ... font-geist_regular">
-                            Are you a student? Select Educational Use.
-                        </h3>
-                    </div>
-
-                    <div  id={styles.C4}>
-                        <h3 class="text-md ... text-stone-700 ... font-geist_regular">
-                            This is a test title
-                        </h3>
                     </div>
 
 
