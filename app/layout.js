@@ -17,10 +17,10 @@ const avant_garde_medium = localFont
     variable: '--font-avant_garde_medium',
   });
 
-const geist_mono_regular = localFont
+const geistmono_regular = localFont
   ({ 
-    src: '../fonts/GeistMono-Regular.woff2',
-    variable: '--font-GeistMono-Regular',
+    src: '../fonts/geistmono_regular.woff2',
+    variable: '--font-geistmono_regular',
   });
 
 
@@ -32,7 +32,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geist_mono_regular.variable}`}
+      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}`}
             >
       
           <>{children}</>
