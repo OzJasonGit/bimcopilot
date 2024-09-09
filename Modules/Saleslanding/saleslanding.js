@@ -164,7 +164,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                     <div id={styles.BOUGHT_IMAGE_HOLDER}>
 
-                       {/* <div class="rounded-xl ..." id={styles.SALES_IMAGE_2}>
+                        <div class="rounded-xl ..." id={styles.SALES_IMAGE_A}>
                             {storiesSolo_1.map((story, index) => {
                                   return (
                             <Link href="/services">
@@ -185,7 +185,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                         </div>  
 
 
-                        <div class="rounded-xl ..." id={styles.SALES_IMAGE_3}>
+                        <div class="rounded-xl ..." id={styles.SALES_IMAGE_B}>
                             {storiesSolo_1.map((story, index) => {
                                   return (
                             <Link href="/services">
@@ -205,7 +205,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             )})} 
                         </div>  
 
-                        <div class="rounded-xl ..." id={styles.SALES_IMAGE_4}>
+                       {/*  <div class="rounded-xl ..." id={styles.SALES_IMAGE_4}>
                             {storiesSolo_1.map((story, index) => {
                                   return (
                             <Link href="/services">

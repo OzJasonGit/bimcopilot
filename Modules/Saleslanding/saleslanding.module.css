@@ -180,6 +180,26 @@
 }
 
 
+#BOUGHT_IMAGE_HOLDER {
+    width: 100%;
+    height: auto;
+    grid-area: IMAGES;
+    display: grid;
+    grid-column-gap: 30px;
+    grid-template-rows: 260px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "SALES_IMAGE_A SALES_IMAGE_B SALES_IMAGE_C"
+}
+
+#SALES_IMAGE_A {
+    grid-area: SALES_IMAGE_A;
+}
+
+#SALES_IMAGE_4 {
+    grid-area: SALES_IMAGE_B;
+}
+
 
 
 
@@ -301,29 +321,13 @@
     grid-area: TITLE;
 }
 
-#BOUGHT_IMAGE_HOLDER {
-    width: 100%;
-    height: auto;
-    grid-area: IMAGES;
-    display: grid;
-    grid-column-gap: 30px;
-    grid-template-rows: 260px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-            "SALES_IMAGE_2 SALES_IMAGE_3 SALES_IMAGE_4 "
-}
 
 
 
 
 
-#SALES_IMAGE_3 {
-    grid-area: SALES_IMAGE_3;
-}
 
-#SALES_IMAGE_4 {
-    grid-area: SALES_IMAGE_4;
-}
+
 
 
 
