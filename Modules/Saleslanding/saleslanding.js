@@ -168,8 +168,16 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.PRODUCT_DESCRIPTION}>
                     <div id={styles.P_TITLE}>
-                        <h3 id={styles._H3} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
+                        <h2 id={styles._H3} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
                             This is the description title 
+                        </h2>
+                    </div>
+
+                    <div  id={styles.P_SUBTITLE}>   
+                        <h3 id={styles._H3} class="text-lg ... text-stone-700 ... font-avant_garde_bold">
+                            This is the description title 
+                            Delta compression using up to 12 threads
+                            Compressing objects: 100% (5/5), done.
                         </h3>
                     </div>
 
@@ -187,9 +195,6 @@ const Saleslanding = ({ stories, firstStory }) => {
                         </h3>                       
                     </div>
 
-                    <div  id={styles.P_IMAGES}>   
-
-                    </div>
                 </div>
 
             </div>
