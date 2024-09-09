@@ -64,12 +64,12 @@ const Collapsed = () => {
                                         ghost={true}
                                     >
                                         <Collapse.Panel
-                                            style={{ color: "#f1f1f1" }}
+                                            
                                             key={"1"}
                                             header={panel_1()}
                                         >
                                             <h3 class="text-md ... text-stone-700 ... font-geist_regular"
-                                                style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
+                                                style={{ position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
                                                 A dog is a type of domesticated
@@ -81,12 +81,12 @@ const Collapsed = () => {
                                         </Collapse.Panel>
 
                                         <Collapse.Panel
-                                            style={{ color: "#f1f1f1" }}
+                                            
                                             key={"2"}
                                             header={panel_2()}
                                         >
                                             <h3 class="text-md ... text-stone-700 ... font-geist_regular"
-                                                style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
+                                                style={{ position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
                                                 A dog is a type of domesticated
