@@ -192,7 +192,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                        <div  id={styles.CHECKOUT_GRID}>
 
                             <div id={styles.ADD_TO_CART}>          
-                                <Button variant="primary"  style={{
+                                <Button style={{
                                         position: "absolute",
                                         width: "100%",
                                         height: "100%",}}>Button
@@ -209,7 +209,6 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                             <div id={styles.MORE_OPTIONS}>    
                                 <a>
-
                                 </a>                           
                             </div>
                         </div>
