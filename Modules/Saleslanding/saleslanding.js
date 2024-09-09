@@ -16,8 +16,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 
+import { Button } from "@/components/ui/button"
 
-import { buttonVariants } from "@/components/ui/button"
 
 import bimcopilot from './Bim-copilot-logo_Horizontal.png';
 
@@ -192,12 +192,11 @@ const Saleslanding = ({ stories, firstStory }) => {
                        <div  id={styles.CHECKOUT_GRID}>
 
                             <div id={styles.ADD_TO_CART}>          
-                                <Link className={buttonVariants({ variant: "outline" })}  style={{
+                                <Button variant="outline"  style={{
                                         position: "absolute",
                                         width: "100%",
-                                        height: "100%",                 
-                                        }}>Click here
-                                </Link>                    
+                                        height: "100%",}}>Button
+                                </Button>                  
                             </div>
 
                             <div id={styles.PAYPAL}>                               
