@@ -189,10 +189,11 @@
     grid-template-rows: 260px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-        "SALES_IMAGE_A SALES_IMAGE_B SALES_IMAGE_C"
+        "SALES_IMAGE_A SALES_IMAGE_B SALES_IMAGE_C";
 }
 
 #SALES_IMAGE_A {
+
     grid-area: SALES_IMAGE_A;
 }
 
