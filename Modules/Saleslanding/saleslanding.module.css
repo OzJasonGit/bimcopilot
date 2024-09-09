@@ -157,6 +157,36 @@
 }
 
 
+#CHECKOUT_GRID {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-row-gap: 10px;
+        grid-template-rows: 0px auto auto auto;
+        grid-template-areas:
+            "."
+            "ADD_TO_CART"
+            "PAYPAL"
+            "MORE_OPTIONS"
+
+}
+
+
+#ADD_TO_CART {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    grid-area: ADD_TO_CART;
+}
+
+#PAYPAL {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    grid-area: PAYPAL;
+}
+
+
 #C1 {
     grid-area: C1;
 }

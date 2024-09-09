@@ -88,8 +88,15 @@ const Saleslanding = ({ stories, firstStory }) => {
                             License Type.
                         </h3>
 
-                        <div>
+                        <div  id={styles.CHECKOUT_GRID}>
+                            <div id={styles.ADD_TO_CART}>                              
+                            </div>
 
+                            <div id={styles.PAYPAL}>                               
+                            </div>
+
+                            <div id={styles.MORE_OPTIONS}>                               
+                            </div>
                         </div>
 
                         <h3  class="text-md ... text-stone-700 ... font-geist_regular">
@@ -122,11 +129,11 @@ const Saleslanding = ({ stories, firstStory }) => {
                         </h3>
 
                         <h3 class="text-md ... text-stone-700 ... font-geist_regular">
-                           <a></a> Created by: Bimcopilot.com
+                           <a></a> Created By: Bimcopilot.com
                         </h3>
 
                         <h3 class="text-md ... text-stone-700 ... font-geist_regular">
-                           <a></a> Pack Category
+                           <a></a> Pack Category: <a></a>
                         </h3>
                     </div>
                     
