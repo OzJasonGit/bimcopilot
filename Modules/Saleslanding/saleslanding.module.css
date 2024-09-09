@@ -275,9 +275,39 @@
     grid-template-rows: 0px auto auto 0px;
     grid-template-areas:
         ".  .  .  .  ."
-        "IMAGE IMAGE IMAGE IMAGE CHECKOUT"
+        "IMAGE IMAGE IMAGE IMAGE ."
         "DESCRIPTION DESCRIPTION DESCRIPTION . ."
         ".  .  .  .  .";
+}
+
+
+#BOUGHT_TOGETHER_BLOCK {
+    width: 100%;
+    height: auto;
+    grid-area: IMAGE;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+            "TITLE"
+            "IMAGES";
+}
+
+
+#BOUGHT_TITLE_HOLDER {
+    width: 100%;
+    height: auto;
+    grid-area: TITLE;
+}
+
+#BOUGHT_IMAGE_HOLDER {
+    width: 100%;
+    height: auto;
+    grid-area: IMAGES;
+    display: grid;
+    grid-template-rows: 350px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/

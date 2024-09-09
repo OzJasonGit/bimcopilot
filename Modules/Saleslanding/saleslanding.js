@@ -154,7 +154,17 @@ const Saleslanding = ({ stories, firstStory }) => {
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_scroll}>
             <div id={styles.BOUGHT_TOGETHER_GRID}> 
+                <div id={styles.BOUGHT_TOGETHER_BLOCK}>
+                    <div id={styles.BOUGHT_TITLE_HOLDER}>
+                        <h2>
+                            Frequently Bought Together
+                        </h2>
+                    </div>
 
+                    <div id={styles.BOUGHT_IMAGE_HOLDER}>
+
+                    </div>
+                </div>
             </div>
         </div>
       </section>
