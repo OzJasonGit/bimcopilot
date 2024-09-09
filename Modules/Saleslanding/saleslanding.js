@@ -84,7 +84,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
                     <div  id={styles.C3}>
-                        <h3 class="text-md ... text-stone-700 ... font-geist_regular">
+                        <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
                             License Type.
                         </h3>
 
@@ -108,6 +108,25 @@ const Saleslanding = ({ stories, firstStory }) => {
                         <h3 class="text-md ... text-stone-700 ... font-geist_regular">
                            For Educational Use (Reduced price) please send us an email with your 
                            student card and info to <a>info@bimcopilot.com</a>
+                        </h3>
+                    </div>
+
+
+                    <div  id={styles.C6}>
+                        <h3 class="text-md ... text-stone-700 ... font-geist_regular">
+                           <a></a> Digital Download
+                        </h3>
+
+                        <h3 class="text-md ... text-stone-700 ... font-geist_regular">
+                           <a></a> Revit Version 2020
+                        </h3>
+
+                        <h3 class="text-md ... text-stone-700 ... font-geist_regular">
+                           <a></a> Created by: Bimcopilot.com
+                        </h3>
+
+                        <h3 class="text-md ... text-stone-700 ... font-geist_regular">
+                           <a></a> Pack Category
                         </h3>
                     </div>
                     
