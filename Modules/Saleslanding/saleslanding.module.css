@@ -173,6 +173,7 @@
     display: grid;
     height: 100%;  
     grid-template-rows: auto;
+    grid-column-gap: 20px;
     grid-template-columns: 130px 130px 130px 130px 130px 130px;
     grid-template-areas:
         "IMAGE_1 IMAGE_2 IMAGE_3 IMAGE_4 IMAGE_5 IMAGE_6";  
