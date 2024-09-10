@@ -1552,6 +1552,23 @@
 }
 
 
+#SALES_IMAGE_HOLDER {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: IMAGE;
+    grid-column-gap: 60px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 170px;
+    grid-template-areas:
+        "IMAGE_1"
+        "IMAGE_2";
+
+}
+
+
 
 
     .grid_0_blog {
@@ -1929,49 +1946,6 @@
         height: 500px;
         max-height: 100%;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
-
-
-
-
-
-
 
 
 }
