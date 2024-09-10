@@ -74,13 +74,13 @@ export default class Products extends Component {
 
                       <div>
                         <Link href="/">
-                          <h2
-                            id={styles._H2}
-                            class=" text-neutral-700 ... font-avant_garde_bold">
+                          <h3
+                            id={styles._H3}
+                            class=" text-neutral-700 ... font-geist_semibold ...">
                             Parametric Title Block Catalogue (Metric + Imperial)
-                          </h2>
+                          </h3>
                           <br/>
-                          <h4 class=" text-neutral-700 ... font-avant_garde_bold">
+                          <h4 class=" text-neutral-700 ... font-geist_regular">
                             {" "}
                             From $53.90
                           </h4>
@@ -122,11 +122,11 @@ export default class Products extends Component {
                                 <Link href="/">
                                   <h2
                                     id={styles._H2}
-                                    class=" text-neutral-700 ... font-avant_garde_bold">
+                                    class=" text-neutral-700 ... font-geist_semibold">
                                     Parametric Title Block Catalogue (Metric + Imperial)
                                   </h2>
                                   <br/>
-                                  <h4 class=" text-neutral-700 ... font-avant_garde_bold">
+                                  <h4 class=" text-neutral-700 ... font">
                                     {" "}
                                     From $53.90
                                   </h4>
