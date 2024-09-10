@@ -1306,6 +1306,11 @@
 }
 
 
+#BOUGHT_IMAGE_HOLDER {
+    display: none;
+}
+
+
 
     .grid_0_blog {
         position: relative;
@@ -1880,7 +1885,9 @@
 
 
 
-
+#BOUGHT_IMAGE_HOLDER {
+    display: none;
+}
 
 
 
