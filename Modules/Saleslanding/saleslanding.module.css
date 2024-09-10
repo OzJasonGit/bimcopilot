@@ -1331,11 +1331,27 @@
 }
 
 
-#BOUGHT_IMAGE_MOBILE {
+#BOUGHT_TOGETHER_GRID_MOBILE {
+    width: 100%;
+    height: auto;
+    grid-area: IMAGE;
     display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "TITLE"
+        "IMAGES"
+        "DESCRIPTION";
+}
+
+
+#BOUGHT_IMAGE_MOBILE {
+    display: grid;   
     position: absolute;
     width: auto;
     height: 320px;
+    grid-area: IMAGES;
     grid-column-gap: 30px;
     grid-template-columns: 280px 280px 280px;
     overflow-x: scroll;
