@@ -1924,6 +1924,24 @@
 
 
 
+#BOUGHT_TOGETHER_GRID {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: SUB;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0 auto auto 0;
+    grid-template-areas:
+        "."
+        "IMAGE"
+        " DESCRIPTION"
+        " .";
+}
+
+
 
 
     .grid_0_blog {
