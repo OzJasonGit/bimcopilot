@@ -327,9 +327,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
 
                 <div id={styles.BOUGHT_IMAGE_HOLDER_MOBILE}>
-                    <div id={styles.BOUGHT_TOGETHER_GRID_MOBILE}>
-
-
+                    <div id={styles.BOUGHT_TOGETHER_GRID_MOBILE}> 
 
                         <div id={styles.BOUGHT_IMAGE_MOBILE}>
 
@@ -388,10 +386,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     )})} 
                                 </div>  
 
-                        </div> 
                     </div> 
-
-                        
 
                     </div>                                     
                 </div>
