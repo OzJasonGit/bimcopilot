@@ -22,7 +22,7 @@ import { Button } from "@/components/ui/button"
 import bimcopilot from './Bim-copilot-logo_Horizontal.png';
 
 
-const Saleslanding = ({ stories, firstStory }) => {
+const Salespayment = ({ stories, firstStory }) => {
   const storiesSolo_1 = stories.filter((story, i) => i == 3)
   const storiesToMap = stories.filter((story, i) => i != 0);
   const router = useRouter();
@@ -448,7 +448,7 @@ const Saleslanding = ({ stories, firstStory }) => {
  );
 };
 
-export default Saleslanding;
+export default Salespayment;
 
 
 
