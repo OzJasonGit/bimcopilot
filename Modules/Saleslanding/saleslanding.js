@@ -267,7 +267,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                     <div id={styles.BOUGHT_IMAGE_HOLDER}>
 
-                        <div class="rounded-xl ..." id={styles.SALES_IMAGE_A}>
+                    <div class="rounded-xl ..." id={styles.SALES_IMAGE_A}>
                             {storiesSolo_1.map((story, index) => {
                                   return (                      
                                 <Image
@@ -323,6 +323,68 @@ const Saleslanding = ({ stories, firstStory }) => {
                         </div>  
 
                     </div>  
+                </div>
+
+
+                <div id={styles.BOUGHT_IMAGE_HOLDER_MOBILE}>
+                    <div id={styles.BOUGHT_IMAGE_MOBILE}>
+
+                         <div class="rounded-xl ..." id={styles.SALES_IMAGE_A}>
+                            {storiesSolo_1.map((story, index) => {
+                                  return (                      
+                                <Image
+                                alt="Picture of the author"
+                                key={story._id}
+                                width={500}
+                                height={500}
+                                src={story.image}
+                                style={{
+                                position: "absolute",
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                                }}/>                         
+                            )})} 
+                        </div>  
+
+
+                    <div class="rounded-xl ..." id={styles.SALES_IMAGE_B}>
+                            {storiesSolo_1.map((story, index) => {
+                                  return (                 
+                                <Image
+                                alt="Picture of the author"
+                                key={story._id}
+                                width={500}
+                                height={500}
+                                src={story.image}
+                                style={{
+                                position: "absolute",
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                                }}/>                 
+                            )})} 
+                        </div>  
+
+                    <div class="rounded-xl ..." id={styles.SALES_IMAGE_C}>
+                            {storiesSolo_1.map((story, index) => {
+                                  return (                
+                                <Image
+                                alt="Picture of the author"
+                                key={story._id}
+                                width={500}
+                                height={500}
+                                src={story.image}
+                                style={{
+                                position: "absolute",
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                                }}/>              
+                            )})} 
+                        </div>  
+
+                    </div>                    
                 </div>
 
                 <div id={styles.PRODUCT_DESCRIPTION}>
