@@ -1326,12 +1326,12 @@
     position: relative;
     width: 100%;
     height: 100%;
-    grid-area: IMAGES;
+    grid-area: IMAGE;
     overflow: hidden;
 }
 
 
-#BOUGHT_IMAGE_HOLDER_MOBILE {
+#BOUGHT_IMAGE_MOBILE {
     display: grid;
     position: absolute;
     width: auto;
@@ -1344,7 +1344,29 @@
 }
 
 
+#SALES_IMAGE_A {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: SALES_IMAGE_A;
+    overflow: hidden;
+}
 
+#SALES_IMAGE_B {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: SALES_IMAGE_B;
+    overflow: hidden;
+}
+
+#SALES_IMAGE_C {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: SALES_IMAGE_C;
+    overflow: hidden;
+}
 
 
     .grid_0_blog {
