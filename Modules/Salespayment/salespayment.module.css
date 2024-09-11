@@ -110,6 +110,15 @@
 }
 
 
+#CHECKOUT_BACKGROUND {
+    display: grid;
+    grid-template-columns: 20px 120px 20px 1fr 40px;
+    grid-template-areas:
+            ".   .   .   CHECKOUT   . "
+
+}
+
+
 #SALES_GRID_HOLDER {
     position: relative;
     width: 100%;
