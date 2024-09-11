@@ -255,9 +255,14 @@ const Salespayment = ({ stories, firstStory }) => {
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_scroll}>
             <div  id={styles.DIVIDER}>
-
+                <div id={styles.CHECKOUT_BACKGROUND} style={{
+                                        position: "relative",
+                                        width: "100%",
+                                        height: "100%",
+                                        backgroundColor:"white",
+                                        gridArea:"CHECKOUT"}}>
+                </div>
             </div>
-
         </div>
       </section>
 
