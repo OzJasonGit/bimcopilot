@@ -65,7 +65,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                         <div id={styles.SALES_IMAGE_2}>
                             <div id={styles.SALES_IMAGE_3}>
 
-                                 <div class="rounded-xl ..." id={styles.SALES_IMAGE_V}>
+                                 <div class="rounded-lg ..." id={styles.SALES_IMAGE_V}>
                                     {storiesSolo_1.map((story, index) => {
                                         return (                                 
                                         <Image
@@ -83,7 +83,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     )})} 
                                 </div>  
 
-                                 <div class="rounded-xl ..." id={styles.SALES_IMAGE_W}>
+                                 <div class="rounded-lg ..." id={styles.SALES_IMAGE_W}>
                                     {storiesSolo_1.map((story, index) => {
                                         return (                 
                                         <Image
@@ -101,7 +101,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     )})} 
                                 </div>  
 
-                                <div class="rounded-xl ..." id={styles.SALES_IMAGE_X}>
+                                <div class="rounded-lg ..." id={styles.SALES_IMAGE_X}>
                                     {storiesSolo_1.map((story, index) => {
                                         return (
                            
@@ -120,7 +120,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     )})} 
                                 </div>  
 
-                                <div class="rounded-xl ..." id={styles.SALES_IMAGE_Y}>
+                                <div class="rounded-lg ..." id={styles.SALES_IMAGE_Y}>
                                     {storiesSolo_1.map((story, index) => {
                                         return (                      
                                         <Image
@@ -138,7 +138,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     )})} 
                                 </div> 
 
-                                <div class="rounded-xl ..." id={styles.SALES_IMAGE_Z}>
+                                <div class="rounded-lg ..." id={styles.SALES_IMAGE_Z}>
                                     {storiesSolo_1.map((story, index) => {
                                         return (                          
                                         <Image
@@ -172,7 +172,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             $12.99
                         </h3>
 
-                        <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
+                        <h3 class="text-md ... text-stone-700 ... font-geist_regular">
                             Tax included. 
                         </h3>
                     </div>
@@ -281,7 +281,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                     <div id={styles.BOUGHT_IMAGE_HOLDER}>
 
-                    <div class="rounded-xl ..." id={styles.SALES_IMAGE_A}>
+                    <div class="rounded-lg ..." id={styles.SALES_IMAGE_A}>
                             {storiesSolo_1.map((story, index) => {
                                   return (                      
                                 <Image
@@ -300,7 +300,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                         </div>  
 
 
-                    <div class="rounded-xl ..." id={styles.SALES_IMAGE_B}>
+                    <div class="rounded-lg ..." id={styles.SALES_IMAGE_B}>
                             {storiesSolo_1.map((story, index) => {
                                   return (                 
                                 <Image
@@ -318,7 +318,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             )})} 
                         </div>  
 
-                    <div class="rounded-xl ..." id={styles.SALES_IMAGE_C}>
+                    <div class="rounded-lg ..." id={styles.SALES_IMAGE_C}>
                             {storiesSolo_1.map((story, index) => {
                                   return (                
                                 <Image
@@ -345,7 +345,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                         <div id={styles.BOUGHT_IMAGE_MOBILE}>
 
-                            <div class="rounded-xl ..." id={styles.SALES_IMAGE_A}>
+                            <div class="rounded-lg ..." id={styles.SALES_IMAGE_A}>
                                 {storiesSolo_1.map((story, index) => {
                                         return (                      
                                     <Image
@@ -364,7 +364,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             </div>  
 
 
-                            <div class="rounded-xl ..." id={styles.SALES_IMAGE_B}>
+                            <div class="rounded-lg ..." id={styles.SALES_IMAGE_B}>
                                     {storiesSolo_1.map((story, index) => {
                                         return (                 
                                         <Image
@@ -382,7 +382,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     )})} 
                                 </div>  
 
-                            <div class="rounded-xl ..." id={styles.SALES_IMAGE_C}>
+                            <div class="rounded-lg ..." id={styles.SALES_IMAGE_C}>
                                     {storiesSolo_1.map((story, index) => {
                                         return (                
                                         <Image
