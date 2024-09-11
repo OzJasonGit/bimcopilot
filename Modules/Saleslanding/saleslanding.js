@@ -17,6 +17,7 @@ import Image from "next/image";
 
 
 import { Button } from "@/components/ui/button"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 
 import bimcopilot from './Bim-copilot-logo_Horizontal.png';
@@ -180,6 +181,13 @@ const Saleslanding = ({ stories, firstStory }) => {
                         <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
                             License Type.
                         </h3>
+
+                        <Tabs defaultValue="account" className="w-[400px]">
+                            <TabsList>
+                                <TabsTrigger value="account">Account</TabsTrigger>
+                                <TabsTrigger value="password">Password</TabsTrigger>
+                            </TabsList>
+                        </Tabs>
 
                         
 
