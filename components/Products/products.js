@@ -284,11 +284,13 @@ export default class Products extends Component {
                         <Link href="/sales">Shop</Link>
                       </a>
                 </h2>
-                <h3>
+                <h3 id={styles._H3}
+                      class=" text-neutral-700 ... font-geist_regular ... text-md ...">
                   Click Here! <a></a>
                 </h3>
                 <br/>                
-                <h3>
+                <h3 id={styles._H3}
+                      class=" text-neutral-700 ... font-geist_regular ... text-md ...">
                   Custom designed resources to help streamline, automate and enhance your workflow in architecture, design and manufacturing. 
                 </h3>
               </div>
