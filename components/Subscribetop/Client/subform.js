@@ -85,10 +85,8 @@ const Subform = () => {
           </Button> */}
 
           <Button variant="outline"
-                  style={{
-                          position: "absolute",
-                          width: "100%",
-                          height: "100%",}}>Click Here!</Button>
+                  id={styles.FORM_BUTTON}
+                  >Click Here!</Button>
         </Form.Item>
       </Form>
       {error && <div style={{ color: 'red', marginTop: '5px' }}>{error}</div>}
