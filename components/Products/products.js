@@ -263,7 +263,7 @@ export default class Products extends Component {
                       id={styles._H3}
                       class=" text-neutral-700 ... font-geist_semibold ... text-md ..."
                     >
-                      Parametric External Doors (Metric + Imperial)
+                      Parametric External Doors Title Blocks (Metric + Imperial)
                     </h3>
                     <br/>
                     <h4 id={styles._H4} class=" text-neutral-700 ... font-geist_regular text-md ...">
@@ -281,7 +281,7 @@ export default class Products extends Component {
                 <h2
                     id={styles.TEXT_OUTLINE_2}>
                       <a class=" text-yellow-200 ... font-avant_garde_bold ...">
-                        <Link href="/sales">Shop</Link>
+                        <Link href="/products">Shop</Link>
                       </a>
                 </h2>
                 <h3 id={styles._H3}
