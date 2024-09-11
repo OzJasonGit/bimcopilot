@@ -51,12 +51,12 @@ const Salespayment = ({ stories, firstStory }) => {
                 </div>
 
 
-                <div id={styles.BACKGROUND_} style={{
+                <div id={styles.BASKET_HOLDER} style={{
                                         position: "relative",
                                         width: "100%",
                                         height: "1200px",
-                                        backgroundColor:"white",
-                                        gridArea:"CHECKOUT"}}>
+                                        backgroundColor:"transparent",
+                                        gridArea:"IMAGE"}}>
                 </div>
             </div>
         </div>
