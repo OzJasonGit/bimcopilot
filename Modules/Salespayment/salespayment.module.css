@@ -120,6 +120,16 @@
             ".   .   .   .   ."
 }
 
+#CHECKOUT_HOLDER {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+            ".   .   .   .   ."
+            ".   .   CHECKOUT  CHECKOUT   . "
+            ".   .   .   .   ."
+}
+
 
 #BASKET_HOLDER {
     display: grid;

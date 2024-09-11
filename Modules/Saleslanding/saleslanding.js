@@ -186,15 +186,15 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                         <Tabs defaultValue="account" className="w-[400px]">
                             <TabsList>
-                                <TabsTrigger value="account">Account</TabsTrigger>
-                                <TabsTrigger value="password">Password</TabsTrigger>
+                                <TabsTrigger value="educatiional">Educational</TabsTrigger>
+                                <TabsTrigger value="commercial">Commercial</TabsTrigger>
                             </TabsList>
                         </Tabs>
 
                         <br/> <br/>
 
                         
-                        <h3  class="text-md ... text-stone-700 ... font-geist_regular">
+                        <h3  class="text-md ... text-stone-700 ...font-geist_regular">
                             Are you a student? Select Educational Use.
                         </h3>
                     </div>

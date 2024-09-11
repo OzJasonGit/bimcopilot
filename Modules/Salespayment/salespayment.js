@@ -49,6 +49,9 @@ const Salespayment = ({ stories, firstStory }) => {
                                         height: "1200px",
                                         backgroundColor:"white",
                                         gridArea:"CHECKOUT"}}>
+                                        <div id={styles.CHECKOUT_HOLDER}>
+
+                                        </div>
                 </div>
 
 
@@ -59,7 +62,7 @@ const Salespayment = ({ stories, firstStory }) => {
                                         backgroundColor:"transparent",
                                         gridArea:"IMAGE"}}>
                 </div>
-                
+
             </div>
         </div>
       </section>
