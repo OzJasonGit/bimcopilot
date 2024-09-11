@@ -80,7 +80,7 @@ export default class Products extends Component {
                             Parametric Title Block Catalogue (Metric + Imperial)
                           </h3>
                           <br/>
-                          <h4 class=" text-neutral-700 ... font-geist_regular">
+                          <h4 id={styles._H4} class=" text-neutral-700 ... font-geist_regular ...">
                             {" "}
                             From $53.90
                           </h4>
@@ -120,13 +120,13 @@ export default class Products extends Component {
 
                               <div>
                                 <Link href="/">
-                                  <h2
-                                    id={styles._H2}
+                                  <h3
+                                    id={styles._H3}
                                     class=" text-neutral-700 ... font-geist_semibold">
                                     Parametric Title Block Catalogue (Metric + Imperial)
-                                  </h2>
+                                  </h3>
                                   <br/>
-                                  <h4 class=" text-neutral-700 ... font">
+                                  <h4 id={styles._H4} class=" text-neutral-700 ... font-geist_regular ...">
                                     {" "}
                                     From $53.90
                                   </h4>
@@ -180,11 +180,11 @@ export default class Products extends Component {
                                 <Link href="/sales">
                                   <h2
                                     id={styles._H2}
-                                    class=" text-neutral-700 ... font-avant_garde_bold">
+                                    class=" text-neutral-700 ... font-geist_semibold ... text-lg ...">
                                     Parametric Title Block Catalogue (Metric + Imperial)
                                   </h2>
                                   <br/>
-                                  <h4 class=" text-neutral-700 ... font-avant_garde_bold">
+                                  <h4 class=" text-neutral-700 ... font-geist_regular ... text-md ...">
                                     {" "}
                                     From $53.90
                                   </h4>
@@ -236,10 +236,10 @@ export default class Products extends Component {
                   <Link href="/sales">
                     <h2
                       id={styles._2H2}
-                      class=" text-neutral-700 ... font-avant_garde_bold ... text-xl ...">
+                      class=" text-neutral-700 ... font-geist_semibold ... text-lg ...">
                       Parametric Title Block Catalogue (Metric + Imperial)
                     </h2>
-                    <h3 class=" text-neutral-700 ... font-avant_garde_bold text-md ...">
+                    <h3 class=" text-neutral-700 ... font-geist_regular ... text-md ...">
                       {" "}
                       From $33.00
                     </h3>
@@ -268,11 +268,11 @@ export default class Products extends Component {
                   <Link href="/sales">
                     <h2
                       id={styles._2H2}
-                      class=" text-neutral-700 ... font-avant_garde_bold ... text-xl ..."
+                      class=" text-neutral-700 ... font-geist_semibold ... text-lg ..."
                     >
                       Parametric Colored Title Blocks (Metric + Imperial)
                     </h2>
-                    <h3 class=" text-neutral-700 ... font-avant_garde_bold text-md ...">
+                    <h3 class=" text-neutral-700 ... font-geist_regular ... text-md ...">
                       {" "}
                       From $31.90
                     </h3>
@@ -301,11 +301,11 @@ export default class Products extends Component {
                   <Link href="/sales">
                     <h2
                       id={styles._2H2}
-                      class=" text-neutral-700 ... font-avant_garde_bold ... text-xl ..."
+                      class=" text-neutral-700 ... font-geist_semibold ... text-lg ..."
                     >
                       Parametric External Doors (Metric + Imperial)
                     </h2>
-                    <h3 class=" text-neutral-700 ... font-avant_garde_bold text-md ...">
+                    <h3 class=" text-neutral-700 ... font-geist_regular text-md ...">
                       {" "}
                       From $53.90
                     </h3>
