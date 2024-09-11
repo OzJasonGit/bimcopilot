@@ -84,7 +84,7 @@ const Subform = () => {
             </h2>
           </Button> */}
 
-          <Button 
+          <Button variant="outline"
                   id={styles.FORM_BUTTON}
                   type="primary"
                   htmlType="submit"
