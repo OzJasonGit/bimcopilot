@@ -182,6 +182,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                             License Type.
                         </h3>
 
+                        <br/> <br/>
+
                         <Tabs defaultValue="account" className="w-[400px]">
                             <TabsList>
                                 <TabsTrigger value="account">Account</TabsTrigger>
@@ -189,8 +191,9 @@ const Saleslanding = ({ stories, firstStory }) => {
                             </TabsList>
                         </Tabs>
 
-                        
+                        <br/> <br/>
 
+                        
                         <h3  class="text-md ... text-stone-700 ... font-geist_regular">
                             Are you a student? Select Educational Use.
                         </h3>
