@@ -84,9 +84,13 @@ const Subform = () => {
             </h2>
           </Button> */}
 
-          <Button variant="outline"
+          <Button 
                   id={styles.FORM_BUTTON}
-                  >Click Here!</Button>
+                  type="primary"
+                  htmlType="submit"
+                  loading={isLoading}
+                  >Click Here!
+          </Button>
         </Form.Item>
       </Form>
       {error && <div style={{ color: 'red', marginTop: '5px' }}>{error}</div>}
