@@ -258,7 +258,7 @@ const Salespayment = ({ stories, firstStory }) => {
                 <div id={styles.CHECKOUT_BACKGROUND} style={{
                                         position: "relative",
                                         width: "100%",
-                                        height: "100%",
+                                        height: "800px",
                                         backgroundColor:"white",
                                         gridArea:"CHECKOUT"}}>
                 </div>
