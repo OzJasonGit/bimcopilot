@@ -113,9 +113,18 @@
 #CHECKOUT_BACKGROUND {
     display: grid;
     grid-template-columns: 20px 120px 20px 1fr 40px;
+    grid-template-rows: auto;
     grid-template-areas:
-            ".   .   .   CHECKOUT   . "
+            ".   .   CHECKOUT  CHECKOUT   . "
+}
 
+
+#BASKET_HOLDER {
+    display: grid;
+    grid-template-columns: 40px 1fr 20px 120px 20px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        ".   BASKET  BASKET  .   . "
 }
 
 
