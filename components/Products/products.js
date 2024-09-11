@@ -76,11 +76,11 @@ export default class Products extends Component {
                         <Link href="/">
                           <h3
                             id={styles._H3}
-                            class=" text-neutral-700 ... font-geist_semibold ...">
+                            class=" text-neutral-700 ... font-geist_semibold ... text-md ...">
                             Parametric Title Block Catalogue (Metric + Imperial)
                           </h3>
                           <br/>
-                          <h4 id={styles._H4} class=" text-neutral-700 ... font-geist_regular ...">
+                          <h4 id={styles._H4} class=" text-neutral-700 ... font-geist_regular ... text-md ...">
                             {" "}
                             From $53.90
                           </h4>
@@ -122,11 +122,11 @@ export default class Products extends Component {
                                 <Link href="/">
                                   <h3
                                     id={styles._H3}
-                                    class=" text-neutral-700 ... font-geist_semibold">
+                                    class=" text-neutral-700 ... font-geist_semibold ... text-md ...">
                                     Parametric Title Block Catalogue (Metric + Imperial)
                                   </h3>
                                   <br/>
-                                  <h4 id={styles._H4} class=" text-neutral-700 ... font-geist_regular ...">
+                                  <h4 id={styles._H4} class=" text-neutral-700 ... font-geist_regular ... text-md ...">
                                     {" "}
                                     From $53.90
                                   </h4>
@@ -180,7 +180,7 @@ export default class Products extends Component {
                                 <Link href="/sales">
                                   <h2
                                     id={styles._H2}
-                                    class=" text-neutral-700 ... font-geist_semibold ... text-lg ...">
+                                    class=" text-neutral-700 ... font-geist_semibold ... text-md ...">
                                     Parametric Title Block Catalogue (Metric + Imperial)
                                   </h2>
                                   <br/>
@@ -236,7 +236,7 @@ export default class Products extends Component {
                   <Link href="/sales">
                     <h2
                       id={styles._2H2}
-                      class=" text-neutral-700 ... font-geist_semibold ... text-lg ...">
+                      class=" text-neutral-700 ... font-geist_semibold ... text-md ...">
                       Parametric Title Block Catalogue (Metric + Imperial)
                     </h2>
                     <h3 class=" text-neutral-700 ... font-geist_regular ... text-md ...">
@@ -268,7 +268,7 @@ export default class Products extends Component {
                   <Link href="/sales">
                     <h2
                       id={styles._2H2}
-                      class=" text-neutral-700 ... font-geist_semibold ... text-lg ..."
+                      class=" text-neutral-700 ... font-geist_semibold ... text-md ..."
                     >
                       Parametric Colored Title Blocks (Metric + Imperial)
                     </h2>
@@ -301,7 +301,7 @@ export default class Products extends Component {
                   <Link href="/sales">
                     <h2
                       id={styles._2H2}
-                      class=" text-neutral-700 ... font-geist_semibold ... text-lg ..."
+                      class=" text-neutral-700 ... font-geist_semibold ... text-md ..."
                     >
                       Parametric External Doors (Metric + Imperial)
                     </h2>
