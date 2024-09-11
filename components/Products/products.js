@@ -32,26 +32,10 @@ export default class Products extends Component {
               <div id={styles.PRODUCTS_HORIZONTAL_MOBILE}>
 
 
-
-              
-
-                  
-
-
-
-
-
-
-
-
-
-
                 <div
                       class="rounded-md ..."
                       id={styles.PRODUCT_CARD}
                       styles={{ gridArea: "2" }}>
-
-
 
 
                       <div 
@@ -69,9 +53,6 @@ export default class Products extends Component {
 
                       </div>
                       
-
-
-
                       <div>
                         <Link href="/">
                           <h3
@@ -88,17 +69,13 @@ export default class Products extends Component {
                       </div>
 
 
-                </div>
+              </div>
 
 
-
-                <div
+              <div
                       class="rounded-md ..."
                       id={styles.PRODUCT_CARD}
                       styles={{ gridArea: "1" }}>
-
-
-
 
                               <div 
                                 id={styles.IMAGE_1}>
@@ -115,9 +92,6 @@ export default class Products extends Component {
 
                               </div>
                               
-
-
-
                               <div>
                                 <Link href="/">
                                   <h3
@@ -133,27 +107,12 @@ export default class Products extends Component {
                                 </Link>
                               </div>
 
-
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
+              </div>
 
               <div
                       class="rounded-md ..."
                       id={styles.PRODUCT_CARD}
                       styles={{ gridArea: "3" }}>
-
-
 
 
                               <div 
@@ -170,21 +129,18 @@ export default class Products extends Component {
                                       alt=""/>                                                                            
                                     <Image/>
                                   </Link>
-
                               </div>
                               
 
-
-
                               <div>
                                 <Link href="/sales">
-                                  <h2
-                                    id={styles._H2}
+                                  <h3
+                                    id={styles._H3}
                                     class=" text-neutral-700 ... font-geist_semibold ... text-md ...">
                                     Parametric Title Block Catalogue (Metric + Imperial)
-                                  </h2>
+                                  </h3>
                                   <br/>
-                                  <h4 class=" text-neutral-700 ... font-geist_regular ... text-md ...">
+                                  <h4 id={styles._H4} class=" text-neutral-700 ... font-geist_regular ... text-md ...">
                                     {" "}
                                     From $53.90
                                   </h4>
@@ -193,16 +149,6 @@ export default class Products extends Component {
 
 
                 </div>
-
-
-
-
-
-
-
-
-
-
               </div>
             </div>
 
@@ -215,9 +161,21 @@ export default class Products extends Component {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div id={styles.PRODUCTS_HOLDER}>
-
-
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_1" }}>
                 <Link href="/sales">
                   <Image
@@ -234,15 +192,16 @@ export default class Products extends Component {
                                
                 <div>
                   <Link href="/sales">
-                    <h2
-                      id={styles._2H2}
+                    <h3
+                      id={styles._H3}
                       class=" text-neutral-700 ... font-geist_semibold ... text-md ...">
                       Parametric Title Block Catalogue (Metric + Imperial)
-                    </h2>
-                    <h3 class=" text-neutral-700 ... font-geist_regular ... text-md ...">
+                    </h3>
+                    <br/>
+                    <h4 id={styles._H4} class=" text-neutral-700 ... font-geist_regular ... text-md ...">
                       {" "}
                       From $33.00
-                    </h3>
+                    </h4>
                   </Link>
                 </div>
 
@@ -266,16 +225,17 @@ export default class Products extends Component {
 
                 <div>
                   <Link href="/sales">
-                    <h2
-                      id={styles._2H2}
+                    <h3
+                      id={styles._H3}
                       class=" text-neutral-700 ... font-geist_semibold ... text-md ..."
                     >
                       Parametric Colored Title Blocks (Metric + Imperial)
-                    </h2>
-                    <h3 class=" text-neutral-700 ... font-geist_regular ... text-md ...">
+                    </h3>
+                    <br/>
+                    <h4 id={styles._H4} class=" text-neutral-700 ... font-geist_regular ... text-md ...">
                       {" "}
                       From $31.90
-                    </h3>
+                    </h4>
                   </Link>
                 </div>
 
@@ -299,16 +259,17 @@ export default class Products extends Component {
                 
                 <div>
                   <Link href="/sales">
-                    <h2
-                      id={styles._2H2}
+                    <h3
+                      id={styles._H3}
                       class=" text-neutral-700 ... font-geist_semibold ... text-md ..."
                     >
                       Parametric External Doors (Metric + Imperial)
-                    </h2>
-                    <h3 class=" text-neutral-700 ... font-geist_regular text-md ...">
+                    </h3>
+                    <br/>
+                    <h4 id={styles._H4} class=" text-neutral-700 ... font-geist_regular text-md ...">
                       {" "}
                       From $53.90
-                    </h3>
+                    </h4>
                   </Link>
                 </div>
 
