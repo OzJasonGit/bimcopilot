@@ -211,11 +211,14 @@ const Saleslanding = ({ stories, firstStory }) => {
                             </div>
 
                             <div id={styles.PAYPAL}>  
-                                <Button variant="secondary"  style={{
+                                <Link href="/payment">
+                                    <Button variant="secondary"  style={{
                                         position: "absolute",
                                         width: "100%",
                                         height: "100%",}}>Buy With Paypal
-                                </Button>                                 
+                                    </Button>     
+                                </Link>
+                                                            
                             </div>
 
                             <div id={styles.MORE_OPTIONS}>    
