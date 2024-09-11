@@ -113,9 +113,11 @@
 #CHECKOUT_BACKGROUND {
     display: grid;
     grid-template-columns: 20px 120px 20px 1fr 40px;
-    grid-template-rows: auto;
+    grid-template-rows: 40px auto 40px;
     grid-template-areas:
+            ".   .   .   .   ."
             ".   .   CHECKOUT  CHECKOUT   . "
+            ".   .   .   .   ."
 }
 
 
