@@ -7,6 +7,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from './subform.module.css';
 
+
+import { Button } from "@/components/ui/button"
 import { Form, Input, Button } from "antd";
 
 const Subform = () => {
@@ -67,7 +69,7 @@ const Subform = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button
+         {/* <Button
             id={styles.FORM_BUTTON}
             type="primary"
             htmlType="submit"
@@ -80,7 +82,13 @@ const Subform = () => {
             >
               <a id={styles.TEXT_OUTLINE}>Click Here!</a>
             </h2>
-          </Button>
+          </Button> */}
+
+          <Button variant="outline"
+                  style={{
+                          position: "absolute",
+                          width: "100%",
+                          height: "100%",}}>Click Here!</Button>
         </Form.Item>
       </Form>
       {error && <div style={{ color: 'red', marginTop: '5px' }}>{error}</div>}
