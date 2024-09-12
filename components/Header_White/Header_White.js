@@ -75,7 +75,7 @@ export default class Header_White extends Component {
                       <h3
                         id={styles.H_3_PRODUCTS}
                         class="text-center ...  text-stone-700  font-avant_garde_bold"
-                        data-content="Products"
+                        data-content="Shop"
                       >
                         Shop
                       </h3>
