@@ -84,9 +84,7 @@ story_id = params.slug
                                           {story.subtitle}
                                         </h4>
                                       </div>
-
-                                      
-
+                                                                           
                                     </div>
 
                                   

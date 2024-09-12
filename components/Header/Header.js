@@ -75,9 +75,9 @@ export default class Header extends Component {
                       <h3
                         id={styles.H_3_PRODUCTS}
                         class="text-center ...  text-slate-50  font-avant_garde_bold"
-                        data-content="Products"
+                        data-content="Shop"
                       >
-                        Products
+                        Shop
                       </h3>
                     </Link>
 
