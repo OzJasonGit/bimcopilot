@@ -74,16 +74,16 @@ story_id = params.slug
                                       </div> 
 
                                       <div id={styles.BLOG_TEXT}> 
-                                        <h2 id={styles._H3} class="text-stone-300 ...  text-2xl ... font-avant_garde_bold">
+                                        <h3 id={styles._H3} class="text-md ... text-stone-200 ... font-geist_semibold ...">
                                           {story.title}
-                                        </h2>
+                                        </h3>
                                       
 
                                         
                                       
-                                        <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold">
+                                        <h4 id={styles._H4} class="text-stone-400 ... font-geist_regular ...">
                                           {story.subtitle}
-                                        </h3>
+                                        </h4>
                                       </div>
 
                                       
