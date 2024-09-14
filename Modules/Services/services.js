@@ -279,7 +279,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
 
 
-    <Services_9/>
+    {/*<Services_9/>*/}
     <Services_10/>
     <Footer/>
 
