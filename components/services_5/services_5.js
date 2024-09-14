@@ -85,20 +85,29 @@ return (
 
                 <div id={styles.SERVICE_1_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
+                  </div>
 
+                  <div id={styles.COLLAPSE_HOLDER}>
+                    <Collapsed />
                   </div>
                 </div>
 
                 <div id={styles.SERVICE_2_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
+                  </div> 
 
-                  </div>                 
+                  <div id={styles.COLLAPSE_HOLDER}>
+                    <Collapsed />
+                  </div>                
                 </div>
 
                 <div id={styles.SERVICE_3_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
+                  </div> 
 
-                  </div>                 
+                  <div id={styles.COLLAPSE_HOLDER}>
+                    <Collapsed />
+                  </div>                
                 </div>
 
               </div>

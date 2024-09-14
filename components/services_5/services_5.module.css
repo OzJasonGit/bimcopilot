@@ -270,7 +270,7 @@
 
 #COLLAPSE_HOLDER {
     position: relative;
-    grid-area: SUB;
+    grid-area: ;
     left: -40px;
 }
 
