@@ -18,20 +18,20 @@ const contentStyle = {
 
 const panel_1 = () => (
     
-    <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-geist_semibold text-md"
-        id={styles._H2}>
+        id={styles._H3}>
         Project Management, Delivery and Consultancy        
-    </h2>
+    </h3>
 );
 
 const panel_2 = () => (
-    <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-geist_semibold text-md"
-        id={styles._H2}> 
+        id={styles._H3}> 
         BIM Strategy, Execution Plan (BEP) and Documentation 
         Digital Twin product development 
-    </h2>
+    </h3>
 );
 
 
