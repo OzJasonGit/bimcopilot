@@ -53,7 +53,9 @@ return (
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_services_2}>
             <div  id={styles.SERVICES_HOLDER}>
+              <div id={styles.SERVICES_GRID}>
 
+              </div>
             </div>
           </div>
       </section>

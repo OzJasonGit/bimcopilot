@@ -115,6 +115,21 @@
 }
 
 
+#SERVICES_HOLDER {
+    width: 100%;
+    position: relative;
+    grid-area: SERVICES;
+    height: auto;
+    display: grid;
+    grid-column-gap: 60px;
+    grid-row-gap: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 60px auto 60px auto;
+    grid-template-areas:
+        "SERVICES_2 SERVICES_1";
+}
+
+
 
 
 
