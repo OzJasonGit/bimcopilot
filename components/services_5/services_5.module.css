@@ -124,7 +124,7 @@
     grid-column-gap: 60px;
     grid-row-gap: 0;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 20px auto 20px   40px auto 40px    40px auto 40px    40px auto 40px;
+    grid-template-rows: auto 20px auto 20px    auto 40px  auto 40px  auto ;
     grid-template-areas:
     "TITLE TITLE"
     ". ."
@@ -133,12 +133,9 @@
 
 
     "SERVICES_1 ."
-    "SERVICES_1 ."
-    "SERVICES_1 ."
-    "SERVICES_1 SERVICES_2"
-    ".          SERVICES_2"
-    "SERVICES_3 SERVICES_2"
-    "SERVICES_3 ."
+    ". ."
+    ". SERVICES_2"
+    ". ."
     "SERVICES_3 .";
 }
 
