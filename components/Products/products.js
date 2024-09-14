@@ -33,7 +33,7 @@ export default class Products extends Component {
 
 
                 <div
-                      class="rounded-md ..."
+                      class="rounded-xl ..."
                       id={styles.PRODUCT_CARD}
                       styles={{ gridArea: "2" }}>
 
@@ -42,7 +42,7 @@ export default class Products extends Component {
                         id={styles.IMAGE_1}>
                         
                           <Image
-                            class=" rounded-md ... "
+                            class=" rounded-xl ... "
                             id={styles.PRODUCT_IMAGE}
                             src={revitBlinds}                    
                             style={{objectFit: "cover"}}
@@ -73,7 +73,7 @@ export default class Products extends Component {
 
 
               <div
-                      class="rounded-md ..."
+                      class="rounded-xl ..."
                       id={styles.PRODUCT_CARD}
                       styles={{ gridArea: "1" }}>
 
@@ -81,7 +81,7 @@ export default class Products extends Component {
                                 id={styles.IMAGE_1}>
                                 
                                   <Image
-                                    class=" rounded-md ... "
+                                    class=" rounded-xl ... "
                                     id={styles.PRODUCT_IMAGE}
                                     src={drawingSheets}                     
                                     style={{objectFit: "cover"}}
@@ -110,7 +110,7 @@ export default class Products extends Component {
               </div>
 
               <div
-                      class="rounded-md ..."
+                      class="rounded-xl ..."
                       id={styles.PRODUCT_CARD}
                       styles={{ gridArea: "3" }}>
 
@@ -120,7 +120,7 @@ export default class Products extends Component {
 
                                   <Link href="/sales">
                                     <Image
-                                      class=" rounded-md ... "
+                                      class=" rounded-xl ... "
                                       id={styles.PRODUCT_IMAGE}
                                       src={volumesByRoom}                     
                                       style={{objectFit: "cover"}}
