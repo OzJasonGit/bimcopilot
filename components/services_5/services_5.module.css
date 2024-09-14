@@ -227,7 +227,7 @@
 
 
 #COLLAPSE_MESSAGE_2 {
-    grid-area: MESSAGE;
+    grid-area: SUBTITLE;
     width: 100%;
     height: auto;
     display: grid;
