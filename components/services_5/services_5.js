@@ -99,7 +99,8 @@ return (
                     </h3>
                   </div> 
 
-                  <div id={styles.COLLAPSE_HOLDER}>                                  
+                  <div id={styles.COLLAPSE_HOLDER}> 
+                    <Collapsed/>                                 
                   </div>                
                 </div>
 
