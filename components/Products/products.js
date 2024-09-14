@@ -33,7 +33,7 @@ export default class Products extends Component {
 
 
                 <div
-                      class="rounded-xl ..."
+                      class="rounded-2xl ..."
                       id={styles.PRODUCT_CARD}
                       styles={{ gridArea: "2" }}>
 
@@ -42,7 +42,7 @@ export default class Products extends Component {
                         id={styles.IMAGE_1}>
                         
                           <Image
-                            class=" rounded-xl ... "
+                            class=" rounded-2xl ... "
                             id={styles.PRODUCT_IMAGE}
                             src={revitBlinds}                    
                             style={{objectFit: "cover"}}
@@ -73,7 +73,7 @@ export default class Products extends Component {
 
 
               <div
-                      class="rounded-xl ..."
+                      class="rounded-2xl ..."
                       id={styles.PRODUCT_CARD}
                       styles={{ gridArea: "1" }}>
 
@@ -81,7 +81,7 @@ export default class Products extends Component {
                                 id={styles.IMAGE_1}>
                                 
                                   <Image
-                                    class=" rounded-xl ... "
+                                    class=" rounded-2xl ... "
                                     id={styles.PRODUCT_IMAGE}
                                     src={drawingSheets}                     
                                     style={{objectFit: "cover"}}
@@ -110,7 +110,7 @@ export default class Products extends Component {
               </div>
 
               <div
-                      class="rounded-xl ..."
+                      class="rounded-2xl ..."
                       id={styles.PRODUCT_CARD}
                       styles={{ gridArea: "3" }}>
 
@@ -120,7 +120,7 @@ export default class Products extends Component {
 
                                   <Link href="/sales">
                                     <Image
-                                      class=" rounded-xl ... "
+                                      class=" rounded-2xl ... "
                                       id={styles.PRODUCT_IMAGE}
                                       src={volumesByRoom}                     
                                       style={{objectFit: "cover"}}
@@ -179,7 +179,7 @@ export default class Products extends Component {
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_1" }}>
                 <Link href="/sales">
                   <Image
-                    class=" rounded-md ... "
+                    class=" rounded-2xl ... "
                     id={styles.PRODUCT_IMAGE}
                     src={revitBlinds}                    
                     style={{objectFit: "cover"}}
@@ -212,7 +212,7 @@ export default class Products extends Component {
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_2" }}>
                 <Link href="/sales">
                   <Image
-                      class=" rounded-md ... drop-shadow-xl ... "
+                      class=" rounded-2xl ... drop-shadow-xl ... "
                       id={styles.PRODUCT_IMAGE}
                       src={drawingSheets}                    
                       style={{objectFit: "cover"}}
@@ -247,7 +247,7 @@ export default class Products extends Component {
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_3" }}>
                 <Link href="/sales">
                   <Image
-                      class="bg-neutral-900 rounded-md ..."
+                      class="rounded-2xl ..."
                       id={styles.PRODUCT_IMAGE}
                       src={volumesByRoom}                    
                       style={{objectFit: "cover"}}
