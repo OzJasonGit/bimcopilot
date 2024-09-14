@@ -131,14 +131,14 @@ story_id = params.slug
                 </Link>
               </div>
 
-              <div id={styles.TIMESTAMP}>
+              {/*<div id={styles.TIMESTAMP}>
                 <h3
                   id={styles._H3}
                   class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_bold"
                 >
                   {stories.data[0].timestamp}
                 </h3>
-              </div>
+              </div>*/}
             </div>
 
             <div id={styles.NEWS}>
