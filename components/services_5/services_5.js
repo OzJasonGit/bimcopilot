@@ -88,7 +88,7 @@ return (
                   </div>
 
                   <div id={styles.COLLAPSE_HOLDER}>
-                    <Collapsed />
+              
                   </div>
                 </div>
 
@@ -97,7 +97,7 @@ return (
                   </div> 
 
                   <div id={styles.COLLAPSE_HOLDER}>
-                    <Collapsed />
+                 
                   </div>                
                 </div>
 
@@ -106,7 +106,7 @@ return (
                   </div> 
 
                   <div id={styles.COLLAPSE_HOLDER}>
-                    <Collapsed />
+                 
                   </div>                
                 </div>
 
