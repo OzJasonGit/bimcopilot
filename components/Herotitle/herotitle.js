@@ -31,7 +31,7 @@ export default class Herotitle extends Component {
                 </a>
                 <a
                   id={styles.TEXT_OUTLINE}
-                  class="text-6xl ...  text-stone-50 ... underline decoration-4 ... decoration-stone-700 ..."
+                  class="text-6xl ...  text-stone-50 ... underline decoration-4 ... decoration-stone-600 ..."
                 >
                   {" "}
                   architecture
@@ -39,7 +39,7 @@ export default class Herotitle extends Component {
                 ,
                 <a
                   id={styles.TEXT_OUTLINE}
-                  class="text-6xl ... text-stone-50 ... underline decoration-4 ... decoration-stone-700 ..."
+                  class="text-6xl ... text-stone-50 ... underline decoration-4 ... decoration-stone-600 ..."
                 >
                   {" "}
                   construction{" "}
@@ -47,7 +47,7 @@ export default class Herotitle extends Component {
                 <a class="text-6xl ...">and</a>{" "}
                 <a
                   id={styles.TEXT_OUTLINE}
-                  class="text-6xl ... text-stone-50 ... underline decoration-4 ... decoration-stone-700 ..."
+                  class="text-6xl ... text-stone-50 ... underline decoration-4 ... decoration-stone-600 ..."
                 >
                   {" "}
                   technology
