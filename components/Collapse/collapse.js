@@ -19,7 +19,7 @@ const contentStyle = {
 const panel_1 = () => (
     
     <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-geist_semibold text-xl"
+        class="font-geist_semibold text-md"
         id={styles._H2}>
         Project Management, Delivery and Consultancy        
     </h2>
@@ -27,7 +27,7 @@ const panel_1 = () => (
 
 const panel_2 = () => (
     <h2 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-geist_semibold text-xl"
+        class="font-geist_semibold text-md"
         id={styles._H2}> 
         BIM Strategy, Execution Plan (BEP) and Documentation 
         Digital Twin product development 
@@ -70,7 +70,7 @@ const Collapsed = () => {
                                             header={panel_1()}
                                         >
                                             <h3 class="font-geist_regular text-md ..."
-                                                style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
+                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
                                                 A dog is a type of domesticated
@@ -87,7 +87,7 @@ const Collapsed = () => {
                                             header={panel_2()}
                                         >
                                             <h3 class="font-geist_regular text-md ..."
-                                                style={{ color: "rgb(120 113 108)", position: "relative", left: "25px" }}
+                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
                                                 A dog is a type of domesticated
