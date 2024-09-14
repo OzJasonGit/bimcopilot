@@ -139,7 +139,32 @@
 }
 
 
+#SERVICES_1_HOLDER {
+    grid-area: SERVICES_1;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto;
+}
 
+#SERVICES_2_HOLDER {
+    grid-area: SERVICES_2;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto;
+}
+
+#SERVICES_3_HOLDER {
+    grid-area: SERVICES_3;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto;
+}
 
 
 
