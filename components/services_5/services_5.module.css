@@ -115,7 +115,7 @@
 }
 
 
-#SERVICES_HOLDER {
+#SERVICES_GRID {
     width: 100%;
     position: relative;
     grid-area: SERVICES;
