@@ -85,28 +85,31 @@ return (
 
                 <div id={styles.SERVICE_1_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
+                    <h3>BIM and AI
+                    </h3>
                   </div>
 
-                  <div id={styles.COLLAPSE_HOLDER}>
-              
+                  <div id={styles.COLLAPSE_HOLDER}>             
                   </div>
                 </div>
 
                 <div id={styles.SERVICE_2_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
+                    <h3>Analytics and Automation
+                    </h3>
                   </div> 
 
-                  <div id={styles.COLLAPSE_HOLDER}>
-                 
+                  <div id={styles.COLLAPSE_HOLDER}>                                  
                   </div>                
                 </div>
 
                 <div id={styles.SERVICE_3_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
+                    <h3>Design amd Tech
+                    </h3>  
                   </div> 
 
-                  <div id={styles.COLLAPSE_HOLDER}>
-                 
+                  <div id={styles.COLLAPSE_HOLDER}>                 
                   </div>                
                 </div>
 
