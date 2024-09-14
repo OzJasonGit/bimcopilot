@@ -124,7 +124,7 @@
     grid-column-gap: 60px;
     grid-row-gap: 0;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 60px auto 60px auto;
+    grid-template-rows: auto 60px auto 60px auto 60px auto;
     grid-template-areas:
         "SERVICES_2 SERVICES_1";
 }
