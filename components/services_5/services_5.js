@@ -13,7 +13,7 @@ return (
 
    <>
 
-     <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+     {/*<section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_services}>
 
             <div id={styles.COLLAPSE_TITLE}>
@@ -45,7 +45,7 @@ return (
               </div>
               
             </div>
-      </section>
+      </section>*/}
 
 
 
