@@ -61,7 +61,7 @@ return (
 
                 <div id={styles.SERVICE_2_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
-                    <h3>Analytics and Automation
+                    <h3 class="font-geist_regular ... text-md ... text-right ...">Analytics and Automation
                     </h3>
                   </div> 
 
