@@ -70,7 +70,7 @@
     grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
     grid-template-areas: ". . . . . . ."
         ". . . SUB . . ."
-        ". . . PORTFOLIO . . .";
+        ". PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO .";
 }
 
 #HOW_WE_WORK_TAG {
