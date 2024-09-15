@@ -48,6 +48,8 @@ const Collapsed_2 = () => {
                                         style={{
                                             display: "grid",
                                             rowGap: 20,
+                                            position: "relative",
+                                            left: "40px",
                                         }}
                                         accordion={true}
                                         expandIcon={({ isActive }) => {
