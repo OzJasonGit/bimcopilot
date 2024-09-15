@@ -2,6 +2,8 @@
 
 import styles from './services_5.module.css';
 import Collapsed from "../../components/Collapse/collapse";
+import Collapsed_2 from "../../components/Collapse_2/collapse_2";
+import Collapsed_3 from "../../components/Collapse_3/collapse_3";
 import React, { Component } from 'react';
 import Link from "next/link";
 
@@ -12,43 +14,6 @@ render() {
 return (
 
    <>
-
-     {/*<section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-          <div class={styles.grid_0_services}>
-
-            <div id={styles.COLLAPSE_TITLE}>
-              <h2                 
-                    id={styles._TEXT_OUTLINE}
-                    class="text-left ... text-7xl ... text-stone-50 ... font-avant_garde_bold">         
-                    Services
-              </h2>
-            </div>
-
-            <div id={styles.COLLAPSE_MESSAGE}>
-              <div id={styles.COLLAPSE_TAG}>
-                  <h3
-                    id={styles._H3}
-                    class="text-left ... text-lg ... text-stone-500 ... font-avant_garde_bold">
-                    {" "}
-                      We provide services, including <a class=" text-stone-700 ... font-avant_garde_bold">data-analytics,</a> 
-                      <a class=" text-stone-700 ... font-avant_garde_bold"> automation</a> and <a class=" text-stone-700 ... font-avant_garde_bold">technical-drafting</a> for construction projects. see 
-                      <a class=" text-stone-700 ... font-avant_garde_bold"><Link href={"./"}> "how we work"</Link></a> to 
-                      learn how we define bespoke solutions tailored to your project specific needs.              
-                    <br/> 
-                    <br/>                
-                  </h3>
-                </div>                        
-              </div>
-
-              <div id={styles.COLLAPSE_HOLDER}>
-                <Collapsed />
-              </div>
-              
-            </div>
-      </section>*/}
-
-
-
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_services_2}>
@@ -101,7 +66,7 @@ return (
                   </div> 
 
                   <div id={styles.COLLAPSE_HOLDER}> 
-                    <Collapsed/>                                 
+                    <Collapsed_2/>                                 
                   </div>                
                 </div>
 
@@ -112,7 +77,7 @@ return (
                   </div> 
 
                   <div id={styles.COLLAPSE_HOLDER}> 
-                     <Collapsed/>                  
+                     <Collapsed_3/>                  
                   </div>                
                 </div>
 
