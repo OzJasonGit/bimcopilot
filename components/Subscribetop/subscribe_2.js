@@ -16,8 +16,7 @@ export default class Subcribe_2 extends Component {
   render() {
     return (
       
-       <div class={styles.grid_0_subscribe}>
-          <div class={styles.sub_head}>
+      <div class={styles.sub_head}>
             <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
               <div id={styles.SUB_ICON}></div>
 
@@ -66,7 +65,6 @@ export default class Subcribe_2 extends Component {
               
             </div>
           </div>
-        </div>
 
     )
   }
