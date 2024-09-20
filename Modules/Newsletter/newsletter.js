@@ -5,6 +5,7 @@ import styles from './newsletter.module.css';
 import { useRouter } from "next/navigation";
 
 import Menu from "../../components/Menu/menu";
+import Subscribe from "../../components/Subscribe/subscribe";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -44,13 +45,17 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div  id={styles.SALES_IMAGE_HOLDER}>
 
-                        <div id={styles.SALES_IMAGE_2}>
-                            <h2 class="text-7xl ... text-stone-200 ... font-avant_garde_bold">
+                        <div id={styles.SALES_IMAGE_1}>
+                            <h2 id={styles._H2} class="text-7xl ... text-stone-200 ... font-avant_garde_bold">
                                 Newsletter
                             </h2>                                                
                         </div>  
+
+                        <div id={styles.SALES_SUBSCRIBE}>
+                            <Subscribe/>
+                        </div>  
                     
-                        <div class="rounded-xl ..." id={styles.SALES_IMAGE}>
+                        <div class="rounded-xl ..." id={styles.SALES_IMAGE_2}>
                             {storiesSolo_1.map((story, index) => {
                                   return (          
                                 <Image

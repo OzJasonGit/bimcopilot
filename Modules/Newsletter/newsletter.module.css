@@ -118,38 +118,32 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 600px;
+    grid-template-rows: auto auto 350px;
     grid-template-areas:
         "IMAGE_1"
+        "SUBSCRIBE"
         "IMAGE_2";
+    max-height: 0;
     
 }
 
 
-#SALES_CHECKOUT_HOLDER {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-area: CHECKOUT;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto auto auto;
-    grid-template-areas:
-            "C1"
-            "C2"
-            "C3"
-            "C4"
-            "C5"
-            "C6"
-            "C7";
-}
 
-#SALES_IMAGE {
+
+#SALES_IMAGE_1 {
     position: relative;
     width: 100%;
     height: 100%;
     grid-area: IMAGE_1;
+    overflow: hidden;
+}
+
+
+#SUBSCRIBE {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: SUBSCRIBE;
     overflow: hidden;
 }
 
@@ -168,6 +162,28 @@
 
 
 
+
+
+
+
+#SALES_CHECKOUT_HOLDER {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: CHECKOUT;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas:
+        "C1"
+        "C2"
+        "C3"
+        "C4"
+        "C5"
+        "C6"
+        "C7";
+}
 
 
 
