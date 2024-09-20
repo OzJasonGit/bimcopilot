@@ -24,6 +24,19 @@
 }
 
 
+#SHADOW_SECTION_BLOG_BLACK {
+    position: relative;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: #151515;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+}
+
+
 .grid_0_bimcopilot {
     position: relative;
     width: 100%;

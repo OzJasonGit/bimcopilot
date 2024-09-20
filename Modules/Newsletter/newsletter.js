@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer_White";
+import Footer from "../../components/Footer/Footer";
 import Collapsed_Sales from "../../components/Collapse_Sales/collapse_sales";
 
 import Services_1 from "../../components/services_1/services_1";
