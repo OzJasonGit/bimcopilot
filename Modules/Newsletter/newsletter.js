@@ -5,7 +5,8 @@ import styles from './newsletter.module.css';
 import { useRouter } from "next/navigation";
 
 import Menu from "../../components/Menu/menu";
-import Subscribe from "../../components/Subscribe/subscribe";
+
+import Subscribetop from "../../components/Subscribetop/subscribetop";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -52,7 +53,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                         </div>  
 
                         <div id={styles.SALES_SUBSCRIBE}>
-                            <Subscribe/>
+                            <Subscribetop/>
                         </div>  
                     
                         <div class="rounded-xl ..." id={styles.SALES_IMAGE_2}>
