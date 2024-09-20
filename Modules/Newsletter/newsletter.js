@@ -43,6 +43,12 @@ const Saleslanding = ({ stories, firstStory }) => {
             <div id={styles.SALES_GRID_HOLDER}>
 
                 <div  id={styles.SALES_IMAGE_HOLDER}>
+
+                        <div id={styles.SALES_IMAGE_2}>
+                            <h2 class="text-7xl ... text-stone-200 ... font-avant_garde_bold">
+                                Newsletter
+                            </h2>                                                
+                        </div>  
                     
                         <div class="rounded-xl ..." id={styles.SALES_IMAGE}>
                             {storiesSolo_1.map((story, index) => {
@@ -60,103 +66,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 objectFit: "cover",
                                 }}/>                        
                             )})} 
-                        </div>   
-
-                        <div id={styles.SALES_IMAGE_2}>
-                            <div id={styles.SALES_IMAGE_3}>
-
-                                 <div class="rounded-lg ..." id={styles.SALES_IMAGE_V}>
-                                    {storiesSolo_1.map((story, index) => {
-                                        return (                                 
-                                        <Image
-                                        alt="Picture of the author"
-                                        key={story._id}
-                                        width={500}
-                                        height={500}
-                                        src={story.image}
-                                        style={{
-                                        position: "absolute",
-                                        width: "100%",
-                                        height: "100%",
-                                        objectFit: "cover",
-                                        }}/>                    
-                                    )})} 
-                                </div>  
-
-                                 <div class="rounded-lg ..." id={styles.SALES_IMAGE_W}>
-                                    {storiesSolo_1.map((story, index) => {
-                                        return (                 
-                                        <Image
-                                        alt="Picture of the author"
-                                        key={story._id}
-                                        width={500}
-                                        height={500}
-                                        src={story.image}
-                                        style={{
-                                        position: "absolute",
-                                        width: "100%",
-                                        height: "100%",
-                                        objectFit: "cover",
-                                        }}/>                               
-                                    )})} 
-                                </div>  
-
-                                <div class="rounded-lg ..." id={styles.SALES_IMAGE_X}>
-                                    {storiesSolo_1.map((story, index) => {
-                                        return (
-                           
-                                        <Image
-                                        alt="Picture of the author"
-                                        key={story._id}
-                                        width={500}
-                                        height={500}
-                                        src={story.image}
-                                        style={{
-                                        position: "absolute",
-                                        width: "100%",
-                                        height: "100%",
-                                        objectFit: "cover",
-                                        }}/>                    
-                                    )})} 
-                                </div>  
-
-                                <div class="rounded-lg ..." id={styles.SALES_IMAGE_Y}>
-                                    {storiesSolo_1.map((story, index) => {
-                                        return (                      
-                                        <Image
-                                        alt="Picture of the author"
-                                        key={story._id}
-                                        width={500}
-                                        height={500}
-                                        src={story.image}
-                                        style={{
-                                        position: "absolute",
-                                        width: "100%",
-                                        height: "100%",
-                                        objectFit: "cover",
-                                        }}/>                               
-                                    )})} 
-                                </div> 
-
-                                <div class="rounded-lg ..." id={styles.SALES_IMAGE_Z}>
-                                    {storiesSolo_1.map((story, index) => {
-                                        return (                          
-                                        <Image
-                                        alt="Picture of the author"
-                                        key={story._id}
-                                        width={500}
-                                        height={500}
-                                        src={story.image}
-                                        style={{
-                                        position: "absolute",
-                                        width: "100%",
-                                        height: "100%",
-                                        objectFit: "cover",
-                                        }}/>                           
-                                    )})} 
-                                </div> 
-                            </div>
-                        </div>                     
+                        </div>                                             
                                      
                 </div>
 
