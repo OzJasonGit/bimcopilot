@@ -201,6 +201,7 @@
             ". . . . .";
     }
 
+
     .sub_head {
         position: relative;
         grid-area: SUB;
@@ -208,10 +209,10 @@
         width: 100%;
         height: auto;
         grid-column-gap: 40px;
-        grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            "BC BC BC BC BC BC . . . . . . . .";
+            "BC ";
         left: 0;
     }
 
