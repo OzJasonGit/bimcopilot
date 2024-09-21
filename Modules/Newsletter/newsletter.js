@@ -218,8 +218,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                 <div id={styles.BOUGHT_TOGETHER_BLOCK}>
                     <div id={styles.BOUGHT_TITLE_HOLDER}>
                         <h3 id={styles._H3} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
-                            Stuff to Buy <br/> <br/> 
-                            Shop Here.
+                            Useful Tools for Designers <br/>
+                            Architects and Enthusiasts  
                         </h3>
                     </div>
 
