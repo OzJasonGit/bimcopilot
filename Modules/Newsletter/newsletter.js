@@ -85,7 +85,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
 
                     <div  id={styles.C1} class="justify-items-end">
-                        <h3 class="text-md ... text-stone-700 ... font-geist_semibold text-right">
+                        <h3 class="text-md ... text-stone-200 ... font-geist_semibold text-right">
                             License Type.
                         </h3>
 
@@ -100,7 +100,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                         
                                               
-                        <h3  class="text-md ... text-stone-700 ...font-geist_regular text-right">
+                        <h3  class="text-md ... text-stone-200 ...font-geist_regular text-right">
                             Are you a student? Select Educational Use.
                         </h3>
                     </div>
@@ -357,12 +357,12 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
                     <div  id={styles.P_SUBTITLE}>   
-                        <h3 id={styles._H3} class="text-lg ... text-stone-700 ... font-avant_garde_bold">
+                        <h3 id={styles._H3} class="text-lg ... text-stone-200 ... font-avant_garde_bold">
                             This is the description title 
                             Delta compression using up to 12 threads
                             Compressing objects: 100% (5/5), done.     
 
-                            <a class="text-stone-700 ... font-avant_garde_bold"
+                            <a class="text-stone-200 ... font-avant_garde_bold"
                             >
                             Automated systems for Architects, Designers and Manufacturers.
                             </a>{" "}                                               
@@ -370,7 +370,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
                     <div  id={styles.P_DESCRIPTION}>  
-                         <h3 id={styles._H3} class="text-md ... text-stone-700 ... font-geist_regular">
+                         <h3 id={styles._H3} class="text-md ... text-stone-200 ... font-geist_regular">
                             Delta compression using up to 12 threads
                             Compressing objects: 100% (5/5), done.
                             Writing objects: 100% (5/5), 440 bytes | 440.00 KiB/s, done.
