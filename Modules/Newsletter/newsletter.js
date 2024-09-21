@@ -47,7 +47,10 @@ const Saleslanding = ({ stories, firstStory }) => {
                 <div  id={styles.SALES_IMAGE_HOLDER}>
 
                         <div id={styles.SALES_IMAGE_1}>
-                            <h2 id={styles._H2} class="text-7xl ... text-stone-200 ... font-avant_garde_bold">
+                            <h2  class="text-7xl ... text-stone-200 ... font-avant_garde_bold" 
+                                style={{
+                                paddingBottom: "0",
+                                }}>
                                 Newsletter
                             </h2>                                                
                         </div>  
