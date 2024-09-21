@@ -83,7 +83,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                 </div>
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
-                    <div  id={styles.C1}>
+                    
+                    {/*<div  id={styles.C1}>
                         <h3 class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
                             This is a test title
                         </h3>
@@ -97,7 +98,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                         <h3 class="text-md ... text-stone-700 ... font-geist_regular">
                             Tax included. 
                         </h3>
-                    </div>
+                    </div> */}
 
                     <div  id={styles.C3}>
                         <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
@@ -151,7 +152,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
 
-                    <div  id={styles.C5}>
+                    {/*<div  id={styles.C5}>
                         <h3 class="text-md ... text-stone-700 ... font-geist_regular">
                            For Educational Use (Reduced price) please send us an email with your 
                            student card and info to <a>info@bimcopilot.com</a>
@@ -175,7 +176,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                         <h3 class="text-md ... text-stone-700 ... font-geist_regular">
                            <a></a> Pack Category: <a></a>
                         </h3>
-                    </div>
+                    </div> */}
 
 
                     <div  id={styles.C7}> 
