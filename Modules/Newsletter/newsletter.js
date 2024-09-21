@@ -133,7 +133,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     width: "100%",
                                     height: "540px",
                                     objectFit: "cover",                                   
-                                }}/>  
+                                    }}/>  
 
                         </div>
                     </div>
@@ -212,7 +212,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                 </div>
 
             </div>
-        </div>
+       
       </section>
 
 
