@@ -172,10 +172,54 @@
     grid-template-rows: auto auto auto auto;
     grid-template-areas:
         "C1"
+        "C2"
         "C3"
-        "C4"
         "C7";
 }
+
+
+
+
+
+#C1 {
+    grid-area: C1;
+}
+
+#C2 {
+    grid-area: C2;
+}
+
+#C3 {
+    grid-area: C3;
+}
+
+#C4 {
+    grid-area: C4;
+}
+
+#C5 {
+    grid-area: C5;
+}
+
+#C6 {
+    grid-area: C6;
+}
+
+#C7 {
+    grid-area: C7;
+    position: relative;
+    left: -40px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -329,35 +373,7 @@
 }
 
 
-#C1 {
-    grid-area: C1;
-}
 
-#C2 {
-    grid-area: C2;
-}
-
-#C3 {
-    grid-area: C3;
-}
-
-#C4 {
-    grid-area: C4;
-}
-
-#C5 {
-    grid-area: C5;
-}
-
-#C6 {
-    grid-area: C6;
-}
-
-#C7 {
-    grid-area: C7;
-    position: relative;
-    left: -40px;
-}
 
 
 

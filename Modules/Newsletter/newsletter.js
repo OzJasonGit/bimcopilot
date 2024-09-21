@@ -83,6 +83,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                 </div>
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
+
+                    
                     
                     {/*<div  id={styles.C1}>
                         <h3 class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
@@ -100,7 +102,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                         </h3>
                     </div> */}
 
-                    <div  id={styles.C3}>
+                    <div  id={styles.C1}>
                         <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
                             License Type.
                         </h3>
@@ -113,16 +115,30 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 <TabsTrigger value="commercial">Commercial</TabsTrigger>
                             </TabsList>
                         </Tabs>
-
-                        <br/> <br/>
-
-                        
+                                              
                         <h3  class="text-md ... text-stone-700 ...font-geist_regular">
                             Are you a student? Select Educational Use.
                         </h3>
                     </div>
 
-                    <div  id={styles.C4}>
+
+                    <br/> <br/>
+
+                    <div id={styles.C2}>
+
+                    </div>
+
+                    <br/> <br/>
+
+
+
+
+
+
+
+
+
+                    <div  id={styles.C3}>
                        <div  id={styles.CHECKOUT_GRID}>
 
                             <div id={styles.ADD_TO_CART}>          
