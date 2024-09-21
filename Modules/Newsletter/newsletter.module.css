@@ -118,7 +118,7 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 320px;
+    grid-template-rows: auto auto 300px;
     padding-right: 120px;
     grid-template-areas:
         "IMAGE_1"

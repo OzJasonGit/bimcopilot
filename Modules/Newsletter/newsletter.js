@@ -98,7 +98,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             </TabsList>
                         </Tabs>*/}
 
-                        <br/> 
+                        
                                               
                         <h3  class="text-md ... text-stone-700 ...font-geist_regular text-right">
                             Are you a student? Select Educational Use.
@@ -218,7 +218,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                 <div id={styles.BOUGHT_TOGETHER_BLOCK}>
                     <div id={styles.BOUGHT_TITLE_HOLDER}>
                         <h3 id={styles._H3} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
-                            Frequently Bought Together
+                            Stuff to Buy <br/> <br/> 
+                            Shop Here.
                         </h3>
                     </div>
 
@@ -364,16 +365,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             <a class="text-stone-700 ... font-avant_garde_bold"
                             >
                             Automated systems for Architects, Designers and Manufacturers.
-                            </a>{" "}
-                            Gain valuable insights, streamline your business, be more{" "} 
-                            <a class="text-stone-700 ... font-avant_garde_bold"
-                            >
-                            profitable 
-                            </a>, be more{" "}
-                            <a class="text-stone-700 ... font-avant_garde_bold"
-                            >
-                            sustainable
-                            </a>                      
+                            </a>{" "}                                               
                         </h3>
                     </div>
 
@@ -385,9 +377,6 @@ const Saleslanding = ({ stories, firstStory }) => {
                             Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
                             remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
                             Compressing objects: 100% (5/5), done.
-                            Writing objects: 100% (5/5), 440 bytes | 440.00 KiB/s, done.
-                            Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
-                            remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
                         </h3>                       
                     </div>
 
