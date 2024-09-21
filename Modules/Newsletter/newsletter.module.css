@@ -161,9 +161,6 @@
 
 
 
-
-
-
 #SALES_CHECKOUT_HOLDER {
     position: relative;
     width: 100%;
@@ -172,14 +169,11 @@
     grid-area: CHECKOUT;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
         "C1"
-        "C2"
         "C3"
         "C4"
-        "C5"
-        "C6"
         "C7";
 }
 
