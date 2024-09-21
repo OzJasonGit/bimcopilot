@@ -84,21 +84,21 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
 
-                    <div  id={styles.C1}>
+                    <div  id={styles.C1} class="justify-items-end">
                         <h3 class="text-md ... text-stone-700 ... font-geist_semibold text-right">
                             License Type.
                         </h3>
 
-                        <br/> <br/>
+                        <br/> 
 
-                        <Tabs defaultValue="account" className="w-[400px]"  class="justify-items-end">
+                        {/*<Tabs defaultValue="account" className="w-[400px]"  >
                             <TabsList>
                                 <TabsTrigger value="educatiional">Educational</TabsTrigger>
                                 <TabsTrigger value="commercial">Commercial</TabsTrigger>
                             </TabsList>
-                        </Tabs>
+                        </Tabs>*/}
 
-                        <br/> <br/>
+                        <br/> 
                                               
                         <h3  class="text-md ... text-stone-700 ...font-geist_regular text-right">
                             Are you a student? Select Educational Use.
