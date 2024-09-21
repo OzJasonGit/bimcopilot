@@ -129,9 +129,9 @@ const Saleslanding = ({ stories, firstStory }) => {
                     <div id={styles.C2}>
                         <div id={styles.PHONE_CONTAINER} class="bg-stone-200 ... rounded-xl ..."
                              style={{
-                                    position: "absolute",
+                                    position: "relative",
                                     width: "100%",
-                                    height: "460px", 
+                                    height: "440px", 
                                     gridArea: "PHONE",                                 
                                     }}>
                         </div>
