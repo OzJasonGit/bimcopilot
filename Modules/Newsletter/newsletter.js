@@ -127,13 +127,14 @@ const Saleslanding = ({ stories, firstStory }) => {
                     <br/> <br/>
 
                     <div id={styles.C2}>
-                        <div id={styles.PHONE_CONTAINER}
+                        <div id={styles.PHONE_CONTAINER} class="bg-stone-200 ... rounded-lg ..."
                              style={{
                                     position: "absolute",
                                     width: "100%",
-                                    height: "540px",
-                                    objectFit: "cover",                                   
-                                    }}/>  
+                                    height: "540px",                                   
+                                    }}
+                        
+                        >
 
                         </div>
                     </div>
@@ -212,7 +213,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                 </div>
 
             </div>
-       
+        </div>
       </section>
 
 
