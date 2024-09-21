@@ -217,7 +217,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.BOUGHT_TOGETHER_BLOCK}>
                     <div id={styles.BOUGHT_TITLE_HOLDER}>
-                        <h3 id={styles._H3} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
+                        <h3 id={styles._H3} class="text-4xl ... text-stone-400 ... font-avant_garde_bold">
                             Useful Tools for Designers <br/>
                             Architects and Enthusiasts  
                         </h3>
@@ -351,8 +351,8 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.PRODUCT_DESCRIPTION}>
                     <div id={styles.P_TITLE}>
-                        <h2 id={styles._H3} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
-                            This is the description title 
+                        <h2 id={styles._H3} class="text-4xl ... text-stone-400 ... font-avant_garde_bold">
+                            Shop Here 
                         </h2>
                     </div>
 
