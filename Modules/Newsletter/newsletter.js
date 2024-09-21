@@ -115,6 +115,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 <TabsTrigger value="commercial">Commercial</TabsTrigger>
                             </TabsList>
                         </Tabs>
+
+                        <br/> <br/>
                                               
                         <h3  class="text-md ... text-stone-700 ...font-geist_regular">
                             Are you a student? Select Educational Use.
@@ -125,7 +127,9 @@ const Saleslanding = ({ stories, firstStory }) => {
                     <br/> <br/>
 
                     <div id={styles.C2}>
+                        <div>
 
+                        </div>
                     </div>
 
                     <br/> <br/>
