@@ -127,7 +127,13 @@ const Saleslanding = ({ stories, firstStory }) => {
                     <br/> <br/>
 
                     <div id={styles.C2}>
-                        <div id={styles.PHONE_CONTAINER}>
+                        <div id={styles.PHONE_CONTAINER}
+                             style={{
+                                    position: "absolute",
+                                    width: "100%",
+                                    height: "540px",
+                                    objectFit: "cover",                                   
+                                }}/>  
 
                         </div>
                     </div>
