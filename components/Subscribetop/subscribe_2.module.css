@@ -95,12 +95,15 @@
     width: 100%;
     height: auto;
     grid-column-gap: 40px;
-    grid-template-columns:  1fr 60px;
+    grid-template-columns:  1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "BC .";
+        "BC ";
     left: 0;
 }
+
+
+
 
 #SUBSCRIBE {
     position: relative;
@@ -108,15 +111,18 @@
     width: 100%;
     display: grid;
     grid-row-gap: 10px;
-    grid-column-gap: 20px;
-    grid-template-columns: 1fr 180px;
+    grid-column-gap: 0px;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto 70px;
     grid-template-areas:
-        
-        "TAG_MAIN TAG_MAIN"
-        "SUB_MAIN SUB_MAIN"
-        "FORM FORM";
+        "TAG_MAIN "
+        "SUB_MAIN "
+        "FORM ";
 }
+
+
+
+
 
 #SUB_ICON {
     grid-area: ICON;

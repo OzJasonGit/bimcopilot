@@ -118,14 +118,14 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 350px;
+    grid-template-rows: auto auto 320px;
+    padding-right: 120px;
     grid-template-areas:
         "IMAGE_1"
         "SUBSCRIBE"
-        "IMAGE_2";
-
-    
+        "IMAGE_2"; 
 }
+
 
 
 
@@ -248,6 +248,7 @@
     height: 100%;
     grid-area: IMAGE_Z;
     overflow: hidden;
+    padding-right: 100px;
 }
 
 
