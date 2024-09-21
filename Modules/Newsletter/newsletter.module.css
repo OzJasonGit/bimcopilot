@@ -451,7 +451,12 @@
 
 
 
+
+
+
+
 #PRODUCT_DESCRIPTION {
+    position: relative;
     width: 100%;
     height: auto;
     grid-area: DESCRIPTION;
@@ -460,11 +465,11 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-            "TITLE"
-            "DESCRIPTION"
-            "IMAGES";
+        "TITLE"
+        "DESCRIPTION"
+        "IMAGES";   
+    padding-right: 120px;
 }
-
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
