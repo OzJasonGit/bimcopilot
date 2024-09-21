@@ -131,7 +131,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                              style={{
                                     position: "absolute",
                                     width: "100%",
-                                    height: "540px",                                   
+                                    height: "540px", 
+                                    gridArea: "PHONE",                                 
                                     }}
                         
                         >
