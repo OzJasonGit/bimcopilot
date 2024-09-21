@@ -74,7 +74,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     width: "100%",
                                     height: "100%",
                                     objectFit: "cover",
-                                    top: "-100px"
+                                    top: "-40px"
                                     }}/>                        
                                 )})} 
                             </div>
