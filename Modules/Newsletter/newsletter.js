@@ -124,33 +124,23 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
 
-                    <br/> <br/>
+                    <br/> 
 
                     <div id={styles.C2}>
-                        <div id={styles.PHONE_CONTAINER} class="bg-stone-200 ... rounded-lg ..."
+                        <div id={styles.PHONE_CONTAINER} class="bg-stone-200 ... rounded-xl ..."
                              style={{
                                     position: "absolute",
                                     width: "100%",
-                                    height: "540px", 
+                                    height: "460px", 
                                     gridArea: "PHONE",                                 
-                                    }}
-                        
-                        >
-
+                                    }}>
                         </div>
                     </div>
 
-                    <br/> <br/>
+                    <br/> 
 
 
-
-
-
-
-
-
-
-                    <div  id={styles.C3}>
+                    {/*<div  id={styles.C3}>
                        <div  id={styles.CHECKOUT_GRID}>
 
                             <div id={styles.ADD_TO_CART}>          
@@ -177,7 +167,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 </a>                           
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
 
                     {/*<div  id={styles.C5}>
