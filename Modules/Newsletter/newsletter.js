@@ -127,7 +127,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                     <br/> <br/>
 
                     <div id={styles.C2}>
-                        <div>
+                        <div id={styles.PHONE_CONTAINER}>
 
                         </div>
                     </div>
