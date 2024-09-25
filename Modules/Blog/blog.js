@@ -358,15 +358,12 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
                   <div id={styles.PARAGRAPH_4}>
-                    <br/>
-                    <br/>
+                    <br/>               
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                      id={styles._H3}>
-                      
-                                 
+                      id={styles._H3}>                                                     
                     </h3>
-                    <br/>
+              
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
                       {story.paragraphtitle4}
                       <br/> <br/>
@@ -386,29 +383,6 @@ const Blogsmain = ({ stories, firstStory }) => {
 
           </section>
       )})};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -438,11 +412,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                       {story.title}
-                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    
                     </p>
                   </div>   
 
