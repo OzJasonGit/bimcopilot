@@ -363,17 +363,12 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
-                      {story.title}
-                      This is the title section Lorem ipsum dolor sit amet, consectetur              
+                      {story.paragraphtitle4}
+                                 
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                      {story.title}
-                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
+                      {story.paragraph4}                   
                     </p>
                   </div>
 
