@@ -188,14 +188,13 @@ const Blogsmain = ({ stories, firstStory }) => {
                       Introduction
                     </h1>
                     <br/>
-                    <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-stone-300 ... font-avant_garde_bold">
                     {`${story.introduction_quote} ${story.introduction_quote_author}`}
                     <br/> <br/> 
                     {story.introduction}
                     </p>
                   </div>                   
-                      
-                
+                          
                 </div>
               </div>
             </div>
@@ -225,11 +224,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                       id={styles._H3}
                       class="text-2xl ... text-stone-700 ... font-avant_garde_bold"
                     >
-                      Disclaimer
+                      
                   </h3>
                   <p
                     class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
-                    {story.disclaimer}                             
+                    {story.paragragh_1}                             
                   </p>
                 </div>
 
