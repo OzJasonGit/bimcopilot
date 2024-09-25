@@ -349,6 +349,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       src={story.image}
                       style={{
                       position: "absolute",
+                      top: "15px",
                       width: "100%",
                       height: "100%",
                       objectFit: "cover",
