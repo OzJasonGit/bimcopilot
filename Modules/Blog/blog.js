@@ -190,6 +190,10 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <br/>
                     <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
                     {story.introduction}
+                    <br/> 
+                    {story.introduction}
+                    <br/> 
+                    {story.introduction}
                     </p>
                   </div>                   
                       
