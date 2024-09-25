@@ -300,11 +300,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
-                      {story.paragraph_title_1}                             
+                      {story. paragraphtitle1}                             
                     </h3>
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                      {story.paragragh_1}
+                      {story.paragraph1}
                     </p>
                   </div>
 
