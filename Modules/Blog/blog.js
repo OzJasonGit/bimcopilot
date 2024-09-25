@@ -73,7 +73,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     class="text-6xl ... text-stone-200 ... font-avant_garde_bold"
                   >
                     {story.title}
-                    Sustainable, Richer Architects through Automation
+                 
                   </h1>
                 </div>
                 <div id={styles.SUB_TAG}>
