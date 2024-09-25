@@ -228,7 +228,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   </h3>
                   <p
                     class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
-                    {story.paragragh_1}                             
+                    {story.disclaimer}                             
                   </p>
                 </div>
 
