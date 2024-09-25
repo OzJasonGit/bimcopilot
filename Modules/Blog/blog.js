@@ -188,7 +188,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       Introduction
                     </h1>
                     <br/>
-                    <p class="text-xl ... text-stone-300 ... font-avant_garde_bold">
+                    <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
                     {`${story.introduction_quote} ${story.introduction_quote_author}`}
                     <br/> <br/> 
                     {story.introduction}
@@ -300,7 +300,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
-                      {story.paragraph_title_1}                             
+                      {story.disclaimer}                             
                     </h3>
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
