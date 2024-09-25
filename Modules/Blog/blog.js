@@ -312,8 +312,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <Video />               
                   </div>
              
-                  <div id={styles.PARAGRAPH_2}>
-                    
+                  <div id={styles.PARAGRAPH_2}>                  
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
@@ -349,7 +348,6 @@ const Blogsmain = ({ stories, firstStory }) => {
                       src={story.image}
                       style={{
                       position: "absolute",
-                      top: "15px",
                       width: "100%",
                       height: "100%",
                       objectFit: "cover",
