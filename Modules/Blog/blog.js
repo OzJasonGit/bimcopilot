@@ -244,7 +244,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="/dashboard">
                         <p
                           class="text-sm ... text-neutral-700 ... font-avant_garde_bold">
-                          {story.title}                             
+                          {story.paragraphtitle1}                             
                         </p>
                       </Link>                                        
                     </div>
@@ -252,7 +252,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="/dashboard">
                         <p
                           class="text-sm ... text-neutral-700 ... font-avant_garde_bold">
-                          {story.title}                             
+                          {story.paragraphtitle2}                             
                         </p> 
                       </Link>                                         
                     </div>
@@ -320,25 +320,21 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraphtitle2}                              
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                      {story.paragraph2}
-                      
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
+                      {story.paragraph2}                    
                     </p>
                   </div>
 
-
-
-                  <div id={styles.PARAGRAPH_3}>
-                    <br/>
+                  <div id={styles.PARAGRAPH_3}>                 
                     <br/>
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
-                      {story.paragraph_title_3}            
+                      {story.paragraphtitle3}            
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                      {story.paragraph_3}
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
+                      {story.paragraph3}
                     </p>
                   </div>
 
