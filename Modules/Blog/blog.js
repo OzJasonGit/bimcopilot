@@ -189,12 +189,12 @@ const Blogsmain = ({ stories, firstStory }) => {
                     </h1>
                     <br/>
                     <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
-                    {story.introduction_quote}
-                    <br/> 
+                    {`${story.introduction_quote} ${story.introduction_quote_author}`}
+                    <br/> <br/> 
                     <Link href="/dashboard">
-                    {story.introduction_quote_author}
+                    
                     </Link>
-                    <br/> 
+                    <br/> <br/> 
                     {story.introduction}
                     </p>
                   </div>                   
