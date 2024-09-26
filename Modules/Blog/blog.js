@@ -262,7 +262,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                         <Link href="/dashboard">
                           <p
                             class="text-sm ... text-neutral-700 ... font-avant_garde_bold">
-                            {story.title}                             
+                            {story.paragraphtitle6}                        
                           </p> 
                         </Link>   
                       </a>                                       
@@ -424,7 +424,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                        {story.paragraphtitle6}                                          
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
                        {story.paragraph6}                                            
                     </p>
                   </div>
