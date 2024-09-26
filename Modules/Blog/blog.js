@@ -548,7 +548,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     </h3>
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                      {story.paragraph10}  
+                      {story.paragraph11}  
                 
                     </p>
                   </div>   
