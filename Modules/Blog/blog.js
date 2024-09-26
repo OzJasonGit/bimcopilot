@@ -404,11 +404,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraph4[0]}   
                       <br/> <br/>   
                       {story.paragraph4[1]}   
-                      <br/> <br/>  
+                      <br/>  
                       {story.paragraph4[2]}   
-                      <br/> <br/>  
+                      <br/>  
                       {story.paragraph4[3]}   
-                      <br/> <br/>    
+                      <br/>    
                       {story.paragraph4[4]}   
                       <br/> <br/>   
                       {story.paragraph4[5]}   
