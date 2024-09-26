@@ -317,7 +317,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
-                      {story.paragraphtitle1}                             
+                      {story.paragraphtitle1[0]}                             
                     </h3>
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
