@@ -292,7 +292,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                         </p>
                       </Link>                                         
                     </div>
-                    <div id={styles.TITLE_5}> 
+                    <div id={styles.TITLE_6}> 
                       <Link href="/dashboard">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_regular">
