@@ -392,7 +392,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
                   <div id={styles.PARAGRAPH_4}>
-                    <br/>               
+                                  
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>                                                     
