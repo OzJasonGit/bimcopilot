@@ -321,10 +321,13 @@ const Blogsmain = ({ stories, firstStory }) => {
                     </h3>
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
-                      {story.paragraph1[0]}
-                      <br/> <br/>
-                      {story.paragraph1[1]}
-
+                      {story.paragraph1[0]}<br/> <br/>{story.paragraph1[1]}<br/> <br/>{story.paragraph1[2]}
+                                          
+                      <br/> {story.paragraph1[3]} <br/> {story.paragraph1[4]} <br/> {story.paragraph1[5]}
+                      <br/> {story.paragraph1[6]} <br/> {story.paragraph1[7]} <br/> {story.paragraph1[8]}                    
+                      <br/> <br/> 
+                      {story.paragraph1[9]}
+                      
                     </p>
                   </div>
 
