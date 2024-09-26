@@ -654,13 +654,13 @@ const Blogsmain = ({ stories, firstStory }) => {
                 <div id={styles.MAIN_TAG}>
                   <h1
                     id={styles._H1}
-                    class="text-4xl ... text-stone-200 ... font-avant_garde_bold"
+                    class="text-md... text-stone-200 ... font-geist_semibold"
                   >
                   {story.title}
                    
                   </h1>
                   <br/>
-                  <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
+                  <p class="text-md ... text-stone-400 ... font-geist_regular">
                   {story.subtitle}
                    
                   </p>
