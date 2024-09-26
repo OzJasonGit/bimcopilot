@@ -856,7 +856,8 @@
             "TITLE_3"
             "TITLE_4"
             "TITLE_5"
-            "TITLE_6";
+            "TITLE_6"
+            "TITLE_7";
 }
 
 
@@ -883,6 +884,10 @@
 
 #TITLE_6 {
     grid-area: TITLE_6;
+}
+
+#TITLE_7 {
+    grid-area: TITLE_7;
 }
 
 
