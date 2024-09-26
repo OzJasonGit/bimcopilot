@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-const uri = "mongodb+srv://oz_nwachukwu:1ka2ka3ka4@bimcopilot.dy1nnak.mongodb.net/" 
+const uri = "mongodb+srv://oz_nwachukwu:bigROAR2005@bimcopilot.dy1nnak.mongodb.net/" 
 
 let cachedClient = null;
 
