@@ -317,11 +317,14 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
-                      {story.paragraphtitle1[0]}                             
+                      {story.paragraphtitle1}                             
                     </h3>
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
-                      {story.paragraph1}
+                      {story.paragraph1[0]}
+                      <br/> <br/>
+                      {story.paragraph1[1]}
+
                     </p>
                   </div>
 
@@ -346,7 +349,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
-                      {story.paragraphtitle3}            
+                      {story.paragraphtitle3[0]}            
                     </h3>
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
