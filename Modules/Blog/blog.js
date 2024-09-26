@@ -648,7 +648,6 @@ const Blogsmain = ({ stories, firstStory }) => {
             <div class={styles.sub_head}>
               <div id={styles.SUBSCRIBE} class={"border-emerald-200"}>
 
-
                 <div id={styles.SUB_ICON}>                 
                 </div>
          
@@ -658,17 +657,14 @@ const Blogsmain = ({ stories, firstStory }) => {
                     class="text-4xl ... text-stone-200 ... font-avant_garde_bold"
                   >
                   {story.title}
-                    Sustainable, Richer Architects through Technology and
-                    Automation
+                   
                   </h1>
                   <br/>
                   <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
                   {story.subtitle}
-                    This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor. 
+                   
                   </p>
                 </div> 
-
               </div>
             </div>
           </div>
