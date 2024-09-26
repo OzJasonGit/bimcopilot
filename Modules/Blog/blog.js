@@ -411,8 +411,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     </h3>
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
-                      {story.paragraph5}
-                    
+                      {story.paragraph5}                   
                     </p>
                   </div>   
 
@@ -421,19 +420,12 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <br/>
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                      id={styles._H3}
-                    >
-                    
-                      This is the title section Lorem ipsum dolor sit amet, consectetur              
+                        id={styles._H3}>        
+                       {story.paragraphtitle6}                                          
                     </h3>
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    
-                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod. 
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                       {story.paragraph6}                                            
                     </p>
                   </div>
 
@@ -443,29 +435,17 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <br/>
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                      id={styles._H3}
-                    >
-                    
-                      This is the title section Lorem ipsum dolor sit amet, consectetur              
+                      id={styles._H3}>                   
+                      {story.paragraphtitle7}             
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    
-                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod. 
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">                   
+                      {story.paragraph7}  
                     </p>
                   </div>
 
-
                   <div id={styles.ADVERT_1} class="bg-pink-300 ... rounded-xl ...">                
                   </div>
-
-
-
-
                 </div>
               
               </div>
@@ -475,32 +455,6 @@ const Blogsmain = ({ stories, firstStory }) => {
           </section>
         
         )})};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -522,37 +476,25 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
-                      {story.subtitle}                             
+                      {story.paragraphtitle8}                             
                     </h3>
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                      {story.title}
-                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      {story.paragraph8}                     
                     </p>
                   </div>   
-
 
                   <div id={styles.PARAGRAPH_2}>
                     <br/>
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}
-                    >
-                    
-                      This is the title section Lorem ipsum dolor sit amet, consectetur              
+                    >                    
+                      {story.paragraphtitle9}              
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    
-                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod. 
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">                   
+                      {story.paragraph9}  
                     </p>
                   </div>
 
@@ -562,24 +504,14 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <br/>
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                      id={styles._H3}
-                    >
-                    
-                      This is the title section Lorem ipsum dolor sit amet, consectetur              
+                      id={styles._H3}>                   
+                      {story.paragraphtitle10}              
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    
-                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod. 
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">                   
+                      {story.paragraph10}  
                     </p>
                   </div>
-
-
-
 
                 </div>
               
@@ -610,17 +542,12 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
-                      Conclusion.
-                      {story.subtitle}                             
+                      Conclusion                                                
                     </h3>
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                      {story.title}
-                      This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                      ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                      sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      {story.paragraph10}  
+                
                     </p>
                   </div>   
 
