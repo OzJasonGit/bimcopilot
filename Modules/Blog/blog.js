@@ -510,8 +510,28 @@ const Blogsmain = ({ stories, firstStory }) => {
                        {story.paragraphtitle6}                                          
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
-                       {story.paragraph6}                                            
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">               
+                       <br/> <br/>      
+                      {story.paragraph6[0]} 
+                      <br/> <br/>      
+                      {story.paragraph6[1]} 
+                      <br/> <br/>      
+                      {story.paragraph6[2]} 
+                      <br/> <br/>      
+                      {story.paragraph6[3]} 
+                      <br/> <br/>      
+                      {story.paragraph6[4]} 
+                      <br/> <br/>      
+                      {story.paragraph6[5]} 
+                      <br/> <br/>      
+                      {story.paragraph6[6]} 
+                      <br/> <br/>      
+                      {story.paragraph6[7]} 
+                      <br/> <br/>      
+                      {story.paragraph6[8]} 
+                      <br/> <br/>      
+                      {story.paragraph6[9]} 
+                                                              
                     </p>
                   </div>
 
