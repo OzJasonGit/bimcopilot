@@ -569,28 +569,41 @@ const Blogsmain = ({ stories, firstStory }) => {
                        {story.paragraphtitle6}                                          
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">               
-                       <br/> <br/>      
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">                                       
                       {story.paragraph6[0]} 
                       <br/> <br/>      
                       {story.paragraph6[1]} 
-                      <br/> <br/>      
-                      {story.paragraph6[2]} 
-                      <br/> <br/>      
-                      {story.paragraph6[3]} 
-                      <br/> <br/>      
-                      {story.paragraph6[4]} 
-                      <br/> <br/>      
-                      {story.paragraph6[5]} 
-                      <br/> <br/>      
-                      {story.paragraph6[6]} 
-                      <br/> <br/>      
-                      {story.paragraph6[7]} 
-                      <br/> <br/>      
-                      {story.paragraph6[8]} 
-                      <br/> <br/>      
-                      {story.paragraph6[9]} 
-                                                              
+                      <br/> <br/> 
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
+                        <li>
+                          <div class="font-avant_garde_bold">{story.paragraph5[8]}</div> {story.paragraph6[2]} 
+                        </li> 
+                      </ul>    
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
+                        <li>
+                          <div class="font-avant_garde_bold">{story.paragraph5[9]}</div> {story.paragraph6[3]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
+                        <li>
+                          <div class="font-avant_garde_bold">{story.paragraph5[10]}</div> {story.paragraph6[4]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
+                        <li>
+                          <div class="font-avant_garde_bold">{story.paragraph5[11]}</div> {story.paragraph6[5]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
+                        <li>
+                          <div class="font-avant_garde_bold">{story.paragraph5[12]}</div> {story.paragraph6[6]} 
+                        </li> 
+                      </ul>   
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
+                        <li>
+                          <div class="font-avant_garde_bold">{story.paragraph5[13]}</div> {story.paragraph6[7]} 
+                        </li> 
+                      </ul>                                                                       
                     </p>
                   </div>
 
