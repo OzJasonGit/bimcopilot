@@ -594,6 +594,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <br/> <br/>   
                       {story.paragraph7[6]}
                       <br/> <br/>    
+                    </p>
                   </div>
 
                   <div id={styles.ADVERT_1} class="bg-pink-300 ... rounded-xl ...">                
