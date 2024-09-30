@@ -320,47 +320,45 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraphtitle1}                             
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                       {story.paragraph1[0]}<br/> <br/>{story.paragraph1[1]}<br/> <br/>
                       
 
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph1[2]}  
                         </li>    
                       </ul>                                                                      
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph1[3]} 
                         </li> 
                       </ul>                                                                  
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph1[4]} 
                         </li> 
                       </ul>                      
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph1[5]} 
                         </li> 
                       </ul>                    
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph1[6]} 
                         </li> 
                       </ul>                  
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph1[7]} 
                         </li> 
                       </ul>                      
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph1[8]} 
                         </li> 
-                      </ul>     
-
-                      <br/> <br/> 
+                      </ul>                     
                       {story.paragraph1[9]}
                       
                     </p>
