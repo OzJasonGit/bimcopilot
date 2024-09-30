@@ -328,43 +328,38 @@ const Blogsmain = ({ stories, firstStory }) => {
                         <li>
                           {story.paragraph1[2]}  
                         </li>    
-                      </ul>                                                  
-                        <br/> 
+                      </ul>                                                                      
                       <ul class="list-disc">
                         <li>
                           {story.paragraph1[3]} 
                         </li> 
-                      </ul>                                             
-                        <br/> 
+                      </ul>                                                                  
                       <ul class="list-disc">
                         <li>
                           {story.paragraph1[4]} 
                         </li> 
-                      </ul>
-                         <br/> 
+                      </ul>                      
                       <ul class="list-disc">
                         <li>
                           {story.paragraph1[5]} 
                         </li> 
-                      </ul>
-                         <br/> 
+                      </ul>                    
                       <ul class="list-disc">
                         <li>
                           {story.paragraph1[6]} 
                         </li> 
-                      </ul>
-                         <br/> 
+                      </ul>                  
                       <ul class="list-disc">
                         <li>
                           {story.paragraph1[7]} 
                         </li> 
-                      </ul>
-                         <br/> 
+                      </ul>                      
                       <ul class="list-disc">
                         <li>
                           {story.paragraph1[8]} 
                         </li> 
-                      </ul>                                                                          
+                      </ul>     
+                                                                                           
                       <br/> <br/> 
                       {story.paragraph1[9]}
                       
