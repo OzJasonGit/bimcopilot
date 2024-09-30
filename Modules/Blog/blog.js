@@ -708,8 +708,59 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraphtitle10}              
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">                   
-                      {story.paragraph10}  
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">                   
+                                           
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                        <li>
+                          {story.paragraph10[3]} 
+                        </li> 
+                      </ul>   
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                        <li>
+                          {story.paragraph10[4]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                        <li>
+                          {story.paragraph10[5]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                        <li>
+                          {story.paragraph10[6]} 
+                        </li> 
+                      </ul>  
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                        <li>
+                          {story.paragraph10[7]} 
+                        </li> 
+                      </ul>   
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                        <li>
+                          {story.paragraph10[8]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                        <li>
+                          {story.paragraph10[9]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                        <li>
+                          {story.paragraph10[10]} 
+                        </li> 
+                      </ul>  
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                        <li>
+                          {story.paragraph10[11]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                        <li>
+                          {story.paragraph10[12]} 
+                        </li>   
+                      </ul>                                       
+                      <br/> <br/>  
                     </p>
                   </div>
 
@@ -859,244 +910,6 @@ const Blogsmain = ({ stories, firstStory }) => {
         </section>  
         )})}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      {/*{storiesToMap.map((story, index) => {
-                  return (
-      <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
-
-        <div class={styles.grid_0_main}>
-          <div id={styles.MAIN_TEXT_HOLDER}>
-
-
-
-            <div id={styles.SIDE_NAV_HOLDER}>
-              <div id={styles.SIDE_NAV} class="bg-cyan-500 ...">
-              </div>
-            </div>
-            
-            <div id={styles.DISCLAIMER_HOLDER}>
-              <p
-                class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-                {story.title}                             
-              </p>
-            </div>
-
-
-            <div id={styles.BLOG_HOLDER}>
-
-              <div id={styles.PARAGRAPH_1}>
-                <h3
-                  class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
-                  id={styles._H3}>
-                  {story.subtitle}                             
-                </h3>
-                <br/>
-                <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-                  {story.title}
-                  This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                  ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                  sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </div>
-
-              <div class="bg-stone-900 ... rounded-xl ...">                
-              </div>
-             
-              <div id={styles.PARAGRAPH_2}>
-                <br/>
-                <br/>
-                <h3
-                  class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
-                  id={styles._H3}>
-                  This is the title section Lorem ipsum dolor sit amet, consectetur              
-                </h3>
-                <br/>
-                <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-               
-                  This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                  ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                  sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </div>
-            </div>
-            
-            
-
-      </section>
-     )})};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <div id={styles.PARAGRAPH_3}>
-                <br/>
-                <h3
-                  class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
-                  id={styles._H3}
-                >
-                 
-                  This is the title section Lorem ipsum dolor sit amet, consectetur              
-                </h3>
-                <br/>
-                <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-                
-                  This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi 
-                  ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                  sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-              </div>
-
-
-              <div id={styles.ADVERT_1} class="bg-yellow-300 ... rounded-xl ...">                
-              </div>
-
-
-              <div id={styles.PARAGRAPH_4}>
-                <br/>
-                <br/>
-                <h3
-                  class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
-                  id={styles._H3}
-                >
-                
-                  This is the title section Lorem ipsum dolor sit amet, consectetur              
-                </h3>
-                <br/>
-                <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-                
-                  This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                </p>
-              </div>
-
-              <div id={styles.ADVERT_2} class="bg-blue-600 ... rounded-xl ...">                
-              </div>
-
-
-              <div id={styles.PARAGRAPH_5}>
-                <br/>
-                <br/>
-                <h3
-                  class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
-                  id={styles._H3}
-                >
-         
-                  This is the title section Lorem ipsum dolor sit amet, consectetur              
-                </h3>
-                <br/>
-                <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-              
-                  This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                </p>
-              </div>
-
-
-              <div id={styles.CONCLUSION}>
-                <br/>
-                <h3
-                  class="text-4xl ... text-neutral-700 ... font-avant_garde_bold"
-                  id={styles._H3}
-                >
-            
-                  This is the title section Lorem ipsum dolor sit amet, consectetur              
-                </h3>
-                <br/>
-                <p class="text-xl ... text-neutral-700 ... font-avant_garde_bold">
-           
-                  This is the paragraph Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-                </p>
-              </div>
-
-            </div>;          
-          </div>
-    
-
-        )})};*/}
-
-
-
-
-
- 
     <Footer/>
 
   </>
