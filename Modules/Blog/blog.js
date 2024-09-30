@@ -241,7 +241,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <div id={styles.SIDE_NAV} >
 
                     <div id={styles.TITLE_1} >  
-                      <Link href="/dashboard">
+                      <Link href="#PARAGRAPH_1">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
                           {story.paragraphtitle1}                             
