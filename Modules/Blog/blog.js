@@ -713,55 +713,56 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <br/> <br/>   
                       {story.paragraph10[1]} 
                       <br/> <br/>  
-                      {story.paragraph10[2]}                                                             
-                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                      {story.paragraph10[2]} 
+                      <br/> <br/>                                                            
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href="/dashboard">{story.paragraph10[3]}</Link> {story.paragraph10[3]}
+                          <Link href="/dashboard" class="font-avant_garde_bold" >{story.paragraph10[3]}</Link> {story.paragraph10[3]}
                         </li> 
                       </ul>   
-                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href="/dashboard">{story.paragraph10[4]}</Link> {story.paragraph10[4]}
+                          <Link href="/dashboard" class="font-avant_garde_bold">{story.paragraph10[4]}</Link> {story.paragraph10[4]}
                         </li> 
                       </ul> 
-                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href="/dashboard">{story.paragraph10[5]}</Link> {story.paragraph10[5]}                         
+                          <Link href="/dashboard" class="font-avant_garde_bold">{story.paragraph10[5]}</Link> {story.paragraph10[5]}                         
                         </li> 
                       </ul> 
-                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href="/dashboard">{story.paragraph10[6]}</Link> {story.paragraph10[6]}
+                          <Link href="/dashboard" class="font-avant_garde_bold">{story.paragraph10[6]}</Link> {story.paragraph10[6]}
                         </li> 
                       </ul>  
-                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href="/dashboard">{story.paragraph10[7]}</Link> {story.paragraph10[7]}
+                          <Link href="/dashboard" class="font-avant_garde_bold">{story.paragraph10[7]}</Link> {story.paragraph10[7]}
                         </li> 
                       </ul>   
-                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                         <Link href="/dashboard">{story.paragraph10[8]}</Link> {story.paragraph10[8]}
+                         <Link href="/dashboard" class="font-avant_garde_bold">{story.paragraph10[8]}</Link> {story.paragraph10[8]}
                         </li> 
                       </ul> 
-                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href="/dashboard">{story.paragraph10[9]}</Link> {story.paragraph10[9]}
+                          <Link href="/dashboard" class="font-avant_garde_bold">{story.paragraph10[9]}</Link> {story.paragraph10[9]}
                         </li> 
                       </ul> 
-                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href="/dashboard">{story.paragraph10[10]}</Link> {story.paragraph10[10]}
+                          <Link href="/dashboard" class="font-avant_garde_bold">{story.paragraph10[10]}</Link> {story.paragraph10[10]}
                         </li> 
                       </ul>  
-                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href="/dashboard">{story.paragraph10[11]}</Link> {story.paragraph10[11]}
+                          <Link href="/dashboard" class="font-avant_garde_bold">{story.paragraph10[11]}</Link> {story.paragraph10[11]}
                         </li> 
                       </ul> 
-                      <ul class="list-disc list-inside ... font-avant_garde_bold">
+                      <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href="/dashboard">{story.paragraph10[12]}</Link> {story.paragraph10[12]}
+                          <Link href="/dashboard" class="font-avant_garde_bold">{story.paragraph10[12]}</Link> {story.paragraph10[12]}
                         </li>   
                       </ul>                                       
                       <br/> <br/>  

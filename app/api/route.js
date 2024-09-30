@@ -43,6 +43,7 @@ export async function POST(req) {
         timestamp: "2023-11-26T12:03:00Z",
         post_id: "004",
         post_number: "4",
+       
     };
     
     await collection.insertOne(newStory);
