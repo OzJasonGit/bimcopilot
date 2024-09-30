@@ -576,32 +576,32 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <br/> <br/> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          {story.paragraph5[8]} {story.paragraph6[2]} 
+                          <p class="font-avant_garde_bold">{story.paragraph6[8]}</p> {story.paragraph6[2]} 
                         </li> 
                       </ul>    
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          {story.paragraph5[9]} {story.paragraph6[3]} 
+                          <p class="font-avant_garde_bold">{story.paragraph6[9]}</p> {story.paragraph6[3]} 
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          {story.paragraph5[10]} {story.paragraph6[4]} 
+                          <p class="font-avant_garde_bold">{story.paragraph6[10]}</p> {story.paragraph6[4]} 
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          {story.paragraph5[11]} {story.paragraph6[5]} 
+                          <p class="font-avant_garde_bold">{story.paragraph6[11]}</p> {story.paragraph6[5]} 
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          {story.paragraph5[12]} {story.paragraph6[6]} 
+                          <p class="font-avant_garde_bold">{story.paragraph6[12]}</p> {story.paragraph6[6]} 
                         </li> 
                       </ul>   
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          {story.paragraph5[13]} {story.paragraph6[7]} 
+                          <p class="font-avant_garde_bold">{story.paragraph6[13]}</p> {story.paragraph6[7]} 
                         </li> 
                       </ul>                                                                       
                     </p>
