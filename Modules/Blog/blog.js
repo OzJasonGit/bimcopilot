@@ -249,7 +249,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       </Link>                                        
                     </div>
                     <div id={styles.TITLE_2}> 
-                      <Link href="/dashboard">
+                      <Link href="#PARAGRAPH_2">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
                           {story.paragraphtitle2}                             
@@ -259,7 +259,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
                     <div id={styles.TITLE_3}> 
                       <a>
-                        <Link href="/dashboard">
+                        <Link href="#PARAGRAPH_3">
                           <p
                             class="text-xs ... text-neutral-700 ... font-geist_semibold">
                             {story.paragraphtitle6}                        
@@ -269,7 +269,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     </div>
 
                     <div id={styles.TITLE_4}> 
-                      <Link href="/dashboard">
+                      <Link href="#PARAGRAPH_4">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
                           {story.paragraphtitle7}                            
@@ -277,7 +277,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       </Link>                                         
                     </div>
                     <div id={styles.TITLE_5}> 
-                      <Link href="/dashboard">
+                      <Link href="#PARAGRAPH_5">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
                           {story.paragraphtitle8}                             
@@ -285,7 +285,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       </Link>                                         
                     </div>
                     <div id={styles.TITLE_6}> 
-                      <Link href="/dashboard">
+                      <Link href="PARAGRAPH_6">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
                           {story.paragraphtitle9}                             
@@ -293,7 +293,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       </Link>                                         
                     </div>
                     <div id={styles.TITLE_7}> 
-                      <Link href="/dashboard">
+                      <Link href="PARAGRAPH_7">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
                           {story.paragraphtitle10}                             
