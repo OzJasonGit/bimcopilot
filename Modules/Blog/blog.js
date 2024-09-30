@@ -576,12 +576,12 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <br/> <br/> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <p class="font-avant_garde_bold">{story.paragraph6[8]}</p> {story.paragraph6[2]} 
+                          <a class="font-avant_garde_bold">{story.paragraph6[8]}</a> {story.paragraph6[2]} 
                         </li> 
                       </ul>    
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <p class="font-avant_garde_bold">{story.paragraph6[9]}</p> {story.paragraph6[3]} 
+                          <a class="font-avant_garde_bold">{story.paragraph6[9]}</a> {story.paragraph6[3]} 
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
