@@ -727,7 +727,9 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraph10[1]} 
                       <br/> <br/>  
                       {story.paragraph10[2]} 
-                      <br/> <br/>                                                            
+                      <br/> <br/> 
+                      
+                                                                                 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
                           <Link href="/dashboard" class="font-avant_garde_bold" >{story.paragraph10[13]}</Link> {story.paragraph10[3]}
