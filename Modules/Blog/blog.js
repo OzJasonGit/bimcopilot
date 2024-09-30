@@ -375,7 +375,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraphtitle2}                              
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                       {story.paragraph2[0]}  
                       <br/> <br/>  
                       {story.paragraph2[1]}                  
@@ -384,12 +384,12 @@ const Blogsmain = ({ stories, firstStory }) => {
 
                   <div id={styles.PARAGRAPH_3}>                                     
                     <h3
-                      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                      class="text-3xl ... text-neutral-700 ... font-avant_garde_medium"
                       id={styles._H3}>
                       {story.paragraphtitle3}            
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                       {story.paragraph3[0]}
                       <br/> <br/>  
                       {story.paragraph3[1]}
@@ -431,27 +431,27 @@ const Blogsmain = ({ stories, firstStory }) => {
                       id={styles._H3}>                                                     
                     </h3>
               
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                
                       <br/> <br/>
                       {story.paragraph4[0]}   
                       <br/> <br/>   
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph4[1]} 
                         </li> 
                       </ul> 
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph4[2]} 
                         </li> 
                       </ul> 
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph4[3]} 
                         </li> 
                       </ul> 
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph4[4]} 
                         </li> 
@@ -509,7 +509,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                                            
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">                                        
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">                                        
                       {story.paragraph5[0]} 
                       <br/> <br/>      
                       {story.paragraph5[1]} 
@@ -524,22 +524,22 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <br/> <br/>      
                       {story.paragraph5[6]} 
                       <br/> <br/>                          
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph5[7]} 
                         </li> 
                       </ul>   
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph5[8]} 
                         </li> 
                       </ul> 
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph5[9]} 
                         </li> 
                       </ul> 
-                      <ul class="list-disc list-inside ...">
+                      <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
                           {story.paragraph5[10]} 
                         </li> 
@@ -569,7 +569,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                        {story.paragraphtitle6}                                          
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">               
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">               
                        <br/> <br/>      
                       {story.paragraph6[0]} 
                       <br/> <br/>      
@@ -604,7 +604,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraphtitle7}             
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">                   
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">                   
                       {story.paragraph7[0]}
                       <br/> <br/> 
                       {story.paragraph7[1]}
@@ -657,7 +657,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraphtitle8}                             
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                       {story.paragraph8[0]} 
                       <br/> <br/>   
                       {story.paragraph8[1]} 
@@ -683,7 +683,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraphtitle9}              
                     </h3>
                     <br/>
-                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_bold">                   
+                    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">                   
                       {story.paragraph9[0]} 
                       <br/> <br/>   
                       {story.paragraph9[1]} 
