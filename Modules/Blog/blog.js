@@ -782,52 +782,52 @@ const Blogsmain = ({ stories, firstStory }) => {
 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href={story.paragraph10Links[0]} class="font-avant_garde_bold" >{story.paragraph10[13]}</Link> {story.paragraph10[3]}
+                          <Link href={story.paragraph10Links[0]} class="font-avant_garde_bold" ><a target="_blank">{story.paragraph10[13]}</a></Link> {story.paragraph10[3]}
                         </li> 
                       </ul>   
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href={story.paragraph10Links[1]} class="font-avant_garde_bold">{story.paragraph10[14]}</Link> {story.paragraph10[4]}
+                          <Link href={story.paragraph10Links[1]} class="font-avant_garde_bold"><a target="_blank">{story.paragraph10[14]}</a></Link> {story.paragraph10[4]}
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href={story.paragraph10Links[2]} class="font-avant_garde_bold">{story.paragraph10[15]}</Link> {story.paragraph10[5]}                         
+                          <Link href={story.paragraph10Links[2]} class="font-avant_garde_bold"><a target="_blank">{story.paragraph10[15]}</a></Link> {story.paragraph10[5]}                         
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href={story.paragraph10Links[3]} class="font-avant_garde_bold">{story.paragraph10[16]}</Link> {story.paragraph10[6]}
+                          <Link href={story.paragraph10Links[3]} class="font-avant_garde_bold"><a target="_blank">{story.paragraph10[16]}</a></Link> {story.paragraph10[6]}
                         </li> 
                       </ul>  
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href={story.paragraph10Links[4]} class="font-avant_garde_bold">{story.paragraph10[17]}</Link> {story.paragraph10[7]}
+                          <Link href={story.paragraph10Links[4]} class="font-avant_garde_bold"><a target="_blank">{story.paragraph10[17]}</a></Link> {story.paragraph10[7]}
                         </li> 
                       </ul>   
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                         <Link href={story.paragraph10Links[5]} class="font-avant_garde_bold">{story.paragraph10[18]}</Link> {story.paragraph10[8]}
+                         <Link href={story.paragraph10Links[5]} class="font-avant_garde_bold"><a target="_blank">{story.paragraph10[18]}</a></Link> {story.paragraph10[8]}
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href={story.paragraph10Links[6]} class="font-avant_garde_bold">{story.paragraph10[19]}</Link> {story.paragraph10[9]}
+                          <Link href={story.paragraph10Links[6]} class="font-avant_garde_bold"><a target="_blank">{story.paragraph10[19]}</a></Link> {story.paragraph10[9]}
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href={story.paragraph10Links[7]} class="font-avant_garde_bold">{story.paragraph10[20]}</Link> {story.paragraph10[10]}
+                          <Link href={story.paragraph10Links[7]} class="font-avant_garde_bold"><a target="_blank">{story.paragraph10[20]}</a></Link> {story.paragraph10[10]}
                         </li> 
                       </ul>  
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href={story.paragraph10Links[8]} class="font-avant_garde_bold">{story.paragraph10[21]}</Link> {story.paragraph10[11]}
+                          <Link href={story.paragraph10Links[8]} class="font-avant_garde_bold"><a target="_blank">{story.paragraph10[21]}</a></Link> {story.paragraph10[11]}
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <Link href={story.paragraph10Links[9]} class="font-avant_garde_bold">{story.paragraph10[22]}</Link> {story.paragraph10[12]}
+                          <Link href={story.paragraph10Links[9]} class="font-avant_garde_bold"><a target="_blank">{story.paragraph10[22]}</a></Link> {story.paragraph10[12]}
                         </li>   
                       </ul>                                       
                       <br/> <br/>  
