@@ -586,22 +586,22 @@ const Blogsmain = ({ stories, firstStory }) => {
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <p class="font-avant_garde_bold">{story.paragraph6[10]}</p> {story.paragraph6[4]} 
+                          <a class="font-avant_garde_bold">{story.paragraph6[10]}</a> {story.paragraph6[4]} 
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <p class="font-avant_garde_bold">{story.paragraph6[11]}</p> {story.paragraph6[5]} 
+                          <a class="font-avant_garde_bold">{story.paragraph6[11]}</a> {story.paragraph6[5]} 
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <p class="font-avant_garde_bold">{story.paragraph6[12]}</p> {story.paragraph6[6]} 
+                          <a class="font-avant_garde_bold">{story.paragraph6[12]}</a> {story.paragraph6[6]} 
                         </li> 
                       </ul>   
                       <ul class="list-disc list-inside ... font-avant_garde_medium">
                         <li>
-                          <p class="font-avant_garde_bold">{story.paragraph6[13]}</p> {story.paragraph6[7]} 
+                          <a class="font-avant_garde_bold">{story.paragraph6[13]}</a> {story.paragraph6[7]} 
                         </li> 
                       </ul>                                                                       
                     </p>
