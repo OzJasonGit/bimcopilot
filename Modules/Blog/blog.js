@@ -324,42 +324,42 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraph1[0]}<br/> <br/>{story.paragraph1[1]}<br/> <br/>
                       
 
-                      <ul class="list-disc">
+                      <ul class="list-disc list-inside ...">
                         <li>
                           {story.paragraph1[2]}  
                         </li>    
                       </ul>                                                                      
-                      <ul class="list-disc">
+                      <ul class="list-disc list-inside ...">
                         <li>
                           {story.paragraph1[3]} 
                         </li> 
                       </ul>                                                                  
-                      <ul class="list-disc">
+                      <ul class="list-disc list-inside ...">
                         <li>
                           {story.paragraph1[4]} 
                         </li> 
                       </ul>                      
-                      <ul class="list-disc">
+                      <ul class="list-disc list-inside ...">
                         <li>
                           {story.paragraph1[5]} 
                         </li> 
                       </ul>                    
-                      <ul class="list-disc">
+                      <ul class="list-disc list-inside ...">
                         <li>
                           {story.paragraph1[6]} 
                         </li> 
                       </ul>                  
-                      <ul class="list-disc">
+                      <ul class="list-disc list-inside ...">
                         <li>
                           {story.paragraph1[7]} 
                         </li> 
                       </ul>                      
-                      <ul class="list-disc">
+                      <ul class="list-disc list-inside ...">
                         <li>
                           {story.paragraph1[8]} 
                         </li> 
                       </ul>     
-                                                                                           
+
                       <br/> <br/> 
                       {story.paragraph1[9]}
                       
@@ -438,13 +438,26 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <br/> <br/>
                       {story.paragraph4[0]}   
                       <br/> <br/>   
-                      {story.paragraph4[1]}   
-                      <br/>  
-                      {story.paragraph4[2]}   
-                      <br/>  
-                      {story.paragraph4[3]}   
-                      <br/>    
-                      {story.paragraph4[4]}   
+                      <ul class="list-disc list-inside ...">
+                        <li>
+                          {story.paragraph4[1]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ...">
+                        <li>
+                          {story.paragraph4[2]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ...">
+                        <li>
+                          {story.paragraph4[3]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ...">
+                        <li>
+                          {story.paragraph4[4]} 
+                        </li> 
+                      </ul>                     
                       <br/> <br/>   
                       {story.paragraph4[5]}   
                       <br/> <br/>  
@@ -512,14 +525,27 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraph5[5]} 
                       <br/> <br/>      
                       {story.paragraph5[6]} 
-                      <br/> <br/>      
-                      {story.paragraph5[7]} 
-                      <br/> <br/>      
-                      {story.paragraph5[8]} 
-                      <br/> <br/>      
-                      {story.paragraph5[9]} 
-                      <br/> <br/>      
-                      {story.paragraph5[10]} 
+                      <br/> <br/>                          
+                      <ul class="list-disc list-inside ...">
+                        <li>
+                          {story.paragraph5[7]} 
+                        </li> 
+                      </ul>   
+                      <ul class="list-disc list-inside ...">
+                        <li>
+                          {story.paragraph5[8]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ...">
+                        <li>
+                          {story.paragraph5[9]} 
+                        </li> 
+                      </ul> 
+                      <ul class="list-disc list-inside ...">
+                        <li>
+                          {story.paragraph5[10]} 
+                        </li> 
+                      </ul>                                          
                       <br/> <br/>      
                       {story.paragraph5[11]} 
                       <br/> <br/>      
