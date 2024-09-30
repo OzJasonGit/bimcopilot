@@ -722,42 +722,42 @@ const Blogsmain = ({ stories, firstStory }) => {
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
-                          {story.paragraph10[5]} 
+                          <Link href="/dashboard">{story.paragraph10[5]}</Link>                          
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
-                          {story.paragraph10[6]} 
+                          <Link href="/dashboard">{story.paragraph10[6]}</Link>
                         </li> 
                       </ul>  
                       <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
-                          {story.paragraph10[7]} 
+                          <Link href="/dashboard">{story.paragraph10[7]}</Link>
                         </li> 
                       </ul>   
                       <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
-                          {story.paragraph10[8]} 
+                         <Link href="/dashboard">{story.paragraph10[8]}</Link>
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
-                          {story.paragraph10[9]} 
+                          <Link href="/dashboard">{story.paragraph10[9]}</Link>
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
-                          {story.paragraph10[10]} 
+                          <Link href="/dashboard">{story.paragraph10[10]}</Link>
                         </li> 
                       </ul>  
                       <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
-                          {story.paragraph10[11]} 
+                          <Link href="/dashboard">{story.paragraph10[11]}</Link>
                         </li> 
                       </ul> 
                       <ul class="list-disc list-inside ... font-avant_garde_bold">
                         <li>
-                          {story.paragraph10[12]} 
+                          <Link href="/dashboard">{story.paragraph10[12]}</Link>
                         </li>   
                       </ul>                                       
                       <br/> <br/>  
