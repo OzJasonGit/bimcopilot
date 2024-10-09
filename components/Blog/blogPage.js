@@ -53,8 +53,8 @@ story_id = params.slug
                     class="text-center text-5xl ... text-stone-200 ... font-avant_garde_bold"
                     style={{
                       position: "relative",
-                      top: "15px",
-                      left: "-2.5px",
+                      top: "5px",
+                      left: "0px",
                     }}
                   >
                     {stories.data[0].post_number}
