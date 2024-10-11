@@ -22,6 +22,7 @@ import logoImage from "./Bim-copilot-logo_2.png";
 
 
 const Blogsmain = ({ stories, firstStory }) => {
+  
   const params = useParams();
   const storiesToMap = stories.filter((story, i) => story._id == params.slug);
   const router = useRouter();

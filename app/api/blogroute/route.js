@@ -13,7 +13,9 @@ export async function GET(req) {
         .limit(2)
         .toArray();
 
-    const firstStory = await collection.findOne({});
+    const firstStory = await collection.findOne({  
+        where: {title: id}
+    });
 
     const topStoriesToSlice = await collection.find({}).toArray();
     const topStories = topStoriesToSlice.slice(1, 6);
