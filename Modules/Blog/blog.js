@@ -993,6 +993,100 @@ const Blogsmain = ({ stories, firstStory }) => {
         </section>  
         )})}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {storiesToMap.map((story, index) => {
+                return (
+    <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+    </section>
+    )})}
+
+
+
+    {storiesToMap.map((story, index) => {
+                return (
+    <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+    </section>
+    )})}
+
+
+
+    {storiesToMap.map((story, index) => {
+                return (
+    <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+    </section>
+    )})}
+
+
+    {storiesToMap.map((story, index) => {
+                return (
+    <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+    </section>
+    )})}
+
     <Footer/>
 
   </>
