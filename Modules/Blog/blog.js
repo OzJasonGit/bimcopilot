@@ -28,7 +28,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
   
 
-  const bullets_1 = stories.filter((story, i) => story.paragraph1 );
+  {/*const bullets_1 = stories.filter((story, i) => story.paragraph1 );*/}
 
   console.log("this is stories",stories)
 
@@ -378,11 +378,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraph1[0]}<br/> <br/>{story.paragraph1[1]}<br/> <br/>
 
 
-                      <ul>
+                      {/*<ul>
                         {bullets_1.map((bullet) => (
                           <li key={story.paragraph1}>{bullet}
                           </li>))}
-                      </ul>
+                      </ul>*/}
                       
 
                       <ul class="list-disc list-inside ... font-avant_garde_bold">
