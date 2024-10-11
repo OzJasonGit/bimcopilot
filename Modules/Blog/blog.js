@@ -26,6 +26,8 @@ const Blogsmain = ({ stories, firstStory }) => {
   const storiesToMap = stories.filter((story, i) => story._id == params.slug);
   const router = useRouter();
 
+  const bullets_1 = stories((story.paragraph1[i]));
+
   console.log("this is stories",stories)
 
 
@@ -372,6 +374,14 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <br/>
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                       {story.paragraph1[0]}<br/> <br/>{story.paragraph1[1]}<br/> <br/>
+
+                     const bullets_1 = stories.map((story.paragraph1[i]));
+
+                      <ul>
+                        {bullets_1.map((bullet) => (
+                          <li key={story.paragraph1}>{bullet}
+                          </li>))}
+                      </ul>
                       
 
                       <ul class="list-disc list-inside ... font-avant_garde_bold">
