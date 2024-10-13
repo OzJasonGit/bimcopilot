@@ -1308,7 +1308,7 @@ const Blogsmain = ({ stories, firstStory }) => {
   <div class={styles.grid_0_blog}>
 
     <div id={styles.MAIN_TEXT_HOLDER}>
-      <div id={styles.PARAGRAPH_2}>                  
+      <div id={styles.PARAGRAPH}>                  
         <h3
           class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
           id={styles._H3}>
@@ -1410,42 +1410,46 @@ const Blogsmain = ({ stories, firstStory }) => {
             return (
 <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
-    <div id={styles.PARAGRAPH_3}>                                     
-      <h3
-        class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-        id={styles._H3}>
-        {story.paragraphtitle3}            
-      </h3>
-      <br/>
-      <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-        {story.paragraph3[0]}
-        <br/> <br/>  
-        {story.paragraph3[1]}
-        <br/> <br/>  
-        {story.paragraph3[2]}
-        <br/> <br/>  
-        {story.paragraph3[3]}
-        <br/> <br/>  
-        {story.paragraph3[4]}   
-        <br/> <br/>  
-        {story.paragraph3[5]}                    
-      </p>
-    </div>
+  <div class={styles.grid_0_blog}>
+    <div id={styles.MAIN_TEXT_HOLDER}>
+      <div id={styles.PARAGRAPH}>                                     
+        <h3
+          class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+          id={styles._H3}>
+          {story.paragraphtitle3}            
+        </h3>
+        <br/>
+        <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+          {story.paragraph3[0]}
+          <br/> <br/>  
+          {story.paragraph3[1]}
+          <br/> <br/>  
+          {story.paragraph3[2]}
+          <br/> <br/>  
+          {story.paragraph3[3]}
+          <br/> <br/>  
+          {story.paragraph3[4]}   
+          <br/> <br/>  
+          {story.paragraph3[5]}                    
+        </p>
+      </div>
 
-    <div id={styles.IMAGE_1} class=" rounded-xl ...">  
-      <Image
-        alt="Picture of the author"
-        key={story._id}
-        width={500}
-        height={500}
-        src={story.image}
-        style={{
-        position: "absolute",
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        }}/>              
-    </div>
+      <div id={styles.IMAGE_1} class=" rounded-xl ...">  
+        <Image
+          alt="Picture of the author"
+          key={story._id}
+          width={500}
+          height={500}
+          src={story.image}
+          style={{
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          }}/>              
+      </div>
+    </div>    
+  </div>
 
 </section>
 )})}
