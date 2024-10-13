@@ -1910,7 +1910,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 {storiesToMap.map((story, index) => {
             return (
-<section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+<section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder} >
 
   <div class={styles.grid_0_blog}>
     <div id={styles.MAIN_TEXT_HOLDER}>
@@ -2490,60 +2490,6 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-{storiesToMap.map((story, index) => {
-                  return (
-  <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
-
-    <div class={styles.grid_0_blog}>
-      <div id={styles.MAIN_TEXT_HOLDER}>
-
-        <div id={styles.PARAGRAPH_1}>
-          <h3
-            class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-            id={styles._H3}>
-            Conclusion                                                
-          </h3>
-          <br/>
-          <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-            {story.paragraph11[0]}  
-            <br/> <br/> 
-            {story.paragraph11[1]} 
-            <br/> <br/> 
-            {story.paragraph11[2]}  
-            <br/> <br/> 
-            {story.paragraph11[3]} 
-      
-          </p>
-        </div>  
-      
-      </div>
-    </div>
-
-  </section>
-)})}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2685,6 +2631,39 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
+
+
+{storiesToMap.map((story, index) => {
+                  return (
+  <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+    <div class={styles.grid_0_blog}>
+      <div id={styles.MAIN_TEXT_HOLDER}>
+
+        <div id={styles.PARAGRAPH}>
+          <h3
+            class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+            id={styles._H3}>
+            Conclusion                                                
+          </h3>
+          <br/>
+          <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+            {story.paragraph11[0]}  
+            <br/> <br/> 
+            {story.paragraph11[1]} 
+            <br/> <br/> 
+            {story.paragraph11[2]}  
+            <br/> <br/> 
+            {story.paragraph11[3]} 
+      
+          </p>
+        </div>  
+      
+      </div>
+    </div>
+
+  </section>
+)})}
 
 
 
