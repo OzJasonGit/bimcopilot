@@ -366,7 +366,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-                <div id={styles.BLOG_HOLDER}>
+                {/*<div id={styles.BLOG_HOLDER}>
                   <div id={styles.PARAGRAPH_1}>
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
@@ -383,7 +383,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                           <li>
                             {story.paragraph1[i]} 
                           </li>))}
-                      </ul>*/}
+                      </ul>
                       
 
                       <ul class="list-disc list-inside ... font-avant_garde_bold">
@@ -589,10 +589,10 @@ const Blogsmain = ({ stories, firstStory }) => {
                   </div>
 
 
-                </div>
+                </div> */}
               
-          </div>
-          </div>
+            </div>
+          </div> 
 
           </section>
       )})};
@@ -604,7 +604,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-  {storiesToMap.map((story, index) => {
+  {/*{storiesToMap.map((story, index) => {
         return (
 
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
@@ -1039,7 +1039,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
           </section>
         
-        )})};
+        )})}; */}
 
 
 
