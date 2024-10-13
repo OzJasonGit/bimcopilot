@@ -1521,6 +1521,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   position: "relative",
                   width: "100%",
                   height: "400px",
+                  gridArea: "VIDEO",
                   }}> 
         <Video/>               
       </div>
