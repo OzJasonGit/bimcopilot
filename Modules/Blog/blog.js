@@ -1308,6 +1308,16 @@ const Blogsmain = ({ stories, firstStory }) => {
   <div class={styles.grid_0_blog}>
 
     <div id={styles.MAIN_TEXT_HOLDER}>
+
+      <div class="bg-transparent ... rounded-xl ..."
+           style={{
+                  position: "relative",
+                  width: "100%",
+                  height: "400px",
+                  }}> 
+        <Video/>               
+      </div>
+             
       <div id={styles.PARAGRAPH}>                  
         <h3
           class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
@@ -1538,55 +1548,61 @@ const Blogsmain = ({ stories, firstStory }) => {
             return (
 <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
-    <div id={styles.PARAGRAPH_4}>
-                              
-    <h3
-      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-      id={styles._H3}>  
-      {story.paragraphtitle4}                                                       
-    </h3>
+  <div class={styles.grid_0_blog}>
+    <div id={styles.MAIN_TEXT_HOLDER}>
 
-    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+      <div id={styles.PARAGRAPH}>                           
+        <h3
+          class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+          id={styles._H3}>  
+          {story.paragraphtitle4}                                                       
+        </h3>
 
-      <br/> <br/>
-      {story.paragraph4[0]}   
-      <br/> <br/>   
-      <ul class="list-disc list-inside ... font-avant_garde_bold">
-        <li>
-          {story.paragraph4[1]} 
-        </li> 
-      </ul> 
-      <ul class="list-disc list-inside ... font-avant_garde_bold">
-        <li>
-          {story.paragraph4[2]} 
-        </li> 
-      </ul> 
-      <ul class="list-disc list-inside ... font-avant_garde_bold">
-        <li>
-          {story.paragraph4[3]} 
-        </li> 
-      </ul> 
-      <ul class="list-disc list-inside ... font-avant_garde_bold">
-        <li>
-          {story.paragraph4[4]} 
-        </li> 
-      </ul>                     
-      <br/> <br/>   
-      {story.paragraph4[5]}   
-      <br/> <br/>  
-      {story.paragraph4[6]}   
-      <br/> <br/>  
-      {story.paragraph4[7]}   
-      <br/> <br/>     
-      {story.paragraph4[8]}   
-      <br/> <br/>  
-      {story.paragraph4[9]}   
-      <br/> <br/>               
-    </p>
+        <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+          <br/> <br/>
+          {story.paragraph4[0]}   
+          <br/> <br/>   
+          <ul class="list-disc list-inside ... font-avant_garde_bold">
+            <li>
+              {story.paragraph4[1]} 
+            </li> 
+          </ul> 
+          <ul class="list-disc list-inside ... font-avant_garde_bold">
+            <li>
+              {story.paragraph4[2]} 
+            </li> 
+          </ul> 
+          <ul class="list-disc list-inside ... font-avant_garde_bold">
+            <li>
+              {story.paragraph4[3]} 
+            </li> 
+          </ul> 
+          <ul class="list-disc list-inside ... font-avant_garde_bold">
+            <li>
+              {story.paragraph4[4]} 
+            </li> 
+          </ul>                     
+          <br/> <br/>   
+          {story.paragraph4[5]}   
+          <br/> <br/>  
+          {story.paragraph4[6]}   
+          <br/> <br/>  
+          {story.paragraph4[7]}   
+          <br/> <br/>     
+          {story.paragraph4[8]}   
+          <br/> <br/>  
+          {story.paragraph4[9]}   
+          <br/> <br/>               
+        </p>
+      </div>
+
+      <div id={styles.ADVERT_2} class="bg-blue-600 ... rounded-xl ...">                
+      </div>
+
+    </div>
   </div>
 
-  <div id={styles.ADVERT_2} class="bg-blue-600 ... rounded-xl ...">                
-  </div>
+    
 
 </section>
 )})}
