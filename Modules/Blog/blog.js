@@ -1652,7 +1652,13 @@ const Blogsmain = ({ stories, firstStory }) => {
         </p>
       </div>
 
-      <div id={styles.IMAGE_1} class=" rounded-xl ...">  
+      <div id={styles.IMAGE_1} class=" rounded-xl ..."
+        style={{
+             position: "relative",
+             width: "100%",
+             height: "400px",
+             gridArea: "IMAGE",
+            }}>  
         <Image
           alt="Picture of the author"
           key={story._id}
