@@ -1768,9 +1768,94 @@ const Blogsmain = ({ stories, firstStory }) => {
               <br/> <br/>                    
             </p>
           </div>   
+         
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  )})}
 
 
-          <div id={styles.PARAGRAPH_2}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {storiesToMap.map((story, index) => {
+                  return (
+  <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+    <div class={styles.grid_0_blog}>
+      <div id={styles.MAIN_TEXT_HOLDER}>
+
+        <div id={styles.PARAGRAPH_2}>
             <br/>
             <h3
               class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
@@ -1816,9 +1901,100 @@ const Blogsmain = ({ stories, firstStory }) => {
             </p>
           </div>
 
+      </div>
+    </div>
+
+  </section>
+  )})}
 
 
-          <div id={styles.PARAGRAPH_3}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {storiesToMap.map((story, index) => {
+                  return (
+  <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+    <div class={styles.grid_0_blog}>
+      <div id={styles.MAIN_TEXT_HOLDER}>
+
+        <div id={styles.PARAGRAPH_3}>
             <br/>
             <h3
               class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
@@ -1846,97 +2022,6 @@ const Blogsmain = ({ stories, firstStory }) => {
 
           <div id={styles.ADVERT_1} class="bg-pink-300 ... rounded-xl ...">                
           </div>
-        </div>
-
-      </div>
-    </div>
-
-  </section>
-  )})}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  {storiesToMap.map((story, index) => {
-                  return (
-  <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
-
-    <div class={styles.grid_0_blog}>
-      <div id={styles.MAIN_TEXT_HOLDER}>
-
-      </div>
-    </div>
-
-  </section>
-  )})}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  {storiesToMap.map((story, index) => {
-                  return (
-  <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
-
-    <div class={styles.grid_0_blog}>
-      <div id={styles.MAIN_TEXT_HOLDER}>
 
       </div>
     </div>
