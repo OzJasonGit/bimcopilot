@@ -765,6 +765,54 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  {storiesToMap.map((story, index) => {
         return (
 
@@ -911,6 +959,47 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {storiesToMap.map((story, index) => {
         return (
 
@@ -951,6 +1040,124 @@ const Blogsmain = ({ stories, firstStory }) => {
           </section>
         
         )})};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1711,7 +1918,7 @@ const Blogsmain = ({ stories, firstStory }) => {
         <div id={styles.BLOG_HOLDER_2}>
 
 
-          <div id={styles.PARAGRAPH_1}>
+          <div id={styles.PARAGRAPH}>
             <h3
               class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
               id={styles._H3}>
@@ -1855,7 +2062,7 @@ const Blogsmain = ({ stories, firstStory }) => {
     <div class={styles.grid_0_blog}>
       <div id={styles.MAIN_TEXT_HOLDER}>
 
-        <div id={styles.PARAGRAPH_2}>
+        <div id={styles.PARAGRAPH}>
             <br/>
             <h3
               class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
@@ -1994,7 +2201,7 @@ const Blogsmain = ({ stories, firstStory }) => {
     <div class={styles.grid_0_blog}>
       <div id={styles.MAIN_TEXT_HOLDER}>
 
-        <div id={styles.PARAGRAPH_3}>
+        <div id={styles.PARAGRAPH}>
             <br/>
             <h3
               class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
