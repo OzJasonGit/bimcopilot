@@ -2228,7 +2228,13 @@ const Blogsmain = ({ stories, firstStory }) => {
           </p>
         </div>
 
-        <div id={styles.ADVERT_1} class="bg-pink-300 ... rounded-xl ...">                
+        <div id={styles.ADVERT_1} class="bg-pink-300 ... rounded-xl ..."
+             style={{
+             position: "relative",
+             width: "100%",
+             height: "300px",
+             gridArea: "IMAGE",
+            }}>                
         </div>
 
     </div>
