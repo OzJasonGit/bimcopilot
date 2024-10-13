@@ -1130,8 +1130,10 @@ const Blogsmain = ({ stories, firstStory }) => {
                 return (
     <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
+      <div class={styles.grid_0_blog}>
 
-          <div id={styles.PARAGRAPH_1}>
+        <div id={styles.MAIN_TEXT_HOLDER}>
+           <div id={styles.PARAGRAPH_1}>
             <h3
               class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
               id={styles._H3}>
@@ -1189,6 +1191,9 @@ const Blogsmain = ({ stories, firstStory }) => {
               
             </p>
           </div>
+        </div>
+
+      </div>
 
     </section>
     )})}
