@@ -948,6 +948,10 @@
 
 
 
+#PARAGRAPH {
+    grid-area: TEXT;
+}
+
 #PARAGRAPH_1 {
     grid-area: PARAGRAPH_1;
 }
