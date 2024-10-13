@@ -1657,7 +1657,7 @@ const Blogsmain = ({ stories, firstStory }) => {
              position: "relative",
              width: "100%",
              height: "400px",
-             gridArea: "IMAGE",
+             gridArea: "IMAGE_2",
             }}>  
         <Image
           alt="Picture of the author"
