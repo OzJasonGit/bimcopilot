@@ -2626,7 +2626,6 @@ const Blogsmain = ({ stories, firstStory }) => {
                 <Link href={story.paragraph10Links[9]} class="font-avant_garde_bold"><a target="_blank">{story.paragraph10[22]}</a></Link> {story.paragraph10[12]}
               </li>   
             </ul>                                       
-            <br/> <br/>  
           </p>
       </div>
       
