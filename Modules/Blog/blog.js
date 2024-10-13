@@ -1305,18 +1305,24 @@ const Blogsmain = ({ stories, firstStory }) => {
             return (
 <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
-  <div id={styles.PARAGRAPH_2}>                  
-    <h3
-      class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-      id={styles._H3}>
-      {story.paragraphtitle2}                              
-    </h3>
-    <br/>
-    <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-      {story.paragraph2[0]}  
-      <br/> <br/>  
-      {story.paragraph2[1]}                  
-    </p>
+  <div class={styles.grid_0_blog}>
+
+    <div id={styles.MAIN_TEXT_HOLDER}>
+      <div id={styles.PARAGRAPH_2}>                  
+        <h3
+          class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+          id={styles._H3}>
+          {story.paragraphtitle2}                              
+        </h3>
+        <br/>
+        <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+          {story.paragraph2[0]}  
+          <br/> <br/>  
+          {story.paragraph2[1]}                  
+        </p>
+      </div>
+    </div>
+    
   </div>
 
 </section>
