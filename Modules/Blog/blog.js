@@ -29,7 +29,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
   
 
-  {/*const bullets_1 = stories.filter((story, i) => story.paragraph1 );*/}
+  const bullets_1 = stories.map((story, i) => story.paragraph1 );
 
   console.log("this is stories",stories)
 
@@ -356,7 +356,6 @@ const Blogsmain = ({ stories, firstStory }) => {
                       </Link>                                         
                     </div>
                     
-
                   </div>
                 </div>
 
@@ -381,7 +380,8 @@ const Blogsmain = ({ stories, firstStory }) => {
 
                       {/*<ul>
                         {bullets_1.map((bullet) => (
-                          <li key={story.paragraph1}>{bullet}
+                          <li>
+                            {story.paragraph1[i]} 
                           </li>))}
                       </ul>*/}
                       
@@ -426,6 +426,33 @@ const Blogsmain = ({ stories, firstStory }) => {
                     </p>
                   </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                   <div class="bg-transparent ... rounded-xl ..."> 
                     <Video />               
                   </div>
@@ -443,6 +470,22 @@ const Blogsmain = ({ stories, firstStory }) => {
                       {story.paragraph2[1]}                  
                     </p>
                   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                   <div id={styles.PARAGRAPH_3}>                                     
                     <h3
@@ -482,6 +525,14 @@ const Blogsmain = ({ stories, firstStory }) => {
                       objectFit: "cover",
                       }}/>              
                   </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -1054,30 +1105,514 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {storiesToMap.map((story, index) => {
                 return (
     <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+
+          <div id={styles.PARAGRAPH_1}>
+            <h3
+              class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+              id={styles._H3}>
+              {story.paragraphtitle1}                             
+            </h3>
+            <br/>
+            <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+              {story.paragraph1[0]}<br/> <br/>{story.paragraph1[1]}<br/> <br/>
+
+
+              {/*<ul>
+                {bullets_1.map((bullet) => (
+                  <li>
+                    {story.paragraph1[i]} 
+                  </li>))}
+              </ul>*/}
+              
+
+              <ul class="list-disc list-inside ... font-avant_garde_bold">
+                <li>
+                  {story.paragraph1[2]}  
+                </li>    
+              </ul>                                                                      
+              <ul class="list-disc list-inside ... font-avant_garde_bold">
+                <li>
+                  {story.paragraph1[3]} 
+                </li> 
+              </ul>                                                                  
+              <ul class="list-disc list-inside ... font-avant_garde_bold">
+                <li>
+                  {story.paragraph1[4]} 
+                </li> 
+              </ul>                      
+              <ul class="list-disc list-inside ... font-avant_garde_bold">
+                <li>
+                  {story.paragraph1[5]} 
+                </li> 
+              </ul>                    
+              <ul class="list-disc list-inside ... font-avant_garde_bold">
+                <li>
+                  {story.paragraph1[6]} 
+                </li> 
+              </ul>                  
+              <ul class="list-disc list-inside ... font-avant_garde_bold">
+                <li>
+                  {story.paragraph1[7]} 
+                </li> 
+              </ul>                      
+              <ul class="list-disc list-inside ... font-avant_garde_bold">
+                <li>
+                  {story.paragraph1[8]} 
+                </li> 
+              </ul>                     
+              {story.paragraph1[9]}
+              
+            </p>
+          </div>
 
     </section>
     )})}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {storiesToMap.map((story, index) => {
                 return (
     <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+      <div id={styles.PARAGRAPH_2}>                  
+        <h3
+          class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+          id={styles._H3}>
+          {story.paragraphtitle2}                              
+        </h3>
+        <br/>
+        <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+          {story.paragraph2[0]}  
+          <br/> <br/>  
+          {story.paragraph2[1]}                  
+        </p>
+      </div>
 
     </section>
     )})}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {storiesToMap.map((story, index) => {
                 return (
     <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
+       <div id={styles.PARAGRAPH_3}>                                     
+          <h3
+            class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+            id={styles._H3}>
+            {story.paragraphtitle3}            
+          </h3>
+          <br/>
+          <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+            {story.paragraph3[0]}
+            <br/> <br/>  
+            {story.paragraph3[1]}
+            <br/> <br/>  
+            {story.paragraph3[2]}
+            <br/> <br/>  
+            {story.paragraph3[3]}
+            <br/> <br/>  
+            {story.paragraph3[4]}   
+            <br/> <br/>  
+            {story.paragraph3[5]}                    
+          </p>
+        </div>
+
+        <div id={styles.IMAGE_1} class=" rounded-xl ...">  
+          <Image
+            alt="Picture of the author"
+            key={story._id}
+            width={500}
+            height={500}
+            src={story.image}
+            style={{
+            position: "absolute",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            }}/>              
+        </div>
+
     </section>
     )})}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {storiesToMap.map((story, index) => {
+                return (
+    <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+       <div id={styles.PARAGRAPH_4}>
+                                  
+        <h3
+          class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+          id={styles._H3}>  
+          {story.paragraphtitle4}                                                       
+        </h3>
+  
+        <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+    
+          <br/> <br/>
+          {story.paragraph4[0]}   
+          <br/> <br/>   
+          <ul class="list-disc list-inside ... font-avant_garde_bold">
+            <li>
+              {story.paragraph4[1]} 
+            </li> 
+          </ul> 
+          <ul class="list-disc list-inside ... font-avant_garde_bold">
+            <li>
+              {story.paragraph4[2]} 
+            </li> 
+          </ul> 
+          <ul class="list-disc list-inside ... font-avant_garde_bold">
+            <li>
+              {story.paragraph4[3]} 
+            </li> 
+          </ul> 
+          <ul class="list-disc list-inside ... font-avant_garde_bold">
+            <li>
+              {story.paragraph4[4]} 
+            </li> 
+          </ul>                     
+          <br/> <br/>   
+          {story.paragraph4[5]}   
+          <br/> <br/>  
+          {story.paragraph4[6]}   
+          <br/> <br/>  
+          {story.paragraph4[7]}   
+          <br/> <br/>     
+          {story.paragraph4[8]}   
+          <br/> <br/>  
+          {story.paragraph4[9]}   
+          <br/> <br/>               
+        </p>
+      </div>
+
+      <div id={styles.ADVERT_2} class="bg-blue-600 ... rounded-xl ...">                
+      </div>
+
+    </section>
+    )})}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     {storiesToMap.map((story, index) => {
