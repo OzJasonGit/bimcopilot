@@ -782,10 +782,8 @@
     grid-column-gap: 40px;
     grid-row-gap: 20px;
     grid-template-columns: 200px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 60px auto 40px auto auto;
-    grid-template-areas:
-        ". . . . . . . . . . . ."
-        "DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER . . . . . ."
+    grid-template-rows: 40px auto auto;
+    grid-template-areas:   
         ". . . . . . . . . . . ."
         "SIDE_NAV VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO ADVERT ADVERT ADVERT "
         "SIDE_NAV TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT ADVERT ADVERT ADVERT"

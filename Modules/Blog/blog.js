@@ -1522,7 +1522,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   width: "100%",
                   height: "400px",
                   gridArea: "VIDEO",
-                  }}> 
+                }}> 
         <Video/>               
       </div>
              
