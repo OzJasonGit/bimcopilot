@@ -49,7 +49,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                      width: "100%",
                      height: "600px", 
                      gridArea: "IMAGE",                   
-                     }} class="rounded-lg ..." id={styles.MAIN_IMAGE}>
+                     }} class="rounded-xl ..." id={styles.MAIN_IMAGE}>
                         {storiesSolo_2.map((story, index) => {
                                   return (                
                                 <Image
