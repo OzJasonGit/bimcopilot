@@ -252,7 +252,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_main_image}>
-            <div id={styles.MAIN_IMAGE_GRID_HOLDER}>
+            <div id={styles.COMMUNITIES_HOLDER}>
 
                 <div class="rounded-xl ..." style={{
                      position: "relative",
