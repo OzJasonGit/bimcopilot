@@ -27,6 +27,7 @@ import bimcopilot from './Bim-copilot-logo_Horizontal.png';
 
 const Saleslanding = ({ stories, firstStory }) => {
   const storiesSolo_1 = stories.filter((story, i) => i == 3)
+  const storiesSolo_2 = stories.filter((story, i) => i == 1)
   const storiesToMap = stories.filter((story, i) => i != 0);
   const router = useRouter();
 
@@ -49,7 +50,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                      height: "600px", 
                      gridArea: "IMAGE",                   
                      }} class="rounded-lg ..." id={styles.MAIN_IMAGE}>
-                        {storiesSolo_1.map((story, index) => {
+                        {storiesSolo_2.map((story, index) => {
                                   return (                
                                 <Image
                                 alt="Picture of the author"
