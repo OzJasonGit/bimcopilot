@@ -212,9 +212,10 @@ const Saleslanding = ({ stories, firstStory }) => {
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_scroll}>
-            
-        </div>
+            <div id={styles.SALES_GRID_HOLDER}>
 
+            </div>
+        </div>
       </section>
 
 
