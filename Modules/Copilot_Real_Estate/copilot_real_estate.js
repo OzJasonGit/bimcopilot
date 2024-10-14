@@ -256,14 +256,14 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div class="rounded-xl ..." style={{
                      position: "relative",
-                     gridArea: "IMAGE",
+                     gridArea: "COMMUNITIES",
                      overflow: "hidden",  
                      }}>
                     <div style={{
                         position: "relative",
                         width: "100%",
-                        height: "650px",                                      
-                        }} class="rounded-xl ..." id={styles.MAIN_IMAGE}>
+                        height: "300px",                                      
+                        }} class="rounded-xl ..." id={styles.COMMUNITIES}>
                             {storiesSolo_2.map((story, index) => {
                                 return (                
                                 <Image
