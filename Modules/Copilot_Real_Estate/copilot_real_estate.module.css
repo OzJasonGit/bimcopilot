@@ -282,7 +282,7 @@
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
         ".  .  .  .  ."
-        ". . COMMUNITES COMMUNITES COMMUNITES"
+        ". . COMMUNITIES COMMUNITIES COMMUNITIES"
         ".  .  .  .  .";
 }
 
