@@ -44,6 +44,15 @@ const Saleslanding = ({ stories, firstStory }) => {
         <div class={styles.grid_0_scroll}>
             <div id={styles.SALES_GRID_HOLDER}>
 
+            </div>
+        </div>
+      </section>
+
+
+      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+        <div class={styles.grid_0_scroll}>
+            <div id={styles.SALES_GRID_HOLDER}>
+
                 <div  id={styles.SALES_IMAGE_HOLDER}>
 
                         <div id={styles.SALES_IMAGE_1}>
@@ -210,16 +219,7 @@ const Saleslanding = ({ stories, firstStory }) => {
       </section>
 
 
-      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-        <div class={styles.grid_0_scroll}>
-            <div id={styles.SALES_GRID_HOLDER}>
-
-            </div>
-        </div>
-      </section>
-
-
-
+      
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_scroll}>
             <div id={styles.BOUGHT_TOGETHER_GRID}> 
