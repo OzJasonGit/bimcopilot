@@ -44,14 +44,19 @@ const Saleslanding = ({ stories, firstStory }) => {
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_main_image}>
             <div id={styles.MAIN_IMAGE_GRID_HOLDER}>
-                <div style={{
+
+                <div class="rounded-xl ..." style={{
                      position: "relative",
-                     width: "100%",
-                     height: "600px", 
-                     gridArea: "IMAGE",                   
-                     }} class="rounded-xl ..." id={styles.MAIN_IMAGE}>
-                        {storiesSolo_2.map((story, index) => {
-                                  return (                
+                     gridArea: "IMAGE",
+                     overflow: "hidden",  
+                     }}>
+                    <div style={{
+                        position: "relative",
+                        width: "100%",
+                        height: "600px",                                      
+                        }} class="rounded-xl ..." id={styles.MAIN_IMAGE}>
+                            {storiesSolo_2.map((story, index) => {
+                                return (                
                                 <Image
                                 alt="Picture of the author"
                                 key={story._id}
@@ -64,8 +69,11 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 height: "100%",
                                 objectFit: "cover",
                                 }}/>              
-                        )})}
+                            )})}
+                    </div>
                 </div>
+
+                
             </div>
         </div>
       </section>
