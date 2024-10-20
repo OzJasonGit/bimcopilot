@@ -38,7 +38,7 @@ export default class Subcribetop extends Component {
                 >
                   {" "}
                   <a class="text-stone-200 ... font-avant_garde_bold">
-                    Join the design revolution!
+                    The design revolution is here.
                   </a>{" "}
                   The world is changing and so is{" "}
                   <a class="text-stone-200 ... font-avant_garde_bold">
