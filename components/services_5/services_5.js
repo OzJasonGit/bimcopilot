@@ -51,7 +51,7 @@ return (
                         <br/>
 
 
-                        We are a team of seasoned architects
+                        We're a team of seasoned architects
                         We provide services, including <a class=" text-stone-700 ... font-avant_garde_bold">data-analytics,</a> 
                         <a class=" text-stone-700 ... font-avant_garde_bold"> automation</a> and <a class=" text-stone-700 ... font-avant_garde_bold">technical-drafting</a> for construction projects. see 
                         <a class=" text-stone-700 ... font-avant_garde_bold"><Link href={"./"}> "how we work"</Link></a> to 

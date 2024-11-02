@@ -386,41 +386,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             </div>  
 
 
-                            <div class="rounded-lg ..." id={styles.SALES_IMAGE_B}>
-                                    {storiesSolo_1.map((story, index) => {
-                                        return (                 
-                                        <Image
-                                        alt="Picture of the author"
-                                        key={story._id}
-                                        width={500}
-                                        height={500}
-                                        src={story.image}
-                                        style={{
-                                        position: "absolute",
-                                        width: "100%",
-                                        height: "100%",
-                                        objectFit: "cover",
-                                        }}/>                 
-                                    )})} 
-                                </div>  
-
-                            <div class="rounded-lg ..." id={styles.SALES_IMAGE_C}>
-                                    {storiesSolo_1.map((story, index) => {
-                                        return (                
-                                        <Image
-                                        alt="Picture of the author"
-                                        key={story._id}
-                                        width={500}
-                                        height={500}
-                                        src={story.image}
-                                        style={{
-                                        position: "absolute",
-                                        width: "100%",
-                                        height: "100%",
-                                        objectFit: "cover",
-                                        }}/>              
-                                    )})} 
-                                </div>  
+                           
 
                     </div> 
 
