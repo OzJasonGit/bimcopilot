@@ -321,6 +321,15 @@ const Saleslanding = ({ stories, firstStory }) => {
                             )})} 
                         </div>  
 
+                        <div  id={styles.SALES_TEXT_HOLDER}
+                              style={{
+                                position: "relative",
+                                width: "100%",
+                                height: "100%",
+                                gridArea: "SALES_TEXT_HOLDER",                               
+                                }}>
+                        </div>
+
                     </div>  
                 </div>
 
