@@ -296,8 +296,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                 <div id={styles.BOUGHT_TOGETHER_BLOCK}>
                     <div id={styles.BOUGHT_TITLE_HOLDER}>
                         <h3 id={styles._H3} class="text-4xl ... text-stone-400 ... font-avant_garde_bold">
-                            Useful Tools for Designers <br/>
-                            Architects and Enthusiasts  
+                            Current Listings <br/>
+                            
                         </h3>
                     </div>
 
@@ -328,6 +328,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 height: "100%",
                                 gridArea: "SALES_TEXT_HOLDER",                               
                                 }}>
+
+                                    
                         </div>
 
                     </div>  
