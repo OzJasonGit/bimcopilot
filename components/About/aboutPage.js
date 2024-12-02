@@ -109,7 +109,7 @@ export default class Aboutpage extends Component {
 
                           <h3
                             id={styles._H3}
-                            class="text-lg ... text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                            class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
                           >
                             Hi, I'm Oz Jason. I'm a registered architect, BIM
                             manager and the founder of{" "}
