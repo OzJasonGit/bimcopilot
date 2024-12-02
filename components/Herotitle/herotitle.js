@@ -56,6 +56,7 @@ export default class Herotitle extends Component {
               </h1>
 
               <h3 
+                id={styles._H3}
                 class="text-base ... text-neutral-700 ... font-avant_garde_bold">
                 Explore our resources and systems that can help architects and designers <br/>
                 streamline their processes and be more profitable  throughout their business.
