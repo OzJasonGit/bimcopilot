@@ -24,9 +24,9 @@ export default class Subcribetop extends Component {
 
               <div id={styles.MAIN_TAG}>
                 <h1
-                  id={styles._H1_2}
+                  id={styles._H1}
                   
-                  class="text-4xl ... text-stone-200 ... font-avant_garde_bold">
+                  class=" text-stone-200 ... font-avant_garde_bold">
                   Sustainable, Richer Architects through AI, Analytics and
                   Automation 
                 </h1>
@@ -34,7 +34,7 @@ export default class Subcribetop extends Component {
               <div id={styles.SUB_TAG}>
                 <h3
                   id={styles._H3}
-                  class="text-left ... text-lg ... text-stone-400 ... font-avant_garde_medium"
+                  class="text-left ... text-stone-400 ... font-avant_garde_medium"
                 >
                   {" "}
                   <a class="text-stone-200 ... font-avant_garde_bold">
@@ -55,11 +55,11 @@ export default class Subcribetop extends Component {
                     sustainable
                   </a>
                   . <br /> <br />{" "}
-                  <a 
-                    id={styles._H1_2} 
-                    class="text-stone-200 ... font-avant_garde_bold text-3xl">
+                  <h1 
+                    id={styles._H1} 
+                    class="text-stone-200 ... font-avant_garde_bold">
                     Join the Waiting List!
-                  </a>
+                  </h1>
                 </h3>
               </div>
 
