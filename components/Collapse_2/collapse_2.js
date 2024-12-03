@@ -19,7 +19,7 @@ const contentStyle = {
 const panel_1 = () => (
     
     <h3 style={{ color: "rgb(68 64 60)" }}
-        class="font-geist_semibold ... text-md ... text-right ..."
+        class="font-avant_garde_bold text-right ..."
         id={styles._H3}>
         Project Management, Delivery and Consultancy        
     </h3>
@@ -27,7 +27,7 @@ const panel_1 = () => (
 
 const panel_2 = () => (
     <h3 style={{ color: "rgb(68 64 60)"}}
-        class="font-geist_semibold ... text-md ... text-right ..."
+        class="font-avant_garde_bold text-right ..."
         id={styles._H3}> 
         BIM Strategy, Execution Plan (BEP) and Documentation 
         Digital Twin product development 
@@ -71,7 +71,7 @@ const Collapsed_2 = () => {
                                             key={"1"}
                                             header={panel_1()}
                                         >
-                                            <h3 class="font-geist_regular ... text-md ...  text-right ..."
+                                            <h3 class="font-avant_garde_bold  text-right ..."
                                                 style={{ color: "rgb(68 64 60)", position: "relative" }}
                                                 id={styles._H3}
                                             >
@@ -88,7 +88,7 @@ const Collapsed_2 = () => {
                                             key={"2"}
                                             header={panel_2()}
                                         >
-                                            <h3 class="font-geist_regular ... text-md ... text-right ..."
+                                            <h3 class="font-avant_garde_bold text-right ..."
                                                 style={{ color: "rgb(68 64 60)", position: "relative" }}
                                                 id={styles._H3}
                                             >
