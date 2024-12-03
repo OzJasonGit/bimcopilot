@@ -89,9 +89,9 @@ export default class Aboutpage extends Component {
                           <div id={styles.ABOUT_TITLE_HOLDER}>
                             <h1
                               id={styles._H1}
-                              class=" text-stone-200... drop-shadow-xl font-avant_garde_bold"
+                              class=" text-stone-200 ... drop-shadow-xl font-avant_garde_bold ... text-center ..."
                             >
-                              <a class="text-center ... ">About</a>
+                              <a>About</a>
                             </h1>
                           </div>
 
