@@ -50,7 +50,7 @@ const Mainvideopage = ({ stories, firstStory }) => {
                     {stories[0].title}
                   </h2>
 
-                  <br/> <br/>
+                  <br/> 
                   
                   <h3
                     id={styles._H3}
@@ -70,11 +70,11 @@ const Mainvideopage = ({ stories, firstStory }) => {
 
             <div id={styles.SERVICES_HOLDER}>
               <div id={styles.SERVICES}
-                   style={{  paddingRight: "50px" }}>
+                   style={{   paddingRight: "50px" }}>
                 <div id={styles.SERVICES_TITLE}>
                   <h2
-                    id={styles._H2}
-                    class="text-4xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">
+                    id={styles._H1}
+                    class=" text-stone-400 ... drop-shadow-xl font-avant_garde_bold">
                     Services
                   </h2>
                   <br/>
