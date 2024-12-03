@@ -34,7 +34,7 @@ return (
                   <div id={styles.COLLAPSE_TAG}>
                     <h3
                       id={styles._H3}
-                      class="text-left ... text-lg ... text-stone-500 ... font-avant_garde_bold">
+                      class="text-left ... text-stone-500 ... font-avant_garde_bold">
                         {" "}
                         We are registered and seasoned architects with years of experience in BIM 
                         (Building Information Modeling). We specialize in comprehensive BIM delivery 

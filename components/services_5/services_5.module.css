@@ -1,136 +1,120 @@
 /*SECTION_2////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
 #_H1 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
-
 
 #_H2 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
-
 
 #_H2_7XL {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
-
 #_H3 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 0.85rem;
+  line-height: 1.3rem;
 }
 
 #_H4 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
-
 
 #_H5 {
-    margin-bottom: -2.5px;
+  margin-bottom: -2.5px;
 }
 
-
 #TEXT_OUTLINE {
-    -webkit-text-stroke: 0.65px rgb(120, 120, 120);
-    margin-bottom: 0px;
+  -webkit-text-stroke: 0.65px rgb(120, 120, 120);
+  margin-bottom: 0px;
 }
 
 /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
 
-
 .center_holder {
-    position: relative;
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: aliceblue;
-    margin: 0;
-
+  position: relative;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: aliceblue;
+  margin: 0;
 }
 
 #SHADOW_SECTION_BLOG {
-    position: relative;
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: rgb(228 228 231);
-    z-index: 1;
-    top: 0px;
-    left: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: rgb(228 228 231);
+  z-index: 1;
+  top: 0px;
+  left: 0;
 }
 
 .grid_0_services {
-    position: relative;
-    width: 100%;
-    max-width: 1520px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 0;
-    grid-row-gap: 20px;
-    grid-template-columns: 40px 120px 20px 1fr 20px 120px 40px;
-    grid-template-areas:
-        ". .        .        .        .        .        ."
-        ". . . COLLAPSE . . ."
-        ". . . MESSAGE  . .  ."
-        ". . .      SUB      . .      ."
-        ". .        .        .        .        .        .";
+  position: relative;
+  width: 100%;
+  max-width: 1520px;
+  background-color: transparent;
+  display: grid;
+  grid-column-gap: 0;
+  grid-row-gap: 20px;
+  grid-template-columns: 40px 120px 20px 1fr 20px 120px 40px;
+  grid-template-areas:
+    ". .        .        .        .        .        ."
+    ". . . COLLAPSE . . ."
+    ". . . MESSAGE  . .  ."
+    ". . .      SUB      . .      ."
+    ". .        .        .        .        .        .";
 }
-
-
-
 
 .grid_0_services_2 {
-    position: relative;
-    width: 100%;
-    max-width: 1520px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 0;
-    grid-row-gap: 20px;
-    grid-template-columns: 40px 120px 20px 1fr 20px 120px 40px;
-    grid-template-areas:
-        ". . .  .  . .  ."
-        ". . .      SUB      . .      ."
-        ". .        .        .        .        .        .";
+  position: relative;
+  width: 100%;
+  max-width: 1520px;
+  background-color: transparent;
+  display: grid;
+  grid-column-gap: 0;
+  grid-row-gap: 20px;
+  grid-template-columns: 40px 120px 20px 1fr 20px 120px 40px;
+  grid-template-areas:
+    ". . .  .  . .  ."
+    ". . .      SUB      . .      ."
+    ". .        .        .        .        .        .";
 }
-
-
-
-
-
 
 #SERVICES_HOLDER {
-    width: 100%;
-    position: relative;
-    grid-area: SUB;
-    height: auto;
-    display: grid;
-    grid-column-gap: 30px;
-    grid-row-gap: 0;
-    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
-    grid-template-rows:  auto;
-    grid-template-areas:
-        "SERVICES SERVICES SERVICES SERVICES .";
+  width: 100%;
+  position: relative;
+  grid-area: SUB;
+  height: auto;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 0;
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "SERVICES SERVICES SERVICES SERVICES .";
 }
 
-
 #SERVICES_GRID {
-    width: 100%;
-    position: relative;
-    grid-area: SERVICES;
-    height: auto;
-    display: grid;
-    grid-column-gap: 60px;
-    grid-row-gap: 0;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 20px auto 20px    auto 20px auto 20px auto ;
-    grid-template-areas:
+  width: 100%;
+  position: relative;
+  grid-area: SERVICES;
+  height: auto;
+  display: grid;
+  grid-column-gap: 60px;
+  grid-row-gap: 0;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 20px auto 20px auto 20px auto 20px auto;
+  grid-template-areas:
     "TITLE TITLE"
     ". ."
     "SUBTITLE SUBTITLE"
     ". ."
-
     "SERVICES_1 ."
     ". ."
     ". SERVICES_2"
@@ -138,334 +122,241 @@
     "SERVICES_3 .";
 }
 
-
 #SERVICE_1_HOLDER {
-    grid-area: SERVICES_1;
-    width: 100%;
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-            "TITLE"
-            "COLLAPSE"
-
+  grid-area: SERVICES_1;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "TITLE"
+    "COLLAPSE";
 }
 
 #SERVICE_2_HOLDER {
-    grid-area: SERVICES_2;
-    width: 100%;
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-            "TITLE"
-            "COLLAPSE"
+  grid-area: SERVICES_2;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "TITLE"
+    "COLLAPSE";
 }
 
 #SERVICE_3_HOLDER {
-    grid-area: SERVICES_3;
-    width: 100%;
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-            "TITLE"
-            "COLLAPSE"
+  grid-area: SERVICES_3;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "TITLE"
+    "COLLAPSE";
 }
 
-
 #COLLAPSE_TITLE {
-    position: relative;
-    grid-area: TITLE;   
-    padding-top: 0px;
-
+  position: relative;
+  grid-area: TITLE;
+  padding-top: 0px;
 }
 
 #COLLAPSE_HOLDER {
-    position: relative;
-    grid-area: COLLAPSE;
-    left: -40px;
+  position: relative;
+  grid-area: COLLAPSE;
+  left: -40px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #COLLAPSE_TITLE_2 {
-    grid-area: TITLE;
-    position: relative;
-    padding-top: 50px;
-
+  grid-area: TITLE;
+  position: relative;
+  padding-top: 50px;
 }
 
 #COLLAPSE_MESSAGE {
+  grid-area: MESSAGE;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-column-gap: 40px;
+  grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "BC BC BC BC BC BC . . . . . . . .";
+  left: 0;
+}
+
+#COLLAPSE_MESSAGE_2 {
+  grid-area: SUBTITLE;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-column-gap: 40px;
+  grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "BC BC BC BC . .";
+  left: 0;
+}
+
+#COLLAPSE_TAG {
+  grid-area: BC;
+}
+
+@media all and (min-width: 960px) and (max-width: 1280px) {
+  .grid_0_services {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas:
+      ". . ."
+      ". COLLAPSE ."
+      ". MESSAGE  ."
+      ". SUB ."
+      ". . .";
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 960px) {
+  .grid_0_services {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas:
+      ". . ."
+      ". COLLAPSE ."
+      ". MESSAGE  ."
+      ". SUB ."
+      ". . .";
+  }
+
+  #COLLAPSE_MESSAGE {
     grid-area: MESSAGE;
     width: 100%;
     height: auto;
     display: grid;
     grid-column-gap: 40px;
-    grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas:
-        "BC BC BC BC BC BC . . . . . . . .";
+    grid-template-areas: "BC ";
     left: 0;
+  }
+
+  .testimonials {
+    position: relative;
+    grid-area: SUB;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "BC ";
+    left: 0;
+  }
 }
 
+@media all and (min-width: 0px) and (max-width: 480px) {
+  /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
+  #_H1 {
+    margin-bottom: 0px;
+  }
 
+  #_H2 {
+    margin-bottom: 0px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 21.5px;
+  }
 
+  #_H2_7XL {
+    margin-bottom: 0px;
+  }
 
+  #_H3 {
+    margin-bottom: 0px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 19.5px;
+  }
 
+  #_H4 {
+    margin-bottom: 0px;
+  }
 
-#COLLAPSE_MESSAGE_2 {
-    grid-area: SUBTITLE;
+  #_H5 {
+    margin-bottom: -2.5px;
+  }
+
+  #TEXT_OUTLINE {
+    -webkit-text-stroke: 1.05px rgb(120, 120, 120);
+  }
+
+  /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
+
+  .grid_0_services {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas:
+      ". . ."
+      ". COLLAPSE ."
+      ". MESSAGE ."
+      " . SUB ."
+      ". . .";
+  }
+
+  #COLLAPSE_HOLDER {
+    position: relative;
+    grid-area: SUB;
+    left: -40px;
+    padding-left: 20px;
+  }
+
+  #COLLAPSE_MESSAGE {
+    grid-area: MESSAGE;
     width: 100%;
     height: auto;
     display: grid;
-    grid-column-gap: 40px;
-    grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas:
-        "BC BC BC BC . .";
+    grid-template-areas: "BC";
+    right: 0;
+  }
+
+  .testimonials {
+    position: relative;
+    grid-area: SUB;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-column-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "BC ";
     left: 0;
-}
+  }
 
-#COLLAPSE_TAG {
-    grid-area: BC;
-}
-
-
-
-
-
-
-
-@media all and (min-width: 960px) and (max-width: 1280px) {
-    .grid_0_services {
-            position: relative;
-            width: 100%;
-            max-width: 1520px;
-            background-color: transparent;
-            display: grid;
-            grid-column-gap: 40px;
-            grid-row-gap: 20px;
-            grid-template-columns: 0px 1fr 0px;
-            grid-template-areas:
-                ". . ."
-                ". COLLAPSE ."
-                ". MESSAGE  ."
-                ". SUB ."
-                ". . .";
-        }
-}
-
-
-
-
-@media all and (min-width: 480px) and (max-width: 960px) {
-    .grid_0_services {
-            position: relative;
-            width: 100%;
-            max-width: 1520px;
-            background-color: transparent;
-            display: grid;
-            grid-column-gap: 40px;
-            grid-row-gap: 20px;
-            grid-template-columns: 0px 1fr 0px;
-            grid-template-areas:
-                ". . ."
-                ". COLLAPSE ."
-                ". MESSAGE  ."
-                ". SUB ."
-                ". . .";
-    }
-
-
-    #COLLAPSE_MESSAGE {
-        grid-area: MESSAGE;
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-column-gap: 40px;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "BC ";
-        left: 0;
-    }
-
-
-    .testimonials {
-        position: relative;
-        grid-area: SUB;
-        display: grid;
-        width: 100%;
-        height: auto;
-        grid-column-gap: 40px;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "BC ";
-        left: 0;
-    }
-}
-
-
-
-
-@media all and (min-width: 0px) and (max-width: 480px) {
-
-
-/*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
-    #_H1 {
-        margin-bottom: 0px;
-    }
-
-
-    #_H2 {
-        margin-bottom: 0px;
-        text-align: left;
-        font-size: 20px;
-        line-height:21.5px;
-    }
-
-
-    #_H2_7XL {
-        margin-bottom: 0px;
-    }
-
-
-    #_H3 {
-        margin-bottom: 0px;
-        text-align: left;
-        font-size: 14px;
-        line-height: 19.5px;
-    }
-
-    #_H4 {
-        margin-bottom: 0px;
-    }
-
-
-    #_H5 {
-        margin-bottom: -2.5px;
-    }
-
-
-    #TEXT_OUTLINE {
-        -webkit-text-stroke: 1.05px rgb(120, 120, 120);
-    }
-
-    /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
-
-    .grid_0_services{
-            position: relative;
-            width: 100%;
-            max-width: 1520px;
-            background-color: transparent;
-            display: grid;
-            grid-column-gap: 20px;
-            grid-row-gap: 20px;
-            grid-template-columns: 0px 1fr 0px;
-            grid-template-areas:
-                ". . ."
-                ". COLLAPSE ."
-                ". MESSAGE ."
-                " . SUB ."
-                ". . .";
-        }
-
-
-        #COLLAPSE_HOLDER {
-            position: relative;
-            grid-area: SUB;
-            left: -40px;
-            padding-left: 20px;
-        }
-
-
-        #COLLAPSE_MESSAGE{
-            grid-area: MESSAGE;
-            width: 100%;
-            height: auto;
-            display: grid;
-            grid-column-gap: 20px;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-            grid-template-areas:
-                "BC";
-            right: 0;
-        }
-
-
-
-        .testimonials {
-            position: relative;
-            grid-area: SUB;
-            display: grid;
-            width: 100%;
-            height: auto;
-            grid-column-gap: 20px;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-            grid-template-areas: "BC ";
-            left: 0;
-        }
-
-
-        #COLLAPSE_TITLE {
-            grid-area: COLLAPSE;
-            position: relative;
-            padding-top: 50px;
-    
-        }
+  #COLLAPSE_TITLE {
+    grid-area: COLLAPSE;
+    position: relative;
+    padding-top: 50px;
+  }
 }
