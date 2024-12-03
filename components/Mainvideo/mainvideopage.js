@@ -68,8 +68,8 @@ const Mainvideopage = ({ stories, firstStory }) => {
             <div class="rounded-xl ...  border-4 ... border-stone-200" id={styles.GRAPHIC}></div>
 
             <div id={styles.SERVICES_HOLDER}>
-              <div id={styles.SERVICES}
-                   style={{   paddingRight: "50px" }}>
+              <div id={styles.SERVICES}>
+                   
                 <div id={styles.SERVICES_TITLE}>
                   <h2
                     id={styles._H1}
