@@ -14,7 +14,8 @@ const Tab = () => {
       key: "1",
       src: Pedro,
       text: (
-        <h1>
+        <h2 
+          id={styles._H2}>
           <a>
             <h3 className="text-stone-400 font-avant_garde_bold text-sm">
               Known for its loyalty and faithfulness,
@@ -23,14 +24,15 @@ const Tab = () => {
           <br />
           A dog is a type of domesticated animal. Known for its loyalty and
           faithfulness.
-        </h1>
+        </h2>
       ),
     },
     {
       key: "2",
       src: man2,
       text: (
-        <h1>
+        <h2
+          id={styles._H2}>        
           <a>
             <h3 className="text-stone-400 font-avant_garde_bold text-sm">
               Known for its loyalty and faithfulness,
@@ -39,14 +41,15 @@ const Tab = () => {
           <br />
           Known for its loyalty and faithfulness, it can be found as a welcome
           guest in many households across the world.
-        </h1>
+        </h2>
       ),
     },
     {
       key: "3",
       src: man3,
       text: (
-        <h1>
+        <h2
+          id={styles._H2}>
           <a>
             <h3 className="text-stone-400 font-avant_garde_bold text-sm">
               Known for its loyalty and faithfulness,
@@ -55,7 +58,7 @@ const Tab = () => {
           <br />
           It can be found as a welcome guest in many households across the
           world.
-        </h1>
+        </h2>
       ),
     },
   ];

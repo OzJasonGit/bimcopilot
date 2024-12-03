@@ -1,97 +1,89 @@
 #_H1 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
-
 
 #_H2 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 1.35rem;
+  line-height: 1.6rem;
 }
 
-
 #_H3 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 #_H4 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
-
 
 #_H5 {
-    margin-bottom: -2.5px;
+  margin-bottom: -2.5px;
 }
 
-
 #TESTIMONIALS {
-    grid-area: TESTIMONIAL;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
-    grid-template-rows: 40px 50px auto;
-    width: 100%;
-    height: auto;
-    grid-template-areas:
+  grid-area: TESTIMONIAL;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px;
+  grid-template-rows: 40px 50px auto;
+  width: 100%;
+  height: auto;
+  grid-template-areas:
         /* "." */
-        "TITLE"
-        "TESTIMONIALS"
+    "TITLE"
+    "TESTIMONIALS";
 }
 
 #TESTIMONIAL_AREA {
-    position: relative;
-    grid-area: TESTIMONIALS;
-    width: 100%;
-    height: 350px;
-
+  position: relative;
+  grid-area: TESTIMONIALS;
+  width: 100%;
+  height: 350px;
 }
 
 #T_CONTAINER {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
-#T_CONTAINER h2{
-padding-right: 50px;
+#T_CONTAINER h2 {
+  padding-right: 50px;
 }
-
-
 
 #T_TAB_HOLDER {
-    position: relative;
-    display: grid;
-    grid-template-columns: 0px 75px 0px;
-    grid-template-rows: 0px 75px 0px;
-    grid-column-gap: 0px;
-    grid-column-gap: 0px;
-    grid-template-areas:
-        ". . . "
-        ". PICTURE ."
-        ". . .";
-    padding-bottom: 30px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 0px 75px 0px;
+  grid-template-rows: 0px 75px 0px;
+  grid-column-gap: 0px;
+  grid-column-gap: 0px;
+  grid-template-areas:
+    ". . . "
+    ". PICTURE ."
+    ". . .";
+  padding-bottom: 30px;
 }
 
-
 #T_TAB_HOLDER_MOBILE {
-    position: relative;
-    display: flex;
-    grid-template-columns: 0px 60px 0px;
-    grid-template-rows: 0px 60px 0px;
-    grid-column-gap: 0px;
-    grid-column-gap: 0px;
-    grid-template-areas:
-        ". . . "
-        ". PICTURE ."
-        ". . .";
-
+  position: relative;
+  display: flex;
+  grid-template-columns: 0px 60px 0px;
+  grid-template-rows: 0px 60px 0px;
+  grid-column-gap: 0px;
+  grid-column-gap: 0px;
+  grid-template-areas:
+    ". . . "
+    ". PICTURE ."
+    ". . .";
 }
 
 #T_TAB {
-    grid-area: PICTURE;
+  grid-area: PICTURE;
 }
 
 #T_MOBILE {
-    display: none;
+  display: none;
 }
 /* Add this to your CSS module or global CSS */
 /* .ant-tabs-ink-bar,
@@ -103,30 +95,23 @@ padding-right: 50px;
   padding: 0 !important;
 } */
 
-
 @media (min-width: 0px) and (max-width: 480px) {
-    #T_CONTAINER {
-        position: absolute;
-        height: 400px;
-        width: 100%;
-        
-    }
-    #h2{
-        text-align: center;
+  #T_CONTAINER {
+    position: absolute;
+    height: 400px;
+    width: 100%;
+  }
+  #h2 {
+    text-align: center;
+  }
+  #T_CONTAINER h2 {
+    padding-right: 0px !important;
+  }
+  #T_CONTAINER h1 {
+    font-size: smaller !important;
+  }
 
-    }
-    #T_CONTAINER h2{
-        
-        padding-right: 0px !important;
-        }
-    #T_CONTAINER h1{
-        font-size: smaller !important;
-    }
-    
-    #T_TAB_HOLDER {
-        
-    margin:10px 0 0 10px;
-
-    }
-
-}       
+  #T_TAB_HOLDER {
+    margin: 10px 0 0 10px;
+  }
+}
