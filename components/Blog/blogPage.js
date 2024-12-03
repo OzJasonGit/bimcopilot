@@ -101,12 +101,12 @@ story_id = params.slug
             <div id={styles.IMAGE_POST_TITLE}>
               <div id={styles.HEAD_TITLE}>
                 <Link href={`/blog/${stories.data[0]._id}`}>
-                <h1
+                <h2
                   id={styles._H2}
                   class="text-4xl ... text-stone-200 ... font-avant_garde_bold"
                 >
                   {stories.data[0].title}
-                </h1>
+                </h2>
                 </Link>
               </div>
 
