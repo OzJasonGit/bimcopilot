@@ -77,7 +77,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                 <div id={styles.SUB_TAG}>
                   <h3
                     id={styles._H3}
-                    class="text-left ... text-lg ... text-neutral-500 ... font-avant_garde_bold"
+                    class="text-left ... text-neutral-500 ... font-avant_garde_bold"
                   >
                     {" "}
                 
