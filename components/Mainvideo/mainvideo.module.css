@@ -1130,6 +1130,7 @@
   position: relative;
   display: grid;
   width: 100%;
+  padding-right: 120px;
   grid-row-gap: 10px;
   grid-column-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -2594,6 +2595,22 @@
       "VIDEO"
       "TITLE";
   }
+
+    #VIDEO_TEXT_HOLDER {
+      grid-area: TITLE;
+      position: relative;
+      display: grid;
+      width: 100%;
+      padding-right: 0px;
+      grid-row-gap: 10px;
+      grid-column-gap: 20px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "TITLE"
+        "SUBTITLE"
+        "SHARE";
+    }
 
   #VIDEO_LATEST {
     grid-area: VIDEO;
