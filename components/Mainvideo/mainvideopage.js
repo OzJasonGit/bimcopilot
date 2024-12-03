@@ -70,7 +70,7 @@ const Mainvideopage = ({ stories, firstStory }) => {
 
             <div id={styles.SERVICES_HOLDER}>
               <div id={styles.SERVICES}
-                   style={{  paddingRight: "60px" }}>
+                   style={{  paddingRight: "50px" }}>
                 <div id={styles.SERVICES_TITLE}>
                   <h2
                     id={styles._H2}
