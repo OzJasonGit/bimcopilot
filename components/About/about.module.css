@@ -174,7 +174,7 @@
   scrollbar-width: thin;
   scrollbar-color: rgb(231 229 228) rgb(23 23 23);
   padding-left: 8.5px;
-  padding-right: 8.5px;
+  padding-right: 35px;
 }
 
 #ABOUT_TITLE_HOLDER {
@@ -184,6 +184,7 @@
 
 #MY_FACE_HOLDER {
   position: relative;
+  display: flex;
   height: 220px;
   width: 100%;
   align-items: center;
