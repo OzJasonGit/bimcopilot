@@ -35,7 +35,8 @@ const Mainvideopage = ({ stories, firstStory }) => {
 
              
 
-              <div id={styles.VIDEO_TEXT_HOLDER} class="rounded ...">
+              <div id={styles.VIDEO_TEXT_HOLDER} class="rounded ..."
+                                                 style={{  paddingRight: "120px" }}>
                 <div id={styles.V_TITLE_HOLDER}>
 
 
@@ -48,10 +49,12 @@ const Mainvideopage = ({ stories, firstStory }) => {
                     class="text-4xl ... text-slate-100 ... drop-shadow-xl font-avant_garde_bold">
                     {stories[0].title}
                   </h2>
+
+                  <br/> <br/>
                   
                   <h3
                     id={styles._H3}
-                    class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_medium">
+                    class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">
                     {stories[0].subtitle}
                   </h3>
                 
@@ -66,7 +69,8 @@ const Mainvideopage = ({ stories, firstStory }) => {
             <div class="rounded-xl ...  border-4 ... border-stone-200" id={styles.GRAPHIC}></div>
 
             <div id={styles.SERVICES_HOLDER}>
-              <div id={styles.SERVICES}>
+              <div id={styles.SERVICES}
+                   style={{  paddingRight: "60px" }}>
                 <div id={styles.SERVICES_TITLE}>
                   <h2
                     id={styles._H2}
