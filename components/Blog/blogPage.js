@@ -144,8 +144,8 @@ story_id = params.slug
             <div id={styles.NEWS}>
               <div id={styles.ARTICLES_TITLE} styles={styles.h3}>
                 <h2
-                  id={styles._H2}
-                  class="text-4xl ... text-stone-200 ...  text-shadow-[0_4px_8px_var(--tw-shadow-color)] shadow-indigo-500/50 font-avant_garde_bold"
+                  id={styles._H1}
+                  class=" text-stone-200 ...  text-shadow-[0_4px_8px_var(--tw-shadow-color)] shadow-indigo-500/50 font-avant_garde_bold"
                 >
                   Latest Stories
                 </h2>

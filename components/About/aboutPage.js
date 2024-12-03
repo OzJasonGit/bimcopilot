@@ -243,8 +243,8 @@ export default class Aboutpage extends Component {
               <div id={styles.WHO_WE_WORK_WITH_HOLDER}>
                 <div>
                   <h2
-                    id={styles._H2}
-                    class="text-left ... text-4xl ... text-stone-400 ...  drop-shadow-xl ... font-avant_garde_bold">
+                    id={styles._H1}
+                    class="text-left ...  text-stone-400 ...  drop-shadow-xl ... font-avant_garde_bold">
                     Who We Work With
                   </h2>
                 </div>
@@ -258,8 +258,8 @@ export default class Aboutpage extends Component {
               <div id={styles.TESTIMONIALS}>
                 <div id={styles.TESTIMONIALS_TITLE}>
                   <h2
-                    id={styles._H2}
-                    class="text-right ... text-4xl ... text-stone-400 ...  drop-shadow-xl font-avant_garde_bold"
+                    id={styles._H1}
+                    class="text-right ... text-stone-400 ...  drop-shadow-xl font-avant_garde_bold"
                   >
                     Testimonials
                   </h2>
