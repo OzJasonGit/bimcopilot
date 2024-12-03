@@ -103,7 +103,7 @@ story_id = params.slug
                 <Link href={`/blog/${stories.data[0]._id}`}>
                 <h2
                   id={styles._H2}
-                  class="text-4xl ... text-stone-200 ... font-avant_garde_bold"
+                  class=" text-stone-200 ... font-avant_garde_bold"
                 >
                   {stories.data[0].title}
                 </h2>
