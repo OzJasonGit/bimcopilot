@@ -33,8 +33,8 @@ export default class Aboutpage extends Component {
                 
                 <div id={styles.INTRO}>
                   <h2
-                    id={styles._H1_2}
-                    class="text-4xl ... text-stone-200 ... drop-shadow-xl ...  font-avant_garde_bold">
+                    id={styles._H2}
+                    class=" text-stone-200 ... drop-shadow-xl ...  font-avant_garde_bold">
                     We help businesses harness BIM and AI for speed, profit and
                     sustainable success.
                   </h2>
