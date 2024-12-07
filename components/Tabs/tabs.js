@@ -22,8 +22,8 @@ const Tab = () => {
             </h3>
           </a>
           <br />
-          A dog is a type of domesticated animal. Known for its loyalty and
-          faithfulness.
+            "... Oz's deep industry knowledge allows him to quickly 
+            identify problems and deliver actionable strategies." 
         </h2>
       ),
     },
