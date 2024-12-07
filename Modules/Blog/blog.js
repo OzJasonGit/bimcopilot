@@ -75,7 +75,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <h1
                    
                     id={styles._H1}
-                    class="text-6xl ... text-stone-200 ... font-avant_garde_bold"
+                    class=" text-stone-200 ... font-avant_garde_bold"
                   >
                     {story.title}
                  

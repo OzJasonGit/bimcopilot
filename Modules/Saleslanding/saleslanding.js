@@ -162,9 +162,11 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
                     <div  id={styles.C1}>
-                        <h3 class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
+
+                        <h2 id={styles._H2}
+                            class=" text-stone-700 ... font-avant_garde_bold">
                             This is a test title
-                        </h3>
+                        </h2>
                     </div>
 
                     <div  id={styles.C2}>
@@ -274,9 +276,9 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.BOUGHT_TOGETHER_BLOCK}>
                     <div id={styles.BOUGHT_TITLE_HOLDER}>
-                        <h3 id={styles._H3} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
+                        <h2 id={styles._H2} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
                             Frequently Bought Together
-                        </h3>
+                        </h2>
                     </div>
 
                     <div id={styles.BOUGHT_IMAGE_HOLDER}>
@@ -407,7 +409,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.PRODUCT_DESCRIPTION}>
                     <div id={styles.P_TITLE}>
-                        <h2 id={styles._H3} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
+                        <h2 id={styles._H2} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
                             This is the description title 
                         </h2>
                     </div>
@@ -435,7 +437,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
                     <div  id={styles.P_DESCRIPTION}>  
-                         <h3 id={styles._H3} class="text-md ... text-stone-700 ... font-geist_regular">
+                         <p id={styles._H3} class="text-base ... text-stone-700 ... font-geist_regular">
                             Delta compression using up to 12 threads
                             Compressing objects: 100% (5/5), done.
                             Writing objects: 100% (5/5), 440 bytes | 440.00 KiB/s, done.
@@ -445,7 +447,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             Writing objects: 100% (5/5), 440 bytes | 440.00 KiB/s, done.
                             Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
                             remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
-                        </h3>                       
+                        </p>                       
                     </div>
 
                 </div>
