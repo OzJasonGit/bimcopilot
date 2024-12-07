@@ -35,13 +35,14 @@ const Tab = () => {
           id={styles._H2}>        
           <a>
             <h3 className="text-stone-400 font-avant_garde_bold text-sm">
-              Raj Deb, Perkins + Will, London, UK
+              Stas Louca, H + A Architects, Dubai, UAE      
             </h3>
           </a>
           <br />
-          Working with Oz Jason and Bimcopilot.com has been a game-changer for our projects. 
-          His ability to blend cutting-edge technology with real-world applications 
-          of BIM has turned complex challenges into efficient, practical solutions.
+          "Working with Oz Jason and Bimcopilot.com has been a game-changer for our projects...
+          <br/> 
+          His understanding of cutting-edge technology, and being able to apply it real-world scenarios
+          has allowed us to turn complex challenges into efficient, practical solutions."
         </h2>
       ),
     },
@@ -53,7 +54,7 @@ const Tab = () => {
           id={styles._H2}>
           <a>
             <h3 className="text-stone-400 font-avant_garde_bold text-sm">
-              Stas Louca, H + A Architects, Dubai, UAE 
+              Raj Deb, Perkins + Will, London, UK            
             </h3>
           </a>
           <br />
