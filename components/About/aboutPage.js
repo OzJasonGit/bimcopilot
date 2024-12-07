@@ -114,8 +114,9 @@ export default class Aboutpage extends Component {
                             I'm Oz Jason. A registered architect and BIM
                             manager from the UK. I'm also the founder of{" "}
                             <a class="text-yellow-200 ...">bimcopilot.com</a>.
-                            <br /> However, titles are becoming less important. 
-                            What matters is how we can help you and your business. <br /> 
+                            <br/> <br/> However, titles are becoming less important. 
+                            What matters is how we can help you and your business. 
+                            <br/> <br/> 
                             We can help you a lot.
                           </h2>
                           <br />
