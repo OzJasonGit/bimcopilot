@@ -5,7 +5,7 @@ import styles from "./tabs.module.css";
 import Image from "next/image";
 import Raj_Deb from "./Raj.png";
 import Pedro from "./1527083980338.jpeg";
-import Stas_Louca from "./3542.jpg";
+import Stas_Louca from "./1596718135816.jpeg";
 import { Tabs } from "antd";
 
 const Tab = () => {
@@ -44,7 +44,7 @@ const Tab = () => {
           design requirements. 
           <br/> <br/> 
           Bimcopilot excels in streamlining workflows, resolving bottleknecks and 
-          fostering collaboratgion amongst teams. "
+          fostering collaboration amongst teams. "
         </h2>
       ),
     },
