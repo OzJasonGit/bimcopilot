@@ -107,8 +107,8 @@ export default class Aboutpage extends Component {
                             </div>
                           </div>
 
-                          <h3
-                            id={styles._H3}
+                          <h2
+                            id={styles._H2}
                             class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
                           >
                             Hi, I'm Oz Jason. I'm a registered architect, BIM
@@ -118,7 +118,7 @@ export default class Aboutpage extends Component {
                             becoming less important. What matters is how I can
                             help you and your business. And I think <br /> I could
                             help you a lot.
-                          </h3>
+                          </h2>
                           <br />
                           <p class="text-base ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold"
                              id={styles._H3}>

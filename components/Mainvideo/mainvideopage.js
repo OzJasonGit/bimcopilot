@@ -79,14 +79,15 @@ const Mainvideopage = ({ stories, firstStory }) => {
                   <br/>
                   
 
-                  <h3 
+                  <h2 
 
-                     id={styles._H3}
+                     id={styles._H2}
                      class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">       
                      We identify <a  class="text-stone-200">problems and systems</a> that can be <a class="text-stone-200">improved or eliminated</a> with <a  class="text-emerald-200">Automation</a>, <a class="text-emerald-200">AI</a> and <a class="text-emerald-200">Building Information Modelling</a>. 
                     <br/> <br/> 
 
-                    <p                       
+                    <p    
+                      id={styles._H3}                   
                       class="text-base ...">
                       This involves first learning and assessing you business processes and then developing a unique solution.
                     <br/><br/>
@@ -98,7 +99,7 @@ const Mainvideopage = ({ stories, firstStory }) => {
                     Click below to learn more about how <br/> <a class="text-stone-200">we can help you</a>.  
                     </p>  
 
-                  </h3>
+                  </h2>
 
                 </div>
               </div>
