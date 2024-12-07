@@ -43,11 +43,11 @@ const Mainvideopage = ({ stories, firstStory }) => {
 
 
 
-                  <h2
-                    id={styles._H2}
-                    class="text-4xl ... text-slate-100 ... drop-shadow-xl font-avant_garde_bold">
+                  <h3
+                    id={styles._H3}
+                    class=" text-slate-100 ... drop-shadow-xl font-avant_garde_bold">
                     {stories[0].title}
-                  </h2>
+                  </h3>
 
                   <br/> 
                   
@@ -79,11 +79,13 @@ const Mainvideopage = ({ stories, firstStory }) => {
                   <br/>
                   
 
-                  <h3 class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">       
-                    We identify <a  class="text-stone-200">problems and systems</a> that can be <a class="text-stone-200">improved or eliminated</a> with <a  class="text-emerald-200">Automation</a>, <a class="text-emerald-200">AI</a> and <a class="text-emerald-200">Building Information Modelling</a>. 
+                  <h3 
+                     id={styles._H3}
+                     class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">       
+                     We identify <a  class="text-stone-200">problems and systems</a> that can be <a class="text-stone-200">improved or eliminated</a> with <a  class="text-emerald-200">Automation</a>, <a class="text-emerald-200">AI</a> and <a class="text-emerald-200">Building Information Modelling</a>. 
                     <br/> <br/> 
-                    <p  
-                      id={styles._H3}
+
+                    <p                       
                       class="text-base ...">
                       This involves first learning and assessing you business processes and then developing a unique solution.
                     <br/><br/>
@@ -93,7 +95,8 @@ const Mainvideopage = ({ stories, firstStory }) => {
                     <a  class="text-stone-200">Artificial Intelligence</a> is a new technology that's rapidly evolving. We keep our <a  class="text-stone-200">finger on the pulse</a> and explore <a  class="text-stone-200">solutions that can help you</a>. 
                     <br/><br/>
                     Click below to learn more about how <br/> <a class="text-stone-200">we can help you</a>.  
-                    </p>                        
+                    </p>  
+                                          
                   </h3>
 
                 </div>
