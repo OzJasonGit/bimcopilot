@@ -58,10 +58,10 @@ const Tab = () => {
             </h3>
           </a>
           <br/>
-          "Working with Oz Jason and Bimcopilot.com has been a game-changer for our projects...
+          " Working with Oz Jason and Bimcopilot.com has been a game-changer for our projects...
           <br/> <br/> 
           His understanding of BIM, cutting-edge technologies and applying it to real-world scenarios
-          has allowed us to turn complex challenges into efficient, practical solutions."
+          has allowed us to turn complex challenges into efficient, practical solutions. "
         </h2>
       ),
     },
