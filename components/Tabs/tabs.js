@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./tabs.module.css";
 import Image from "next/image";
-import Raj_Deb from "./3542.jpg";
+import Raj_Deb from "./Raj.png";
 import Pedro from "./1527083980338.jpeg";
 import Stas_Louca from "./1623052727307.jpg";
 import { Tabs } from "antd";
