@@ -12,13 +12,13 @@ const Tab = () => {
   const testimonialsArr = [
     {
       key: "1",
-      src: Pedro,
+      src: Pedro ,
       text: (
         <h2 
           id={styles._H2}>
           <a>
             <h3 className="text-stone-400 font-avant_garde_bold text-sm">
-              Known for its loyalty and faithfulness,
+              Pedro Sanchez Reche, Foster and Partners, London, UK
             </h3>
           </a>
           <br />
@@ -29,13 +29,13 @@ const Tab = () => {
     },
     {
       key: "2",
-      src: man2,
+      src: Raj_Deb ,
       text: (
         <h2
           id={styles._H2}>        
           <a>
             <h3 className="text-stone-400 font-avant_garde_bold text-sm">
-              Known for its loyalty and faithfulness,
+              Raj Deb, Perkins + Will, London, UK
             </h3>
           </a>
           <br />
@@ -46,13 +46,13 @@ const Tab = () => {
     },
     {
       key: "3",
-      src: man3,
+      src: Stas_Louca ,
       text: (
         <h2
           id={styles._H2}>
           <a>
             <h3 className="text-stone-400 font-avant_garde_bold text-sm">
-              Known for its loyalty and faithfulness,
+              Stas Louca, H + A Architects, Dubai, UAE 
             </h3>
           </a>
           <br />
