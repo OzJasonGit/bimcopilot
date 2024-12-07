@@ -111,13 +111,12 @@ export default class Aboutpage extends Component {
                             id={styles._H2}
                             class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
                           >
-                            Hi, I'm Oz Jason. I'm a registered architect, BIM
-                            manager and the founder of{" "}
+                            I'm Oz Jason. A registered architect and BIM
+                            manager from the UK. I'm also the founder of{" "}
                             <a class="text-yellow-200 ...">bimcopilot.com</a>.
-                            <br /> However, I'm a firm believer that titles are
-                            becoming less important. What matters is how I can
-                            help you and your business. And I think <br /> I could
-                            help you a lot.
+                            <br /> However, titles are becoming less important. 
+                            What matters is how we can help you and your business. <br /> 
+                            We can help you a lot.
                           </h2>
                           <br />
                           <p class="text-base ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold"
@@ -126,7 +125,7 @@ export default class Aboutpage extends Component {
                             <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               bimcopilot.com
                             </a>{" "}
-                            we use Building Information modelling
+                            we're using Building Information modelling
                             <a class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold">
                               {" "}
                               [BIM]
