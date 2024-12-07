@@ -27,34 +27,16 @@ const Tab = () => {
         </h2>
       ),
     },
+    
     {
       key: "2",
-      src: Raj_Deb ,
-      text: (
-        <h2
-          id={styles._H2}>        
-          <a>
-            <h3 className="text-stone-400 font-avant_garde_bold text-sm">
-              Stas Louca, H + A Architects, Dubai, UAE      
-            </h3>
-          </a>
-          <br />
-          "Working with Oz Jason and Bimcopilot.com has been a game-changer for our projects...
-          <br/> 
-          His understanding of cutting-edge technology, and being able to apply it real-world scenarios
-          has allowed us to turn complex challenges into efficient, practical solutions."
-        </h2>
-      ),
-    },
-    {
-      key: "3",
-      src: Stas_Louca ,
+      src: Stas_Louca,
       text: (
         <h2
           id={styles._H2}>
           <a>
             <h3 className="text-stone-400 font-avant_garde_bold text-sm">
-              Raj Deb, Perkins + Will, London, UK            
+              Stas Louca, H + A Architects, Dubai, UAE                         
             </h3>
           </a>
           <br />
@@ -63,6 +45,27 @@ const Tab = () => {
         </h2>
       ),
     },
+
+    {
+      key: "3",
+      src:  Raj_Deb ,
+      text: (
+        <h2
+          id={styles._H2}>        
+          <a>
+            <h3 className="text-stone-400 font-avant_garde_bold text-sm">
+              Raj Deb, Perkins + Will, London, UK                 
+            </h3>
+          </a>
+          <br/>
+          "Working with Oz Jason and Bimcopilot.com has been a game-changer for our projects...
+          <br/> <br/> 
+          His understanding of BIM, cutting-edge technologies and applying it to real-world scenarios
+          has allowed us to turn complex challenges into efficient, practical solutions."
+        </h2>
+      ),
+    },
+
   ];
 
   const [tabPosition, setTabPosition] = useState("right");
