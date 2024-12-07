@@ -39,8 +39,9 @@ const Tab = () => {
             </h3>
           </a>
           <br />
-          Known for its loyalty and faithfulness, it can be found as a welcome
-          guest in many households across the world.
+          Working with Oz Jason and Bimcopilot.com has been a game-changer for our projects. 
+          His ability to blend cutting-edge technology with real-world applications 
+          of BIM has turned complex challenges into efficient, practical solutions.
         </h2>
       ),
     },
