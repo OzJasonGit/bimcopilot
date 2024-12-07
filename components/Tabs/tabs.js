@@ -5,7 +5,7 @@ import styles from "./tabs.module.css";
 import Image from "next/image";
 import Raj_Deb from "./Raj.png";
 import Pedro from "./1527083980338.jpeg";
-import Stas_Louca from "./1623052727307.jpg";
+import Stas_Louca from "./3542.jpg";
 import { Tabs } from "antd";
 
 const Tab = () => {
@@ -22,8 +22,8 @@ const Tab = () => {
             </h3>
           </a>
           <br />
-            "... Oz's deep industry knowledge allows him to quickly 
-            identify problems and deliver actionable strategies." 
+            " ... Oz's deep industry knowledge allows him to quickly 
+            identify problems and deliver actionable strategies. " 
         </h2>
       ),
     },
@@ -40,8 +40,11 @@ const Tab = () => {
             </h3>
           </a>
           <br />
-          It can be found as a welcome guest in many households across the
-          world.
+          " We worked with Bimcopilot in early 2024, on a project involving sensitive 
+          design requirements. 
+          <br/> <br/> 
+          Bimcopilot excels in streamlining workflows, resolving bottleknecks and 
+          fostering collaboratgion amongst teams. "
         </h2>
       ),
     },

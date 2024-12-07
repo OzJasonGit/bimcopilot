@@ -43,11 +43,11 @@ const Mainvideopage = ({ stories, firstStory }) => {
 
 
 
-                  <h3
-                    id={styles._H3}
+                  <h2
+                    id={styles._H2}
                     class=" text-slate-100 ... drop-shadow-xl font-avant_garde_bold">
                     {stories[0].title}
-                  </h3>
+                  </h2>
 
                   <br/> 
                   
@@ -80,7 +80,7 @@ const Mainvideopage = ({ stories, firstStory }) => {
                   
 
                   <h3 
-                  
+
                      id={styles._H3}
                      class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">       
                      We identify <a  class="text-stone-200">problems and systems</a> that can be <a class="text-stone-200">improved or eliminated</a> with <a  class="text-emerald-200">Automation</a>, <a class="text-emerald-200">AI</a> and <a class="text-emerald-200">Building Information Modelling</a>. 
