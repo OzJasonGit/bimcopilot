@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from "react";
 import styles from "./tabs.module.css";
 import Image from "next/image";
-import man3 from "./3542.jpg";
+import Raj_Deb from "./3542.jpg";
 import Pedro from "./1527083980338.jpeg";
-import man2 from "./1623052727307.jpg";
+import Stas_Louca from "./1623052727307.jpg";
 import { Tabs } from "antd";
 
 const Tab = () => {
