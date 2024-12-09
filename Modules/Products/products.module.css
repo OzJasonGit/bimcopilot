@@ -1,64 +1,240 @@
 /*SECTION_2////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
 #_H1 {
-    margin-bottom: 0px;
-    padding-bottom: 0;
+  margin-bottom: 0px;
+  font-size: 2rem;
+  line-height: 2rem;
 }
-
 
 #_H2 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 1.15rem;
+  line-height: 1.35rem;
 }
-
-
-#H2_7XL {
-    margin-bottom: 0px;
-}
-
 
 #_H3 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 0.85rem;
+  line-height: 1.3rem;
 }
 
 #_H4 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
-
 
 #_H5 {
-    margin-bottom: -2.5px;
+  margin-bottom: -2.5px;
 }
-
 
 #TEXT_OUTLINE {
-    -webkit-text-stroke: 1.05px rgb(120, 120, 120);
+  -webkit-text-stroke: 1.05px rgb(120, 120, 120);
 }
 
+#H2_7XL {
+  margin-bottom: 0px;
+}
 /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-
-
-
-
-
 
 /*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
 .center_holder {
-    position: relative;
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: aliceblue;
-    margin: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: aliceblue;
+  margin: 0;
 }
 
-
-
 #SHADOW_SECTION_BLOG {
+  position: relative;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: rgb(23, 23, 23);
+  z-index: 1;
+  top: 0px;
+  left: 0;
+}
+
+.grid_0_blogimageholder {
+  position: relative;
+  width: 100%;
+  max-width: 1520px;
+  background-color: transparent;
+  display: grid;
+  grid-column-gap: 0px;
+  grid-row-gap: 20px;
+  grid-template-rows: 0px auto 0px;
+  grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". . . SUB . . ."
+    ". . . . . . .";
+}
+
+.grid_0_blogimage {
+  grid-area: SUB;
+  position: relative;
+  width: 100%;
+  max-width: 1520px;
+  background-color: transparent;
+  display: grid;
+  grid-column-gap: 0px;
+  grid-row-gap: 20px;
+  grid-template-rows: 0px auto 0px;
+  grid-template-columns: 0px 120px 20px 1fr 20px 120px 0px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA ."
+    ". . . . . . .";
+}
+
+#BLOGIMAGE_HOLDER {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-area: MAIN-AREA;
+  position: relative;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#BLOGIMAGE {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 320px auto auto;
+  grid-template-areas:
+    "IMAGE IMAGE"
+    "TEXT TEXT"
+    "SHARE .";
+}
+
+#BLOGIMAGE_2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 640px auto auto;
+  grid-template-areas:
+    "IMAGE IMAGE"
+    "TEXT TEXT"
+    "SHARE .";
+}
+
+#B_IMAGE {
+  position: relative;
+  grid-area: IMAGE;
+  overflow: hidden;
+}
+
+#BLOGIMAGE_HOLDER_GRID {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-area: MAIN-AREA;
+  position: relative;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "IMAGE_1 IMAGE_2 IMAGE_2";
+}
+
+#BLOGIMAGE_HOLDER_GRID_TWO {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-area: MAIN-AREA;
+  position: relative;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "IMAGE_2 IMAGE_2 IMAGE_1";
+}
+
+#BLOGIMAGE_HOLDER_GRID_1 {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-area: IMAGE_1;
+  position: relative;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr;
+}
+
+#BLOGIMAGE_HOLDER_GRID_2 {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-area: IMAGE_2;
+  position: relative;
+  grid-row-gap: 40px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+}
+
+#BLOGIMAGE_HOLDER_2 {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-area: MAIN-AREA;
+  position: relative;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "IMAGE_2 IMAGE_1 IMAGE_1"
+    "IMAGE_3 IMAGE_1 IMAGE_1";
+}
+
+/*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
+@media all and (min-width: 960px) and (max-width: 1280px) {
+  .grid_0_blogimageholder {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 30px 1fr 30px;
+    grid-template-areas:
+      ". . ."
+      ".  SUB  ."
+      ". . .";
+  }
+
+  #BLOGIMAGE_HOLDER {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: MAIN-AREA;
+    position: relative;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #SHADOW_SECTION_BLOG {
     position: relative;
     width: 100%;
     display: flex;
@@ -68,577 +244,192 @@
     z-index: 1;
     top: 0px;
     left: 0;
-}
+  }
 
-
-
-.grid_0_blogimageholder {
-    position: relative;
-    width: 100%;
-    max-width: 1520px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 20px;
-    grid-template-rows: 0px auto 0px;
-    grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
-    grid-template-areas: ". . . . . . ."
-        ". . . SUB . . ."
-        ". . . . . . .";
-}
-
-
-
-.grid_0_blogimage {
-    grid-area: SUB;
-    position: relative;
-    width: 100%;
-    max-width: 1520px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 20px;
-    grid-template-rows: 0px auto 0px;
-    grid-template-columns: 0px 120px 20px 1fr 20px 120px 0px;
-    grid-template-areas: ". . . . . . ."
-        ". MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA ."
-        ". . . . . . .";
-}
-
-
-
-
-#BLOGIMAGE_HOLDER {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-area: MAIN-AREA;
-    position: relative;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-
-
-#BLOGIMAGE {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: grid;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 320px auto auto;
-    grid-template-areas: "IMAGE IMAGE"
-        "TEXT TEXT"
-        "SHARE .";
-}
-
-
-
-#BLOGIMAGE_2 {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: grid;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 640px auto auto;
-    grid-template-areas: "IMAGE IMAGE"
-        "TEXT TEXT"
-        "SHARE .";
-}
-
-
-
-
-#B_IMAGE {
-    position: relative;
-    grid-area: IMAGE;
-    overflow: hidden;
-}
-
-
-
-
-#BLOGIMAGE_HOLDER_GRID {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-area: MAIN-AREA;
-    position: relative;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "IMAGE_1 IMAGE_2 IMAGE_2";
-}
-
-
-#BLOGIMAGE_HOLDER_GRID_TWO {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-area: MAIN-AREA;
-    position: relative;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "IMAGE_2 IMAGE_2 IMAGE_1";
-}
-
-
-
-#BLOGIMAGE_HOLDER_GRID_1 {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-area: IMAGE_1;
-    position: relative;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr;    
-}
-
-
-#BLOGIMAGE_HOLDER_GRID_2 {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-area: IMAGE_2;
-    position: relative;
-    grid-row-gap: 40px;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
-}
-
-
-
-
-
-
-
-
-
-
-#BLOGIMAGE_HOLDER_2 {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-area: MAIN-AREA;
-    position: relative;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "IMAGE_2 IMAGE_1 IMAGE_1"
-                         "IMAGE_3 IMAGE_1 IMAGE_1";
-}
-
-
-
-
-
-
-
-
-
-
-/*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
-@media all and (min-width: 960px) and (max-width: 1280px) {
-
-    .grid_0_blogimageholder {
-        position: relative;
-        width: 100%;
-        max-width: 1520px;
-        background-color: transparent;
-        display: grid;
-        grid-column-gap: 0px;
-        grid-row-gap: 20px;
-        grid-template-rows: 0px auto 0px;
-        grid-template-columns: 30px 1fr 30px;
-        grid-template-areas: ". . ."
-            ".  SUB  ."
-            ". . .";
-    }
-
-
-
-    #BLOGIMAGE_HOLDER {
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-area: MAIN-AREA;
-        position: relative;
-        grid-column-gap: 40px;
-        grid-row-gap: 40px;
-        grid-template-rows: auto auto;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-
-
-    #SHADOW_SECTION_BLOG {
-        position: relative;
-        width: 100%;
-        display: flex;
-        -webkit-box-pack: center;
-        justify-content: center;
-        background-color: rgb(23, 23, 23);
-        z-index: 1;
-        top: 0px;
-        left: 0;
-    }
-
-  
-
-    /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
- 
+  /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
 }
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
 /*BREAKPOINT_2////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*BREAKPOINT_3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 #_H1 {
-    margin-bottom: 0px;
-    font-size: 40px;
+  margin-bottom: 0px;
+  font-size: 40px;
 }
 
 #_H2 {
-    margin-bottom: 0px;
-    font-size: 30px;
+  margin-bottom: 0px;
+  font-size: 30px;
 }
 
 #_H3 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 #_H4 {
-    margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 #_H5 {
-    margin-bottom: -2.5px;
+  margin-bottom: -2.5px;
 }
 
 /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media all and (min-width: 480px) and (max-width: 960px) {
-    .center_holder {
-        width: 100%;
-        display: flex;
-        -webkit-box-pack: center;
-        justify-content: center;
-        background-color: aliceblue;
-        margin: 0;
-    }
+  .center_holder {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: aliceblue;
+    margin: 0;
+  }
 
+  .grid_0_blogimageholder {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 30px 1fr 30px;
+    grid-template-areas:
+      ". . ."
+      ".  SUB  ."
+      ". . .";
+  }
 
+  #BLOGIMAGE_HOLDER {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: MAIN-AREA;
+    position: relative;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+  }
 
+  #BLOGIMAGE {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 260px auto auto;
+    grid-template-areas:
+      "IMAGE IMAGE"
+      "TEXT TEXT"
+      "SHARE .";
+  }
 
-    .grid_0_blogimageholder {
-        position: relative;
-        width: 100%;
-        max-width: 1520px;
-        background-color: transparent;
-        display: grid;
-        grid-column-gap: 0px;
-        grid-row-gap: 20px;
-        grid-template-rows: 0px auto 0px;
-        grid-template-columns: 30px 1fr 30px;
-        grid-template-areas: ". . ."
-            ".  SUB  ."
-            ". . .";
-    }
-
-
-
-    #BLOGIMAGE_HOLDER {
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-area: MAIN-AREA;
-        position: relative;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        grid-template-rows: auto auto;
-        grid-template-columns: 1fr 1fr;
-    }
-
-
-
-    #BLOGIMAGE {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: grid;
-        grid-row-gap: 20px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 260px auto auto;
-        grid-template-areas: "IMAGE IMAGE"
-            "TEXT TEXT"
-            "SHARE .";
-    }
-
-
-
-    #PRODUCT_TEXT {
-        grid-area: TEXT;
-    }
-
- 
-
-
-
+  #PRODUCT_TEXT {
+    grid-area: TEXT;
+  }
 }
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
 /*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media all and (min-width: 0px) and (max-width: 480px) {
+  /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
+  #_H1 {
+    margin-bottom: 0px;
+    font-size: 20px;
+  }
 
+  #_H1_2 {
+    margin-bottom: 0px;
+    font-size: 27.5px;
+    line-height: 27.5px;
+  }
 
-    /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
-    #_H1 {
-        margin-bottom: 0px;
-        font-size: 20px;
-    }
+  #_H2 {
+    margin-bottom: 0px;
+    font-size: 20.5px;
+    line-height: 24.5px;
+  }
 
-    #_H1_2 {
-        margin-bottom: 0px;
-        font-size: 27.5px;
-        line-height: 27.5px;
-    }
+  #_H3 {
+    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: 20.5px;
+  }
 
+  #_H4 {
+    margin-bottom: 0px;
+  }
 
-    #_H2 {
-        margin-bottom: 0px;
-        font-size: 20.5px;
-        line-height: 24.5px;
-    }
+  #_H5 {
+    margin-bottom: -2.5px;
+    font-size: 15px;
+    line-height: 5px;
+  }
 
-    #_H3 {
-        margin-bottom: 0px;
-        font-size: 14px;
-        line-height: 20.5px;
-    }
+  /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-    #_H4 {
-        margin-bottom: 0px;
-    }
+  /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+  .grid_0_blogimageholder {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-areas:
+      ". . ."
+      ".  SUB  ."
+      ". . .";
+  }
 
-    #_H5 {
-        margin-bottom: -2.5px;
-        font-size: 15px;
-        line-height: 5px;
-    }
+  #BLOGIMAGE_HOLDER {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: MAIN-AREA;
+    position: relative;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+  }
 
-    /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
+  #BLOGIMAGE {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 180px auto auto;
+    grid-template-areas:
+      "IMAGE IMAGE"
+      "TEXT TEXT"
+      "SHARE .";
+  }
 
+  #PRODUCT_TEXT {
+    grid-area: TEXT;
+  }
 
-    /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
+  /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-    .grid_0_blogimageholder {
-        position: relative;
-        width: 100%;
-        max-width: 1520px;
-        background-color: transparent;
-        display: grid;
-        grid-column-gap: 0px;
-        grid-row-gap: 20px;
-        grid-template-rows: 0px auto 0px;
-        grid-template-columns: 20px 1fr 20px;
-        grid-template-areas: ". . ."
-            ".  SUB  ."
-            ". . .";
-    }
+  /*SECTION_1/////////////////////////////////////////////////////////////////////////////////////////////*/
 
-
-    #BLOGIMAGE_HOLDER {
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-area: MAIN-AREA;
-        position: relative;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        grid-template-rows: auto auto;
-        grid-template-columns: 1fr 1fr;
-    }
-
-
-
-    #BLOGIMAGE {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: grid;
-        grid-row-gap: 20px;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 180px auto auto;
-        grid-template-areas: "IMAGE IMAGE"
-            "TEXT TEXT"
-            "SHARE .";
-    }
-
-
-
-        #PRODUCT_TEXT  {
-            grid-area: TEXT;
-        }
-
-
-    
-
-    /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-    /*SECTION_1/////////////////////////////////////////////////////////////////////////////////////////////*/
-  
-    /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
-
-
-   
+  /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
 }
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/

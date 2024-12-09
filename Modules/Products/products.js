@@ -58,13 +58,13 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                         <div id={styles.PRODUCT_TEXT}> 
 
-                                          <h3 id={styles._H3} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                          <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
                                             {story.title}
-                                          </h3>    
+                                          </h2>    
                                           <br/>                                  
-                                          <h4 id={styles._H4} class="text-stone-400 ... font-geist_regular ...">
+                                          <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
                                             {story.subtitle}
-                                          </h4>
+                                          </h3>
 
                                         </div>
                                       </div>                               
@@ -113,13 +113,13 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                         <div id={styles.PRODUCT_TEXT}> 
 
-                                          <h3 id={styles._H3} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                          <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
                                             {story.title}
-                                          </h3>  
+                                          </h2>  
                                           <br/>                                      
-                                          <h4 id={styles._H4} class="text-stone-400 ... font-geist_regular ...">
+                                          <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
                                             {story.subtitle}
-                                          </h4>
+                                          </h3>
 
                                         </div>
                                       </div>                               
@@ -155,13 +155,13 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                         <div id={styles.PRODUCT_TEXT}> 
 
-                                          <h3 id={styles._H3} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                          <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
                                             {story.title}
-                                          </h3>  
+                                          </h2>  
                                           <br/>                                      
-                                          <h4 id={styles._H4} class="text-stone-400 ... font-geist_regular ...">
+                                          <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
                                             {story.subtitle}
-                                          </h4>
+                                          </h3>
 
                                         </div>
                                       </div>                               
@@ -218,13 +218,13 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                           <div id={styles.PRODUCT_TEXT}> 
 
-                                            <h3 id={styles._H3} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                            <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
                                               {story.title}
-                                            </h3>    
+                                            </h2>    
                                             <br/>                                    
-                                            <h4 id={styles._H4} class="text-stone-400 ... font-geist_regular ...">
+                                            <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
                                               {story.subtitle}
-                                            </h4>
+                                            </h3>
 
                                           </div>
                                         </div>                               
@@ -291,13 +291,13 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                         <div id={styles.PRODUCT_TEXT}> 
 
-                                          <h3 id={styles._H3} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                          <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
                                             {story.title}
-                                          </h3>    
+                                          </h2>    
                                           <br/>                                    
-                                          <h4 id={styles._H4} class="text-stone-400 ... font-geist_regular ...">
+                                          <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
                                             {story.subtitle}
-                                          </h4>
+                                          </h3>
 
                                         </div>
                                       </div>                               
@@ -333,13 +333,13 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                         <div id={styles.PRODUCT_TEXT}> 
 
-                                          <h3 id={styles._H3} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                          <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
                                             {story.title}
-                                          </h3>    
+                                          </h2>    
                                           <br/>                                    
-                                          <h4 id={styles._H4} class="text-stone-400 ... font-geist_regular ...">
+                                          <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
                                             {story.subtitle}
-                                          </h4>
+                                          </h3>
 
                                         </div>
                                       </div>                               
@@ -405,13 +405,13 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                         <div id={styles.PRODUCT_TEXT}> 
 
-                                          <h3 id={styles._H3} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                          <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
                                             {story.title}
-                                          </h3>   
+                                          </h2>   
                                           <br/>                                     
-                                          <h4 id={styles._H4} class="text-stone-400 ... font-geist_regular ...">
+                                          <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
                                             {story.subtitle}
-                                          </h4>
+                                          </h3>
 
                                         </div>
                                       </div>                               
