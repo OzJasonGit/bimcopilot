@@ -415,7 +415,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
                     <div  id={styles.P_SUBTITLE}>   
-                        <h3 id={styles._H3} class="text-lg ... text-stone-700 ... font-avant_garde_bold">
+                        <h3 id={styles._H3} class=" text-stone-700 ... font-avant_garde_bold">
                             This is the description title 
                             Delta compression using up to 12 threads
                             Compressing objects: 100% (5/5), done.     

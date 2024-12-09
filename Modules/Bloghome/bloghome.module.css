@@ -2,16 +2,22 @@
 /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
 #_H1 {
     margin-bottom: 0px;
+    font-size: 2rem;
+    line-height: 2rem;
 }
 
 
 #_H2 {
     margin-bottom: 0px;
+    font-size: 1.15rem;
+    line-height: 1.35rem;
 }
 
 
 #_H3 {
     margin-bottom: 0px;
+    font-size: 0.85rem;
+    line-height: 1.3rem;
 }
 
 #_H4 {
