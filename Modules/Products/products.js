@@ -58,11 +58,11 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                         <div id={styles.PRODUCT_TEXT}> 
 
-                                          <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                          <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
                                             {story.title}
                                           </h2>    
                                           <br/>                                  
-                                          <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
+                                          <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
                                             {story.subtitle}
                                           </h3>
 
@@ -113,11 +113,11 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                         <div id={styles.PRODUCT_TEXT}> 
 
-                                          <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                          <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
                                             {story.title}
                                           </h2>  
                                           <br/>                                      
-                                          <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
+                                          <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
                                             {story.subtitle}
                                           </h3>
 
@@ -155,11 +155,11 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                         <div id={styles.PRODUCT_TEXT}> 
 
-                                          <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                          <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
                                             {story.title}
                                           </h2>  
                                           <br/>                                      
-                                          <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
+                                          <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
                                             {story.subtitle}
                                           </h3>
 
@@ -218,11 +218,11 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                           <div id={styles.PRODUCT_TEXT}> 
 
-                                            <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                            <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
                                               {story.title}
                                             </h2>    
                                             <br/>                                    
-                                            <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
+                                            <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
                                               {story.subtitle}
                                             </h3>
 
@@ -291,11 +291,11 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                         <div id={styles.PRODUCT_TEXT}> 
 
-                                          <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                          <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
                                             {story.title}
                                           </h2>    
                                           <br/>                                    
-                                          <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
+                                          <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
                                             {story.subtitle}
                                           </h3>
 
@@ -333,11 +333,11 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                         <div id={styles.PRODUCT_TEXT}> 
 
-                                          <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                          <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
                                             {story.title}
                                           </h2>    
                                           <br/>                                    
-                                          <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
+                                          <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
                                             {story.subtitle}
                                           </h3>
 
@@ -405,11 +405,11 @@ const Productsmain = ({ stories, firstStory }) => {
 
                                         <div id={styles.PRODUCT_TEXT}> 
 
-                                          <h2 id={styles._H2} class="text-md ... text-stone-200 ... font-geist_semibold ...">
+                                          <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
                                             {story.title}
                                           </h2>   
                                           <br/>                                     
-                                          <h3 id={styles._H3} class="text-stone-400 ... font-geist_regular ...">
+                                          <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
                                             {story.subtitle}
                                           </h3>
 
