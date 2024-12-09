@@ -21,13 +21,13 @@ export default class Subcribe_2 extends Component {
               <div id={styles.SUB_ICON}></div>
 
               <div id={styles.MAIN_TAG}>
-                <h1
-                  id={styles._H1_2}
+                <h2
+                  id={styles._H2}
                   
                   class="text-4xl ... text-stone-200 ... font-avant_garde_bold">
                   Sustainable, Richer Architects through AI, Analytics and
                   Automation 
-                </h1>
+                </h2>
               </div>
               <div id={styles.SUB_TAG}>
                 <h3
