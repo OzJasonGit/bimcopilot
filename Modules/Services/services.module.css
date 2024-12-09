@@ -2,7 +2,8 @@
 /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
 #_H1 {
   margin-bottom: 0px;
-  padding-bottom: 0;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 #_H2 {
@@ -2487,7 +2488,8 @@
 /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 #_H1 {
   margin-bottom: 0px;
-  font-size: 40px;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 #_H2 {
@@ -3186,11 +3188,6 @@
 
 @media all and (min-width: 0px) and (max-width: 480px) {
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
-  #_H1 {
-    margin-bottom: 0px;
-    font-size: 40px;
-    text-align: left;
-  }
 
   #_H2 {
     margin-bottom: 0px;
