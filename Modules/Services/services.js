@@ -62,8 +62,8 @@ const Servicesmain = ({ stories, firstStory }) => {
                 <div id={styles.MAIN_TAG}>
                   <h1
                    
-                    id={styles.H2_7XL}
-                    class="text-left ... text-7xl ... text-neutral-700 ... font-avant_garde_bold"
+                    id={styles.H1}
+                    class="text-left ...  text-neutral-700 ... font-avant_garde_bold"
                     
                     
                   >        
