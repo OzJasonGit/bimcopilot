@@ -14,6 +14,8 @@
 
 #_H2 {
   margin-bottom: 0px;
+  font-size: 1.15rem;
+  line-height: 1.35rem;
 }
 
 #H2_7XL {
@@ -412,7 +414,7 @@
   grid-area: VIDEO;
   position: relative;
   background-color: transparent;
-  height: 500px;
+  height: 520px;
 }
 
 #COPY_TAG_HOLDER {

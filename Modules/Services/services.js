@@ -120,7 +120,7 @@ const Servicesmain = ({ stories, firstStory }) => {
             <div id={styles.COPY_TAG_HOLDER}> 
               <div id={styles.COPY_TAG}>
                 <h2                  
-                  id={styles._H1}
+                  id={styles._H2}
                   class="text-right ... text-4xl ... text-stone-700 ... font-avant_garde_bold">          
                   We understand the value and potential of your projects.                                  
                 </h2> 
@@ -135,12 +135,12 @@ const Servicesmain = ({ stories, firstStory }) => {
 
             <div id={styles.SUBCOPY_TAG_HOLDER}> 
               <div id={styles.SUBCOPY_TAG}>
-                <h3 
-                id={styles._H3}
+                <h2 
+                id={styles._H2}
                 class="text-right ... text-lg ... text-stone-500 ... font-avant_garde_bold">
                 <br/>  
                 See it realized with <a class="text-stone-700 ... font-avant_garde_bold">automation</a>.
-                </h3>
+                </h2>
               </div>  
 
               <div id={styles.SECONDCOPY_TAG}>
