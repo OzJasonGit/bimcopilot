@@ -411,8 +411,8 @@
 #BG_VIDEO {
   grid-area: VIDEO;
   position: relative;
-  background-color: #3affbd;
-  height: 600px;
+  background-color: transparent;
+  height: 500px;
 }
 
 #COPY_TAG_HOLDER {
