@@ -3,170 +3,324 @@
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 
-
-
 .timeAndDate {
-    display: flex;
-    color: white;
+  display: flex;
+  color: white;
 
-    position: absolute;
-    top: 8vh;
-    left: 80vw;
+  position: absolute;
+  top: 8vh;
+  left: 80vw;
 }
-
 
 #H_3_SERVICES {
-    margin-bottom: 0%;
+  margin-bottom: 0%;
 
-    position: relative;
-    display: inline-block;
-    left: 15px;
-    top: -1.65px;
+  position: relative;
+  display: inline-block;
+  left: 15px;
+  top: -1.65px;
 
-    &:before,
-    &:after {
-        transition: all .25s ease;
-        width: 0%;
-    }
+  &:before,
+  &:after {
+    transition: all 0.25s ease;
+    width: 0%;
+  }
 
+  &:after {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(110 231 183);
+    overflow: hidden;
+    border-radius: 2000px;
+  }
 
-    &:after {
-        content: attr(data-content);
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: rgb(110 231 183);
-        overflow: hidden;
-        border-radius: 2000px;
-    }
-
-    &:hover:after {
-        width: 100%;
-        border-radius: 0px;
-    }
+  &:hover:after {
+    width: 100%;
+    border-radius: 0px;
+  }
 }
-
-
 
 #H_3_PRODUCTS {
-    margin-bottom: 0%;
+  margin-bottom: 0%;
 
-    position: relative;
-    display: inline-block;
-    left: 15px;
-    top: -1.65px;
+  position: relative;
+  display: inline-block;
+  left: 15px;
+  top: -1.65px;
 
-    &:before,
-    &:after {
-        transition: all .25s ease;
-        width: 0%;
-    }
+  &:before,
+  &:after {
+    transition: all 0.25s ease;
+    width: 0%;
+  }
 
+  &:after {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(110 231 183);
+    overflow: hidden;
+    border-radius: 2000px;
+  }
 
-    &:after {
-        content: attr(data-content);
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: rgb(110 231 183);
-        overflow: hidden;
-        border-radius: 2000px;
-    }
-
-    &:hover:after {
-        width: 100%;
-        border-radius: 0px;
-    }
+  &:hover:after {
+    width: 100%;
+    border-radius: 0px;
+  }
 }
-
-
 
 #H_3_PROJECTS {
-    margin-bottom: 0%;
+  margin-bottom: 0%;
 
-    position: relative;
-    display: inline-block;
-    left: 15px;
-    top: -1.65px;
+  position: relative;
+  display: inline-block;
+  left: 15px;
+  top: -1.65px;
 
-    &:before,
-    &:after {
-        transition: all .25s ease;
-        width: 0%;
-    }
+  &:before,
+  &:after {
+    transition: all 0.25s ease;
+    width: 0%;
+  }
 
+  &:after {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(110 231 183);
+    overflow: hidden;
+    border-radius: 2000px;
+  }
 
-    &:after {
-        content: attr(data-content);
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: rgb(110 231 183);
-        overflow: hidden;
-        border-radius: 2000px;
-    }
-
-    &:hover:after {
-        width: 100%;
-        border-radius: 0px;
-    }
+  &:hover:after {
+    width: 100%;
+    border-radius: 0px;
+  }
 }
-
 
 #H_3_STORIES {
-    margin-bottom: 0%;
+  margin-bottom: 0%;
 
-    position: relative;
-    display: inline-block;
-    left: 15px;
-    top: -1.65px;
+  position: relative;
+  display: inline-block;
+  left: 15px;
+  top: -1.65px;
 
-    &:before,
-    &:after {
-        transition: all .25s ease;
-        width: 0%;
-    }
+  &:before,
+  &:after {
+    transition: all 0.25s ease;
+    width: 0%;
+  }
 
+  &:after {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(110 231 183);
+    overflow: hidden;
+    border-radius: 2000px;
+  }
 
-    &:after {
-        content: attr(data-content);
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: rgb(110 231 183);
-        overflow: hidden;
-        border-radius: 2000px;
-    }
-
-    &:hover:after {
-        width: 100%;
-        border-radius: 0px;
-    }
+  &:hover:after {
+    width: 100%;
+    border-radius: 0px;
+  }
 }
-
-
-
-
-
-
-
-
-
 
 .center_holder {
-    position: relative;
-    width: 100%;
-    display: flex;
-    height: auto;
-    -webkit-box-pack: center;
-    justify-content: center;
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: auto;
+  -webkit-box-pack: center;
+  justify-content: center;
 
-    margin: 0;
-    z-index: 3;
+  margin: 0;
+  z-index: 3;
 }
 
-
 .container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  border-radius: 1.5px;
+}
+
+.HEADER_HOLDER {
+  grid-area: MAIN-AREA;
+  display: flex;
+  position: fixed;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(245 245 244);
+  z-index: 10000;
+  top: 0px;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  height: 65px;
+  max-width: 1520px;
+  background-color: rgb(245 245 244);
+  display: grid;
+  grid-row-gap: 40px;
+  grid-template-rows: auto;
+  grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+  grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+  z-index: 80;
+}
+
+.burger_dot {
+  border-radius: 100%;
+  background-color: #151515;
+}
+
+#FIXED_HEADER {
+  grid-area: MAIN-AREA;
+  display: grid;
+  grid-row-gap: 0px;
+  grid-column-gap: 40px;
+  grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0px 60px 0px 20px;
+  grid-template-areas:
+    ". . . . . . . . . . . . ."
+    "LOGO_HOLDER LOGO_HOLDER MENU MENU MENU MENU . TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
+    "LOGO_HOLDER LOGO_HOLDER . . . . . . . . . . ."
+    "LOGO_HOLDER LOGO_HOLDER . . . . . . . . . . .";
+}
+
+#TIME {
+  grid-area: TIME;
+  position: relative;
+  display: grid;
+  width: 100%;
+
+  min-width: 200px;
+  justify-self: right;
+  grid-template-columns: 1fr 1.5px 1.5fr;
+  grid-template-rows: 0px auto 0px;
+  grid-template-areas:
+    " . . ."
+    " CLOCK B1 HOME"
+    " . . .";
+  background: transparent;
+  top: 12px;
+}
+
+#CLOCK_HOLDER {
+  grid-area: CLOCK;
+  width: 100%;
+  height: 100%;
+}
+
+#NAV_MENU {
+  grid-area: MENU;
+  display: grid;
+  width: 100%;
+  max-width: 600px;
+  justify-self: right;
+  grid-template-columns: auto 1.5px auto 1.5px auto 1.5px auto;
+  grid-template-rows: 20px auto 0px;
+  grid-template-areas:
+    " . . . . . . ."
+    " SERVICES . STORIES . PROJECTS . PRODUCTS"
+    " . . . . . . .";
+  background: transparent;
+}
+
+#B1 {
+  grid-area: B1;
+}
+
+#SERVICES {
+  grid-area: SERVICES;
+}
+
+#PRODUCTS {
+  grid-area: PRODUCTS;
+}
+
+#PROJECTS {
+  grid-area: PROJECTS;
+}
+
+#STORIES {
+  grid-area: STORIES;
+}
+
+#LOGO_LINK {
+  grid-area: LOGO;
+  display: grid;
+  grid-template-rows: 0px auto 0px;
+  grid-template-columns: 1fr;
+  width: 100%;
+  height: 100%;
+  grid-template-areas:
+    "."
+    "LOGO"
+    ".";
+}
+
+#LOGO {
+  position: relative;
+  grid-area: LOGO;
+  width: 100%;
+  height: 100%;
+  left: -20px;
+}
+
+#LOGO_ICON {
+  grid-area: LOGO_HOLDER;
+  display: grid;
+  grid-template-rows: 7.5px 50px 7.5px;
+  grid-template-columns: 1fr;
+
+  grid-template-areas:
+    " ."
+    "LOGO "
+    " .";
+}
+
+#HOME_ICON {
+  grid-area: HOME;
+}
+
+#ABOUT_ICON {
+  grid-area: ABOUT;
+}
+
+#COPILOT_HOLDER {
+  display: none;
+}
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+
+@media all and (min-width: 960px) and (max-width: 1280px) {
+  .center_holder {
+    width: 100%;
+    display: flex;
+
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(245 245 244);
+    margin: 0;
+  }
+
+  .container {
     width: 100%;
     height: 100%;
     position: relative;
@@ -174,62 +328,24 @@
     -webkit-box-pack: center;
     justify-content: center;
     border-radius: 1.5px;
-}
+  }
 
-
-.HEADER_HOLDER {
-    grid-area: MAIN-AREA;
-    display: flex;
-    position: fixed;
-    height: 70px;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color: #e4e4e7;
-    z-index: 10000;
-    top: 0px
-}
-
-
-#header {
+  #header {
     position: fixed;
     width: 100%;
     top: 0px;
     height: 65px;
-    max-width: 1520px;
-    background-color: #e4e4e7;
+    max-width: 1640px;
+    background-color: rgb(245 245 244);
     display: grid;
     grid-row-gap: 40px;
     grid-template-rows: auto;
-    grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
-    grid-template-areas:
-        ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+    grid-template-columns: 40px 0px 0px 1fr 0px 0px 40px;
+    grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
     z-index: 80;
-}
+  }
 
-
-.burger_dot {
-    border-radius: 100%;
-    background-color: #151515;
-}
-
-
-#FIXED_HEADER {
-    grid-area: MAIN-AREA;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-column-gap: 40px;
-    grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0px 60px 0px 20px;
-    grid-template-areas:
-        ". . . . . . . . . . . . ."
-        "LOGO_HOLDER LOGO_HOLDER MENU MENU MENU MENU . TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
-        "LOGO_HOLDER LOGO_HOLDER . . . . . . . . . . ."
-        "LOGO_HOLDER LOGO_HOLDER . . . . . . . . . . .";
-}
-
-
-#TIME {
+  #TIME {
     grid-area: TIME;
     position: relative;
     display: grid;
@@ -240,583 +356,296 @@
     grid-template-columns: 1fr 1.5px 1.5fr;
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
-        " . . ."
-        " CLOCK B1 HOME"
-        " . . .";
+      " . . ."
+      " CLOCK B1 HOME"
+      " . . .";
     background: transparent;
-    top: 12px
-}
+    top: 2.5px;
+  }
 
+  #FIXED_HEADER {
+    grid-area: MAIN-AREA;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 40px;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      ". . . . . . . . . . . . ."
+      "LOGO_HOLDER MENU MENU MENU MENU MENU . TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
+      ". . . . . . . . . . . . .";
+  }
 
-#CLOCK_HOLDER {
-    grid-area: CLOCK;
+  #SIGNUP {
+    grid-area: SIGN_IN;
+    display: grid;
     width: 100%;
-    height: 100%;
-}
+    max-width: 200px;
+    min-width: 160px;
+    justify-self: right;
+    grid-template-columns: 1fr 1.5px 1fr;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      " . . ."
+      " ABOUT B1 HOME"
+      " . . .";
+    background: transparent;
+  }
 
+  #COPILOT_HOLDER {
+    display: none;
+  }
 
-#NAV_MENU {
+  #B1 {
+    grid-area: B1;
+  }
+
+  #NAV_MENU {
     grid-area: MENU;
     display: grid;
     width: 100%;
     max-width: 600px;
     justify-self: right;
     grid-template-columns: auto 1.5px auto 1.5px auto 1.5px auto;
-    grid-template-rows: 20px auto 0px;
-    grid-template-areas:
-        " . . . . . . ."
-        " SERVICES . STORIES . PROJECTS . PRODUCTS"
-        " . . . . . . .";
-    background: transparent;
-}
-
-
-
-#B1 {
-    grid-area: B1;
-}
-
-
-#SERVICES {
-    grid-area: SERVICES;
-}
-
-
-#PRODUCTS {
-    grid-area: PRODUCTS;
-}
-
-#PROJECTS {
-    grid-area: PROJECTS;
-}
-
-#STORIES {
-    grid-area: STORIES;
-}
-
-
-#LOGO_LINK {
-    grid-area: LOGO;
-    display: grid;
     grid-template-rows: 0px auto 0px;
-    grid-template-columns: 1fr;
-    width: 100%;
-    height: 100%;
-    grid-template-areas: "."
-        "LOGO"
-        ".";
-}
+    grid-template-areas:
+      " . . . . . . ."
+      " SERVICES . STORIES . PROJECTS . PRODUCTS"
+      " . . . . . . .";
+    background: transparent;
+  }
 
+  #ABOUT {
+    grid-area: ABOUT;
+  }
 
-#LOGO {
-    position: relative;
-    grid-area: LOGO;
-    width: 100%;
-    height: 100%;
-    left: -20px;
-}
+  #OUR_PROCESS {
+    grid-area: OUR_PROCESS;
+  }
 
+  #SERVICES {
+    grid-area: SERVICES;
+  }
 
-#LOGO_ICON {
+  #BLOG {
+    grid-area: BLOG;
+  }
+
+  #LOGO_ICON {
     grid-area: LOGO_HOLDER;
     display: grid;
     grid-template-rows: 7.5px 50px 7.5px;
-    grid-template-columns: 1fr;
+    grid-template-columns: 50px 1fr;
 
     grid-template-areas:
-        " ."
-        "LOGO "
-        " .";
-}
-
-
-#HOME_ICON {
-    grid-area: HOME;
-}
-
-#ABOUT_ICON {
-    grid-area: ABOUT;
-}
-
-
-#COPILOT_HOLDER {
-    display: none;
+      ". ."
+      "LOGO ."
+      ". .";
+  }
 }
 
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media all and (min-width: 960px) and (max-width: 1280px) {
-
-    .center_holder {
-        width: 100%;
-        display: flex;
-
-        -webkit-box-pack: center;
-        justify-content: center;
-        background-color: aliceblue;
-        margin: 0;
-    }
-
-
-    .container {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        -webkit-box-pack: center;
-        justify-content: center;
-        border-radius: 1.5px;
-    }
-
-
-    #header {
-        position: fixed;
-        width: 100%;
-        top: 0px;
-        height: 65px;
-        max-width: 1640px;
-        background-color: #e4e4e7;
-        display: grid;
-        grid-row-gap: 40px;
-        grid-template-rows: auto;
-        grid-template-columns: 40px 0px 0px 1fr 0px 0px 40px;
-        grid-template-areas:
-            ". BANNER-1  . MAIN-AREA . BANNER-2 .";
-        z-index: 80;
-    }
-
-
-
-
-
-
-    #TIME {
-        grid-area: TIME;
-        position: relative;
-        display: grid;
-        width: 100%;
-
-        min-width: 200px;
-        justify-self: right;
-        grid-template-columns: 1fr 1.5px 1.5fr;
-        grid-template-rows: 0px auto 0px;
-        grid-template-areas:
-            " . . ."
-            " CLOCK B1 HOME"
-            " . . .";
-        background: transparent;
-        top: 2.5px
-    }
-
-
-    #FIXED_HEADER {
-        grid-area: MAIN-AREA;
-        display: grid;
-        grid-row-gap: 0px;
-        grid-column-gap: 40px;
-        grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0px auto 0px;
-        grid-template-areas:
-            ". . . . . . . . . . . . ."
-            "LOGO_HOLDER MENU MENU MENU MENU MENU . TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
-            ". . . . . . . . . . . . .";
-    }
-
-
-    #SIGNUP {
-        grid-area: SIGN_IN;
-        display: grid;
-        width: 100%;
-        max-width: 200px;
-        min-width: 160px;
-        justify-self: right;
-        grid-template-columns: 1fr 1.5px 1fr;
-        grid-template-rows: 0px auto 0px;
-        grid-template-areas:
-            " . . ."
-            " ABOUT B1 HOME"
-            " . . .";
-        background: transparent;
-    }
-
-
-    #COPILOT_HOLDER {
-        display: none;
-    }
-
-
-
-    #B1 {
-        grid-area: B1;
-    }
-
-
-    #NAV_MENU {
-        grid-area: MENU;
-        display: grid;
-        width: 100%;
-        max-width: 600px;
-        justify-self: right;
-        grid-template-columns: auto 1.5px auto 1.5px auto 1.5px auto;
-        grid-template-rows: 0px auto 0px;
-        grid-template-areas:
-            " . . . . . . ."
-            " SERVICES . STORIES . PROJECTS . PRODUCTS"
-            " . . . . . . .";
-        background: transparent;
-    }
-
-
-    #ABOUT {
-        grid-area: ABOUT;
-    }
-
-    #OUR_PROCESS {
-        grid-area: OUR_PROCESS;
-    }
-
-    #SERVICES {
-        grid-area: SERVICES;
-    }
-
-    #BLOG {
-        grid-area: BLOG;
-    }
-
-
-    #LOGO_ICON {
-        grid-area: LOGO_HOLDER;
-        display: grid;
-        grid-template-rows: 7.5px 50px 7.5px;
-        grid-template-columns: 50px 1fr;
-
-        grid-template-areas:
-            ". ."
-            "LOGO ."
-            ". .";
-    }
-}
-
-/* ---------------------------------------------------------------------------------------*/
-/* ---------------------------------------------------------------------------------------*/
-/* ---------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 @media all and (min-width: 480px) and (max-width: 960px) {
+  .center_holder {
+    width: 100%;
+    display: flex;
 
-    .center_holder {
-        width: 100%;
-        display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(245 245 244);
+    margin: 0;
+  }
 
-        -webkit-box-pack: center;
-        justify-content: center;
-        background-color: aliceblue;
-        margin: 0;
-    }
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 1.5px;
+  }
 
+  #header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 65px;
+    max-width: 960px;
+    background-color: transparent;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 30px 0px 0px 1fr 0px 0px 30px;
+    grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+    z-index: 80;
+  }
 
-    .container {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        -webkit-box-pack: center;
-        justify-content: center;
-        border-radius: 1.5px;
-    }
+  #FIXED_HEADER {
+    grid-area: MAIN-AREA;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 20px;
+    grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      ". . . . . . . . . . . . ."
+      "LOGO_HOLDER COPILOT COPILOT COPILOT COPILOT COPILOT TIME TIME TIME TIME . MENU-BUTTON MENU-BUTTON"
+      ". . . . . . . . . . . . .";
+  }
 
+  #TIME {
+    grid-area: TIME;
+    position: relative;
+    display: grid;
+    width: 100%;
 
-    #header {
-        position: fixed;
-        width: 100%;
-        top: 0px;
-        height: 65px;
-        max-width: 960px;
-        background-color: transparent;
-        display: grid;
-        grid-row-gap: 40px;
-        grid-template-rows: auto;
-        grid-template-columns: 30px 0px 0px 1fr 0px 0px 30px;
-        grid-template-areas:
-            ". BANNER-1  . MAIN-AREA . BANNER-2 .";
-        z-index: 80;
-    }
+    min-width: 200px;
+    justify-self: right;
+    grid-template-columns: 1fr 1.5px 1.5fr;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      " . . ."
+      " CLOCK B1 HOME"
+      " . . .";
+    background: transparent;
+    top: 6.25px;
+  }
 
+  #NAV_MENU {
+    grid-area: MENU;
+    display: none;
+  }
 
-    #FIXED_HEADER {
-        grid-area: MAIN-AREA;
-        display: grid;
-        grid-row-gap: 0px;
-        grid-column-gap: 20px;
-        grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0px auto 0px;
-        grid-template-areas:
-            ". . . . . . . . . . . . ."
-            "LOGO_HOLDER COPILOT COPILOT COPILOT COPILOT COPILOT TIME TIME TIME TIME . MENU-BUTTON MENU-BUTTON"
-            ". . . . . . . . . . . . .";
-    }
+  #SIGNUP {
+    grid-area: SIGN_IN;
+    display: grid;
+    width: 100%;
+    max-width: 200px;
+    min-width: 160px;
+    justify-self: left;
+    grid-template-columns: 1fr 1.5px 1fr;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      " . . ."
+      " ABOUT B1 HOME"
+      " . . .";
+    background: transparent;
+  }
 
+  #COPILOT_HOLDER {
+    position: relative;
+    display: grid;
+    grid-area: COPILOT;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: 10px auto 10px;
+    grid-column-gap: 10px;
+    grid-template-areas:
+      " . . ."
+      " . COPILOT ."
+      " . . .";
+    top: -17.75px;
+    left: 50px;
+  }
 
-        #TIME {
-            grid-area: TIME;
-            position: relative;
-            display: grid;
-            width: 100%;
-    
-            min-width: 200px;
-            justify-self: right;
-            grid-template-columns: 1fr 1.5px 1.5fr;
-            grid-template-rows: 0px auto 0px;
-            grid-template-areas:
-                " . . ."
-                " CLOCK B1 HOME"
-                " . . .";
-            background: transparent;
-            top: 6.25px
-        }
+  #COPILOT {
+    position: relative;
+    height: 42.5px;
+    width: 100%;
+    grid-area: COPILOT;
+  }
 
+  .burger_dot {
+    border-radius: 100%;
+    background-color: #151515;
+  }
 
-
-        
-
-
-    #NAV_MENU {
-        grid-area: MENU;
-        display: none;
-    }
-
-
-    #SIGNUP {
-        grid-area: SIGN_IN;
-        display: grid;
-        width: 100%;
-        max-width: 200px;
-        min-width: 160px;
-        justify-self: left;
-        grid-template-columns: 1fr 1.5px 1fr;
-        grid-template-rows: 0px auto 0px;
-        grid-template-areas:
-            " . . ."
-            " ABOUT B1 HOME"
-            " . . .";
-        background: transparent;
-    }
-
-
-    #COPILOT_HOLDER {
-        position: relative;
-        display: grid;
-        grid-area: COPILOT;
-        height: 100%;
-        width: 100%;
-        grid-template-columns: 10px 1fr 10px;
-        grid-template-rows: 10px auto 10px;
-        grid-column-gap: 10px;
-        grid-template-areas:
-            " . . ."
-            " . COPILOT ."
-            " . . .";
-        top: -17.75px;
-        left: 50px;
-    }
-
-
-    #COPILOT {
-        position: relative;
-        height: 42.5px;
-        width: 100%;
-        grid-area: COPILOT;
-    }
-
-
-    .burger_dot {
-        border-radius: 100%;
-        background-color: #151515;
-
-    }
-
-
-    #HEADER_MENU_1 {
-        height: 100%;
-        grid-area: AREA;
-        background-color: #151515;
-    }
-
+  #HEADER_MENU_1 {
+    height: 100%;
+    grid-area: AREA;
+    background-color: #151515;
+  }
 }
 
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 @media all and (min-width: 0px) and (max-width: 480px) {
+  .center_holder {
+    width: 100%;
+    display: none;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(245 245 244);
+    margin: 0;
+  }
 
-    .center_holder {
-        width: 100%;
-        display: none;
-        -webkit-box-pack: center;
-        justify-content: center;
-        background-color: aliceblue;
-        margin: 0;
-    }
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 1.5px;
+  }
 
+  #header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 65px;
+    max-width: 100%;
+    background-color: rgb(245 245 244);
+    display: grid;
+    grid-row-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 20px 0px 0px 1fr 0px 0px 20px;
+    grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+    z-index: 80;
+  }
 
-    .container {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        -webkit-box-pack: center;
-        justify-content: center;
-        border-radius: 1.5px;
-    }
+  #FIXED_HEADER {
+    grid-area: MAIN-AREA;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 20px;
+    grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      ". . . . . . . . . . . . ."
+      "LOGO_HOLDER . SIGN_IN SIGN_IN SIGN_IN SIGN_IN SIGN_IN SIGN_IN . . MENU MENU-BUTTON MENU-BUTTON"
+      ". . . . . . . . . . . . .";
+  }
 
+  #NAV_MENU {
+    display: none;
+  }
 
-    #header {
-        position: fixed;
-        width: 100%;
-        top: 0px;
-        height: 65px;
-        max-width: 100%;
-        background-color: #e4e4e7;
-        display: grid;
-        grid-row-gap: 40px;
-        grid-template-rows: auto;
-        grid-template-columns: 20px 0px 0px 1fr 0px 0px 20px;
-        grid-template-areas:
-            ". BANNER-1  . MAIN-AREA . BANNER-2 .";
-        z-index: 80;
-    }
-
-
-    #FIXED_HEADER {
-        grid-area: MAIN-AREA;
-        display: grid;
-        grid-row-gap: 0px;
-        grid-column-gap: 20px;
-        grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0px auto 0px;
-        grid-template-areas:
-            ". . . . . . . . . . . . ."
-            "LOGO_HOLDER . SIGN_IN SIGN_IN SIGN_IN SIGN_IN SIGN_IN SIGN_IN . . MENU MENU-BUTTON MENU-BUTTON"
-            ". . . . . . . . . . . . .";
-    }
-
-
-    #NAV_MENU {
-        display: none;
-    }
-
-
-    #LOGO_LINK {
-        grid-area: LOGO;
-        display: grid;
-        grid-template-rows: 5px auto 5px;
-        grid-template-columns: 1fr 5px 5px;
-        width: 100%;
-        height: 100%;
-        grid-template-areas: ". . ."
-            "LOGO . ."
-            ". . .";
-    }
-
+  #LOGO_LINK {
+    grid-area: LOGO;
+    display: grid;
+    grid-template-rows: 5px auto 5px;
+    grid-template-columns: 1fr 5px 5px;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+      ". . ."
+      "LOGO . ."
+      ". . .";
+  }
 }
 
 /* ---------------------------------------------------------------------------------------*/
