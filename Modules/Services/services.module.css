@@ -384,7 +384,7 @@
   position: relative;
   width: 100%;
   max-width: 1520px;
-  background-color: transparent;
+  background-color: rgb(245 245 244);
   display: grid;
   grid-column-gap: 0;
   grid-row-gap: 20px;
