@@ -19,7 +19,7 @@ return (
 
       <>
 
-      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+      <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder} class="bg-stone-100">
           <div class={styles.grid_0_who_weve_helped}>
              
               
