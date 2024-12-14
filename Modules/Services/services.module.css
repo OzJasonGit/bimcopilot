@@ -1157,99 +1157,7 @@
 /*SECTION_2///////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*SECTION_3////TIKTOK/////////////////////////////////////////////////////////////////////////////////*/
-#SHADOW_SECTION_TIKTOK {
-  position: relative;
-  width: 100%;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  background-color: rgb(23, 23, 23);
-  z-index: 1;
-  left: -100vw;
-}
 
-#MAIN_TIKTOK_HOLDER {
-  position: relative;
-  grid-area: MAIN-AREA;
-  display: grid;
-  width: 100%;
-  grid-column-gap: 40px;
-  grid-row-gap: 20px;
-  grid-template-columns: auto auto 1fr;
-  grid-template-rows: 40px auto 0px;
-  grid-template-areas:
-    ". . ."
-    "TIKTOK ICON ."
-    ". . .";
-  margin-top: -700px;
-}
-
-#ICON_HOLDER {
-  position: relative;
-  grid-area: ICON;
-  display: grid;
-  width: 120px;
-  min-width: 100%;
-  height: 600px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 300px auto 0px;
-  grid-template-areas:
-    " . "
-    " TIKTOK "
-    " . ";
-  left: 100vw;
-}
-
-#ICON_TIKTOK {
-  background-color: rgb(23 23 23);
-  position: relative;
-  grid-area: TIKTOK;
-  display: grid;
-  height: 120px;
-  top: 430px;
-  left: 33px;
-  grid-template-columns: 30px 1fr 30px;
-  grid-template-rows: 30px auto 30px;
-  grid-template-areas:
-    " . . . "
-    " . TIKTOK . "
-    " . . . ";
-}
-
-#TIKTOK_FONT {
-  display: grid;
-  grid-area: TIKTOK;
-  align-items: center;
-  justify-content: center;
-  color: rgb(228 228 231);
-}
-
-#TIKTOK_HOLDER {
-  position: relative;
-  grid-area: TIKTOK;
-  display: grid;
-  width: 300px;
-  min-width: 100%;
-  height: 600px;
-  grid-template-columns: 0px 1fr 0px;
-  grid-template-rows: 0px auto 0px;
-  grid-template-areas:
-    ". . ."
-    ". TIKTOK ."
-    ". . .";
-  left: 100vw;
-}
-
-#TIKTOK {
-  position: relative;
-  grid-area: TIKTOK;
-  width: 100%;
-  height: 100%;
-  background: #efefef;
-  top: 460px;
-  left: 33px;
-  overflow: hidden;
-}
 
 .CENTER {
   grid-area: CENTER;
@@ -1264,120 +1172,10 @@
 }
 
 /*SECTION_4////TITLE///////////////////////////////////////////////////////////////////////////////////*/
-#MAIN_TEXT_HOLDER {
-  grid-area: MAIN-AREA;
-  display: grid;
-  width: 100%;
-  grid-column-gap: 40px;
-  grid-row-gap: 20px;
-  grid-template-columns: 200px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 60px auto 40px auto;
-  grid-template-areas:
-    ". . . . . . . . . . . ."
-    "DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER DISCLAIMER . . . . . ."
-    ". . . . . . . . . . . ."
-    "SIDE_NAV TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT ADVERT ADVERT ADVERT";
-}
 
-.grid_0_image_left {
-  width: 100%;
-  max-width: 1960px;
-  background-color: transparent;
-  display: grid;
-  grid-column-gap: 40px;
-  grid-row-gap: 20px;
-  grid-template-rows: 60px auto 20px;
-  grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20px;
-  grid-template-areas:
-    ". . . . . . . . . . ."
-    ". IMAGE IMAGE IMAGE IMAGE ADVERT ADVERT ADVERT . . ."
-    ". IMAGE IMAGE IMAGE IMAGE ADVERT ADVERT ADVERT . . .";
-  z-index: 200;
-}
 
-#SUB_TEXT_HOLDER {
-  position: relative;
-  grid-area: TEXT;
-  top: 60px;
-}
 
-#SIDE_NAV_HOLDER {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  grid-area: SIDE_NAV;
-}
 
-#SIDE_NAV {
-  width: 100%;
-  height: 300px;
-  position: sticky;
-  top: 200px;
-  grid-area: SIDE_NAV;
-}
-
-#DISCLAIMER_HOLDER {
-  position: relative;
-  grid-area: DISCLAIMER;
-}
-
-#BLOG_HOLDER {
-  width: 100%;
-  height: auto;
-  position: relative;
-  grid-area: TEXT;
-  display: grid;
-  grid-row-gap: 20px;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 400px auto auto 250px auto 250px auto auto;
-  grid-template-areas:
-    "PARAGRAPH_1"
-    "VIDEO"
-    "PARAGRAPH_2"
-    "PARAGRAPH_3"
-    "ADVERT_1"
-    "PARAGRAPH_4"
-    "ADVERT_2"
-    "PARAGRAPH_5"
-    "CONCLUSION";
-}
-
-#BLOG_IMAGE {
-  position: relative;
-  overflow: hidden;
-}
-
-#PARAGRAPH_1 {
-  grid-area: PARAGRAPH_1;
-}
-
-#PARAGRAPH_2 {
-  grid-area: PARAGRAPH_2;
-}
-
-#ADVERT_1 {
-  grid-area: ADVERT_1;
-}
-
-#PARAGRAPH_3 {
-  grid-area: PARAGRAPH_3;
-}
-
-#PARAGRAPH_4 {
-  grid-area: PARAGRAPH_4;
-}
-
-#ADVERT_2 {
-  grid-area: ADVERT_2;
-}
-
-#PARAGRAPH_5 {
-  grid-area: PARAGRAPH_5;
-}
-
-#CONCLUSION {
-  grid-area: CONCLUSION;
-}
 
 /*SECTION_4////TITLE/////////////////////////////////////////////////////////////////////////////////*/
 
@@ -2027,6 +1825,117 @@
 /*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 960px) and (max-width: 1280px) {
   .grid_0 {
     width: 100%;
@@ -2499,6 +2408,119 @@
 /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media all and (min-width: 480px) and (max-width: 960px) {
   .center_holder {
@@ -3172,6 +3194,135 @@
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
 /*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media all and (min-width: 0px) and (max-width: 480px) {
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
