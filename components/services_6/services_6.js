@@ -32,7 +32,7 @@ import React, { Component } from 'react';
                 <div id={styles.SUB_TAG}>
                   <h2
                     id={styles._H2}
-                    class="text-center ... text-3xl ... text-stone-500 ... font-avant_garde_bold"
+                    class="text-center ... text-stone-500 ... font-avant_garde_bold"
                   >
                     {" "}
                 
