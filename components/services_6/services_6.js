@@ -40,7 +40,7 @@ import React, { Component } from 'react';
                       
 
                     </a>{" "}
-                    <a  class="text-5xl ...">"</a> The world is changing and so is{" "}
+                    <a  class="text-2xl ...">"</a> The world is changing and so is{" "}
                     <a class="text-stone-700 ... font-avant_garde_bold">
                       architecture
                     </a>
@@ -52,7 +52,7 @@ import React, { Component } from 'react';
                     <a class="text-stone-700 ... font-avant_garde_bold">money</a>,
                     be more{" "}
                     <a class="text-stone-700 ... font-avant_garde_bold">
-                      sustainable <a class="text-5xl ...">"</a>
+                      sustainable <a class="text-2xl ...">"</a>
                     </a>
                     . <br /> <br />{" "}
                   
