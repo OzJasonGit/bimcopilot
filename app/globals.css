@@ -19,14 +19,13 @@
 body {
   position: absolute;
   overflow-x: hidden;
-  background-color: rgb(228 228 231);
+  background-color: rgb(245 245 244);
 }
 
 .BODY {
   position: absolute;
   width: 100%;
   height: 100%;
-
 }
 
 .holder {
@@ -38,13 +37,11 @@ body {
   margin-bottom: 0;
 }
 
-
 /* Define the scrollbar style */
 .body ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
-
 
 /* Define the track style */
 .body ::-webkit-scrollbar-track {
@@ -53,16 +50,15 @@ body {
 }
 /* Add this to your CSS module or global CSS */
 
-.ant-tabs-bar{display: none !important;}
-.ant-tabs-tab{
+.ant-tabs-bar {
+  display: none !important;
+}
+.ant-tabs-tab {
   /* background-color: red !important; */
   border: none !important;
-  
-
-  
 }
 .ant-tabs-nav::after,
-.ant-tabs-nav::before{
+.ant-tabs-nav::before {
   border: none !important;
   display: none !important;
 }
@@ -129,4 +125,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
