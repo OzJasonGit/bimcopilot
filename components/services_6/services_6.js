@@ -30,8 +30,8 @@ import React, { Component } from 'react';
                   </h2>
                 </div>
                 <div id={styles.SUB_TAG}>
-                  <h3
-                    id={styles._H3}
+                  <h2
+                    id={styles._H2}
                     class="text-center ... text-3xl ... text-stone-500 ... font-avant_garde_bold"
                   >
                     {" "}
@@ -56,7 +56,7 @@ import React, { Component } from 'react';
                     </a>
                     . <br /> <br />{" "}
                   
-                  </h3>
+                  </h2>
                 </div>
               </div>
             </div>              
