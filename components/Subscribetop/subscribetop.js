@@ -28,7 +28,7 @@ export default class Subcribetop extends Component {
                   
                   class=" text-stone-200 ... font-avant_garde_bold">
                   Sustainable, Richer Architects through AI, Analytics and
-                  Automation testiing
+                  Automation testing
                 </h1>
               </div>
               <div id={styles.SUB_TAG}>
