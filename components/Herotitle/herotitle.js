@@ -27,7 +27,7 @@ export default class Herotitle extends Component {
                   Sustainability
                 </a>{" "}
                 <a id={styles._H1_2}>
-                  
+                  through exploration. We explore new frontiers in
                 </a>
                 <a
                   id={styles.TEXT_OUTLINE}
@@ -91,7 +91,7 @@ export default class Herotitle extends Component {
                 </a>
                 <a
                   id={styles.TEXT_OUTLINE}
-                  class="text-5xl ...  text-stone-50 ... underline decoration-4 ... decoration-red-300 ..."
+                  class="text-5xl ...  text-stone-50 ... underline decoration-4 ... decoration-stone-600 ..."
                 >
                   {" "}
                   architecture
@@ -99,7 +99,7 @@ export default class Herotitle extends Component {
                 ,
                 <a
                   id={styles.TEXT_OUTLINE}
-                  class="text-5xl ... text-stone-50 ... underline decoration-4 ... decoration-amber-300 ..."
+                  class="text-5xl ... text-stone-50 ... underline decoration-4 ... decoration-stone-600 ..."
                 >
                   {" "}
                   construction{" "}
@@ -108,7 +108,7 @@ export default class Herotitle extends Component {
                    id={styles._H1_2}>and</a>{" "}
                 <a
                   id={styles.TEXT_OUTLINE}
-                  class="text-5xl ... text-stone-50 ... underline decoration-4 ... decoration-sky-300 ..."
+                  class="text-5xl ... text-stone-50 ... underline decoration-4 ... decoration-stone-600 ..."
                 >
                   {" "}
                   technology
