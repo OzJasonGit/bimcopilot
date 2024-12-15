@@ -26,7 +26,7 @@ return (
 
               <div id={styles.HOW_WE_WORK_BLOCK}>   
                 <div  id={styles.WHO_WEVE_HELPED}>
-                  <div class="bg-neutral-900 rounded-xl ..."id={styles.WHO_WEVE_HELPED_TEXT}> 
+                  <div class="rounded-xl ..."id={styles.WHO_WEVE_HELPED_TEXT}> 
 
                       <div id={styles.WHO_WEVE_HELPED_HOLDER}>
                         <div id={styles.WE_HELPED_TEXT}>
