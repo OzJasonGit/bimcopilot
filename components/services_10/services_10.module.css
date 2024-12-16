@@ -389,6 +389,21 @@
     grid-template-areas: "WHO_WEVE_HELPED";
   }
 
+
+  #WHO_WEVE_HELPED_TEXT {
+    position: relative;
+    display: grid;
+    grid-template-areas: WHO_WEVE_HELPED;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-rows: 0px 1fr 0px;
+    grid-template-areas:
+      ". . ."
+      ". WHO_WEVE_HELPED ."
+      ". . .";
+  }
+
   #FAQ {
     display: grid;
     width: 100%;
