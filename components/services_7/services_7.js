@@ -3,6 +3,13 @@
 import styles from './services_7.module.css';
 import React, { Component } from 'react';
 
+import {
+  Breadcrumb,
+  BreadcrumbEllipsis,
+  BreadcrumbItem,
+  BreadcrumbList, 
+} from "@/components/ui/breadcrumb"
+
 
 
 export default class Services_6 extends Component {
@@ -28,6 +35,16 @@ export default class Services_6 extends Component {
 
               <div id={styles.WORKING_IMAGES}>  
                 <div class="border-2 border-stone-600 ... rounded-2xl ..." id={styles.HOW_WE_WORK_IMAGE}>
+
+                  <Breadcrumb>
+                    <BreadcrumbList>
+                      {/* ... */}
+                      <BreadcrumbItem>
+                        <BreadcrumbEllipsis />
+                      </BreadcrumbItem>
+                      {/* ... */}
+                    </BreadcrumbList>
+                  </Breadcrumb>
                 </div>                 
               </div> 
                    
