@@ -62,7 +62,7 @@
   width: 100%;
   position: relative;
   grid-area: SUB;
-  height: 700px;
+  height: 800px;
   display: grid;
   grid-column-gap: 30px;
   grid-row-gap: 0px;
@@ -103,14 +103,14 @@
   overflow: hidden;
   z-index: 1;
   height: 500px;
-  top: 100px;
+  top: 200px;
 }
 
 #P_IMAGE_2 {
   position: relative;
   grid-area: IMAGE_2;
   overflow: hidden;
-  height: 600px;
+  height: 400px;
   top: -500px;
 }
 
@@ -206,7 +206,7 @@
     width: 100%;
     position: relative;
     grid-area: SUB;
-    height: 700px;
+    height: 800px;
     display: grid;
     grid-column-gap: 30px;
     grid-row-gap: 0px;
