@@ -387,6 +387,28 @@
     grid-template-areas: "BC ";
     left: 0;
   }
+
+  #SERVICES_GRID {
+    width: 100%;
+    position: relative;
+    grid-area: SERVICES;
+    height: auto;
+    display: grid;
+    grid-column-gap: 60px;
+    grid-row-gap: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 20px auto 20px auto 20px auto 20px auto;
+    grid-template-areas:
+      "TITLE"
+      ". "
+      "SUBTITLE "
+      ". "
+      "SERVICES_1 "
+      ". "
+      "SERVICES_2"
+      ". "
+      "SERVICES_3 ";
+  }
 }
 
 
@@ -479,6 +501,32 @@
       " . SUB ."
       ". . .";
   }
+
+
+
+
+
+ #SERVICES_GRID {
+   width: 100%;
+   position: relative;
+   grid-area: SERVICES;
+   height: auto;
+   display: grid;
+   grid-column-gap: 60px;
+   grid-row-gap: 0;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto 20px auto 20px auto 20px auto 20px auto;
+   grid-template-areas:
+     "TITLE"
+     ". "
+     "SUBTITLE "
+     ". "
+     "SERVICES_1 "
+     ". "
+     "SERVICES_2"
+     ". "
+     "SERVICES_3 ";
+ }
 
   #COLLAPSE_HOLDER {
     position: relative;
