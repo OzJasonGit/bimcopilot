@@ -50,7 +50,7 @@ return (
                         <div>
                           <h3
                               id={styles._H3}
-                              class="text-xl ... text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                              class="text-xl ... text-stone-700 ... font-avant_garde_bold ..."
                             >
                               Hi, I'm Oz Jason. I'm a registered architect, BIM
                               manager and the founder of{" "}
