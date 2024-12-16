@@ -32,6 +32,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-toastify": "^10.0.5",
+    "recharts": "^2.15.0",
     "sharp": "^0.33.2",
     "stripe": "^14.14.0",
     "tailwind-merge": "^2.5.2",
