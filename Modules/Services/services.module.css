@@ -547,7 +547,7 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 100px 100px 100px 1fr 1fr 1fr;
+  grid-template-columns: 200px 200px 200px 1fr 1fr 1fr;
   grid-template-rows: 160px 1fr 1fr 1fr 1fr 160px;
   grid-template-areas:
     "P1 P1 P5 P5 P7 P7"
