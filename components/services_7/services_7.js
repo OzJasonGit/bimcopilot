@@ -38,7 +38,7 @@ export default class Services_6 extends Component {
 
 
               <div id={styles.WORKING_IMAGES}>  
-                <div class="border-2 border-stone-600 ... rounded-2xl ..." id={styles.HOW_WE_WORK_IMAGE}>
+                <div class="rounded-2xl ... content-center ..." id={styles.HOW_WE_WORK_IMAGE}>
 
                    <Breadcrumb>
                     <BreadcrumbList>
