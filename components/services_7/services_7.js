@@ -7,7 +7,10 @@ import {
   Breadcrumb,
   BreadcrumbEllipsis,
   BreadcrumbItem,
-  BreadcrumbList, 
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 
 
@@ -36,13 +39,27 @@ export default class Services_6 extends Component {
               <div id={styles.WORKING_IMAGES}>  
                 <div class="border-2 border-stone-600 ... rounded-2xl ..." id={styles.HOW_WE_WORK_IMAGE}>
 
-                  <Breadcrumb>
+                   <Breadcrumb>
                     <BreadcrumbList>
-                      {/* ... */}
+                      <BreadcrumbItem>
+                        <BreadcrumbLink asChild>
+                          <Link href="/">Home</Link>
+                        </BreadcrumbLink>
+                      </BreadcrumbItem>
+                      <BreadcrumbSeparator />
                       <BreadcrumbItem>
                         <BreadcrumbEllipsis />
                       </BreadcrumbItem>
-                      {/* ... */}
+                      <BreadcrumbSeparator />
+                      <BreadcrumbItem>
+                        <BreadcrumbLink asChild>
+                          <Link href="/docs/components">Components</Link>
+                        </BreadcrumbLink>
+                      </BreadcrumbItem>
+                      <BreadcrumbSeparator />
+                      <BreadcrumbItem>
+                        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+                      </BreadcrumbItem>
                     </BreadcrumbList>
                   </Breadcrumb>
                 </div>                 
