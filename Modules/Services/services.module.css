@@ -183,6 +183,7 @@
   width: 100%;
   position: relative;
   grid-area: PORTFOLIO;
+  overflow-x: scroll;
 }
 
 #IMAGE_LAYER_1 {
