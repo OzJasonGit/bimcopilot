@@ -179,7 +179,7 @@
 }
 
 #PORTFOLIO_IMAGES {
-  height: 800px;
+  height: 1000px;
   width: 100%;
   position: relative;
   grid-area: PORTFOLIO;
