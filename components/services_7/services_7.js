@@ -2,6 +2,7 @@
 
 import styles from './services_7.module.css';
 import React, { Component } from 'react';
+import Link from 'next/link';
 
 import {
   Breadcrumb,
@@ -55,9 +56,16 @@ export default class Services_6 extends Component {
                       
                       </BreadcrumbItem>
                       <BreadcrumbSeparator/>
-                  
-
-                        
+                      <BreadcrumbItem>
+                      
+                        <BreadcrumbLink asChild>
+                          <Link href="/docs/components">Components</Link>
+                        </BreadcrumbLink>
+                      </BreadcrumbItem>
+                      <BreadcrumbSeparator />
+                      <BreadcrumbItem>
+                        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+                      </BreadcrumbItem>
                     </BreadcrumbList>
                   </Breadcrumb>
                 </div>                 
