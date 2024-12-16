@@ -41,25 +41,23 @@ export default class Services_6 extends Component {
 
                    <Breadcrumb>
                     <BreadcrumbList>
+                      
                       <BreadcrumbItem>
                         <BreadcrumbLink asChild>
                           <Link href="/">Home</Link>
                         </BreadcrumbLink>
                       </BreadcrumbItem>
-                      <BreadcrumbSeparator />
+
+
+                      <BreadcrumbSeparator/>
                       <BreadcrumbItem>
-                        <BreadcrumbEllipsis />
+                        <BreadcrumbEllipsis/>
+                      
                       </BreadcrumbItem>
-                      <BreadcrumbSeparator />
-                      <BreadcrumbItem>
-                        <BreadcrumbLink asChild>
-                          <Link href="/docs/components">Components</Link>
-                        </BreadcrumbLink>
-                      </BreadcrumbItem>
-                      <BreadcrumbSeparator />
-                      <BreadcrumbItem>
-                        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
-                      </BreadcrumbItem>
+                      <BreadcrumbSeparator/>
+                  
+
+                        
                     </BreadcrumbList>
                   </Breadcrumb>
                 </div>                 
