@@ -70,7 +70,7 @@
   grid-template-rows: auto auto;
   grid-template-areas:
     ". IMAGE_1 IMAGE_1 IMAGE_1 IMAGE_1 ."
-    "IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 . .";
+    "IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 .";
 }
 
 #IMAGE_LAYER_2 {
@@ -102,16 +102,16 @@
   grid-area: IMAGE_1;
   overflow: hidden;
   z-index: 1;
-  height: 500px;
-  top: 200px;
+  height: 400px;
+  top: 400px;
 }
 
 #P_IMAGE_2 {
   position: relative;
   grid-area: IMAGE_2;
   overflow: hidden;
-  height: 400px;
-  top: -500px;
+  height: 800px;
+  top: -400px;
 }
 
 #P_IMAGE_3 {
