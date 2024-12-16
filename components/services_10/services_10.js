@@ -34,7 +34,7 @@ return (
                           <div id={styles.ABOUT_TITLE_HOLDER}>
                           <h1
                             id={styles._H1}
-                            class="text-stone-200 ... drop-shadow-xl font-avant_garde_bold"
+                            class="text-stone-700 ... font-avant_garde_bold ..."
                           >
                             <a class="text-left ... text-4xl">My background and who <br/> I've helped.</a>
                           </h1>
