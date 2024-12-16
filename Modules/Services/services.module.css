@@ -518,7 +518,7 @@
   display: grid;
   grid-column-gap: 0px;
   grid-row-gap: 20px;
-  grid-template-rows: 170px auto auto;
+  grid-template-rows: 0px auto auto;
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
   grid-template-areas:
     ". . . . . . ."
