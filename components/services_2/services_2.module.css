@@ -120,6 +120,30 @@
   overflow: hidden;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 960px) and (max-width: 1280px) {
   .grid_0_scroll {
     position: relative;
@@ -138,6 +162,29 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 480px) and (max-width: 960px) {
   .grid_0_scroll {
     position: relative;
@@ -154,7 +201,46 @@
       ". SUB ."
       ". .   .";
   }
+
+  #IMAGE_LAYER_1_1 {
+    width: 100%;
+    position: relative;
+    grid-area: SUB;
+    height: 700px;
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      ". IMAGE_1 ."
+      "IMAGE_2 IMAGE_2 IMAGE_2 ";
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media all and (min-width: 0px) and (max-width: 480px) {
   .grid_0_scroll {
