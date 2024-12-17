@@ -100,7 +100,7 @@ return (
 
 
 
-              <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_2}> 
+              <div class="rounded-xl ... " id={styles.P_IMAGE_2}> 
                 <div id={styles.IMAGE_POST}>
                   <Image
                     src={Placeholder_2}   
