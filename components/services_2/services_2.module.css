@@ -207,7 +207,7 @@
     width: 100%;
     position: relative;
     grid-area: SUB;
-    height: 600px;
+    height: 850px;
     display: grid;
     grid-column-gap: 30px;
     grid-row-gap: 0;
