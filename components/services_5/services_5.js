@@ -40,24 +40,9 @@ return (
                         (Building Information Modeling). We specialize in comprehensive BIM delivery 
                         across all project stages. Our expertise lie in advanced LOD350 detail and 
                         precision clash detection, ensuring seamless coordination between disciplines.
-
-                        With BIM, we help our clients save money, build faster, and achieve 
-                        sustainability goals through streamlined, efficient processes. 
-                        From reducing waste to optimizing material use, our approach 
-                        maximizes efficiency while minimizing costs. Let us elevate your 
-                        project with precision, speed, and sustainability at its core.
                         {" "}
                         <br/>
-                        <br/>
-
-
-                        We're a team of seasoned architects
-                        We provide services, including <a class=" text-stone-700 ... font-avant_garde_bold">data-analytics,</a> 
-                        <a class=" text-stone-700 ... font-avant_garde_bold"> automation</a> and <a class=" text-stone-700 ... font-avant_garde_bold">technical-drafting</a> for construction projects. see 
-                        <a class=" text-stone-700 ... font-avant_garde_bold"><Link href={"./"}> "how we work"</Link></a> to 
-                        learn how we define bespoke solutions tailored to your project specific needs.              
-                      <br/> 
-                      <br/>                
+                        <br/>                                                                    
                     </h3>
                   </div>                        
                 </div>
