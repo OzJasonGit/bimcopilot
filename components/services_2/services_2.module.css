@@ -141,7 +141,7 @@
     width: 100%;
     position: relative;
     grid-area: SUB;
-    height: 800px;
+    height: 850px;
     display: grid;
     grid-column-gap: 30px;
     grid-row-gap: 0px;
@@ -174,7 +174,7 @@
     width: 100%;
     position: relative;
     grid-area: SUB;
-    height: 800px;
+    height: 850px;
     display: grid;
     grid-column-gap: 30px;
     grid-row-gap: 0px;
@@ -207,7 +207,7 @@
     width: 100%;
     position: relative;
     grid-area: SUB;
-    height: 650px;
+    height: 850px;
     display: grid;
     grid-column-gap: 30px;
     grid-row-gap: 0;
