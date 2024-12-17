@@ -162,11 +162,11 @@
     grid-column-gap: 30px;
     grid-row-gap: 20px;
     grid-template-rows: 0 auto 0;
-    grid-template-columns: 0px 1fr 0px;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      ". .   ."
-      ". SUB ."
-      ". .   .";
+      " .  "
+      " SUB "
+      " . ";
   }
 
   #IMAGE_LAYER_1_1 {
