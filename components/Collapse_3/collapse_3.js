@@ -81,22 +81,7 @@ const Collapsed_3 = () => {
                                             </h3>
                                         </Collapse.Panel>
 
-                                        <Collapse.Panel
-                                            style={{ color: "#f1f1f1" }}
-                                            key={"2"}
-                                            header={panel_2()}
-                                        >
-                                            <h3 class="font-avant_garde_bold"
-                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "25px" }}
-                                                id={styles._H3}
-                                            >
-                                                A dog is a type of domesticated
-                                                animal. Known for its loyalty
-                                                and faithfulness, it can be
-                                                found as a welcome guest in many
-                                                households across the world.
-                                            </h3>
-                                        </Collapse.Panel>
+                                        
 
                                        
 
