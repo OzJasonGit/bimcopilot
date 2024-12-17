@@ -99,7 +99,7 @@
     position: relative;
     grid-area: SUB;
     display: grid;
-    grid-template-columns: 0px 1fr 0px;
+    grid-template-columns: 20px 1fr 20px;
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
       ". . ."
