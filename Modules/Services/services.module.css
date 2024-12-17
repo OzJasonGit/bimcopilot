@@ -40,7 +40,7 @@
   -webkit-text-stroke: 0.65px rgb(120, 120, 120);
 }
 
-#TEXT_ALIGNMENT {
+.TEXT_ALIGNMENT {
   text-align: right;
 }
 /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
@@ -1050,7 +1050,7 @@
 /*SECTION_7////ABOUT///////////////////////////////////////////////////////////////////////////////////*/
 
 @media all and (min-width: 960px) and (max-width: 1280px) {
-  #TEXT_ALIGNMENT {
+  .TEXT_ALIGNMENT {
     text-align: right;
   }
   .grid_0 {
@@ -1502,6 +1502,9 @@
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
 
 @media all and (min-width: 480px) and (max-width: 960px) {
+  .TEXT_ALIGNMENT {
+    text-align: left;
+  }
   .center_holder {
     width: 100%;
     display: flex;
@@ -2176,6 +2179,9 @@
 
 @media all and (min-width: 0px) and (max-width: 480px) {
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
+  .TEXT_ALIGNMENT {
+    text-align: left;
+  }
 
   #_H3 {
     margin-bottom: 0px;
