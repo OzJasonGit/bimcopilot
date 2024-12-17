@@ -137,7 +137,7 @@ const Servicesmain = ({ stories, firstStory }) => {
               <div id={styles.SUBCOPY_TAG}>
                 <h2 
                 id={styles._H2}
-                className={styles.TEXT_ALIGNMENT}
+                
                 class="text-lg ... text-stone-500 ... font-avant_garde_bold">
                 <br/>  
                 See it realized with <a class="text-stone-700 ... font-avant_garde_bold">automation</a>.
@@ -147,7 +147,7 @@ const Servicesmain = ({ stories, firstStory }) => {
               <div id={styles.SECONDCOPY_TAG}>
                 <h3
                     id={styles._H3}
-                    className={styles.TEXT_ALIGNMENT}
+                    
                     class="text-lg ... text-stone-500 ... font-avant_garde_bold"
                   >
 
