@@ -99,10 +99,10 @@ return (
                 <div  id={styles.FAQ}>                
                   <div class="border-2 border-stone-600 ... rounded-xl ..."id={styles.FAQ_TEXT}> 
                     <h1
-                              id={styles._H1}
-                              class="text-stone-700 ... font-avant_garde_bold ...">
-                              <a class="text-left ... text-4xl">Frequently Asked Questions (FAQ) </a>
-                            </h1>                                       
+                      id={styles._H1}
+                      class="text-stone-700 ... font-avant_garde_bold ...">
+                      <a class="text-left ... text-4xl">Frequently Asked Questions (FAQ) </a>
+                    </h1>                                       
                   </div>
                 </div>  
 
@@ -125,6 +125,11 @@ return (
               <div id={styles.IS_THIS_FOR_ME_BLOCK}>   
                 <div  id={styles.IS_THIS_FOR_ME}>
                   <div class="border-2 border-stone-600 ... rounded-xl ..." id={styles.IS_THIS_FOR_ME_TEXT}>   
+                    <h1
+                      id={styles._H1}
+                      class="text-stone-700 ... font-avant_garde_bold ...">
+                      <a class="text-left ... text-4xl">Is This For Me?</a>
+                    </h1>  
                                  
                   </div>
                 </div>                  
