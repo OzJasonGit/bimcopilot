@@ -335,10 +335,10 @@
     height: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 30px;
-    grid-template-areas: "WHO_WEVE_HELPED .";
+    grid-template-areas: "WHO_WEVE_HELPED ";
   }
 
   #WHO_WEVE_HELPED_TEXT {
@@ -432,6 +432,9 @@
     grid-template-areas: "WHO_WEVE_HELPED";
   }
 
+
+
+ 
   #FAQ {
     display: grid;
     width: 100%;
