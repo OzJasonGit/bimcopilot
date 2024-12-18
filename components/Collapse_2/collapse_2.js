@@ -71,13 +71,13 @@ const Collapsed_2 = () => {
                                             key={"1"}
                                             header={panel_1()}
                                         >
-                                            <ul class="list-disc ... font-geistmono_semibold ..."
+                                            <ul class="list-disc ... font-geistmono_semibold ... text-right ..."
                                                 id={styles._H3}
-                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "25px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
+                                                <li class="text-right ...">Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li class="text-right ...">Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li class="text-right ...">Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li class="text-right ...">Now this is a story all about how, my life got flipped-turned upside down</li>
                                             </ul>
                                         </Collapse.Panel>
 
