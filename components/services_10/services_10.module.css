@@ -324,10 +324,10 @@
     height: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 150px;
     grid-template-rows: 1fr;
     grid-column-gap: 30px;
-    grid-template-areas: "WHO_WEVE_HELPED";
+    grid-template-areas: "WHO_WEVE_HELPED .";
   }
 
   #WHO_WEVE_HELPED_TEXT {
