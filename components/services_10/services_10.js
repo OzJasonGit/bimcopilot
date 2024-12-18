@@ -56,24 +56,15 @@ return (
                                   becoming less important. What matters is how I can
                                   help you and your business. 
                               </h2>
-                            </div>
-
-                            <br/>
-                          
-                            <div>
-                              <h3
-                                  id={styles._H3}
+                              <br/>
+                              <p
                                   class="text-xl ... text-stone-700 ... font-avant_garde_bold ...">
                                   Hi, I'm Oz Jason. I'm a registered architect, BIM
                                   manager and the founder of{" "}
-                                  <a class="text-yellow-200 ...">bimcopilot.com</a>.
-                                  <br/> However, I'm a firm believer that titles are
-                                  becoming less important. What matters is how I can
-                                  help you and your business. 
-                              </h3>
+                                  <a class="text-yellow-200 ...">bimcopilot.com</a>.                                  
+                              </p>
                             </div>
-                            
-                            <br/>
+
                             <br/>
 
                             <div id={styles.MY_FACE} class=" border-8 border-stone-200 ... rounded-full ...">
