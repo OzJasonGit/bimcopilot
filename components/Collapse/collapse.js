@@ -70,7 +70,8 @@ const Collapsed = () => {
                                             header={panel_1()}
                                         >
                                             <ul class="list-disc ... font-geistmono_regular ..."
-                                                id={styles._H3}>
+                                                id={styles._H3}
+                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "25px" }}>
                                                 <li>Now this is a story all about how, my life got flipped-turned upside down</li>
                                                 <li>Now this is a story all about how, my life got flipped-turned upside down</li>
                                                 <li>Now this is a story all about how, my life got flipped-turned upside down</li>
@@ -80,11 +81,7 @@ const Collapsed = () => {
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "25px" }}
                                                 id={styles._H3}
                                             >
-                                                A dog is a type of domesticated
-                                                animal. Known for its loyalty
-                                                and faithfulness, it can be
-                                                found as a welcome guest in many
-                                                households across the world.
+                                
                                             </h3>
                                         </Collapse.Panel>
 
