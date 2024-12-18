@@ -32,6 +32,7 @@ return (
 
 
                         <div id={styles.WE_HELPED_TEXT}>
+
                           <div id={styles.ABOUT_TITLE_HOLDER}>
                             <h1
                               id={styles._H1}
@@ -58,8 +59,7 @@ return (
                             </div>
 
                             <br/>
-                            <br/>
-
+                          
                             <div>
                               <h3
                                   id={styles._H3}
@@ -77,9 +77,10 @@ return (
                             <br/>
 
                             <div id={styles.MY_FACE} class=" border-8 border-stone-200 ... rounded-full ...">
-                                <Image></Image>
-                              </div>
+                              <Image></Image>
                             </div>
+
+                          </div>
                       
                         </div>                       
                       </div>
