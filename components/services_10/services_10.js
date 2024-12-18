@@ -58,7 +58,7 @@ return (
                               </h2>
                               <br/>
                               <p
-                                  class="text-xl ... text-stone-700 ... font-avant_garde_bold ...">
+                                  class=" text-stone-700 ... font-geist_regular ... ">
                                   Hi, I'm Oz Jason. I'm a registered architect, BIM
                                   manager and the founder of{" "}
                                   <a class="text-yellow-200 ...">bimcopilot.com</a>.                                  
