@@ -148,6 +148,9 @@
   grid-area: PORTFOLIO;
 }
 
+
+
+
 #FAQ {
   display: grid;
   width: 100%;
@@ -156,6 +159,10 @@
   grid-template-rows: 1fr;
   grid-column-gap: 30px;
   grid-template-areas: " FAQ FAQ . ";
+}
+
+#FAQ_TEXT {
+  grid-area: FAQ;
 }
 
 #FAQ_TITLE {
