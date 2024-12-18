@@ -119,9 +119,8 @@ return (
 
               <div id={styles.IS_THIS_FOR_ME_BLOCK}>   
                 <div  id={styles.IS_THIS_FOR_ME}>
-                  <div class="border-2 border-stone-600 ... rounded-xl ..."id={styles.IS_THIS_FOR_ME_TEXT}>   
-                    <div class="bg-white rounded-xl ..."id={styles.IS_THIS_FOR_ME_HOLDER}>
-                    </div>                
+                  <div class="border-2 border-stone-600 ... rounded-xl ..." id={styles.IS_THIS_FOR_ME_TEXT}>   
+                                 
                   </div>
                 </div>                  
               </div> 
