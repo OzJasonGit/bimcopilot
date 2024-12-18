@@ -97,7 +97,7 @@ return (
               <div id={styles.FAQ_BLOCK}>   
 
                 <div  id={styles.FAQ}>                
-                  <div class="border-2 border-stone-600 ... rounded-xl ..."id={styles.FAQ_TEXT}> 
+                  <div class=" rounded-xl ..."id={styles.FAQ_TEXT}> 
                     <h1
                       id={styles._H1}
                       class="text-stone-700 ... font-avant_garde_bold ...">
