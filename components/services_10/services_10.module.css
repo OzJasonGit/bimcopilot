@@ -193,7 +193,7 @@
   display: grid;
   grid-column-gap: 0px;
   grid-row-gap: 20px;
-  grid-template-rows: 170px auto auto;
+  grid-template-rows: 0px auto auto;
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
   grid-template-areas:
     ". . . . . . ."
@@ -324,7 +324,7 @@
     height: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-    grid-template-columns: 1fr 150px;
+    grid-template-columns: 1fr 200px;
     grid-template-rows: 1fr;
     grid-column-gap: 30px;
     grid-template-areas: "WHO_WEVE_HELPED .";
