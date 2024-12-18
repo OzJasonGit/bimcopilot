@@ -64,9 +64,7 @@ return (
                                   <a class="text-yellow-200 ...">bimcopilot.com</a>.                                  
                               </p>
                             </div>
-
-                            <br/>
-
+                          
                             <div id={styles.MY_FACE} class=" border-8 border-stone-200 ... rounded-full ...">
                               <Image></Image>
                             </div>
