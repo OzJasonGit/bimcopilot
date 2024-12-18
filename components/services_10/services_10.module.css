@@ -132,10 +132,11 @@
 
 #MY_FACE {
   position: relative;
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   align-items: center;
   justify-content: center;
+  left: -15px;
 }
 /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
 
