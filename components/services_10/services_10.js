@@ -128,7 +128,7 @@ return (
                     <h1
                       id={styles._H1}
                       class="text-stone-700 ... font-avant_garde_bold ...">
-                      <a class="text-left ... text-4xl">Is This For Me?</a>
+                      <a class="text-right ... text-4xl">Is This For Me?</a>
                     </h1>  
                                  
                   </div>
