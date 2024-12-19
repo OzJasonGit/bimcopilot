@@ -433,7 +433,7 @@
     display: grid;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 320px auto auto;
+    grid-template-rows: 180px auto auto;
     grid-template-areas:
       "IMAGE IMAGE"
       "TEXT TEXT"
