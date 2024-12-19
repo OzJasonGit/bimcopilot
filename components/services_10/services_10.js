@@ -82,15 +82,6 @@ return (
       </section>
 
 
-
-
-
-
-
-
-
-
-
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_faq}>
              
@@ -117,17 +108,12 @@ return (
 
 
 
-
-
-
-
-
-
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_is_this_for_me}>
 
               <div id={styles.IS_THIS_FOR_ME_BLOCK}>   
-                <div  id={styles.IS_THIS_FOR_ME}>
+                <div  id={styles.IS_THIS_FOR_ME}
+                      style={{ paddingTop: "40px", paddingBottom: "80px" }}>
                   <div class=" rounded-xl ..." id={styles.IS_THIS_FOR_ME_TEXT}>   
                     <h1
                       id={styles._H1}
