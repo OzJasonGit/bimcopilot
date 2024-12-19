@@ -354,6 +354,21 @@
       "SHARE .";
   }
 
+  #BLOGIMAGE_HOLDER_GRID_TWO {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: MAIN-AREA;
+    position: relative;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "IMAGE_2 "
+      "IMAGE_1";
+  }
+
   #PRODUCT_TEXT {
     grid-area: TEXT;
   }
