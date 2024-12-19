@@ -272,6 +272,40 @@ const Servicesmain = ({ stories, firstStory }) => {
                       />
                     </div>
                   </div>
+
+                  <div class="rounded-xl ..." id={styles.P8}>
+                    <div id={styles.IMAGE_POST}>
+                      <Image
+                        src={stories[0].image}
+                        alt="Picture of the author"
+                        width={500}
+                        height={500}
+                        style={{
+                          position: "absolute",
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </div>
+                  </div>
+
+                  <div class="rounded-xl ..." id={styles.P9}>
+                    <div id={styles.IMAGE_POST}>
+                      <Image
+                        src={stories[0].image}
+                        alt="Picture of the author"
+                        width={500}
+                        height={500}
+                        style={{
+                          position: "absolute",
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    </div>
+                  </div>
                  
                 </div>                   
               </div> 

@@ -297,6 +297,18 @@
   overflow: hidden;
 }
 
+#P8 {
+  position: relative;
+  grid-area: P8;
+  overflow: hidden;
+}
+
+#P9 {
+  position: relative;
+  grid-area: P9;
+  overflow: hidden;
+}
+
 #HOW_WE_WORK_IMAGE {
   grid-area: SUB;
   width: 100%;
