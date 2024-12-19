@@ -132,6 +132,28 @@ return (
                       class="text-stone-700 ... font-avant_garde_bold ... text-right ... ">
                       <a class="text-right ... text-4xl">Is This For Me?</a>
                     </h1>  
+
+                    <h3
+                      id={styles._H3}
+                      class="text-right ... text-neutral-500 ... font-avant_garde_bold"
+                    >
+                      {" "}
+                  
+                      <a class="text-stone-700 ... font-avant_garde_bold"
+                        >
+                        Automated systems for Architects, Designers and Manufacturers.
+                      </a>{" "}
+                      Gain valuable insights, streamline your business, be more{" "} 
+                      <a class="text-stone-700 ... font-avant_garde_bold"
+                        >
+                        profitable 
+                      </a>, be more{" "}
+                      <a class="text-stone-700 ... font-avant_garde_bold"
+                        >
+                        sustainable
+                      </a>                  
+                      . <br /> <br />{" "}                 
+                    </h3>
                                  
                   </div>
                 </div>                  
