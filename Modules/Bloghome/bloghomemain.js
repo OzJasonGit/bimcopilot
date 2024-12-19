@@ -8,6 +8,7 @@ import { useParams, useNavigate } from "next/navigation";
 import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
+import Subfooter from "../../components/Subfooter/subfooter";
 import Footer from "../../components/Footer/Footer";
 import Subscribetop from "../../components/Subscribetop/subscribetop";
 
@@ -95,6 +96,8 @@ story_id = params.slug
           </div>
       </section>
 
+
+      <Subfooter/>
       <Footer/>
       
     </>
