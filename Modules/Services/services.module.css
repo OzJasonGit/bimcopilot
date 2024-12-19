@@ -18,11 +18,24 @@
   line-height: 1.35rem;
 }
 
+#_H2_RIGHT {
+  margin-bottom: 0px;
+  font-size: 1.15rem;
+  line-height: 1.35rem;
+  text-align: right;
+}
+
 #H2_7XL {
   margin-bottom: 0px;
 }
 
 #_H3 {
+  margin-bottom: 0px;
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+}
+
+#_H3_RIGHT {
   margin-bottom: 0px;
   font-size: 0.85rem;
   line-height: 1.3rem;

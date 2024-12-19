@@ -146,7 +146,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
               <div id={styles.SECONDCOPY_TAG}>
                 <h3
-                    id={styles._H3}
+                    id={styles._H3_RIGHT}
                     
                     class="text-lg ... text-stone-500 ... font-avant_garde_bold"
                   >
