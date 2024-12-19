@@ -1345,7 +1345,7 @@
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
-    background-color: rgb(23, 23, 23);
+    background-color: rgb(245 245 244);
     z-index: -30000;
     ;
     top: 0px;

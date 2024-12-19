@@ -2,7 +2,7 @@ import Provider from "../../app/utils/Provider";
 
 
 
-import styles from './subfooter2.module.css'
+import styles from './subfooter_white.module.css'
 import React, { Component } from 'react';
 
 
