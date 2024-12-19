@@ -6,10 +6,6 @@ import styles from './subfooter_white.module.css'
 import React, { Component } from 'react';
 
 
-import Image from "next/image";
-import Link from "next/link";
-
-
 
 export default class Subfooter extends Component {
 
@@ -24,14 +20,16 @@ export default class Subfooter extends Component {
                 <div id={styles.TAG}>
                 <h1
                     id={styles._H1}
-                    class="text-7xl ... text-stone-400 ... font-avant_garde_bold">
+                    class="text-7xl ... text-stone-700 ... font-avant_garde_bold">
                     {" "}
-                    You're the <a class="text-stone-200 ...">pilot </a>... We are <br/>
-                    your<a class="text-emerald-200 ..."> copilot</a>.
+                    You're the <a class="text-stone-200 ..." 
+                                  id={styles.TEXT_OUTLINE}>pilot </a>... We are <br/>
+                    your<a class="text-emerald-200 ..."
+                           id={styles.TEXT_OUTLINE}> copilot</a>.
                 </h1>
                 </div>
             </div>
-            </div>
+            </div> 
         </section>   
 
       </Provider>
