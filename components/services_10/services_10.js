@@ -134,6 +134,7 @@ return (
                     </h1>  
 
                     <h3
+                      style={{ paddingBottom: "20px" }}
                       id={styles._H3}
                       class="text-right ... text-neutral-500 ... font-avant_garde_bold"
                     >
@@ -154,6 +155,8 @@ return (
                       </a>                  
                       . <br /> <br />{" "}                 
                     </h3>
+
+                    
                                  
                   </div>
                 </div>                  

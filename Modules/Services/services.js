@@ -64,8 +64,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                    
                     id={styles._H1_2}
                     class="text-left ...  text-neutral-700 ... font-avant_garde_bold"
-                    
-                    
+                                       
                   >        
                     A <a  class=" text-stone-50 ..." 
                     id={styles.TEXT_OUTLINE}>BIM,</a> <a class=" text-stone-50 ..." id={styles.TEXT_OUTLINE}>AI,</a> <a class=" text-stone-50 ..."
