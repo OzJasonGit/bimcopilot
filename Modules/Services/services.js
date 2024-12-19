@@ -8,6 +8,7 @@ import Menu_White from "../../components/Menu_White/menu_white";
 import Sides from "../../components/Sides/sides";
 import Header_White from "../../components/Header_White/Header_White";
 import Footer from "../../components/Footer/Footer_White";
+import Subfooter from "../../components/Subfooter_White/subfooter_white";
 import Collapsed from "../../components/Collapse/collapse";
 import Infinite_Scroll_2 from "../../components/Carousel/Infinite_Scroll_Services";
 
@@ -317,6 +318,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
     {/*<Services_9/>*/}
     <Services_10/>
+    <Subfooter/>
     <Footer/>
 
 
