@@ -414,68 +414,6 @@
     ". .   .   .   .   .   .";
 }
 
-#VIDEO_HOLDER {
-  grid-area: SUB;
-  position: relative;
-  width: 100%;
-  display: grid;
-  grid-row-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: ;
-  grid-template-areas:
-    ". . . TITLE TITLE TITLE TITLE TITLE TITLE"
-    ". . . VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO"
-    ". . . SUBTITLE SUBTITLE SUBTITLE SUBTITLE SUBTITLE SUBTITLE";
-}
-
-#BG_VIDEO {
-  grid-area: VIDEO;
-  position: relative;
-  background-color: transparent;
-  height: 400px;
-}
-
-#COPY_TAG_HOLDER {
-  grid-area: TITLE;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: ". TITLE TITLE TITLE";
-}
-
-#SUBCOPY_TAG_HOLDER {
-  grid-area: SUBTITLE;
-  display: grid;
-  grid-row-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    ". FIRST FIRST FIRST"
-    ". SECOND SECOND SECOND";
-}
-
-#COPY_TAG {
-  grid-area: TITLE;
-}
-
-#SUBCOPY_TAG {
-  grid-area: FIRST;
-}
-
-#SECONDCOPY_TAG {
-  grid-area: SECOND;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  border-radius: 1.5px;
-}
-
 /*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
@@ -565,7 +503,7 @@
   height: 100%;
   display: grid;
   grid-template-columns: 200px 200px 200px 200px 200px 200px 200px 200px;
-  grid-template-rows: 160px 200px 1fr 1fr 1fr 160px;
+  grid-template-rows: 200px 300px 1fr 1fr 1fr 160px;
   grid-template-areas:
     "P1 P1 P5 P5 P5 P7 P7 P7"
     "P3 P3 P5 P5 P5 P7 P7 P7"
