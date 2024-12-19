@@ -117,12 +117,13 @@ return (
                   <div class=" rounded-xl ..." id={styles.IS_THIS_FOR_ME_TEXT}>   
                     <h1
                       id={styles._H1}
+                      style={{ paddingBottom: "20px" }}
                       class="text-stone-700 ... font-avant_garde_bold ... text-right ... ">
                       <a class="text-right ... text-4xl">Is This For Me?</a>
                     </h1>  
 
                     <h3
-                      style={{ paddingBottom: "20px" }}
+                      
                       id={styles._H3}
                       class="text-right ... text-neutral-500 ... font-avant_garde_bold"
                     >
@@ -143,9 +144,7 @@ return (
                       </a>                  
                       . <br /> <br />{" "}                 
                     </h3>
-
-                    
-                                 
+                                                     
                   </div>
                 </div>                  
               </div> 
