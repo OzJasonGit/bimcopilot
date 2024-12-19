@@ -209,7 +209,7 @@
 }
 
 #IS_THIS_FOR_ME_BLOCK {
-  height: 500px;
+  height: auto;
   width: 100%;
   position: relative;
   grid-area: PORTFOLIO;

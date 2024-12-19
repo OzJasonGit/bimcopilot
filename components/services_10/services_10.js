@@ -97,7 +97,9 @@ return (
               <div id={styles.FAQ_BLOCK}>   
 
                 <div  id={styles.FAQ}>                
-                  <div class=" rounded-xl ..."id={styles.FAQ_TEXT}> 
+                  <div class=" rounded-xl ..."
+                       id={styles.FAQ_TEXT}
+                       style={{ paddingBottom: "20px" }}> 
                     <h1
                       id={styles._H1}
                       class="text-stone-700 ... font-avant_garde_bold ...">
