@@ -196,7 +196,7 @@
 }
 
 #PORTFOLIO_IMAGES {
-  height: 1300px;
+  height: 1400px;
   width: 100%;
   position: relative;
   grid-area: PORTFOLIO;
@@ -565,7 +565,7 @@
   height: 100%;
   display: grid;
   grid-template-columns: 200px 200px 200px 200px 200px 200px 200px 200px;
-  grid-template-rows: 160px 200px 1fr 1fr 1fr 160px;
+  grid-template-rows: 200px 400px 1fr 1fr 1fr 160px;
   grid-template-areas:
     "P1 P1 P5 P5 P5 P7 P7 P7"
     "P3 P3 P5 P5 P5 P7 P7 P7"
