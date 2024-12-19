@@ -311,6 +311,49 @@
       "SHARE .";
   }
 
+  #BLOGIMAGE_HOLDER_GRID {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: MAIN-AREA;
+    position: relative;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "IMAGE_2"
+      "IMAGE_1";
+  }
+
+  #BLOGIMAGE {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 320px auto auto;
+    grid-template-areas:
+      "IMAGE IMAGE"
+      "TEXT TEXT"
+      "SHARE .";
+  }
+
+  #BLOGIMAGE_2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 480px auto auto;
+    grid-template-areas:
+      "IMAGE IMAGE"
+      "TEXT TEXT"
+      "SHARE .";
+  }
+
   #PRODUCT_TEXT {
     grid-area: TEXT;
   }
@@ -362,6 +405,49 @@
     grid-row-gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 180px auto auto;
+    grid-template-areas:
+      "IMAGE IMAGE"
+      "TEXT TEXT"
+      "SHARE .";
+  }
+
+  #BLOGIMAGE_HOLDER_GRID {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: MAIN-AREA;
+    position: relative;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "IMAGE_2"
+      "IMAGE_1";
+  }
+
+  #BLOGIMAGE {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 320px auto auto;
+    grid-template-areas:
+      "IMAGE IMAGE"
+      "TEXT TEXT"
+      "SHARE .";
+  }
+
+  #BLOGIMAGE_2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 480px auto auto;
     grid-template-areas:
       "IMAGE IMAGE"
       "TEXT TEXT"
