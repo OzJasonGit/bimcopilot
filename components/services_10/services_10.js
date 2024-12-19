@@ -98,9 +98,9 @@ return (
 
                 <div  id={styles.FAQ}>                
                   <div class=" rounded-xl ..."
-                       id={styles.FAQ_TEXT}
-                       style={{ paddingBottom: "20px" }}> 
+                       id={styles.FAQ_TEXT}>
                     <h1
+                      style={{ paddingBottom: "20px" }}
                       id={styles._H1}
                       class="text-stone-700 ... font-avant_garde_bold ...">
                       <a class="text-left ... text-4xl">Frequently Asked <br/> Questions (FAQ) </a>
