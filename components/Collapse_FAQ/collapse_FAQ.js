@@ -52,6 +52,42 @@ const panel_4 = () => (
     </h3>
 );
 
+const panel_5 = () => (
+    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+        class="font-avant_garde_bold"
+        id={styles._H3}> 
+        BIM Strategy, Execution Plan (BEP) and Documentation 
+        Digital Twin product development 
+    </h3>
+);
+
+const panel_6= () => (
+    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+        class="font-avant_garde_bold"
+        id={styles._H3}> 
+        BIM Strategy, Execution Plan (BEP) and Documentation 
+        Digital Twin product development 
+    </h3>
+);
+
+const panel_7 = () => (
+    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+        class="font-avant_garde_bold"
+        id={styles._H3}> 
+        BIM Strategy, Execution Plan (BEP) and Documentation 
+        Digital Twin product development 
+    </h3>
+);
+
+const panel_8 = () => (
+    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+        class="font-avant_garde_bold"
+        id={styles._H3}> 
+        BIM Strategy, Execution Plan (BEP) and Documentation 
+        Digital Twin product development 
+    </h3>
+);
+
 
 
 
@@ -130,6 +166,62 @@ const Collapsed_3 = () => {
                                         <Collapse.Panel
                                             key={"1"}
                                             header={panel_4()}
+                                        >
+                                            <ul class="list-disc ... font-geistmono_semibold ..."
+                                                id={styles._H3}
+                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                            </ul>
+                                        </Collapse.Panel>
+
+                                        <Collapse.Panel
+                                            key={"1"}
+                                            header={panel_5()}
+                                        >
+                                            <ul class="list-disc ... font-geistmono_semibold ..."
+                                                id={styles._H3}
+                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                            </ul>
+                                        </Collapse.Panel>
+
+                                        <Collapse.Panel
+                                            key={"1"}
+                                            header={panel_6()}
+                                        >
+                                            <ul class="list-disc ... font-geistmono_semibold ..."
+                                                id={styles._H3}
+                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                            </ul>
+                                        </Collapse.Panel>
+
+                                        <Collapse.Panel
+                                            key={"1"}
+                                            header={panel_7()}
+                                        >
+                                            <ul class="list-disc ... font-geistmono_semibold ..."
+                                                id={styles._H3}
+                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                            </ul>
+                                        </Collapse.Panel>
+
+                                        <Collapse.Panel
+                                            key={"1"}
+                                            header={panel_8()}
                                         >
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
