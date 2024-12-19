@@ -9,7 +9,7 @@ import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Subscribetop from "../../components/Subscribetop/subscribetop";
-
+import Subfooter from "../../components/Subfooter/subfooter";
 
 import Image from "next/image";
 
@@ -137,7 +137,10 @@ const Projectsmain = ({ stories, firstStory }) => {
             </div>
           </div>
       </section>
+
+      <Subfooter/>
       <Footer/>
+      
       
     </>
 
