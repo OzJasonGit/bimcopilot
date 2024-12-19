@@ -136,7 +136,7 @@ const Servicesmain = ({ stories, firstStory }) => {
             <div id={styles.SUBCOPY_TAG_HOLDER}> 
               <div id={styles.SUBCOPY_TAG}>
                 <h2 
-                id={styles._H2}
+                id={styles._H2_RIGHT}
                 
                 class="text-lg ... text-stone-500 ... font-avant_garde_bold">
                 <br/>  
