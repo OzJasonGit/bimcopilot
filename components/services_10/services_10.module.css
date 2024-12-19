@@ -142,7 +142,7 @@
 
 /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
 #FAQ_BLOCK {
-  height: 250px;
+  height: auto;
   width: 100%;
   position: relative;
   grid-area: PORTFOLIO;
