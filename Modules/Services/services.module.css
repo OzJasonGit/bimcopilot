@@ -998,66 +998,6 @@
 /*SECTION_4////TITLE///////////////////////////////////////////////////////////////////////////////////*/
 
 /*SECTION////PRODUCTS//////////////////////////////////////////////////////////////////////////////////////*/
-#PRODUCTS_HOLDER {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  grid-area: MAIN-AREA;
-  height: auto;
-  display: grid;
-  grid-column-gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 30px auto;
-  grid-template-areas:
-    ". . ."
-    "AREA_1 AREA_2 AREA_3";
-}
-
-#PRODUCTS_HOLDER_MOBILE {
-  display: none;
-}
-
-#PRODUCTS_HORIZONTAL_MOBILE {
-  display: grid;
-  position: relative;
-  grid-column-gap: 40px;
-  grid-template-columns: 425px 425px 425px 425px 425px 425px 1fr;
-  grid-template-rows: 100%;
-  grid-template-areas: "1 2 3 4 5 6 .";
-  height: 100%;
-  width: 3000px;
-}
-
-#PRODUCT {
-  position: relative;
-  display: grid;
-  width: 100%;
-  height: auto;
-  grid-template-columns: 1fr;
-  grid-row-gap: 30px;
-  grid-template-rows: 380px auto;
-  grid-template-areas:
-    "IMAGE"
-    "TEXT";
-}
-
-#PRODUCT_IMAGE {
-  grid-area: IMAGE;
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-#PRODUCT_SHADOW {
-  position: relative;
-  grid-area: IMAGE;
-  width: 100%;
-  height: 100%;
-  right: -12.5px;
-  top: 12.5px;
-  z-index: -10;
-}
 
 /*SECTION////PRODUCTS//////////////////////////////////////////////////////////////////////////////////////*/
 
