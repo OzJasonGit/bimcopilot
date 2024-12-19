@@ -4,7 +4,7 @@ import styles from './services_10.module.css';
 
 import React, { Component } from 'react';
 import Image from "next/image";
-
+import Collapsed_FAQ from "../../components/Collapse_FAQ/collapse_FAQ";
 
 
 
@@ -104,6 +104,7 @@ return (
                       <a class="text-left ... text-4xl">Frequently Asked <br/> Questions (FAQ) </a>
                     </h1>                                       
                   </div>
+                  <Collapsed_FAQ/>
                 </div>  
 
               </div> 
