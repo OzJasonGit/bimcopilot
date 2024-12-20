@@ -115,7 +115,7 @@ const items = [
 
   {
     key: '8',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end", paddingBottom: "0px" }}
                   class="font-avant_garde_bold"
                   id={styles._H3}> How do you incorporate sustainability into your designs?
               </h3>, 
