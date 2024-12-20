@@ -98,6 +98,11 @@
   position: relative;
 }
 
+#IMAGE_POST_2 {
+  width: 100%;
+  left: 0px;
+}
+
 #P_IMAGE_1 {
   position: relative;
   grid-area: IMAGE_1;
