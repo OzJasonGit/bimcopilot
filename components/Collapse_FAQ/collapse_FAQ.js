@@ -5,99 +5,130 @@ import styles from "./collapse.module.css";
 
 
 import { CaretRightFilled } from "@ant-design/icons";
-import { Collapse, Typography } from "antd";
-
-
-const contentStyle = {
-    height: "160px",
-    color: "#fff",
-    lineHeight: "160px",
-    textAlign: "center",
-    background: "#364d79",
-};
-
-const panel_1 = () => (
-    
-    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold"
-        id={styles._H3}>
-        What tools or technology do you use for planning and visualization?      
-    </h3>
-);
-
-const panel_2 = () => (
-    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold"
-        id={styles._H3}> 
-        What is your process from concept to completion?
-    </h3>
-);
-
-const panel_3 = () => (
-    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold"
-        id={styles._H3}> 
-        How will you ensure the project stays on schedule?
-    </h3>
-);
-
-const panel_4 = () => (
-    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold"
-        id={styles._H3}> 
-        How involved can I be in the design process?
-    </h3>
-);
-
-const panel_5 = () => (
-    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold"
-        id={styles._H3}> 
-        How do you handle unexpected challenges during a project?
-    </h3>
-);
-
-const panel_6= () => (
-    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold"
-        id={styles._H3}> 
-        What sets you apart from others in your field?
-    </h3>
-);
-
-const panel_7 = () => (
-    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold"
-        id={styles._H3}> 
-        How do you incorporate sustainability into your designs?
-    </h3>
-);
-
-const panel_8 = () => (
-    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold"
-        id={styles._H3}> 
-        What experience do you have with projects like mine?
-    </h3>
-);
+import { Collapse } from "antd";
 
 
 
 
 
 
+const text_1 = `
+ What tools or technology do you use for planning and visualization?   
+`;
 
-const Collapsed_3 = () => {
-    
-        return (
-            <>
-                <Collapse
-                                        style={{
-                                            display: "grid",
-                                            rowGap: 20,
-                                        }}
-                                        accordion={true}
-                                        expandIcon={({ isActive }) => {
+const text_2 = `
+ What is your process from concept to completion?
+`;
+
+const text_3 = `
+ How will you ensure the project stays on schedule?
+`;
+
+const text_4 = `
+ How involved can I be in the design process?
+`;
+
+const text_5 = `
+ What experience do you have with projects like mine?
+`;
+
+const text_6 = `
+ How do you handle unexpected challenges during a project?
+`;
+
+const text_7 = `
+ What sets you apart from others in your field?
+`;
+
+const text_8 = `
+ How do you incorporate sustainability into your designs?
+`;
+
+
+
+
+const items = [
+
+ {
+    key: '1',
+    label: 'This is panel header 1',
+    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+                  class="font-avant_garde_bold"
+                  id={styles._H3}> {text_1} 
+              </h3>   
+  },
+
+   {
+    key: '2',
+    label: 'This is panel header 2',
+    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+                  class="font-avant_garde_bold"
+                  id={styles._H3}> {text_2} 
+              </h3>   
+  },
+
+   {
+    key: '3',
+    label: 'This is panel header 3',
+    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+                  class="font-avant_garde_bold"
+                  id={styles._H3}> {text_3} 
+              </h3>   
+  },
+
+   {
+    key: '4',
+    label: 'This is panel header 4',
+    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+                  class="font-avant_garde_bold"
+                  id={styles._H3}> {text_4} 
+              </h3>   
+  },
+
+   {
+    key: '5',
+    label: 'This is panel header 5',
+    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+                  class="font-avant_garde_bold"
+                  id={styles._H3}> {text_5} 
+              </h3>   
+  },
+
+   {
+    key: '6',
+    label: 'This is panel header 6',
+    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+                  class="font-avant_garde_bold"
+                  id={styles._H3}> {text_6} 
+              </h3>   
+  },
+
+   {
+    key: '7',
+    label: 'This is panel header 7',
+    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+                  class="font-avant_garde_bold"
+                  id={styles._H3}> {text_7} 
+              </h3>   
+  },
+
+  {
+    key: '8',
+    label: 'This is panel header 8',
+    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+                  class="font-avant_garde_bold"
+                  id={styles._H3}> {text_8} 
+              </h3>   
+  },
+
+
+
+
+
+];
+const Collapsed_3 = () => <Collapse style={{display: "grid", rowGap: 10,}}                                          
+                            accordion items={items} 
+                            expandIcon={({ isActive }) => {
                                             return (
                                                 <CaretRightFilled
                                                     style={{
@@ -107,112 +138,9 @@ const Collapsed_3 = () => {
                                                 />
                                             );
                                         }}
-                                        expandIconPosition="start"
-                                        defaultActiveKey={["1"]}
-                                        bordered={false}
-                                        ghost={true}
-                                    >
-                                        <Collapse.Panel
-                                            key={"1"}
-                                            header={panel_1()}
-                                        >
-                                            <ul class="list-disc ... font-geistmono_semibold ..."
-                                                id={styles._H3}
-                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
-                                            </ul>
-                                        </Collapse.Panel>
-
-                                        <Collapse.Panel
-                                            key={"1"}
-                                            header={panel_2()}
-                                        >
-                                            <ul class="list-disc ... font-geistmono_semibold ..."
-                                                id={styles._H3}
-                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
-                                            </ul>
-                                        </Collapse.Panel>
-
-
-                                        <Collapse.Panel
-                                            key={"1"}
-                                            header={panel_3()}
-                                        >
-                                            <ul class="list-disc ... font-geistmono_semibold ..."
-                                                id={styles._H3}
-                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                   
-                                            </ul>
-                                        </Collapse.Panel>
-
-
-                                        <Collapse.Panel
-                                            key={"1"}
-                                            header={panel_4()}
-                                        >
-                                            <ul class="list-disc ... font-geistmono_semibold ..."
-                                                id={styles._H3}
-                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li  style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                                
-                                            </ul>
-                                        </Collapse.Panel>
-
-                                        <Collapse.Panel
-                                            key={"1"}
-                                            header={panel_5()}
-                                        >
-                                            <ul class="list-disc ... font-geistmono_semibold ..."
-                                                id={styles._H3}
-                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
-                                            </ul>
-                                        </Collapse.Panel>
-
-                                        <Collapse.Panel
-                                            key={"1"}
-                                            header={panel_6()}
-                                        >
-                                            <ul class="list-disc ... font-geistmono_semibold ..."
-                                                id={styles._H3}
-                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
-                                            </ul>
-                                        </Collapse.Panel>
-
-                                        <Collapse.Panel
-                                            key={"1"}
-                                            header={panel_7()}
-                                        >
-                                            <ul class="list-disc ... font-geistmono_semibold ..."
-                                                id={styles._H3}
-                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
-                                            </ul>
-                                        </Collapse.Panel>
-
-                                        <Collapse.Panel
-                                            key={"1"}
-                                            header={panel_8()}
-                                        >
-                                            <ul class="list-disc ... font-geistmono_semibold ..."
-                                                id={styles._H3}
-                                                style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                                
-                                            </ul>
-                                        </Collapse.Panel>
-
-                                        
-
-                                       
-
-                      
-                                    </Collapse>
-              
-                
-            </> 
-        )
-    }
-
-
+                            expandIconPosition="start"
+                            defaultActiveKey={["1"]}
+                            bordered={false}
+                            ghost={true}
+                            />;
 export default Collapsed_3;
