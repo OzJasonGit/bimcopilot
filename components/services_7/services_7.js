@@ -54,19 +54,15 @@ export default class Services_6 extends Component {
 
                       <TooltipProvider>
                         <Tooltip>
-                          <TooltipTrigger asChild>
-
-
-                            <BreadcrumbLink asChild>
-                              <Link href="/docs/components">Home
-                              </Link>
-                            </BreadcrumbLink>
-
-
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p>Add to library</p>
-                          </TooltipContent>
+                            <TooltipTrigger asChild>
+                              <BreadcrumbLink asChild>
+                                <Link href="/docs/components">Home
+                                </Link>
+                              </BreadcrumbLink>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Add to library</p>
+                            </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
 
@@ -77,24 +73,21 @@ export default class Services_6 extends Component {
                           </BreadcrumbItem>
                       <BreadcrumbSeparator/>
 
-                      <BreadcrumbItem>
-                      
+
+                      <BreadcrumbItem>                     
                         <TooltipProvider>
                           <Tooltip>
                             <TooltipTrigger asChild>
-
                               <BreadcrumbLink asChild>
                                 <Link href="/docs/components">Components
                                 </Link>                               
                               </BreadcrumbLink>
-
                             </TooltipTrigger>
                             <TooltipContent>
                               <p>Add to library</p>
                             </TooltipContent>
                           </Tooltip>
-                        </TooltipProvider>
-                                                                                    
+                        </TooltipProvider>                                                                                   
                       </BreadcrumbItem>
 
 
@@ -105,10 +98,14 @@ export default class Services_6 extends Component {
                       <BreadcrumbSeparator/>
 
 
-                      <BreadcrumbSeparator/>
+                   
+
+
                         <BreadcrumbItem>
                           <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
                         </BreadcrumbItem>
+
+                       
                       </BreadcrumbList>
                     </Breadcrumb>
                   </div>                 
