@@ -51,7 +51,7 @@ const items = [
 
  {
     key: '1',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label:    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
                   id={styles._H3}> What tools or technology do you use for planning and visualization?
               </h3>,  
@@ -61,65 +61,65 @@ const items = [
 
    {
     key: '2',
-    label: 'What is your process from concept to completion?',
-    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label:    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
-                  id={styles._H3}> {text_2} 
-              </h3>   
+                  id={styles._H3}> What is your process from concept to completion?
+              </h3>,             
+    children: <p> {text_2} </p> 
   },
 
    {
     key: '3',
-    label: 'How will you ensure the project stays on schedule?',
-    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label:    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
-                  id={styles._H3}> {text_3} 
-              </h3>   
+                  id={styles._H3}> How will you ensure the project stays on schedule?
+              </h3>,    
+    children:  <p> {text_3} </p> 
   },
 
    {
     key: '4',
-    label: 'How involved can I be in the design process?',
-    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label:    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
-                  id={styles._H3}> {text_4} 
-              </h3>   
+                  id={styles._H3}> How involved can I be in the design process?
+              </h3>, 
+    children: <p> {text_4} </p>   
   },
 
    {
     key: '5',
-    label: 'What experience do you have with projects like mine?',
-    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label:    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
-                  id={styles._H3}> {text_5} 
-              </h3>   
+                  id={styles._H3}> What experience do you have with projects like mine?
+              </h3>, 
+    children: <p> {text_5} </p>    
   },
 
    {
     key: '6',
-    label: 'How do you handle unexpected challenges during a project?',
-    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
-                  id={styles._H3}> {text_6} 
-              </h3>   
+                  id={styles._H3}> How do you handle unexpected challenges during a project?
+              </h3>, 
+    children: <p> {text_6} </p>   
   },
 
    {
     key: '7',
-    label: 'What sets you apart from others in your field?',
-    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
-                  id={styles._H3}> {text_7} 
-              </h3>   
+                  id={styles._H3}> What sets you apart from others in your field?
+              </h3>, 
+    children: <p> {text_7} </p>   
   },
 
   {
     key: '8',
-    label: 'How do you incorporate sustainability into your designs?',
-    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
-                  id={styles._H3}> {text_8} 
-              </h3>   
+                  id={styles._H3}> How do you incorporate sustainability into your designs?
+              </h3>, 
+    children: <p> {text_8} </p>   
   },
 
 
