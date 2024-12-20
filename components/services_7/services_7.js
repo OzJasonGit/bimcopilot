@@ -50,12 +50,7 @@ export default class Services_6 extends Component {
 
                    <Breadcrumb>
                     <BreadcrumbList>
-                      
-                      <BreadcrumbItem>
-                        <BreadcrumbLink asChild>
-                          <Link href="/">Home</Link>
-                        </BreadcrumbLink>
-                      </BreadcrumbItem>
+
 
 
                       <TooltipProvider>
