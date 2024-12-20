@@ -73,7 +73,7 @@
 }
 
 #WORKING_IMAGES {
-  height: 200px;
+  height: 100px;
   width: 100%;
   position: relative;
   grid-area: PORTFOLIO;
@@ -128,6 +128,13 @@
       ". SUB ."
       ". PORTFOLIO .";
   }
+
+  #WORKING_IMAGES {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    grid-area: PORTFOLIO;
+  }
 }
 
 
@@ -170,6 +177,14 @@
       ". SUB       ."
       ". PORTFOLIO .";
   }
+
+
+  #WORKING_IMAGES {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    grid-area: PORTFOLIO;
+  }
 }
 
 
@@ -209,7 +224,7 @@
   }
 
   #WORKING_IMAGES {
-    height: 500px;
+    height: 100px;
     width: 100%;
     position: relative;
     grid-area: PORTFOLIO;
