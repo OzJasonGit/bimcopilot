@@ -15,6 +15,14 @@ import {
 } from "@/components/ui/breadcrumb"
 
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+
+
 
 export default class Services_6 extends Component {
 
@@ -58,9 +66,20 @@ export default class Services_6 extends Component {
                       <BreadcrumbSeparator/>
                       <BreadcrumbItem>
                       
-                        <BreadcrumbLink asChild>
-                          <Link href="/docs/components">Components</Link>
-                        </BreadcrumbLink>
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <BreadcrumbLink asChild>
+                                <Link href="/docs/components">Components
+                                </Link>
+                              </BreadcrumbLink>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Add to library</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                        
                       </BreadcrumbItem>
                       <BreadcrumbSeparator />
                       <BreadcrumbItem>
@@ -78,5 +97,6 @@ export default class Services_6 extends Component {
     )
   };
 };
+
 
 
