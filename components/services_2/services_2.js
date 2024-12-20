@@ -12,7 +12,7 @@ import Placeholder_2 from './placeholder_2.jpeg';
 
 
 import { TrendingUp } from "lucide-react"
-import { PolarGrid, RadialBar, RadialBarChart } from "recharts"
+import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts"
 import {
   Card,
   CardContent,
@@ -28,40 +28,19 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart"
 const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
+  { month: "January", desktop: 186 },
+  { month: "February", desktop: 305 },
+  { month: "March", desktop: 237 },
+  { month: "April", desktop: 73 },
+  { month: "May", desktop: 209 },
+  { month: "June", desktop: 214 },
 ]
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  chrome: {
-    label: "Chrome",
+  desktop: {
+    label: "Desktop",
     color: "hsl(var(--chart-1))",
   },
-  safari: {
-    label: "Safari",
-    color: "hsl(var(--chart-2))",
-  },
-  firefox: {
-    label: "Firefox",
-    color: "hsl(var(--chart-3))",
-  },
-  edge: {
-    label: "Edge",
-    color: "hsl(var(--chart-4))",
-  },
-  other: {
-    label: "Other",
-    color: "hsl(var(--chart-5))",
-  },
 } 
-
-
-
 
 
 
@@ -85,40 +64,52 @@ return (
               <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
                   <div id={styles.IMAGE_POST}>
                     <div style={{position: "absolute" }}>
-                      <Card className="flex flex-col">
-                      <CardHeader className="items-center pb-0">
-                        <CardTitle>Radial Chart - Grid</CardTitle>
-                        <CardDescription>January - June 2024</CardDescription>
-                      </CardHeader>
-
-
-
-                      <CardContent className="flex-1 pb-0">
-                        <ChartContainer
-                          config={chartConfig}
-                          className="mx-auto aspect-square max-h-[100%]"
-                        >
-                          <RadialBarChart data={chartData} innerRadius={30} outerRadius={100}>
-                            <ChartTooltip
-                              cursor={false}
-                              content={<ChartTooltipContent hideLabel nameKey="browser" />}
-                            />
-                            <PolarGrid gridType="circle" />
-                            <RadialBar dataKey="visitors" />
-                          </RadialBarChart>
-                        </ChartContainer>
-                      </CardContent>
-
-
-                      <CardFooter className="flex-col gap-2 text-sm">
-                        <div className="flex items-center gap-2 font-medium leading-none">
-                          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-                        </div>
-                        <div className="leading-none text-muted-foreground">
-                          Showing total visitors for the last 6 months
-                        </div>
-                      </CardFooter>
-                    </Card>
+                      <Card>
+                        <CardHeader>
+                          <CardTitle>Bar Chart - Label</CardTitle>
+                          <CardDescription>January - June 2024</CardDescription>
+                        </CardHeader>
+                        <CardContent>
+                          <ChartContainer config={chartConfig}>
+                            <BarChart
+                              accessibilityLayer
+                              data={chartData}
+                              margin={{
+                                top: 20,
+                              }}
+                            >
+                              <CartesianGrid vertical={false} />
+                              <XAxis
+                                dataKey="month"
+                                tickLine={false}
+                                tickMargin={10}
+                                axisLine={false}
+                                tickFormatter={(value) => value.slice(0, 3)}
+                              />
+                              <ChartTooltip
+                                cursor={false}
+                                content={<ChartTooltipContent hideLabel />}
+                              />
+                              <Bar dataKey="desktop" fill="var(--color-desktop)" radius={8}>
+                                <LabelList
+                                  position="top"
+                                  offset={12}
+                                  className="fill-foreground"
+                                  fontSize={12}
+                                />
+                              </Bar>
+                            </BarChart>
+                          </ChartContainer>
+                        </CardContent>
+                        <CardFooter className="flex-col items-start gap-2 text-sm">
+                          <div className="flex gap-2 font-medium leading-none">
+                            Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+                          </div>
+                          <div className="leading-none text-muted-foreground">
+                            Showing total visitors for the last 6 months
+                          </div>
+                        </CardFooter>
+                      </Card>
                     </div>
                               
                   </div>      
