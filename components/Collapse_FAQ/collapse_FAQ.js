@@ -51,11 +51,12 @@ const items = [
 
  {
     key: '1',
-    label: 'What tools or technology do you use for planning and visualization?',
-    children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
-                  id={styles._H3}> {text_1} 
-              </h3>   
+                  id={styles._H3}> What tools or technology do you use for planning and visualization?
+              </h3>,  
+    children: <p> {text_1} </p> 
+             
   },
 
    {
