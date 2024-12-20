@@ -7,6 +7,7 @@ import { useParams, useRouter } from "next/navigation";
 import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
+import Subfooter from "../../components/Subfooter2/subfooter2";
 import Footer from "../../components/Footer/Footer";
 import Subscribetop from "../../components/Subscribetop/subscribetop";
 
@@ -2822,8 +2823,8 @@ const Blogsmain = ({ stories, firstStory }) => {
 
   </section>  
   )})}
-
-<Footer/>
+  <Subfooter/>   
+  <Footer/>
 
 </>
     
