@@ -247,7 +247,7 @@
     grid-row-gap: 0;
     grid-template-columns: 100px 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "SERVICES SERVICES SERVICES SERVICES .";
+    grid-template-areas: "SERVICES SERVICES SERVICES SERVICES SERVICES";
   }
 }
 
