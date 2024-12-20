@@ -51,7 +51,7 @@ const items = [
 
  {
     key: '1',
-    label: 'This is panel header 1',
+    label: 'What tools or technology do you use for planning and visualization?',
     children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
                   id={styles._H3}> {text_1} 
@@ -60,7 +60,7 @@ const items = [
 
    {
     key: '2',
-    label: 'This is panel header 2',
+    label: 'What is your process from concept to completion?',
     children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
                   id={styles._H3}> {text_2} 
@@ -69,7 +69,7 @@ const items = [
 
    {
     key: '3',
-    label: 'This is panel header 3',
+    label: 'How will you ensure the project stays on schedule?',
     children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
                   id={styles._H3}> {text_3} 
@@ -78,7 +78,7 @@ const items = [
 
    {
     key: '4',
-    label: 'This is panel header 4',
+    label: 'How involved can I be in the design process?',
     children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
                   id={styles._H3}> {text_4} 
@@ -87,7 +87,7 @@ const items = [
 
    {
     key: '5',
-    label: 'This is panel header 5',
+    label: 'What experience do you have with projects like mine?',
     children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
                   id={styles._H3}> {text_5} 
@@ -96,7 +96,7 @@ const items = [
 
    {
     key: '6',
-    label: 'This is panel header 6',
+    label: 'How do you handle unexpected challenges during a project?',
     children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
                   id={styles._H3}> {text_6} 
@@ -105,7 +105,7 @@ const items = [
 
    {
     key: '7',
-    label: 'This is panel header 7',
+    label: 'What sets you apart from others in your field?',
     children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
                   id={styles._H3}> {text_7} 
@@ -114,7 +114,7 @@ const items = [
 
   {
     key: '8',
-    label: 'This is panel header 8',
+    label: 'How do you incorporate sustainability into your designs?',
     children: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
                   class="font-avant_garde_bold"
                   id={styles._H3}> {text_8} 
