@@ -89,7 +89,20 @@ return (
                       </CardHeader>
                     </Card>
 
+                    <CardContent>
+                       <ChartContainer config={chartConfig}> 
 
+                        <LineChart
+                          accessibilityLayer
+                          data={chartData}
+                          margin={{
+                            top: 20,
+                            left: 12,
+                            right: 12,
+                        }}/>
+
+                       </ChartContainer>
+                    </CardContent>
 
                     <CardFooter className="flex-col items-start gap-2 text-sm">
                         <div className="flex gap-2 font-medium leading-none">
@@ -139,3 +152,17 @@ return (
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
