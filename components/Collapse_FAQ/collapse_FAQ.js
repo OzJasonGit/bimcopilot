@@ -119,7 +119,7 @@ const items = [
                   class="font-avant_garde_bold"
                   id={styles._H3}> How do you incorporate sustainability into your designs?
               </h3>, 
-    children: <p style={{position: "relative", right: "30px"}}  > {text_8} </p>   
+    children: <p style={{position: "relative", left: "30px"}}  > {text_8} </p>   
   },
 
 
