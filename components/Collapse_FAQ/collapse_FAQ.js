@@ -55,7 +55,7 @@ const items = [
                   class="font-avant_garde_bold"
                   id={styles._H3}> What tools or technology do you use for planning and visualization?
               </h3>,  
-    children: <p> {text_1} </p> 
+    children: <p style={{position: "relative", left: "25px"}} > {text_1} </p> 
              
   },
 
@@ -65,7 +65,7 @@ const items = [
                   class="font-avant_garde_bold"
                   id={styles._H3}> What is your process from concept to completion?
               </h3>,             
-    children: <p> {text_2} </p> 
+    children: <p style={{position: "relative", left: "25px"}} > {text_2} </p> 
   },
 
    {
@@ -74,7 +74,7 @@ const items = [
                   class="font-avant_garde_bold"
                   id={styles._H3}> How will you ensure the project stays on schedule?
               </h3>,    
-    children:  <p> {text_3} </p> 
+    children: <p style={{position: "relative", left: "25px"}} > {text_3} </p> 
   },
 
    {
@@ -83,7 +83,7 @@ const items = [
                   class="font-avant_garde_bold"
                   id={styles._H3}> How involved can I be in the design process?
               </h3>, 
-    children: <p> {text_4} </p>   
+    children: <p style={{position: "relative", left: "25px"}} > {text_4} </p>   
   },
 
    {
@@ -92,7 +92,7 @@ const items = [
                   class="font-avant_garde_bold"
                   id={styles._H3}> What experience do you have with projects like mine?
               </h3>, 
-    children: <p> {text_5} </p>    
+    children: <p style={{position: "relative", left: "25px"}} > {text_5} </p>    
   },
 
    {
@@ -101,7 +101,7 @@ const items = [
                   class="font-avant_garde_bold"
                   id={styles._H3}> How do you handle unexpected challenges during a project?
               </h3>, 
-    children: <p> {text_6} </p>   
+    children: <p style={{position: "relative", left: "25px"}} > {text_6} </p>   
   },
 
    {
@@ -110,7 +110,7 @@ const items = [
                   class="font-avant_garde_bold"
                   id={styles._H3}> What sets you apart from others in your field?
               </h3>, 
-    children: <p> {text_7} </p>   
+    children: <p style={{position: "relative", left: "25px"}} > {text_7} </p>   
   },
 
   {
@@ -119,7 +119,7 @@ const items = [
                   class="font-avant_garde_bold"
                   id={styles._H3}> How do you incorporate sustainability into your designs?
               </h3>, 
-    children: <p style={{position: "relative", left: "30px"}}  > {text_8} </p>   
+    children: <p style={{position: "relative", left: "25px"}}  > {text_8} </p>   
   },
 
 
