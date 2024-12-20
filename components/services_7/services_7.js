@@ -58,9 +58,24 @@ export default class Services_6 extends Component {
                       </BreadcrumbItem>
 
 
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <BreadcrumbLink asChild>
+                              <Link href="/docs/components">Home
+                              </Link>
+                            </BreadcrumbLink>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>Add to library</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+
+
                       <BreadcrumbSeparator/>
-                      <BreadcrumbItem>
-                        <BreadcrumbEllipsis/>
+                        <BreadcrumbItem>
+                      <BreadcrumbEllipsis/>
                       
                       </BreadcrumbItem>
                       <BreadcrumbSeparator/>
