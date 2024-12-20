@@ -81,7 +81,75 @@ return (
 
               <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
                   <div id={styles.IMAGE_POST}>
-                    <Image
+                    <Card>
+                      <CardHeader>
+                        <CardTitle>Line Chart - Label</CardTitle>
+                        <CardDescription>January - June 2024</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <ChartContainer config={chartConfig}>
+                          <LineChart
+                            accessibilityLayer
+                            data={chartData}
+                            margin={{
+                              top: 20,
+                              left: 12,
+                              right: 12,
+                            }}
+                          >
+                            <CartesianGrid vertical={false} />
+                            <XAxis
+                              dataKey="month"
+                              tickLine={false}
+                              axisLine={false}
+                              tickMargin={8}
+                              tickFormatter={(value) => value.slice(0, 3)}
+                            />
+                            <ChartTooltip
+                              cursor={false}
+                              content={<ChartTooltipContent indicator="line" />}
+                            />
+                            <Line
+                              dataKey="desktop"
+                              type="natural"
+                              stroke="var(--color-desktop)"
+                              strokeWidth={2}
+                              dot={{
+                                fill: "var(--color-desktop)",
+                              }}
+                              activeDot={{
+                                r: 6,
+                              }}
+                            >
+                              <LabelList
+                                position="top"
+                                offset={12}
+                                className="fill-foreground"
+                                fontSize={12}
+                              />
+                            </Line>
+                          </LineChart>
+                        </ChartContainer>
+                      </CardContent>
+                      <CardFooter className="flex-col items-start gap-2 text-sm">
+                        <div className="flex gap-2 font-medium leading-none">
+                          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+                        </div>
+                        <div className="leading-none text-muted-foreground">
+                          Showing total visitors for the last 6 months
+                        </div>
+                      </CardFooter>
+                    </Card>
+                   
+                  </div>      
+              </div>
+
+
+
+              <div class="rounded-xl ... " id={styles.P_IMAGE_2}> 
+                <div id={styles.IMAGE_POST}>
+
+                   <Image
                       src={Placeholder_1}   
                       alt="Picture of the author"
                       width={500}
@@ -93,75 +161,7 @@ return (
                         objectFit: "cover",
                       }}
                     />
-                  </div>      
-              </div>
 
-
-
-              <div class="rounded-xl ... " id={styles.P_IMAGE_2}> 
-                <div id={styles.IMAGE_POST}>
-
-
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Line Chart - Label</CardTitle>
-                      <CardDescription>January - June 2024</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <ChartContainer config={chartConfig}>
-                        <LineChart
-                          accessibilityLayer
-                          data={chartData}
-                          margin={{
-                            top: 20,
-                            left: 12,
-                            right: 12,
-                          }}
-                        >
-                          <CartesianGrid vertical={false} />
-                          <XAxis
-                            dataKey="month"
-                            tickLine={false}
-                            axisLine={false}
-                            tickMargin={8}
-                            tickFormatter={(value) => value.slice(0, 3)}
-                          />
-                          <ChartTooltip
-                            cursor={false}
-                            content={<ChartTooltipContent indicator="line" />}
-                          />
-                          <Line
-                            dataKey="desktop"
-                            type="natural"
-                            stroke="var(--color-desktop)"
-                            strokeWidth={2}
-                            dot={{
-                              fill: "var(--color-desktop)",
-                            }}
-                            activeDot={{
-                              r: 6,
-                            }}
-                          >
-                            <LabelList
-                              position="top"
-                              offset={12}
-                              className="fill-foreground"
-                              fontSize={12}
-                            />
-                          </Line>
-                        </LineChart>
-                      </ChartContainer>
-                    </CardContent>
-                    <CardFooter className="flex-col items-start gap-2 text-sm">
-                      <div className="flex gap-2 font-medium leading-none">
-                        Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-                      </div>
-                      <div className="leading-none text-muted-foreground">
-                        Showing total visitors for the last 6 months
-                      </div>
-                    </CardFooter>
-                  </Card>
-                
                 </div>   
               </div>   
 
