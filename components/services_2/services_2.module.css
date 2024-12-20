@@ -95,6 +95,7 @@
 #IMAGE_POST {
   width: 100%;
   left: 0px;
+  position: relative;
 }
 
 #P_IMAGE_1 {

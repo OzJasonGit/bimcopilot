@@ -84,9 +84,8 @@ return (
 
               <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
                   <div id={styles.IMAGE_POST}>
-
-
-                    <Card className="flex flex-col">
+                    <div style={{position: "absolute"}}>
+                      <Card className="flex flex-col">
                       <CardHeader className="items-center pb-0">
                         <CardTitle>Radial Chart - Grid</CardTitle>
                         <CardDescription>January - June 2024</CardDescription>
@@ -120,8 +119,8 @@ return (
                         </div>
                       </CardFooter>
                     </Card>
-
-                               
+                    </div>
+                              
                   </div>      
               </div>
 
