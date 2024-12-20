@@ -52,14 +52,17 @@ export default class Services_6 extends Component {
                     <BreadcrumbList>
 
 
-
                       <TooltipProvider>
                         <Tooltip>
                           <TooltipTrigger asChild>
+
+
                             <BreadcrumbLink asChild>
                               <Link href="/docs/components">Home
                               </Link>
                             </BreadcrumbLink>
+
+
                           </TooltipTrigger>
                           <TooltipContent>
                             <p>Add to library</p>
@@ -69,36 +72,40 @@ export default class Services_6 extends Component {
 
 
                       <BreadcrumbSeparator/>
-                        <BreadcrumbItem>
-                      <BreadcrumbEllipsis/>
-                      
-                      </BreadcrumbItem>
+                          <BreadcrumbItem>
+                            <BreadcrumbEllipsis/>                    
+                          </BreadcrumbItem>
                       <BreadcrumbSeparator/>
+
                       <BreadcrumbItem>
                       
                         <TooltipProvider>
                           <Tooltip>
                             <TooltipTrigger asChild>
+
                               <BreadcrumbLink asChild>
                                 <Link href="/docs/components">Components
-                                </Link>
+                                </Link>                               
                               </BreadcrumbLink>
+
                             </TooltipTrigger>
                             <TooltipContent>
                               <p>Add to library</p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
+                                                                                    
+                      </BreadcrumbItem>
 
-                        <BreadcrumbSeparator/>
+
+                      <BreadcrumbSeparator/>
                           <BreadcrumbItem>
-                            <BreadcrumbEllipsis/>                   
+                            <BreadcrumbEllipsis/>                    
                           </BreadcrumbItem>
-                        <BreadcrumbSeparator/>
-                    
-                        
-                        </BreadcrumbItem>
-                        <BreadcrumbSeparator />
+                      <BreadcrumbSeparator/>
+
+
+                      <BreadcrumbSeparator/>
                         <BreadcrumbItem>
                           <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
                         </BreadcrumbItem>
