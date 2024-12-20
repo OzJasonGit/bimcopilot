@@ -21,7 +21,7 @@ const panel_1 = () => (
     <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-avant_garde_bold"
         id={styles._H3}>
-        Project Management, Delivery and Consultancy        
+        What tools or technology do you use for planning and visualization?      
     </h3>
 );
 
@@ -29,8 +29,7 @@ const panel_2 = () => (
     <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-avant_garde_bold"
         id={styles._H3}> 
-        BIM Strategy, Execution Plan (BEP) and Documentation 
-        Digital Twin product development 
+        What is your process from concept to completion?
     </h3>
 );
 
@@ -38,8 +37,7 @@ const panel_3 = () => (
     <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-avant_garde_bold"
         id={styles._H3}> 
-        BIM Strategy, Execution Plan (BEP) and Documentation 
-        Digital Twin product development 
+        How will you ensure the project stays on schedule?
     </h3>
 );
 
@@ -47,8 +45,7 @@ const panel_4 = () => (
     <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-avant_garde_bold"
         id={styles._H3}> 
-        BIM Strategy, Execution Plan (BEP) and Documentation 
-        Digital Twin product development 
+        How involved can I be in the design process?
     </h3>
 );
 
@@ -56,8 +53,7 @@ const panel_5 = () => (
     <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-avant_garde_bold"
         id={styles._H3}> 
-        BIM Strategy, Execution Plan (BEP) and Documentation 
-        Digital Twin product development 
+        How do you handle unexpected challenges during a project?
     </h3>
 );
 
@@ -65,8 +61,7 @@ const panel_6= () => (
     <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-avant_garde_bold"
         id={styles._H3}> 
-        BIM Strategy, Execution Plan (BEP) and Documentation 
-        Digital Twin product development 
+        What sets you apart from others in your field?
     </h3>
 );
 
@@ -74,8 +69,7 @@ const panel_7 = () => (
     <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-avant_garde_bold"
         id={styles._H3}> 
-        BIM Strategy, Execution Plan (BEP) and Documentation 
-        Digital Twin product development 
+        How do you incorporate sustainability into your designs?
     </h3>
 );
 
@@ -83,8 +77,7 @@ const panel_8 = () => (
     <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
         class="font-avant_garde_bold"
         id={styles._H3}> 
-        BIM Strategy, Execution Plan (BEP) and Documentation 
-        Digital Twin product development 
+        What experience do you have with projects like mine?
     </h3>
 );
 
@@ -126,10 +119,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
                                             </ul>
                                         </Collapse.Panel>
 
@@ -140,10 +130,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
                                             </ul>
                                         </Collapse.Panel>
 
@@ -155,10 +142,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                   
                                             </ul>
                                         </Collapse.Panel>
 
@@ -170,10 +154,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                                
                                             </ul>
                                         </Collapse.Panel>
 
@@ -184,10 +165,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
                                             </ul>
                                         </Collapse.Panel>
 
@@ -198,10 +176,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
                                             </ul>
                                         </Collapse.Panel>
 
@@ -212,10 +187,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
                                             </ul>
                                         </Collapse.Panel>
 
@@ -226,10 +198,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                                
                                             </ul>
                                         </Collapse.Panel>
 
