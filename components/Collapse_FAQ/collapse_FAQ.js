@@ -119,7 +119,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
+                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
                                             </ul>
                                         </Collapse.Panel>
 
@@ -130,7 +130,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
+                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
                                             </ul>
                                         </Collapse.Panel>
 
@@ -142,7 +142,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                   
+                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                   
                                             </ul>
                                         </Collapse.Panel>
 
@@ -154,7 +154,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                                
+                                                <li  style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                                
                                             </ul>
                                         </Collapse.Panel>
 
@@ -165,7 +165,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
+                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
                                             </ul>
                                         </Collapse.Panel>
 
@@ -176,7 +176,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
+                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
                                             </ul>
                                         </Collapse.Panel>
 
@@ -187,7 +187,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
+                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                               
                                             </ul>
                                         </Collapse.Panel>
 
@@ -198,7 +198,7 @@ const Collapsed_3 = () => {
                                             <ul class="list-disc ... font-geistmono_semibold ..."
                                                 id={styles._H3}
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "35px" }}>
-                                                <li>Now this is a story all about how, my life got flipped-turned upside down</li>                                                
+                                                <li style={{ paddingBottom: "0px" }}>Now this is a story all about how, my life got flipped-turned upside down</li>                                                
                                             </ul>
                                         </Collapse.Panel>
 
