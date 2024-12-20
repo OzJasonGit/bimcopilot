@@ -84,7 +84,7 @@ return (
 
               <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
                   <div id={styles.IMAGE_POST}>
-                    <div style={{position: "absolute", width:"100%", height:"100%" }}>
+                    <div style={{position: "absolute" }}>
                       <Card className="flex flex-col">
                       <CardHeader className="items-center pb-0">
                         <CardTitle>Radial Chart - Grid</CardTitle>
