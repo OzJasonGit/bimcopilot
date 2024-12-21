@@ -71,7 +71,7 @@ return (
                         </CardHeader>
                         <CardContent>
                           <ChartContainer config={chartConfig}
-                          style={{height:"26vh",width:"100%"}}>
+                          style={{height:"100%",width:"100%"}}>
                             <BarChart 
                               accessibilityLayer
                               data={chartData}
