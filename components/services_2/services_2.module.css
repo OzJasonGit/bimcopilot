@@ -125,7 +125,7 @@
   grid-area: IMAGE_2;
   overflow: hidden;
   height: 800px;
-  top: -400px;
+  top: 0px;
 }
 
 #P_IMAGE_3 {
