@@ -87,6 +87,19 @@
   grid-template-areas: "IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 .";
 }
 
+#IMAGE_LAYER_1_2 {
+  width: 100%;
+  position: relative;
+  grid-area: SUB;
+  height: auto;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  grid-template-columns: 100px 1fr 1fr 1fr 260px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". . IMAGE_1 IMAGE_1 IMAGE_1 .";
+}
+
 #IMAGE_LAYER_2 {
   width: 100%;
   position: relative;
@@ -117,7 +130,7 @@
   overflow: hidden;
   z-index: 1;
   width: 100%;
-  height: 400px;
+  height: 600px;
   top: 0px;
   display: grid;
   grid-template-columns: 0px 1fr 0px;
