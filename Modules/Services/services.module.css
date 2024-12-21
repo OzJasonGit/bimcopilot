@@ -201,6 +201,9 @@
   position: relative;
   grid-area: PORTFOLIO;
   overflow-x: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #38bdf8 #e7e5e4;
+  padding-bottom: 20px;
 }
 
 #IMAGE_LAYER_1 {
