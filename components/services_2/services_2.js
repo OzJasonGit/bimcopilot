@@ -88,7 +88,11 @@ return (
 
         <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
 
-          <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
+          <div class={styles.grid_0_scroll_2}>
+
+            <div id={styles.IMAGE_LAYER_1_1}>
+
+              <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
                   <div id={styles.IMAGE_POST}>
                     <div id='cardbox' style={{width:"100%", height:"100%"}}>
                       <Card>
@@ -140,7 +144,14 @@ return (
                       </Card>
                     </div>
                  </div>
+              </div>
+              
             </div>
+            
+
+          </div>
+
+          
         
         </section>
 
