@@ -269,7 +269,7 @@ const Menu = () => {
                               <div id={styles.HEADER_MENU_2}>   
                                 <div id={styles.BURGER_HOLDER} class={styles.container_right}>
                                   <a id={styles.BURGER} onClick={showDrawer}>
-                                    <i id={styles.BURGER_2}>Menu</i>
+                                    {/*<i id={styles.BURGER_2}>Menu</i>*/}
                                   </a>
                                 </div>   
                               </div>
