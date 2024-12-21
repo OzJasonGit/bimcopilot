@@ -28,7 +28,7 @@
   display: grid;
   grid-column-gap: 0;
   grid-row-gap: 20px;
-  grid-template-rows: 0px auto 50px;
+  grid-template-rows: 0px auto 0px;
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
   grid-template-areas:
     ". .   .   .   .   .   ."

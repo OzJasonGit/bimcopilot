@@ -86,7 +86,7 @@ return (
 
 
 
-        <section>
+        <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
 
           <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
                   <div id={styles.IMAGE_POST}>
