@@ -70,6 +70,7 @@
 
 #HOW_WE_WORK_TAG {
   grid-area: SUB;
+  padding-bottom: 20px;
 }
 
 #WORKING_IMAGES {
@@ -84,33 +85,6 @@
   width: 100%;
   height: 100%;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media all and (min-width: 960px) and (max-width: 1280px) {
   .grid_0_how_we_work {
@@ -137,29 +111,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media all and (min-width: 480px) and (max-width: 960px) {
   .grid_0_how_we_work {
     position: relative;
@@ -178,7 +129,6 @@
       ". PORTFOLIO .";
   }
 
-
   #WORKING_IMAGES {
     height: 100px;
     width: 100%;
@@ -186,25 +136,6 @@
     grid-area: PORTFOLIO;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media all and (min-width: 0px) and (max-width: 480px) {
   .grid_0_how_we_work {
