@@ -60,8 +60,35 @@ return (
 
           <div class={styles.grid_0_scroll}>
             <div id={styles.IMAGE_LAYER_1_1}>
+                             
+              <div class="rounded-xl ... " id={styles.P_IMAGE_2}> 
+                <div id={styles.IMAGE_POST_2}>
 
-              <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
+                  <Image
+                      src={Placeholder_1}   
+                      alt="Picture of the author"
+                      width={500}
+                      height={500}
+                      style={{
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+
+                </div>   
+              </div>   
+
+           </div>
+          </div>
+        </section>
+
+
+
+        <section>
+
+          <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
                   <div id={styles.IMAGE_POST}>
                     <div id='cardbox' style={{width:"100%", height:"100%"}}>
                       <Card>
@@ -112,33 +139,9 @@ return (
                         </CardFooter>
                       </Card>
                     </div>
-                              
-                  </div>      
-              </div>
-
-
-
-              <div class="rounded-xl ... " id={styles.P_IMAGE_2}> 
-                <div id={styles.IMAGE_POST_2}>
-
-                  <Image
-                      src={Placeholder_1}   
-                      alt="Picture of the author"
-                      width={500}
-                      height={500}
-                      style={{
-                        position: "absolute",
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-
-                </div>   
-              </div>   
-
-           </div>
-          </div>
+                 </div>
+            </div>
+        
         </section>
 
     </>
