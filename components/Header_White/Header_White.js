@@ -7,7 +7,7 @@ import {
   faFaceRelieved,
   faBasketball,
 } from "@fortawesome/free-solid-svg-icons";
-import styles from "./Header.module.css";
+import styles from "./Header_White.module.css";
 import React, { Component } from "react";
 
 import Script from "next/script";
