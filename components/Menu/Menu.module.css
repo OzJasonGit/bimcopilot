@@ -896,20 +896,20 @@
 
 
 
-        #BUTTON_HOLDER_RIGHT {
-            grid-area: MENU-BUTTON;
-            position: relative;
-            display: grid;
-            grid-row-gap: 10px;
-            grid-column-gap: 20px;
-            grid-template-rows: 5px auto 5px;
-            grid-template-columns: 1fr;
-            grid-template-areas:
-                "."
-                "AREA"
-                ".";
-            margin-top: 82.3px;
-        }
+    #BUTTON_HOLDER_RIGHT {
+        grid-area: MENU-BUTTON;
+        position: relative;
+        display: grid;
+        grid-row-gap: 10px;
+        grid-column-gap: 20px;
+        grid-template-rows: 5px auto 5px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "."
+            "AREA"
+            ".";
+        margin-top: 82.3px;
+    }
 
 
 
