@@ -144,8 +144,9 @@ export default class Header extends Component {
 
                   <div class="content-right ..." id={styles.BASKET_CONTAINER}>
 
-                    <div class="content-center ... align-middle ...">
-                      <FontAwesomeIcon icon={faBasketShopping}  size="2xs"
+                    <div class="content-center ... align-middle ..."
+                         style={{gridArea:"BASKET"}}>
+                      <FontAwesomeIcon icon={faBasketShopping}  size="1xs"
                       class="text-slate-50"/>
                     </div>
 
