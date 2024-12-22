@@ -245,10 +245,30 @@
   grid-template-rows: 0px 60px 0px 20px;
   grid-template-areas:
     ". . . . . . . . . . . . ."
-    "LOGO_HOLDER LOGO_HOLDER MENU MENU MENU MENU . TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
+    "LOGO_HOLDER LOGO_HOLDER MENU MENU MENU MENU . TIME TIME TIME TIME MENU_BUTTON MENU_BUTTON"
     "LOGO_HOLDER LOGO_HOLDER . . . . . . . . . . ."
     "LOGO_HOLDER LOGO_HOLDER . . . . . . . . . . .";
 }
+
+
+
+
+
+#BASKET_CONTAINER {
+  grid-area: MENU_BUTTON;
+  display: grid;
+  grid-row-gap: 0px;
+  grid-column-gap: 0px;
+  grid-template-columns: 1fr 60px 10px 60px 10px 60px;
+  grid-template-rows: 20px auto 0px;
+  grid-template-areas: 
+      " . . . . . ."
+      " . FAVOURITE . BASKET . BURGER"
+      " . . . . . .";
+}
+
+
+
 
 #TIME {
   grid-area: TIME;
@@ -352,6 +372,12 @@
 #COPILOT_HOLDER {
   display: none;
 }
+
+
+
+
+
+
 
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
