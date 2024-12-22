@@ -29,6 +29,8 @@ export default class Header_White extends Component {
         <Provider>
           <section id={styles.SHADOW_SECTION} class={styles.center_holder}>
             <div class={styles.HEADER_HOLDER}>
+
+
               <div id={styles.header}>
                 <header id={styles.FIXED_HEADER}>
                   <div class="content-center ..." id={styles.COPILOT_HOLDER}>
@@ -106,15 +108,11 @@ export default class Header_White extends Component {
 
                     <Clock />
                    
-
                     <div class="bg-zinc-500 ..." id={styles.B1}>
                     </div>
 
                     <DateComponent />
-
-                    
-
-                    
+                   
                   </div>
 
                   <div id={styles.LOGO_ICON} class={styles.container}>
