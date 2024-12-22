@@ -259,8 +259,8 @@
   display: grid;
   grid-row-gap: 0px;
   grid-column-gap: 0px;
-  grid-template-columns: 1fr 60px 10px 60px 10px 60px;
-  grid-template-rows: 20px auto 0px;
+  grid-template-columns: 1fr 40px 10px 40px 10px 40px;
+  grid-template-rows: 10px auto 10px;
   grid-template-areas: 
       " . . . . . ."
       " . FAVOURITE . BASKET . BURGER"
