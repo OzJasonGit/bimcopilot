@@ -1242,6 +1242,7 @@
         ". . . . . . . . . . . . ."
         "LOGO_HOLDER SIGN_IN SIGN_IN SIGN_IN SIGN_IN . . . MENU MENU MENU MENU-BUTTON MENU-BUTTON"
         ". . . . . . . . . . . . .";
+    margin-top: -204.5px;
 }
 
 
@@ -1276,7 +1277,7 @@
             "."
             "AREA"
             ".";
-        margin-top: 82.3px;
+        top: 82.3px;
     }
 
 
