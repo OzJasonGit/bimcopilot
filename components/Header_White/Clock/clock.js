@@ -27,7 +27,9 @@ class Clock extends Component {
 
   render() {
     return (
-        <div id="CLOCK"  class="text-center ...  text-stone-700  font-avant_garde_bold">
+        <div id="CLOCK"  
+             class="text-center ...  text-stone-700  font-avant_garde_bold"
+             style={{gridArea:"CLOCK"}}>
         <h3 id={styles._H3}>
           {this.state.time}
         </h3>
