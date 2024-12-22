@@ -141,12 +141,10 @@ export default class Header extends Component {
 
                   <div class="content-right ..." id={styles.BASKET_CONTAINER}>
 
-                    <div>
-
+                    <div class="content-center ... align-middle ...">
                     </div>
 
-                    <div>
-                      
+                    <div class="content-center ... align-middle ...">
                     </div>
 
                   </div>
