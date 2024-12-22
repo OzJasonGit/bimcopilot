@@ -259,20 +259,22 @@ const Menu = () => {
 
 
           <div class={styles.HEADER_HOLDER}>
+
+
              <div id={styles.header}>   
                 
                 <header id={styles.FIXED_HEADER}> 
+
+
                     <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
                         <div id={styles.HEADER_MENU_2}>   
                             <div id={styles.BURGER_HOLDER} class={styles.container_right}>
 
-
-
-                             <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
+                            <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
                               <div id={styles.HEADER_MENU_2}>   
                                 <div id={styles.BURGER_HOLDER} class={styles.container_right}>
                                   <a id={styles.BURGER} onClick={showDrawer}>
-                                    <i id={styles.BURGER_2}>Menu</i>
+                                    <i id={styles.BURGER_2}></i>
                                   </a>
                                 </div>   
                               </div>
@@ -281,6 +283,11 @@ const Menu = () => {
                           </div>   
                         </div>
                     </div> 
+
+
+                    <div id={styles.LOGO_MOB} class={styles.container}>
+
+                    </div>
                 </header>
               
               </div>           

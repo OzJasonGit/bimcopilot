@@ -35,6 +35,11 @@ export default class Header extends Component {
           <section id={styles.SHADOW_SECTION} class={styles.center_holder}>
             <div class={styles.HEADER_HOLDER}>
               <div id={styles.header}>
+
+
+
+
+                
                 <header id={styles.FIXED_HEADER}>
 
 

@@ -110,7 +110,11 @@
 }
 
 
-
+#LOGO_MOB {
+    grid-area: LOGO_HOLDER;
+    width: 100%;
+    height: 100px;
+}
 
 
 
