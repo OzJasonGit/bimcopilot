@@ -260,7 +260,7 @@
   grid-row-gap: 0px;
   grid-column-gap: 0px;
   grid-template-columns: 1fr 22.5px 20px 22.5px 20px 22.5px;
-  grid-template-rows: 12px auto 0px;
+  grid-template-rows: 10px auto 0px;
   grid-template-areas: 
       " . . . . . ."
       " . FAVOURITE . BASKET . BURGER"
@@ -505,7 +505,7 @@
     grid-row-gap: 0px;
     grid-column-gap: 0px;
     grid-template-columns: 1fr 22.5px 20px 22.5px 20px 22.5px;
-    grid-template-rows: 0px auto 5px;
+    grid-template-rows: 0px auto 7.5px;
     grid-template-areas:
       " . . . . . ."
       " . FAVOURITE . BASKET . BURGER"
@@ -695,6 +695,21 @@
       ". . . . . . . . . . . . ."
       "LOGO_HOLDER COPILOT COPILOT COPILOT COPILOT COPILOT TIME TIME TIME TIME . MENU-BUTTON MENU-BUTTON"
       ". . . . . . . . . . . . .";
+  }
+
+
+
+  #BASKET_CONTAINER {
+    grid-area: MENU_BUTTON;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-columns: 1fr 22.5px 20px 22.5px 20px 22.5px;
+    grid-template-rows: 0px auto 7.5px;
+    grid-template-areas:
+      " . . . . . ."
+      " . FAVOURITE . BASKET . BURGER"
+      " . . . . . .";
   }
 
   #TIME {
