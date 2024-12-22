@@ -50,12 +50,16 @@ const Menu_White = () => {
           <Drawer
               class="bg-indigo-600 bg-opacity-50 ..."
               id={styles.DRAWER_LEFT  }
+
+
               title= {<h1  id={styles.H_3} class="text-right ...  text-stone-700 font-avant_garde_bold">
                         <a class="text-4xl">
                             MENU
                         </a>                        
                       </h1>
                      }
+
+
               placement="left"
               onClose={onClose}
               open={open}>  
