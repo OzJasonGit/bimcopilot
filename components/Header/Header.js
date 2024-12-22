@@ -158,7 +158,7 @@ export default class Header extends Component {
                     </div>
 
                     <div class="content-center ... align-middle ..."
-                         style={{gridArea:"FAVOURITE", position:"relative", top:"1.5px"}}>
+                         style={{gridArea:"FAVOURITE", position:"relative", top:"0.5px"}}>
                       <FontAwesomeIcon icon={faHeart}  size="2xs"
                       class="text-slate-50"/>
                     </div>
