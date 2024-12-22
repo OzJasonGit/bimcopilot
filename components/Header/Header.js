@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFaceRelieved,
   faBasketball,
+  faBasketShopping
+
+
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header.module.css";
 import React, { Component } from "react";
@@ -142,6 +145,8 @@ export default class Header extends Component {
                   <div class="content-right ..." id={styles.BASKET_CONTAINER}>
 
                     <div class="content-center ... align-middle ...">
+                      <FontAwesomeIcon icon={faBasketShopping}  size="2xs"
+                      class="text-slate-50"/>
                     </div>
 
                     <div class="content-center ... align-middle ...">
