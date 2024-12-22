@@ -690,12 +690,12 @@
     display: grid;
     grid-row-gap: 0px;
     grid-column-gap: 20px;
-    grid-template-columns: 50px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 60px 1fr 1fr 1fr 1fr;
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
-      ". . . . . . . . . . . . ."
-      "LOGO_HOLDER COPILOT COPILOT COPILOT COPILOT TIME TIME TIME TIME . . MENU_BUTTON MENU_BUTTON"
-      ". . . . . . . . . . . . .";
+      ". . . . ."
+      "LOGO_HOLDER . MENU_BUTTON MENU_BUTTON ."
+      ". . . . .";
   }
 
 
