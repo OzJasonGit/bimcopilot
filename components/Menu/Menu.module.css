@@ -106,7 +106,7 @@
         ". . . . . . . . . . . . ."
         "LOGO_HOLDER MENU MENU MENU MENU MENU . . SIGN_IN SIGN_IN SIGN_IN MENU-BUTTON MENU-BUTTON"
         ". . . . . . . . . . . . .";
-    margin-top: -130px;
+    margin-top: -190px;
 }
 
 
@@ -440,7 +440,7 @@
         "."
         "AREA"
         ".";
-    margin-top: 85px;
+    top: 82.5px;
 }
 
 
