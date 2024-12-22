@@ -9,7 +9,7 @@ import styles from './Menu.module.css'
 
 import Script from 'next/script'
 
-
+import bimcopilot_icon from "./Tesseract_Logo_2.png";
 import Hamburger from "./Burger/burger.js";
 // import 'antd/dist/reset.css';
 import Image from "next/image";
@@ -288,7 +288,18 @@ const Menu = () => {
 
 
                     <div id={styles.LOGO_MOB} class={styles.container}>
-
+                      <Image
+                          src={bimcopilot_icon}   
+                          alt="Picture of the author"
+                          width={500}
+                          height={500}
+                          style={{
+                            position: "absolute",
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
+                        />
                     </div>
                 </header>
               
