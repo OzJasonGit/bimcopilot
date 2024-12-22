@@ -250,6 +250,25 @@
     "LOGO_HOLDER LOGO_HOLDER . . . . . . . . . . .";
 }
 
+
+
+#BASKET_CONTAINER {
+  grid-area: MENU_BUTTON;
+  display: grid;
+  grid-row-gap: 0px;
+  grid-column-gap: 0px;
+  grid-template-columns: 1fr 40px 10px 40px 10px 40px;
+  grid-template-rows: 10px auto 10px;
+  grid-template-areas:
+    " . . . . . ."
+    " . FAVOURITE . BASKET . BURGER"
+    " . . . . . .";
+}
+
+
+
+
+
 #TIME {
   grid-area: TIME;
   position: relative;

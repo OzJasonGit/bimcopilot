@@ -31,6 +31,28 @@ export default class Header_White extends Component {
             <div class={styles.HEADER_HOLDER}>
 
 
+              <div id={styles.LOGO_ICON} class={styles.container}>
+                <Link id={styles.LOGO_LINK} href="/.">
+                  <div class=" " id={styles.LOGO}>
+                    <Image
+                      src={bimcopilot_icon}
+                      alt="Picture of the author"
+                      width={500}
+                      height={500}
+                      style={{
+                        position: "relative",
+                        width: "auto",
+                        height: "100%",
+                        justifyItems: "center",
+                        alignItems: "center",
+                        objectFit: "contain",
+                      }}
+                    />
+                  </div>
+                </Link>
+              </div>
+
+
               <div id={styles.header}>
                 <header id={styles.FIXED_HEADER}>
                   <div class="content-center ..." id={styles.COPILOT_HOLDER}>
@@ -104,37 +126,30 @@ export default class Header_White extends Component {
                     </Link>
                   </div>
 
-                  <div class="content-center ..." id={styles.TIME}>
 
-                    <Clock />
-                   
+
+
+
+
+                  <div class="content-center ..." id={styles.TIME}>
+                    <Clock />                  
                     <div class="bg-zinc-500 ..." id={styles.B1}>
                     </div>
-
-                    <DateComponent />
-                   
+                    <DateComponent />                  
                   </div>
 
-                  <div id={styles.LOGO_ICON} class={styles.container}>
-                    <Link id={styles.LOGO_LINK} href="/.">
-                      <div class=" " id={styles.LOGO}>
-                        <Image
-                          src={bimcopilot_icon}
-                          alt="Picture of the author"
-                          width={500}
-                          height={500}
-                          style={{
-                            position: "relative",
-                            width: "auto",
-                            height: "100%",
-                            justifyItems: "center",
-                            alignItems: "center",
-                            objectFit: "contain",
-                          }}
-                        />
-                      </div>
-                    </Link>
+                  
+
+
+
+                  <div class="content-right ..." id={styles.BASKET_CONTAINER}>
+                    <div class="content-center ... align-middle ...">
+                    </div>
+
+                    <div class="content-center ... align-middle ...">
+                    </div>
                   </div>
+
                 </header>
               </div>
             </div>
