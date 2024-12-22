@@ -39,7 +39,7 @@ export default class Header extends Component {
 
 
 
-                
+
                 <header id={styles.FIXED_HEADER}>
 
 
@@ -132,7 +132,7 @@ export default class Header extends Component {
                   <div class="content-right ..." id={styles.BASKET_CONTAINER}>
 
                     <div class="content-center ... align-middle ..."
-                         style={{gridArea:"BASKET", position:"relative", top:"0px"}}>
+                         style={{gridArea:"BASKET", position:"relative", top:"0.75px", left:"-30px"}}>
                       {/*<FontAwesomeIcon icon={faHeart}  size="xs"
                       class="text-slate-50"/>*/}
 
@@ -143,7 +143,7 @@ export default class Header extends Component {
                     </div>
 
                     <div class="content-center ... align-middle ..."
-                         style={{gridArea:"FAVOURITE", position:"relative", top:"0.5px"}}>
+                         style={{gridArea:"FAVOURITE", position:"relative", top:"0.5px", left:"-30px"}}>
                       <FontAwesomeIcon icon={faHeart}  size="2xs"
                       class="text-slate-50"/>
                     </div>
