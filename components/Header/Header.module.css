@@ -497,6 +497,23 @@
       ". . . . . . . . . . . . .";
   }
 
+
+
+  #BASKET_CONTAINER {
+    grid-area: MENU_BUTTON;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-columns: 1fr 22.5px 20px 22.5px 20px 22.5px;
+    grid-template-rows: 0px auto 5px;
+    grid-template-areas:
+      " . . . . . ."
+      " . FAVOURITE . BASKET . BURGER"
+      " . . . . . .";
+  }
+
+
+
   #SIGNUP {
     grid-area: SIGN_IN;
     display: grid;
