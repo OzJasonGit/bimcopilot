@@ -260,7 +260,7 @@
   grid-row-gap: 0px;
   grid-column-gap: 0px;
   grid-template-columns: 1fr 25px 20px 25px 20px 25px;
-  grid-template-rows: 10px auto 10px;
+  grid-template-rows: 10px auto 5px;
   grid-template-areas: 
       " . . . . . ."
       " . FAVOURITE . BASKET . BURGER"
