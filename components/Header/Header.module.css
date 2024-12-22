@@ -493,7 +493,7 @@
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
       ". . . . . . . . . . . . ."
-      "LOGO_HOLDER MENU MENU MENU MENU MENU . TIME TIME TIME TIME MENU-BUTTON MENU-BUTTON"
+      "LOGO_HOLDER MENU MENU MENU MENU MENU . TIME TIME TIME TIME MENU_BUTTON MENU_BUTTON"
       ". . . . . . . . . . . . .";
   }
 
