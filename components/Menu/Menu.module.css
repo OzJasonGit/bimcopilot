@@ -1592,14 +1592,14 @@
         display: grid;
         grid-row-gap: 0px;
         grid-column-gap: 20px;
-        grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 60px 1fr 100px;
         grid-template-rows: 0px auto 0px;
         grid-template-areas:
-            ". . . . . . . . . . . . ."
-            "LOGO_HOLDER . SIGN_IN SIGN_IN SIGN_IN SIGN_IN SIGN_IN SIGN_IN . . MENU MENU-BUTTON MENU-BUTTON"
-            ". . . . . . . . . . . . .";
+            " . . ."
+            "LOGO_HOLDER .  MENU-BUTTON"
+            " . . .";
 }
-
+ 
 
     #NAV_MENU {
         display: none;
