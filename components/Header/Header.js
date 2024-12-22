@@ -7,7 +7,7 @@ import {
   faFaceRelieved,
   faBasketball,
   faBasketShopping,
-  faCartShopping
+  faCartShopping,
   faHeart
 
 
