@@ -11,11 +11,11 @@
 }
 
 .hamburger .line {
-  width: 35px;
-  height: 5px;
+  width: 25px;
+  height: 3px;
   background-color: #ecf0f1;
   display: block;
-  margin: 8px auto;
+  margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
