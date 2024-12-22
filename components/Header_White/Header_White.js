@@ -139,13 +139,13 @@ export default class Header extends Component {
 
 
                       <FontAwesomeIcon icon={faCartShopping} size="xs"
-                      class="text-slate-50" />
+                      class="text-stone-700" />
                     </div>
 
                     <div class="content-center ... align-middle ..."
                          style={{gridArea:"FAVOURITE", position:"relative", top:"0.5px", left:"-30px"}}>
                       <FontAwesomeIcon icon={faHeart}  size="2xs"
-                      class="text-slate-50"/>
+                      class="text-stone-700"/>
                     </div>
 
                     <div class="content-center ... align-middle ...">
