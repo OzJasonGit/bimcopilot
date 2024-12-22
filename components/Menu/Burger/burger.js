@@ -16,12 +16,11 @@ const Hamburger = () => {
                 className={`hamburger ${isActive ? "is-active" : ""}`}
                 onClick={toggleClass}>
 
-                <div id="burger" onclick="animation()">
-                    <div id="stroke1"></div>
-                    <div id="stroke2"></div>
-                    <div id="stroke3"></div>
-                    <div id="tap-circle"></div>
-                </div>   
+                <div class={styles.hamburger} id={styles.hamburger-11}>
+                    <span class={styles.line}></span>
+                    <span class={styles.line}></span>
+                    <span class={styles.line}></span>
+                </div>  
             </div>           
         </>     
     );
