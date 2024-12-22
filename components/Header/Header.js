@@ -153,7 +153,7 @@ export default class Header extends Component {
 
                     <div class="content-center ... align-middle ..."
                          style={{gridArea:"BASKET"}}>
-                      <FontAwesomeIcon icon={faBasketShopping}  size="xs"
+                      <FontAwesomeIcon icon={faBasketShopping}  size="2xs"
                       class="text-slate-50"/>
                     </div>
 
