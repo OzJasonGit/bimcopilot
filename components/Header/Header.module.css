@@ -552,6 +552,14 @@
     grid-area: BLOG;
   }
 
+  #LOGO {
+    position: relative;
+    grid-area: LOGO;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+  }
+
   #LOGO_ICON {
     grid-area: LOGO_HOLDER;
     display: grid;
