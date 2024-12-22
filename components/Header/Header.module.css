@@ -684,6 +684,26 @@
     z-index: 80;
   }
 
+
+  #TIME {
+    grid-area: TIME;
+    position: relative;
+    display: none;
+    width: 100%;
+
+    min-width: 200px;
+    justify-self: right;
+    grid-template-columns: 1fr 1.5px 1.5fr;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      " . . ."
+      " CLOCK B1 HOME"
+      " . . .";
+    background: transparent;
+    top: 2.5px;
+  }
+
+
   #FIXED_HEADER {
     grid-area: MAIN-AREA;
     display: grid;
@@ -877,6 +897,26 @@
     grid-template-columns: 20px 0px 0px 1fr 0px 0px 20px;
     grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
     z-index: 80;
+  }
+
+
+
+  #TIME {
+    grid-area: TIME;
+    position: relative;
+    display: none;
+    width: 100%;
+
+    min-width: 200px;
+    justify-self: right;
+    grid-template-columns: 1fr 1.5px 1.5fr;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      " . . ."
+      " CLOCK B1 HOME"
+      " . . .";
+    background: transparent;
+    top: 2.5px;
   }
 
   #FIXED_HEADER {
