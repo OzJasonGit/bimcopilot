@@ -1,0 +1,58 @@
+body {
+  background: black;
+}
+
+#burger {
+  margin: 10% 50%;
+  transition: all 500ms ease-in-out;
+}
+
+#stroke1,
+#stroke2,
+#stroke3 {
+  cursor: pointer;
+  border-top: 3px solid #fff;
+  width: 25px;
+  height: 7.5px;
+  transition: all 500ms ease-in-out;
+}
+
+#tap-circle {
+  border: 1px solid #fff;
+  border-radius: 1000px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  margin: -42px -10px;
+  transition: all 500ms ease-in-out;
+}
+
+.rotate1 {
+  transform: rotate(45deg) translateY(5px) translateX(2px);
+}
+
+.opacity {
+  opacity: 0;
+}
+
+.rotate2 {
+  transform: rotate(-45deg) translateY(-7px) translateX(8px);
+}
+
+.click-animation {
+  animation: animation 0.3s forwards ease-in-out;
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.8);
+  }
+}

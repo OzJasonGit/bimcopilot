@@ -9,6 +9,8 @@ import styles from './Menu.module.css'
 
 import Script from 'next/script'
 
+
+import Hamburger from "../Burger/burger.js";
 // import 'antd/dist/reset.css';
 import Image from "next/image";
 import Link from 'next/link';
@@ -274,7 +276,7 @@ const Menu = () => {
                               <div id={styles.HEADER_MENU_2}>   
                                 <div id={styles.BURGER_HOLDER} class={styles.container_right}>
                                   <a id={styles.BURGER} onClick={showDrawer}>
-                                    <i id={styles.BURGER_2}></i>
+                                    <i id={styles.BURGER_2}> <Hamburger/> </i>
                                   </a>
                                 </div>   
                               </div>
