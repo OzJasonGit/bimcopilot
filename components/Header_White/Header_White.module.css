@@ -3,6 +3,46 @@
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 
+#_H1 {
+  margin-bottom: 0px;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+#_H2 {
+  margin-bottom: 0px;
+  font-size: 1.15rem;
+  line-height: 1.35rem;
+}
+
+#_H3 {
+  margin-bottom: 0px;
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+}
+
+#_H4 {
+  margin-bottom: 0px;
+}
+
+#_H5 {
+  margin-bottom: -2.5px;
+}
+
+#TEXT_OUTLINE {
+  -webkit-text-stroke: 1.85px rgb(120, 120, 120);
+}
+
+
+
+
+
+
+
+
+
+
+
 .timeAndDate {
   display: flex;
   color: white;
@@ -13,6 +53,9 @@
 }
 
 #H_3_SERVICES {
+  
+  font-size: 0.65rem;
+  line-height: 1.3rem;
   margin-bottom: 0%;
 
   position: relative;
@@ -43,6 +86,8 @@
 }
 
 #H_3_PRODUCTS {
+  font-size: 0.65rem;
+  line-height: 1.3rem;
   margin-bottom: 0%;
 
   position: relative;
@@ -73,6 +118,8 @@
 }
 
 #H_3_PROJECTS {
+  font-size: 0.65rem;
+  line-height: 1.3rem;
   margin-bottom: 0%;
 
   position: relative;
@@ -103,6 +150,8 @@
 }
 
 #H_3_STORIES {
+  font-size: 0.65rem;
+  line-height: 1.3rem;
   margin-bottom: 0%;
 
   position: relative;
