@@ -7,6 +7,7 @@ import {
   faFaceRelieved,
   faBasketball,
   faBasketShopping,
+  faCartShopping
   faHeart
 
 
@@ -146,14 +147,19 @@ export default class Header extends Component {
                   <div class="content-right ..." id={styles.BASKET_CONTAINER}>
 
                     <div class="content-center ... align-middle ..."
-                         style={{gridArea:"FAVOURITE", position:"relative", top:"2px"}}>
-                      <FontAwesomeIcon icon={faHeart}  size="xs"
-                      class="text-slate-50"/>
+                         style={{gridArea:"BASKET", position:"relative", top:"2px"}}>
+                      {/*<FontAwesomeIcon icon={faHeart}  size="xs"
+                      class="text-slate-50"/>*/}
+
+
+
+                      <FontAwesomeIcon icon={faCartShopping} size="xs"
+                      class="text-slate-50" />
                     </div>
 
                     <div class="content-center ... align-middle ..."
-                         style={{gridArea:"BASKET"}}>
-                      <FontAwesomeIcon icon={faBasketShopping}  size="2xs"
+                         style={{gridArea:"FAVOURITE"}}>
+                      <FontAwesomeIcon icon={faHeart}  size="2xs"
                       class="text-slate-50"/>
                     </div>
 
