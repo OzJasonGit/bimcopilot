@@ -10,7 +10,7 @@ import styles from './Menu.module.css'
 import Script from 'next/script'
 
 
-import Hamburger from "../Burger/burger.js";
+import Hamburger from "./Burger/burger.js";
 // import 'antd/dist/reset.css';
 import Image from "next/image";
 import Link from 'next/link';
