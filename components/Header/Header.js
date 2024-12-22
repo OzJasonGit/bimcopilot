@@ -61,27 +61,7 @@ export default class Header extends Component {
 
 
 
-                  <div class="content-center ..." id={styles.COPILOT_HOLDER}>
-                    <Link
-                      class="content-center ..."
-                      id={styles.COPILOT}
-                      href="/dashboard">
-                      <Image
-                        src={logoMobile}
-                        alt="Picture of the author"
-                        width={500}
-                        height={500}
-                        style={{
-                          position: "absolute",
-                          width: "auto",
-                          height: "100%",
-                          justifyItems: "center",
-                          alignItems: "center",
-                          objectFit: "contain",
-                        }}
-                      />
-                    </Link>
-                  </div>
+                 
 
                   
 
