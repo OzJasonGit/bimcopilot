@@ -140,7 +140,8 @@ const Servicesmain = ({ stories, firstStory }) => {
                 
                 class="text-lg ... text-stone-500 ... font-avant_garde_bold">
                 <br/>  
-                See them realized with <a class="text-stone-700 ... font-avant_garde_bold">automation</a> AI, Digital Assets and proven robust Templates.
+                See them realized with <a class="text-stone-700 ... font-avant_garde_bold">automation</a> 
+                AI, Digital Assets and proven robust Systems and Templates.
                 </h2>
               </div>  
 
@@ -151,15 +152,25 @@ const Servicesmain = ({ stories, firstStory }) => {
                     class="text-lg ... text-stone-500 ... font-avant_garde_bold"
                   >
 
-                    To much <a  class="text-stone-700 ... font-avant_garde_bold">profit</a>  is left on the table through inefficient processes. 
-                    Reduce <a  class="text-stone-700 ... font-avant_garde_bold">waste</a>, reduce <a  class="text-stone-700 ... font-avant_garde_bold"> time{" "}</a>  
-                     and increase{" "}<a  class="text-stone-600 ... font-avant_garde_bold">revenue</a>  through better, repeatable,{" "}
-                    <a  class="text-stone-700 ... font-avant_garde_bold">automated systems</a>. 
-                    <br/> 
-                    <a class="text-stone-700 ... font-avant_garde_bold">bimcopilot.com </a>allows you and your business to focus on what you do best. 
-                    {" "}
+
+                  Stop leaving profits on the table. Streamline your processes, save time, and boost 
+                  revenue with efficient, automated, repeatable systems. 
+                  bimcopilot.com lets you focus on what makes money, what you enjoy, and what you do best.
+
+
+
+
+
+
+                  To much <a  class="text-stone-700 ... font-avant_garde_bold">profit</a>  is left on the table through inefficient processes. 
+                  Reduce <a  class="text-stone-700 ... font-avant_garde_bold">waste</a>, reduce <a  class="text-stone-700 ... font-avant_garde_bold"> time{" "}</a>  
+                    and increase{" "}<a  class="text-stone-600 ... font-avant_garde_bold">revenue</a>  through better, repeatable,{" "}
+                  <a  class="text-stone-700 ... font-avant_garde_bold">automated systems</a>. 
+                  <br/> 
+                  <a class="text-stone-700 ... font-avant_garde_bold">bimcopilot.com </a>allows you and your business to focus on what you do best. 
+                  {" "}
                   
-                  </h3>
+                </h3>
                 
               </div>                  
             </div>
