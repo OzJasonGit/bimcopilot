@@ -5,14 +5,21 @@ import Provider from "../../app/utils/Provider";
 
 import { Drawer } from "antd";
 import React, { useState } from "react";
-import styles from './Menu.module.css'
+import styles from './menu_white.module.css'
 
 import Script from 'next/script'
 
+import bimcopilot_icon from "./Tesseract_Logo_2.png";
+import Hamburger from "./Burger/burger.js";
 // import 'antd/dist/reset.css';
 import Image from "next/image";
 import Link from 'next/link';
 //import Date from '../Date/date'; 
+
+
+
+
+
 
 
 
@@ -52,13 +59,12 @@ const Menu_White = () => {
               id={styles.DRAWER_LEFT  }
 
 
-              title= {<h1  id={styles.H_3} class="text-right ...  text-stone-700 font-avant_garde_bold">
+                title= {<h1  id={styles.H_3} class="text-right ...  text-stone-700 font-avant_garde_bold">
                         <a class="text-4xl">
                             MENU
                         </a>                        
                       </h1>
                      }
-
 
               placement="left"
               onClose={onClose}
@@ -255,20 +261,22 @@ const Menu_White = () => {
 
 
           <div class={styles.HEADER_HOLDER}>
+
+
              <div id={styles.header}>   
                 
                 <header id={styles.FIXED_HEADER}> 
+
+
                     <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
                         <div id={styles.HEADER_MENU_2}>   
                             <div id={styles.BURGER_HOLDER} class={styles.container_right}>
 
-
-
-                             <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
+                            <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
                               <div id={styles.HEADER_MENU_2}>   
                                 <div id={styles.BURGER_HOLDER} class={styles.container_right}>
                                   <a id={styles.BURGER} onClick={showDrawer}>
-                                    <i id={styles.BURGER_2}>Menu</i>
+                                    <Hamburger/> 
                                   </a>
                                 </div>   
                               </div>
@@ -277,6 +285,22 @@ const Menu_White = () => {
                           </div>   
                         </div>
                     </div> 
+
+
+                    <div id={styles.LOGO_MOB} class={styles.container}>
+                      <Image
+                          src={bimcopilot_icon}   
+                          alt="Picture of the author"
+                          width={500}
+                          height={500}
+                          style={{
+                            position: "absolute",
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "contain",
+                          }}
+                        />
+                    </div>
                 </header>
               
               </div>           

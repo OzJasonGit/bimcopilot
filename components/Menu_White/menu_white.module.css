@@ -1,0 +1,1317 @@
+/* HEADER------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+
+#H_3 {
+  margin-bottom: 0%;
+  font-size: smaller;
+}
+
+.center_holder {
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: auto;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: aliceblue;
+  margin: 0;
+  z-index: 10000;
+  margin-top: -65px;
+}
+
+#SHADOW_SECTION_DRAWER {
+  position: relative;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  z-index: 500000000000000;
+  margin-top: -65px;
+}
+
+.container_right {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.HEADER_HOLDER {
+  grid-area: MAIN-AREA;
+  display: flex;
+  position: fixed;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: transparent;
+  z-index: 100000;
+  margin-top: -70px;
+}
+
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  height: 65px;
+  max-width: 1520px;
+  background-color: transparent;
+  display: grid;
+  grid-row-gap: 40px;
+  grid-template-rows: auto;
+  grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+  grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+  z-index: 80;
+  margin-top: -65px;
+}
+
+.burger_dot {
+  border-radius: 100%;
+  background-color: transparent;
+}
+
+#FIXED_HEADER {
+  grid-area: MAIN-AREA;
+  display: grid;
+  grid-row-gap: 0px;
+  grid-column-gap: 40px;
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0px auto 0px;
+  grid-template-areas:
+    ". . . . . . . . . . . . ."
+    "LOGO_HOLDER MENU MENU MENU MENU MENU . . SIGN_IN SIGN_IN SIGN_IN MENU-BUTTON MENU-BUTTON"
+    ". . . . . . . . . . . . .";
+  margin-top: -190px;
+}
+
+#LOGO_MOB {
+  grid-area: LOGO_HOLDER;
+  width: 100%;
+  height: 100px;
+}
+
+#DRAWER_LEFT {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 800000000000000000000000000000000000000000000000;
+}
+
+#DRAWER_MENU {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-row-gap: 30px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25px auto auto auto auto 20vh 40px auto auto;
+  grid-template-areas:
+    "."
+    "SERVICES"
+    "STORIES"
+    "PROJECTS"
+    "SHOP"
+    "."
+    "ICONS"
+    "SOCIAL"
+    "TEXT";
+}
+
+#OTHER {
+  grid-area: OTHER;
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-row-gap: 20px;
+  grid-template-rows: 350px auto 0px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "GIF GIF GIF ."
+    "SOCIAL SOCIAL SOCIAL SOCIAL"
+    ". . . .";
+}
+
+#SOCIAL {
+  grid-area: SOCIAL;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  grid-template-rows: 40px 50px;
+  grid-template-columns: 32.5px 32.5px 32.5px 32.5px 32.5px auto;
+  grid-template-areas:
+    "ARB ARB ARB ARB ARB ."
+    "GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN .";
+}
+
+#ARB_ICONS {
+  grid-area: ARB;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 20px 1fr;
+  grid-template-areas: "ARB . RIBA";
+}
+
+#ARB {
+  position: relative;
+  grid-area: ARB;
+  left: -16px;
+}
+
+#RIBA {
+  position: relative;
+  grid-area: RIBA;
+  left: -45px;
+}
+
+#TEXT {
+  grid-area: TEXT;
+}
+
+#MEDIUM_ICON {
+  display: grid;
+  grid-area: MEDIUM;
+  align-items: center;
+  justify-content: left;
+}
+
+#LINKEDIN_ICON {
+  display: grid;
+  grid-area: LINKEDIN;
+  align-items: center;
+  justify-content: left;
+}
+
+#YOUTUBE_ICON {
+  display: grid;
+  grid-area: YOUTUBE;
+  align-items: center;
+  justify-content: left;
+}
+
+#DRIBBLE_ICON {
+  display: grid;
+  grid-area: DRIBBLE;
+  align-items: center;
+  justify-content: left;
+}
+
+#GITHUB_ICON {
+  display: grid;
+  grid-area: GITHUB;
+  align-items: center;
+  justify-content: left;
+}
+
+#PFBD_LINK {
+  grid-area: ICON;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 0px 1fr 13px;
+  grid-template-rows: 6.5px 1fr 6.5px;
+  grid-template-areas:
+    ". .    ."
+    ". CENTER ."
+    ". .    .";
+}
+
+#CENTER {
+  grid-area: CENTER;
+  width: 100%;
+  height: 100%;
+}
+
+.github {
+  color: rgb(68 64 60);
+}
+
+.medium {
+  color: rgb(68 64 60);
+}
+
+.linkedin {
+  color: rgb(68 64 60);
+}
+
+.youtube {
+  color: rgb(68 64 60);
+}
+
+.dribbble {
+  color: rgb(68 64 60);
+}
+
+#DRAWER_ICONS {
+  grid-area: ICONS;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 40px 40px 40px 1fr;
+  grid-template-areas: "PFBD DLPFBD BIMCOPILOT";
+}
+
+#PFBD_ICON {
+  grid-area: PFBD;
+}
+
+#DESIGN_LAB_ICON {
+  grid-area: DLPFBD;
+}
+
+#SERVICES {
+  grid-area: SERVICES;
+}
+
+#PROJECTS {
+  grid-area: PROJECTS;
+}
+
+#STORIES {
+  grid-area: STORIES;
+}
+
+#SHOP {
+  grid-area: SHOP;
+}
+
+#BUTTON_HOLDER_RIGHT {
+  grid-area: MENU-BUTTON;
+  position: relative;
+  display: grid;
+  grid-row-gap: 10px;
+  grid-column-gap: 20px;
+  grid-template-rows: 5px auto 5px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "."
+    "AREA"
+    ".";
+  top: 82.3px;
+}
+
+#HEADER_MENU_1 {
+  grid-area: AREA;
+  background-color: #151515;
+  width: 100%;
+  height: 100%;
+}
+
+#HEADER_MENU_2 {
+  grid-area: AREA;
+  display: grid;
+  position: relative;
+  grid-template-rows: 5px auto 5px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "  ."
+    "BURGER"
+    " .";
+}
+
+#B_H_2 {
+  grid-area: BURGER;
+  width: 100%;
+  height: 100%;
+}
+
+#BURGER_CONTAINER {
+  display: grid;
+  position: relative;
+  align-items: flex-end;
+  justify-content: right;
+  width: 100%;
+  height: 100%;
+  grid-area: AREA;
+}
+
+#BURGER_MENU {
+  grid-area: AREA;
+}
+
+#BURGER_HOLDER {
+  grid-area: BURGER;
+}
+
+#DRAWER_CONTAINER {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgb(255, 102, 36);
+}
+
+#DRAWER_GRID {
+  max-height: 0;
+  position: absolute;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: 30px 1fr 30px;
+  grid-template-rows: 50px auto 25px 50px 20px 50px 20px 50px 20px 50px 20px 50px auto;
+  grid-template-areas:
+    " . . ."
+    ". MENU ."
+    " . . ."
+    ". HOME ."
+    ". . ."
+    ". BLOG ."
+    ". . ."
+    ". TECH ."
+    ". . ."
+    ". ARCHITECTURE ."
+    ". . ."
+    ". RESUME .";
+}
+
+#MENU {
+  grid-area: MENU;
+}
+
+#HOME_NAV {
+  grid-area: HOME;
+}
+
+#BLOG_NAV {
+  grid-area: BLOG;
+}
+
+#ARCHITECTURE_NAV {
+  grid-area: ARCHITECTURE;
+}
+
+#TECH_NAV {
+  grid-area: TECH;
+}
+
+#RESUME_NAV {
+  grid-area: RESUME;
+}
+
+#HOME_ICON {
+  grid-area: HOME;
+}
+
+#ABOUT_ICON {
+  grid-area: ABOUT;
+}
+
+#SERVICES_ICON {
+  grid-area: SERVICES;
+}
+
+#CONTACT_ICON {
+  grid-area: CONTACT;
+}
+
+#DATE_ICON {
+  grid-area: DATE;
+}
+
+#CLOCK_ICON {
+  grid-area: CLOCK;
+}
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+@media all and (min-width: 960px) and (max-width: 1280px) {
+  #DRAWER_LEFT {
+    height: 100%;
+    z-index: 800000000000000000000000000000000000000000000000;
+  }
+
+  .center_holder {
+    width: 100%;
+    display: flex;
+
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: aliceblue;
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 1.5px;
+  }
+
+  .container_2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: left;
+  }
+
+  .container_right {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .hidebar {
+    position: fixed;
+    width: 100%;
+    max-width: 1760px;
+    height: 20px;
+    background-color: aliceblue;
+    z-index: 100;
+  }
+
+  #header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 65px;
+    max-width: 1640px;
+    background-color: transparent;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 40px 0px 0px 1fr 0px 0px 40px;
+    grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+    z-index: 80;
+  }
+
+  .burger_dot {
+    border-radius: 100%;
+    background-color: #151515;
+  }
+
+  #FIXED_HEADER {
+    grid-area: MAIN-AREA;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 40px;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      ". . . . . . . . . . . . ."
+      "LOGO_HOLDER MENU MENU MENU MENU MENU . . SIGN_IN SIGN_IN SIGN_IN MENU-BUTTON MENU-BUTTON"
+      ". . . . . . . . . . . . .";
+    margin-top: -204.5px;
+  }
+
+  #NAV_MENU {
+    grid-area: MENU;
+    display: grid;
+    width: 100%;
+    max-width: 600px;
+    justify-self: right;
+    grid-template-columns: auto 1.5px auto 1.5px auto 1.5px auto;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      " . . . . . . ."
+      " ABOUT . OUR_PROCESS . SERVICES . BLOG"
+      " . . . . . . .";
+    background: transparent;
+  }
+
+  #SIGNUP {
+    grid-area: SIGN_IN;
+    display: grid;
+    width: 100%;
+    max-width: 600px;
+    justify-self: right;
+    grid-template-columns: 1fr 1.5px 1fr;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      " . . ."
+      " ABOUT B1 HOME"
+      " . . .";
+    background: transparent;
+  }
+
+  #LOGO_ICON {
+    grid-area: LOGO_HOLDER;
+    display: grid;
+    grid-template-rows: 7.5px 50px 7.5px;
+    grid-template-columns: 50px 1fr;
+
+    grid-template-areas:
+      ". ."
+      "LOGO ."
+      ". .";
+  }
+
+  #BUTTON_HOLDER_LEFT {
+    grid-area: DATE-HOLDER;
+    display: grid;
+
+    grid-row-gap: 15px;
+    grid-column-gap: 20px;
+    grid-template-rows: 5px auto 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "."
+      "AREA"
+      ".";
+  }
+
+  #BUTTON_HOLDER_RIGHT {
+    grid-area: MENU-BUTTON;
+    position: relative;
+    display: grid;
+    grid-row-gap: 10px;
+    grid-column-gap: 20px;
+    grid-template-rows: 5px auto 5px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "."
+      "AREA"
+      ".";
+    top: 82.3px;
+  }
+
+  #HEADER_MENU_1 {
+    grid-area: AREA;
+    background-color: #151515;
+  }
+
+  #HEADER_MENU_2 {
+    grid-area: AREA;
+    display: grid;
+    grid-template-rows: 5px auto 5px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "  ."
+      "BURGER"
+      " .";
+  }
+
+  #B_H_2 {
+    grid-area: BURGER;
+    width: 100%;
+    height: 100%;
+  }
+
+  #BURGER_CONTAINER {
+    display: grid;
+    align-items: flex-end;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
+    grid-area: AREA;
+  }
+
+  #BURGER_MENU {
+    grid-area: AREA;
+  }
+
+  #BURGER {
+    grid-area: BURGER;
+  }
+
+  #CLOCK_HOLDER {
+    grid-area: CLOCK-HOLDER;
+    display: grid;
+    grid-template-rows: 15px auto 15px;
+    grid-template-columns: 15px 1fr 15px;
+    grid-template-areas:
+      " . . ."
+      "AREA AREA ."
+      ". . .";
+  }
+
+  #EMPTY {
+    grid-area: EMPTY;
+    display: grid;
+    grid-template-rows: 5px auto 5px;
+    grid-template-columns: 10px 1fr 10px;
+    background-color: #151515;
+    grid-template-areas:
+      " . . ."
+      ". AREA ."
+      ". . .";
+  }
+
+  #PFBD_RIGHT_DATE {
+    grid-area: DATE;
+  }
+
+  #PFBD_RIGHT_CLOCK {
+    grid-area: CLOCK;
+  }
+
+  #TIME {
+    display: grid;
+    grid-area: DATE-CLOCK;
+    background-color: transparent;
+    grid-template-columns: 1fr 1.5px 1fr;
+    grid-template-rows: 0px auto 0px;
+    grid-column-gap: 0px;
+    grid-template-areas:
+      ". . ."
+      "DATE B4 CLOCK"
+      ". . .";
+  }
+
+  #CLOCK {
+    padding-top: 0px;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    color: #f1f1f1;
+    text-align: right;
+    margin-bottom: 0%;
+  }
+
+  #DATE {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    color: #202020;
+    text-align: left;
+    margin: 0%;
+  }
+
+  #LOGO_HOLDER {
+    grid-area: LOGO-HOLDER;
+    display: grid;
+    grid-template-rows: 5px 80px 5px;
+    grid-template-columns: 80px 1fr;
+
+    grid-template-areas:
+      ". ."
+      "LOGO ."
+      ". .";
+  }
+
+  /*BURGER------------------------------------------------------------------------------*/
+  #burger_test_1 #burger_test_2::before {
+    top: -7px;
+  }
+
+  #burger_test_1 #burger_tes_2::after {
+    bottom: -7px;
+  }
+
+  #burger_test_1:hover #burger_test_2::before {
+    top: -10px;
+  }
+
+  #burger_test_1:hover #burge_test_2::after {
+    bottom: -10px;
+  }
+
+  #burger_tes_1.active #burger_test_2 {
+    background: #1d1d1d;
+  }
+
+  #burger_test_1.active #burger_test_2::before {
+    top: 0;
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+  }
+
+  #burger_test_1.active #burger_test_2::after {
+    bottom: 0;
+    -webkit-transform: rotateZ(-45deg);
+    -moz-transform: rotateZ(-45deg);
+    -ms-transform: rotateZ(-45deg);
+    -o-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+  }
+
+  /* Button placement */
+  #burger_test_1 {
+    position: absolute;
+    left: 100%;
+    margin-left: -18px;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+@media all and (min-width: 480px) and (max-width: 960px) {
+  #DRAWER_LEFT {
+    height: 100%;
+    z-index: 800000000000000000000000000000000000000000000000;
+  }
+
+  .center_holder {
+    width: 100%;
+    display: flex;
+
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: aliceblue;
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 1.5px;
+  }
+
+  .container_2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: left;
+  }
+
+  .container_right {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .hidebar {
+    position: fixed;
+    width: 100%;
+    max-width: 960px;
+    height: 20px;
+    background-color: aliceblue;
+    z-index: 100;
+  }
+
+  #header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 65px;
+    max-width: 960px;
+    background-color: transparent;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 30px 0px 0px 1fr 0px 0px 30px;
+    grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+    z-index: 80;
+  }
+
+  .burger_dot {
+    border-radius: 100%;
+    background-color: #151515;
+  }
+
+  #FIXED_HEADER {
+    grid-area: MAIN-AREA;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 20px;
+    grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      ". . . . . . . . . . . . ."
+      "LOGO_HOLDER SIGN_IN SIGN_IN SIGN_IN SIGN_IN . . MENU_BUTTON MENU_BUTTON MENU_BUTTON . . . "
+      ". . . . . . . . . . . . .";
+    margin-top: -204.5px;
+  }
+
+  #BUTTON_HOLDER_LEFT {
+    grid-area: DATE-HOLDER;
+    display: grid;
+
+    grid-row-gap: 15px;
+    grid-column-gap: 20px;
+    grid-template-rows: 5px auto 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "."
+      "AREA"
+      ".";
+  }
+
+  #BUTTON_HOLDER_RIGHT {
+    grid-area: MENU-BUTTON;
+    display: grid;
+    grid-row-gap: 5px;
+    grid-column-gap: 20px;
+    grid-template-rows: 10px auto 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "."
+      "AREA"
+      ".";
+    top: 47px;
+  }
+
+  #HEADER_MENU_1 {
+    height: 100%;
+    grid-area: AREA;
+    background-color: #151515;
+  }
+
+  #HEADER_MENU_2 {
+    grid-area: AREA;
+    display: grid;
+    grid-template-rows: 5px auto 5px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "  ."
+      "BURGER"
+      " .";
+  }
+
+  #B_H_2 {
+    grid-area: BURGER;
+    width: 100%;
+    height: 100%;
+  }
+
+  #BURGER_CONTAINER {
+    display: grid;
+    align-items: flex-end;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
+    grid-area: AREA;
+  }
+
+  #BURGER_MENU {
+    grid-area: AREA;
+  }
+
+  #BURGER {
+    grid-area: BURGER;
+  }
+
+  #CLOCK_HOLDER {
+    grid-area: CLOCK-HOLDER;
+    display: grid;
+    grid-template-rows: 15px auto 15px;
+    grid-template-columns: 15px 1fr 15px;
+    grid-template-areas:
+      " . . ."
+      "AREA AREA ."
+      ". . .";
+  }
+
+  #EMPTY {
+    grid-area: EMPTY;
+    display: grid;
+    grid-template-rows: 5px auto 5px;
+    grid-template-columns: 10px 1fr 10px;
+    background-color: #151515;
+    grid-template-areas:
+      " . . ."
+      ". AREA ."
+      ". . .";
+  }
+
+  #DATE_CLOCK {
+    grid-area: DATE-HOLDER;
+    display: grid;
+    grid-template-rows: 5px 80px 5px;
+    grid-template-columns: 80px 1fr;
+
+    grid-template-areas:
+      ". ."
+      "LOGO ."
+      ". .";
+  }
+
+  #PFBD_RIGHT_DATE {
+    grid-area: DATE;
+  }
+
+  #PFBD_RIGHT_CLOCK {
+    grid-area: CLOCK;
+  }
+
+  #CLOCK {
+    padding-top: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #151515;
+    text-align: left;
+  }
+
+  #DATE {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    color: #151515;
+    text-align: left;
+  }
+
+  /*BURGER------------------------------------------------------------------------------*/
+  #burger_test_1 #burger_test_2::before {
+    top: -7px;
+  }
+
+  #burger_test_1 #burger_test_2::after {
+    bottom: -7px;
+  }
+
+  #burger_test_1:hover #burger_test_2::before {
+    top: -10px;
+  }
+
+  #burger_test_1:hover #burger_test_2::after {
+    bottom: -10px;
+  }
+
+  #burger_test_1.active #burger_test_2 {
+    background-color: aliceblue;
+  }
+
+  #burger_test_1.active #burger_test_2::before {
+    top: 0;
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+  }
+
+  #burger_test_1.active #burger_test_2::after {
+    bottom: 0;
+    -webkit-transform: rotateZ(-45deg);
+    -moz-transform: rotateZ(-45deg);
+    -ms-transform: rotateZ(-45deg);
+    -o-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+  }
+
+  /* Button placement */
+  #burger_test_1 {
+    position: absolute;
+    left: 100%;
+    margin-left: -18px;
+  }
+
+  #TIME {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+@media all and (min-width: 0px) and (max-width: 480px) {
+  #DRAWER_LEFT {
+    height: 100%;
+    z-index: 800000000000000000000000000000000000000000000000;
+    width: 70vw;
+  }
+
+  .center_holder {
+    width: 100%;
+    display: flex;
+
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: aliceblue;
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 1.5px;
+  }
+
+  .container_2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: left;
+  }
+
+  .container_right {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .hidebar {
+    position: fixed;
+    width: 100%;
+    max-width: 1760px;
+    height: 20px;
+    background-color: aliceblue;
+    z-index: 100;
+  }
+
+  #header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 65px;
+    max-width: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 20px 0px 0px 1fr 0px 0px 20px;
+    grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+    z-index: 80;
+  }
+
+  .burger_dot {
+    border-radius: 100%;
+    background-color: #151515;
+  }
+
+  #FIXED_HEADER {
+    grid-area: MAIN-AREA;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 20px;
+    grid-template-columns: 60px 1fr 100px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      " . . ."
+      "LOGO_HOLDER .  MENU-BUTTON"
+      " . . .";
+  }
+
+  #NAV_MENU {
+    display: none;
+  }
+
+  #LOGO_LINK {
+    grid-area: LOGO;
+    display: grid;
+    grid-template-rows: 5px auto 5px;
+    grid-template-columns: 1fr 5px 5px;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+      ". . ."
+      "LOGO . ."
+      ". . .";
+  }
+
+  #LOGO_MOB {
+    grid-area: LOGO_HOLDER;
+    width: 100%;
+    height: 100%;
+    top: 180px;
+  }
+
+  #LOGO {
+    grid-area: LOGO;
+    width: 100%;
+    height: 100%;
+  }
+
+  #BUTTON_HOLDER_LEFT {
+    grid-area: DATE-HOLDER;
+    display: grid;
+
+    grid-row-gap: 15px;
+    grid-column-gap: 20px;
+    grid-template-rows: 5px auto 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "."
+      "AREA"
+      ".";
+  }
+
+  #BUTTON_HOLDER_RIGHT {
+    grid-area: MENU-BUTTON;
+    display: grid;
+    grid-row-gap: 5px;
+    grid-column-gap: 20px;
+    grid-template-rows: 10px auto 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "."
+      "AREA"
+      ".";
+    margin-top: 5px;
+  }
+
+  #B_H_2 {
+    grid-area: BURGER;
+    width: 100%;
+    height: 100%;
+  }
+
+  #BURGER_CONTAINER {
+    display: grid;
+    align-items: flex-end;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
+    grid-area: AREA;
+  }
+
+  #BURGER_MENU {
+    grid-area: AREA;
+  }
+
+  #BURGER {
+    grid-area: BURGER;
+  }
+
+  #CLOCK_HOLDER {
+    grid-area: CLOCK-HOLDER;
+    display: grid;
+    grid-template-rows: 15px auto 15px;
+    grid-template-columns: 15px 1fr 15px;
+    grid-template-areas:
+      " . . ."
+      "AREA AREA ."
+      ". . .";
+  }
+
+  #EMPTY {
+    grid-area: EMPTY;
+    display: grid;
+    grid-template-rows: 5px auto 5px;
+    grid-template-columns: 10px 1fr 10px;
+    background-color: #151515;
+    grid-template-areas:
+      " . . ."
+      ". AREA ."
+      ". . .";
+  }
+
+  #DATE_CLOCK {
+    grid-area: DATE-HOLDER;
+    display: grid;
+    grid-template-rows: 5px 80px 5px;
+    grid-template-columns: 80px 1fr;
+
+    grid-template-areas:
+      ". ."
+      "LOGO ."
+      ". .";
+  }
+
+  #PFBD_RIGHT_DATE {
+    grid-area: DATE;
+  }
+
+  #PFBD_RIGHT_CLOCK {
+    grid-area: CLOCK;
+  }
+
+  #CLOCK {
+    padding-top: 0px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    color: #151515;
+    text-align: left;
+  }
+
+  #DATE {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    color: #151515;
+    text-align: left;
+  }
+
+  /*BURGER------------------------------------------------------------------------------*/
+  #burger_test_1 #burger_test_2::before {
+    top: -7px;
+  }
+
+  #burger_test_1 #burger_test_2::after {
+    bottom: -7px;
+  }
+
+  #burger_test_1:hover #burger_test_2::before {
+    top: -10px;
+  }
+
+  #burger_test_1:hover #burge_test_2::after {
+    bottom: -10px;
+  }
+
+  #burger_test_1.active #burger_test_2 {
+    background-color: aliceblue;
+  }
+
+  #burger_test_1.active #burger_test_2::before {
+    top: 0;
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+  }
+
+  #burger_test_1.active #burger_test_2::after {
+    bottom: 0;
+    -webkit-transform: rotateZ(-45deg);
+    -moz-transform: rotateZ(-45deg);
+    -ms-transform: rotateZ(-45deg);
+    -o-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+  }
+
+  /* Button placement */
+  #burger_test_1 {
+    position: absolute;
+    left: 100%;
+    margin-left: -18px;
+  }
+
+  .DRAWER_CSS {
+    width: 250px;
+  }
+
+  #TIME {
+    display: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
