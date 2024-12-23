@@ -9,7 +9,7 @@ import styles from './menu_white.module.css'
 
 import Script from 'next/script'
 
-import bimcopilot_icon from "./Tesseract_Logo_2.png";
+import bimcopilot_icon from "./Tesseract_Logo_Black.png";
 import Hamburger from "./Burger/burger.js";
 // import 'antd/dist/reset.css';
 import Image from "next/image";
