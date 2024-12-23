@@ -140,7 +140,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                 
                 class="text-lg ... text-stone-500 ... font-avant_garde_bold">
                 <br/>  
-                See it realized with <a class="text-stone-700 ... font-avant_garde_bold">automation</a>.
+                See them realized with <a class="text-stone-700 ... font-avant_garde_bold">automation</a> AI, Digital Assets and proven robust Templates.
                 </h2>
               </div>  
 
@@ -153,7 +153,7 @@ const Servicesmain = ({ stories, firstStory }) => {
 
                     To much <a  class="text-stone-700 ... font-avant_garde_bold">profit</a>  is left on the table through inefficient processes. 
                     Reduce <a  class="text-stone-700 ... font-avant_garde_bold">waste</a>, reduce <a  class="text-stone-700 ... font-avant_garde_bold"> time{" "}</a>  
-                     and increase{" "}<a  class="text-stone-600 ... font-avant_garde_bold">revenue</a>  through bettecr,{" "}
+                     and increase{" "}<a  class="text-stone-600 ... font-avant_garde_bold">revenue</a>  through better, repeatable,{" "}
                     <a  class="text-stone-700 ... font-avant_garde_bold">automated systems</a>. 
                     <br/> 
                     <a class="text-stone-700 ... font-avant_garde_bold">bimcopilot.com </a>allows you and your business to focus on what you do best. 
