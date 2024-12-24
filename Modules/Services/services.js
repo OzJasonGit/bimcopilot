@@ -140,7 +140,7 @@ const Servicesmain = ({ stories, firstStory }) => {
                 
                 class="text-lg ... text-stone-500 ... font-avant_garde_bold">
                 <br/>  
-                See them realized with <a class="text-stone-700 ... font-avant_garde_bold">Automation </a> 
+                See them realized with <a class="text-stone-700 ... font-avant_garde_bold">Automation, </a> 
                 <a class="text-stone-700 ... font-avant_garde_bold">AI, </a> 
                 <a class="text-stone-700 ... font-avant_garde_bold">Digital Assets </a>and proven
                 <a class="text-stone-700 ... font-avant_garde_bold"> Systems.</a>
@@ -156,8 +156,8 @@ const Servicesmain = ({ stories, firstStory }) => {
 
 
                   Stop leaving profits on the table. Streamline your<a  class="text-stone-700 ... font-avant_garde_bold"> processes</a>, save time, and boost 
-                  revenue with <a  class="text-stone-700 ... font-avant_garde_bold">efficient,</a> <a class="text-stone-700 ... font-avant_garde_bold"> automated,</a> 
-                  <a class="text-stone-700 ... font-avant_garde_bold">repeatable systems </a>. 
+                  revenue with <a  class="text-stone-700 ... font-avant_garde_bold">efficient,</a> <a class="text-stone-700 ... font-avant_garde_bold"> automated, </a> 
+                  <a class="text-stone-700 ... font-avant_garde_bold">repeatable systems</a>. 
                   <a  class="text-stone-700 ... font-avant_garde_bold">bimcopilot.com </a> lets you focus on what makes money, what you enjoy, and what you do best.
 
                   {" "}
