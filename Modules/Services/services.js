@@ -140,8 +140,10 @@ const Servicesmain = ({ stories, firstStory }) => {
                 
                 class="text-lg ... text-stone-500 ... font-avant_garde_bold">
                 <br/>  
-                See them realized with <a class="text-stone-700 ... font-avant_garde_bold">automation </a> 
-                AI, Digital Assets and proven Systems.
+                See them realized with <a class="text-stone-700 ... font-avant_garde_bold">Automation </a> 
+                <a class="text-stone-700 ... font-avant_garde_bold">AI, </a> 
+                <a class="text-stone-700 ... font-avant_garde_bold">Digital Assets </a>and proven
+                <a class="text-stone-700 ... font-avant_garde_bold"> Systems.</a>
                 </h2>
               </div>  
 
