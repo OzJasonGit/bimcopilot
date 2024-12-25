@@ -53,7 +53,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     <div style={{
                         position: "relative",
                         width: "100%",
-                        height: "650px",                                      
+                        height: "960px",                                      
                         }} class="rounded-xl ..." id={styles.MAIN_IMAGE}>
                             {storiesSolo_2.map((story, index) => {
                                 return (                
@@ -71,6 +71,67 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 }}/>              
                             )})}
                     </div>
+                </div>
+
+
+
+
+                <div id={styles.CHARTS_CONTAINER} class="rounded-xl ..." style={{
+                     position: "relative",
+                     gridArea: "CHARTS",
+                     overflow: "hidden", 
+                     width: "100%",
+                     height: "100%"
+                     }}>
+
+                        <div id={styles.CHARTS_1} class="rounded-xl ... bg-stone-300" style={{
+                            position: "relative",
+                            gridArea: "CHART_1",
+                            overflow: "hidden", 
+                            width: "100%",
+                            height: "100%"
+                            }}>
+                        </div>
+
+                        <div id={styles.CHARTS_2} class="rounded-xl ... bg-stone-300" style={{
+                            position: "relative",
+                            gridArea: "CHART_2",
+                            overflow: "hidden", 
+                            width: "100%",
+                            height: "100%"
+                            }}>
+                        </div>
+
+                        <div id={styles.CHARTS_3} class="rounded-xl ... bg-stone-300" style={{
+                            position: "relative",
+                            gridArea: "CHART_3",
+                            overflow: "hidden", 
+                            width: "100%",
+                            height: "100%"
+                            }}>
+                        </div>
+
+                        <div id={styles.CHARTS_4} class="rounded-xl ... bg-stone-300" style={{
+                            position: "relative",
+                            gridArea: "CHART_4",
+                            overflow: "hidden", 
+                            width: "100%",
+                            height: "100%"
+                            }}>
+                        </div>
+
+                        <div id={styles.CHARTS_5} class="rounded-xl ... bg-stone-300" style={{
+                            position: "relative",
+                            gridArea: "CHART_5",
+                            overflow: "hidden", 
+                            width: "100%",
+                            height: "100%",
+                            
+                            }}>
+                        </div>
+
+
+
                 </div>
 
                 
