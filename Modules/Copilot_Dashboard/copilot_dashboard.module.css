@@ -85,6 +85,7 @@
     ". .   .   .   .   .   ."
     ". SUB SUB SUB SUB SUB ."
     ". .   .   .   .   .   .";
+  margin-bottom: 450px;
 }
 
 #SALES_GRID_HOLDER {
@@ -202,7 +203,7 @@
   display: grid;
   grid-area: SUB;
   grid-column-gap: 40px;
-  grid-row-gap: 4cqb;
+  grid-row-gap: 40px;
   grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
   grid-template-rows: 0px auto auto 0px;
   grid-template-areas:
