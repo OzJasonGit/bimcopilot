@@ -41,7 +41,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
       <Sides/>
 
       <Services_1/>
-      <Subscribetop/>
+      <Subscribe_2/>
       
 
 
