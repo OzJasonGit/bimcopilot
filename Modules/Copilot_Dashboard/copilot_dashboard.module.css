@@ -268,7 +268,7 @@
 }
 
 
-#CHARTS_CONTAINER_1 {
+#CHARTS_CONTAINER {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
