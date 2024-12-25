@@ -39,7 +39,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
       <Sides/>
 
       <Services_1/>
-      <Subscribe_2/>
+      
 
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
