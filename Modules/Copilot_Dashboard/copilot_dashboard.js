@@ -130,7 +130,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                 <div id={styles.CHARTS_4} class="rounded-xl ... bg-stone-300" style={{
                     position: "relative",
-                    gridArea: "CHART_IIII",
+                    gridArea: "CHARTS_IIII",
                     overflow: "hidden", 
                     width: "100%",
                     height: "400px"
@@ -170,100 +170,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
       </section>
 
 
-      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-        <div class={styles.grid_0_scroll}>
-            <div id={styles.SALES_GRID_HOLDER}>
-
-                <div  id={styles.SALES_IMAGE_HOLDER}>
-
-                        <div id={styles.SALES_IMAGE_1}>
-                            <h2  class="text-7xl ... text-stone-400 ... font-avant_garde_bold" 
-                                style={{
-                                paddingBottom: "0",
-                                }}>
-                                Newsletter
-                            </h2>                                                
-                        </div>  
-
-                        <div id={styles.SALES_SUBSCRIBE}>
-                          
-                        </div>  
-                    
-                        <div class="rounded-xl ..." id={styles.SALES_IMAGE_2}>
-                            <div>
-                                    {storiesSolo_1.map((story, index) => {
-                                    return (          
-                                    <Image
-                                    alt="Picture of the author"
-                                    key={story._id}
-                                    width={500}
-                                    height={500}
-                                    src={story.image}
-                                    style={{
-                                    position: "absolute",
-                                    width: "100%",
-                                    height: "100%",
-                                    objectFit: "cover",
-                                    
-                                    }}/>                        
-                                )})} 
-                            </div>
-                        </div>                                             
-                                     
-                </div>
-
-                <div id={styles.SALES_CHECKOUT_HOLDER}>
-
-                    <div  id={styles.C1} class="justify-items-end">
-                        <h3 class="text-md ... text-stone-200 ... font-geist_semibold text-right">
-                            License Type.
-                        </h3>
-
-                        <br/> 
-
-                      
-
-                        
-                                              
-                        <h3  class="text-md ... text-stone-200 ...font-geist_regular text-right">
-                            Are you a student? Select Educational Use.
-                        </h3>
-                    </div>
-
-                    
-                    
-                
-
-                    
-
-
-                    <br/> 
-
-                    <div id={styles.C2}>
-                        <div id={styles.PHONE_CONTAINER} class="bg-stone-200 ... rounded-xl ..."
-                             style={{
-                                    position: "relative",
-                                    width: "100%",
-                                    height: "440px", 
-                                    gridArea: "PHONE",                                 
-                                    }}>
-                        </div>
-                    </div>
-
-                    <br/> 
-
-
-
-
-                    <div  id={styles.C7}> 
-                        <Collapsed_Sales/>
-                    </div>
-                    
-                </div>
-
-            </div>
-        </div>
-      </section>
+      
 
 
 
