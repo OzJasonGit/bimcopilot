@@ -6,6 +6,8 @@ import { useRouter } from "next/navigation";
 
 import Menu from "../../components/Menu/menu";
 
+
+import Subscribetop from "../../components/Subscribetop/subscribetop";
 import Subscribe_2 from "../../components/Subscribetop/subscribe_2";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
@@ -39,6 +41,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
       <Sides/>
 
       <Services_1/>
+      <Subscribetop/>
       
 
 
