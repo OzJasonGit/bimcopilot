@@ -259,10 +259,11 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0px auto 0px;
+    grid-template-rows: 0px auto 300px 0px;
     grid-template-areas:
         ".  .  .  .  ."
-        "IMAGE IMAGE CHARTS CHARTS CHARTS"
+        "IMAGE IMAGE IMAGE CHARTS CHARTS"
+        ".  .  . CHARTS CHARTS"
         ".  .  .  .  .";
 }
 

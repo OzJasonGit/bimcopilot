@@ -53,7 +53,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     <div style={{
                         position: "relative",
                         width: "100%",
-                        height: "960px",                                      
+                        height: "640px",                                      
                         }} class="rounded-xl ..." id={styles.MAIN_IMAGE}>
                             {storiesSolo_2.map((story, index) => {
                                 return (                
