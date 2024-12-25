@@ -263,7 +263,7 @@
     grid-template-areas:
         ".  .  .  .  ."
         "IMAGE IMAGE IMAGE CHARTS CHARTS"
-        ".  .  . CHARTS CHARTS"
+        ".  .  . CHARTS_II CHARTS_II"
         ".  .  .  .  .";
 }
 
