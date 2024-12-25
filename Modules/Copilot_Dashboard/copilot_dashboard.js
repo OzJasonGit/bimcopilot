@@ -54,7 +54,15 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                      gridArea: "IMAGE",
                      overflow: "hidden",  
                      }}>
-                    <iframe src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true" width="100%" height="100%" frameborder="0"></iframe>   {/* src={rocketShip}
+                    <iframe
+                    
+                    style={{
+                     position: "relative",
+                     gridArea: "IMAGE",
+                     overflow: "hidden", 
+                     height: "700px", 
+                     }}
+                    src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true" width="100%" frameborder="0"></iframe>   {/* src={rocketShip}
                     {/*<div style={{
                         position: "relative",
                         width: "100%",
