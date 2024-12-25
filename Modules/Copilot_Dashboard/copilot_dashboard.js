@@ -53,7 +53,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     <div style={{
                         position: "relative",
                         width: "100%",
-                        height: "640px",                                      
+                        height: "700px",                                      
                         }} class="rounded-xl ..." id={styles.MAIN_IMAGE}>
                             {storiesSolo_2.map((story, index) => {
                                 return (                
@@ -76,7 +76,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
 
 
-                {/*<div id={styles.CHARTS_CONTAINER} class="rounded-xl ..." style={{
+                <div id={styles.CHARTS_CONTAINER} class="rounded-xl ..." style={{
                      position: "relative",
                      gridArea: "CHARTS",
                      overflow: "hidden", 
@@ -101,6 +101,9 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             height: "100%"
                             }}>
                         </div>
+                </div>
+
+                    {/*
 
                         <div id={styles.CHARTS_3} class="rounded-xl ... bg-stone-300" style={{
                             position: "relative",

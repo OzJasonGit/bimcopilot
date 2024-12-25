@@ -268,16 +268,15 @@
 }
 
 
-#CHARTS_CONTAINER {
+#CHARTS_CONTAINER_1 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     grid-template-areas:
-            "CHART_1 CHART_2"
-            "CHART_3 CHART_4"
-            "CHART_5 CHART_5"
+            "CHART_1"
+            "CHART_2"
 }
 
 
