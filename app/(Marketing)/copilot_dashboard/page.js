@@ -4,7 +4,7 @@ import Copilot_Dashboard from "../../../Modules/Copilot_Dashboard/copilot_dashbo
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const Copilot_Dashboard = () => {
+const copilot_dashboard = () => {
   const [data, setData] = useState(null);
   const [firstStory, setFirstStory] = useState(null);
   const [topStories, setTopStories] = useState(null);
@@ -43,4 +43,4 @@ const Copilot_Dashboard = () => {
     ) 
 }
 
-export default Copilot_Dashboard;
+export default copilot_dashboard;
