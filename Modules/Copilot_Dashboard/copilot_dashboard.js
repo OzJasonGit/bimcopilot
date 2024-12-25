@@ -122,7 +122,18 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     gridArea: "CHARTS_III",
                     overflow: "hidden", 
                     width: "100%",
-                    height: "100%"
+                    height: "320px"
+                    }}>
+                </div>
+
+
+
+                <div id={styles.CHARTS_4} class="rounded-xl ... bg-stone-300" style={{
+                    position: "relative",
+                    gridArea: "CHART_IIII",
+                    overflow: "hidden", 
+                    width: "100%",
+                    height: "400px"
                     }}>
                 </div>
 
@@ -137,14 +148,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             }}>
                         </div>
 
-                        <div id={styles.CHARTS_4} class="rounded-xl ... bg-stone-300" style={{
-                            position: "relative",
-                            gridArea: "CHART_4",
-                            overflow: "hidden", 
-                            width: "100%",
-                            height: "100%"
-                            }}>
-                        </div>
+                        
 
                         <div id={styles.CHARTS_5} class="rounded-xl ... bg-stone-300" style={{
                             position: "relative",
