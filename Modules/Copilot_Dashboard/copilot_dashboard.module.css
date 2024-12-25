@@ -204,11 +204,12 @@
   grid-column-gap: 40px;
   grid-row-gap: 4cqb;
   grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
-  grid-template-rows: 0px auto 300px 0px;
+  grid-template-rows: 0px auto 320px 0px;
   grid-template-areas:
     ".  .  .  .  ."
     "IMAGE IMAGE IMAGE CHARTS CHARTS"
     ".  .  CHARTS_III CHARTS_III CHARTS_III"
+    ".  .  .  .  ."
     ".  .  .  .  .";
 }
 

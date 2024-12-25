@@ -296,7 +296,7 @@
     display: grid;
     grid-column-gap: 0px;
     grid-row-gap: 20px;
-    grid-template-rows: 130px auto 0px;
+    grid-template-rows: 70px auto 0px;
     grid-template-columns: 20px 1fr 20px;
     grid-template-areas:
       ". . ."
