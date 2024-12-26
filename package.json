@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/system": "^6.3.0",
     "@mux/mux-player": "^2.3.2",
     "@mux/mux-player-react": "^2.3.2",
     "@radix-ui/react-hover-card": "^1.1.4",
@@ -33,6 +36,7 @@
     "next": "^14.1.0",
     "npx": "^10.2.2",
     "react": "^18",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
     "react-toastify": "^10.0.5",
     "recharts": "^2.15.0",
