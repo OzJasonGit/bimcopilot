@@ -12,6 +12,7 @@ import { Chart as
     Tooltip,
     Legend
  } from "chart.js";
+import { borderColor } from "@mui/system";
 
 
  ChartJS.register(
@@ -31,6 +32,20 @@ import { Chart as
  export default class Chart_1 extends Component {
 
     render() {
+
+        const data = {
+            labels: ['Yes', 'No'],
+            datasets: [{
+                label: 'Poll',
+                data: [3, 6 , 12, 9],
+                backgroundColor: ['black', 'red', 'green', 'blue'],
+                borderColor: ['black', 'red', 'green', 'blue'],
+            }]
+        }
+
+        const options = {
+            
+        }
         return (
 
             <div style={{ width: "100%", height: "100%" }}>
