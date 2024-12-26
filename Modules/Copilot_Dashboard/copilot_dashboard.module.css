@@ -231,7 +231,7 @@
   grid-template-rows: auto;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  grid-template-areas: "CHART_5 CHART_6";
+  grid-template-areas: "CHARTS_5 CHARTS_6";
 }
 
 #COMMUNITIES_HOLDER {
