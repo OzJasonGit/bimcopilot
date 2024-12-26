@@ -12,7 +12,7 @@ import { Chart as
     Tooltip,
     Legend
  } from "chart.js";
-import { borderColor } from "@mui/system";
+import { borderColor } from "chart.js";
 
 
  ChartJS.register(
@@ -44,7 +44,7 @@ import { borderColor } from "@mui/system";
         }
 
         const options = {
-            
+
         }
         return (
 
