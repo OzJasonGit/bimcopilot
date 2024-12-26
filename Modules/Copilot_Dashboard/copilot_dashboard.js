@@ -85,7 +85,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             width: "100%",
                             height: "100%"
                             }}>
-                                <Chart_1/>
+                               
                         </div>
 
                         <div id={styles.CHARTS_2} class="rounded-xl ... bg-stone-300" style={{
