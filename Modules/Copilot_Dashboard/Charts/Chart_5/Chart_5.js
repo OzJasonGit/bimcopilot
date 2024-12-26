@@ -49,9 +49,12 @@ export default class Chart_1 extends Component {
         };
 
         return (
-            <div style={{ width: "100%", height: "100%" }}>
+            <div style={{ width: "100%", height: "100%",padding:"30px"}}>
                 {/* Use the PolarArea component */}
-                <PolarArea data={data} options={options} />
+                <h1>Placeholder</h1>
+                <PolarArea data={data} options={options} /><br/>
+                <h1>Placeholder</h1>
+
             </div>
         );
     }

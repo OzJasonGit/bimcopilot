@@ -48,9 +48,11 @@ export default class Chart_1 extends Component {
         };
 
         return (
-            <div style={{ width: "100%", height: "100%" }}>
+            <div style={{ width: "100%", height: "85%",padding:"30px" }}>
                 {/* Use the Bar component */}
-                <Bar data={data} options={options} />
+                <h1>Placeholder</h1>
+                <Bar data={data} options={options} /><br/>
+                <h1>Placeholder</h1>
             </div>
         );
     }
