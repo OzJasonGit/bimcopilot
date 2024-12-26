@@ -12,10 +12,12 @@ import Subscribe_2 from "../../components/Subscribetop/subscribe_2";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import Chart_1 from "../../Modules/Copilot_Dashboard/Charts/Chart_1/Chart_1";
-
-
-
+import Chart_1 from "./Charts/Chart_1/Chart_1";
+import Chart_2 from "./Charts/Chart_2/Chart_2"
+import Chart_3 from './Charts/Chart_3/Chart_3';
+import Chart_4 from './Charts/Chart_4/Chart_4';
+import Chart_5 from './Charts/Chart_5/Chart_5';
+import Chart_6 from './Charts/Chart_6/Chart_6'
 import Services_1 from "../../components/services_1/services_black";
 
 import Link from "next/link";
@@ -85,7 +87,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             width: "100%",
                             height: "100%"
                             }}>
-                               
+                               <Chart_1/>
                         </div>
 
                         <div id={styles.CHARTS_2} class="rounded-xl ... bg-stone-300" style={{
@@ -95,6 +97,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             width: "100%",
                             height: "100%"
                             }}>
+                            <Chart_2/>
                         </div>                   
                 </div>
 
@@ -106,6 +109,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     width: "100%",
                     height: "320px"
                     }}>
+                    <Chart_3/>
                 </div>
 
 
@@ -117,6 +121,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     width: "100%",
                     height: "450px"
                     }}>
+                    <Chart_4/>
                 </div>
 
 
@@ -136,6 +141,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             width: "100%",
                             height: "450px",                    
                             }}>
+                                <Chart_5/>
                         </div>
 
                         <div id={styles.CHARTS_5} class="rounded-xl ... bg-stone-300" style={{
@@ -145,6 +151,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             width: "100%",
                             height: "450px",                    
                             }}>
+                                <Chart_6/>
                         </div>
 
                 </div>
