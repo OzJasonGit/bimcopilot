@@ -5,7 +5,6 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 // Register Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-<<<<<<< HEAD
 
 import { DoughnutController } from "chart.js";
 
@@ -35,9 +34,6 @@ import { borderColor } from "chart.js";
 
  export default class Chart_1 extends Component {
 
-=======
-export default class Chart_1 extends Component {
->>>>>>> 2f83019d7cb552562a0612c490da6bcb4e4508e5
     render() {
         const data = {
             labels: ['Yes', 'No', 'Maybe', 'Other'], // Adjust labels to match dataset
@@ -53,10 +49,6 @@ export default class Chart_1 extends Component {
         };
 
         const options = {
-<<<<<<< HEAD
-
-        }
-=======
             responsive: true,
             plugins: {
                 legend: {
@@ -68,7 +60,6 @@ export default class Chart_1 extends Component {
             },
         };
 
->>>>>>> 2f83019d7cb552562a0612c490da6bcb4e4508e5
         return (
             <div style={{ width: "100%", height: "100%",padding:"30px" }}>
                 {/* Use the Doughnut component */}
