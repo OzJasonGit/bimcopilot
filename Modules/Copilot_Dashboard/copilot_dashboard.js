@@ -7,12 +7,14 @@ import { useRouter } from "next/navigation";
 import Menu from "../../components/Menu/menu";
 
 
-import Subscribetop from "../../components/Subscribetop/subscribetop";
+
 import Subscribe_2 from "../../components/Subscribetop/subscribe_2";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import Collapsed_Sales from "../../components/Collapse_Sales/collapse_sales";
+import Chart_1 from "../../Modules/Copilot_Dashboard/Charts/Chart_1/Chart_1";
+
+
 
 import Services_1 from "../../components/services_1/services_black";
 
@@ -104,6 +106,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             width: "100%",
                             height: "100%"
                             }}>
+                                <Chart_1/>
                         </div>
 
                         <div id={styles.CHARTS_2} class="rounded-xl ... bg-stone-300" style={{
