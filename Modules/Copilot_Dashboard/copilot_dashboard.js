@@ -64,7 +64,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                      position: "relative",
                      gridArea: "IMAGE",
                      overflow: "hidden", 
-                     height: "700px", 
+                     height: "100%", 
                      }}
                     src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true" width="100%" frameborder="0"></iframe>   
                 </div>
@@ -80,7 +80,8 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                      height: "100%"
                      }}>
 
-                        <div id={styles.CHARTS_1} class="rounded-xl ... bg-stone-300" style={{
+                        <div id={styles.CHARTS_1} class="rounded-xl ..." style={{
+                            backgroundColor: "#171717",
                             position: "relative",
                             gridArea: "CHART_1",
                             overflow: "hidden", 
@@ -103,7 +104,8 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                 </div>
 
 
-                <div id={styles.CHARTS_3} class="rounded-xl ... bg-stone-300" style={{
+                <div id={styles.CHARTS_3} class="rounded-xl ..." style={{
+                    backgroundColor: "#171717",
                     position: "relative",
                     gridArea: "CHARTS_III",
                     overflow: "hidden", 
