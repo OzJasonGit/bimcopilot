@@ -225,6 +225,15 @@
     "CHART_2";
 }
 
+#CHARTS_CONTAINER_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-areas: "CHART_5 CHART_6";
+}
+
 #COMMUNITIES_HOLDER {
   position: relative;
   width: 100%;
