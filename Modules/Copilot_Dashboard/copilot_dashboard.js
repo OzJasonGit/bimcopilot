@@ -64,28 +64,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                      overflow: "hidden", 
                      height: "700px", 
                      }}
-                    src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true" width="100%" frameborder="0"></iframe>   {/* src={rocketShip}
-                    {/*<div style={{
-                        position: "relative",
-                        width: "100%",
-                        height: "700px",                                      
-                        }} class="rounded-xl ..." id={styles.MAIN_IMAGE}>
-                            {storiesSolo_2.map((story, index) => {
-                                return (                
-                                <Image
-                                alt="Picture of the author"
-                                key={story._id}
-                                width={500}
-                                height={500}
-                                src={story.image}
-                                style={{
-                                position: "absolute",
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                                }}/>              
-                            )})}
-                    </div>*/}
+                    src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true" width="100%" frameborder="0"></iframe>   
                 </div>
 
 

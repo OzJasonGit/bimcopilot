@@ -3,7 +3,7 @@ import styles from "./Chart_1.module.css";
 
 
 
-import {Doughnut} from "react-chartjs-2"
+import { DoughnutController } from "chart.js";
 
 
 import { Chart as 
@@ -35,11 +35,11 @@ import { Chart as
 
             <div style={{ width: "100%", height: "100%" }}>
 
-                <Doughnut
+                <DoughnutController
                         data = {data}
                         options = {options}
                 >                                   
-                </Doughnut>
+                </DoughnutController>
 
             </div>
 
