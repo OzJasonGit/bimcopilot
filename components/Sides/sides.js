@@ -96,29 +96,29 @@ export default class Sides extends Component {
                         </div>
     
                         <div id={styles.PAGE_NAVIGATION}>
-                            <div class="bg-stone-400  ..." id={styles.LINE_1}>
+                            <div class="bg-stone-200  ..." id={styles.LINE_1}>
                             </div>
 
                             <div id={styles.NAV_LINK}>
                                
-                                <Link class="bg-stone-400  ..." id={styles.ANCHOR_1} href= "/">
+                                <Link class="bg-stone-200  ..." id={styles.ANCHOR_1} href= "/">
                                 </Link>
 
-                                <Link class="bg-stone-400  ..." id={styles.ANCHOR_2} href= "/">
+                                <Link class="bg-stone-200  ..." id={styles.ANCHOR_2} href= "/">
                                 </Link>
 
-                                <Link class="bg-stone-400  ..." id={styles.ANCHOR_3} href= "/">
+                                <Link class="bg-stone-200  ..." id={styles.ANCHOR_3} href= "/">
                                 </Link>
 
-                                <Link class="bg-stone-400 ..."  id={styles.ANCHOR_4} href= "/">
+                                <Link class="bg-stone-200 ..."  id={styles.ANCHOR_4} href= "/">
                                 </Link>
                                                               
-                                <Link class="bg-stone-400 ..."  id={styles.ANCHOR_5} href= "/">
+                                <Link class="bg-stone-200 ..."  id={styles.ANCHOR_5} href= "/">
                                 </Link>
                                                                 
                             </div>
 
-                            <div class="bg-stone-400 ..." id={styles.LINE_2}>
+                            <div class="bg-stone-200 ..." id={styles.LINE_2}>
                             </div>
                         </div>
                     </div>
