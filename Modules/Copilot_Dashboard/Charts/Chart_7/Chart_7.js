@@ -3,7 +3,6 @@ import { Radar } from "react-chartjs-2"; // Import Line from react-chartjs-2
 import {
     Chart as ChartJS,
     LineElement,
-    PointElement,
     Tooltip,
     Legend,
     RadialLinearScale,
