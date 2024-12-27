@@ -104,7 +104,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                 </div>
 
 
-                <div id={styles.CHARTS_3} class="rounded-xl ... bg-stone-300" style={{
+                <div id={styles.CHARTS_3} class="rounded-xl ... " style={{
                     backgroundColor: "#171717",
                     position: "relative",
                     gridArea: "CHARTS_III",
@@ -114,6 +114,30 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     }}>
                     <Chart_3/>
                 </div>
+
+
+
+                <div id={styles.PROJECT_TEXT} class="rounded-xl ..." style={{
+                    display: "grid",
+                    backgroundColor: "#171717",
+                    position: "relative",
+                    gridArea: "TEXT",
+                    overflow: "hidden", 
+                    width: "100%",
+                    height: "auto"
+                    }}>
+                    <h3 id={styles._H3}
+                        style={{gridArea:"PROJECT_TITLE"}}>PROJECT TITLE</h3>
+                    <h3 id={styles._H3}
+                        style={{gridArea:"PROJECT_LOCATION_TITLE"}}>PROJECT LOCATION</h3>
+                    <h3 id={styles._H3}
+                        style={{gridArea:"PROJECT_BUDGET_TITLE"}}>BUDGET</h3>
+                    <h3 id={styles._H3}
+                        style={{gridArea:"PROJECT_CLIENT_TITLE"}}>CLIENT</h3>
+
+                </div>
+
+                
 
 
 
@@ -217,8 +241,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                 <div id={styles.BOUGHT_TOGETHER_BLOCK}>
                     <div id={styles.BOUGHT_TITLE_HOLDER}>
                         <h3 id={styles._H3} class="text-4xl ... text-stone-400 ... font-avant_garde_bold">
-                            Current Listings <br/>
-                            
+                            Current Listings <br/>                           
                         </h3>
                     </div>
 
