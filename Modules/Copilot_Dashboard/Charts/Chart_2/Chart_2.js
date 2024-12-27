@@ -35,9 +35,13 @@ export default class Chart_1 extends Component {
         return (
             <div style={{ width: "100%", height: "100%",padding:"30px" }}>
                 {/* Use the Doughnut component */}
-                <h1>Placeholder</h1>
+                <h1 class="text-slate-50 ... ">
+                    Placeholder
+                </h1>
                 <Doughnut data={data} options={options} /><br/>
-                <h1>Placeholder</h1>
+                <h1 class="text-slate-50 ... ">
+                    Placeholder
+                </h1>
 
             </div>
         );

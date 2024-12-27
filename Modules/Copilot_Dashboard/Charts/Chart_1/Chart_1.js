@@ -41,9 +41,17 @@ ChartJS.register(ArcElement, Tooltip, Legend);
         return (
             <div style={{ width: "100%", height: "100%",padding:"30px" }}>
                 {/* Use the Doughnut component */}
-                <h1>Placeholder</h1>
-                <Doughnut data={data} options={options} /><br/>
-                <h1>Footer</h1>
+                <h1 class="text-slate-50 ... ">
+                    Placeholder
+                </h1>
+                <br/>
+                <br/>
+                <Doughnut data={data} options={options} />
+                <br/>
+                <br/>
+                <h1 class="text-slate-50 ... ">
+                    Footer
+                </h1>
             </div>
         );
     }

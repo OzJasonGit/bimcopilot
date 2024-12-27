@@ -50,11 +50,17 @@ export default class Chart_3 extends Component {
         return (
             <div style={{ width: "100%", height: "450px", padding:"30px", display:"grid", justifyItems:"end" }}>
                 {/* Use the Bar component */}
-                <h1>Placeholder</h1>
+                <h1 class="text-slate-50 ... ">
+                    Placeholder
+                </h1>
+                <br/>
                 <br/>
                 <Bar data={data} options={options} style={{ width:"100%"}}/>
                 <br/>
-                <h1>Placeholder</h1>
+                <br/>
+                <h1 class="text-slate-50 ... ">
+                    Placeholder
+                </h1>
             </div>
         );
     }
