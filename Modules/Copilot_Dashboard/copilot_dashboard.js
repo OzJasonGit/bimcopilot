@@ -80,7 +80,8 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                      height: "100%"
                      }}>
 
-                        <div id={styles.CHARTS_1} class="rounded-xl ... bg-stone-300" style={{
+                        <div id={styles.CHARTS_1} class="rounded-xl ... " style={{
+                            backgroundColor: "#171717",
                             position: "relative",
                             gridArea: "CHART_1",
                             overflow: "hidden", 
@@ -91,6 +92,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         </div>
 
                         <div id={styles.CHARTS_2} class="rounded-xl ... bg-stone-300" style={{
+                            backgroundColor: "#171717",
                             position: "relative",
                             gridArea: "CHART_2",
                             overflow: "hidden", 
@@ -103,6 +105,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
 
                 <div id={styles.CHARTS_3} class="rounded-xl ... bg-stone-300" style={{
+                    backgroundColor: "#171717",
                     position: "relative",
                     gridArea: "CHARTS_III",
                     overflow: "hidden", 
@@ -115,6 +118,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
 
                 <div id={styles.CHARTS_4} class="rounded-xl ... bg-stone-300" style={{
+                    backgroundColor: "#171717",
                     position: "relative",
                     gridArea: "CHARTS_IIII",
                     overflow: "hidden", 
@@ -126,7 +130,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
 
 
-                <div id={styles.CHARTS_CONTAINER_2}  style={{
+                <div id={styles.CHARTS_CONTAINER_2}  style={{               
                     position: "relative",
                     gridArea: "CHARTS_V",
                     overflow: "hidden", 
@@ -135,6 +139,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     }}>
 
                         <div id={styles.CHARTS_5} class="rounded-xl ... bg-stone-300" style={{
+                            backgroundColor: "#171717",
                             position: "relative",
                             gridArea: "CHARTS_5",
                             overflow: "hidden", 
@@ -145,6 +150,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         </div>
 
                         <div id={styles.CHARTS_5} class="rounded-xl ... bg-stone-300" style={{
+                            backgroundColor: "#171717",
                             position: "relative",
                             gridArea: "CHARTS_6",
                             overflow: "hidden", 

@@ -6,7 +6,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 
-import { DoughnutController } from "chart.js";
+
 
 
 import { Chart as 
@@ -15,7 +15,7 @@ import { Chart as
     Tooltip,
     Legend
  } from "chart.js";
-import { borderColor } from "chart.js";
+
 
 
  ChartJS.register(
