@@ -62,6 +62,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         paddingBottom: "30px",
                         paddingTop: "30px" 
                         }}>
+                            
                     <div class="rounded-xl ..." style={{
                         position: "relative",                        
                         overflow: "hidden",  
