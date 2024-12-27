@@ -141,28 +141,28 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                     <div style={{gridArea:"PROJECT_TITLE"}}>
                         <h3 id={styles._H3}                   
-                            class="text-slate-50 ... ">PROJECT TITLE
+                            class="text-slate-50 ... ">PROJECT TITLE:
                         </h3>
                     </div>
                     
                     <div style={{gridArea:"PROJECT_LOCATION_TITLE"}}>
                         <h3 id={styles._H3}
                             class="text-slate-50 ... "
-                            >PROJECT LOCATION
+                            >PROJECT LOCATION:
                         </h3>
                     </div>
 
                     <div style={{gridArea:"PROJECT_BUDGET_TITLE"}}>
                         <h3 id={styles._H3}
                         class="text-slate-50 ... "
-                        >BUDGET
+                        >BUDGET:
                         </h3>
                     </div>
                     
                     <div style={{gridArea:"PROJECT_CLIENT_TITLE"}}>
                         <h3 id={styles._H3}
                         class="text-slate-50 ... "
-                        >CLIENT
+                        >CLIENT:
                         </h3>
                     </div>
                    
@@ -176,7 +176,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                 <div id={styles.CHARTS_4} class="rounded-xl ... bg-stone-300" style={{
                     backgroundColor: "#171717",
                     position: "relative",
-                    gridArea: "CHARTS_IIII",
+                    gridArea: "CHARTS_VI",
                     overflow: "hidden", 
                     width: "100%",
                     height: "450px"
