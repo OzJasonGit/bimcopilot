@@ -143,9 +143,11 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     <div style={{gridArea:"PROJECT_TITLE"}}>
                         <h3 id={styles._H3}                   
                             class="text-slate-50 ... font-avant_garde_bold ..."
-                            >Project Title: <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
-                                                The Lion Club
-                                            </h2>
+                            >Project Title: 
+                            <br/>
+                            <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
+                                The Lion Club
+                            </h2>
                         </h3>
                     </div>
                     
