@@ -68,7 +68,7 @@ export default class Chart_6 extends Component {
             <div style={{ width: "100%", height: "100%", padding:"30px" }}>
                 {/* Use the Line component */}
                 <h3 id={styles._H3}
-                    class="text-slate-50 ... ">
+                    class="text-slate-50 ... font-avant_garde_bold ...">
                     Placeholder
                 </h3>
                 <br/>
@@ -77,7 +77,7 @@ export default class Chart_6 extends Component {
                 <br/>
                 <br/>
                 <h3 id={styles._H3}
-                    class="text-slate-50 ... ">
+                    class="text-slate-50 ... font-avant_garde_bold ...">
                     Placeholder
                 </h3>
             </div>
