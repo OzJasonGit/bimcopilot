@@ -53,21 +53,31 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
         <div class={styles.grid_0_main_image}>
             <div id={styles.MAIN_IMAGE_GRID_HOLDER}>
 
-                <div class="rounded-xl ..." style={{
-                     position: "relative",
-                     gridArea: "IMAGE",
-                     overflow: "hidden",  
-                     }}>
-                    <iframe
-                    
-                    style={{
-                     position: "relative",
-                     gridArea: "IMAGE",
-                     overflow: "hidden", 
-                     height: "100%", 
-                     }}
-                    src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true" width="100%" frameborder="0"></iframe>   
+                
+                <div style={{
+                        position: "relative",
+                        gridArea: "IMAGE",
+                        overflow: "hidden", 
+                        paddingRight: "30px",
+                        paddingBottom: "30px",
+                        paddingTop: "30px" 
+                        }}>
+                    <div class="rounded-xl ..." style={{
+                        position: "relative",                        
+                        overflow: "hidden",  
+                        }}>
+                        <iframe
+                        
+                        style={{
+                        position: "relative",
+                        gridArea: "IMAGE",
+                        overflow: "hidden", 
+                        height: "100%", 
+                        }}
+                        src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true" width="100%" frameborder="0"></iframe>   
+                    </div>
                 </div>
+                
 
 
 
@@ -127,7 +137,8 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     height: "auto"
                     }}>
                     <h3 id={styles._H3}
-                        style={{gridArea:"PROJECT_TITLE"}}>PROJECT TITLE</h3>
+                        style={{gridArea:"PROJECT_TITLE"}}
+                        class=" " >PROJECT TITLE</h3>
                     <h3 id={styles._H3}
                         style={{gridArea:"PROJECT_LOCATION_TITLE"}}>PROJECT LOCATION</h3>
                     <h3 id={styles._H3}
