@@ -60,7 +60,7 @@ export default class Chart_1 extends Component {
             <div style={{ width: "100%", height: "100%", padding:"30px"}}>
                 {/* Use the Bubble component */}
                 <h1>Placeholder</h1>
-                <Bubble data={data} options={options} /><br/>
+                <Bubble data={data} options={options} style={{ width:"100%"}}/><br/>
                 <h1>Placeholder</h1>
 
             </div>
