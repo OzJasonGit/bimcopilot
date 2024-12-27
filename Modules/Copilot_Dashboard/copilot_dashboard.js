@@ -13,11 +13,12 @@ import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Chart_1 from "./Charts/Chart_1/Chart_1";
-import Chart_2 from "./Charts/Chart_2/Chart_2"
+import Chart_2 from "./Charts/Chart_2/Chart_2";
 import Chart_3 from './Charts/Chart_3/Chart_3';
 import Chart_4 from './Charts/Chart_4/Chart_4';
 import Chart_5 from './Charts/Chart_5/Chart_5';
-import Chart_6 from './Charts/Chart_6/Chart_6'
+import Chart_6 from './Charts/Chart_6/Chart_6';
+import Chart_7 from './Charts/Chart_7/Chart_7';
 import Services_1 from "../../components/services_1/services_black";
 
 import Link from "next/link";
@@ -214,6 +215,17 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             height: "450px",                    
                             }}>
                                 <Chart_6/>
+                        </div>
+
+                        <div id={styles.CHARTS_5} class="rounded-xl ... bg-stone-300" style={{
+                            backgroundColor: "#171717",
+                            position: "relative",
+                            gridArea: "CHARTS_6",
+                            overflow: "hidden", 
+                            width: "100%",
+                            height: "450px",                    
+                            }}>
+                                <Chart_7/>
                         </div>
 
                 </div>
