@@ -5,7 +5,7 @@ import { Chart as ChartJS, BarElement, Tooltip, Legend, CategoryScale, LinearSca
 // Register Chart.js components
 ChartJS.register(BarElement, Tooltip, Legend, CategoryScale, LinearScale);
 
-export default class Chart_1 extends Component {
+export default class Chart_3 extends Component {
     render() {
         const data = {
             labels: ['January', 'February', 'March', 'April'], // X-axis labels
