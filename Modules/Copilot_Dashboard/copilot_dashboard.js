@@ -110,7 +110,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     gridArea: "CHARTS_III",
                     overflow: "hidden", 
                     width: "100%",
-                    height: "320px"
+                    height: "auto"
                     }}>
                     <Chart_3/>
                 </div>
