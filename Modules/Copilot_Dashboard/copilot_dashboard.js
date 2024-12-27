@@ -64,7 +64,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                      position: "relative",
                      gridArea: "IMAGE",
                      overflow: "hidden", 
-                     height: "700px", 
+                     height: "100%", 
                      }}
                     src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true" width="100%" frameborder="0"></iframe>   
                 </div>

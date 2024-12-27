@@ -18,17 +18,6 @@ import { Chart as
 
 
 
- ChartJS.register(
-    ArcElement,
-    Tooltip,
-    Legend
-
- );
-
-
-
-
-
 
 
 
