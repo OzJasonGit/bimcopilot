@@ -3,6 +3,7 @@ import { Bubble } from "react-chartjs-2"; // Import Bubble from react-chartjs-2
 import { Chart as ChartJS, BubbleController, Tooltip, Legend, PointElement } from "chart.js";
 
 import styles from './Chart_4.module.css';
+import { height } from "@mui/system";
 
 // Register Chart.js components
 ChartJS.register(BubbleController, Tooltip, Legend, PointElement);
@@ -66,15 +67,14 @@ export default class Chart_4 extends Component {
                     Placeholder
                 </h3>
                 <br/>
-                <br/>
-                <Bubble data={data} options={options} style={{ width:"100%"}}/>
-                <br/>
-                <br/>
+                <div style={{ width: "100%", height: "600px"}}>
+                 <Bubble data={data} options={options} style={{ width:"100%", height:"100%"}}/>
+                </div>            
+                <br/>               
                 <h3 id={styles._H3}
                     class="text-slate-50 ... font-avant_garde_bold ...">
                     Placeholder
                 </h3>
-
             </div>
         );
     }

@@ -143,28 +143,33 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     <div style={{gridArea:"PROJECT_TITLE"}}>
                         <h3 id={styles._H3}                   
                             class="text-slate-50 ... font-avant_garde_bold ..."
-                            >Project Title:
+                            >Project Title: <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
+                                                The Lion Club
+                                            </h2>
                         </h3>
                     </div>
                     
                     <div style={{gridArea:"PROJECT_LOCATION_TITLE"}}>
                         <h3 id={styles._H3}
                             class="text-slate-50 ... font-avant_garde_bold ..."
-                            >Project Location:
+                            >Project Location: <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
+                                               </h2>
                         </h3>
                     </div>
 
                     <div style={{gridArea:"PROJECT_BUDGET_TITLE"}}>
                         <h3 id={styles._H3}
                             class="text-slate-50 ... font-avant_garde_bold ..."
-                            >Budget:
+                            >Budget: <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
+                                     </h2>
                         </h3>
                     </div>
                     
                     <div style={{gridArea:"PROJECT_CLIENT_TITLE"}}>
                         <h3 id={styles._H3}
                             class="text-slate-50 ... font-avant_garde_bold ..."
-                            >Client:
+                            >Client: <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
+                                     </h2>
                         </h3>
                     </div>
                    
