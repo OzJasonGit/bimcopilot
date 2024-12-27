@@ -9,17 +9,6 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 
 
-import { Chart as 
-    ChartJS,
-    ArcElement,
-    Tooltip,
-    Legend
- } from "chart.js";
-
-
-
-
-
 
  export default class Chart_1 extends Component {
 
