@@ -41,7 +41,11 @@ export default class Chart_2 extends Component {
                     class="text-slate-50 ... ">
                     Placeholder
                 </h3>
-                <Doughnut data={data} options={options} /><br/>
+                <br/>
+                <br/>
+                <Doughnut data={data} options={options} />
+                <br/>
+                <br/>
                 <h3 id={styles._H3}
                     class="text-slate-50 ... ">
                     Placeholder
