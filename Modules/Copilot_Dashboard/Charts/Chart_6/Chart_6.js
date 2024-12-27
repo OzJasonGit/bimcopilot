@@ -9,7 +9,7 @@ import {
     PointElement,
 } from "chart.js";
 
-import styles from './Chart_7.module.css';
+import styles from './Chart_6.module.css';
 
 // Register Chart.js components
 ChartJS.register(LineElement, PointElement, Tooltip, Legend, RadialLinearScale, PointElement);
