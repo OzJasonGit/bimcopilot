@@ -213,7 +213,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             gridArea: "CHARTS_6",
                             overflow: "hidden", 
                             width: "100%",
-                            height: "450px",                    
+                            height: "600px",                    
                             }}>
                                 <Chart_6/>
                         </div>
@@ -224,7 +224,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             gridArea: "CHARTS_7",
                             overflow: "hidden", 
                             width: "100%",
-                            height: "450px",                    
+                            height: "600px",                    
                             }}>
                                 <Chart_7/>
                         </div>
