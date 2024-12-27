@@ -142,7 +142,8 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                     <div style={{gridArea:"PROJECT_TITLE"}}>
                         <h3 id={styles._H3}                   
-                            class="text-slate-50 ... font-avant_garde_bold ...">Project Title:
+                            class="text-slate-50 ... font-avant_garde_bold ..."
+                            >Project Title:
                         </h3>
                     </div>
                     
@@ -155,15 +156,15 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                     <div style={{gridArea:"PROJECT_BUDGET_TITLE"}}>
                         <h3 id={styles._H3}
-                        class="text-slate-50 ... font-avant_garde_bold ..."
-                        >Budget:
+                            class="text-slate-50 ... font-avant_garde_bold ..."
+                            >Budget:
                         </h3>
                     </div>
                     
                     <div style={{gridArea:"PROJECT_CLIENT_TITLE"}}>
                         <h3 id={styles._H3}
-                        class="text-slate-50 ... font-avant_garde_bold ..."
-                        >Client:
+                            class="text-slate-50 ... font-avant_garde_bold ..."
+                            >Client:
                         </h3>
                     </div>
                    
@@ -281,50 +282,6 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_scroll}>
             <div id={styles.BOUGHT_TOGETHER_GRID}> 
-
-                <div id={styles.BOUGHT_TOGETHER_BLOCK}>
-                    <div id={styles.BOUGHT_TITLE_HOLDER}>
-                        <h3 id={styles._H3} class="text-4xl ... text-stone-400 ... font-avant_garde_bold">
-                            Current Listings <br/>                           
-                        </h3>
-                    </div>
-
-                    <div id={styles.BOUGHT_IMAGE_HOLDER}>
-
-                        <div class="rounded-lg ..." id={styles.SALES_IMAGE_A}>
-                            {storiesSolo_1.map((story, index) => {
-                                  return (                      
-                                <Image
-                                alt="Picture of the author"
-                                key={story._id}
-                                width={500}
-                                height={500}
-                                src={story.image}
-                                style={{
-                                position: "absolute",
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                                }}/>                         
-                            )})} 
-                        </div>  
-
-                        <div  id={styles.SALES_TEXT_HOLDER}
-                              style={{
-                                position: "relative",
-                                width: "100%",
-                                height: "100%",
-                                gridArea: "SALES_TEXT_HOLDER",                               
-                                }}>
-
-                                    
-                        </div>
-
-                    </div>  
-                </div>
-
-
-                
 
                 <div id={styles.PRODUCT_DESCRIPTION}>
                     <div id={styles.P_TITLE}>
