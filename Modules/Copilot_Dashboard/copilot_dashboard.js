@@ -58,14 +58,15 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         position: "relative",
                         gridArea: "IMAGE",
                         overflow: "hidden", 
-                        paddingRight: "30px",
-                        paddingBottom: "30px",
-                        paddingTop: "30px" 
+                        paddingRight: "40px",
+                        paddingBottom: "40px",
+                        paddingTop: "40px" 
                         }}>
-                            
+
                     <div class="rounded-xl ..." style={{
                         position: "relative",                        
                         overflow: "hidden",  
+                        height: "100%",
                         }}>
                         <iframe
                         
