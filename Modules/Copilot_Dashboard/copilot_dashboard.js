@@ -207,7 +207,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 <Chart_5/>
                         </div>
 
-                        <div id={styles.CHARTS_5} class="rounded-xl ... bg-stone-300" style={{
+                        <div id={styles.CHARTS_6} class="rounded-xl ... bg-stone-300" style={{
                             backgroundColor: "#171717",
                             position: "relative",
                             gridArea: "CHARTS_6",
@@ -218,7 +218,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 <Chart_6/>
                         </div>
 
-                        <div id={styles.CHARTS_5} class="rounded-xl ... bg-stone-300" style={{
+                        <div id={styles.CHARTS_7} class="rounded-xl ... bg-stone-300" style={{
                             backgroundColor: "#171717",
                             position: "relative",
                             gridArea: "CHARTS_6",
