@@ -241,42 +241,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
 
 
-      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-        <div class={styles.grid_0_main_image}>
-            <div id={styles.COMMUNITIES_HOLDER}>
-
-                <div class="rounded-xl ..." style={{
-                     position: "relative",
-                     gridArea: "COMMUNITIES",
-                     overflow: "hidden",  
-                     }}>
-                    <div style={{
-                        position: "relative",
-                        width: "100%",
-                        height: "300px",                                      
-                        }} class="rounded-xl ..." id={styles.COMMUNITIES}>
-                            {storiesSolo_2.map((story, index) => {
-                                return (                
-                                <Image
-                                alt="Picture of the author"
-                                key={story._id}
-                                width={500}
-                                height={500}
-                                src={story.image}
-                                style={{
-                                position: "absolute",
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                                }}/>              
-                            )})}
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-      </section>
-
+      
 
       
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
