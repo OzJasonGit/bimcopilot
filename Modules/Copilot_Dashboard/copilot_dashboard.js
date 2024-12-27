@@ -138,15 +138,34 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     width: "100%",
                     height: "auto"
                     }}>
-                    <h3 id={styles._H3}
-                        style={{gridArea:"PROJECT_TITLE"}}
-                        class=" " >PROJECT TITLE</h3>
-                    <h3 id={styles._H3}
-                        style={{gridArea:"PROJECT_LOCATION_TITLE"}}>PROJECT LOCATION</h3>
-                    <h3 id={styles._H3}
-                        style={{gridArea:"PROJECT_BUDGET_TITLE"}}>BUDGET</h3>
-                    <h3 id={styles._H3}
-                        style={{gridArea:"PROJECT_CLIENT_TITLE"}}>CLIENT</h3>
+
+                    <div style={{gridArea:"PROJECT_TITLE"}}>
+                        <h3 id={styles._H3}                   
+                            class="text-slate-50 ... ">PROJECT TITLE
+                        </h3>
+                    </div>
+                    
+                    <div style={{gridArea:"PROJECT_LOCATION_TITLE"}}>
+                        <h3 id={styles._H3}
+                            class="text-slate-50 ... "
+                            >PROJECT LOCATION
+                        </h3>
+                    </div>
+
+                    <div style={{gridArea:"PROJECT_BUDGET_TITLE"}}>
+                        <h3 id={styles._H3}
+                        class="text-slate-50 ... "
+                        >BUDGET
+                        </h3>
+                    </div>
+                    
+                    <div style={{gridArea:"PROJECT_CLIENT_TITLE"}}>
+                        <h3 id={styles._H3}
+                        class="text-slate-50 ... "
+                        >CLIENT
+                        </h3>
+                    </div>
+                   
 
                 </div>
 

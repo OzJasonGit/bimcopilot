@@ -223,7 +223,7 @@
 
 #PROJECT_TEXT {
   grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto;
   grid-row-gap: 20px;
   grid-column-gap: 20px;
   grid-template-areas:
@@ -231,7 +231,6 @@
       "PROJECT_LOCATION_TITLE PROJECT_LOCATION"
       "PROJECT_BUDGET_TITLE BUDGET_TITLE"
       "PROJECT_CLIENT_TITLE PROJECT_CLIENT";
-
 }
 
 
