@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2"; // Import Doughnut from react-chartjs-2
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
+import styles from './Chart_1.module.css';
+
 // Register Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -41,17 +43,19 @@ ChartJS.register(ArcElement, Tooltip, Legend);
         return (
             <div style={{ width: "100%", height: "100%",padding:"30px" }}>
                 {/* Use the Doughnut component */}
-                <h1 class="text-slate-50 ... ">
+                <h3 id={styles._H3}
+                    class="text-slate-50 ... ">
                     Placeholder
-                </h1>
+                </h3>
                 <br/>
                 <br/>
                 <Doughnut data={data} options={options} />
                 <br/>
                 <br/>
-                <h1 class="text-slate-50 ... ">
+                <h3 id={styles._H3}
+                    class="text-slate-50 ... ">
                     Footer
-                </h1>
+                </h3>
             </div>
         );
     }

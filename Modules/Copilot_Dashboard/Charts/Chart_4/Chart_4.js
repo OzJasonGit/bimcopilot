@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import { Bubble } from "react-chartjs-2"; // Import Bubble from react-chartjs-2
 import { Chart as ChartJS, BubbleController, Tooltip, Legend, PointElement } from "chart.js";
 
+import styles from './Chart_4.module.css';
+
 // Register Chart.js components
 ChartJS.register(BubbleController, Tooltip, Legend, PointElement);
 
-export default class Chart_1 extends Component {
+export default class Chart_4 extends Component {
     render() {
         const data = {
             datasets: [
@@ -59,13 +61,19 @@ export default class Chart_1 extends Component {
         return (
             <div style={{ width: "100%", height: "100%", padding:"30px"}}>
                 {/* Use the Bubble component */}
-                <h1 class="text-slate-50 ... ">
+                <h3 id={styles._H3}
+                    class="text-slate-50 ... ">
                     Placeholder
-                </h1>
-                <Bubble data={data} options={options} style={{ width:"100%"}}/><br/>
-                <h1 class="text-slate-50 ... ">
+                </h3>
+                <br/>
+                <br/>
+                <Bubble data={data} options={options} style={{ width:"100%"}}/>
+                <br/>
+                <br/>
+                <h3 id={styles._H3}
+                    class="text-slate-50 ... ">
                     Placeholder
-                </h1>
+                </h3>
 
             </div>
         );

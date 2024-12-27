@@ -10,10 +10,13 @@ import {
     PointElement,
 } from "chart.js";
 
+import styles from './Chart_6.module.css';
+
+
 // Register Chart.js components
 ChartJS.register(LineElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement);
 
-export default class Chart_1 extends Component {
+export default class Chart_6 extends Component {
     render() {
         const data = {
             labels: ['January', 'February', 'March', 'April'], // X-axis labels
@@ -64,17 +67,19 @@ export default class Chart_1 extends Component {
         return (
             <div style={{ width: "100%", height: "100%", padding:"30px" }}>
                 {/* Use the Line component */}
-                <h1 class="text-slate-50 ... ">
+                <h3 id={styles._H3}
+                    class="text-slate-50 ... ">
                     Placeholder
-                </h1>
+                </h3>
                 <br/>
                 <br/>
                 <Line data={data} options={options} />
                 <br/>
                 <br/>
-                <h1 class="text-slate-50 ... ">
+                <h3 id={styles._H3}
+                    class="text-slate-50 ... ">
                     Placeholder
-                </h1>
+                </h3>
             </div>
         );
     }

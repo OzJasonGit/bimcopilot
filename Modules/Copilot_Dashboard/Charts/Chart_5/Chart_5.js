@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { PolarArea } from "react-chartjs-2"; // Import PolarArea from react-chartjs-2
+
+import styles from './Chart_5.module.css';
+
 import {
     Chart as ChartJS,
     RadialLinearScale,
@@ -11,7 +14,7 @@ import {
 // Register Chart.js components
 ChartJS.register(RadialLinearScale, Tooltip, Legend, ArcElement);
 
-export default class Chart_1 extends Component {
+export default class Chart_5 extends Component {
     render() {
         const data = {
             labels: ['Category 1', 'Category 2', 'Category 3', 'Category 4'], // Categories for each sector
@@ -51,17 +54,19 @@ export default class Chart_1 extends Component {
         return (
             <div style={{ width: "100%", height: "100%",padding:"30px"}}>
                 {/* Use the PolarArea component */}
-                <h1 class="text-slate-50 ... ">
+                <h3 id={styles._H3}
+                    class="text-slate-50 ... ">
                     Placeholder
-                </h1>
+                </h3>
                 <br/>
                 <br/>
                 <PolarArea data={data} options={options} />
                 <br/>
                 <br/>
-                <h1 class="text-slate-50 ... ">
+                <h3 id={styles._H3}
+                    class="text-slate-50 ... ">
                     Placeholder
-                </h1>
+                </h3>
 
             </div>
         );

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Bar } from "react-chartjs-2"; // Import Bar from react-chartjs-2
 import { Chart as ChartJS, BarElement, Tooltip, Legend, CategoryScale, LinearScale } from "chart.js";
 
+import styles from './Chart_3.module.css';
+
 // Register Chart.js components
 ChartJS.register(BarElement, Tooltip, Legend, CategoryScale, LinearScale);
 
@@ -50,17 +52,19 @@ export default class Chart_3 extends Component {
         return (
             <div style={{ width: "100%", height: "450px", padding:"30px", display:"grid", justifyItems:"end" }}>
                 {/* Use the Bar component */}
-                <h1 class="text-slate-50 ... ">
+                <h3 id={styles._H3}
+                    class="text-slate-50 ... ">
                     Placeholder
-                </h1>
+                </h3>
                 <br/>
                 <br/>
                 <Bar data={data} options={options} style={{ width:"100%"}}/>
                 <br/>
                 <br/>
-                <h1 class="text-slate-50 ... ">
+                <h3 id={styles._H3}
+                    class="text-slate-50 ... ">
                     Placeholder
-                </h1>
+                </h3>
             </div>
         );
     }
