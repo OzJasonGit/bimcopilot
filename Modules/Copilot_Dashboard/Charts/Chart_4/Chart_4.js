@@ -81,7 +81,7 @@ export default class Chart_4 extends Component {
         return (
             
                                  
-                <div style={{ width: "100%", height: "700px", justifyItems:"right"}}>
+                <div style={{ width: "100%", height: "700px", justifyItems:"right", position:"relative", left:"-20px"}}>
                  <Bubble data={data} options={options} style={{ width:"100%", height:"100%", position:"relative", }}/>
                 </div>            
                                                      
