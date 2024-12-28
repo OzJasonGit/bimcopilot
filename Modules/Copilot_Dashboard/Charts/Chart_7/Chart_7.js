@@ -80,6 +80,12 @@ export default class Chart_7 extends Component {
                         }
                 },
             },
+
+            layout: {
+                    padding: {
+                    left: 30 // Add padding around the chart content to avoid overlap with legend
+                }
+            }
         };
 
         return (
