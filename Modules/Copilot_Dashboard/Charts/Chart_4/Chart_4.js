@@ -45,7 +45,8 @@ export default class Chart_4 extends Component {
                     legend: {
                         position: 'left', // Position of legend
                         labels: {
-                        padding: 40, // Add padding between legend items
+                        paddingright: 40, // Add padding between legend items
+                        boxWidth: 70, // Size of the legend box
                         
                         
                     }
