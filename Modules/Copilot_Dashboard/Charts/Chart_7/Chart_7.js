@@ -4,7 +4,6 @@ import { Radar } from "react-chartjs-2"; // Import Bar from react-chartjs-2
 import { Chart as ChartJS, BarElement, Tooltip, Legend, CategoryScale, LinearScale } from "chart.js";
 
 import styles from './Chart_7.module.css';
-import { height } from "@mui/system";
 
 // Register Chart.js components
 ChartJS.register(BarElement, Tooltip, Legend, CategoryScale, LinearScale);
