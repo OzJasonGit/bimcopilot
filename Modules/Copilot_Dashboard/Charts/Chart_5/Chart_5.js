@@ -57,7 +57,7 @@ export default class Chart_3 extends Component {
         };
 
         return (
-            <div style={{ width: "100%", height: "500px", padding:"30px", display:"grid", justifyItems:"left" }}>
+            <div style={{ width: "100%", height: "500px", padding:"0px", display:"grid", justifyItems:"left" }}>
                 {/* Use the Bar component */}
                 <h3 id={styles._H3}
                     class="text-slate-50 ... font-avant_garde_bold ...">

@@ -80,7 +80,7 @@ export default class Chart_7 extends Component {
         };
 
         return (
-            <div style={{ width: "100%", height: "100%", padding:"30px" }}>
+            <div style={{ width: "100%", height: "100%", padding:"0px" }}>
                 {/* Use the Line component */}
                 <h3 id={styles._H3}
                     class="text-slate-50 ... font-avant_garde_bold ...">
