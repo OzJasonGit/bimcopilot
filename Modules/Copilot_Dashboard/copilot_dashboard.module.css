@@ -262,11 +262,11 @@
 
 #CHARTS_CONTAINER_2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-column-gap: 40px;
   grid-row-gap: 40px;
-  grid-template-areas: "CHARTS_5 CHARTS_6 CHARTS_7";
+  grid-template-areas: "CHARTS_5 CHARTS_7";
 }
 
 #COMMUNITIES_HOLDER {

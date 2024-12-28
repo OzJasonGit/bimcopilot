@@ -261,18 +261,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             height: "450px",                    
                             }}>
                                 <Chart_5/>
-                        </div>
-
-                        <div id={styles.CHARTS_6} class="" style={{
-                            backgroundColor: "#171717",
-                            position: "relative",
-                            gridArea: "CHARTS_6",
-                            overflow: "hidden", 
-                            width: "100%",
-                            height: "600px",                    
-                            }}>
-                                <Chart_6/>
-                        </div>
+                        </div>                        
 
                         <div id={styles.CHARTS_7} class="" style={{
                             backgroundColor: "#171717",
