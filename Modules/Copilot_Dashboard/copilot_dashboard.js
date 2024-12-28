@@ -432,7 +432,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                     width: "100%",
                                     height: "600px",                    
                                     }}>
-                                        <Chart_7/>
+                                        <Chart_5/>
                                 </div> 
 
                                  <div style={{gridArea: "FOOTER",
