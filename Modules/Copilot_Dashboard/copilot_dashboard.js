@@ -209,6 +209,8 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             Placeholder
                         </h3>
                     </div>
+                    
+                    <br/>
 
                     <div style={{ gridArea: "CHARTS",
                                     height: "auto",
@@ -216,7 +218,9 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 }}>
                         <Chart_4/>
                     </div>
-                    
+
+                    <br/>      
+
                     <div style={{ gridArea: "FOOTER",
                                     height: "auto",
                                     position: "relative",

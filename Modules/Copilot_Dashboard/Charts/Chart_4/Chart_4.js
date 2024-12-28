@@ -46,14 +46,20 @@ export default class Chart_4 extends Component {
                         position: 'left', // Position of legend
                         labels: {
                         paddingright: 40, // Add padding between legend items
-                        boxWidth: 70, // Size of the legend box
-                        
-                        
+                        boxWidth: 70, // Size of the legend box                                             
                     }
+
+                    
                 },
                 tooltip: {
                     enabled: true, // Enable tooltips
                 },
+            },
+
+            layout: {
+                padding: {
+                    left: 30 // Add padding around the chart content to avoid overlap with legend
+                }
             },
             scales: {
                 x: {
