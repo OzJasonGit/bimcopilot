@@ -42,9 +42,13 @@ export default class Chart_4 extends Component {
         const options = {
             responsive: true,
             plugins: {
-                legend: {
-                    position: 'left',
-                    paddingright: "40px" // Position of legend
+                    legend: {
+                        position: 'left', // Position of legend
+                        labels: {
+                        padding: 40, // Add padding between legend items
+                        
+                        
+                    }
                 },
                 tooltip: {
                     enabled: true, // Enable tooltips
