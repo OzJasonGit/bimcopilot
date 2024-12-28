@@ -61,6 +61,9 @@ export default class Chart_7 extends Component {
             plugins: {
                 legend: {
                     position: 'left', // Position of the legend
+                    padding: {
+                        left: '100px' // Add padding around the chart content to avoid overlap with legend
+                }
                 },
                 tooltip: {
                     enabled: true, // Enable tooltips
@@ -83,7 +86,7 @@ export default class Chart_7 extends Component {
 
             layout: {
                     padding: {
-                    left: 30 // Add padding around the chart content to avoid overlap with legend
+                    left: '100px' // Add padding around the chart content to avoid overlap with legend
                 }
             }
         };
