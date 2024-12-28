@@ -237,12 +237,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
             
                 
-            <div>
-                <h3 id={styles._H3}
-                    class="text-slate-50 ... font-avant_garde_bold ...">
-                    Placeholder
-                </h3>
-            </div>
+            
 
 
                 
