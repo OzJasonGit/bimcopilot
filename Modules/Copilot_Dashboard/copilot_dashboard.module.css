@@ -221,6 +221,19 @@
 }
 
 
+
+
+#CHARTS_3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "HEADER"
+    "CHARTS"
+    "FOOTER"
+}
+
+
 #CHARTS_4 {
   display: grid;
   grid-template-columns: 1fr;
@@ -230,6 +243,9 @@
       "CHARTS"
       "FOOTER"
 }
+
+
+
 
 
 #PROJECT_TEXT {
@@ -262,7 +278,7 @@
 
 #CHARTS_CONTAINER_2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.75fr 1fr;
   grid-template-rows: auto;
   grid-column-gap: 40px;
   grid-row-gap: 40px;

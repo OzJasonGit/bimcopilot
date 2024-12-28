@@ -48,7 +48,7 @@ export default class Chart_6 extends Component {
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'top', // Position of the legend
+                    position: 'left', // Position of the legend
                 },
                 tooltip: {
                     enabled: true, // Enable tooltips
@@ -72,20 +72,8 @@ export default class Chart_6 extends Component {
 
         return (
             <div style={{ width: "100%", height: "100%", padding:"0px" }}>
-                {/* Use the Line component */}
-                <h3 id={styles._H3}
-                    class="text-slate-50 ... font-avant_garde_bold ...">
-                    Placeholder
-                </h3>
-                <br/>
-                <br/>
-                <Line data={data} options={options} />
-                <br/>
-                <br/>
-                <h3 id={styles._H3}
-                    class="text-slate-50 ... font-avant_garde_bold ...">
-                    Placeholder
-                </h3>
+                {/* Use the Line component */}                
+                <Line data={data} options={options} />              
             </div>
         );
     }
