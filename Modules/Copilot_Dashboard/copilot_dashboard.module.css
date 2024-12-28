@@ -221,6 +221,27 @@
 }
 
 
+#CHARTS_CONTAINER {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-areas:
+    "CHART_1"
+    "CHART_2";
+}
+
+#CHARTS_CONTAINER_2 {
+  display: grid;
+  grid-template-columns: 0.75fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  grid-template-areas: "CHARTS_5 CHARTS_7";
+}
+
+
 
 
 #CHARTS_3 {
@@ -245,6 +266,17 @@
 }
 
 
+#CHARTS_5 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "HEADER"
+    "CHARTS"
+    "FOOTER"
+}
+
+
 
 
 
@@ -265,25 +297,7 @@
 
 
 
-#CHARTS_CONTAINER {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  grid-template-areas:
-    "CHART_1"
-    "CHART_2";
-}
 
-#CHARTS_CONTAINER_2 {
-  display: grid;
-  grid-template-columns: 0.75fr 1fr;
-  grid-template-rows: auto;
-  grid-column-gap: 40px;
-  grid-row-gap: 40px;
-  grid-template-areas: "CHARTS_5 CHARTS_7";
-}
 
 #COMMUNITIES_HOLDER {
   position: relative;

@@ -306,7 +306,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 }}>
                         <h3 id={styles._H3}
                             class="text-slate-50 ... font-avant_garde_bold ...">
-                            Placeholder
+                            Header 
                         </h3>
                     </div>                   
                     <br/>
@@ -323,7 +323,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 }}>
                         <h3 id={styles._H3}
                             class="text-slate-50 ... font-avant_garde_bold ...">
-                            Placeholder
+                            Footer
                         </h3>
                     </div>
                     
@@ -358,11 +358,12 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                 <div id={styles.CHARTS_CONTAINER_2}  style={{               
                     position: "relative",
-                    gridArea: "CHARTS_V",
+                    gridArea: "CHARTS_5",
                     overflow: "hidden", 
                     width: "100%",
                     height: "100%"
                     }}>
+
 
                         <div id={styles.CHARTS_5} class="" style={{
                             backgroundColor: "#171717",
@@ -370,10 +371,66 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             gridArea: "CHARTS_5",
                             overflow: "hidden", 
                             width: "100%",
-                            height: "450px",                    
+                            height: "auto"
                             }}>
-                                <Chart_5/>
-                        </div>                        
+
+                                <div style={{gridArea: "HEADER",
+                                    height: "auto",
+                                    position: "relative",
+                                    }}>
+                                    <h3 id={styles._H3}
+                                        class="text-slate-50 ... font-avant_garde_bold ...">
+                                        Header
+                                    </h3>
+                                </div>
+
+                                <div id={styles.CHARTS_5} class="" style={{
+                                    backgroundColor: "#171717",
+                                    position: "relative",
+                                    gridArea: "CHARTS",
+                                    overflow: "hidden", 
+                                    width: "100%",
+                                    height: "600px",                    
+                                    }}>
+                                        <Chart_5/>
+                                </div> 
+
+                                 <div style={{gridArea: "FOOTER",
+                                    height: "auto",
+                                    position: "relative",
+                                    }}>
+                                    <h3 id={styles._H3}
+                                        class="text-slate-50 ... font-avant_garde_bold ...">
+                                        Footer
+                                    </h3>
+                                </div>
+                            
+                        </div>
+
+                        
+
+                          
+
+                       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                         <div id={styles.CHARTS_7} class="" style={{
                             backgroundColor: "#171717",
@@ -383,7 +440,20 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             width: "100%",
                             height: "600px",                    
                             }}>
-                                <Chart_7/>
+
+
+                        
+                            <div style={{ gridArea: "CHARTS",
+                                        height: "auto",
+                                        position: "relative",
+                                    }}>
+                                    <Chart_7/>
+                            </div>
+
+
+
+
+                                
                         </div>
 
                 </div>
