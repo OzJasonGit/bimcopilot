@@ -28,7 +28,23 @@
   display: grid;
   grid-column-gap: 0;
   grid-row-gap: 20px;
-  grid-template-rows: 0px auto 50px;
+  grid-template-rows: 0px auto 0px;
+  grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+  grid-template-areas:
+    ". .   .   .   .   .   ."
+    ". SUB SUB SUB . . ."
+    ". .   .   .   .   .   .";
+}
+
+.grid_0_scroll_2 {
+  position: relative;
+  width: 100%;
+  max-width: 1520px;
+  background-color: transparent;
+  display: grid;
+  grid-column-gap: 0;
+  grid-row-gap: 20px;
+  grid-template-rows: 0px auto 0px;
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
   grid-template-areas:
     ". .   .   .   .   .   ."
@@ -47,7 +63,7 @@
 #IMAGE_LAYER_1 {
   width: 100%;
   position: relative;
-  height: 600px;
+  height: 550px;
   display: grid;
   grid-column-gap: 30px;
   grid-row-gap: 0px;
@@ -62,15 +78,26 @@
   width: 100%;
   position: relative;
   grid-area: SUB;
-  height: 800px;
+  height: auto;
   display: grid;
   grid-column-gap: 30px;
   grid-row-gap: 0px;
   grid-template-columns: 100px 1fr 1fr 1fr 260px 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-    ". . IMAGE_1 IMAGE_1 IMAGE_1 ."
-    "IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 .";
+  grid-template-rows: auto;
+  grid-template-areas: "IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 .";
+}
+
+#IMAGE_LAYER_1_2 {
+  width: 100%;
+  position: relative;
+  grid-area: SUB;
+  height: auto;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 0px;
+  grid-template-columns: 100px 1fr 1fr 1fr 260px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". . IMAGE_1 IMAGE_1 IMAGE_1 .";
 }
 
 #IMAGE_LAYER_2 {
@@ -92,9 +119,9 @@
   z-index: 1;
 }
 
-#IMAGE_POST {
-  width: 105%;
-  left: -187.5px;
+#IMAGE_POST_2 {
+  width: 100%;
+  left: 0px;
 }
 
 #P_IMAGE_1 {
@@ -102,8 +129,26 @@
   grid-area: IMAGE_1;
   overflow: hidden;
   z-index: 1;
-  height: 400px;
-  top: 400px;
+  width: 100%;
+  height: 600px;
+  top: 0px;
+  display: grid;
+  grid-template-columns: 0px 1fr 0px;
+  grid-template-rows: 0px 1fr 0px;
+  grid-template-areas:
+    ". .  ."
+    ".  GRAPH ."
+    ". .  .";
+  margin-top: -300px;
+  padding-bottom: 50px;
+}
+
+#IMAGE_POST {
+  grid-area: GRAPH;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  position: relative;
 }
 
 #P_IMAGE_2 {
@@ -111,7 +156,7 @@
   grid-area: IMAGE_2;
   overflow: hidden;
   height: 800px;
-  top: -400px;
+  top: 0px;
 }
 
 #P_IMAGE_3 {
@@ -122,6 +167,22 @@
 
 @media all and (min-width: 960px) and (max-width: 1280px) {
   .grid_0_scroll {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas:
+      ". .  ."
+      ". SUB ."
+      ". .  .";
+  }
+
+  .grid_0_scroll_2 {
     position: relative;
     width: 100%;
     max-width: 1520px;
@@ -170,6 +231,22 @@
       ". .   .";
   }
 
+  .grid_0_scroll_2 {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    grid-template-rows: 0 auto 0;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas:
+      ". .   ."
+      ". SUB ."
+      ". .   .";
+  }
+
   #IMAGE_LAYER_1_1 {
     width: 100%;
     position: relative;
@@ -188,6 +265,22 @@
 
 @media all and (min-width: 0px) and (max-width: 480px) {
   .grid_0_scroll {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-rows: 0 auto 0;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas:
+      ". .   ."
+      ". SUB ."
+      ". .   .";
+  }
+
+  .grid_0_scroll_2 {
     position: relative;
     width: 100%;
     max-width: 1520px;

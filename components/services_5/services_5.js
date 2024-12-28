@@ -22,8 +22,8 @@ return (
 
                 <div id={styles.COLLAPSE_TITLE_2}>
                   <h2                 
-                        id={styles.TEXT_OUTLINE}
-                        class="text-left ... text-stone-50 ... font-avant_garde_bold">         
+                        id={styles._H2}
+                        class="text-left ... text-stone-700 ... font-avant_garde_bold">         
                         Services
                   </h2>
                 </div>
@@ -36,10 +36,10 @@ return (
                       id={styles._H3}
                       class="text-left ... text-stone-500 ... font-avant_garde_bold">
                         {" "}
-                        We are registered and seasoned architects with years of experience in BIM 
-                        (Building Information Modeling). We specialize in comprehensive BIM delivery 
-                        across all project stages. Our expertise lie in advanced LOD350 detail and 
-                        precision clash detection, ensuring seamless coordination between disciplines.
+                        
+                        We are expert architects specializing in cutting-edge BIM solutions powered by AI. 
+                        From concept to completion, we deliver precise LOD350 details 
+                        and AI-driven clash detection, ensuring flawless coordination across disciplines.
                         {" "}
                         <br/>
                         <br/>                                                                    

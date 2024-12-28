@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from "./clock.module.css";
 
 class Clock extends Component {
   constructor(props) {
@@ -26,9 +27,15 @@ class Clock extends Component {
 
   render() {
     return (
-        <div id="CLOCK"  class="text-center ...  text-slate-50  font-avant_garde_bold">
-        {this.state.time}
+
+      <div id="CLOCK"  
+             class="text-center ...  text-stone-200  font-avant_garde_bold"
+             style={{gridArea:"CLOCK"}}>
+        <h3 id={styles._H3}>
+          {this.state.time}
+        </h3>
       </div>
+     
     );
   }
 }

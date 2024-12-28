@@ -76,8 +76,7 @@ const Collapsed_2 = () => {
                                                 style={{ color: "rgb(68 64 60)", position: "relative", left: "0px" }}>
                                                 <li class="text-right ...">Now this is a story all about how, my life got flipped-turned upside down</li>
                                                 <li class="text-right ...">Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li class="text-right ...">Now this is a story all about how, my life got flipped-turned upside down</li>
-                                                <li class="text-right ...">Now this is a story all about how, my life got flipped-turned upside down</li>
+                                                
                                             </ul>
                                         </Collapse.Panel>
 

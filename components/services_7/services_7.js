@@ -15,6 +15,14 @@ import {
 } from "@/components/ui/breadcrumb"
 
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+
+
 
 export default class Services_6 extends Component {
 
@@ -42,34 +50,123 @@ export default class Services_6 extends Component {
 
                    <Breadcrumb>
                     <BreadcrumbList>
-                      
-                      <BreadcrumbItem>
-                        <BreadcrumbLink asChild>
-                          <Link href="/">Home</Link>
-                        </BreadcrumbLink>
+
+
+                      <TooltipProvider>
+                        <Tooltip>
+                            <TooltipTrigger asChild>
+                              <BreadcrumbLink asChild>
+                                <Link href="/docs/components">Home
+                                </Link>
+                              </BreadcrumbLink>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Add to library</p>
+                            </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+
+
+                      <BreadcrumbSeparator/>
+                          <BreadcrumbItem>
+                            <BreadcrumbEllipsis/>                    
+                          </BreadcrumbItem>
+                      <BreadcrumbSeparator/>
+
+
+                      <BreadcrumbItem>                     
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <BreadcrumbLink asChild>
+                                <Link href="/docs/components">Components
+                                </Link>                               
+                              </BreadcrumbLink>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Add to library</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>                                                                                   
                       </BreadcrumbItem>
 
 
                       <BreadcrumbSeparator/>
-                      <BreadcrumbItem>
-                        <BreadcrumbEllipsis/>
-                      
-                      </BreadcrumbItem>
+                          <BreadcrumbItem>
+                            <BreadcrumbEllipsis/>                    
+                          </BreadcrumbItem>
                       <BreadcrumbSeparator/>
+              
+
                       <BreadcrumbItem>
-                      
-                        <BreadcrumbLink asChild>
-                          <Link href="/docs/components">Components</Link>
-                        </BreadcrumbLink>
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <BreadcrumbLink asChild>
+                                <Link href="/docs/components">Breadcrumb
+                                </Link>                               
+                              </BreadcrumbLink>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Add to library</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
                       </BreadcrumbItem>
-                      <BreadcrumbSeparator />
+
+
+                      <BreadcrumbSeparator/>
+                          <BreadcrumbItem>
+                            <BreadcrumbEllipsis/>                    
+                          </BreadcrumbItem>
+                      <BreadcrumbSeparator/>
+
+
                       <BreadcrumbItem>
-                        <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <BreadcrumbLink asChild>
+                                <Link href="/docs/components">This is the Sparta
+                                </Link>                               
+                              </BreadcrumbLink>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Add to library</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
                       </BreadcrumbItem>
-                    </BreadcrumbList>
-                  </Breadcrumb>
-                </div>                 
-              </div> 
+
+
+                      <BreadcrumbSeparator/>
+                          <BreadcrumbItem>
+                            <BreadcrumbEllipsis/>                    
+                          </BreadcrumbItem>
+                      <BreadcrumbSeparator/>
+
+
+                      <BreadcrumbItem>
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <BreadcrumbLink asChild>
+                                <Link href="/docs/components">Luke I am your Father
+                                </Link>                               
+                              </BreadcrumbLink>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Add to library</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </BreadcrumbItem>
+
+                       
+                      </BreadcrumbList>
+                    </Breadcrumb>
+                  </div>                 
+                </div> 
                    
           </div>
       </section>
@@ -78,5 +175,6 @@ export default class Services_6 extends Component {
     )
   };
 };
+
 
 
