@@ -29,7 +29,9 @@ ChartJS.register(ArcElement, Tooltip, Legend);
         };
 
         const options = {
+           
             responsive: true,
+
             plugins: {
                 legend: {
                     position: 'left', // Legend at the top
@@ -38,7 +40,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
                     enabled: true, // Enable tooltips
                 },
             },
-
+            
             scales: {
                 x: {
                     beginAtZero: true, // X-axis starts at zero
@@ -53,6 +55,12 @@ ChartJS.register(ArcElement, Tooltip, Legend);
                         }
                 },
             },
+
+            layout: {
+                    padding: {
+                    left: 30 // Add padding around the chart content to avoid overlap with legend
+                }
+            }
         };
 
         return (
