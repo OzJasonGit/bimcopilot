@@ -85,7 +85,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
 
 
-                <div id={styles.CHARTS_CONTAINER} class="rounded-xl ..." style={{
+                <div id={styles.CHARTS_CONTAINER} class="" style={{
                      position: "relative",
                      gridArea: "CHARTS",
                      overflow: "hidden", 
@@ -93,7 +93,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                      height: "100%"
                      }}>
 
-                        <div id={styles.CHARTS_1} class="rounded-xl ... " style={{
+                        <div id={styles.CHARTS_1} class="" style={{
                             backgroundColor: "#171717",
                             position: "relative",
                             gridArea: "CHART_1",
@@ -104,7 +104,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                <Chart_1/>
                         </div>
 
-                        <div id={styles.CHARTS_2} class="rounded-xl ... bg-stone-300" style={{
+                        <div id={styles.CHARTS_2} class="" style={{
                             backgroundColor: "#171717",
                             position: "relative",
                             gridArea: "CHART_2",
@@ -117,7 +117,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                 </div>
 
 
-                <div id={styles.CHARTS_3} class="rounded-xl ... " style={{
+                <div id={styles.CHARTS_3} class="" style={{
                     backgroundColor: "#171717",
                     position: "relative",
                     gridArea: "CHARTS_III",
@@ -130,7 +130,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
 
 
-                <div id={styles.PROJECT_TEXT} class="rounded-xl ..." style={{
+                <div id={styles.PROJECT_TEXT} class="" style={{
                     display: "grid",
                     backgroundColor: "#171717",
                     position: "relative",
@@ -191,7 +191,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
 
 
-                <div id={styles.CHARTS_4} class="rounded-xl ... bg-stone-300" style={{
+                <div id={styles.CHARTS_4} class="" style={{
                     backgroundColor: "#171717",
                     position: "relative",
                     gridArea: "CHARTS_VI",
@@ -257,7 +257,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     height: "100%"
                     }}>
 
-                        <div id={styles.CHARTS_5} class="rounded-xl ... bg-stone-300" style={{
+                        <div id={styles.CHARTS_5} class="" style={{
                             backgroundColor: "#171717",
                             position: "relative",
                             gridArea: "CHARTS_5",
@@ -268,7 +268,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 <Chart_5/>
                         </div>
 
-                        <div id={styles.CHARTS_6} class="rounded-xl ... bg-stone-300" style={{
+                        <div id={styles.CHARTS_6} class="" style={{
                             backgroundColor: "#171717",
                             position: "relative",
                             gridArea: "CHARTS_6",
@@ -279,7 +279,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 <Chart_6/>
                         </div>
 
-                        <div id={styles.CHARTS_7} class="rounded-xl ... bg-stone-300" style={{
+                        <div id={styles.CHARTS_7} class="" style={{
                             backgroundColor: "#171717",
                             position: "relative",
                             gridArea: "CHARTS_7",
