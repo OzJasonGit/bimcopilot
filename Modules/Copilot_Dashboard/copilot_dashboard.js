@@ -294,8 +294,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                 <div id={styles.CHARTS_4} class="" style={{
                     backgroundColor: "#171717",
                     position: "relative",
-                    gridArea: "CHARTS_VI",
-                    overflow: "hidden", 
+                    gridArea: "CHARTS_VI",                   
                     width: "100%",
                     height: "auto"
                     }}>
