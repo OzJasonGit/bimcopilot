@@ -350,42 +350,13 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                 
             
-
-
-                
-
-
-
                 <div id={styles.CHARTS_CONTAINER_2}  style={{               
                     position: "relative",
-                    gridArea: "CHARTS_5",
+                    gridArea: "CHARTS_V",
                     overflow: "hidden", 
                     width: "100%",
                     height: "100%"
                     }}>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -434,26 +405,6 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         <div id={styles.CHARTS_7} class="" style={{
                             backgroundColor: "#171717",
                             position: "relative",
@@ -492,22 +443,10 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                         class="text-slate-50 ... font-avant_garde_bold ...">
                                         Footer
                                     </h3>
-                                </div>
-                            
+                                </div>                           
                         </div>
 
-                        
-
-                          
-
-                       
-
-
-
-
-
-
-
+            
                 </div>
 
                                 
