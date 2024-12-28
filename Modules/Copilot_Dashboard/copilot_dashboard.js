@@ -228,7 +228,8 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         </h3>
                         <br/>
                         <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
-                            140 Pitfield Street, Shoreditch, London, N1 6JR
+                            140 Pitfield Street, Shoreditch, <br/>
+                            London, N1 6JR
                         </h2>
                     </div>
 
