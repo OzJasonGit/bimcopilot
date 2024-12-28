@@ -143,36 +143,45 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     <div style={{gridArea:"PROJECT_TITLE"}}>
                         <h3 id={styles._H3}                   
                             class="text-slate-50 ... font-avant_garde_bold ..."
-                            >Project Title: 
-                            <br/>
-                            <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
-                                The Lion Club
-                            </h2>
+                            >Project Title:                                                  
                         </h3>
+                        <br/>
+                        <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
+                            The Lion Club
+                        </h2>
                     </div>
                     
                     <div style={{gridArea:"PROJECT_LOCATION_TITLE"}}>
                         <h3 id={styles._H3}
                             class="text-slate-50 ... font-avant_garde_bold ..."
-                            >Project Location: <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
-                                               </h2>
+                            >Project Location: 
                         </h3>
+                        <br/>
+                        <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
+                            The Lion Club
+                        </h2>
                     </div>
 
                     <div style={{gridArea:"PROJECT_BUDGET_TITLE"}}>
                         <h3 id={styles._H3}
                             class="text-slate-50 ... font-avant_garde_bold ..."
-                            >Budget: <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
-                                     </h2>
+                            >Budget: 
                         </h3>
+                        <br/>
+                        <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
+                            The Lion Club
+                        </h2>
                     </div>
                     
                     <div style={{gridArea:"PROJECT_CLIENT_TITLE"}}>
                         <h3 id={styles._H3}
                             class="text-slate-50 ... font-avant_garde_bold ..."
-                            >Client: <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
-                                     </h2>
+                            >Client: 
                         </h3>
+                        <br/>
+                        <h2 class="text-slate-50 ... font-avant_garde_bold ..." id={styles._H2}>
+                            The Lion Club
+                        </h2>
                     </div>
                    
 
