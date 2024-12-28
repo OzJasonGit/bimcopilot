@@ -3,7 +3,7 @@ import { Bubble } from "react-chartjs-2"; // Import Bubble from react-chartjs-2
 import { Chart as ChartJS, BubbleController, Tooltip, Legend, PointElement } from "chart.js";
 
 import styles from './Chart_4.module.css';
-import { height } from "@mui/system";
+import { height, padding } from "@mui/system";
 
 // Register Chart.js components
 ChartJS.register(BubbleController, Tooltip, Legend, PointElement);
@@ -43,7 +43,8 @@ export default class Chart_4 extends Component {
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'left', // Position of legend
+                    position: 'left',
+                    paddingright: "40px" // Position of legend
                 },
                 tooltip: {
                     enabled: true, // Enable tooltips
