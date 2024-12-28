@@ -4,6 +4,7 @@ import { Radar } from "react-chartjs-2"; // Import Bar from react-chartjs-2
 import { Chart as ChartJS, BarElement, Tooltip, Legend, CategoryScale, LinearScale } from "chart.js";
 
 import styles from './Chart_7.module.css';
+import { height } from "@mui/system";
 
 // Register Chart.js components
 ChartJS.register(BarElement, Tooltip, Legend, CategoryScale, LinearScale);
@@ -79,8 +80,8 @@ export default class Chart_3 extends Component {
         };
 
         return (
-            <div style={{ width: "100%", height: "auto", padding:"0px", display:"grid", justifyItems:"left" }}>           
-                <Radar data={data} options={options} style={{ width:"100%"}}/>               
+            <div style={{ width: "100%", height: "100%", padding:"0px", display:"grid", justifyItems:"left" }}>           
+                <Radar data={data} options={options} style={{ width:"100%", height:'100%'}}/>               
             </div>
         );
     }

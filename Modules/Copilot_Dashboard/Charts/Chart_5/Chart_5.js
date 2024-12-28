@@ -57,7 +57,7 @@ export default class Chart_3 extends Component {
         };
 
         return (
-            <div style={{ width: "100%", height: "auto", padding:"0px", display:"grid", justifyItems:"right" }}>           
+            <div style={{ width: "100%", height: "100%", padding:"0px", display:"grid", justifyItems:"right" }}>           
                 <Bar data={data} options={options} style={{ width:"100%"}}/>               
             </div>
         );
