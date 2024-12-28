@@ -57,21 +57,8 @@ export default class Chart_3 extends Component {
         };
 
         return (
-            <div style={{ width: "100%", height: "500px", padding:"0px", display:"grid", justifyItems:"left" }}>
-                {/* Use the Bar component */}
-                <h3 id={styles._H3}
-                    class="text-slate-50 ... font-avant_garde_bold ...">
-                    Placeholder
-                </h3>
-                <br/>
-                <br/>
-                <Bar data={data} options={options} style={{ width:"100%"}}/>
-                <br/>
-                <br/>
-                <h3 id={styles._H3}
-                    class="text-slate-50 ... font-avant_garde_bold ...">
-                    Placeholder
-                </h3>
+            <div style={{ width: "100%", height: "auto", padding:"0px", display:"grid", justifyItems:"left" }}>           
+                <Bar data={data} options={options} style={{ width:"100%"}}/>               
             </div>
         );
     }

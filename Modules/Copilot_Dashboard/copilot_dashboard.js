@@ -365,6 +365,30 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     }}>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         <div id={styles.CHARTS_5} class="" style={{
                             backgroundColor: "#171717",
                             position: "relative",
@@ -403,15 +427,13 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                         class="text-slate-50 ... font-avant_garde_bold ...">
                                         Footer
                                     </h3>
-                                </div>
-                            
+                                </div>                            
                         </div>
 
-                        
 
-                          
 
-                       
+
+
 
 
 
@@ -438,23 +460,53 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             gridArea: "CHARTS_7",
                             overflow: "hidden", 
                             width: "100%",
-                            height: "600px",                    
+                            height: "auto"
                             }}>
 
+                                <div style={{gridArea: "HEADER",
+                                    height: "auto",
+                                    position: "relative",
+                                    }}>
+                                    <h3 id={styles._H3}
+                                        class="text-slate-50 ... font-avant_garde_bold ...">
+                                        Header
+                                    </h3>
+                                </div>
+
+                                <div id={styles.CHARTS_7} class="" style={{
+                                    backgroundColor: "#171717",
+                                    position: "relative",
+                                    gridArea: "CHARTS",
+                                    overflow: "hidden", 
+                                    width: "100%",
+                                    height: "600px",                    
+                                    }}>
+                                        <Chart_7/>
+                                </div> 
+
+                                 <div style={{gridArea: "FOOTER",
+                                    height: "auto",
+                                    position: "relative",
+                                    }}>
+                                    <h3 id={styles._H3}
+                                        class="text-slate-50 ... font-avant_garde_bold ...">
+                                        Footer
+                                    </h3>
+                                </div>
+                            
+                        </div>
 
                         
-                            <div style={{ gridArea: "CHARTS",
-                                        height: "auto",
-                                        position: "relative",
-                                    }}>
-                                    <Chart_7/>
-                            </div>
+
+                          
+
+                       
 
 
 
 
-                                
-                        </div>
+
+
 
                 </div>
 
