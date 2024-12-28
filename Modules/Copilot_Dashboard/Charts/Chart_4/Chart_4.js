@@ -43,7 +43,7 @@ export default class Chart_4 extends Component {
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'top', // Position of legend
+                    position: 'left', // Position of legend
                 },
                 tooltip: {
                     enabled: true, // Enable tooltips
@@ -52,9 +52,15 @@ export default class Chart_4 extends Component {
             scales: {
                 x: {
                     beginAtZero: true,
+                    grid: {
+                        color: 'rgba(255, 99, 132, 0.2)' // Change X-axis grid color
+                        }
                 },
                 y: {
                     beginAtZero: true,
+                    grid: {
+                        color: 'rgba(255, 99, 132, 0.2)' // Change X-axis grid color
+                        }
                 },
             },
         };

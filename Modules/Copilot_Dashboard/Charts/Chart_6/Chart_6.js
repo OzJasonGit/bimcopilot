@@ -57,7 +57,7 @@ export default class Chart_7 extends Component {
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'top', // Position of the legend
+                    position: 'left', // Position of the legend
                 },
                 tooltip: {
                     enabled: true, // Enable tooltips
@@ -66,9 +66,15 @@ export default class Chart_7 extends Component {
             scales: {
                 x: {
                     beginAtZero: true, // X-axis starts at zero
+                    grid: {
+                        color: 'rgba(255, 99, 132, 0.2)' // Change X-axis grid color
+                        }
                 },
                 y: {
                     beginAtZero: true, // Y-axis starts at zero
+                        grid: {
+                        color: 'rgba(255, 99, 132, 0.2)' // Change X-axis grid color
+                        }
                 },
             },
         };

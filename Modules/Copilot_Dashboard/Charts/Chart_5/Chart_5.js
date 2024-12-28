@@ -43,9 +43,15 @@ export default class Chart_3 extends Component {
             scales: {
                 x: {
                     beginAtZero: true,
+                    grid: {
+                        color: 'rgba(255, 99, 132, 0.2)' // Change X-axis grid color
+                        }
                 },
                 y: {
                     beginAtZero: true,
+                    grid: {
+                        color: 'rgba(255, 99, 132, 0.2)' // Change X-axis grid color
+                        }
                 },
             },
         };

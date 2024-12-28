@@ -60,7 +60,7 @@ export default class Chart_7 extends Component {
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'top', // Position of the legend
+                    position: 'left', // Position of the legend
                 },
                 tooltip: {
                     enabled: true, // Enable tooltips

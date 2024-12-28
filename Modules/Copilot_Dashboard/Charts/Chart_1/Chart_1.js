@@ -32,10 +32,25 @@ ChartJS.register(ArcElement, Tooltip, Legend);
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'top', // Legend at the top
+                    position: 'left', // Legend at the top
                 },
                 tooltip: {
                     enabled: true, // Enable tooltips
+                },
+            },
+
+            scales: {
+                x: {
+                    beginAtZero: true, // X-axis starts at zero
+                    grid: {
+                        color: 'rgba(255, 99, 132, 0.2)' // Change X-axis grid color
+                        }
+                },
+                y: {
+                    beginAtZero: true, // Y-axis starts at zero
+                    grid: {
+                        color: 'rgba(255, 99, 132, 0.2)' // Change X-axis grid color
+                        }
                 },
             },
         };
