@@ -34,7 +34,7 @@ export default class Chart_3 extends Component {
             responsive: true,
             plugins: {
                 legend: {
-                    position: 'top', // Position of the legend
+                    position: 'left', // Position of the legend
                 },
                 tooltip: {
                     enabled: true, // Enable tooltips
@@ -57,7 +57,7 @@ export default class Chart_3 extends Component {
         };
 
         return (
-            <div style={{ width: "100%", height: "auto", padding:"0px", display:"grid", justifyItems:"left" }}>           
+            <div style={{ width: "100%", height: "auto", padding:"0px", display:"grid", justifyItems:"right" }}>           
                 <Bar data={data} options={options} style={{ width:"100%"}}/>               
             </div>
         );

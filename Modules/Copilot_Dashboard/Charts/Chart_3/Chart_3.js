@@ -71,7 +71,7 @@ export default class Chart_6 extends Component {
         };
 
         return (
-            <div style={{ width: "100%", height: "100%", padding:"0px" }}>
+            <div style={{ width: "100%", height: "100%", padding:"0px", justifyItems:"right" }}>
                 {/* Use the Line component */}                
                 <Line data={data} options={options} />              
             </div>
