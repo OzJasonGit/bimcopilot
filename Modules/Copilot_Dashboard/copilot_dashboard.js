@@ -197,10 +197,51 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     gridArea: "CHARTS_VI",
                     overflow: "hidden", 
                     width: "100%",
-                    height: "450px"
+                    height: "auto"
                     }}>
-                    <Chart_4/>
+
+                    <div style={{gridArea: "HEADER",
+                                    height: "auto",
+                                    position: "relative",
+                                }}>
+                        <h3 id={styles._H3}
+                            class="text-slate-50 ... font-avant_garde_bold ...">
+                            Placeholder
+                        </h3>
+                    </div>
+
+                    <div style={{ gridArea: "CHARTS",
+                                    height: "auto",
+                                    position: "relative",
+                                }}>
+                        <Chart_4/>
+                    </div>
+                    
+                    <div style={{ gridArea: "FOOTER",
+                                    height: "auto",
+                                    position: "relative",
+                                }}>
+                        <h3 id={styles._H3}
+                            class="text-slate-50 ... font-avant_garde_bold ...">
+                            Placeholder
+                        </h3>
+                    </div>
+
+                    
                 </div>
+
+
+            
+                
+            <div>
+                <h3 id={styles._H3}
+                    class="text-slate-50 ... font-avant_garde_bold ...">
+                    Placeholder
+                </h3>
+            </div>
+
+
+                
 
 
 
