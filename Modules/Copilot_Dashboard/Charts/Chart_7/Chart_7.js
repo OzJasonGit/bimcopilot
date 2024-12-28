@@ -51,6 +51,9 @@ export default class Chart_7 extends Component {
                 pointHoverBorderColor: 'rgb(54, 162, 235)'
             }]
 
+
+      
+
         };
 
         const options = {
@@ -66,9 +69,15 @@ export default class Chart_7 extends Component {
             scales: {
                 x: {
                     beginAtZero: true, // X-axis starts at zero
+                    grid: {
+                        color: 'rgba(255, 99, 132, 0.2)' // Change X-axis grid color
+                        }
                 },
                 y: {
                     beginAtZero: true, // Y-axis starts at zero
+                    grid: {
+                        color: 'rgba(255, 99, 132, 0.2)' // Change X-axis grid color
+                        }
                 },
             },
         };
