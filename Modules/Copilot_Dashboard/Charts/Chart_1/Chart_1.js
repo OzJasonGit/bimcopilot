@@ -45,13 +45,13 @@ ChartJS.register(ArcElement, Tooltip, Legend);
                 x: {
                     beginAtZero: true, // X-axis starts at zero
                     grid: {
-                        color: 'rgba(255, 99, 132, 0.2)' // Change X-axis grid color
+                        color: 'rgba(245, 245, 244, 0.2)' // Change X-axis grid color
                         }
                 },
                 y: {
                     beginAtZero: true, // Y-axis starts at zero
                     grid: {
-                        color: 'rgba(255, 99, 132, 0.2)' // Change X-axis grid color
+                        color: 'rgba(245, 245, 244, 0.2)' // Change X-axis grid color
                         }
                 },
             },
