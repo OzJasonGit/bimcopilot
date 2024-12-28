@@ -1,3 +1,4 @@
+
 "use client";
 import styles from "./admin.module.css"
 import { useState } from "react";
@@ -46,7 +47,7 @@ const formSchema = z.object({
   avatar: z.string().url({
     message: "Avatar must be a valid URL.",
   }),
-  introduction: z.string().min(3,{
+  introduction: z.string().min(3, {
     message: "introduction must be at least 3 chharacters",
   }),
   body1: z.string().min(3, {
@@ -115,11 +116,14 @@ export function Admin() {
     conclusion: "",
   });
 
+  const [loading, setLoading] = useState(false); // Track loading state
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setStory((prev) => ({ ...prev, [name]: value }));
   };
   const handleSubmit = async (data) => {
+    setLoading(true); 
     // console.log("Validated data:", data);
     try {
       const res = await fetch("/api/admin_route", {
@@ -143,6 +147,8 @@ export function Admin() {
     } catch (error) {
       console.error("Submission failed:", error);
       alert("An unexpected error occurred. Check the console for details.");
+    } finally {
+      setLoading(false); // Hide loading spinner
     }
   };
 
@@ -150,259 +156,294 @@ export function Admin() {
   return (
 
     <section >
-    <Menu />
-    <Header /><br></br>
-    <div className={styles.section1}>
-      <div className={styles.formDiv} >
-        <h1 style={{ textAlign: "center", fontSize: "x-large", fontWeight: "600" }}>Stories</h1>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
-            <FormField
-              control={form.control}
-              name="title"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Title</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Enter blog title" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="subtitle"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Subtitle</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Subtitle (optional)" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="image"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Main Image URL</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Enter image URL" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="image2"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Secondary Image URL</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Enter secondary image URL" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="avatar"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Avatar URL</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Enter Avatar URL" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="introduction"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>introduction</FormLabel>
-                  <FormControl>
-                    <QuillNoSSRWrapper
-                      theme="snow"
-                      value={field.value || ""} // Bind value to the form's field
-                      onChange={(content) => field.onChange(content)} // Update the form's state on change
-                      placeholder="Write your introduction here..."
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+      <Menu />
+      <Header /><br></br>
+      <div className={styles.section1}>
+        <div className={styles.formDiv} >
+          <h1 style={{ textAlign: "center", fontSize: "x-large", fontWeight: "600" }}>Stories</h1>
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
+              <FormField
+                control={form.control}
+                name="title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Title</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your title here..."
+                      />   
+                                       </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="slug"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>slug</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your slug here..."
+                      />    
+                                      </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="subtitle"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Subtitle</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your subtitle here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="image"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Main Image URL</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Enter image URL" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="image2"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Secondary Image URL</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Enter secondary image URL" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="avatar"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Avatar URL</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Enter Avatar URL" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="introduction"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>introduction</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your introduction here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-            <FormField
-              control={form.control}
-              name="body1"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>body1</FormLabel>
-                  <FormControl>
+              <FormField
+                control={form.control}
+                name="body1"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body1</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body1 here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="body2"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body2</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body2 here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="body3"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body3</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body3 here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="body4"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body4</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body4 here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="body5"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body5</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body5 here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="body6"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body6</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body6 here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="video"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Video URL</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Enter video URL (optional)" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="author"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Author</FormLabel>
+                    <FormControl>
                     <QuillNoSSRWrapper
-                      theme="snow"
-                      value={field.value || ""} // Bind value to the form's field
-                      onChange={(content) => field.onChange(content)} // Update the form's state on change
-                      placeholder="Write your body1 here..."
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="body2"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>body2</FormLabel>
-                  <FormControl>
-                    <QuillNoSSRWrapper
-                      theme="snow"
-                      value={field.value || ""} // Bind value to the form's field
-                      onChange={(content) => field.onChange(content)} // Update the form's state on change
-                      placeholder="Write your body2 here..."
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="body3"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>body3</FormLabel>
-                  <FormControl>
-                    <QuillNoSSRWrapper
-                      theme="snow"
-                      value={field.value || ""} // Bind value to the form's field
-                      onChange={(content) => field.onChange(content)} // Update the form's state on change
-                      placeholder="Write your body3 here..."
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="body4"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>body4</FormLabel>
-                  <FormControl>
-                    <QuillNoSSRWrapper
-                      theme="snow"
-                      value={field.value || ""} // Bind value to the form's field
-                      onChange={(content) => field.onChange(content)} // Update the form's state on change
-                      placeholder="Write your body4 here..."
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="body5"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>body5</FormLabel>
-                  <FormControl>
-                    <QuillNoSSRWrapper
-                      theme="snow"
-                      value={field.value || ""} // Bind value to the form's field
-                      onChange={(content) => field.onChange(content)} // Update the form's state on change
-                      placeholder="Write your body5 here..."
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="body6"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>body6</FormLabel>
-                  <FormControl>
-                    <QuillNoSSRWrapper
-                      theme="snow"
-                      value={field.value || ""} // Bind value to the form's field
-                      onChange={(content) => field.onChange(content)} // Update the form's state on change
-                      placeholder="Write your body6 here..."
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Author name"
+                      />                  
+                        </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="conclusion"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Conclusion</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your conclusion here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
-            <FormField
-              control={form.control}
-              name="video"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Video URL</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Enter video URL (optional)" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="author"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Author</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Author name" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="conclusion"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Conclusion</FormLabel>
-                  <FormControl>
-                    <QuillNoSSRWrapper
-                      theme="snow"
-                      value={field.value || ""} // Bind value to the form's field
-                      onChange={(content) => field.onChange(content)} // Update the form's state on change
-                      placeholder="Write your conclusion here..."
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+              <Button type="submit" story={story} handleChange={handleChange} handleSubmit={handleSubmit} disabled={loading} >
+              {loading ? "Submitting..." : "Submit"}
+              </Button>
+            </form>
+          </Form>
 
-            <Button type="submit" story={story} handleChange={handleChange} handleSubmit={handleSubmit}>Submit</Button>
-          </form>
-        </Form>
-
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
   );
 }
 
 export default Admin;
+
