@@ -20,6 +20,7 @@ body {
   position: absolute;
   overflow-x: hidden;
   background-color: rgb(245 245 244);
+  width: 100%;;
 }
 
 .BODY {

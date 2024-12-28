@@ -1,0 +1,17 @@
+#_body{
+    background: #000;
+    color: #fff;
+    margin: 0;
+  }
+ .section1{
+    width: 50%;
+ }
+.formDiv{
+    border: 1px solid  black;
+    position: relative;
+    top: 19vh;
+    left: 50%;
+    padding: 2rem;
+    border-radius: 25px;
+
+}
