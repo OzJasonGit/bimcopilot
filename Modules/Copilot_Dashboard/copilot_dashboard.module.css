@@ -277,6 +277,17 @@
 }
 
 
+#CHARTS_7 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "HEADER"
+    "CHARTS"
+    "FOOTER"
+}
+
+
 
 
 
