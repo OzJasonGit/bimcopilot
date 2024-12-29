@@ -79,8 +79,8 @@ export default class Chart_3 extends Component {
         };
 
         return (
-            <div style={{ width: "100%", height: "100%", padding:"0px", justifyItems:"right" }}>           
-                <Radar data={data} options={options} style={{ width:"100%", height:'100%'}}/>               
+            <div style={{ width: "100%", height: "600px", padding:"0px", justifyItems:"right" }}>           
+                <Radar data={data} options={options} style={{ width:"100%", height:'100%', position:'relative',}}/>               
             </div>
         );
     }
