@@ -64,21 +64,8 @@ ChartJS.register(ArcElement, Tooltip, Legend);
         };
 
         return (
-            <div style={{ width: "100%", height: "100%",padding:"0px" }}>
-                {/* Use the Doughnut component */}
-                <h3 id={styles._H3}
-                    class="text-slate-50 ... font-avant_garde_bold ...">
-                    Placeholder
-                </h3>
-                <br/>
-                <br/>
-                <Doughnut data={data} options={options} />
-                <br/>
-                <br/>
-                <h3 id={styles._H3}
-                    class="text-slate-50 ... font-avant_garde_bold ...">
-                    Footer
-                </h3>
+            <div style={{ width: "100%", height: "100%",padding:"0px" }}>                          
+                <Doughnut data={data} options={options} />              
             </div>
         );
     }
