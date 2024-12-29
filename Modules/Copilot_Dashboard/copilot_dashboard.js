@@ -145,12 +145,14 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         </h3>
                     </div>
                     <br/>
+                    <br/>
                     <div style={{ gridArea: "CHARTS",
                                     height: "auto",
                                     position: "relative",
                                 }}>
                     <Chart_3/>       
                     </div>                  
+                    <br/>
                     <br/>
                     <div style={{gridArea: "FOOTER",
                                     height: "auto",
@@ -310,13 +312,15 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         </h3>
                     </div>                   
                     <br/>
+                    <br/>
                     <div style={{ gridArea: "CHARTS",
                                     height: "auto",
                                     position: "relative",
                                 }}>
                         <Chart_4/>
                     </div>
-                    <br/>      
+                    <br/>  
+                    <br/>    
                     <div style={{ gridArea: "FOOTER",
                                     height: "auto",
                                     position: "relative",
@@ -378,7 +382,8 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                         Header
                                     </h3>
                                 </div>
-
+                                <br/>
+                                <br/>
                                 <div id={styles.CHARTS_5} class="" style={{
                                     backgroundColor: "#171717",
                                     position: "relative",
@@ -389,8 +394,9 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                     }}>
                                         <Chart_5/>
                                 </div> 
-
-                                 <div style={{gridArea: "FOOTER",
+                                <br/>
+                                <br/>
+                                <div style={{gridArea: "FOOTER",
                                     height: "auto",
                                     position: "relative",
                                     }}>
@@ -423,7 +429,8 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                         Header
                                     </h3>
                                 </div>
-
+                                <br/>
+                                <br/>
                                 <div id={styles.CHARTS_7} class="" style={{
                                     backgroundColor: "#171717",
                                     position: "relative",
@@ -434,8 +441,9 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                     }}>
                                         <Chart_7/>
                                 </div> 
-
-                                 <div style={{gridArea: "FOOTER",
+                                <br/>
+                                <br/>
+                                <div style={{gridArea: "FOOTER",
                                     height: "auto",
                                     position: "relative",
                                     }}>
