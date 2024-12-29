@@ -58,13 +58,13 @@ export default class Chart_6 extends Component {
                 x: {
                     beginAtZero: true, // X-axis starts at zero
                     grid: {
-                        color: 'rgba(245, 245, 244, 0.2)' // Change X-axis grid color
+                        color: 'rgba(245, 245, 244, 0.05)' // Change X-axis grid color
                         }
                 },
                 y: {
                     beginAtZero: true, // Y-axis starts at zero
                     grid: {
-                        color: 'rgba(245, 245, 244, 0.2)' // Change X-axis grid color
+                        color: 'rgba(245, 245, 244, 0.05)' // Change X-axis grid color
                         }
                 },
             },
