@@ -210,12 +210,13 @@
   grid-column-gap: 40px;
   grid-row-gap: 40px;
   grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr;
-  grid-template-rows: 0px auto auto auto auto 0px;
+  grid-template-rows: 0px auto auto auto 40px auto 0px;
   grid-template-areas:
     ".  .  .  .  ."
     "IMAGE IMAGE IMAGE CHARTS CHARTS"
     "TEXT TEXT  CHARTS_III CHARTS_III CHARTS_III"
     "CHARTS_V CHARTS_V CHARTS_V  CHARTS_V  CHARTS_V"
+    ".  .  .  .  ."
     "CHARTS_VI CHARTS_VI CHARTS_VI CHARTS_VI CHARTS_VI"
     ".  .  .  .  .";
 }
