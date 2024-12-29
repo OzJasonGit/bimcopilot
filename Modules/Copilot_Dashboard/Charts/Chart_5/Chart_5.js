@@ -44,13 +44,13 @@ export default class Chart_3 extends Component {
                 x: {
                     beginAtZero: true,
                     grid: {
-                        color: 'rgba(245, 245, 244, 0.2)' // Change X-axis grid color
+                        color: 'rgba(245, 245, 244, 0.05)' // Change X-axis grid color
                         }
                 },
                 y: {
                     beginAtZero: true,
                     grid: {
-                        color: 'rgba(245, 245, 244, 0.2)' // Change X-axis grid color
+                        color: 'rgba(245, 245, 244, 0.05)' // Change X-axis grid color
                         }
                 },
             },
