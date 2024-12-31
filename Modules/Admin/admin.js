@@ -68,6 +68,9 @@ const formSchema = z.object({
   body6: z.string().min(3, {
     message: "body must be at least 3 characters.",
   }),
+  body7: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }),
   video: z.string().url({
     message: "Video must be a valid URL.",
   }).optional(),
@@ -91,6 +94,7 @@ export function Admin() {
       body4: "",
       body5: "",
       body6: "",
+      body7: "",
       introduction: "",
       video: "",
       conclusion: "",
@@ -111,6 +115,7 @@ export function Admin() {
     body4: "",
     body5: "",
     body6: "",
+    body7: "",
     introduction: "",
     video: "",
     conclusion: "",
@@ -383,6 +388,30 @@ export function Admin() {
                   </FormItem>
                 )}
               />
+
+
+              <FormField
+                control={form.control}
+                name="body7"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body7</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body6 here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+
+
+
               <FormField
                 control={form.control}
                 name="video"
