@@ -1,6 +1,6 @@
 import styles from './about.module.css'
 import React, { Component } from 'react';
-
+import { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,9 +9,23 @@ import Tab from "../Tabs/tabs";
 
 
 
+
 export default class Aboutpage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      iframeLoaded: false,
+    };
+  }
+
+  handleIframeLoad = () => {
+    this.setState({ iframeLoaded: true });
+  };
 
   render() {
+    const { iframeLoaded } = this.state;
+    // Use iframeLoaded here
+
     return (
 
       <section id={styles.SHADOW_SECTION_BLACK} class={styles.center_holder}>
@@ -52,7 +66,30 @@ export default class Aboutpage extends Component {
               </div>
 
               <div class="rounded-2xl ... shadow-2xl ... " id={styles.IMAGE} style={{ backgroundColor: "#151515" }} >
-                <iframe src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true" width="100%" height="100%" frameborder="0"></iframe>
+                {!iframeLoaded && (
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      backgroundColor: "#151515",
+                      zIndex: 1,
+                    }}
+                  >
+                    <span style={{ color: "#fff" }}>Loading Speckle...</span>
+                  </div>
+                )}
+                <iframe
+                  loading='lazy'
+                  onLoad={this.handleIframeLoad}
+                  src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true"
+                  width="100%" height="100%" frameborder="0">
+                </iframe>
               </div>
             </div>
 

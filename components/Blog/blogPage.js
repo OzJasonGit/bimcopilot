@@ -72,7 +72,6 @@ story_id = params.slug
 
             <div id={styles.BC}>
               <Image
-                loading='lazy'
                 id={styles.IMAGE_1}
                 src={logoImage}
                 style={{ objectFit: "contain" }}
