@@ -1,15 +1,10 @@
 "use client";
 
-
-
 import Blogsmain from "../../../../Modules/Blog/blog";
-import { useParams } from 'next/navigation'
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import SkeletonLoader from "@/components/Loader/loader";
 const Blog = () => {
-  const params = useParams()
-  console.log(params)
   const [data, setData] = useState(null);
   const [firstStory, setFirstStory] = useState(null);
   const [topStories, setTopStories] = useState(null);
@@ -34,15 +29,10 @@ const Blog = () => {
     };
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
-  if (!data || !firstStory || !topStories) {
-    return <p>Loading...</p>;
-  }
-  console.log(data, "data"," ");
-  console.log(firstStory,"first")
-
-
-
-
+         if (!data || !firstStory || !topStories) {
+     return <SkeletonLoader/>
+   }
+ 
     return (
 
       <Blogsmain stories={data.data} firstStory={firstStory} />

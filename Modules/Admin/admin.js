@@ -9,7 +9,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import dynamic from "next/dynamic";
-import "quill/dist/quill.snow.css"; // Import Quill styles
 
 const QuillNoSSRWrapper = dynamic(() => import("react-quill"), { ssr: false });
 
@@ -18,14 +17,12 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 
 const formSchema = z.object({
   title: z.string().min(3, {
@@ -145,7 +142,7 @@ export function Admin() {
         alert(`Error: ${errorData.error || "Failed to submit story"}`);
       } else {
         const result = await res.json();
-        console.log("Submission success:", result);
+        // console.log("Submission success:", result);
         alert("Story added successfully!");
         form.reset();
       }

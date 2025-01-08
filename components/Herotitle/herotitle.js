@@ -1,5 +1,3 @@
-import Provider from "../../app/utils/Provider";
-
 import styles from './herotitle.module.css'
 import React, { Component } from 'react';
 
@@ -9,8 +7,6 @@ export default class Herotitle extends Component {
   render() {
     return (
 
-    
-      <Provider>
 
         <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
         <div class={styles.grid_0_main}>
@@ -119,8 +115,6 @@ export default class Herotitle extends Component {
           </div>
         </div>
       </section>
-
-      </Provider>
       
     )
   }

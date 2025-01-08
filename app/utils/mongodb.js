@@ -12,7 +12,7 @@ export async function connectToDatabase() {
     const client = new MongoClient(uri);
 
     await client.connect();
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    // console.log("Pinged your deployment. You successfully connected to MongoDB!");
 
     cachedClient = client;
 

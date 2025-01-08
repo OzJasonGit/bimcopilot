@@ -3,6 +3,7 @@
 import Salespayment from "../../../Modules/Salespayment/salespayment";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import SkeletonLoader from "@/components/Loader/loader";
 
 const Payment = () => {
   const [data, setData] = useState(null);
@@ -29,11 +30,9 @@ const Payment = () => {
     };
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
-  if (!data || !firstStory || !topStories) {
-    return <p>Loading...</p>;
-  }
-  console.log(data, "data"," ");
-  console.log(firstStory,"firs")
+         if (!data || !firstStory || !topStories) {
+     return <SkeletonLoader/>
+   }
 
     return (
 

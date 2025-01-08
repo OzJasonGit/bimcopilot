@@ -1,12 +1,7 @@
 "use client";
 
-import Provider from "../../app/utils/Provider";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFaceRelieved,
-  faBasketball,
-  faBasketShopping,
   faCartShopping,
   faHeart
 
@@ -14,16 +9,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header.module.css";
 import React, { Component } from "react";
-
-import Script from "next/script";
-
-import logoMobile from "./Bim-copilot-logo_Mobile_3.png";
 import bimcopilot_icon from "./Tesseract_Logo_2.png";
 import Image from "next/image";
 import Link from "next/link";
 
-import Clock from "./Clock/clock";
-import DateComponent from "./Clock/date";
+import dynamic from "next/dynamic";
+
+const Clock = dynamic(() => import("./Clock/clock"), { ssr: false });
+const DateComponent = dynamic(() => import("./Clock/date"), { ssr: false });
+
 
 
 
@@ -31,7 +25,6 @@ export default class Header extends Component {
   render() {
     return (
       <>
-        <Provider>
           <section id={styles.SHADOW_SECTION} class={styles.center_holder}>
             <div class={styles.HEADER_HOLDER}>
               <div id={styles.header}>
@@ -49,8 +42,9 @@ export default class Header extends Component {
                         <Image
                           src={bimcopilot_icon}
                           alt="Picture of the author"
-                          width={500}
-                          height={500}
+                          width={100}
+                          height={100}
+                          loading="lazy"
                           style={{
                             position: "relative",
                             width: "auto",
@@ -86,7 +80,7 @@ export default class Header extends Component {
                       </h3>
                     </Link>
 
-                    <Link id={styles.PRODUCTS} href="/products">
+                    <Link id={styles.PRODUCTS} href="/products" >
                       <h3
                         id={styles.H_3_PRODUCTS}
                         class="text-center ...  text-slate-50  font-avant_garde_bold"
@@ -95,7 +89,7 @@ export default class Header extends Component {
                       </h3>
                     </Link>
 
-                    <Link id={styles.PROJECTS} href="/projects">
+                    <Link id={styles.PROJECTS} href="/projects" >
                       <h3
                         id={styles.H_3_PROJECTS}
                         class="text-center ...  text-slate-50  font-avant_garde_bold"
@@ -104,7 +98,7 @@ export default class Header extends Component {
                       </h3>
                     </Link>
 
-                    <Link id={styles.STORIES} href="/bloghome">
+                    <Link id={styles.STORIES} href="/bloghome" >
                       <h3
                         id={styles.H_3_STORIES}
                         class="text-center ...  text-slate-50 font-avant_garde_bold"
@@ -165,7 +159,6 @@ export default class Header extends Component {
               </div>
             </div>
           </section>
-        </Provider>
       </>
     );
   }

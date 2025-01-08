@@ -3,6 +3,7 @@
 import Projectsmain from "../../../Modules/Projects/projects";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import SkeletonLoader from "@/components/Loader/loader";
 
 const Projects = () => {
   const [data, setData] = useState(null);
@@ -29,13 +30,9 @@ const Projects = () => {
     };
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
-  if (!data || !firstStory || !topStories) {
-    return <p>Loading...</p>;
-  }
-  console.log(data, "data"," ");
-  console.log(firstStory,"firs")
-
-
+         if (!data || !firstStory || !topStories) {
+     return <SkeletonLoader/>
+   }
     return (
 
         <Projectsmain stories={data.data} firstStory={firstStory} />

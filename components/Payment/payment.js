@@ -17,8 +17,6 @@ const handleCheckout = async (amount, currency) => {
         const session = await response.json();
         const stripe = await stripePromise;
         const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
-        console.log("payment success");
-        
         if (error) {
           console.error('Stripe error:', error.message);
         }

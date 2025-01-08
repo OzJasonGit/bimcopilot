@@ -1,65 +1,69 @@
-import styles from "./main.module.css";
-
-import "antd/dist/reset.css";
-
-
+import React, { useState, useEffect } from "react";
 import Menu from "../../components/Menu/menu";
 import Header from "../../components/Header/Header";
 import Sides from "../../components/Sides/sides";
 import Footer from "../../components/Footer/Footer";
-
-
 import Subscribetop from "../../components/Subscribetop/subscribetop";
 import Astronaut from "@/components/Astronaut/astronaut";
-import World from "@/components/World/world";
 import Tiktoktop from "../../components/Tiktoktop/tiktoktop";
 import Herotitle from "@/components/Herotitle/herotitle";
 import Products from "@/components/Products/products";
 import About from "@/components/About/page";
 import Blog from "@/components/Blog/page";
-import Process from "@/components/Process/process";
 import Mainvideo from "@/components/Mainvideo/page";
 import Subfooter from "@/components/Subfooter/subfooter";
 import Subfooter2 from "@/components/Subfooter2/subfooter2";
 
+const FullPageSkeleton = () => (
+  <div style={{ padding: "20px" }}>
+    <div style={{ backgroundColor: "#e0e0e0", height: "80px", marginBottom: "20px", borderRadius: "8px" }}></div>
+    <div style={{ display: "flex", marginBottom: "20px" }}>
+      <div style={{ backgroundColor: "#e0e0e0", height: "600px", width: "20%", borderRadius: "8px", marginRight: "20px" }}></div>
+      <div style={{ backgroundColor: "#e0e0e0", height: "600px", width: "75%", borderRadius: "8px" }}></div>
+    </div>
+    <div style={{ backgroundColor: "#e0e0e0", height: "100px", borderRadius: "8px" }}></div>
+  </div>
+);
 
-import { useRouter } from "next/navigation";
+const Main = ({ }) => {
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    // Simulate a delay for content loading
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust the delay as per your API response time
 
-
-
-
-
-
-
-const Main = ({ stories, firstStory }) => {
-  const storiesToMap = stories.filter((story, i) => i != 0);
-  const router = useRouter();
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
-
-      <Menu />
-      <Header />
-      <Sides />
-      <Subscribetop/>
-
-      <Blog/>
-
-
-      <Tiktoktop/>
-      <Herotitle/>
-      <Products/>
-      <Astronaut/>
-      {/*<World/>*/}
-      <About/>
-      {/*<Process/>*/}
-      <Mainvideo/>
-      <Subfooter/>
-      <Subfooter2/>
-      
-      <Footer/>
-
+      {loading ? (
+        <FullPageSkeleton />
+      ) : (
+        <>
+          <Menu />
+          <Header />
+          <Sides />
+          <Subscribetop />
+          <div style={{ minHeight: "1080px", width: "100%" }}>
+            {loading ? <SkeletonLoader /> : <Blog />}
+          </div>
+          {/* <Tiktoktop /> */}
+          <div style={{ position: "relative", zIndex: 1, marginTop: "-50px" }}>
+        <Tiktoktop />
+      </div>
+          <Herotitle />
+          <Products />
+          <Astronaut />
+          <About />
+          <Mainvideo />
+          <Subfooter />
+          <Subfooter2 />
+          <Footer />
+        </>
+      )}
     </>
   );
 };

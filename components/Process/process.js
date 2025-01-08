@@ -1,24 +1,9 @@
-import Provider from "../../app/utils/Provider";
-
-
-
-
-
 import styles from './process.module.css'
 import React, { Component } from 'react';
-
-
-import Image from "next/image";
-import Link from "next/link";
-
-
-
 export default class Process extends Component {
 
   render() {
     return (
-
-
 
         <section id={styles.SHADOW_SECTION_PROCESS} class={styles.center_holder}>
         <div class={styles.grid_0_main}>

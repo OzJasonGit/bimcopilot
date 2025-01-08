@@ -1,30 +1,18 @@
 "use client";
 
-
-import Provider from "../../app/utils/Provider";
-
-import { Drawer } from "antd";
+const Drawer = dynamic(() => import("antd/lib/drawer"), { ssr: false });
 import React, { useState } from "react";
 import styles from './Menu.module.css'
 
-import Script from 'next/script'
 
 import bimcopilot_icon from "./Tesseract_Logo_2.png";
-import Hamburger from "./Burger/burger.js";
-// import 'antd/dist/reset.css';
+import dynamic from "next/dynamic";
+
+const Hamburger = dynamic(() => import("./Burger/burger"), { ssr: false });
+
+
 import Image from "next/image";
 import Link from 'next/link';
-//import Date from '../Date/date'; 
-
-
-
-
-
-
-
-
-
-
 import pfbdImage from './_pfbd_.svg';
 import dlpfbdImage from './_dlpfbd_.svg';
 import logoARB from './logoARB_DARK.png';
@@ -49,8 +37,6 @@ const Menu = () => {
 
     return (  
     <> 
-
-    <Provider>
 
       <section id={styles.SHADOW_SECTION_DRAWER} class={styles.center_holder}>  
 
@@ -96,6 +82,7 @@ const Menu = () => {
                           <div id={styles._PFBD_}>
                               <Image id={styles.CENTER}
                                       src={pfbdImage}   
+                                      loading="lazy"
                                       style={{objectFit: "contain"}} 
                                       quality={100}
                                 />                     
@@ -108,7 +95,8 @@ const Menu = () => {
                       <Link id={styles.PFBD_LINK} href= "/" target="_blank">
                           <div id={styles._PFBD_}>
                               <Image id={styles.CENTER}
-                                      src={dlpfbdImage}   
+                                      src={dlpfbdImage} 
+                                      loading="lazy"  
                                       style={{objectFit: "contain"}} 
                                       quality={100}
                                 />                     
@@ -122,6 +110,7 @@ const Menu = () => {
                           <div id={styles._PFBD_}>
                               <Image id={styles.CENTER}
                                       src={pfbdImage}   
+                                      loading="lazy"  
                                       style={{objectFit: "contain"}} 
                                       quality={100}
                                 />                     
@@ -147,6 +136,7 @@ const Menu = () => {
                                   alt="Picture of the author"
                                   width={500}
                                   height={500}
+                                  loading="lazy"  
                                   style={{
                                       position: "relative",
                                       width: "100%",
@@ -165,6 +155,7 @@ const Menu = () => {
                                   alt="Picture of the author"
                                   width={500}
                                   height={500}
+                                  loading="lazy"  
                                   style={{
                                       position: "relative",
                                       width: "100%",
@@ -203,32 +194,6 @@ const Menu = () => {
                       </a>
                   </div>                     
               </div>
-
-
-
-
-
-
-
-
-                
-              
-             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                 <div id={styles.TEXT}>
                   <div id={styles.COMPANY}>
@@ -291,6 +256,7 @@ const Menu = () => {
                       <Image
                           src={bimcopilot_icon}   
                           alt="Picture of the author"
+                          loading="lazy"
                           width={500}
                           height={500}
                           style={{
@@ -306,8 +272,6 @@ const Menu = () => {
               </div>           
             </div>        
       </section> 
-
-    </Provider>
       
     </>
         )

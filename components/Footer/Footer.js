@@ -1,6 +1,5 @@
 "use client";
 
-import Provider from "../../app/utils/Provider";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faYoutube, faDribbble, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons'
@@ -23,8 +22,6 @@ export default class Footer extends Component {
   render() {
     return (
       <> 
-
-      <Provider>
 
         <section id={styles.FOOTER_SECTION} class={styles.center_holder}>     
             <div class={styles.footer_holder}>
@@ -213,8 +210,6 @@ export default class Footer extends Component {
                 </footer>
             </div>        
         </section>
-
-      </Provider>
       
       </>       
     )

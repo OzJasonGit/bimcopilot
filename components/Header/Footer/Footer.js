@@ -1,12 +1,8 @@
 "use client";
-
-import Provider from "../../app/utils/Provider";
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faYoutube, faDribbble, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons'
 import styles from './Footer.module.css'
 import React, { Component } from 'react';
-// import 'antd/dist/reset.css';
 import Link from 'next/link';
 import Image from 'next/image';
 

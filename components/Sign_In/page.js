@@ -35,7 +35,7 @@ const SignIn = () => {
                 }
             }
         } catch (error) {
-            console.log(error);
+            // console.log(error);
         }
         setIsLoading(false);
     };
@@ -44,7 +44,6 @@ const SignIn = () => {
         const { data } = await axios.get(
             `https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=${res?.credential}`
         );
-        console.log(data);
         const form = {
             name: data?.name,
             email: data?.email,
@@ -146,7 +145,7 @@ const SignIn = () => {
                                     <GoogleLogin
                                         onSuccess={googleSuccess}
                                         onError={() => {
-                                            console.log("Login Failed");
+                                            // console.log("Login Failed");
                                         }}
                                     />
                                 </div>

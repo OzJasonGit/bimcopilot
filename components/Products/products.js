@@ -1,19 +1,9 @@
-import Provider from "../../app/utils/Provider";
-
-
-
-
 import styles from './products.module.css'
 import React, { Component } from 'react';
-
-
 import Image from "next/image";
 import Link from "next/link";
-
 import revitBlinds from './revit_blinds.webp';
-import rocketShip from './giphy.gif';
 import drawingSheets from './drawing_sheets.webp';
-import externalDoors from './external_doors_graphic.webp';
 import volumesByRoom from './volumes_by_room.webp';
 
 
@@ -146,33 +136,9 @@ export default class Products extends Component {
                                   </h3>
                                 </Link>
                               </div>
-
-
                 </div>
               </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
             <div id={styles.PRODUCTS_HOLDER}>

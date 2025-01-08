@@ -1,9 +1,11 @@
 
 import { useState, useEffect } from "react";
-import Blogpage from "./blogPage";
+import React from "react";
+// import Blogpage from "./blogPage";
 import axios from "axios";
-
-
+import SkeletonLoader from "../Loader/loader";
+const Blogpage = React.lazy(()=> import("./blogPage"))
+import "./blogPage"
 
 const Blog = () => {
   const [data, setData] = useState(null);
@@ -17,7 +19,6 @@ const Blog = () => {
         setData(responseData);
         setFirstStory(responseData.firstStory);
         setTopStories(responseData.topStories);
-        console.log(responseData, "responseData");
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -31,11 +32,9 @@ const Blog = () => {
     };
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
-  if (!data || !firstStory || !topStories) {
-    return <p>Loading...</p>;
-  }
-  console.log(data, "data"," ");
-  console.log(topStories,"topStories")
+         if (!data || !firstStory || !topStories) {
+     return <SkeletonLoader/>
+   }
   return (
     <>
       <Blogpage stories={data} topStories={topStories} />
@@ -44,3 +43,5 @@ const Blog = () => {
 };
 
 export default Blog;
+
+ 

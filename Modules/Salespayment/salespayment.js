@@ -1,32 +1,15 @@
 'use client'
 
 import styles from './salespayment.module.css';
-
-import { useRouter } from "next/navigation";
-
 import Menu_White from "../../components/Menu_White/menu_white";
 import Sides from "../../components/Sides/sides";
 import Header_White from "../../components/Header_White/Header_White";
 import Footer from "../../components/Footer/Footer_White";
-import Collapsed_Sales from "../../components/Collapse_Sales/collapse_sales";
-
 import Services_1 from "../../components/services_1/services_1";
 
-import Link from "next/link";
-import Image from "next/image";
 
-
-import { Button } from "@/components/ui/button"
-
-
-import bimcopilot from './Bim-copilot-logo_Horizontal.png';
-
-
-const Salespayment = ({ stories, firstStory }) => {
-  const storiesSolo_1 = stories.filter((story, i) => i == 3)
-  const storiesToMap = stories.filter((story, i) => i != 0);
-  const router = useRouter();
-
+const Salespayment = ({}) => {
+ 
    return (
 
     <>

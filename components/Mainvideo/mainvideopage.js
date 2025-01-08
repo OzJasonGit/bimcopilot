@@ -1,21 +1,13 @@
-
-
 import Video from "./client/Video/video";
-
-
-
 import styles from './mainvideo.module.css'
 import React, { Component } from 'react';
-
-
-import Image from "next/image";
 import Link from "next/link";
 
 import { useRouter } from "next/navigation";
 
 
 
-const Mainvideopage = ({ stories, firstStory }) => {
+const Mainvideopage = ({ stories }) => {
   const storiesToMap = stories.filter((story, i) => i != 0);
   const router = useRouter();
 

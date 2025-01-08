@@ -6,22 +6,8 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
-
-
-
-
-
-
-import { useRouter } from "next/navigation";
-
-
-
-
-
 const Signup = () => {
     const [isLoading, setIsLoading] = useState(false);
-    const navigate = useRouter();
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -31,23 +17,10 @@ const Signup = () => {
     });
 
 
-
-
-
-
-
-
-
 const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
 };
-
-
-
-
-
-
 
 
 const handleSubmit = async (e) => {
@@ -65,7 +38,7 @@ const handleSubmit = async (e) => {
             }
         }
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
     setIsLoading(false);
 };
@@ -90,7 +63,6 @@ const googleSuccess = async (res) => {
             `https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=${res?.credential}`
         );
         const { data } = response;
-        console.log(response);
         const form = {
             name: data?.name,
             email: data?.email,
@@ -101,21 +73,9 @@ const googleSuccess = async (res) => {
             router.push("/");
         }
     } catch (error) {
-        console.log(error);
+        // console.log(error);
     }
 };
-
-
-
-
-
-
-
-
-
-
-
-
 
     return (
         <>
@@ -278,7 +238,7 @@ const googleSuccess = async (res) => {
                                 <GoogleLogin
                                     onSuccess={googleSuccess}
                                     onError={() => {
-                                        console.log("Login Failed");
+                                        // console.log("Login Failed");
                                     }}
                                 />
                             </div>

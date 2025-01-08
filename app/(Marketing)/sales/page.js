@@ -3,7 +3,7 @@
 import Saleslanding from "../../../Modules/Saleslanding/saleslanding";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import SkeletonLoader from "@/components/Loader/loader";
 const Sales = () => {
   const [data, setData] = useState(null);
   const [firstStory, setFirstStory] = useState(null);
@@ -29,11 +29,9 @@ const Sales = () => {
     };
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
-  if (!data || !firstStory || !topStories) {
-    return <p>Loading...</p>;
-  }
-  console.log(data, "data"," ");
-  console.log(firstStory,"firs")
+         if (!data || !firstStory || !topStories) {
+     return <SkeletonLoader/>
+   }
 
     return (
 

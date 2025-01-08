@@ -6,15 +6,6 @@ export async function POST(req) {
     const db = await connectToDatabase();
     const collection = db.collection("stories");
     const data = await req.json();
-
-    // // Validation
-    // if (!data.title || !data.author || !data.image || !data.introduction) {
-    //   return new NextResponse(
-    //     JSON.stringify({ success: false, error: "Missing required fields" }),
-    //     { status: 400, headers: { "Content-Type": "application/json" } }
-    //   );
-    // }
-
     // Insert data
     const result = await collection.insertOne(data);
     return new NextResponse(

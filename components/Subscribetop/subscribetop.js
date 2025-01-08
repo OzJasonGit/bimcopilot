@@ -1,15 +1,7 @@
-import Provider from "../../app/utils/Provider";
-
-
 import styles from './subscribetop.module.css'
 import React, { Component } from 'react';
 
 import Subform from "./Client/subform";
-
-
-
-
-
 
 export default class Subcribetop extends Component {
 

@@ -14,15 +14,15 @@ import Collapsed_Sales from "../../components/Collapse_Sales/collapse_sales";
 
 import Services_1 from "../../components/services_1/services_black";
 
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
 
 
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+// import { Button } from "@/components/ui/button"
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 
-import bimcopilot from './Bim-copilot-logo_Horizontal.png';
+// import bimcopilot from './Bim-copilot-logo_Horizontal.png';
 
 
 const Saleslanding = ({ stories, firstStory }) => {

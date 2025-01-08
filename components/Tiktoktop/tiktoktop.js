@@ -8,20 +8,11 @@ import React, { Component } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 
-import Tiktok from "./client/Tiktok/tiktok";
+// import Tiktok from "./client/Tiktok/tiktok";
 import tiktoklogo from "./Tiktok_Logo_4.png";
 import tiktoklogo_dark from "./Tiktok_Logo_(Black).png";
-
-
-
-
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTiktok } from "@fortawesome/free-brands-svg-icons";
-
-
-
-
+import "./client/Tiktok/tiktok"
+const Tiktok = React.lazy(() => import("./client/Tiktok/tiktok"));
 
 
 export default class Tiktoktop extends Component {
@@ -30,86 +21,97 @@ export default class Tiktoktop extends Component {
     return (
 
 
-    <Provider>
+      <Provider>
 
-      <section id={styles.SHADOW_SECTION_TIKTOK} class={styles.center_holder}>
-        <div class={styles.grid_0_main}>
-          <div id={styles.MAIN_TIKTOK_HOLDER}>
-
-
-            
-            <div id={styles.ICON_HOLDER}>  
-
-              <Link
-                href="https://www.tiktok.com/@pfbd_"
-                id={styles.ICON_TIKTOK}
-              >
-                <div 
-                  id={styles.ICON_TIKTOK_2}>
-
-                  <Image
-                        src={tiktoklogo}
-                        alt="Picture of the author"
-                        width={500}
-                        height={500}
-                        style={{
-                          position: "absolute",
-                          width: "auto",
-                          height: "100%",
-                          justifyItems: "center",
-                          alignItems: "center",
-                          objectFit: "contain",
-                        }}
-                      />
-
-                </div>
+        <section id={styles.SHADOW_SECTION_TIKTOK} class={styles.center_holder}>
+          <div class={styles.grid_0_main}>
+            <div id={styles.MAIN_TIKTOK_HOLDER}>
 
 
 
-                <div 
+              <div id={styles.ICON_HOLDER}>
+
+                <Link
+                  href="https://www.tiktok.com/@pfbd_"
+                  id={styles.ICON_TIKTOK}
+                >
+                  <div
+                    id={styles.ICON_TIKTOK_2}>
+
+                    <Image
+                      src={tiktoklogo}
+                      alt="Picture of the author"
+                      width={500}
+                      height={500}
+                      style={{
+                        position: "absolute",
+                        width: "auto",
+                        height: "100%",
+                        justifyItems: "center",
+                        alignItems: "center",
+                        objectFit: "contain",
+                      }}
+                    />
+
+                  </div>
+
+
+
+                  <div
                     id={styles.ICON_TIKTOK_3}>
 
                     <Image
-                          src={tiktoklogo_dark}
-                          alt="Picture of the author"
-                          width={500}
-                          height={500}
-                          style={{
-                            position: "absolute",
-                            width: "auto",
-                            height: "100%",
-                            justifyItems: "center",
-                            alignItems: "center",
-                            objectFit: "contain",
-                          }}
-                        />
+                      src={tiktoklogo_dark}
+                      alt="Picture of the author"
+                      width={500}
+                      height={500}
+                      loading="lazy"
+                      style={{
+                        position: "absolute",
+                        width: "auto",
+                        height: "100%",
+                        justifyItems: "center",
+                        alignItems: "center",
+                        objectFit: "contain",
+                      }}
+                    />
 
                   </div>
-                
-              </Link>
 
-            </div>
+                </Link>
 
-
-            <div id={styles.TIKTOK_HOLDER}>
-              <div
-                id={styles.TIKTOK}
-                class="rounded-2xl ... drop-shadow-2xl ... shadow-black"
-              >
-                <Tiktok />
-                <div className="tiktok-video">
-              <video autoPlay controls playsInline muted loop src="https://res.cloudinary.com/dytsuek4h/video/upload/v1712935614/ad4f40818468b4acb07956069ae103e3_cqoozt.mp4" style={{width:"100%", height:"100%"}}></video>
               </div>
+
+
+              <div id={styles.TIKTOK_HOLDER}>
+                <div
+                  id={styles.TIKTOK}
+                  class="rounded-2xl ... drop-shadow-2xl ... shadow-black"
+                >
+                  <Tiktok />
+                  <div className="tiktok-video">
+                    <video
+                      autoPlay
+                      controls
+                      playsInline
+                      preload="metadata"
+                      muted
+                      loop
+                      src="https://res.cloudinary.com/dytsuek4h/video/upload/v1712935614/ad4f40818468b4acb07956069ae103e3_cqoozt.mp4" 
+                      style={{ width: "100%", height: "100%" }}>
+
+                      </video>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-    </Provider>
+      </Provider>
 
 
-    
+
 
 
     )

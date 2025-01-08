@@ -6,10 +6,6 @@ import { Tabs } from 'antd';
 import styles from "./tabs.module.css";
 import Image from "next/image";
 import logoMobile from "./Bim-copilot-logo_Mobile_3.png";
-
-
-
-
 const Tab_Horizontal = () => {
   const [tabPosition, setTabPosition] = useState('top');
   const changeTabPosition = (e) => {

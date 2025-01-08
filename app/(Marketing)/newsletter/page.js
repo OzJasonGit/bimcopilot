@@ -3,6 +3,7 @@
 import Newsletter_Main from "../../../Modules/Newsletter/newsletter";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import SkeletonLoader from "@/components/Loader/loader";
 
 const Newsletter = () => {
   const [data, setData] = useState(null);
@@ -29,12 +30,9 @@ const Newsletter = () => {
     };
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
-  if (!data || !firstStory || !topStories) {
-    return <p>Loading...</p>;
-  }
-  console.log(data, "data"," ");
-  console.log(firstStory,"first")
-
+         if (!data || !firstStory || !topStories) {
+     return <SkeletonLoader/>
+   }
 
     return (
 

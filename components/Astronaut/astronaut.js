@@ -1,18 +1,8 @@
-
-import Provider from "../../app/utils/Provider";
-
 import styles from './astronaut.module.css'
 import React, { Component } from 'react';
 
 
 import Image from "next/image";
-import Link from "next/link";
-
-
-import Infinite_Scroll from "../../components/Carousel/Infinite_Scroll";
-import Tab from "../../components/Tabs/tabs";
-import Tab_Horizontal from "../../components/Tabs/tabs_horizontal";
-
 import astronaut_1 from "./ASTRONAUT_1_(6).png";
 
 export default class About extends Component {

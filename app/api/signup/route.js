@@ -40,7 +40,6 @@ export async function POST(req) {
 
         return new NextResponse(JSON.stringify({ result, token }));
     } catch (error) {
-        console.log(error);
         return new NextResponse(JSON.stringify({ error: JSON.parse(error.message) }));
     }
 }

@@ -1,7 +1,5 @@
-import Provider from "../../app/utils/Provider";
-
 import styles from './blog.module.css'
-import React, { Component } from 'react';
+import React, { Component, lazy } from 'react';
 import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,20 +13,8 @@ const Blogpage = ({ stories, topStories }) => {
   const storiesToMap = stories.data.filter((story, i) => story.data == params.slug && i > (0) )
   const router = useRouter();
 
- 
-console.log("================================", stories.data )
-
-
-// console.log("stories",storiesToMap)
-// console.log("topStories",topStories)
-// console.log("params",params.slug)
-// console.log("stories.data", stories.data)
-// console.log("stories.topStories", stories.topStories)
 let story_id;
 story_id = params.slug
-//  const currentStory=() => {
-//    router.push(`blog/${story_id}`);
-//   }
 
 
     return (
@@ -36,9 +22,6 @@ story_id = params.slug
        <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_blog}>
           <div class={styles.head}>
-
-            
-                  
             <div class="rounded-2xl ..." id={styles.IMAGE_POST_NUMBER}>
               <div
                 class={"rounded-full ...  border-8 ...  border-emerald-200"}
@@ -73,8 +56,8 @@ story_id = params.slug
                 <Image
                   href={`/blog/${stories.data[0]._id}`}
                   src={stories.data[0].image}
-
                   alt="Picture of the author"
+                  loading='lazy'
                   width={500}
                   height={500}
                   style={{
@@ -89,6 +72,7 @@ story_id = params.slug
 
             <div id={styles.BC}>
               <Image
+                loading='lazy'
                 id={styles.IMAGE_1}
                 src={logoImage}
                 style={{ objectFit: "contain" }}
@@ -130,15 +114,6 @@ story_id = params.slug
                 </h3>
                 </Link>
               </div>
-
-              {/*<div id={styles.TIMESTAMP}>
-                <h3
-                  id={styles._H3}
-                  class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_bold"
-                >
-                  {stories.data[0].timestamp}
-                </h3>
-              </div>*/}
             </div>
 
             <div id={styles.NEWS}>
@@ -154,7 +129,6 @@ story_id = params.slug
               <div id={styles.ARTICLES}>
 
            {storiesToMap.map((story, index) => {
-                  // console.log("story " , story)
                   return (
 
                     <div
@@ -183,7 +157,7 @@ story_id = params.slug
 
                             // onClick={`/blog/${story._id}`}
                             >
-                              {console.log("story.data._id", story._id)}
+
 
                             <h3
                               id={styles._H3}
@@ -249,7 +223,7 @@ story_id = params.slug
           </div>
         </div>
       </section>
-      
+
     )
   }
 

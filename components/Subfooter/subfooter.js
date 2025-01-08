@@ -6,7 +6,6 @@ import React, { Component } from 'react';
 
 
 import Image from "next/image";
-import Link from "next/link";
 import astronaut from "./ASTRONAUT_6.png";
 
 

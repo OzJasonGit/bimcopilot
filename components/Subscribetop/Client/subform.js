@@ -32,7 +32,7 @@ const Subform = () => {
       if (error.response && error.response.status === 409) {
         setError("Email already registered.");
       } else {
-        console.log(error);
+        // console.log(error);
         toast.error("An error occurred during registration.");
       }
     }
@@ -69,20 +69,6 @@ const Subform = () => {
         </Form.Item>
 
         <Form.Item>
-         {/* <Button
-            id={styles.FORM_BUTTON}
-            type="primary"
-            htmlType="submit"
-            loading={isLoading}
-            className="w-full shadow bg-emerald-300  "
-          >
-            <h2
-              className="text-stone-700 font-avant_garde_bold text-lg"
-              id={styles._H2}
-            >
-              <a id={styles.TEXT_OUTLINE}>Click Here!</a>
-            </h2>
-          </Button> */}
 
           <Button variant="outline"
                   id={styles.FORM_BUTTON}

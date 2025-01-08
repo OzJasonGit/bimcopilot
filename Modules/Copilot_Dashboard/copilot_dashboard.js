@@ -21,22 +21,22 @@ import Chart_6 from './Charts/Chart_6/Chart_6';
 import Chart_7 from './Charts/Chart_7/Chart_7';
 import Services_1 from "../../components/services_1/services_black";
 
-import Link from "next/link";
-import Image from "next/image";
+// import Link from "next/link";
+// import Image from "next/image";
 
 
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+// import { Button } from "@/components/ui/button"
+// import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 
-import bimcopilot from './Bim-copilot-logo_Horizontal.png';
+// import bimcopilot from './Bim-copilot-logo_Horizontal.png';
 
 
 const Copilot_Dashboard = ({ stories, firstStory }) => {
-  const storiesSolo_1 = stories.filter((story, i) => i == 3)
-  const storiesSolo_2 = stories.filter((story, i) => i == 1)
-  const storiesToMap = stories.filter((story, i) => i != 0);
-  const router = useRouter();
+//   const storiesSolo_1 = stories.filter((story, i) => i == 3)
+//   const storiesSolo_2 = stories.filter((story, i) => i == 1)
+//   const storiesToMap = stories.filter((story, i) => i != 0);
+//   const router = useRouter();
 
    return (
 

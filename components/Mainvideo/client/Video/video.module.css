@@ -11,12 +11,16 @@
 
 
 #VIDEO { 
-   
+    min-height: 380px;
     height: 380px;
     position: relative;
     border-radius: 0.5rem !important
 
 }   
+
+#VIDEO video{
+    height: 380px;
+}
 
 
 

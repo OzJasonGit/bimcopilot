@@ -3,7 +3,7 @@
 import Productsmain from "../../../Modules/Products/products";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import SkeletonLoader from "@/components/Loader/loader";
 const Products = () => {
   const [data, setData] = useState(null);
   const [firstStory, setFirstStory] = useState(null);
@@ -29,12 +29,9 @@ const Products = () => {
     };
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
-  if (!data || !firstStory || !topStories) {
-    return <p>Loading...</p>;
-  }
-  console.log(data, "data"," ");
-  console.log(firstStory,"first")
-
+         if (!data || !firstStory || !topStories) {
+     return <SkeletonLoader/>
+   }
 
     return (
 

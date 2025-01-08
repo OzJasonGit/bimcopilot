@@ -1,16 +1,6 @@
 "use client";
-
-import Provider from "../../app/utils/Provider";
-
-
-import MuxPlayer from "@mux/mux-player-react";
 import styles from "./Tiktok.module.css";
 import React, { Component } from 'react';
-
-
-
-
-
 
 const Subscribe = () => {
 

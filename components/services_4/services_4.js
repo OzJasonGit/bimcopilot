@@ -1,26 +1,7 @@
 'use client'
 
 import styles from './services_4.module.css';
-
-import { useRouter } from "next/navigation";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const Services_4 = ({ stories, firstStory }) => {
-const storiesToMap = stories.filter((story, i) => i != 0);
-const router = useRouter();
+const Services_4 = ({}) => {
 
 return (
 

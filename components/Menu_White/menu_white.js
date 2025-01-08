@@ -6,25 +6,10 @@ import Provider from "../../app/utils/Provider";
 import { Drawer } from "antd";
 import React, { useState } from "react";
 import styles from './menu_white.module.css'
-
-import Script from 'next/script'
-
 import bimcopilot_icon from "./Tesseract_Logo_Black.png";
 import Hamburger from "./Burger/burger.js";
-// import 'antd/dist/reset.css';
 import Image from "next/image";
 import Link from 'next/link';
-//import Date from '../Date/date'; 
-
-
-
-
-
-
-
-
-
-
 import pfbdImage from './_pfbd_.svg';
 import dlpfbdImage from './_dlpfbd_.svg';
 import logoARB from './logoARB_DARK.png';

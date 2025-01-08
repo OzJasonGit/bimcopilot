@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Aboutpage from "./aboutPage";
 import axios from "axios";
-
+import SkeletonLoader from "../Loader/loader";
 
 
 const About = () => {
@@ -31,10 +31,8 @@ const About = () => {
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
   if (!data || !firstStory || !topStories) {
-    return <p>Loading...</p>;
+    return <SkeletonLoader/>
   }
-  console.log(data, "data"," ");
-  console.log(firstStory,"first")
   return (
     <>
       <Aboutpage stories={data.data} firstStory={firstStory} />

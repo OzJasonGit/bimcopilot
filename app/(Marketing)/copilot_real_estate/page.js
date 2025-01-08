@@ -3,6 +3,7 @@
 import Co_Pilot_Real_Estate from "../../../Modules/Copilot_Real_Estate/copilot_real_estate";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import SkeletonLoader from "@/components/Loader/loader";
 
 const Real_Estate = () => {
   const [data, setData] = useState(null);
@@ -29,13 +30,9 @@ const Real_Estate = () => {
     };
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
-  if (!data || !firstStory || !topStories) {
-    return <p>Loading...</p>;
-  }
-  console.log(data, "data"," ");
-  console.log(firstStory,"first")
-
-
+         if (!data || !firstStory || !topStories) {
+     return <SkeletonLoader/>
+   }
     return (
 
         <Co_Pilot_Real_Estate stories={data.data} firstStory={firstStory} />
