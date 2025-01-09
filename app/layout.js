@@ -50,6 +50,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload" 
+          href="../fonts/font.woff2" 
+          as="font" 
+          type="font/woff2" 
+          crossorigin="anonymous"
+        />
+        </head>
       <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable} ${geist_regular.variable} ${geist_semibold.variable}`}
             >
       
