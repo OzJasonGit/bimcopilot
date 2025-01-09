@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 // import Blogpage from "./blogPage";
 import axios from "axios";
-import SkeletonLoader from "../Loader/loader";
+import SkeltonLoader2 from "../Loader/loader2";
 const Blogpage = React.lazy(()=> import("./blogPage"))
 import "./blogPage"
 
@@ -33,7 +33,7 @@ const Blog = () => {
   }, []); // Empty dependency array ensures the effect runs only once after the initial render
 
          if (!data || !firstStory || !topStories) {
-     return <SkeletonLoader/>
+     return <SkeltonLoader2/>
    }
   return (
     <>

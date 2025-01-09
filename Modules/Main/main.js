@@ -13,17 +13,9 @@ import Blog from "@/components/Blog/page";
 import Mainvideo from "@/components/Mainvideo/page";
 import Subfooter from "@/components/Subfooter/subfooter";
 import Subfooter2 from "@/components/Subfooter2/subfooter2";
+import SkeletonLoader from "@/components/Loader/loader";
+import SkeletonLoader2 from "@/components/Loader/loader2";
 
-const FullPageSkeleton = () => (
-  <div style={{ padding: "20px" }}>
-    <div style={{ backgroundColor: "#e0e0e0", height: "80px", marginBottom: "20px", borderRadius: "8px" }}></div>
-    <div style={{ display: "flex", marginBottom: "20px" }}>
-      <div style={{ backgroundColor: "#e0e0e0", height: "600px", width: "20%", borderRadius: "8px", marginRight: "20px" }}></div>
-      <div style={{ backgroundColor: "#e0e0e0", height: "600px", width: "75%", borderRadius: "8px" }}></div>
-    </div>
-    <div style={{ backgroundColor: "#e0e0e0", height: "100px", borderRadius: "8px" }}></div>
-  </div>
-);
 
 const Main = ({ }) => {
   const [loading, setLoading] = useState(true);
@@ -40,7 +32,7 @@ const Main = ({ }) => {
   return (
     <>
       {loading ? (
-        <FullPageSkeleton />
+        <SkeletonLoader />
       ) : (
         <>
           <Menu />
@@ -48,7 +40,7 @@ const Main = ({ }) => {
           <Sides />
           <Subscribetop />
           <div style={{ minHeight: "1080px", width: "100%" }}>
-            {loading ? <SkeletonLoader /> : <Blog />}
+            {loading ? <SkeletonLoader2 /> : <Blog />}
           </div>
           {/* <Tiktoktop /> */}
           <div style={{ position: "relative", zIndex: 1, marginTop: "-50px" }}>

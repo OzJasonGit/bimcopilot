@@ -1,5 +1,5 @@
 import styles from './tiktoktop.module.css';
-
+import SkeletonLoader from '../Loader/loader';
 import React, { Component } from 'react';
 import Link from "next/link";
 import Image from "next/image";
@@ -71,24 +71,34 @@ export default class Tiktoktop extends Component {
               >
                 <Tiktok />
                 <div className="tiktok-video" style={{ position: "relative" }}>
-                  {!videoLoaded && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        width: "100%",
-                        height: "100%",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        backgroundColor: "#151515",
-                        zIndex: 1,
-                      }}
-                    >
-                      <span style={{ color: "#fff" }}>Loading video...</span>
-                    </div>
-                  )}
+                {!videoLoaded && (
+  <div
+    style={{
+      position: "absolute",
+      top: 0,
+      left: "-221px",
+      width: "228%",
+      height: "348%",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "white",
+      zIndex: 1,
+      transform: "rotate(-90deg)", // Fixed syntax
+    }}
+  >
+    <SkeletonLoader
+      styles={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    />
+  </div>
+)}
+
                   <video
                     autoPlay
                     controls

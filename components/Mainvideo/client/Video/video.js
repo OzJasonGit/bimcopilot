@@ -1,7 +1,8 @@
 "use client";
 import styles from "./video.module.css";
-import React, { useState } from "react";
-
+  import React, { useState } from "react";
+import SkeletonLoader from "@/components/Loader/loader";
+import { color } from "@mui/system";
 const Video = () => {
   const [videoLoaded, setVideoLoaded] = useState(false);
 
@@ -23,12 +24,12 @@ const Video = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              backgroundColor: "#151515",
+              backgroundColor: "white",
               zIndex: 1,
               borderRadius: "0.5rem",
             }}
           >
-            <span style={{ color: "#fff" }}>Loading video...</span>
+            <SkeletonLoader />
           </div>
         )}
 

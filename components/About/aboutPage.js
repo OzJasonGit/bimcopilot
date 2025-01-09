@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-
+import SkeletonLoader from '../Loader/loader';
 import Infinite_Scroll from "../Carousel/Infinite_Scroll";
 import Tab from "../Tabs/tabs";
 
@@ -77,11 +77,11 @@ export default class Aboutpage extends Component {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      backgroundColor: "#151515",
+                      backgroundColor: "#fff",
                       zIndex: 1,
                     }}
                   >
-                    <span style={{ color: "#fff" }}>Loading Speckle...</span>
+                    <SkeletonLoader/>
                   </div>
                 )}
                 <iframe
