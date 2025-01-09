@@ -13,10 +13,3 @@
     height: 100%;
     position: relative;
 }
-
-
-#MUX {
-    --media-object-fit: cover;
-    --media-object-position: center;
-    --aspect-ratio: 16 / 9;
-}
