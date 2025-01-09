@@ -40,6 +40,7 @@ export default class Sides extends Component {
                                                         <Image id={styles.CENTER}
                                                             loading='lazy'
                                                             src={pfbdImage}
+                                                            alt=''
                                                             style={{ objectFit: "contain" }}
                                                             quality={100}
                                                         />
@@ -52,6 +53,7 @@ export default class Sides extends Component {
                                                     <div id={styles._PFBD_}>
                                                         <Image id={styles.CENTER}
                                                             loading='lazy'
+                                                            alt=''
                                                             src={dlpfbdImage}
                                                             style={{ objectFit: "contain" }}
                                                             quality={100}
@@ -66,6 +68,7 @@ export default class Sides extends Component {
                                                         <Image id={styles.CENTER}
                                                             src={pfbdImage}
                                                             loading='lazy'
+                                                            alt=''
                                                             style={{ objectFit: "contain" }}
                                                             quality={100}
                                                         />

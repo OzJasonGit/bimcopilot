@@ -85,6 +85,7 @@ export default class Aboutpage extends Component {
                   </div>
                 )}
                 <iframe
+                  title='iframe'
                   loading='lazy'
                   onLoad={this.handleIframeLoad}
                   src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true"

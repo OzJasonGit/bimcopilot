@@ -70,6 +70,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         height: "100%",
                         }}>
                         <iframe
+                        title='iframe'
                         loading='lazy'
                         style={{
                         position: "relative",
