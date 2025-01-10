@@ -15,6 +15,10 @@ import Link from "next/link";
 import Image from "next/image";
 import Video from "./client/Video/video";
 import Head from "next/head"
+
+import parse from "html-react-parser";
+
+
 const Blogsmain = ({ stories, firstStory }) => {
 
   const params = useParams();
@@ -29,13 +33,13 @@ const Blogsmain = ({ stories, firstStory }) => {
 
           <Head>
             <title>
-              {story.title}
+              {parse(story.title)}
             </title>
 
             <meta
-              name={story.title}
-              content={story.title}
-              key={story.title}
+              name={parse(story.title)}
+              content={parse(story.title)}
+              key={parse(story.title)}
             />
           </Head>
         )
@@ -64,7 +68,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       id={styles._H1}
                       class=" text-stone-200 ... font-avant_garde_bold"
                     >
-                      {story.title}
+                      {parse(story.title)}
 
                     </div>
                   </div>
@@ -75,7 +79,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium"
                     >
                       {" "}
-                      {story.subtitle}
+                      {parse(story.subtitle)}
 
                       . <br /> <br />{" "}
 
@@ -140,7 +144,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
                       {`${story.introduction_quote} ${story.introduction_quote_author}`}
                       <br /> <br />
-                      {story.introduction}
+                      {parse(story.introduction)}
                     </p>
                   </div>
 
@@ -168,7 +172,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   </h3>
                   <p
                     class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
-                    {story.disclaimer}
+                    {parse(story.disclaimer)}
                   </p>
                 </div>
 
@@ -184,7 +188,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="#PARAGRAPH_1">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {story.body1_title}
+                          {parse(story.body1_title)}
                         </p>
                       </Link>
                     </div>
@@ -192,7 +196,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="#PARAGRAPH_2">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {story.body2_title}
+                          {parse(story.body2_title)}
                         </p>
                       </Link>
                     </div>
@@ -202,7 +206,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                         <Link href="#PARAGRAPH_3">
                           <p
                             class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                            {story.body3_title}
+                            {parse(story.body3_title)}
                           </p>
                         </Link>
                       </a>
@@ -212,7 +216,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="#PARAGRAPH_4">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {story.body4_title}
+                          {parse(story.body4_title)}
                         </p>
                       </Link>
                     </div>
@@ -220,7 +224,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="#PARAGRAPH_5">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {story.body5_title}
+                          {parse(story.body5_title)}
                         </p>
                       </Link>
                     </div>
@@ -228,7 +232,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="PARAGRAPH_6">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {story.body6_title}
+                          {parse(story.body6_title)}
                         </p>
                       </Link>
                     </div>
@@ -236,7 +240,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="PARAGRAPH_7">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {story.body7_title}
+                          {parse(story.body7_title)}
                         </p>
                       </Link>
                     </div>
@@ -343,11 +347,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
-                      {story.body1_title}
+                      {parse(story.body1_title)}
                     </h3>
                     <br />
                   <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                      {story.body1}                       
+                      {parse(story.body1)}                       
                     <br/> 
                   </p>
                 </div>
@@ -394,11 +398,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <h3
                     class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                     id={styles._H3}>
-                    {story.body2_title}
+                    {parse(story.body2_title)}
                   </h3>
                   <br />
                   <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    {story.body2}
+                    {parse(story.body2)}
                   </p>
                 </div>
               </div>
@@ -436,11 +440,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <h3
                     class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                     id={styles._H3}>
-                    {story.body3_title}
+                    {parse(story.body3_title)}
                   </h3>
                   <br />
                   <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    {story.body3}                  
+                    {parse(story.body3)}                  
                   </p>
                 </div>
 
@@ -456,7 +460,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     key={story._id}
                     width={500}
                     height={500}
-                    src={story.image}
+                    src={story.image2}
                     style={{
                       position: "absolute",
                       width: "100%",
@@ -498,12 +502,12 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <h3
                     class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                     id={styles._H3}>
-                    {story.body4_title}
+                    {parse(story.body4_title)}
                   </h3>
 
                   <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                     <br /> <br />
-                    {story.body4}                   
+                    {parse(story.body4)}                   
                   </p>
                 </div>
 
@@ -548,11 +552,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <h3
                       class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                       id={styles._H3}>
-                      {story.body5_title}
+                      {parse(story.body5_title)}
                     </h3>
                     <br />
                     <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                      {story.body5}                   
+                      {parse(story.body5)}                   
                     </p>
                   </div>
 
@@ -580,11 +584,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <h3
                     class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                     id={styles._H3}>
-                    {story.body6_title}
+                    {parse(story.body6_title)}
                   </h3>
                   <br />
                   <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    {story.body6}         
+                    {parse(story.body6)}         
                   </p>
                 </div>
 
@@ -620,11 +624,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <h3
                     class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                     id={styles._H3}>
-                    {story.body7_title}
+                    {parse(story.body7_title)}
                   </h3>
                   <br />
                   <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    {story.body7}                  
+                    {parse(story.body7)}                  
                   </p>
                 </div>
 
@@ -671,11 +675,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <h3
                     class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                     id={styles._H3}>
-                    {story.body8_title}
+                    {parse(story.body8_title)}
                   </h3>
                   <br />
                   <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    {story.body8}                   
+                    {parse(story.body8)}                   
                   </p>
 
                 </div>
@@ -714,11 +718,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <h3
                     class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                     id={styles._H3}>
-                    {story.body9_title}
+                    {parse(story.body9_title)}
                   </h3>
                   <br />
                   <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    {story.body9}                  
+                    {parse(story.body9)}                  
                   </p>
                 </div>
 
@@ -757,11 +761,11 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <h3
                     class="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                     id={styles._H3}>
-                    {story.body10_title}
+                    {parse(story.body10_title)}
                   </h3>
                   <br />
                   <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    {story.body10}                 
+                    {parse(story.body10)}                 
                   </p>
                 </div>
 
@@ -800,7 +804,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   </h3>
                   <br />
                   <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    {story.conclusion}                  
+                    {parse(story.conclusion)}                  
                   </p>
                 </div>
 
