@@ -59,17 +59,18 @@ const Blogsmain = ({ stories, firstStory }) => {
                   <div id={styles.SUB_ICON}></div>
 
                   <div id={styles.MAIN_TAG}>
-                    <h1
+                    <div
 
                       id={styles._H1}
                       class=" text-stone-200 ... font-avant_garde_bold"
                     >
                       {story.title}
 
-                    </h1>
+                    </div>
                   </div>
                   <div id={styles.SUB_TAG}>
-                    <h3
+
+                    <div
                       id={styles._H3}
                       class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium"
                     >
@@ -78,7 +79,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
                       . <br /> <br />{" "}
 
-                    </h3>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -183,7 +184,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="#PARAGRAPH_1">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {story.paragraphtitle1}
+                          {story.body1_title}
                         </p>
                       </Link>
                     </div>
@@ -191,7 +192,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="#PARAGRAPH_2">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {story.paragraphtitle2}
+                          {story.body2_title}
                         </p>
                       </Link>
                     </div>
@@ -201,7 +202,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                         <Link href="#PARAGRAPH_3">
                           <p
                             class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                            {story.paragraphtitle6}
+                            {story.body3_title}
                           </p>
                         </Link>
                       </a>
@@ -211,7 +212,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="#PARAGRAPH_4">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {story.paragraphtitle7}
+                          {story.body4_title}
                         </p>
                       </Link>
                     </div>
@@ -219,7 +220,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="#PARAGRAPH_5">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {story.paragraphtitle8}
+                          {story.body5_title}
                         </p>
                       </Link>
                     </div>
@@ -227,7 +228,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="PARAGRAPH_6">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {story.paragraphtitle9}
+                          {story.body6_title}
                         </p>
                       </Link>
                     </div>
@@ -235,7 +236,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="PARAGRAPH_7">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {story.paragraphtitle10}
+                          {story.body7_title}
                         </p>
                       </Link>
                     </div>
@@ -809,7 +810,6 @@ const Blogsmain = ({ stories, firstStory }) => {
           </section>
         )
       })}
-
 
 
 
