@@ -84,14 +84,20 @@ export default class Aboutpage extends Component {
                     <SkeletonLoader/>
                   </div>
                 )}
-                <iframe
-                  title='iframe'
+                {/* <iframe
                   loading='lazy'
                   onLoad={this.handleIframeLoad}
                   src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true"
                   width="100%" height="100%" frameborder="0">
+                </iframe> */}
+                <iframe 
+                title="Speckle"
+                onLoad={this.handleIframeLoad}
+                src="https://app.speckle.systems/projects/d719234282/models/7eb698fe88#embed=%7B%22isEnabled%22%3Atrue%2C%22isTransparent%22%3Atrue%2C%22hideControls%22%3Atrue%2C%22hideSelectionInfo%22%3Atrue%7D"
+                width="100%" height="110%" frameborder="0">
                 </iframe>
               </div>
+              
             </div>
 
             <div id={styles.ABOUT_HOLDER}>
