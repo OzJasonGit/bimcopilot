@@ -9,9 +9,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import dynamic from "next/dynamic";
+import "react-quill/dist/quill.snow.css";
 
+// import QuillNoSSRWrapper from "react-quill";
 const QuillNoSSRWrapper = dynamic(() => import("react-quill"), { ssr: false });
-
 
 import { Button } from "@/components/ui/button";
 import {
@@ -125,8 +126,8 @@ export function Admin() {
     setStory((prev) => ({ ...prev, [name]: value }));
   };
   const handleSubmit = async (data) => {
-    setLoading(true); 
-    // console.log("Validated data:", data);
+    setLoading(true);
+    console.log("Validated data:", data);
     try {
       const res = await fetch("/api/admin_route", {
         method: "POST",
@@ -177,8 +178,8 @@ export function Admin() {
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
                         placeholder="Write your title here..."
-                      />   
-                                       </FormControl>
+                      />
+                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -195,8 +196,8 @@ export function Admin() {
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
                         placeholder="Write your slug here..."
-                      />    
-                                      </FormControl>
+                      />
+                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -429,13 +430,13 @@ export function Admin() {
                   <FormItem>
                     <FormLabel>Author</FormLabel>
                     <FormControl>
-                    <QuillNoSSRWrapper
+                      <QuillNoSSRWrapper
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
                         placeholder="Author name"
-                      />                  
-                        </FormControl>
+                      />
+                    </FormControl>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -460,13 +461,14 @@ export function Admin() {
               />
 
               <Button type="submit" story={story} handleChange={handleChange} handleSubmit={handleSubmit} disabled={loading} >
-              {loading ? "Submitting..." : "Submit"}
+                {loading ? "Submitting..." : "Submit"}
               </Button>
             </form>
           </Form>
 
         </div>
       </div>
+
     </section>
   );
 }
