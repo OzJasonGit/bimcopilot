@@ -14,6 +14,7 @@ import Subscribetop from "../../components/Subscribetop/subscribetop";
 import Link from "next/link";
 import Image from "next/image";
 
+import parse from "html-react-parser";
 
 
 
@@ -70,13 +71,13 @@ const Bloghomemain = ({ stories, firstStory }) => {
 
                     <div id={styles.BLOG_TEXT}>
                       <h3 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
-                        {story.title}
+                        {parse(story.title)}
                       </h3>
 
                       <br />
 
                       <h4 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
-                        {story.subtitle}
+                        {parse(story.subtitle)}
                       </h4>
                     </div>
 
