@@ -1,5 +1,5 @@
 
-import styles from './blog.module.css';
+import styles from './blog_test.module.css';
 
 import { useParams, useRouter } from "next/navigation";
 
