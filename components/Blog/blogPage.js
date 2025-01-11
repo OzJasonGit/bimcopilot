@@ -42,7 +42,7 @@ story_id = params.slug
                       left: "0px",
                     }}
                   >
-                    {parse(stories.data[0].post_number)}
+                    {parse(stories.data[0].post_number || "")}
                   </h1>
                 </div>
               </div>
@@ -90,7 +90,7 @@ story_id = params.slug
                   id={styles._H2}
                   class=" text-stone-200 ... font-avant_garde_bold"
                 >
-                  {parse(stories.data[0].title)}
+                  {parse(stories.data[0].title || "")}
                 </h2>
                 </Link>
               </div>
@@ -101,7 +101,7 @@ story_id = params.slug
                   id={styles._H3}
                   class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_bold"
                 >
-                  {parse(stories.data[0].subtitle)}
+                  {parse(stories.data[0].subtitle || "")}
                 </h3>
                 </Link>
               </div>
@@ -111,7 +111,7 @@ story_id = params.slug
                 <h3
                   id={styles._H3}
                   class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_bold">
-                  {parse(stories.data[0].author)}
+                  {parse(stories.data[0].author || "")}
                 </h3>
                 </Link>
               </div>
@@ -164,7 +164,7 @@ story_id = params.slug
                               id={styles._H3}
                               class="text-lg ... text-stone-200 ... drop-shadow-xl ... font-avant_garde_bold"
                             >
-                              {parse(story.title)}
+                              {parse(story.title || "")}
                             </h3>
                           </Link>
                         </div>
@@ -175,7 +175,7 @@ story_id = params.slug
                               id={styles._H4}
                               class="text-sm ... text-right ... text-stone-400 ... drop-shadow-xl ... font-avant_garde_bold"
                             >
-                              {parse(story.author)}
+                              {parse(story.author || "")}
                             </h3>
                           </Link>
                         </div>
@@ -184,7 +184,7 @@ story_id = params.slug
                             id={styles._H4}
                             class="text-sm ... text-right ... text-stone-400 ... drop-shadow-xl ... font-avant_garde_bold"
                           >
-                            {parse(story.timestamp)}
+                            {parse(story.timestamp || "")}
                           </h4>
                         </div>
 
