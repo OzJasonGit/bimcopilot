@@ -665,7 +665,7 @@ export function Admin() {
                 name="body8_title"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>body7_title</FormLabel>
+                    <FormLabel>body8_title</FormLabel>
                     <FormControl>
                       <QuillNoSSRWrapper
                         theme="snow"
@@ -684,7 +684,7 @@ export function Admin() {
                 name="body8"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>body7</FormLabel>
+                    <FormLabel>body8</FormLabel>
                     <FormControl>
                       <QuillNoSSRWrapper
                         theme="snow"
@@ -705,7 +705,7 @@ export function Admin() {
                 name="body9_title"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>body7_title</FormLabel>
+                    <FormLabel>body9_title</FormLabel>
                     <FormControl>
                       <QuillNoSSRWrapper
                         theme="snow"
@@ -724,7 +724,7 @@ export function Admin() {
                 name="body9"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>body7</FormLabel>
+                    <FormLabel>body9</FormLabel>
                     <FormControl>
                       <QuillNoSSRWrapper
                         theme="snow"
@@ -744,7 +744,7 @@ export function Admin() {
                 name="body10_title"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>body7_title</FormLabel>
+                    <FormLabel>body10_title</FormLabel>
                     <FormControl>
                       <QuillNoSSRWrapper
                         theme="snow"
@@ -763,7 +763,7 @@ export function Admin() {
                 name="body10"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>body7</FormLabel>
+                    <FormLabel>body10</FormLabel>
                     <FormControl>
                       <QuillNoSSRWrapper
                         theme="snow"
