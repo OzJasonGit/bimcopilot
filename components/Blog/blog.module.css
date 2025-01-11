@@ -410,7 +410,6 @@
 #BLOG_IMAGE {
   overflow: hidden;
   grid-area: IMAGE;
-  background-color: #efefef;
   height: 100%;
 }
 
