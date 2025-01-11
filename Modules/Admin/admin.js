@@ -48,27 +48,80 @@ const formSchema = z.object({
   introduction: z.string().min(3, {
     message: "introduction must be at least 3 chharacters",
   }),
+
+  body1_title: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }),
   body1: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }),
+
+  body2_title: z.string().min(3, {
     message: "body must be at least 3 characters.",
   }),
   body2: z.string().min(3, {
     message: "body must be at least 3 characters.",
   }),
+
+  body3_title: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
   body3: z.string().min(3, {
     message: "body must be at least 3 characters.",
-  }),
+  }).optional(),
+
+  body4_title: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
   body4: z.string().min(3, {
     message: "body must be at least 3 characters.",
-  }),
+  }).optional(),
+
+  body5_title: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
   body5: z.string().min(3, {
     message: "body must be at least 3 characters.",
-  }),
+  }).optional(),
+
+  body6_title: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
   body6: z.string().min(3, {
     message: "body must be at least 3 characters.",
-  }),
+  }).optional(),
+
+  body7_title: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
   body7: z.string().min(3, {
     message: "body must be at least 3 characters.",
-  }),
+  }).optional(),
+
+
+  body8_title: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+  body8: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+
+
+  body9_title: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+  body9: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+
+
+  body10_title: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+  body10: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+
   video: z.string().url({
     message: "Video must be a valid URL.",
   }).optional(),
@@ -78,7 +131,7 @@ const formSchema = z.object({
 export function Admin() {
   const form = useForm({
     resolver: zodResolver(formSchema),
-    defaultValues: {
+      defaultValues: {
       title: "",
       author: "",
       subtitle: "",
@@ -86,13 +139,26 @@ export function Admin() {
       image2: "",
       avatar: "",
       slug: "",
+      body1_title: "",
       body1: "",
+      body2_title: "",
       body2: "",
+      body3_title: "",
       body3: "",
+      body4_title: "",
       body4: "",
+      body5_title: "",
       body5: "",
+      body6_title: "",
       body6: "",
+      body7_title: "",
       body7: "",
+      body8_title: "",
+      body8: "",
+      body9_title: "",
+      body9: "",
+      body10_title: "",
+      body10: "",
       introduction: "",
       video: "",
       conclusion: "",
@@ -100,23 +166,36 @@ export function Admin() {
     },
   });
   const [story, setStory] = useState({
-    title: "",
-    author: "",
-    subtitle: "",
-    image: "",
-    image2: "",
-    avatar: "",
-    slug: "",
-    body1: "",
-    body2: "",
-    body3: "",
-    body4: "",
-    body5: "",
-    body6: "",
-    body7: "",
-    introduction: "",
-    video: "",
-    conclusion: "",
+      title: "",
+      author: "",
+      subtitle: "",
+      image: "",
+      image2: "",
+      avatar: "",
+      slug: "",
+      body1_title: "",
+      body1: "",
+      body2_title: "",
+      body2: "",
+      body3_title: "",
+      body3: "",
+      body4_title: "",
+      body4: "",
+      body5_title: "",
+      body5: "",
+      body6_title: "",
+      body6: "",
+      body7_title: "",
+      body7: "",
+      body8_title: "",
+      body8: "",
+      body9_title: "",
+      body9: "",
+      body10_title: "",
+      body10: "",
+      introduction: "",
+      video: "",
+      conclusion: "",
   });
 
   const [loading, setLoading] = useState(false); // Track loading state
@@ -278,6 +357,26 @@ export function Admin() {
                 )}
               />
 
+
+              <FormField
+                control={form.control}
+                name="body1_title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body1_title</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body1_title here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
               <FormField
                 control={form.control}
                 name="body1"
@@ -296,6 +395,29 @@ export function Admin() {
                   </FormItem>
                 )}
               />
+
+
+
+              <FormField
+                control={form.control}
+                name="body2_title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body2_title</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body2_title here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+
               <FormField
                 control={form.control}
                 name="body2"
@@ -314,6 +436,29 @@ export function Admin() {
                   </FormItem>
                 )}
               />
+
+
+
+              <FormField
+                control={form.control}
+                name="body3_title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body3_title</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body3_title here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+                  />  
+
+
               <FormField
                 control={form.control}
                 name="body3"
@@ -332,6 +477,27 @@ export function Admin() {
                   </FormItem>
                 )}
               />
+
+
+              <FormField
+                control={form.control}
+                name="body4_title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body4_title</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body4_title here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
               <FormField
                 control={form.control}
                 name="body4"
@@ -350,6 +516,27 @@ export function Admin() {
                   </FormItem>
                 )}
               />
+
+
+              <FormField
+                control={form.control}
+                name="body5_title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body5_title</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body5_title here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
               <FormField
                 control={form.control}
                 name="body5"
@@ -368,6 +555,27 @@ export function Admin() {
                   </FormItem>
                 )}
               />
+
+              <FormField
+                control={form.control}
+                name="body6_title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body4</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body6_title here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+
               <FormField
                 control={form.control}
                 name="body6"
@@ -387,6 +595,24 @@ export function Admin() {
                 )}
               />
 
+              <FormField
+                control={form.control}
+                name="body7_title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body7_title</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body7_title here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
 
               <FormField
                 control={form.control}
@@ -399,7 +625,125 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body6 here..."
+                        placeholder="Write your body7 here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+
+            <FormField
+                control={form.control}
+                name="body8_title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body7_title</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body8_title here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="body8"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body7</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body8 here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+
+
+            <FormField
+                control={form.control}
+                name="body9_title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body7_title</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body9_title here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="body9"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body7</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body9 here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+
+            <FormField
+                control={form.control}
+                name="body10_title"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body7_title</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body10_title here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
+              <FormField
+                control={form.control}
+                name="body10"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>body7</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your body10 here..."
                       />
                     </FormControl>
                     <FormMessage />
