@@ -14,6 +14,8 @@ import Subscribetop from "../../components/Subscribetop/subscribetop";
 import Image from "next/image";
 import Link from "next/link";
 
+import parse from "html-react-parser";
+
 const Productsmain = ({ stories, firstStory }) => {
   const storiesToMap = stories.filter((story, i) => i != 0);
   const storiesSolo_1 = stories.filter((story, i) => i == 3)
@@ -60,11 +62,11 @@ const Productsmain = ({ stories, firstStory }) => {
                                         <div id={styles.PRODUCT_TEXT}> 
 
                                           <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
-                                            {story.title}
+                                            {parse(story.title || "")}
                                           </h2>    
                                           <br/>                                  
                                           <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
-                                            {story.subtitle}
+                                            {parse(story.subtitle || "")}
                                           </h3>
 
                                         </div>
@@ -115,11 +117,11 @@ const Productsmain = ({ stories, firstStory }) => {
                                         <div id={styles.PRODUCT_TEXT}> 
 
                                           <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
-                                            {story.title}
+                                            {parse(story.title || "")}
                                           </h2>  
                                           <br/>                                      
                                           <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
-                                            {story.subtitle}
+                                            {parse(story.subtitle || "")}
                                           </h3>
 
                                         </div>
@@ -157,11 +159,11 @@ const Productsmain = ({ stories, firstStory }) => {
                                         <div id={styles.PRODUCT_TEXT}> 
 
                                           <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
-                                            {story.title}
+                                            {parse(story.title || "")}
                                           </h2>  
                                           <br/>                                      
                                           <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
-                                            {story.subtitle}
+                                            {parse(story.subtitle || "")}
                                           </h3>
 
                                         </div>
@@ -220,11 +222,11 @@ const Productsmain = ({ stories, firstStory }) => {
                                           <div id={styles.PRODUCT_TEXT}> 
 
                                             <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
-                                              {story.title}
+                                              {parse(story.title || "")}
                                             </h2>    
                                             <br/>                                    
                                             <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
-                                              {story.subtitle}
+                                              {parse(story.subtitle || "")}
                                             </h3>
 
                                           </div>
@@ -293,11 +295,11 @@ const Productsmain = ({ stories, firstStory }) => {
                                         <div id={styles.PRODUCT_TEXT}> 
 
                                           <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
-                                            {story.title}
+                                            {parse(story.title || "")}
                                           </h2>    
                                           <br/>                                    
                                           <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
-                                            {story.subtitle}
+                                            {parse(story.subtitle || "")}
                                           </h3>
 
                                         </div>
@@ -335,11 +337,11 @@ const Productsmain = ({ stories, firstStory }) => {
                                         <div id={styles.PRODUCT_TEXT}> 
 
                                           <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
-                                            {story.title}
+                                            {parse(story.title || "")}
                                           </h2>    
                                           <br/>                                    
                                           <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
-                                            {story.subtitle}
+                                            {parse(story.subtitle || "")}
                                           </h3>
 
                                         </div>
@@ -407,11 +409,11 @@ const Productsmain = ({ stories, firstStory }) => {
                                         <div id={styles.PRODUCT_TEXT}> 
 
                                           <h2 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
-                                            {story.title}
+                                            {parse(story.title || "")}
                                           </h2>   
                                           <br/>                                     
                                           <h3 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
-                                            {story.subtitle}
+                                            {parse(story.subtitle || "")}
                                           </h3>
 
                                         </div>
