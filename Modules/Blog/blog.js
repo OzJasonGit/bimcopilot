@@ -33,13 +33,13 @@ const Blogsmain = ({ stories, firstStory }) => {
 
           <Head>
             <title>
-              {parse(story.title)}
+              {parse(story.title || "")}
             </title>
 
             <meta
-              name={parse(story.title)}
-              content={parse(story.title)}
-              key={parse(story.title)}
+              name={parse(story.title || "")}
+              content={parse(story.title || "")}
+              key={parse(story.title || "")}
             />
           </Head>
         )
@@ -68,7 +68,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       id={styles._H1}
                       class=" text-stone-200 ... font-avant_garde_bold"
                     >
-                      {parse(story.title)}
+                      {parse(story.title || "")}
 
                     </div>
                   </div>
@@ -79,7 +79,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium"
                     >
                       {" "}
-                      {parse(story.subtitle)}
+                      {parse(story.subtitle || "")}
 
                       . <br /> <br />{" "}
 
@@ -144,7 +144,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <p class="text-xl ... text-stone-400 ... font-avant_garde_bold">
                       {`${story.introduction_quote} ${story.introduction_quote_author}`}
                       <br /> <br />
-                      {parse(story.introduction)}
+                      {parse(story.introduction || "")}
                     </p>
                   </div>
 
@@ -172,7 +172,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   </h3>
                   <p
                     class="text-lg ... text-neutral-700 ... font-avant_garde_bold">
-                    {parse(story.disclaimer)}
+                    {parse(story.disclaimer || "")}
                   </p>
                 </div>
 
@@ -188,7 +188,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="#PARAGRAPH_1">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {parse(story.body1_title)}
+                          {parse(story.body1_title || "")}
                         </p>
                       </Link>
                     </div>
@@ -196,7 +196,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="#PARAGRAPH_2">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {parse(story.body2_title)}
+                          {parse(story.body2_title || "")}
                         </p>
                       </Link>
                     </div>
@@ -206,7 +206,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                         <Link href="#PARAGRAPH_3">
                           <p
                             class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                            {parse(story.body3_title)}
+                            {parse(story.body3_title || "")}
                           </p>
                         </Link>
                       </a>
@@ -216,7 +216,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="#PARAGRAPH_4">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {parse(story.body4_title)}
+                          {parse(story.body4_title || "")}
                         </p>
                       </Link>
                     </div>
@@ -224,7 +224,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="#PARAGRAPH_5">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {parse(story.body5_title)}
+                          {parse(story.body5_title || "")}
                         </p>
                       </Link>
                     </div>
@@ -232,7 +232,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="PARAGRAPH_6">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {parse(story.body6_title)}
+                          {parse(story.body6_title || "")}
                         </p>
                       </Link>
                     </div>
@@ -240,7 +240,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                       <Link href="PARAGRAPH_7">
                         <p
                           class="text-xs ... text-neutral-700 ... font-geist_semibold">
-                          {parse(story.body7_title)}
+                          {parse(story.body7_title || "")}
                         </p>
                       </Link>
                     </div>
@@ -804,7 +804,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                   </h3>
                   <br />
                   <p class="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    {parse(story.conclusion)}                  
+                    {parse(story.conclusion || "")}                  
                   </p>
                 </div>
 
@@ -945,12 +945,12 @@ const Blogsmain = ({ stories, firstStory }) => {
                       id={styles._H1}
                       class="text-md... text-stone-200 ... font-geist_semibold"
                     >
-                      {story.title}
+                      {parse(story.title || "")}
 
                     </h1>
                     <br />
                     <p class="text-md ... text-stone-400 ... font-geist_regular">
-                      {story.subtitle}
+                      {parse(story.subtitle || "")}
 
                     </p>
                   </div>
