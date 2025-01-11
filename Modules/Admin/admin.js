@@ -26,6 +26,10 @@ import {
 import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
+
+  post_number: z.string().min(1, {
+    message: "Title must be at least 1 characters.",
+  }),
   title: z.string().min(3, {
     message: "Title must be at least 3 characters.",
   }),
@@ -132,6 +136,7 @@ export function Admin() {
   const form = useForm({
     resolver: zodResolver(formSchema),
       defaultValues: {
+      post_number: "",
       title: "",
       author: "",
       subtitle: "",
@@ -166,6 +171,7 @@ export function Admin() {
     },
   });
   const [story, setStory] = useState({
+      post_number: "",
       title: "",
       author: "",
       subtitle: "",
@@ -245,6 +251,26 @@ export function Admin() {
           <h1 style={{ textAlign: "center", fontSize: "x-large", fontWeight: "600" }}>Stories</h1>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
+
+              <FormField
+                control={form.control}
+                name="post_number"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>post_number</FormLabel>
+                    <FormControl>
+                      <QuillNoSSRWrapper
+                        theme="snow"
+                        value={field.value || ""} // Bind value to the form's field
+                        onChange={(content) => field.onChange(content)} // Update the form's state on change
+                        placeholder="Write your post_number here..."
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+
               <FormField
                 control={form.control}
                 name="title"
@@ -561,7 +587,7 @@ export function Admin() {
                 name="body6_title"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>body4</FormLabel>
+                    <FormLabel>body6_title</FormLabel>
                     <FormControl>
                       <QuillNoSSRWrapper
                         theme="snow"
