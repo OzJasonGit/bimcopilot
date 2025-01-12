@@ -62,8 +62,10 @@ return (
           <div class={styles.grid_0_scroll}>
             <div id={styles.IMAGE_LAYER_1_1}>
 
-              <div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
-                  <div id={styles.IMAGE_POST}>
+             {/*<div class="rounded-xl ... drop-shadow-2xl ... shadow-black" id={styles.P_IMAGE_1}>
+                   <div id={styles.IMAGE_POST}>
+
+                    
                     <div id='cardbox' style={{width:"100%", height:"100%"}}>
                       <Card>
                         <CardHeader>
@@ -115,7 +117,7 @@ return (
                     </div>
                               
                   </div>      
-              </div>
+              </div>*/}
 
 
 
