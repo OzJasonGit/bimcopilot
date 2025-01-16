@@ -47,10 +47,12 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
       <Services_1/>
       <Subscribe_2/>
-      
-
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+      </section>
+      
+
+      {/*<section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_main_image}>
             <div id={styles.MAIN_IMAGE_GRID_HOLDER}>
 
@@ -466,7 +468,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 
             </div>
         </div>
-      </section>
+      </section> */}
 
 
       
