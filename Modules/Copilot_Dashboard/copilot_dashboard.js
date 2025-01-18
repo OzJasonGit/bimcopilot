@@ -43,7 +43,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
     <>
       <Menu/>
       <Header/>
-      <Sides/>
+      {/*<Sides/>*/}
 
       <Services_1/>
       <Subscribe_2/>
