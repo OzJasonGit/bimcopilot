@@ -49,6 +49,9 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
       <Subscribe_2/>
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+        <div class={styles.grid_0_dashboard}>
+
+        </div>
       </section>
       
 
@@ -78,9 +81,9 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         position: "relative",
                         gridArea: "IMAGE",
                         overflow: "hidden", 
-                        height: "100%", 
+                        height: "110%", 
                         }}
-                        src="https://speckle.xyz/embed?stream=8c614e6658&commit=31247f8195&transparent=true&autoload=true&hidecontrols=true&hidesidebar=true&hideselectioninfo=true&commentslideshow=true" width="100%" frameborder="0"></iframe>   
+                        src="https://app.speckle.systems/projects/d719234282/models/7eb698fe88#embed=%7B%22isEnabled%22%3Atrue%2C%22isTransparent%22%3Atrue%2C%22hideControls%22%3Atrue%2C%22hideSelectionInfo%22%3Atrue%7D" width="100%" frameborder="0"></iframe>   
                     </div>
                 </div>
                 
@@ -479,7 +482,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
       
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-        <div class={styles.grid_0_scroll}>
+        <div class={styles.grid_0_dashboard}>
             <div id={styles.BOUGHT_TOGETHER_GRID}> 
 
                 <div id={styles.PRODUCT_DESCRIPTION}>
