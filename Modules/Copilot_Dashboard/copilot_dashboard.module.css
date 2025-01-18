@@ -236,12 +236,12 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
-      "SPECKLE SPECKLE SPECKLE  .  .  .  ."
-      ".  .  .  .  .  .  ."
-      ".  .  .  .  .  .  ."
-      ".  .  .  .  .  .  ."
-      ".  .  .  .  .  .  ."
-      ".  .  .  .  .  .  ."
+      "SPECKLE SPECKLE SPECKLE  .  .  .  .  ."
+      ".  .  .  .  .  .  .  ."
+      ".  .  .  .  .  .  .  ."
+      ".  .  .  .  .  .  .  ."
+      ".  .  .  .  .  .  .  ."
+      ".  .  .  .  .  .  .  ."
 }
 
 
