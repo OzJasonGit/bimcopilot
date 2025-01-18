@@ -1,19 +1,39 @@
-"use client";
-import React, { useState } from "react";
 
-export default function SocialMedia() {
-  const handleAuth = () => {
-    const clientId = process.env.NEXT_PUBLIC_LINKEDIN_CLIENT_ID;
-    const redirectUri = process.env.NEXT_PUBLIC_LINKEDIN_REDIRECT_URI;
+'use client';
+import { LINKEDIN_URL } from "@/app/helpers/helper";
+import { useEffect,  useState } from "react";
 
 
-    const authUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&scope=profile%20email%20w_member_social`;
-    window.location.href = authUrl;
+export default function Home() {
+  const [loading, setLoading] = useState(false);
+  
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const accessToken = params.get('accessToken');
+    const firstName = params.get('firstName');
+    const lastName = params.get('lastName');
+
+    if (accessToken) {
+      localStorage.setItem('linkedinAccessToken', accessToken);
+      console.log('Access Token Saved:', accessToken);
+      console.log(`Welcome ${firstName} ${lastName}!`);
+    }
+  }, []);
+
+  const handleSignIn = () => {
+    console.log("Redirecting to:", LINKEDIN_URL); // Log the URL
+    window.location.href = LINKEDIN_URL;
   };
-
+  
+  
+  
   return (
-    <div>
-      <button onClick={handleAuth}>Connect LinkedIn</button>
-    </div>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <button disabled={loading} onClick={handleSignIn} style={{ backgroundColor: "white", color: "black", padding: 10 }}>
+      {loading ? 'logging...' : 'login to LinkedIn'}
+      </button>
+
+    </main>
   );
 }
+
