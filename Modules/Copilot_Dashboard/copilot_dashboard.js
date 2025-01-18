@@ -52,6 +52,13 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
         <div class={styles.grid_0_dashboard}>
             <div id={styles.DASHBOARD_GRID}>
 
+                    <div class="rounded-xl ..." style={{
+                        gridArea: "SPECKLE",
+                        position: "relative",                        
+                        overflow: "hidden",  
+                        height: "400px"}}>
+                    </div>
+
             </div>
 
         </div>
