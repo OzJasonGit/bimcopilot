@@ -97,7 +97,7 @@
 .grid_0_dashboard {
   position: relative;
   width: 100%;
-  /*max-width: 1520px;*/
+  max-width: 2560px;
   background-color: transparent;
   display: grid;
   grid-column-gap: 0;
