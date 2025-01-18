@@ -219,6 +219,59 @@
   left: -40px;
 }
 
+
+
+
+
+
+
+#DASHBOARD_GRID {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-area: SUB;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+      ".  .  .  .  .  ."
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #MAIN_IMAGE_GRID_HOLDER {
   position: relative;
   width: 100%;
