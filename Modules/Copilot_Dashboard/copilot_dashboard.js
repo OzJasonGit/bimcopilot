@@ -57,13 +57,52 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         position: "relative",                        
                         overflow: "hidden",  
                         height: "600px"}}>
+                             <div class="rounded-xl ..." style={{
+                                position: "relative",                        
+                                overflow: "hidden",  
+                                height: "100%",
+                                }}>
+                                <iframe
+                                title='iframe'
+                                loading='lazy'
+                                style={{
+                                position: "relative",
+                                gridArea: "IMAGE",
+                                overflow: "hidden", 
+                                height: "110%", 
+                                }}
+                                src="https://app.speckle.systems/projects/d719234282/models/7eb698fe88#embed=%7B%22isEnabled%22%3Atrue%2C%22isTransparent%22%3Atrue%2C%22hideControls%22%3Atrue%2C%22hideSelectionInfo%22%3Atrue%7D" width="100%" frameborder="0"></iframe>   
+                            </div>
                     </div>
 
-                    <div class="rounded-xl ... bg-zinc-200 ..." style={{
+                    <div id={styles.G1} class="rounded-xl ... " style={{
                         gridArea: "G1",
                         position: "relative",                        
                         overflow: "hidden",  
                         height: "100%"}}>
+
+                            <div id={styles.G3} class="rounded-xl ... bg-zinc-200 ..." style={{
+                                gridArea: "G3",
+                                position: "relative",                        
+                                overflow: "hidden",  
+                                height: "100%"}}>               
+                            </div>
+
+                            <div id={styles.G3} class="rounded-xl ... bg-zinc-200 ..." style={{
+                                gridArea: "G4",
+                                position: "relative",                        
+                                overflow: "hidden",  
+                                height: "100%"}}>               
+                            </div>
+
+                            <div id={styles.G3} class="rounded-xl ... bg-zinc-200 ..." style={{
+                                gridArea: "G5",
+                                position: "relative",                        
+                                overflow: "hidden",  
+                                height: "100%"}}>               
+                            </div>
+
+
                     </div>
 
                     <div class="rounded-xl ... bg-zinc-200 ..." style={{
@@ -71,6 +110,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         position: "relative",                        
                         overflow: "hidden",  
                         height: "600px"}}>
+
                     </div>
 
                     <div class="rounded-xl ... bg-zinc-200 ..." style={{
