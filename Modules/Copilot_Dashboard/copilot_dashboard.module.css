@@ -255,8 +255,8 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: 
+      "G3 G3 G4 G4"
       "G3 G3 G5 G5"
-      "G4 G4 G5 G5"
 }
 
 
