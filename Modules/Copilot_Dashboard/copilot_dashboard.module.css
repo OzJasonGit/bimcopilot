@@ -233,11 +233,11 @@
   grid-area: SUB;
   grid-column-gap: 40px;
   grid-row-gap: 40px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
-      "SPECKLE SPECKLE SPECKLE  .  .  .  .  ."
-      ".  .  .  .  .  .  .  ."
+      "SPECKLE SPECKLE SPECKLE G1 G1 G1 G1 G1"
+      "T1  T1  T1  .  .  .  .  ."
       ".  .  .  .  .  .  .  ."
       ".  .  .  .  .  .  .  ."
       ".  .  .  .  .  .  .  ."
