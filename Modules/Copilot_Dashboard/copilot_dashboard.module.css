@@ -271,7 +271,7 @@
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   grid-template-columns: 1fr;
-  grid-template-rows:  400px auto;
+  grid-template-rows:  350px auto;
   grid-template-areas:
     "G6"
     "G7"
