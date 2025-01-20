@@ -231,8 +231,8 @@
   height: auto;
   display: grid;
   grid-area: SUB;
-  grid-column-gap: 25px;
-  grid-row-gap: 25px;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
@@ -250,8 +250,8 @@
   width: 100%;
   height: auto;
   display: grid;
-  grid-column-gap: 25px;
-  grid-row-gap: 25px;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: 
