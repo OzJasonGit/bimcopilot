@@ -113,7 +113,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 gridArea: "G5",
                                 position: "relative",                        
                                 overflow: "hidden",  
-                                height: "100%"}}>               
+                                height: "350px"}}>               
                             </div>
 
 
