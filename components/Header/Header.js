@@ -156,10 +156,24 @@ export default class Header extends Component {
                           width: "100%"}}>
 
                             <div class="content-center ..." id={styles.TIME}>
-                              <Clock />                   
+                                  <Link id={styles.STORIES} href="/bloghome" >
+                                    <h3
+                                      id={styles.H_3_STORIES}
+                                      class="text-center ...  text-slate-50 font-avant_garde_bold"
+                                      data-content="Stories">
+                                      Sign-up
+                                    </h3>
+                                  </Link>                  
                               <div class="bg-zinc-500 ..." id={styles.B1}>
                               </div>
-                              <DateComponent />                              
+                                  <Link id={styles.STORIES} href="/bloghome" >
+                                    <h3
+                                      id={styles.H_3_STORIES}
+                                      class="text-center ...  text-slate-50 font-avant_garde_bold"
+                                      data-content="Stories">
+                                      Log-in
+                                    </h3>
+                                  </Link>                           
                             </div>
                   </div>
 
