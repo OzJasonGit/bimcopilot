@@ -254,6 +254,9 @@
 
 
 
+
+
+
 #BASKET_CONTAINER {
   grid-area: MENU_BUTTON;
   display: grid;
@@ -268,7 +271,22 @@
 }
 
 
+#SIGNUP_GRID {
+  
+  position: relative;
+  display: grid;
+  width: 100%;
 
+  min-width: 200px;
+  justify-self: right;
+  grid-template-columns: 1fr 1.5px 1.5fr;
+  grid-template-rows: 20px auto 0px;
+  grid-template-areas:
+    " . . ."
+    " SIGNUP B1 LOGIN"
+    " . . .";
+  background: transparent;
+}
 
 #TIME {
   grid-area: TIME;

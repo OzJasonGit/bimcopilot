@@ -148,33 +148,43 @@ export default class Header extends Component {
                   </div>
 
                   <div class="content-right ..." id={styles.SIGNUP_CONTAINER}
-                  style={{
-                          gridArea: "SIGN",
-                          position: "relative",                        
-                          overflow: "hidden",  
-                          height: "100%",
-                          width: "100%"}}>
+                        style={{
+                                gridArea: "SIGN",
+                                position: "relative",                        
+                                overflow: "hidden",  
+                                height: "100%",
+                                width: "100%"}}>
 
-                            <div class="content-center ..." id={styles.TIME}>
-                                  <Link id={styles.STORIES} href="/bloghome" >
-                                    <h3
-                                      id={styles.H_3_STORIES}
-                                      class="text-center ...  text-slate-50 font-avant_garde_bold"
-                                      data-content="Stories">
-                                      Sign-up
-                                    </h3>
-                                  </Link>                  
-                              <div class="bg-zinc-500 ..." id={styles.B1}>
-                              </div>
-                                  <Link id={styles.STORIES} href="/bloghome" >
-                                    <h3
-                                      id={styles.H_3_STORIES}
-                                      class="text-center ...  text-slate-50 font-avant_garde_bold"
-                                      data-content="Stories">
-                                      Log-in
-                                    </h3>
-                                  </Link>                           
-                            </div>
+                        <div class="content-center ..." id={styles.SIGNUP_GRID}>
+                            <Link id={styles.STORIES} href="/bloghome" 
+                                style={{
+                                    gridArea: "SIGNUP",
+                                    position: "relative",                         
+                                    height: "100%",
+                                    width: "100%"}}>
+                                <h3
+                                  id={styles.H_3_STORIES}
+                                  class="text-center ...  text-slate-50 font-avant_garde_bold"
+                                  data-content="Signup">
+                                  Signup
+                                </h3>
+                            </Link>                  
+                        <div class="bg-zinc-500 ..." id={styles.B1}>
+                        </div>
+                            <Link id={styles.SIGNUP} href="/bloghome" 
+                                style={{
+                                        gridArea: "LOGIN",
+                                        position: "relative",                        
+                                        height: "100%",
+                                        width: "100%"}}>
+                                <h3
+                                  id={styles.H_3_STORIES}
+                                  class="text-center ...  text-slate-50 font-avant_garde_bold"
+                                  data-content="Login">
+                                  Login
+                                </h3>
+                            </Link>                           
+                        </div>
                   </div>
 
 
