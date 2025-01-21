@@ -14,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import dynamic from "next/dynamic";
+import { textAlign } from "@mui/system";
 
 const Clock = dynamic(() => import("./Clock/clock"), { ssr: false });
 const DateComponent = dynamic(() => import("./Clock/date"), { ssr: false });
@@ -161,7 +162,8 @@ export default class Header extends Component {
                                     gridArea: "SIGNUP",
                                     position: "relative",                         
                                     height: "100%",
-                                    width: "100%"}}>
+                                    width: "100%",
+                                    textAlign: "center"}}>
                                 <h3
                                   id={styles.H_3_STORIES}
                                   class="text-center ...  text-slate-50 font-avant_garde_bold"
@@ -176,7 +178,8 @@ export default class Header extends Component {
                                         gridArea: "LOGIN",
                                         position: "relative",                        
                                         height: "100%",
-                                        width: "100%"}}>
+                                        width: "100%",
+                                        textAlign: "center"}}>
                                 <h3
                                   id={styles.H_3_STORIES}
                                   class="text-center ...  text-slate-50 font-avant_garde_bold"
