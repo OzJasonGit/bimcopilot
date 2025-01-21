@@ -147,12 +147,14 @@ export default class Header extends Component {
 
                   </div>
 
-
-
-
-
-                  
-
+                  <div class="content-right ... rounded-xl ... bg-zinc-200 ..." id={styles.SIGNUP_CONTAINER}
+                  style={{
+                          gridArea: "SIGN",
+                          position: "relative",                        
+                          overflow: "hidden",  
+                          height: "100%",
+                          width: "100%"}}>
+                  </div>
 
 
                 </header>
