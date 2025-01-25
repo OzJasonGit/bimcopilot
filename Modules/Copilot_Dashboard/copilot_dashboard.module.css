@@ -255,7 +255,7 @@
   grid-column-gap: 0px;
   grid-row-gap: 30px;
   grid-template-columns: 1fr;
-  grid-template-rows:  650px auto auto;
+  grid-template-rows:  550px auto auto;
   grid-template-areas:
     "FORCE"
     "LINE"
