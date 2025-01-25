@@ -236,9 +236,10 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
-      "SPECKLE SPECKLE SPECKLE MAP MAP MAP . . ."
-      "TITLE TITLE TITLE DOUGHNUT_1 DOUGHNUT_2 . . ."
-      "TREE TREE TREE TREE BAR BAR . . ."
+    "SPECKLE SPECKLE SPECKLE MAP MAP MAP . . ."
+    "TITLE TITLE TITLE DOUGHNUT_1 DOUGHNUT_2 . . ."
+    "TREE TREE TREE TREE BAR BAR . . ." ;
+      
 }
 
 #MAP {
