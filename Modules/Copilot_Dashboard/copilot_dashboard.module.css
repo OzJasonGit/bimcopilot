@@ -237,7 +237,7 @@
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "SPECKLE SPECKLE SPECKLE MAP MAP MAP . . ."
-    "TITLE TITLE TITLE DOUGHNUT_1 DOUGHNUT_2 . . ."
+    "TITLE TITLE TITLE DOUGHNUT_1 DOUGHNUT_2 . . . ."
     "TREE TREE TREE TREE BAR BAR . . ." ;
       
 }
