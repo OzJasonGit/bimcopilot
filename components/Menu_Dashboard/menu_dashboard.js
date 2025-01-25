@@ -2,7 +2,7 @@
 
 const Drawer = dynamic(() => import("antd/lib/drawer"), { ssr: false });
 import React, { useState } from "react";
-import styles from './Menu_Dasboard.module.css'
+import styles from './Menu_Dashboard.module.css'
 
 
 import bimcopilot_icon from "./Tesseract_Logo_2.png";
