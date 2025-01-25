@@ -264,6 +264,20 @@
 
 
 
+#DOUGHNUT{
+
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "DOUGHNUT_1 DOUGHNUT_2";
+}
+
+
+
 
 
 

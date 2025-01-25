@@ -92,11 +92,27 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     </div>
 
 
-                    <div id={styles.DOUGHNUT} class="rounded-xl ... bg-zinc-200 ..." style={{
+                    <div id={styles.DOUGHNUT} class="rounded-xl ..." style={{
                         gridArea: "DOUGHNUT",
                         position: "relative",                        
                         overflow: "hidden",  
                         height: "250px"}}>
+
+                            <div id={styles.DOUGHNUT_1} class="rounded-xl ... bg-zinc-200 ..." style={{
+                                gridArea: "DOUGHNUT_1",
+                                position: "relative",                        
+                                overflow: "hidden",  
+                                height: "100%"}}>
+                            </div>
+
+                            <div id={styles.DOUGHNUT_2} class="rounded-xl ... bg-zinc-200 ..." style={{
+                                gridArea: "DOUGHNUT_2",
+                                position: "relative",                        
+                                overflow: "hidden",  
+                                height: "100%"}}>
+                            </div>
+
+
                     </div>
 
                  
