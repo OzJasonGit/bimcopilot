@@ -120,6 +120,31 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         position: "relative",                        
                         overflow: "hidden",  
                         height: "100%"}}>
+
+                            <div id={styles.FORCE} class="rounded-xl ... bg-zinc-200 ..." style={{
+                                gridArea: "FORCE",
+                                position: "relative",                        
+                                overflow: "hidden",  
+                                width: "100%",
+                                height: "100%"}}>
+                            </div>
+
+                            <div id={styles.LINE} class="rounded-xl ... bg-zinc-200 ..." style={{
+                                gridArea: "LINE",
+                                position: "relative",                        
+                                overflow: "hidden", 
+                                width: "100%", 
+                                height: "100%"}}>
+                            </div>
+
+                            <div id={styles.SCATTER} class="rounded-xl ... bg-zinc-200 ..." style={{
+                                gridArea: "SCATTER",
+                                position: "relative",                        
+                                overflow: "hidden",  
+                                width: "100%",
+                                height: "100%"}}>
+                            </div>
+
                     </div>
 
             </div>

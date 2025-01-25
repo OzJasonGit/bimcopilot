@@ -242,27 +242,24 @@
       
 }
 
-#MAP {
-  position: relative;
-  width: 100%;
-}
 
 
 
 
-#G3 {
+
+#GRID_HOLDER {
 
   position: relative;
   width: 100%;
-  height: auto;
   display: grid;
-  grid-column-gap: 30px;
+  grid-column-gap: 0px;
   grid-row-gap: 30px;
   grid-template-columns: 1fr;
-  grid-template-rows:  350px auto;
+  grid-template-rows:  650px auto auto;
   grid-template-areas:
-    "G6"
-    "G7"
+    "FORCE"
+    "LINE"
+    "SCATTER";
 }
 
 
