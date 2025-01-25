@@ -242,18 +242,8 @@
 }
 
 #MAP {
-
   position: relative;
   width: 100%;
-  height: auto;
-  display: grid;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas: 
-      "G3 G3 G4 G4"
-      "G3 G3 G5 G5"
 }
 
 
