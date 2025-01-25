@@ -8,7 +8,7 @@ import Menu from "../../components/Menu/menu";
 
 
 
-import Subscribe_2 from "../../components/Subscribetop/subscribe_2";
+import Subscribe_Dashboard from "../../components/Subscribetop/subscribe_dashboard";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -46,7 +46,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
       {/*<Sides/>*/}
 
       <Services_1/>
-      <Subscribe_2/>
+      <Subscribe_Dashboard/>
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_dashboard}>
