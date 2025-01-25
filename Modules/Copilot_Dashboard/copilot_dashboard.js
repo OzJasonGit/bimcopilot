@@ -105,7 +105,6 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         position: "relative",                        
                         overflow: "hidden",  
                         height: "450px"}}>
-
                     </div>
 
                     <div id={styles.BAR} class="rounded-xl ... bg-zinc-200 ..." style={{
@@ -113,7 +112,14 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         position: "relative",                        
                         overflow: "hidden",  
                         height: "100%"}}>
+                    </div>
 
+
+                    <div id={styles.GRID_HOLDER} class="rounded-xl ... bg-zinc-200 ..." style={{
+                        gridArea: "HOLDER",
+                        position: "relative",                        
+                        overflow: "hidden",  
+                        height: "100%"}}>
                     </div>
 
             </div>
