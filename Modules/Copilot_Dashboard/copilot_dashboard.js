@@ -76,7 +76,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             </div>
                     </div>
 
-                    <div id={styles.MAP} class="rounded-xl ... " style={{
+                    <div id={styles.MAP} class="rounded-xl ...  bg-zinc-200 ..." style={{
                         gridArea: "MAP",
                         position: "relative",                        
                         overflow: "hidden",  
@@ -92,22 +92,14 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     </div>
 
 
-                    <div id={styles.DOUGHNUT_1} class="rounded-xl ... bg-zinc-200 ..." style={{
-                        gridArea: "DOUGHNUT_1",
+                    <div id={styles.DOUGHNUT} class="rounded-xl ... bg-zinc-200 ..." style={{
+                        gridArea: "DOUGHNUT",
                         position: "relative",                        
                         overflow: "hidden",  
                         height: "250px"}}>
                     </div>
 
-
-                    <div id={styles.DOUGHNUT_2}class="rounded-xl ... bg-zinc-200 ..." style={{
-                        gridArea: "DOUGHNUT_2",
-                        position: "relative",                        
-                        overflow: "hidden",  
-                        height: "250px"}}>                            
-                    </div>
-
-
+                 
                     <div id={styles.TREE} class="rounded-xl ... bg-zinc-200 ..." style={{
                         gridArea: "TREE",
                         position: "relative",                        
