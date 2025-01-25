@@ -233,18 +233,15 @@
   grid-area: SUB;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas:
-      "SPECKLE SPECKLE SPECKLE G1 G1 G1 G1 G1"
-      "T1  T1  T1  .  .  .  .  ."
-      "G2  G2  G2  .  .  .  .  ."
-      ".  .  .  .  .  .  .  ."
-      ".  .  .  .  .  .  .  ."
-      ".  .  .  .  .  .  .  ."
+      "SPECKLE SPECKLE SPECKLE MAP MAP MAP . . ."
+      "TITLE TITLE TITLE DOUGHNUT_1 DOUGHNUT_2 . . ."
+      "TREE TREE TREE TREE BAR BAR . . ."
 }
 
-#G1 {
+#MAP {
 
   position: relative;
   width: 100%;

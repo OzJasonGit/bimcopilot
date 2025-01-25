@@ -50,13 +50,14 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_dashboard}>
+
             <div id={styles.DASHBOARD_GRID}>
 
                     <div class="rounded-xl ... bg-zinc-200 ..." style={{
                         gridArea: "SPECKLE",
                         position: "relative",                        
                         overflow: "hidden",  
-                        height: "600px"}}>
+                        height: "450px"}}>
                              <div class="rounded-xl ..." style={{
                                 position: "relative",                        
                                 overflow: "hidden",  
@@ -75,13 +76,13 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             </div>
                     </div>
 
-                    <div id={styles.G1} class="rounded-xl ... " style={{
-                        gridArea: "G1",
+                    <div id={styles.MAP} class="rounded-xl ... " style={{
+                        gridArea: "MAP",
                         position: "relative",                        
                         overflow: "hidden",  
                         height: "100%"}}>
 
-                            <div id={styles.G3} class="rounded-xl ..." style={{
+                            {/*<div id={styles.G3} class="rounded-xl ..." style={{
                                 gridArea: "G3",
                                 position: "relative",                        
                                 overflow: "hidden",  
@@ -114,26 +115,52 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 position: "relative",                        
                                 overflow: "hidden",  
                                 height: "350px"}}>               
-                            </div>
+                            </div>*/}
+                    </div>
 
+
+                    <div class="rounded-xl ... bg-zinc-200 ..." style={{
+                        gridArea: "TITLE",
+                        position: "relative",                        
+                        overflow: "hidden",  
+                        height: "auto"}}>
+
+                    </div>
+
+
+                    <div class="rounded-xl ... bg-zinc-200 ..." style={{
+                        gridArea: "DOUGHNUT_1",
+                        position: "relative",                        
+                        overflow: "hidden",  
+                        height: "250px"}}>
+
+                    </div>
+
+
+                    <div class="rounded-xl ... bg-zinc-200 ..." style={{
+                        gridArea: "DOUGHNUT_2",
+                        position: "relative",                        
+                        overflow: "hidden",  
+                        height: "250px"}}>
+                            
+                    </div>
+
+
+                    <div class="rounded-xl ... bg-zinc-200 ..." style={{
+                        gridArea: "TREE",
+                        position: "relative",                        
+                        overflow: "hidden",  
+                        height: "450px"}}>
 
                     </div>
 
                     <div class="rounded-xl ... bg-zinc-200 ..." style={{
-                        gridArea: "T1",
+                        gridArea: "BAR",
                         position: "relative",                        
                         overflow: "hidden",  
-                        height: "600px"}}>
+                        height: "100%"}}>
 
                     </div>
-
-                    <div class="rounded-xl ... bg-zinc-200 ..." style={{
-                        gridArea: "G2",
-                        position: "relative",                        
-                        overflow: "hidden",  
-                        height: "600px"}}>
-                    </div>
-
 
             </div>
 
