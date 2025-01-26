@@ -233,48 +233,47 @@
   grid-area: SUB;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
-      "SPECKLE SPECKLE SPECKLE G1 G1 G1 G1 G1"
-      "T1  T1  T1  .  .  .  .  ."
-      "G2  G2  G2  .  .  .  .  ."
-      ".  .  .  .  .  .  .  ."
-      ".  .  .  .  .  .  .  ."
-      ".  .  .  .  .  .  .  ."
-}
-
-#G1 {
-
-  position: relative;
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  grid-template-areas: 
-      "G3 G3 G4 G4"
-      "G3 G3 G5 G5"
+    "SPECKLE SPECKLE SPECKLE MAP MAP MAP HOLDER HOLDER HOLDER"
+    "TITLE TITLE TITLE DOUGHNUT DOUGHNUT DOUGHNUT HOLDER HOLDER HOLDER"
+    "TREE TREE TREE TREE BAR BAR HOLDER HOLDER HOLDER" ;
+      
 }
 
 
 
 
-#G3 {
+
+
+#GRID_HOLDER {
 
   position: relative;
   width: 100%;
-  height: auto;
   display: grid;
-  grid-column-gap: 30px;
+  grid-column-gap: 0px;
   grid-row-gap: 30px;
   grid-template-columns: 1fr;
-  grid-template-rows:  350px auto;
+  grid-template-rows:  550px auto auto;
   grid-template-areas:
-    "G6"
-    "G7"
+    "FORCE"
+    "LINE"
+    "SCATTER";
+}
+
+
+
+#DOUGHNUT{
+
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-column-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "DOUGHNUT_1 DOUGHNUT_2";
 }
 
 
