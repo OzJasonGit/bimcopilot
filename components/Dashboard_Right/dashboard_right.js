@@ -24,6 +24,7 @@ return (
             <div id={styles.BIMCOPILOT_CONTAINER}>
 
               <div id={styles.BIMCOPILOT} style={{
+                      background: "",
                       position: "relative",                                
                       height: "100%",
                       width: "100%",

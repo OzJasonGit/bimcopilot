@@ -59,6 +59,7 @@
   top: 0px;
   left: 0;
   overflow-x: hidden;
+  margin-top: 130px;
 }
 
 /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
@@ -70,7 +71,7 @@
   display: grid;
   grid-column-gap: 0px;
   grid-row-gap: 20px;
-  grid-template-rows: 70px auto 20px;
+  grid-template-rows: 100px auto 20px;
   grid-template-columns: 40px 120px 20px 1fr 20px 120px 40px;
   grid-template-areas:
     ". . . . . . ."
