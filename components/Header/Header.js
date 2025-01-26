@@ -157,7 +157,7 @@ export default class Header extends Component {
                                 width: "100%"}}>
 
                         <div class="content-center ..." id={styles.SIGNUP_GRID}>
-                            <Link id={styles.STORIES} href="/bloghome" 
+                            <Link id={styles.STORIES} href="/signup" 
                                 style={{
                                     gridArea: "SIGNUP",
                                     position: "relative",                         
@@ -173,7 +173,7 @@ export default class Header extends Component {
                             </Link>                  
                         <div class="bg-zinc-500 ..." id={styles.B1}>
                         </div>
-                            <Link id={styles.SIGNUP} href="/bloghome" 
+                            <Link id={styles.SIGNUP} href="/signin" 
                                 style={{
                                         gridArea: "LOGIN",
                                         position: "relative",                        

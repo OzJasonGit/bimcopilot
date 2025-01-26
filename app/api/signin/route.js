@@ -1,7 +1,7 @@
 // /api/signin
 
-{/*import bcrypt from "bcryptjs";*/}
-{/*import jwt from "jsonwebtoken";*/}
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 import { NextResponse } from "next/server";
 import { connectToDatabase } from "../../utils/mongodb";
 
@@ -41,3 +41,5 @@ export async function POST(req) {
         );
     }
 }
+
+
