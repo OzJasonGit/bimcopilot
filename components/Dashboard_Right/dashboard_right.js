@@ -28,7 +28,7 @@ return (
                       position: "relative",                                
                       height: "100%",
                       width: "100%",
-                      right: "-100%",
+                      right: "-100vw",
                       gridArea: "BIMCOPILOT"}}>
 
                           <Image id={styles.CENTER}
