@@ -6,6 +6,7 @@ import Image from "next/image";
 import bimcopilot from './Bim-copilot-logo_Horizontal.png';
 
 import React, { Component } from 'react';
+import { height, width } from '@mui/system';
 
 
 
@@ -30,7 +31,10 @@ return (
 
                           <Image id={styles.CENTER}
                             src={bimcopilot}   
-                            style={{objectFit: "contain"}} 
+                            style={{objectFit: "contain", 
+                                    width: "100%",
+                                    height: "100%"
+                            }} 
                             quality={100}
                           />  
               </div>
