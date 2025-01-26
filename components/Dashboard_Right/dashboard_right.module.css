@@ -40,9 +40,9 @@
   background-color: transparent;
   display: grid;
   grid-column-gap: 0px;
-  grid-row-gap: 20px;
+  grid-row-gap: 0px;
   grid-template-rows: 0px auto 0px;
-  grid-template-columns: 20px 120px 20px 1fr 75px 150px 75px;
+  grid-template-columns: 20px 120px 20px 1fr 75px 100px 75px;
   grid-template-areas:
     ". . . . . . ."
     ". . . . DRAW DRAW DRAW"
@@ -55,10 +55,9 @@
   grid-area: DRAW;
   display: grid;
   grid-row-gap: 20px;
-  grid-template-rows: 0px 60px auto auto auto;
+  grid-template-rows: 60px auto auto auto;
   grid-template-columns: 1fr;
   grid-template-areas:
-      "."
       "BIMCOPILOT"
       "."
       "."
@@ -66,11 +65,6 @@
 
 }
 
-#BIMCOPILOT {
-  width: 100%;
-  height: 100%;
-  grid-area: BIMCOPILOT;
-}
 
 @media all and (min-width: 960px) and (max-width: 1280px) {
   .grid_0_bimcopilot {
