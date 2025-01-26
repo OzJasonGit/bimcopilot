@@ -225,7 +225,7 @@ const Menu = () => {
         
 
 
-          <div class={styles.HEADER_HOLDER}>
+          {/*<div class={styles.HEADER_HOLDER}>
 
 
              <div id={styles.header}>   
@@ -270,7 +270,7 @@ const Menu = () => {
                 </header>
               
               </div>           
-            </div>        
+            </div>*/}        
       </section> 
       
     </>
