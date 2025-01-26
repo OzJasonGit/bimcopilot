@@ -22,17 +22,16 @@ return (
           <div class={styles.grid_0_bimcopilot}>
             <div id={styles.BIMCOPILOT_CONTAINER}>
 
-
               <div id={styles.BIMCOPILOT} style={{
-                        position: "relative",                                
-                        height: "100%",
-                        width: "100%",
-                        gridArea: "BIMCOPILOT"}}>
+                      position: "relative",                                
+                      height: "100%",
+                      width: "100%",
+                      gridArea: "BIMCOPILOT"}}>
 
-                            <Image id={styles.CENTER}
-                              src={bimcopilot}   
-                              style={{objectFit: "contain"}} 
-                              quality={100}
+                          <Image id={styles.CENTER}
+                            src={bimcopilot}   
+                            style={{objectFit: "contain"}} 
+                            quality={100}
                           />  
               </div>
               
