@@ -23,8 +23,8 @@ return (
           <div class={styles.grid_0_bimcopilot}>
             <div id={styles.BIMCOPILOT_CONTAINER}>
 
-              <div id={styles.BIMCOPILOT} style={{
-                      background: "",
+              <div id={styles.BIMCOPILOT} class="shadow-2xl ... shadow-black ..." style={{
+                      background: "#171717",
                       position: "relative",                                
                       height: "100%",
                       width: "100%",
