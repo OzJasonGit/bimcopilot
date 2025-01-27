@@ -4,6 +4,7 @@ import Salespayment from "../../../Modules/Salespayment/salespayment";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SkeletonLoader from "@/components/Loader/loader";
+import CheckoutButton from "@/components/Payment/checkoutButton";
 
 const Payment = () => {
   const [data, setData] = useState(null);
@@ -36,8 +37,8 @@ const Payment = () => {
 
     return (
 
-        
-        <Salespayment stories={data.data} firstStory={firstStory} />
+        <CheckoutButton/>
+        // <Salespayment stories={data.data} firstStory={firstStory} />
 
     )
     

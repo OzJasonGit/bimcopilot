@@ -50,7 +50,7 @@ const Bloghomemain = ({ stories, firstStory }) => {
 
                     <div class="rounded-md ..." id={styles.B_IMAGE}>
                       <Link
-                        href="/services">
+                       href={`/blog/${story._id}`}>
 
                         <Image
                           alt="Picture of the author"

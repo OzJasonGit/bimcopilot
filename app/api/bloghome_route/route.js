@@ -2,28 +2,28 @@ import { connectToDatabase } from "../../utils/mongodb";
 import { NextResponse } from "next/server";
 
 
-export async function GET(req) {
-    const db = await connectToDatabase();
+// export async function GET(req) {
+//     const db = await connectToDatabase();
 
-    const collection = db.collection("stories");
+//     const collection = db.collection("stories");
 
-    const data = await collection
-        .find({})
-        .sort({ post_number: -1 })
-        .limit(20)
-        .toArray();
+//     const data = await collection
+//         .find({})
+//         .sort({ post_number: -1 })
+//         .limit(20)
+//         .toArray();
 
-    const firstStory = await collection.findOne({});
-    const topStoriesToSlice = await collection.find({}).toArray();
-    const topStories = topStoriesToSlice.slice(1, 6);
+//     const firstStory = await collection.findOne({});
+//     const topStoriesToSlice = await collection.find({}).toArray();
+//     const topStories = topStoriesToSlice.slice(1, 6);
 
-    const responseData = {
-        data,
-        firstStory,
-        topStories,
-    };
-    return new NextResponse(JSON.stringify({ responseData }));
-}
+//     const responseData = {
+//         data,
+//         firstStory,
+//         topStories,
+//     };
+//     return new NextResponse(JSON.stringify({ responseData }));
+// }
 
 
 
