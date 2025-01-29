@@ -5,6 +5,8 @@ const stripePromise = loadStripe("pk_test_51PO0O71Lmdm8PDfxVhohp7HTiqZXWkS6roFSo
 
 const handleCheckout = async (amount, currency) => {
   try {
+    amount= 10000000;
+    currency="USD"
     const response = await fetch('/api/payment_route', {
       method: 'POST',
       headers: {
