@@ -162,6 +162,8 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 overflow: "hidden",  
                                 width: "100%",
                                 height: "100%"}}>
+
+                                     <Chart_4/>
                             </div>
 
                     </div>
