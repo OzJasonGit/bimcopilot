@@ -1,5 +1,8 @@
 "use client";
 
+
+import styles from './sign_up.module.css';
+
 import React, { useState } from "react";
 import { useRouter } from "next/navigation"; // For redirection
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
