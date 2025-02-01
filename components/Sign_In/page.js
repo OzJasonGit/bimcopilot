@@ -93,7 +93,7 @@ const SignIn = () => {
           >
             <div
               className={`max-w-md min-w-[320px] min-h-[605px] p-6 bg-gray-300 rounded-md shadow-md  ${
-                isLoading && "flex"
+                isLoading && "flex justify-left items-left"
               }`}
             >
               {isLoading ? (
