@@ -83,14 +83,12 @@ const SignIn = () => {
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_blogimageholder}>
           
-          <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}
-            style={{
-              gridArea:"SUB"
-            }}>
+          <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
           <ToastContainer />
           <div
             className="min-h-screen flex items-center justify-center"
             style={{
+              gridArea: "SUB",
               background: "rgb(2,0,36)",
               background:
                 "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(39,39,45,1) 35%, rgba(39,39,45,1) 52%)",
