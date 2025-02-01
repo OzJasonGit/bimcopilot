@@ -74,6 +74,31 @@
     ". . . . . . .";
 }
 
+
+
+#SIGN_IN {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  grid-area: SUB;
+  grid-row-gap: 20px;
+  grid-template-columns: 650px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "SIGN_IN .";
+}
+
+
+
+
+
+
+
+
+
+
+
 .grid_0_blogimage {
   grid-area: SUB;
   position: relative;
