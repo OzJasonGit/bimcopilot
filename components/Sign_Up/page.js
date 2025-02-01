@@ -86,8 +86,8 @@ const Signup = () => {
 
         <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
           <ToastContainer />
-          <div
-           
+
+          <div id={styles.SIGN_UP}     
             style={{
               gridArea: "SIGN_UP", 
             }}
