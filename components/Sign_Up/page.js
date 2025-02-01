@@ -6,6 +6,8 @@ import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Header from "../../components/Header/Header";
+import Menu from "../../components/Menu/menu";
 
 const Signup = () => {
   const router = useRouter(); // Router for navigation
@@ -68,6 +70,8 @@ const Signup = () => {
 
   return (
     <>
+      <Menu/>
+      <Header/>
       <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
         <ToastContainer />
         <div

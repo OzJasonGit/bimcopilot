@@ -6,6 +6,11 @@ import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Header from "../../components/Header/Header";
+import Menu from "../../components/Menu/menu";
+
+
+
 
 const SignIn = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -69,6 +74,8 @@ const SignIn = () => {
 
   return (
     <>
+      <Menu/>
+      <Header/>
       <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
       <ToastContainer />
       <div
