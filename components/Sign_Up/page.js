@@ -197,7 +197,7 @@ const Signup = () => {
 
 
                       </form>
-                      <div className="mt-4 w-full flex justify-center">
+                      <div className="mt-4 w-full flex justify-center" id={styles.GOOGLE_BUTTON}>
                         <GoogleLogin
                           onSuccess={googleSuccess}
                           onError={() => toast.error("Google Login Failed!")}
