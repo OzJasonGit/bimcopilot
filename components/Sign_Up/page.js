@@ -9,6 +9,9 @@ import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import { Button } from "@/components/ui/button"
+
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Menu from "../../components/Menu/menu";
@@ -166,10 +169,16 @@ const Signup = () => {
 
 
 
+                        <Button variant="outline"
+                            id={styles.FORM_BUTTON}
+                            type="primary"
+                            htmlType="submit"
+                            loading={isLoading}>
+                            Sign Up!
+                        </Button>
 
 
-
-                        <button
+                        {/*<button
                           type="submit"
                           className={`w-full shadow bg-blue-500 text-white p-2 rounded-md ${
                             isLoading ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-600"
@@ -177,7 +186,7 @@ const Signup = () => {
                           disabled={isLoading}
                         >
                           Sign Up
-                        </button>
+                        </button>*/}
 
 
 
