@@ -173,7 +173,11 @@ const Signup = () => {
                             id={styles.FORM_BUTTON}
                             type="primary"
                             htmlType="submit"
-                            loading={isLoading}>
+                            loading={isLoading}
+                            style={{
+                                  width: "170px",
+                                  height: "65px",
+                                  }}>
                             Sign Up!
                         </Button>
 

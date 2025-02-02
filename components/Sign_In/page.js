@@ -180,12 +180,35 @@ const SignIn = () => {
 
 
                         </div>
+
+
+
+
+
+
                         <button
                           type="submit"
                           className="w-full shadow bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
                         >
                           Sign In
                         </button>
+
+                        <Button variant="outline"
+                            id={styles.FORM_BUTTON}
+                            type="primary"
+                            htmlType="submit"
+                            loading={isLoading}
+                            style={{
+                                width: "170px",
+                                height: "65px",
+                                }}>
+                            Sign In!
+                        </Button>
+
+
+
+
+
 
                           {/* Google Sign-In Button */}
                           <div className="mt-4 w-full flex justify-center">
