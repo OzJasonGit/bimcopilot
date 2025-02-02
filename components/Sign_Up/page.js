@@ -151,12 +151,12 @@ const Signup = () => {
                               name={field}
                               value={formData[field]}
                               onChange={handleChange}
-                              className="mt-1 p-2 w-full border rounded-md"
+                              className="mt-1 border rounded-md"
                               required
 
                               style={{
                                   width: "100%",
-                                  height: "22.5px",
+                                  height: "65px",
                                   }}
                             />
 
