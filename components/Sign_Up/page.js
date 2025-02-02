@@ -117,6 +117,12 @@ const Signup = () => {
                   ) : (
                     <>
                       <h2 className="text-2xl font-semibold mb-4">Sign Up</h2>
+
+
+
+
+
+
                       <form onSubmit={handleSubmit}>
                         {[
                           "firstName",
@@ -126,6 +132,9 @@ const Signup = () => {
                           "confirmPassword",
                         ].map((field) => (
                           <div key={field} className="mb-4">
+
+
+
                             <label
                               htmlFor={field}
                               className="block text-sm font-medium text-gray-600"
@@ -134,6 +143,8 @@ const Signup = () => {
                                 .replace(/([A-Z])/g, " $1")
                                 .replace(/^./, (str) => str.toUpperCase())}
                             </label>
+
+
                             <input
                               type={field.includes("password") ? "password" : "text"}
                               id={field}
@@ -142,9 +153,22 @@ const Signup = () => {
                               onChange={handleChange}
                               className="mt-1 p-2 w-full border rounded-md"
                               required
+
+                              style={{
+                                  width: "100%",
+                                  height: "22.5px",
+                                  }}
                             />
+
+
                           </div>
                         ))}
+
+
+
+
+
+
                         <button
                           type="submit"
                           className={`w-full shadow bg-blue-500 text-white p-2 rounded-md ${
@@ -154,6 +178,10 @@ const Signup = () => {
                         >
                           Sign Up
                         </button>
+
+
+
+
                       </form>
                       <div className="mt-4 w-full flex justify-center">
                         <GoogleLogin

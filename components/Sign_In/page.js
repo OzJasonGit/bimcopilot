@@ -120,12 +120,20 @@ const SignIn = () => {
                       <h2 className="text-2xl font-semibold mb-4">Sign In</h2>
                       <form onSubmit={handleSubmit}>
                         <div className="mb-4">
+
+
+
+                          
                           <label
                             htmlFor="email"
                             className="block text-sm font-medium text-gray-600"
                           >
                             Email
                           </label>
+
+
+
+
                           <input
                             type="email"
                             id="email"
@@ -136,14 +144,25 @@ const SignIn = () => {
                             className="mt-1 p-2 w-full border rounded-md"
                             required
                           />
+
+
+
                         </div>
                         <div className="mb-4">
+
+
+
+
+
                           <label
                             htmlFor="password"
                             className="block text-sm font-medium text-gray-600"
                           >
                             Password
                           </label>
+
+
+
                           <input
                             type="password"
                             id="password"
@@ -154,6 +173,9 @@ const SignIn = () => {
                             className="mt-1 p-2 w-full border rounded-md"
                             required
                           />
+
+
+
                         </div>
                         <button
                           type="submit"
