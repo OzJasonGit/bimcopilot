@@ -120,7 +120,7 @@ const SignIn = () => {
                     </div>
                   ) : (
                     <>
-                      <h2 className="text-2xl font-semibold mb-4">Sign In</h2>
+                      <h2 id={styles._H2}  className="text-left ... text-stone-400 ... font-avant_garde_bold">Sign In</h2>
                       <form onSubmit={handleSubmit}>
                         <div className="mb-4">
 
@@ -129,7 +129,8 @@ const SignIn = () => {
 
                           <label
                             htmlFor="email"
-                            className="block text-sm font-medium text-gray-600"
+                            className="text-left ... text-stone-400 ... font-avant_garde_bold"
+                            id={styles._H3}
                           >
                             Email
                           </label>
@@ -149,6 +150,7 @@ const SignIn = () => {
                             style={{
                                   width: "100%",
                                   height: "65px",
+                                  padding: "20px",
                                   }}
                           />
                         </div>
@@ -160,7 +162,8 @@ const SignIn = () => {
 
                           <label
                             htmlFor="password"
-                            className="block text-sm font-medium text-gray-600"
+                            className="text-left ... text-stone-400 ... font-avant_garde_bold"
+                            id={styles._H3}
                           >
                             Password
                           </label>
@@ -180,6 +183,7 @@ const SignIn = () => {
                             style={{
                                   width: "100%",
                                   height: "65px",
+                                  padding: "20px",
                                   }}
                           />
                         </div>
