@@ -144,12 +144,13 @@ const SignIn = () => {
                             autoComplete="off"
                             value={formData.email}
                             onChange={handleChange}
-                            className="mt-1 p-2 w-full border rounded-md"
+                            className="mt-1 border rounded-md"
                             required
+                            style={{
+                                  width: "100%",
+                                  height: "65px",
+                                  }}
                           />
-
-
-
                         </div>
                         <div className="mb-4">
 
@@ -173,25 +174,23 @@ const SignIn = () => {
                             autoComplete="off"
                             value={formData.password}
                             onChange={handleChange}
-                            className="mt-1 p-2 w-full border rounded-md"
+                            className="mt-1 border rounded-md"
                             required
+
+                            style={{
+                                  width: "100%",
+                                  height: "65px",
+                                  }}
                           />
-
-
-
                         </div>
 
 
-
-
-
-
-                        <button
+                        {/*<button
                           type="submit"
                           className="w-full shadow bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
                         >
                           Sign In
-                        </button>
+                        </button>*/}
 
                         <Button variant="outline"
                             id={styles.FORM_BUTTON}
@@ -206,12 +205,8 @@ const SignIn = () => {
                         </Button>
 
 
-
-
-
-
                           {/* Google Sign-In Button */}
-                          <div className="mt-4 w-full flex justify-center">
+                          <div className="mt-4 w-full flex justify-left">
                             <GoogleLogin
                               onSuccess={googleSuccess}
                               onError={() => {
