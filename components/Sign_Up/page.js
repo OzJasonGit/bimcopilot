@@ -177,7 +177,7 @@ const Signup = () => {
                             style={{
                                   width: "170px",
                                   height: "65px",
-                                  margintop:"20px",
+                                  
                                   }}>
                             Sign Up!
                         </Button>
