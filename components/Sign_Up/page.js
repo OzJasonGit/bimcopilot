@@ -119,7 +119,7 @@ const Signup = () => {
                     </div>
                   ) : (
                     <>
-                      <h2 className="text-2xl font-semibold mb-4">Sign Up</h2>
+                      <h2 id={styles._H2} className="text-left ... text-stone-400 ... font-avant_garde_bold">Sign Up</h2>
 
 
 
@@ -140,7 +140,8 @@ const Signup = () => {
 
                             <label
                               htmlFor={field}
-                              className="block text-sm font-medium text-gray-600"
+                              className="text-left ... text-stone-400 ... font-avant_garde_bold"
+                              id={styles._H3}
                             >
                               {field
                                 .replace(/([A-Z])/g, " $1")

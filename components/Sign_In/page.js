@@ -207,7 +207,7 @@ const SignIn = () => {
 
 
                           {/* Google Sign-In Button */}
-                          <div className="mt-4 w-full flex justify-left">
+                          <div className="mt-4 w-full flex justify-left" id={styles.GOOGLE_BUTTON}>
                             <GoogleLogin
                               onSuccess={googleSuccess}
                               onError={() => {
