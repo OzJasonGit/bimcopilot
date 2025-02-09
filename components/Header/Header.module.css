@@ -207,7 +207,7 @@
   grid-area: MAIN-AREA;
   display: flex;
   position: fixed;
-  height: 70px;
+  height: 110px;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -260,7 +260,7 @@
   min-width: 200px;
   justify-self: right;
   grid-template-columns: 85px 25px 1.5px 25px 85px;
-  grid-template-rows: 20px auto 0px;
+  grid-template-rows: 10px auto 0px;
   grid-template-areas:
     " . . . . ."
     " SIGNUP . B1 . LOGIN"
@@ -365,9 +365,10 @@
 #LOGO {
   position: relative;
   grid-area: LOGO;
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 85%;
   left: -20px;
+  top: 3px;
 }
 
 #LOGO_ICON {
