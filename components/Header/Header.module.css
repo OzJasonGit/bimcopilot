@@ -259,12 +259,12 @@
 
   min-width: 200px;
   justify-self: right;
-  grid-template-columns: 1fr 1.5px 1.5fr;
+  grid-template-columns: 85px 25px 1.5px 25px 85px;
   grid-template-rows: 20px auto 0px;
   grid-template-areas:
-    " . . ."
-    " SIGNUP B1 LOGIN"
-    " . . .";
+    " . . . . ."
+    " SIGNUP . B1 . LOGIN"
+    " . . . . .";
   background: transparent;
 }
 

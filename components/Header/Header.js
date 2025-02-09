@@ -163,7 +163,8 @@ export default class Header extends Component {
                                     position: "relative",                         
                                     height: "100%",
                                     width: "100%",
-                                    textAlign: "center"}}>
+                                    textAlign: "center",
+                                    left: "-15.5px"}}>
                                 <h3
                                   id={styles.H_3_STORIES}
                                   class="text-center ...  text-slate-50 font-avant_garde_bold"
@@ -179,7 +180,8 @@ export default class Header extends Component {
                                         position: "relative",                        
                                         height: "100%",
                                         width: "100%",
-                                        textAlign: "center"}}>
+                                        textAlign: "center",
+                                        left: "-15px"}}>
                                 <h3
                                   id={styles.H_3_STORIES}
                                   class="text-center ...  text-slate-50 font-avant_garde_bold"
