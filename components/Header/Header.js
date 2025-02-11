@@ -156,40 +156,51 @@ export default class Header extends Component {
                                 height: "100%",
                                 width: "100%"}}>
 
-                        <div class="content-center ..." id={styles.SIGNUP_GRID}>
-                            <Link id={styles.STORIES} href="/signup" 
-                                style={{
-                                    gridArea: "SIGNUP",
+                        <div class="flex justify-end ..." id={styles.SIGNUP_RIGHT}                          
+                            style={{
+                                    gridArea: "SIGN",
                                     position: "relative",                         
                                     height: "100%",
-                                    width: "100%",
-                                    textAlign: "center",
-                                    left: "-15.5px"}}>
-                                <h3
-                                  id={styles.H_3_STORIES}
-                                  class="text-center ...  text-slate-50 font-avant_garde_bold"
-                                  data-content="Signup">
-                                  Signup
-                                </h3>
-                            </Link>                  
-                        <div class="bg-zinc-500 ..." id={styles.B1}>
+                                    width: "200px"}}>
+
+                              <div class="content-center ..." id={styles.SIGNUP_GRID}>
+                                  <Link id={styles.STORIES} href="/signup" 
+                                      style={{
+                                          gridArea: "SIGNUP",
+                                          position: "relative",                         
+                                          height: "100%",
+                                          width: "100%",
+                                          textAlign: "center",
+                                          left: "-15.5px"}}>
+                                      <h3
+                                        id={styles.H_3_STORIES}
+                                        class="text-center ...  text-slate-50 font-avant_garde_bold"
+                                        data-content="Signup">
+                                        Signup
+                                      </h3>
+                                  </Link>                  
+                              <div class="bg-zinc-500 ..." id={styles.B1}>
+                              </div>
+                                  <Link id={styles.SIGNUP} href="/signin" 
+                                      style={{
+                                              gridArea: "LOGIN",
+                                              position: "relative",                        
+                                              height: "100%",
+                                              width: "100%",
+                                              textAlign: "center",
+                                              left: "-15px"}}>
+                                      <h3
+                                        id={styles.H_3_STORIES}
+                                        class="text-center ...  text-slate-50 font-avant_garde_bold"
+                                        data-content="Login">
+                                        Login
+                                      </h3>
+                                  </Link>                           
+                              </div>
+
                         </div>
-                            <Link id={styles.SIGNUP} href="/signin" 
-                                style={{
-                                        gridArea: "LOGIN",
-                                        position: "relative",                        
-                                        height: "100%",
-                                        width: "100%",
-                                        textAlign: "center",
-                                        left: "-15px"}}>
-                                <h3
-                                  id={styles.H_3_STORIES}
-                                  class="text-center ...  text-slate-50 font-avant_garde_bold"
-                                  data-content="Login">
-                                  Login
-                                </h3>
-                            </Link>                           
-                        </div>
+
+                        
                   </div>
 
 
