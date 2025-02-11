@@ -148,7 +148,7 @@ export default class Header extends Component {
 
                   </div>
 
-                  <div class="content-right ..." id={styles.SIGNUP_CONTAINER}
+                  <div class="flex justify-end ..." id={styles.SIGNUP_CONTAINER}
                         style={{
                                 gridArea: "SIGN",
                                 position: "relative",                        
