@@ -161,7 +161,7 @@ export default class Header extends Component {
                                     position: "relative",                         
                                     height: "100%",
                                     width: "200px",
-                                    left:"4px"}}>
+                                    left:"4.5px"}}>
 
                               <div class="content-center ..." id={styles.SIGNUP_GRID}>
                                   <Link id={styles.STORIES} href="/signup" 
