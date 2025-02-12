@@ -151,8 +151,7 @@ export default class Header extends Component {
                   <div class="flex justify-end ..." id={styles.SIGNUP_CONTAINER}
                         style={{
                                 gridArea: "SIGN",
-                                position: "relative",                        
-                                overflow: "hidden",  
+                                position: "relative",                          
                                 height: "100%",
                                 width: "100%"}}>
 
@@ -161,7 +160,8 @@ export default class Header extends Component {
                                     gridArea: "SIGN",
                                     position: "relative",                         
                                     height: "100%",
-                                    width: "200px"}}>
+                                    width: "200px",
+                                    left:"4px"}}>
 
                               <div class="content-center ..." id={styles.SIGNUP_GRID}>
                                   <Link id={styles.STORIES} href="/signup" 
