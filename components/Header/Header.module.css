@@ -257,7 +257,7 @@
   display: grid;
   width: 100%;
   grid-template-columns: 85px 25px 1.5px 25px 85px;
-  grid-template-rows: 10px auto 0px;
+  grid-template-rows: 0px auto 0px;
   grid-template-areas:
     " . . . . ."
     " SIGNUP . B1 . LOGIN"
