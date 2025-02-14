@@ -26,10 +26,6 @@ export async function GET(req) {
 }
 
 
-
-
-
-
 export async function POST(req) {
     const db = await connectToDatabase();
     const collection = db.collection("stories");

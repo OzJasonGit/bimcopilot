@@ -1,44 +1,64 @@
 "use client";
 
-import Blogsmain from "../../../../Modules/Blog/blog";
-import { useState, useEffect } from "react";
+import Blog from "@/Modules/Blog/blog";
+import Blog_page from "@/Modules/Blog_page/blog_page"
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import Menu from "@/components/Menu/menu";
+import Header from "@/components/Header/Header";
+import Subfooter from "@/components/Subfooter2/subfooter2";
+import Footer from "@/components/Footer/Footer";
+import Image from "next/image";
+import Sides from "@/components/Sides/sides";
+import parse from "html-react-parser";
 import SkeletonLoader from "@/components/Loader/loader";
-const Blog = () => {
-  const [data, setData] = useState(null);
-  const [firstStory, setFirstStory] = useState(null);
-  const [topStories, setTopStories] = useState(null);
+
+const BlogPost = () => {
+  const params = useParams();
+  const slug = params?.slug;
+  const [story, setStory] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchStory = async () => {
+      if (!slug) return;
       try {
-        const res = await axios.get("https://www.bimcopilot.com/api/");
-        const { responseData } = res.data;
-        setData(responseData);
-        setFirstStory(responseData.firstStory);
-        setTopStories(responseData.topStories);
+        const res = await axios.get(`/api/blog/${slug}`);
+        if (res.data?.story) {
+          setStory(res.data.story);
+        } else {
+          setError("Story data format is invalid");
+        }
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching story:", error);
+        setError("Failed to load story");
+      } finally {
+        setLoading(false);
       }
     };
 
-    fetchData();
+    fetchStory();
+  }, [slug]);
 
-    // Cleanup function
-    return () => {
-      // Cleanup code if needed
-    };
-  }, []); // Empty dependency array ensures the effect runs only once after the initial render
+  if (loading) return <SkeletonLoader />;
+  if (error) return <div className="error-message">{error}</div>;
+  if (!story) return <div>Story not found</div>;
 
-         if (!data || !firstStory || !topStories) {
-     return <SkeletonLoader/>
-   }
- 
-    return (
+  return (
+    <>
+      <Menu />
+      <Header />
+            <Sides />
+      
+    <Blog_page/>
+    {/* <Blog/> */}
 
-      <Blogsmain stories={data.data} firstStory={firstStory} />
-       
-    )
-    
-}
+      <Subfooter />
+      <Footer />
+    </>
+  );
+};
 
-export default Blog;
+export default BlogPost;

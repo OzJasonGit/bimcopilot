@@ -22,9 +22,7 @@ import parse from "html-react-parser";
 const Bloghomemain = ({ stories, firstStory }) => {
   const params = useParams();
   const storiesToMap = stories.filter((story, i) => i != 0);
-  const router = useRouter();
-  let story_id;
-  story_id = params.slug
+
 
   return (
 
@@ -50,11 +48,11 @@ const Bloghomemain = ({ stories, firstStory }) => {
 
                     <div class="rounded-md ..." id={styles.B_IMAGE}>
                       <Link
-                       href={`/blog/${story._id}`}>
+                       href={`/blog/${story.slug}`}>
 
                         <Image
                           alt="Picture of the author"
-                          key={story._id}
+                          key={story.slug}
                           loading='lazy'
                           width={500}
                           height={500}

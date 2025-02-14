@@ -289,24 +289,64 @@ export function Admin() {
                   </FormItem>
                 )}
               />
-              <FormField
-                control={form.control}
-                name="slug"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>slug</FormLabel>
-                    <FormControl>
-                      <QuillNoSSRWrapper
-                        theme="snow"
-                        value={field.value || ""} // Bind value to the form's field
-                        onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your slug here..."
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+             <FormField
+  control={form.control}
+  name="slug"
+  render={({ field }) => (
+    <FormItem className="space-y-2">
+      <FormLabel className="text-sm font-medium text-gray-700">
+        Slug
+      </FormLabel>
+      <FormControl>
+        <div className="relative">
+          <textarea
+            {...field}
+            rows={3}
+            className={`
+              w-full p-3 rounded-lg border border-gray-300 
+              focus:outline-none focus:ring-2 focus:ring-blue-500 
+              focus:border-transparent transition-all
+              placeholder:text-gray-400 text-sm
+              resize-none
+            `}
+            placeholder="Write your slug here..."
+            value={field.value || ""}
+            onChange={(e) => {
+              let value = e.target.value.trim(); // Trim spaces from start & end
+              let formattedValue = value
+                .toLowerCase()
+                .replace(/\s+/g, "-") // Replace spaces with "-"
+                .replace(/[^a-z0-9-]/g, ""); // Remove invalid characters
+              
+              field.onChange(formattedValue);
+            }}
+            maxLength={50}
+          />
+          <div className="absolute bottom-2 right-2 text-xs text-gray-500">
+            {field.value?.length || 0}/50
+          </div>
+        </div>
+      </FormControl>
+      {/* Slug Preview and Copy Button */}
+      {field.value && (
+        <div className="flex items-center gap-2 mt-2">
+          <span className="text-sm text-gray-600">
+            Preview: <span className="font-mono text-blue-500">{field.value}</span>
+          </span>
+          <button
+            type="button"
+            onClick={() => navigator.clipboard.writeText(field.value)}
+            className="text-sm text-blue-500 hover:text-blue-600"
+          >
+            Copy
+          </button>
+        </div>
+      )}
+      <FormMessage className="text-xs text-red-500" />
+    </FormItem>
+  )}
+/>
+
               <FormField
                 control={form.control}
                 name="subtitle"

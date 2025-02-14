@@ -22,13 +22,13 @@ import parse from "html-react-parser";
 const Blogsmain = ({ stories, firstStory }) => {
 
   const params = useParams();
-  const storiesToMap = stories.filter((story, i) => story._id == params.slug);
+  const storiesToMap = stories?.filter((story, i) => story._id == params.slug);
   const router = useRouter();
   return (
 
     <>
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
 
           <Head>
@@ -53,8 +53,8 @@ const Blogsmain = ({ stories, firstStory }) => {
       <Sides />
       {/*<Subscribetop/>*/}
 
-
-      {storiesToMap.map((story, index) => {
+      
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
             <div class={styles.grid_0_subscribe}>
@@ -94,7 +94,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
             <div class={styles.grid_0_blogimage}>
@@ -123,7 +123,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
             <div class={styles.grid_0_tag}>
@@ -155,7 +155,7 @@ const Blogsmain = ({ stories, firstStory }) => {
         )
       })};
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
@@ -336,7 +336,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
@@ -376,7 +376,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
@@ -429,7 +429,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
@@ -491,7 +491,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
@@ -538,7 +538,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder} >
 
@@ -572,7 +572,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
@@ -612,7 +612,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
@@ -663,7 +663,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
@@ -706,7 +706,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
@@ -748,7 +748,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
 
@@ -788,7 +788,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-
+{/* 
       {storiesToMap.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
@@ -813,7 +813,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
           </section>
         )
-      })}
+      })} */}
 
 
 
@@ -891,7 +891,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
       {/*<Other_blogs/>*/}
 
-      {storiesToMap.map((story, index) => {
+      {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
 
