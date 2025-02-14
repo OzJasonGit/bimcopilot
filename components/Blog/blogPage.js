@@ -42,8 +42,8 @@ const Blogpage = ({ stories, topStories }) => {
           )}
 
           {/* Blog Main Image */}
-          {mainStory._id && (
-            <Link className="rounded-2xl drop-shadow-4xl" id={styles.LINK_HOLDER} href={`/blog/${mainStory._id}`}>
+          {mainStory.slug && (
+            <Link className="rounded-2xl drop-shadow-4xl" id={styles.LINK_HOLDER} href={`/blog/${mainStory.slug}`}>
               <div id={styles.IMAGE_POST}>
                 <Image
                   src={mainStory.image || "/default-image.jpg"} // Fallback image
@@ -76,8 +76,8 @@ const Blogpage = ({ stories, topStories }) => {
           {/* Blog Title & Metadata */}
           <div id={styles.IMAGE_POST_TITLE}>
             <div id={styles.HEAD_TITLE}>
-              {mainStory._id && (
-                <Link href={`/blog/${mainStory._id}`}>
+              {mainStory.slug && (
+                <Link href={`/blog/${mainStory.slug}`}>
                   <h2 id={styles._H2} className="text-stone-200 font-avant_garde_bold">
                     {parse(mainStory.title || "Untitled")}
                   </h2>
@@ -86,8 +86,8 @@ const Blogpage = ({ stories, topStories }) => {
             </div>
 
             <div id={styles.HEAD_SUBTITLE}>
-              {mainStory._id && (
-                <Link href={`/blog/${mainStory._id}`}>
+              {mainStory.slug && (
+                <Link href={`/blog/${mainStory.slug}`}>
                   <h3 id={styles._H3} className="text-left text-xl text-stone-400 font-avant_garde_bold">
                     {parse(mainStory.subtitle || "")}
                   </h3>
@@ -96,8 +96,8 @@ const Blogpage = ({ stories, topStories }) => {
             </div>
 
             <div id={styles.AUTHOR}>
-              {mainStory._id && (
-                <Link href={`/blog/${mainStory._id}`}>
+              {mainStory.slug && (
+                <Link href={`/blog/${mainStory.slug}`}>
                   <h3 id={styles._H3} className="text-left text-xl text-stone-400 font-avant_garde_bold">
                     {parse(mainStory.author || "Unknown Author")}
                   </h3>
@@ -117,7 +117,7 @@ const Blogpage = ({ stories, topStories }) => {
             <div id={styles.ARTICLES}>
               {storiesToMap.length > 0 ? (
                 storiesToMap.map((story, index) => (
-                  <div key={story._id} className={styles.container} style={{ gridArea: index + 1 }}>
+                  <div key={story.slug} className={styles.container} style={{ gridArea: index + 1 }}>
                     <div id={styles.BLOG_SMALL_1}>
                       <div className="rounded-full drop-shadow-2xl border-2 border-emerald-200" id={styles.BLOG_NUMBER}>
                         <div className="content-center">
@@ -128,7 +128,7 @@ const Blogpage = ({ stories, topStories }) => {
                       </div>
 
                       <div id={styles.BLOG_TEXT}>
-                        <Link href={`/blog/${story._id}`}>
+                        <Link href={`/blog/${story.slug}`}>
                           <h3 id={styles._H3} className="text-lg text-stone-200 drop-shadow-xl font-avant_garde_bold">
                             {parse(story.title || "Untitled")}
                           </h3>
@@ -136,7 +136,7 @@ const Blogpage = ({ stories, topStories }) => {
                       </div>
 
                       <div id={styles.BLOG_AUTHOR}>
-                        <Link href={`/blog/${story._id}`}>
+                        <Link href={`/blog/${story.slug}`}>
                           <h3 id={styles._H4} className="text-sm text-right text-stone-400 drop-shadow-xl font-avant_garde_bold">
                             {parse(story.author || "Unknown")}
                           </h3>
@@ -149,7 +149,7 @@ const Blogpage = ({ stories, topStories }) => {
                         </h4>
                       </div>
 
-                      <Link href={`/blog/${story._id}`} className="rounded drop-shadow-2xl text-stone-400" id={styles.BLOG_IMAGE}>
+                      <Link href={`/blog/${story.slug}`} className="rounded drop-shadow-2xl text-stone-400" id={styles.BLOG_IMAGE}>
                         <div>
                           <Image
                             alt="Blog Thumbnail"
