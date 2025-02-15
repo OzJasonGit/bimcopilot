@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button"
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Menu from "../../components/Menu/menu";
-
+import Sides from "../../components/Sides/sides";
 
 
 
@@ -82,6 +82,7 @@ const SignIn = () => {
     <>
       <Menu/>
       <Header/>
+      <Sides/>
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_blogimageholder}>

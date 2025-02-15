@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button"
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Menu from "../../components/Menu/menu";
+import Sides from "../../components/Sides/sides";
 
 const Signup = () => {
   const router = useRouter(); // Router for navigation
@@ -79,6 +80,7 @@ const Signup = () => {
     <>
       <Menu/>
       <Header/>
+      <Sides/>
 
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
