@@ -8,7 +8,7 @@ import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import Subfooter2 from "@/components/Subfooter2/subfooter2";
 import { Button } from "@/components/ui/button"
 
 import Header from "../../components/Header/Header";
@@ -234,7 +234,7 @@ const SignIn = () => {
         </div>
       </section>
 
-
+      <Subfooter2/>
       <Footer/>
     </>
   );

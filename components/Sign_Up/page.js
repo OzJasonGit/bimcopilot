@@ -9,6 +9,7 @@ import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Subfooter2 from "@/components/Subfooter2/subfooter2";
 
 import { Button } from "@/components/ui/button"
 
@@ -218,6 +219,7 @@ const Signup = () => {
         </div>
       </section>
 
+      <Subfooter2/>
       <Footer/>
     </>
   );
