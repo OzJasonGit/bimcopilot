@@ -181,7 +181,7 @@ export default class Header extends Component {
                                         left: "-15.5px"}}>
                                     <h3
                                       id={styles.H_3_STORIES}
-                                      class="text-center ...  text-slate-50 font-avant_garde_bold"
+                                      class="text-center ...  text-stone-700 font-avant_garde_bold"
                                       data-content="Signup">
                                       Signup
                                     </h3>
@@ -198,7 +198,7 @@ export default class Header extends Component {
                                             left: "-15px"}}>
                                     <h3
                                       id={styles.H_3_STORIES}
-                                      class="text-center ...  text-slate-50 font-avant_garde_bold"
+                                      class="text-center ...  text-stone-700 font-avant_garde_bold"
                                       data-content="Login">
                                       Login
                                     </h3>
