@@ -148,8 +148,8 @@ export default class Header extends Component {
                     </Link>
                     
 
-                    <div class="content-center ... align-middle ...">
-                    </div>
+                    {/*<div class="content-center ... align-middle ...">
+                    </div>*/}
 
                   </div>
 

@@ -131,27 +131,49 @@ export default class Header extends Component {
 
                   <div class="content-right ..." id={styles.BASKET_CONTAINER}>
 
-                    <div class="content-center ... align-middle ..."
-                         style={{gridArea:"BASKET", position:"relative", top:"0.75px", left:"-30px"}}>
-                      {/*<FontAwesomeIcon icon={faHeart}  size="xs"
-                      class="text-slate-50"/>*/}
+                    <Link
+                      class="content-center ... align-middle ..."
+                      href="/bloghome" 
+                      style={{gridArea:"BASKET", position:"relative", top:"0.75px", left:"-30px"}}>
+                        <div class="content-center ... align-middle ...">
+                          <FontAwesomeIcon icon={faCartShopping} size="xs"
+                          class="text-stone-700" />
+                        </div>
+                    </Link>
 
+                    
+                    <Link
+                      class="content-center ... align-middle ..."
+                      href="/bloghome" 
+                      style={{gridArea:"FAVOURITE", position:"relative", top:"0.5px", left:"-30px"}}>
+                        <div class="content-center ... align-middle ...">
+                          <FontAwesomeIcon icon={faHeart}  size="2xs"
+                          class="text-stone-700"/>
+                        </div>
+                    </Link>
 
-
-                      <FontAwesomeIcon icon={faCartShopping} size="xs"
-                      class="text-stone-700" />
-                    </div>
-
-                    <div class="content-center ... align-middle ..."
-                         style={{gridArea:"FAVOURITE", position:"relative", top:"0.5px", left:"-30px"}}>
-                      <FontAwesomeIcon icon={faHeart}  size="2xs"
-                      class="text-stone-700"/>
-                    </div>
-
-                    <div class="content-center ... align-middle ...">
-                    </div>
+                    {/*<div class="content-center ... align-middle ...">
+                    </div>*/}
 
                   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  
 
 
 
