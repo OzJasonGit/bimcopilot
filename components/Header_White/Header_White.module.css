@@ -242,7 +242,7 @@
   grid-row-gap: 0px;
   grid-column-gap: 40px;
   grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0px 60px 0px 20px;
+  grid-template-rows: 0px 60px 0px 50px;
   grid-template-areas:
     ". . . . . . . . . . . . ."
     "LOGO_HOLDER LOGO_HOLDER MENU MENU MENU MENU . TIME TIME TIME TIME MENU_BUTTON MENU_BUTTON"
