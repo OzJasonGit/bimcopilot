@@ -127,6 +127,7 @@ export default class Header extends Component {
                   <div class="content-right ..." id={styles.BASKET_CONTAINER}>
 
                     <Link
+                      class="content-center ... align-middle ..."
                       href="/bloghome" 
                       style={{gridArea:"BASKET", position:"relative", top:"0.75px", left:"-30px"}}>
                         <div class="content-center ... align-middle ...">
@@ -137,6 +138,7 @@ export default class Header extends Component {
 
                     
                     <Link
+                      class="content-center ... align-middle ..."
                       href="/bloghome" 
                       style={{gridArea:"FAVOURITE", position:"relative", top:"0.5px", left:"-30px"}}>
                         <div class="content-center ... align-middle ...">
