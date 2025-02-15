@@ -344,9 +344,10 @@
 #LOGO {
   position: relative;
   grid-area: LOGO;
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 85%;
   left: -20px;
+  top: 3px;
 }
 
 #LOGO_ICON {
