@@ -533,21 +533,7 @@
 
 
 
-  #SIGNUP {
-    grid-area: SIGN_IN;
-    display: grid;
-    width: 100%;
-    max-width: 200px;
-    min-width: 160px;
-    justify-self: right;
-    grid-template-columns: 1fr 1.5px 1fr;
-    grid-template-rows: 0px auto 0px;
-    grid-template-areas:
-      " . . ."
-      " ABOUT B1 HOME"
-      " . . .";
-    background: transparent;
-  }
+ 
 
   #COPILOT_HOLDER {
     display: none;
