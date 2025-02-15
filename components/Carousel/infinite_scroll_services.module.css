@@ -61,13 +61,7 @@
 
 .fade {
   pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    #e2e8f0;,
-    transparent 30%,
-    transparent 70%,
-    #e2e8f0;
-  );
+  background: linear-gradient(90deg, #e2e8f0, transparent 30%, transparent 70%, #e2e8f0);
   position: absolute;
   inset: 0;
 }
