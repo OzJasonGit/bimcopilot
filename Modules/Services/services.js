@@ -2,7 +2,7 @@
 
 import styles from './services.module.css';
 import Menu_White from "../../components/Menu_White/menu_white";
-import Sides from "../../components/Sides/sides";
+import Sides from "../../components/Sides/sides_white";
 import Header_White from "../../components/Header_White/Header_White";
 import Footer from "../../components/Footer/Footer_White";
 import Subfooter from "../../components/Subfooter_White/subfooter_white";
