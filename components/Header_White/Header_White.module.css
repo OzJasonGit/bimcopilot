@@ -500,18 +500,18 @@
     top: 2.5px;
   }
 
-  #FIXED_HEADER {
-    grid-area: MAIN-AREA;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-column-gap: 40px;
-    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0px auto 0px;
-    grid-template-areas:
-      ". . . . . . . . . . . . ."
-      "LOGO_HOLDER MENU MENU MENU TIME TIME TIME TIME . . . MENU_BUTTON MENU_BUTTON"
-      ". . . . . . . . . . . . .";
-  }
+    #FIXED_HEADER {
+      grid-area: MAIN-AREA;
+      display: grid;
+      grid-row-gap: 0px;
+      grid-column-gap: 40px;
+      grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 0px auto 0px;
+      grid-template-areas:
+        ". . . . . . . . . . . . ."
+        "LOGO_HOLDER MENU TIME TIME TIME TIME . SIGN SIGN SIGN . MENU_BUTTON MENU_BUTTON"
+        ". . . . . . . . . . . . .";
+    }
 
 
 
@@ -530,21 +530,7 @@
 
 
 
-  #SIGNUP {
-    grid-area: SIGN_IN;
-    display: grid;
-    width: 100%;
-    max-width: 200px;
-    min-width: 160px;
-    justify-self: right;
-    grid-template-columns: 1fr 1.5px 1fr;
-    grid-template-rows: 0px auto 0px;
-    grid-template-areas:
-      " . . ."
-      " ABOUT B1 HOME"
-      " . . .";
-    background: transparent;
-  }
+  
 
   #COPILOT_HOLDER {
     display: none;
