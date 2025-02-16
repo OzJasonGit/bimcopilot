@@ -93,10 +93,8 @@ const Blog_page = (stories) => {
                                 <div id="SUB_TAG">
                                     <div
                                         id="_H3"
-                                        className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">
-                                      
-                                        {parse(story.subtitle || "")}
-                                       
+                                        className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">                                     
+                                        {parse(story.subtitle || "")}         
                                     </div>
                                 </div>
                                 
@@ -112,7 +110,7 @@ const Blog_page = (stories) => {
 
 
             <section id="SHADOW_SECTION_BLOG" className="center_holder">
-                <div className="grid_1_tag">
+                <div className="grid_0_blogimageholder">
 
                     <div className="rounded-2xl ..." id="BLOGIMAGE">
                         <Image
