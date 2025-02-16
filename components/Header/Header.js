@@ -95,7 +95,7 @@ export default class Header extends Component {
                         id={styles.H_3_PROJECTS}
                         class="text-center ...  text-slate-50  font-avant_garde_bold"
                         data-content="Projects">
-                        Projects
+                        Copilot_Dashboard
                       </h3>
                     </Link>
 
