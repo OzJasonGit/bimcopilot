@@ -82,9 +82,6 @@ const Blog_page = (stories) => {
 
                         <div id="SUBSCRIBE" className={"border-emerald-200"}>
 
-                                <div id="SUB_ICON">
-                                </div>
-
                                 <div id="MAIN_TAG">
                                     <div
                                         id="_H1"
