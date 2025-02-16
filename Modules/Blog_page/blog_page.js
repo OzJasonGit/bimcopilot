@@ -112,7 +112,15 @@ const Blog_page = (stories) => {
             <section id="SHADOW_SECTION_BLOG" className="center_holder">
                 <div className="grid_0_blogimageholder">
 
-                    <div className="rounded-2xl ..." id="BLOGIMAGE">
+                    <div className="rounded-2xl ..." 
+                         id="MAIN_IMAGE"
+                         style={{
+                                display: "block",
+                                width: "100%",
+                                height: "600px",
+                                gridArea: "SUB"
+                                
+                            }}>
                         <Image
                             alt="Story Image"
                             key={story._id}
@@ -122,7 +130,7 @@ const Blog_page = (stories) => {
                             style={{
                                 display: "block",
                                 width: "100%",
-                                height: "auto",
+                                height: "100%",
                                 marginBottom: "20px",
                             }}
                         />
@@ -149,8 +157,7 @@ const Blog_page = (stories) => {
                             <div id="MAIN_TAG">
                                 <h1
                                     id="_H1"
-                                    className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
-                                >
+                                    className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
                                     Introduction
                                 </h1>
                                 <br />
