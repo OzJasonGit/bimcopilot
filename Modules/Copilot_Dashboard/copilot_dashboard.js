@@ -125,7 +125,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         overflow: "hidden",  
                         height: "450px"}}>
 
-                             <Chart_4/>
+                             {/*<Chart_4/>*/}
                     </div>
 
                     <div id={styles.BAR} class="rounded-xl ... bg-zinc-200 ..." style={{
@@ -165,7 +165,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 width: "100%",
                                 height: "100%"}}>
 
-                                     <Chart_7/>
+                                     {/*<Chart_7/>*/}
                             </div>
 
                     </div>
