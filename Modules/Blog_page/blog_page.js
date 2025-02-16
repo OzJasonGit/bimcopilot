@@ -78,33 +78,33 @@ const Blog_page = (stories) => {
             <section id="SHADOW_SECTION_BLOG" className={styles.center_holder}>
                 <div className="grid_0_subscribe">
                     <div className="sub_head">
+
+
                         <div id="SUBSCRIBE" className={"border-emerald-200"}>
-                            <div id="SUB_ICON"></div>
 
-                            <div id="MAIN_TAG">
-                                <div
-
-                                    id="_H1"
-                                    className=" text-stone-200 ... font-avant_garde_bold"
-                                >
-                                    {parse(story.title || "")}
-
+                                <div id="SUB_ICON">
                                 </div>
-                            </div>
-                            <div id="SUB_TAG">
 
-                                <div
-                                    id="_H3"
-                                    className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium"
-                                >
-                                    {" "}
-                                    {parse(story.subtitle || "")}
-
-                                    . <br /> <br />{" "}
-
+                                <div id="MAIN_TAG">
+                                    <div
+                                        id="_H1"
+                                        className=" text-stone-200 ... font-avant_garde_bold">
+                                        {parse(story.title || "")}
+                                    </div>
                                 </div>
-                            </div>
+
+                                <div id="SUB_TAG">
+                                    <div
+                                        id="_H3"
+                                        className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">
+                                      
+                                        {parse(story.subtitle || "")}
+                                       
+                                    </div>
+                                </div>
+                                
                         </div>
+
                     </div>
                 </div>
             </section>
