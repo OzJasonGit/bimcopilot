@@ -129,8 +129,7 @@ const Blog_page = (stories) => {
                             src={story.image}
                             style={{
                                 display: "block",
-                                width: "100%",
-                                height: "100%",
+                                
                                 marginBottom: "20px",
                             }}
                         />
