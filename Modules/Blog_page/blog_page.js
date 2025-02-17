@@ -186,15 +186,14 @@ const Blog_page = (stories) => {
                         <Image
                             alt="Story Image"
                             key={story._id}
-                            width={1000}
-                            height={1000}
-                            objectFit={cover}
+                            width={500}
+                            height={500}
                             src={story.image}
                             style={{
-                                display: "block",
+                                position: "absolute",
                                 width: "100%",
                                 height: "100%",
-                                marginBottom: "20px",
+                                objectFit: "cover",
                             }}
                         />
 
