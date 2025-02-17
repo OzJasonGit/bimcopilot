@@ -152,7 +152,7 @@
     height: auto;
     display:inline-block;
     grid-area: MAIN-AREA;
-    position: relative:;
+    position: relative;
     grid-column-gap: 40px;
     grid-row-gap: 40px;
     grid-template-rows: auto auto;
