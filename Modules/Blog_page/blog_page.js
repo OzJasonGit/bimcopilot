@@ -162,15 +162,6 @@ const Blog_page = (stories) => {
 
 
 
-
-
-
-
-
-
-
-
-
             <section id="SHADOW_SECTION_BLOG" className="center_holder">
                 <div className="grid_0_blogimageholder">
 
@@ -200,8 +191,6 @@ const Blog_page = (stories) => {
                     </div>
                 </div>
             </section>
-
-
 
 
 
@@ -253,52 +242,7 @@ const Blog_page = (stories) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section id="SHADOW_SECTION_TITLE" className="center_holder">
+           {/* <section id="SHADOW_SECTION_TITLE" className="center_holder">
 
                 <div className="grid_0_blog">
 
@@ -322,7 +266,7 @@ const Blog_page = (stories) => {
 
 
 
-                        <div id="SIDE_NAV_HOLDER">
+                        <div id="SIDE_NAV_HOLDER"> 
                             <div id="SIDE_NAV" >
 
                                 <div id="TITLE_1" >
@@ -392,77 +336,7 @@ const Blog_page = (stories) => {
                     </div>
                 </div>
 
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </section> */}
 
 
 
