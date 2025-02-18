@@ -10,7 +10,7 @@ import {
     PointElement,
 } from "chart.js";
 
-import styles from './Chart_3.module.css';
+
 
 
 // Register Chart.js components

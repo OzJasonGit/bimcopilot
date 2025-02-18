@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Bubble } from "react-chartjs-2"; // Import Bubble from react-chartjs-2
 import { Chart as ChartJS, BubbleController, Tooltip, Legend, PointElement } from "chart.js";
 
-import styles from './Chart_4.module.css';
+
 import { height, padding } from "@mui/system";
 
 // Register Chart.js components

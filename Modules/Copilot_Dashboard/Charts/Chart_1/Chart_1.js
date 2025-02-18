@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Doughnut } from "react-chartjs-2"; // Import Doughnut from react-chartjs-2
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
-import styles from './Chart_1.module.css';
 
 // Register Chart.js components
 ChartJS.register(ArcElement, Tooltip, Legend);
