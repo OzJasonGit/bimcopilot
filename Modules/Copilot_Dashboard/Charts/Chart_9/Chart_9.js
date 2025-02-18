@@ -16,8 +16,8 @@ const Chart_9 = ({ width = 600, height = 600 }) => {
     const nodes = d3.range(50).map(() => ({
       x: Math.random() * width - width / 2,
       y: Math.random() * height - height / 2,
-      r: Math.random() * 10 + 5,
-      group: Math.floor(Math.random() * 10),
+      r: Math.random() * 10 + 10,
+      group: Math.floor(Math.random() * 50),
     }));
 
     // Central repelling force & collisions

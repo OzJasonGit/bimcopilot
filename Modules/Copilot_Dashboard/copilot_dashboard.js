@@ -22,8 +22,10 @@ import Chart_5 from './Charts/Chart_5/Chart_5';
 import Chart_6 from './Charts/Chart_6/Chart_6';
 import Chart_7 from './Charts/Chart_7/Chart_7';
 import Chart_9 from './Charts/Chart_9/Chart_9';
+import Chart_10 from './Charts/Chart_10/Chart_10';
 
 import Services_1 from "../../components/services_1/services_black";
+import { treemap } from 'd3';
 
 // import Link from "next/link";
 // import Image from "next/image";
@@ -49,6 +51,22 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
         { r: 15, group: 4 },
     ];
 
+    const treeMapData = {
+        name: "root",
+        children: [
+          { name: "Category A", value: 100 },
+          { name: "Category B", value: 200 },
+          {
+            name: "Category C",
+            children: [
+              { name: "Subcategory C1", value: 80 },
+              { name: "Subcategory C2", value: 120 },
+            ],
+          },
+        ],
+      };
+      
+    
 
     return (
 
@@ -124,6 +142,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 overflow: "hidden",
                                 height: "100%"
                             }}>
+                                <Chart_10 data={treeMapData}/>
                             </div>
 
                             <div id={styles.DOUGHNUT_2} class="rounded-xl ... bg-zinc-200 ..." style={{
