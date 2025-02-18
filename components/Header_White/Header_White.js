@@ -95,12 +95,12 @@ export default class Header extends Component {
                       </h3>
                     </Link>
 
-                    <Link id={styles.PROJECTS} href="/projects">
+                    <Link id={styles.PROJECTS} href="/copilot_dashboard">
                       <h3
                         id={styles.H_3_PROJECTS}
                         class="text-center ...  text-stone-700  font-avant_garde_bold"
-                        data-content="Projects">
-                        Projects
+                        data-content="Copilot_Dashboard">
+                        Copilot_Dashboard
                       </h3>
                     </Link>
 
@@ -121,7 +121,7 @@ export default class Header extends Component {
 
                   <div class="content-center ..." id={styles.TIME}>
                     <Clock />                   
-                    <div class="bg-stone-700-500 ..." id={styles.B1}>
+                    <div class="bg-stone-700 ..." id={styles.B1}>
                     </div>
                     <DateComponent />                              
                   </div>
@@ -131,26 +131,103 @@ export default class Header extends Component {
 
                   <div class="content-right ..." id={styles.BASKET_CONTAINER}>
 
-                    <div class="content-center ... align-middle ..."
-                         style={{gridArea:"BASKET", position:"relative", top:"0.75px", left:"-30px"}}>
-                      {/*<FontAwesomeIcon icon={faHeart}  size="xs"
-                      class="text-slate-50"/>*/}
+                    <Link
+                      class="content-center ... align-middle ..."
+                      href="/bloghome" 
+                      style={{gridArea:"BASKET", position:"relative", top:"0.75px", left:"-30px"}}>
+                        <div class="content-center ... align-middle ...">
+                          <FontAwesomeIcon icon={faCartShopping} size="xs"
+                          class="text-stone-700" />
+                        </div>
+                    </Link>
+
+                    
+                    <Link
+                      class="content-center ... align-middle ..."
+                      href="/bloghome" 
+                      style={{gridArea:"FAVOURITE", position:"relative", top:"0.5px", left:"-30px"}}>
+                        <div class="content-center ... align-middle ...">
+                          <FontAwesomeIcon icon={faHeart}  size="2xs"
+                          class="text-stone-700"/>
+                        </div>
+                    </Link>
+
+                    {/*<div class="content-center ... align-middle ...">
+                    </div>*/}
+
+                  </div>
 
 
 
-                      <FontAwesomeIcon icon={faCartShopping} size="xs"
-                      class="text-stone-700" />
-                    </div>
 
-                    <div class="content-center ... align-middle ..."
-                         style={{gridArea:"FAVOURITE", position:"relative", top:"0.5px", left:"-30px"}}>
-                      <FontAwesomeIcon icon={faHeart}  size="2xs"
-                      class="text-stone-700"/>
-                    </div>
 
-                    <div class="content-center ... align-middle ...">
-                    </div>
 
+
+
+
+
+
+
+
+
+
+
+
+                  
+
+
+
+                  <div class="flex justify-end ..." id={styles.SIGNUP_CONTAINER}
+                      style={{
+                              gridArea: "SIGN",
+                              position: "relative",                          
+                              height: "100%",
+                              width: "100%"}}>
+              
+                      <div class="flex justify-end ..." id={styles.SIGNUP_RIGHT}                          
+                          style={{
+                                  gridArea: "SIGN",
+                                  position: "relative",                         
+                                  height: "100%",
+                                  width: "200px",
+                                  left:"4.5px"}}>
+
+                            <div class="content-center ..." id={styles.SIGNUP_GRID}>
+                                <Link id={styles.STORIES} href="/signup" 
+                                    style={{
+                                        gridArea: "SIGNUP",
+                                        position: "relative",                         
+                                        height: "100%",
+                                        width: "100%",
+                                        textAlign: "center",
+                                        left: "-15.5px"}}>
+                                    <h3
+                                      id={styles.H_3_STORIES}
+                                      class="text-center ...  text-stone-700 font-avant_garde_bold"
+                                      data-content="Signup">
+                                      Signup
+                                    </h3>
+                                </Link>                  
+                            <div class="bg-zinc-500 ..." id={styles.B1}>
+                            </div>
+                                <Link id={styles.SIGNUP} href="/signin" 
+                                    style={{
+                                            gridArea: "LOGIN",
+                                            position: "relative",                        
+                                            height: "100%",
+                                            width: "100%",
+                                            textAlign: "center",
+                                            left: "-15px"}}>
+                                    <h3
+                                      id={styles.H_3_STORIES}
+                                      class="text-center ...  text-stone-700 font-avant_garde_bold"
+                                      data-content="Login">
+                                      Login
+                                    </h3>
+                                </Link>                           
+                            </div>
+                  
+                      </div>                                                         
                   </div>
 
 

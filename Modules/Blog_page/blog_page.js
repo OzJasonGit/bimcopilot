@@ -75,39 +75,96 @@ const Blog_page = (stories) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <section id="SHADOW_SECTION_BLOG" className={styles.center_holder}>
                 <div className="grid_0_subscribe">
                     <div className="sub_head">
+
+
                         <div id="SUBSCRIBE" className={"border-emerald-200"}>
-                            <div id="SUB_ICON"></div>
 
-                            <div id="MAIN_TAG">
-                                <div
-
-                                    id="_H1"
-                                    className=" text-stone-200 ... font-avant_garde_bold"
-                                >
-                                    {parse(story.title || "")}
-
+                                <div id="MAIN_TAG">
+                                    <div
+                                        id="_H1"
+                                        className=" text-stone-200 ... font-avant_garde_bold">
+                                        {parse(story.title || "")}
+                                    </div>
                                 </div>
-                            </div>
-                            <div id="SUB_TAG">
 
-                                <div
-                                    id="_H3"
-                                    className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium"
-                                >
-                                    {" "}
-                                    {parse(story.subtitle || "")}
-
-                                    . <br /> <br />{" "}
-
+                                <div id="SUB_TAG">
+                                    <div
+                                        id="_H3"
+                                        className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">                                     
+                                        {parse(story.subtitle || "")}         
+                                    </div>
                                 </div>
-                            </div>
+                                
                         </div>
+
                     </div>
                 </div>
             </section>
+
+
+
+
+
+
 
 
 
@@ -115,29 +172,34 @@ const Blog_page = (stories) => {
 
 
             <section id="SHADOW_SECTION_BLOG" className="center_holder">
-                <div className="grid_1_tag">
+                <div className="grid_0_blogimageholder">
 
-                    <div className="rounded-2xl ..." id="BLOGIMAGE">
+                    <div className="rounded-2xl ..." 
+                         id="MAIN_IMAGE"
+                         style={{
+                                display: "block",
+                                width: "100%",
+                                height: "600px",
+                                gridArea: "SUB"
+                                
+                            }}>
                         <Image
                             alt="Story Image"
                             key={story._id}
-                            width={1000}
-                            height={1000}
+                            width={500}
+                            height={500}
                             src={story.image}
                             style={{
-                                display: "block",
+                                position: "absolute",
                                 width: "100%",
-                                height: "auto",
-                                marginBottom: "20px",
+                                height: "100%",
+                                objectFit: "cover",
                             }}
                         />
 
                     </div>
                 </div>
             </section>
-
-
-
 
 
 
@@ -154,8 +216,7 @@ const Blog_page = (stories) => {
                             <div id="MAIN_TAG">
                                 <h1
                                     id="_H1"
-                                    className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
-                                >
+                                    className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
                                     Introduction
                                 </h1>
                                 <br />
@@ -170,6 +231,70 @@ const Blog_page = (stories) => {
                     </div>
                 </div>
             </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

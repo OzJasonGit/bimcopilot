@@ -90,12 +90,12 @@ export default class Header extends Component {
                       </h3>
                     </Link>
 
-                    <Link id={styles.PROJECTS} href="/projects" >
+                    <Link id={styles.PROJECTS} href="/copilot_dashboard" >
                       <h3
                         id={styles.H_3_PROJECTS}
                         class="text-center ...  text-slate-50  font-avant_garde_bold"
-                        data-content="Projects">
-                        Projects
+                        data-content="Copilot_Dashboard">
+                        Copilot_Dashboard
                       </h3>
                     </Link>
 
@@ -126,25 +126,30 @@ export default class Header extends Component {
 
                   <div class="content-right ..." id={styles.BASKET_CONTAINER}>
 
-                    <div class="content-center ... align-middle ..."
-                         style={{gridArea:"BASKET", position:"relative", top:"0.75px", left:"-30px"}}>
-                      {/*<FontAwesomeIcon icon={faHeart}  size="xs"
-                      class="text-slate-50"/>*/}
+                    <Link
+                      class="content-center ... align-middle ..."
+                      href="/bloghome" 
+                      style={{gridArea:"BASKET", position:"relative", top:"0.75px", left:"-30px"}}>
+                        <div class="content-center ... align-middle ...">
+                          <FontAwesomeIcon icon={faCartShopping} size="xs"
+                          class="text-slate-50" />
+                        </div>
+                    </Link>
 
+                    
+                    <Link
+                      class="content-center ... align-middle ..."
+                      href="/bloghome" 
+                      style={{gridArea:"FAVOURITE", position:"relative", top:"0.5px", left:"-30px"}}>
+                        <div class="content-center ... align-middle ...">
+                          <FontAwesomeIcon icon={faHeart}  size="2xs"
+                          class="text-slate-50"/>
+                        </div>
+                    </Link>
+                    
 
-
-                      <FontAwesomeIcon icon={faCartShopping} size="xs"
-                      class="text-slate-50" />
-                    </div>
-
-                    <div class="content-center ... align-middle ..."
-                         style={{gridArea:"FAVOURITE", position:"relative", top:"0.5px", left:"-30px"}}>
-                      <FontAwesomeIcon icon={faHeart}  size="2xs"
-                      class="text-slate-50"/>
-                    </div>
-
-                    <div class="content-center ... align-middle ...">
-                    </div>
+                    {/*<div class="content-center ... align-middle ...">
+                    </div>*/}
 
                   </div>
 

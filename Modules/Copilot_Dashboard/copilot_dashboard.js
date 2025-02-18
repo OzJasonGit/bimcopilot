@@ -47,7 +47,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
         { r: 20, group: 2 },
         { r: 25, group: 3 },
         { r: 15, group: 4 },
-      ];
+    ];
 
 
     return (
@@ -97,7 +97,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             overflow: "hidden",
                             height: "100%"
                         }}>
-                            <Chart_8  data={data} />
+                            <Chart_8 data={data} />
                         </div>
 
 
@@ -107,7 +107,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             overflow: "hidden",
                             height: "auto"
                         }}>
-                            <Chart_9/>
+                            <Chart_9 />
                         </div>
 
 
@@ -135,7 +135,27 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             </div>
 
 
-                        </div>
+
+                    
+                    </div>
+
+                 
+                    <div id={styles.TREE} class="rounded-xl ... bg-zinc-200 ..." style={{
+                        gridArea: "TREE",
+                        position: "relative",                        
+                        overflow: "hidden",  
+                        height: "450px"}}>
+
+                             {/*<Chart_4/>*/}
+                    </div>
+
+                    <div id={styles.BAR} class="rounded-xl ... bg-zinc-200 ..." style={{
+                        gridArea: "BAR",
+                        position: "relative",                        
+                        overflow: "hidden",  
+                        height: "100%"}}>
+                    </div>
+
 
 
                         <div id={styles.TREE} class="rounded-xl ... bg-zinc-200 ..." style={{
@@ -194,15 +214,17 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 height: "100%"
                             }}>
 
-                                <Chart_7 />
-                            </div>
 
-                        </div>
+                                     {/*<Chart_7/>*/}
 
-                    </div>
+                            </div >
 
-                </div>
-            </section>
+                        </div >
+
+                    </div >
+
+                </div >
+            </section >
 
 
 

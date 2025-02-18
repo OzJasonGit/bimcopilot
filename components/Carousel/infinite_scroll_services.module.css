@@ -51,9 +51,9 @@
   display: flex;
   align-items: center;
   gap: 0 0.2rem;
-  color: #e2e8f0;
+  color: #f5f5f4;
   font-size: 0.9rem;
-  background-color: rgb(23 23 23);
+  background-color: transparent;
   border-radius: 0.4rem;
   padding: 0.7rem 1rem;
   margin-right: 1rem;
@@ -61,13 +61,7 @@
 
 .fade {
   pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    #e2e8f0;,
-    transparent 30%,
-    transparent 70%,
-    #e2e8f0;
-  );
+  background: linear-gradient(90deg, #f5f5f4, transparent 30%, transparent 70%, #f5f5f4);
   position: absolute;
   inset: 0;
 }

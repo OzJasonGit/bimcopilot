@@ -1,6 +1,6 @@
 "use client";
 
-import styles from './sign_in.module.css';
+import styles from './basket.module.css';
 
 import axios from "axios";
 import React, { useState } from "react";
@@ -8,17 +8,17 @@ import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Subfooter2 from "@/components/Subfooter2/subfooter2";
+
 import { Button } from "@/components/ui/button"
 
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
-import Menu from "../../components/Menu/menu";
-import Sides from "../../components/Sides/sides";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import Menu from "../Menu/menu";
 
 
 
-const SignIn = () => {
+
+const Basket = () => {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const [formData, setFormData] = useState({
@@ -82,7 +82,6 @@ const SignIn = () => {
     <>
       <Menu/>
       <Header/>
-      <Sides/>
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_blogimageholder}>
@@ -234,10 +233,10 @@ const SignIn = () => {
         </div>
       </section>
 
-      <Subfooter2/>
+
       <Footer/>
     </>
   );
 };
 
-export default SignIn;
+export default Basket;

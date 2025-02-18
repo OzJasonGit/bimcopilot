@@ -9,12 +9,14 @@ import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Subfooter2 from "@/components/Subfooter2/subfooter2";
 
 import { Button } from "@/components/ui/button"
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Menu from "../../components/Menu/menu";
+import Sides from "../../components/Sides/sides";
 
 const Signup = () => {
   const router = useRouter(); // Router for navigation
@@ -79,6 +81,7 @@ const Signup = () => {
     <>
       <Menu/>
       <Header/>
+      <Sides/>
 
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
@@ -216,6 +219,7 @@ const Signup = () => {
         </div>
       </section>
 
+      <Subfooter2/>
       <Footer/>
     </>
   );
