@@ -364,45 +364,55 @@ const Blog_page = (stories) => {
                                 gridArea: "MAIN_AREA",}}>
 
 
-                        <div id="PARAGRAPH"
-                                style={{
-                                position: "relative",
-                                width: "100%",
-                                height: "auto",
-                                gridArea: "TEXT",}}>
-                            <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                                id="_H3">
-                                {parse(story.body1_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor 
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            </h3>
+                            <div id="PARAGRAPH"
+                                    style={{
+                                    position: "relative",
+                                    width: "100%",                     
+                                    gridArea: "TITLE",}}>
+                                <h3
+                                    className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                    id="_H3">
+                                    {parse(story.body1_title || "")}
+                                    consectetur adipiscing elit, sed do eiusmod tempor 
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                </h3>
+                            </div>
 
                             <br/>
                             <div className="bg-transparent ... rounded-xl ... justify-center ..."
                                 style={{
                                     position: "relative",
                                     width: "100%",
-                                    height: "500px",
+                                    height: "400px",
                                     gridArea: "VIDEO",
                                 }}>
                                 <Video />
                             </div>
                             <br/>
 
-                            <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                                {parse(story.body1 || "")}                               
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                                fugiat nulla pariatur. 
-                                <br />
-                            </p>
-                        </div>
+                            <div
+                                style={{
+                                    position: "relative",
+                                    width: "100%",
+                                    height: "auto",
+                                    gridArea: "TEXT",                               
+                                }}>
+                                <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                    {parse(story.body1 || "")}                               
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                                    fugiat nulla pariatur. 
+                                    <br />
+                                </p>
+                            </div>
+
+                            
+                    </div>
 
                         
-                    </div>
+                
 
                 </div>
 
