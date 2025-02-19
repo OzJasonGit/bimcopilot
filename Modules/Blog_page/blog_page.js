@@ -355,7 +355,14 @@ const Blog_page = (stories) => {
 
                 <div className="grid_0_blog">
 
-                    <div id="FIRST_TEXT_HOLDER">
+                    <div id="FIRST_TEXT_HOLDER"
+                        style={{
+                                position: "relative",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
+
+
                         <div id="PARAGRAPH"
                                 style={{
                                 position: "relative",
