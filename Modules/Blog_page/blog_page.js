@@ -358,6 +358,7 @@ const Blog_page = (stories) => {
                     <div id="FIRST_TEXT_HOLDER"
                         style={{
                                 position: "relative",
+                                display: "grid",
                                 width: "100%",
                                 height: "auto",
                                 gridArea: "MAIN_AREA",}}>
