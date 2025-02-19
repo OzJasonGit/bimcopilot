@@ -357,11 +357,11 @@ const Blog_page = (stories) => {
 
                     <div id="FIRST_TEXT_HOLDER"
                         style={{
-                                position: "relative",
-                                display: "grid",
-                                width: "100%",
-                                height: "auto",
-                                gridArea: "MAIN_AREA",}}>
+                            position: "relative",
+                            display: "grid",
+                            width: "100%",
+                            height: "auto",
+                            gridArea: "MAIN_AREA",}}>
 
 
                             <div id="PARAGRAPH"
@@ -369,6 +369,7 @@ const Blog_page = (stories) => {
                                     position: "relative",
                                     width: "100%",                     
                                     gridArea: "TITLE",}}>
+                                <br/> <br/>
                                 <h3
                                     className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                                     id="_H3">
@@ -376,9 +377,11 @@ const Blog_page = (stories) => {
                                     consectetur adipiscing elit, sed do eiusmod tempor 
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 </h3>
+                                <br/> <br/>
                             </div>
 
-                            <br/>
+                            
+
                             <div className="bg-transparent ... rounded-xl ... justify-center ..."
                                 style={{
                                     position: "relative",
@@ -388,7 +391,8 @@ const Blog_page = (stories) => {
                                 }}>
                                 <Video />
                             </div>
-                            <br/>
+
+                            
 
                             <div
                                 style={{
@@ -397,18 +401,18 @@ const Blog_page = (stories) => {
                                     height: "auto",
                                     gridArea: "TEXT",                               
                                 }}>
+                                <br/> <br/>
                                 <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                                     {parse(story.body1 || "")}                               
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                                     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
                                     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                                    fugiat nulla pariatur. 
-                                    <br />
+                                    fugiat nulla pariatur.                                    
                                 </p>
+                                <br/> <br/>
                             </div>
-
-                            
+                           
                     </div>
 
                         
