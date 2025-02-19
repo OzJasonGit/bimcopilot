@@ -355,18 +355,41 @@ const Blog_page = (stories) => {
 
                 <div className="grid_0_blog">
 
-                    <div id="MAIN_TEXT_HOLDER">
-                        <div id="PARAGRAPH">
+                    <div id="FIRST_TEXT_HOLDER">
+                        <div id="PARAGRAPH"
+                                style={{
+                                position: "relative",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "TEXT",}}>
                             <h3
                                 className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                                 id="_H3">
                                 {parse(story.body1_title || "")}
+                                consectetur adipiscing elit, sed do eiusmod tempor 
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
                             <br />
                             <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                                {parse(story.body1 || "")}
+                                {parse(story.body1 || "")}                               
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+                                qui officia deserunt mollit anim id est laborum.
                                 <br />
                             </p>
+                        </div>
+
+                        <div className="bg-transparent ... rounded-xl ..."
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                height: "500px",
+                                gridArea: "VIDEO",
+                            }}>
+                            <Video />
                         </div>
                     </div>
 
