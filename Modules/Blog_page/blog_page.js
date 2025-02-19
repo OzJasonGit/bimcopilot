@@ -377,28 +377,31 @@ const Blog_page = (stories) => {
                                 consectetur adipiscing elit, sed do eiusmod tempor 
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
-                            <br />
+
+                            <br/>
+                            <div className="bg-transparent ... rounded-xl ... justify-center ..."
+                                style={{
+                                    position: "relative",
+                                    width: "100%",
+                                    height: "500px",
+                                    gridArea: "VIDEO",
+                                }}>
+                                <Video />
+                            </div>
+                            <br/>
+
                             <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                                 {parse(story.body1 || "")}                               
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
                                 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
-                                qui officia deserunt mollit anim id est laborum.
+                                fugiat nulla pariatur. 
                                 <br />
                             </p>
                         </div>
 
-                        <div className="bg-transparent ... rounded-xl ..."
-                            style={{
-                                position: "relative",
-                                width: "100%",
-                                height: "500px",
-                                gridArea: "VIDEO",
-                            }}>
-                            <Video />
-                        </div>
+                        
                     </div>
 
                 </div>
