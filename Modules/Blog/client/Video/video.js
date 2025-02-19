@@ -12,6 +12,8 @@ const Video = () => {
               width: "100%",
               height: "400px",
               gridArea: "VIDEO",
+              display: "-ms-grid",
+              justifyContent: "center",
           }}>
 
           <div id={styles.VIDEO}>
