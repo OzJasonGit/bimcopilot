@@ -9,7 +9,7 @@ const Video = () => {
       <div class="rounded-2xl ..." id={styles.VIDEO_CONTAINER}>
 
         <div id={styles.VIDEO}>
-<video autoPlay controls playsInline muted loop src="https://res.cloudinary.com/dytsuek4h/video/upload/v1718789410/2836031_jb9p48.mp4" style={{  borderRadius:"0.5rem"}}></video>
+<video /*autoPlay*/ controls playsInline muted loop src="https://res.cloudinary.com/dytsuek4h/video/upload/v1718789410/2836031_jb9p48.mp4" style={{  borderRadius:"0.5rem"}}></video>
 
         </div>
 
