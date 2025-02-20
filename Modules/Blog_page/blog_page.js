@@ -439,10 +439,14 @@ const Blog_page = (stories) => {
 
             <section id="SHADOW_SECTION_TITLE" className="center_holder">
                 <div className="grid_0_blog">
-                    <div id="MAIN_TEXT_HOLDER">
 
+                    <div id="TEXT_HOLDER">
 
-                        <div id="PARAGRAPH">
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
                             <h3
                                 className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                                 id="_H3">
@@ -450,8 +454,17 @@ const Blog_page = (stories) => {
                                 consectetur adipiscing elit, sed do eiusmod tempor 
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
-                            <br />
-                            <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                            <br/> <br/>
+                        </div>
+                   
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <p  
+                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                                 {parse(story.body2 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
@@ -459,10 +472,11 @@ const Blog_page = (stories) => {
                                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                                 fugiat nulla pariatur. 
                             </p>
+                            <br/> <br/>
                         </div>
 
-
                     </div>
+
                 </div>
             </section>
 
