@@ -3,7 +3,7 @@
 // import styles from "../../../../Modules/Bloghome/bloghome.module.css";
 import styles from "./blog_page.css"
 import Link from "next/link";
-import Video from "@/components/Mainvideo/client/Video/video";
+import Video from "@/Modules/Blog/client/Video/video";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import axios from "axios";
