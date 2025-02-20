@@ -440,7 +440,13 @@ const Blog_page = (stories) => {
             <section id="SHADOW_SECTION_TITLE" className="center_holder">
                 <div className="grid_0_blog">
 
-                    <div id="TEXT_HOLDER">
+                    <div id="TEXT_HOLDER"
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
 
                         <div
                             style={{
