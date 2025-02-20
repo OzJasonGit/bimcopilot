@@ -438,36 +438,32 @@ const Blog_page = (stories) => {
 
 
             <section id="SHADOW_SECTION_TITLE" className="center_holder">
-
                 <div className="grid_0_blog">
-
                     <div id="MAIN_TEXT_HOLDER">
 
-                        <div className="bg-transparent ... rounded-xl ..."
-                            style={{
-                                position: "relative",
-                                width: "100%",
-                                height: "400px",
-                                gridArea: "VIDEO",
-                            }}>
-                            <Video />
-                        </div>
 
                         <div id="PARAGRAPH">
                             <h3
                                 className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                                 id="_H3">
                                 {parse(story.body2_title || "")}
+                                consectetur adipiscing elit, sed do eiusmod tempor 
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
                             <br />
                             <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                                 {parse(story.body2 || "")}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                                fugiat nulla pariatur. 
                             </p>
                         </div>
+
+
                     </div>
-
                 </div>
-
             </section>
 
 
