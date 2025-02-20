@@ -14,7 +14,7 @@
 
 #VIDEO { 
    
-    height: 420px;
+    height: auto;
     position: relative;
     border-radius: 0.5rem !important
 
