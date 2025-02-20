@@ -125,7 +125,7 @@
     grid-template-rows: auto auto auto;
     grid-template-areas:
         ". . . TITLE TITLE TITLE TITLE TITLE TITLE . . ."
-        ". VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO ."
+        ". . VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO . ."
         ". . . TEXT TEXT TEXT TEXT TEXT TEXT . . .";
 }
 
