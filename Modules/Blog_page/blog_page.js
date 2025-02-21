@@ -675,7 +675,7 @@ const Blog_page = (stories) => {
                         position: "relative",
                         width: "100%",                     
                         gridArea: "TEXT",}}> 
-
+                    <br/> <br/>
                     <p  
                         className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
                         {parse(story.body3 || "")}
