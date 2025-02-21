@@ -520,6 +520,21 @@ const Blog_page = (stories) => {
                     </h3>
                     <br/> <br/>
                 </div>
+
+
+
+                <div className="bg-transparent ... rounded-xl ... justify-center ..."
+                        style={{
+                            position: "relative",
+                            width: "100%",
+                            height: "auto",
+                            gridArea: "VIDEO",
+                        }}>
+                        <Video />
+                </div>          
+
+
+
             
                 <div  
                     style={{
@@ -1284,7 +1299,7 @@ const Blog_page = (stories) => {
 
 
 
-            {/*<Other_blogs/>*/}
+           {/*<Other_blogs/>*/}
 
             <section id="SHADOW_SECTION_BLOG" className="center_holder">
                 <div className="sub_head">
@@ -1358,7 +1373,7 @@ const Blog_page = (stories) => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> 
 
 
 
