@@ -368,7 +368,7 @@ const Blog_page = (stories) => {
                         <br/> <br/>
                         <h3
                             className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                            id="_H3">
+                            id="_H3_2">
                             {parse(story.body1_title || "")}
                             consectetur adipiscing elit, sed do eiusmod tempor 
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -498,7 +498,7 @@ const Blog_page = (stories) => {
                         gridArea: "TITLE",}}>
                     <h3
                         className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3">
+                        id="_H3_2">
                         {parse(story.body2_title || "")}
                         consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -601,7 +601,7 @@ const Blog_page = (stories) => {
                         gridArea: "TITLE",}}>
                     <h3
                         className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3">
+                        id="_H3_2">
                         {parse(story.body3_title || "")}
                         consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -746,7 +746,7 @@ const Blog_page = (stories) => {
                         gridArea: "TITLE",}}>
                     <h3
                         className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3">
+                        id="_H3_2">
                         {parse(story.body4_title || "")}
                         consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -812,7 +812,7 @@ const Blog_page = (stories) => {
                         gridArea: "TITLE",}}>
                     <h3
                         className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3">
+                        id="_H3_2">
                         {parse(story.body5_title || "")}
                         consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -887,7 +887,7 @@ const Blog_page = (stories) => {
                         gridArea: "TITLE",}}>
                     <h3
                         className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3">
+                        id="_H3_2">
                         {parse(story.body6_title || "")}
                         consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
