@@ -368,7 +368,7 @@ const Blog_page = (stories) => {
                         <br/> <br/>
                         <h3
                             className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                            id="_H3">
+                            /*id="_H3"*/>
                             {parse(story.body1_title || "")}
                             consectetur adipiscing elit, sed do eiusmod tempor 
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
