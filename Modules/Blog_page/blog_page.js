@@ -659,13 +659,13 @@ const Blog_page = (stories) => {
 
 
                 <div className="bg-transparent ... rounded-xl ... justify-center ..."
-                        style={{
-                            position: "relative",
-                            width: "100%",
-                            height: "auto",
-                            gridArea: "VIDEO",
-                        }}>
-                        <Video />
+                    style={{
+                        position: "relative",
+                        width: "100%",
+                        height: "auto",
+                        gridArea: "IMAGE",
+                    }}>
+                    <Video />
                 </div>          
 
 
