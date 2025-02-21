@@ -616,23 +616,19 @@ const Blog_page = (stories) => {
                         height: "320px",
                         gridArea: "IMAGE",
                     }}>
-
-            
-
-                            <Image
-                                alt="Story Image"
-                                key={story._id}
-                                width={500}
-                                height={500}
-                                src={story.image}
-                                style={{
-                                    position: "absolute",
-                                    width: "100%",
-                                    height: "100%",
-                                    objectFit: "cover",
-                                }}/>
-                      
-                    
+                        <Image
+                            className=" rounded-xl ... justify-center ..."
+                            alt="Story Image"
+                            key={story._id}
+                            width={500}
+                            height={500}
+                            src={story.image}
+                            style={{
+                                position: "absolute",
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                    }}/>                    
                 </div>          
            
                 <div  
