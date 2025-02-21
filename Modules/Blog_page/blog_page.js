@@ -88,49 +88,6 @@ const Blog_page = (stories) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <section id="SHADOW_SECTION_BLOG" className={styles.center_holder}>
                 <div className="grid_0_subscribe">
                     <div className="sub_head">
@@ -138,21 +95,21 @@ const Blog_page = (stories) => {
 
                         <div id="SUBSCRIBE" className={"border-emerald-200"}>
 
-                                <div id="MAIN_TAG">
-                                    <div
-                                        id="_H1"
-                                        className=" text-stone-200 ... font-avant_garde_bold">
-                                        {parse(story.title || "")}
-                                    </div>
+                            <div id="MAIN_TAG">
+                                <div
+                                    id="_H1"
+                                    className=" text-stone-200 ... font-avant_garde_bold">
+                                    {parse(story.title || "")}
                                 </div>
+                            </div>
 
-                                <div id="SUB_TAG">
-                                    <div
-                                        /*id="_H3"*/
-                                        className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">                                     
-                                        {parse(story.subtitle || "")}         
-                                    </div>
+                            <div id="SUB_TAG">
+                                <div
+                                    /*id="_H3"*/
+                                    className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">                                     
+                                    {parse(story.subtitle || "")}         
                                 </div>
+                            </div>
                                 
                         </div>
 
@@ -660,8 +617,7 @@ const Blog_page = (stories) => {
                         gridArea: "IMAGE",
                     }}>
 
-                    {storiesToMap.map((story, index) => {
-                        return (
+            
 
                             <Image
                                 alt="Story Image"
@@ -675,7 +631,7 @@ const Blog_page = (stories) => {
                                     height: "100%",
                                     objectFit: "cover",
                                 }}/>
-                        )})}
+                      
                     
                 </div>          
            
