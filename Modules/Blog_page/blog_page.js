@@ -665,16 +665,17 @@ const Blog_page = (stories) => {
                         return (
 
                             <Image
-                                src={story.image}
-                                alt="Blog Post"
-                                loading="lazy"
+                                alt="Story Image"
+                                key={story._id}
                                 width={500}
                                 height={500}
+                                src={story.image}
                                 style={{
                                     position: "absolute",
                                     width: "100%",
-                                    height: "400px",
-                                    objectFit: "cover", }}/>
+                                    height: "100%",
+                                    objectFit: "cover",
+                                }}/>
                         )})}
                     
                 </div>          
