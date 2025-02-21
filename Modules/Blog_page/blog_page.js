@@ -449,8 +449,7 @@ const Blog_page = (stories) => {
                             nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                             fugiat nulla pariatur.                                    
-                        </p>
-                        <br/> <br/>
+                        </p>                 
                     </div>
                     
             </div>
@@ -566,7 +565,6 @@ const Blog_page = (stories) => {
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                         fugiat nulla pariatur. 
                     </p>
-                    <br/> <br/>
                 </div>
 
             </div>
@@ -632,7 +630,6 @@ const Blog_page = (stories) => {
 
     <section id="SHADOW_SECTION_TITLE" className="center_holder">
         <div className="grid_0_blog">
-
             <div id="IMAGE_TEXT_HOLDER"
                 style={{
                         position: "relative",
@@ -656,8 +653,6 @@ const Blog_page = (stories) => {
                     <br/> <br/>
                 </div>
 
-
-
                 <div className="bg-transparent ... rounded-xl ... justify-center ..."
                     style={{
                         position: "relative",
@@ -667,8 +662,6 @@ const Blog_page = (stories) => {
                     }}>
                     <Video />
                 </div>          
-
-
            
                 <div  
                     style={{
@@ -684,12 +677,10 @@ const Blog_page = (stories) => {
                         nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                         fugiat nulla pariatur. 
-                    </p>
-                    <br/> <br/>
+                    </p>                   
                 </div>
 
             </div>
-
         </div>
     </section>
 
@@ -810,7 +801,6 @@ const Blog_page = (stories) => {
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                         fugiat nulla pariatur. 
                     </p>
-                    <br/> <br/>
                 </div>
 
             </div>
@@ -876,8 +866,7 @@ const Blog_page = (stories) => {
                         nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                         fugiat nulla pariatur. 
-                    </p>
-                    <br/> <br/>
+                    </p>          
                 </div>
 
             </div>
@@ -952,8 +941,7 @@ const Blog_page = (stories) => {
                         nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
                         fugiat nulla pariatur. 
-                    </p>
-                    <br/> <br/>
+                    </p>                  
                 </div>
 
             </div>
