@@ -148,7 +148,7 @@ const Blog_page = (stories) => {
 
                                 <div id="SUB_TAG">
                                     <div
-                                        id="_H3"
+                                        {/*id="_H3"*/}
                                         className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">                                     
                                         {parse(story.subtitle || "")}         
                                     </div>
@@ -208,7 +208,6 @@ const Blog_page = (stories) => {
                                     className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
                                     Introduction
                                 </h1>
-                                <br />
                                 <p className="text-xl ... text-stone-400 ... font-avant_garde_bold">
                                     {`${story.introduction_quote} ${story.introduction_quote_author}`}
                                     <br /> <br />
