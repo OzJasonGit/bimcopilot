@@ -105,7 +105,7 @@ const Blog_page = (stories) => {
 
                             <div id="SUB_TAG">
                                 <div
-                                    /*id="_H3"*/
+                                    id="_H3"
                                     className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">                                     
                                     {parse(story.subtitle || "")}         
                                 </div>
