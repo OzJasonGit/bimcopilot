@@ -351,6 +351,46 @@ const Blog_page = (stories) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section id="SHADOW_SECTION_TITLE" className="center_holder">
 
         <div className="grid_0_blog">
@@ -437,6 +477,54 @@ const Blog_page = (stories) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section id="SHADOW_SECTION_TITLE" className="center_holder">
         <div className="grid_0_blog">
 
@@ -495,10 +583,57 @@ const Blog_page = (stories) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section id="SHADOW_SECTION_TITLE" className="center_holder">
         <div className="grid_0_blog">
 
-            <div id="TEXT_HOLDER"
+            <div id="IMAGE_TEXT_HOLDER"
                 style={{
                         position: "relative",
                         display: "grid",
@@ -534,8 +669,7 @@ const Blog_page = (stories) => {
                 </div>          
 
 
-
-            
+           
                 <div  
                     style={{
                         position: "relative",
@@ -558,6 +692,65 @@ const Blog_page = (stories) => {
 
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

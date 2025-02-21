@@ -140,7 +140,14 @@
 }
 
 
-
+#IMAGE_TEXT_HOLDER {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        ". . . TITLE TITLE TITLE TITLE TITLE TITLE . . ."
+        ". . . IMAGE IMAGE IMAGE IMAGE IMAGE IMAGE . . ."
+        ". . . TEXT TEXT TEXT TEXT TEXT TEXT . . .";
+}
 
 
 
