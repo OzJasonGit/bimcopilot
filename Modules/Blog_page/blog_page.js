@@ -167,7 +167,7 @@ const Blog_page = (stories) => {
                                 </h1>
                                 <p className="text-xl ... text-stone-400 ... font-avant_garde_bold">
                                     {`${story.introduction_quote} ${story.introduction_quote_author}`}
-                                    <br /> <br />
+                                    <br /> 
                                     {parse(story.introduction || "")}
                                 </p>
                             </div>
