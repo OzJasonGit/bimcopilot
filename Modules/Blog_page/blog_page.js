@@ -628,11 +628,54 @@ const Blog_page = (stories) => {
 
 
 
+    <section id="SHADOW_SECTION_TITLE" className="center_holder">
+        <div className="grid_0_blog">
 
+            <div id="TEXT_HOLDER"
+                style={{
+                        position: "relative",
+                        display: "grid",
+                        width: "100%",
+                        height: "auto",
+                        gridArea: "MAIN_AREA",}}>
 
+                <div
+                    style={{
+                        position: "relative",
+                        width: "100%",                     
+                        gridArea: "TITLE",}}>
+                    <h3
+                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                        id="_H3">
+                        {parse(story.body5_title || "")}
+                        consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    </h3>
+                    <br/> <br/>
+                </div>
+            
+                <div  
+                    style={{
+                        position: "relative",
+                        width: "100%",                     
+                        gridArea: "TEXT",}}> 
 
+                    <p  
+                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                        {parse(story.body5 || "")}
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                        fugiat nulla pariatur. 
+                    </p>
+                    <br/> <br/>
+                </div>
 
+            </div>
 
+        </div>
+    </section>
 
 
 
@@ -661,11 +704,54 @@ const Blog_page = (stories) => {
 
 
 
+     <section id="SHADOW_SECTION_TITLE" className="center_holder">
+        <div className="grid_0_blog">
 
+            <div id="TEXT_HOLDER"
+                style={{
+                        position: "relative",
+                        display: "grid",
+                        width: "100%",
+                        height: "auto",
+                        gridArea: "MAIN_AREA",}}>
 
+                <div
+                    style={{
+                        position: "relative",
+                        width: "100%",                     
+                        gridArea: "TITLE",}}>
+                    <h3
+                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                        id="_H3">
+                        {parse(story.body6_title || "")}
+                        consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    </h3>
+                    <br/> <br/>
+                </div>
+            
+                <div  
+                    style={{
+                        position: "relative",
+                        width: "100%",                     
+                        gridArea: "TEXT",}}> 
 
+                    <p  
+                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                        {parse(story.body6 || "")}
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                        fugiat nulla pariatur. 
+                    </p>
+                    <br/> <br/>
+                </div>
 
+            </div>
 
+        </div>
+    </section>
 
 
 
@@ -705,7 +791,64 @@ const Blog_page = (stories) => {
 
 
 
-            <section id="SHADOW_SECTION_TITLE" className="center_holder">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {/*<section id="SHADOW_SECTION_TITLE" className="center_holder">
 
                 <div className="grid_0_blog">
                     <div id="MAIN_TEXT_HOLDER">
