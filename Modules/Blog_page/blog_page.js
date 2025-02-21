@@ -660,17 +660,23 @@ const Blog_page = (stories) => {
                         height: "auto",
                         gridArea: "IMAGE",
                     }}>
-                    <Image
-                        src={mainStory.image || "/default-image.jpg"} // Fallback image
-                        alt="Blog Post"
-                        loading="lazy"
-                        width={500}
-                        height={500}
-                        style={{
-                            position: "absolute",
-                            width: "100%",
-                            height: "400px",
-                            objectFit: "cover", }}/>
+
+                    {storiesToMap.map((story, index) => {
+                        return (
+
+                            <Image
+                                src={story.image}
+                                alt="Blog Post"
+                                loading="lazy"
+                                width={500}
+                                height={500}
+                                style={{
+                                    position: "absolute",
+                                    width: "100%",
+                                    height: "400px",
+                                    objectFit: "cover", }}/>
+                        )})}
+                    
                 </div>          
            
                 <div  
