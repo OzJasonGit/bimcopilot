@@ -703,7 +703,7 @@ const Blog_page = (stories) => {
 
 
     <section id="SHADOW_SECTION_TITLE" className="center_holder">
-        <div className="grid_0_blog_end">
+        <div className="grid_0_blog">
 
             <div id="TEXT_HOLDER"
                 style={{
@@ -749,6 +749,283 @@ const Blog_page = (stories) => {
 
         </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="SHADOW_SECTION_TITLE" className="center_holder">
+        <div className="grid_0_blog">
+
+            <div id="TEXT_HOLDER"
+                style={{
+                        position: "relative",
+                        display: "grid",
+                        width: "100%",
+                        height: "auto",
+                        gridArea: "MAIN_AREA",}}>
+
+                <div
+                    style={{
+                        position: "relative",
+                        width: "100%",                     
+                        gridArea: "TITLE",}}>
+                    <h3
+                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                        id="_H3_2">
+                        {parse(story.body7_title || "")}
+                        consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    </h3>
+                    <br/> 
+                </div>
+            
+                <div  
+                    style={{
+                        position: "relative",
+                        width: "100%",                     
+                        gridArea: "TEXT",}}> 
+
+                    <p  
+                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                        {parse(story.body7 || "")}
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                        fugiat nulla pariatur. 
+                    </p>                  
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="SHADOW_SECTION_TITLE" className="center_holder">
+            <div className="grid_0_blog">
+
+                <div id="TEXT_HOLDER"
+                    style={{
+                            position: "relative",
+                            display: "grid",
+                            width: "100%",
+                            height: "auto",
+                            gridArea: "MAIN_AREA",}}>
+
+                    <div
+                        style={{
+                            position: "relative",
+                            width: "100%",                     
+                            gridArea: "TITLE",}}>
+                        <h3
+                            className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                            id="_H3_2">
+                            {parse(story.body8_title || "")}
+                            consectetur adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        </h3>
+                        <br/> 
+                    </div>
+                
+                    <div  
+                        style={{
+                            position: "relative",
+                            width: "100%",                     
+                            gridArea: "TEXT",}}> 
+
+                        <p  
+                            className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                            {parse(story.body8 || "")}
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                            fugiat nulla pariatur. 
+                        </p>                  
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="SHADOW_SECTION_TITLE" className="center_holder">
+        <div className="grid_0_blog">
+
+            <div id="TEXT_HOLDER"
+                style={{
+                        position: "relative",
+                        display: "grid",
+                        width: "100%",
+                        height: "auto",
+                        gridArea: "MAIN_AREA",}}>
+
+                <div
+                    style={{
+                        position: "relative",
+                        width: "100%",                     
+                        gridArea: "TITLE",}}>
+                    <h3
+                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                        id="_H3_2">
+                        {parse(story.body9_title || "")}
+                        consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    </h3>
+                    <br/> 
+                </div>
+            
+                <div  
+                    style={{
+                        position: "relative",
+                        width: "100%",                     
+                        gridArea: "TEXT",}}> 
+
+                    <p  
+                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                        {parse(story.body9 || "")}
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                        fugiat nulla pariatur. 
+                    </p>                  
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <section id="SHADOW_SECTION_TITLE" className="center_holder">
+        <div className="grid_0_blog_end">
+
+            <div id="TEXT_HOLDER"
+                style={{
+                        position: "relative",
+                        display: "grid",
+                        width: "100%",
+                        height: "auto",
+                        gridArea: "MAIN_AREA",}}>
+
+                <div
+                    style={{
+                        position: "relative",
+                        width: "100%",                     
+                        gridArea: "TITLE",}}>
+                    <h3
+                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                        id="_H3_2">
+                        {parse(story.body10_title || "")}
+                        consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    </h3>
+                    <br/> 
+                </div>
+            
+                <div  
+                    style={{
+                        position: "relative",
+                        width: "100%",                     
+                        gridArea: "TEXT",}}> 
+
+                    <p  
+                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                        {parse(story.bod10 || "")}
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                        fugiat nulla pariatur. 
+                    </p>                  
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    
 
 
 
