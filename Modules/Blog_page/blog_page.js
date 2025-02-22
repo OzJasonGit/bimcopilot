@@ -1453,8 +1453,11 @@ const Blog_page = (stories) => {
             <section id="SHADOW_SECTION_BLOG" className="center_holder">
                 <div className="sub_head">
                     <div id="SUBSCRIBE" className="border-emerald-200">
-                        <div id="SUB_ICON"></div>
-                        <div id="AIN_TAG">
+
+                        <div id="SUB_ICON">                            
+                        </div>
+
+                        <div id="MAIN_TAG">
                             <h1 id="_H1" className="text-md text-stone-200 font-geist_semibold">
                                 {parse(story.title || "")}
                             </h1>
@@ -1463,11 +1466,12 @@ const Blog_page = (stories) => {
                                 {parse(story.subtitle || "")}
                             </p>
                         </div>
+                        
                     </div>
                 </div>
 
                 {/* Main Image Before Introduction */}
-                    {/* <div className="w-full flex justify-center mt-6">
+                 <div className="w-full flex justify-center mt-6">
                         <Image
                             alt="Blog Main Image"
                             key={story._id}
@@ -1481,12 +1485,12 @@ const Blog_page = (stories) => {
                                 objectFit: "cover",
                             }}
                         />
-                    </div> */}
+                    </div> 
 
                 {/* Introduction Text */}
-                {/* <p className="text-md text-stone-300 font-geist_regular mt-4">
+                 <p className="text-md text-stone-300 font-geist_regular mt-4">
     {parse(story.introduction || "")}
-  </p> */}
+  </p> 
 
                 {/* Blog Preview Section */}
                 <div className="grid_0_tag mt-10">
