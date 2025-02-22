@@ -929,7 +929,7 @@ const Blog_page = (stories) => {
 
 
     <section id="SHADOW_SECTION_TITLE" className="center_holder">
-        <div className="grid_0_blog_end">
+        <div className="grid_0_blog">
 
             <div id="TEXT_HOLDER"
                 style={{
@@ -999,7 +999,7 @@ const Blog_page = (stories) => {
 
                     <h1
                         id="_H1"
-                        className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
+                        className="text-3xl ... text-stone-700 ... font-avant_garde_bold">
                         Conclusion
                         <br /> <br />
                     </h1>
