@@ -193,14 +193,16 @@ const Blog_page = (stories) => {
 
         <div className="grid_0_blog">
 
-            <div id="MAIN_TEXT_HOLDER">
+            <div id="SIDE_TEXT_HOLDER"
+                style={{
+                        position: "relative",
+                        gridArea: "MAIN_AREA",
+                        position: "sticky"}}>
 
                 <div id="DISCLAIMER_HOLDER">
                     <h3
                         id="_H3"
-                        className="text-2xl ... text-stone-700 ... font-avant_garde_bold"
-                    >
-
+                        className="text-2xl ... text-stone-700 ... font-avant_garde_bold">
                     </h3>
                     <p
                         className="text-lg ... text-neutral-700 ... font-avant_garde_bold">
