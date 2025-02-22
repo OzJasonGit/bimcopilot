@@ -373,7 +373,7 @@ const Blog_page = (stories) => {
                             consectetur adipiscing elit, sed do eiusmod tempor 
                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         </h3>
-                        <br/> <br/>
+                        <br/> 
                     </div>
 
                     
@@ -503,7 +503,7 @@ const Blog_page = (stories) => {
                         consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     </h3>
-                    <br/> <br/>
+                    <br/> 
                 </div>
             
                 <div  
@@ -606,7 +606,7 @@ const Blog_page = (stories) => {
                         consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     </h3>
-                    <br/> <br/>
+                    <br/> 
                 </div>
 
                 <div className="bg-transparent ... rounded-xl ... justify-center ..."
@@ -751,7 +751,7 @@ const Blog_page = (stories) => {
                         consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     </h3>
-                    <br/> <br/>
+                    <br/> 
                 </div>
             
                 <div  
@@ -817,7 +817,7 @@ const Blog_page = (stories) => {
                         consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     </h3>
-                    <br/> <br/>
+                    <br/> 
                 </div>
             
                 <div  
@@ -892,7 +892,7 @@ const Blog_page = (stories) => {
                         consectetur adipiscing elit, sed do eiusmod tempor 
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     </h3>
-                    <br/> <br/>
+                    <br/> 
                 </div>
             
                 <div  
@@ -1489,8 +1489,8 @@ const Blog_page = (stories) => {
 
                 {/* Introduction Text */}
                  <p className="text-md text-stone-300 font-geist_regular mt-4">
-    {parse(story.introduction || "")}
-  </p> 
+                    {parse(story.introduction || "")}
+                 </p> 
 
                 {/* Blog Preview Section */}
                 <div className="grid_0_tag mt-10">
