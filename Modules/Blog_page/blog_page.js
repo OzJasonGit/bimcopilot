@@ -189,7 +189,7 @@ const Blog_page = (stories) => {
 
 
 
-    <section id="SHADOW_SECTION_TITLE" className="center_holder">
+    <section id="SHADOW_SECTION_SIDE" className="center_holder">
 
         <div className="grid_0_blog">
 
