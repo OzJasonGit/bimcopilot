@@ -199,7 +199,7 @@ const Blog_page = (stories) => {
                         gridArea: "MAIN_AREA",
                         position: "sticky"}}>
 
-                <div id="DISCLAIMER_HOLDER">
+                {/*<div id="DISCLAIMER_HOLDER">
                     <h3
                         id="_H3"
                         className="text-2xl ... text-stone-700 ... font-avant_garde_bold">
@@ -208,7 +208,7 @@ const Blog_page = (stories) => {
                         className="text-lg ... text-neutral-700 ... font-avant_garde_bold">
                         {parse(story.disclaimer || "")}
                     </p>
-                </div>
+                </div>*/}
 
 
                 <div id="SIDE_NAV_HOLDER"> 
