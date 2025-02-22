@@ -189,97 +189,97 @@ const Blog_page = (stories) => {
 
 
 
-           {/* <section id="SHADOW_SECTION_TITLE" className="center_holder">
+    <section id="SHADOW_SECTION_TITLE" className="center_holder">
 
-                <div className="grid_0_blog">
+        <div className="grid_0_blog">
 
-                    <div id="MAIN_TEXT_HOLDER">
+            <div id="MAIN_TEXT_HOLDER">
 
-                        <div id="DISCLAIMER_HOLDER">
-                            <h3
-                                id="_H3"
-                                className="text-2xl ... text-stone-700 ... font-avant_garde_bold"
-                            >
+                <div id="DISCLAIMER_HOLDER">
+                    <h3
+                        id="_H3"
+                        className="text-2xl ... text-stone-700 ... font-avant_garde_bold"
+                    >
 
-                            </h3>
-                            <p
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_bold">
-                                {parse(story.disclaimer || "")}
-                            </p>
+                    </h3>
+                    <p
+                        className="text-lg ... text-neutral-700 ... font-avant_garde_bold">
+                        {parse(story.disclaimer || "")}
+                    </p>
+                </div>
+
+
+                <div id="SIDE_NAV_HOLDER"> 
+                    <div id="SIDE_NAV" >
+
+                        <div id="TITLE_1" >
+                            <Link href="#PARAGRAPH_1">
+                                <p
+                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                    {parse(story.body1_title || "")}
+                                </p>
+                            </Link>
+                        </div>
+                        <div id="TITLE_2">
+                            <Link href="#PARAGRAPH_2">
+                                <p
+                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                    {parse(story.body2_title || "")}
+                                </p>
+                            </Link>
                         </div>
 
+                        <div id="TITLE_3">
+                            <a>
+                                <Link href="#PARAGRAPH_3">
+                                    <p
+                                        className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                        {parse(story.body3_title || "")}
+                                    </p>
+                                </Link>
+                            </a>
+                        </div>
 
-                        <div id="SIDE_NAV_HOLDER"> 
-                            <div id="SIDE_NAV" >
-
-                                <div id="TITLE_1" >
-                                    <Link href="#PARAGRAPH_1">
-                                        <p
-                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                            {parse(story.body1_title || "")}
-                                        </p>
-                                    </Link>
-                                </div>
-                                <div id="TITLE_2">
-                                    <Link href="#PARAGRAPH_2">
-                                        <p
-                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                            {parse(story.body2_title || "")}
-                                        </p>
-                                    </Link>
-                                </div>
-
-                                <div id="TITLE_3">
-                                    <a>
-                                        <Link href="#PARAGRAPH_3">
-                                            <p
-                                                className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                                {parse(story.body3_title || "")}
-                                            </p>
-                                        </Link>
-                                    </a>
-                                </div>
-
-                                <div id="TITLE_4">
-                                    <Link href="#PARAGRAPH_4">
-                                        <p
-                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                            {parse(story.body4_title || "")}
-                                        </p>
-                                    </Link>
-                                </div>
-                                <div id="TITLE_5">
-                                    <Link href="#PARAGRAPH_5">
-                                        <p
-                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                            {parse(story.body5_title || "")}
-                                        </p>
-                                    </Link>
-                                </div>
-                                <div id="TITLE_6">
-                                    <Link href="PARAGRAPH_6">
-                                        <p
-                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                            {parse(story.body6_title || "")}
-                                        </p>
-                                    </Link>
-                                </div>
-                                <div id="TITLE_7">
-                                    <Link href="PARAGRAPH_7">
-                                        <p
-                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                            {parse(story.body7_title || "")}
-                                        </p>
-                                    </Link>
-                                </div>
-
-                            </div>
+                        <div id="TITLE_4">
+                            <Link href="#PARAGRAPH_4">
+                                <p
+                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                    {parse(story.body4_title || "")}
+                                </p>
+                            </Link>
+                        </div>
+                        <div id="TITLE_5">
+                            <Link href="#PARAGRAPH_5">
+                                <p
+                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                    {parse(story.body5_title || "")}
+                                </p>
+                            </Link>
+                        </div>
+                        <div id="TITLE_6">
+                            <Link href="PARAGRAPH_6">
+                                <p
+                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                    {parse(story.body6_title || "")}
+                                </p>
+                            </Link>
+                        </div>
+                        <div id="TITLE_7">
+                            <Link href="PARAGRAPH_7">
+                                <p
+                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                    {parse(story.body7_title || "")}
+                                </p>
+                            </Link>
                         </div>
 
                     </div>
                 </div>
 
-            </section> */}
+            </div>
+        </div>
+
+    </section> 
 
 
 
@@ -980,417 +980,6 @@ const Blog_page = (stories) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/*<section id="SHADOW_SECTION_TITLE" className="center_holder">
-
-                <div className="grid_0_blog">
-                    <div id="MAIN_TEXT_HOLDER">
-
-                        <div id="PARAGRAPH">
-                            <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                                id="_H3">
-                                {parse(story.body3_title || "")}
-                            </h3>
-                            <br />
-                            <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                                {parse(story.body3 || "")}
-                            </p>
-                        </div>
-
-                        <div id="IMAGE_1" className=" rounded-xl ..."
-                            style={{
-                                position: "relative",
-                                width: "100%",
-                                height: "400px",
-                                gridArea: "IMAGE_2",
-                            }}>
-                            <Image
-                                alt="Picture of the author"
-                                key={story._id}
-                                width={500}
-                                height={500}
-                                src={story.image2}
-                                style={{
-                                    position: "absolute",
-                                    width: "100%",
-                                    height: "100%",
-                                    objectFit: "cover",
-                                }} />
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section id="SHADOW_SECTION_TITLE" className="center_holder">
-
-                <div className="grid_0_blog">
-                    <div id="MAIN_TEXT_HOLDER">
-
-                        <div id="PARAGRAPH">
-                            <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                                id="_H3">
-                                {parse(story.body4_title || "")}
-                            </h3>
-
-                            <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                                <br /> <br />
-                                {parse(story.body4 || "")}
-                            </p>
-                        </div>
-
-                        <div id="ADVERT_2" className="bg-blue-600 ... rounded-xl ...">
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section id="SHADOW_SECTION_TITLE" className="center_holder" >
-
-                <div className="grid_0_blog">
-                    <div id="MAIN_TEXT_HOLDER">
-
-                        <div id="BLOG_HOLDER_2">
-
-
-                            <div id="PARAGRAPH">
-                                <h3
-                                    className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                                    id="_H3">
-                                    {parse(story.body5_title || "")}
-                                </h3>
-                                <br />
-                                <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                                    {parse(story.body5 || "")}
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-
-
-
-
-
-
-            <section id="SHADOW_SECTION_TITLE" className="center_holder">
-
-                <div className="grid_0_blog">
-                    <div id="MAIN_TEXT_HOLDER">
-
-                        <div id="PARAGRAPH">
-                            <br />
-                            <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                                id="_H3">
-                                {parse(story.body6_title || "")}
-                            </h3>
-                            <br />
-                            <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                                {parse(story.body6 || "")}
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section id="SHADOW_SECTION_TITLE" className="center_holder">
-
-                <div className={styles.grid_0_blog}>
-                    <div id={styles.MAIN_TEXT_HOLDER}>
-
-                        <div id={styles.PARAGRAPH}>
-                            <br />
-                            <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                                id={styles._H3}>
-                                {parse(story.body7_title || "")}
-                            </h3>
-                            <br />
-                            <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                                {parse(story.body7 || "")}
-                            </p>
-                        </div>
-
-                        <div id={styles.ADVERT_1} className="bg-pink-300 ... rounded-xl ..."
-                            style={{
-                                position: "relative",
-                                width: "100%",
-                                height: "300px",
-                                gridArea: "IMAGE",
-                            }}>
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}>
-
-                <div className={styles.grid_0_blog}>
-                    <div id={styles.MAIN_TEXT_HOLDER}>
-
-                        <div id={styles.PARAGRAPH}>
-
-                            <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                                id={styles._H3}>
-                                {parse(story.body8_title || "")}
-                            </h3>
-                            <br />
-                            <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                                {parse(story.body8 || "")}
-                            </p>
-
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}>
-
-                <div className={styles.grid_0_blog}>
-                    <div id={styles.MAIN_TEXT_HOLDER}>
-
-                        <div id={styles.PARAGRAPH}>
-                            <br />
-                            <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                                id={styles._H3}>
-                                {parse(story.body9_title || "")}
-                            </h3>
-                            <br />
-                            <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                                {parse(story.body9 || "")}
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}>
-
-                <div className={styles.grid_0_blog}>
-                    <div id={styles.MAIN_TEXT_HOLDER}>
-
-
-                        <div id={styles.PARAGRAPH}>
-                            <br />
-                            <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                                id={styles._H3}>
-                                {parse(story.body10_title || "")}
-                            </h3>
-                            <br />
-                            <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                                {parse(story.body10 || "")}
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </section>
 
 
 
