@@ -78,16 +78,6 @@ const Blog_page = (stories) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
             <section id="SHADOW_SECTION_BLOG" className={styles.center_holder}>
                 <div className="grid_0_subscribe">
                     <div className="sub_head">
@@ -219,10 +209,6 @@ const Blog_page = (stories) => {
                         </div>
 
 
-
-
-
-
                         <div id="SIDE_NAV_HOLDER"> 
                             <div id="SIDE_NAV" >
 
@@ -294,33 +280,6 @@ const Blog_page = (stories) => {
                 </div>
 
             </section> */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -436,51 +395,6 @@ const Blog_page = (stories) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <section id="SHADOW_SECTION_TITLE" className="center_holder">
         <div className="grid_0_blog">
 
@@ -528,38 +442,6 @@ const Blog_page = (stories) => {
 
         </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -652,56 +534,6 @@ const Blog_page = (stories) => {
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1375,159 +1207,6 @@ const Blog_page = (stories) => {
         )
       })} */}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-           {/*<Other_blogs/>*/}
-
-            <section id="SHADOW_SECTION_BLOG" className="center_holder">
-                <div className="sub_head">
-                    <div id="SUBSCRIBE" className="border-emerald-200">
-
-                        <div id="SUB_ICON">                            
-                        </div>
-
-                        <div id="MAIN_TAG">
-                            <h1 id="_H1" className="text-md text-stone-200 font-geist_semibold">
-                                {parse(story.title || "")}
-                            </h1>
-                            <br />
-                            <p className="text-md text-stone-400 font-geist_regular">
-                                {parse(story.subtitle || "")}
-                            </p>
-                        </div>
-                        
-                    </div>
-                </div>
-
-                {/* Main Image Before Introduction */}
-                 <div className="w-full flex justify-center mt-6">
-                        <Image
-                            alt="Blog Main Image"
-                            key={story._id}
-                            width={100}
-                            height={100}
-                            src={story.image}
-                            className="rounded-md shadow-lg"
-                            style={{
-                                width: "430px",
-                                height: "auto",
-                                objectFit: "cover",
-                            }}
-                        />
-                    </div> 
-
-                {/* Introduction Text */}
-                 <p className="text-md text-stone-300 font-geist_regular mt-4">
-                    {parse(story.introduction || "")}
-                 </p> 
-
-                {/* Blog Preview Section */}
-                <div className="grid_0_tag mt-10">
-                    <div className="grid_0_blogimage_foot">
-                        <div id="BLOGIMAGE_HOLDER_FOOT">
-                            <div id="BLOGIMAGE_FOOT" >
-                                
-                                <div className="rounded-md overflow-hidden w-[120px] h-[120px]">
-                                        <Image
-                                            alt="Blog Main Image"
-                                            key={story._id}
-                                            width={2000}
-                                            height={2000}
-                                            src={story.image}
-                                            className="rounded-md shadow-lg"
-                                            style={{
-                                                width: "100%",
-                                                height: "auto",
-                                                objectFit: "cover",
-                                            }}
-                                        />
-
-                                </div>
-                                <div id="BLOG_TEXT_FOOT">
-                                    <h2 id="_H2" className="text-stone-200 text-lg font-avant_garde_bold">
-                                        {story.title}
-                                    </h2>
-                                    <h3 id="_H3" className="text-stone-400 font-avant_garde_bold text-sm">
-                                        {story.subtitle}
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> 
 
 
 
