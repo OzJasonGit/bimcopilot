@@ -928,57 +928,10 @@ const Blog_page = (stories) => {
 
 
 
+
+
+
     <section id="SHADOW_SECTION_TITLE" className="center_holder">
-        <div className="grid_0_blog">
-
-            <div id="TEXT_HOLDER"
-                style={{
-                        position: "relative",
-                        display: "grid",
-                        width: "100%",
-                        height: "auto",
-                        gridArea: "MAIN_AREA",}}>
-
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TITLE",}}>
-                    <h3
-                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3_2">
-                        {parse(story.body10_title || "")}
-                    </h3>
-                    <br/> 
-                </div>
-            
-                <div  
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TEXT",}}> 
-
-                    <p  
-                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                        {parse(story.bod10 || "")}                  
-                    </p>                  
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
- <section id="SHADOW_SECTION_TITLE" className="center_holder">
         <div className="grid_0_blog_end">
 
             <div id="TEXT_HOLDER"
