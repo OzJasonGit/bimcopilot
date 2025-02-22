@@ -496,7 +496,7 @@ const Blog_page = (stories) => {
                     style={{
                         position: "relative",
                         width: "100%",
-                        height: "320px",
+                        height: "350px",
                         gridArea: "IMAGE",
                     }}>
                         <Image
