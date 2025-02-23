@@ -51,7 +51,7 @@ return (
 
                 <div id={styles.SERVICE_1_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
-                    <h3>Building Information Modelling (BIM)
+                    <h3 id={styles._H2}>Building Information Modelling (BIM)
                     </h3>
                   </div>
 
@@ -62,7 +62,7 @@ return (
 
                 <div id={styles.SERVICE_2_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
-                    <h3 class="font-geist_regular ... text-md ... text-right ...">Analytics and Automation
+                    <h3 id={styles._H2} class="font-geist_regular ... text-md ... text-right ...">Analytics and Automation
                     </h3>
                   </div> 
 
@@ -73,7 +73,7 @@ return (
 
                 <div id={styles.SERVICE_3_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
-                    <h3>Design amd Tech
+                    <h3 id={styles._H2}>Design amd Tech
                     </h3>  
                   </div> 
 
