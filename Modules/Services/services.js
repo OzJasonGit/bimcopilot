@@ -118,7 +118,7 @@ const Servicesmain = ({ stories}) => {
                 <br/>  
                 See them realized with <a class="text-stone-700 ... font-avant_garde_bold">Automation, </a> 
                 <a class="text-stone-700 ... font-avant_garde_bold">AI, </a> 
-                <a class="text-stone-700 ... font-avant_garde_bold">Digital Assets </a>and <br/> bespoke
+                <a class="text-stone-700 ... font-avant_garde_bold">Digital Assets </a> <br/> and bespoke
                 <a class="text-stone-700 ... font-avant_garde_bold"> Systems.</a>
                 </h2>
               </div>  
