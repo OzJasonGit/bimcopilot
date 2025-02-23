@@ -59,7 +59,7 @@ const Servicesmain = ({ stories}) => {
                 
                     <a class="text-stone-700 ... font-avant_garde_bold"
                       >
-                      Automated systems for Architects, Designers and Manufacturers.
+                    We develop automated systems for Architects, Designers and Manufacturers.
                     </a>{" "}
                     Gain valuable insights, streamline your business, be more{" "} 
                     <a class="text-stone-700 ... font-avant_garde_bold"
