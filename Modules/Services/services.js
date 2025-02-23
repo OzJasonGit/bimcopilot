@@ -114,7 +114,7 @@ const Servicesmain = ({ stories}) => {
                 <h2 
                 id={styles._H2_RIGHT}
                 
-                class="text-lg ... text-stone-500 ... font-avant_garde_bold">
+                class="text-lg ... text-stone-500 ... font-avant_garde_bold ...">
                 <br/>  
                 See them realized with <a class="text-stone-700 ... font-avant_garde_bold">Automation, </a> 
                 <a class="text-stone-700 ... font-avant_garde_bold">AI, </a> 
