@@ -22,7 +22,7 @@ return (
 
                 <div id={styles.COLLAPSE_TITLE_2}>
                   <h2                 
-                        id={styles._H2}
+                        id={styles._H2_2}
                         class="text-left ... text-stone-700 ... font-avant_garde_bold">         
                         Services
                   </h2>
