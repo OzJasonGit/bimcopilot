@@ -37,9 +37,12 @@ return (
                       class="text-left ... text-stone-500 ... font-avant_garde_bold">
                         {" "}
                         
-                        We are expert architects specializing in cutting-edge BIM solutions powered by AI. 
-                        From concept to completion, we deliver precise LOD350 details 
-                        and AI-driven clash detection, ensuring flawless coordination across disciplines.
+                        We are highly experienced RIBA and ARB registered architects specializing in cutting-edge BIM<br/>
+                        solutions powered by Artificial Intelligence. We focus on tailoring systems conceived from real-world 
+                        experience on projects from concept, through to completion. 
+
+                        {/*From concept to completion, we deliver precise LOD350 details 
+                        and AI-driven clash detection, ensuring flawless coordination across disciplines.*/}
                         {" "}
                         <br/>
                         <br/>                                                                    
