@@ -36,14 +36,21 @@ const SignIn = () => {
     setIsLoading(true);
     try {
       const { data } = await axios.post("/api/signin", formData);
+  
       if (data.error) {
         toast.error(data.error?.message);
       } else {
         toast("Logged in successfully!");
-        if (typeof window !== undefined && window.localStorage) {
+  
+        // Store in localStorage
+        if (typeof window !== "undefined" && window.localStorage) {
           localStorage.setItem("profile", JSON.stringify(data));
-          router.push("/");
         }
+  
+        // Set token in cookies (client-side, ideally should be set from the server)
+        document.cookie = `token=${data.token}; path=/; Secure; SameSite=Strict`;
+  
+        router.push("/");
       }
     } catch (error) {
       toast.error("Login failed! Please try again.");
@@ -51,32 +58,38 @@ const SignIn = () => {
     }
     setIsLoading(false);
   };
-
+  
   const googleSuccess = async (res) => {
     try {
       const { credential } = res;
       const response = await axios.get(
         `https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=${credential}`
       );
-
+  
       const { name, email } = response.data;
-
+  
       const form = {
         name,
         email,
         jwt: credential,
       };
-
-      if (typeof window !== undefined && window.localStorage) {
+  
+      // Store in localStorage
+      if (typeof window !== "undefined" && window.localStorage) {
         localStorage.setItem("profile", JSON.stringify(form));
-        router.push("/");
       }
+  
+      // Set token in cookies
+      document.cookie = `token=${credential}; path=/; Secure; SameSite=Strict`;
+  
       toast.success("Logged in with Google!");
+      router.push("/");
     } catch (error) {
       toast.error("Google login failed! Please try again.");
       console.error("Google login failed!", error);
     }
   };
+  
 
   return (
     <>

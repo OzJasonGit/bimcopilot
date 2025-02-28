@@ -1,9 +1,10 @@
 "use client";
-import Admin from "@/Modules/Admin/admin";
+
+import Users from "@/components/Users/users";
 import Sidebar from "@/components/Sidebar/sidebar";
 import Header from "@/components/Header/Header";
 
-export default function Dashboard() {
+const UserPage = () => {
   return (
     <>
       {/* Fixed Header */}
@@ -18,9 +19,11 @@ export default function Dashboard() {
 
         {/* Main content with left margin to avoid overlapping the sidebar */}
         <main className="ml-64 p-6 w-full pt-24">
-          <Admin />
+          <Users />
         </main>
       </div>
     </>
   );
-}
+};
+
+export default UserPage;
