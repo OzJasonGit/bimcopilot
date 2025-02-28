@@ -50,9 +50,9 @@ const Signup = () => {
         Cookies.set("token", token, { expires: 7, path: "/" });
 
         // Store in localStorage (if needed)
-        if (typeof window !== "undefined" && window.localStorage) {
-          localStorage.setItem("profile", JSON.stringify(data));
-        }
+        // if (typeof window !== "undefined" && window.localStorage) {
+        //   localStorage.setItem("profile", JSON.stringify(data));
+        // }
 
         router.push("/"); 
       }

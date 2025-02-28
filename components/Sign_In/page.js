@@ -43,9 +43,9 @@ const SignIn = () => {
         toast("Logged in successfully!");
   
         // Store in localStorage
-        if (typeof window !== "undefined" && window.localStorage) {
-          localStorage.setItem("profile", JSON.stringify(data));
-        }
+        // if (typeof window !== "undefined" && window.localStorage) {
+        //   localStorage.setItem("profile", JSON.stringify(data));
+        // }
   
         // Set token in cookies (client-side, ideally should be set from the server)
         document.cookie = `token=${data.token}; path=/; Secure; SameSite=Strict`;
