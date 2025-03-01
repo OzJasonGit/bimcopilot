@@ -42,7 +42,7 @@ return (
                         </a> specializing in cutting-edge <a class="text-stone-700 ...">BIM </a>
                         solutions powered by <a class="text-stone-700 ...">Artificial Intelligence</a>. 
                         <br/>We focus on tailoring <a class="text-stone-700 ...">systems</a> conceived from 
-                        <a class="text-stone-700 ...">real-world 
+                        <a class="text-stone-700 ..."> real-world 
                         experience </a>on projects from <a class="text-stone-700 ...">concept</a>, through to 
                         <a class="text-stone-700 ...">completion</a>. 
 
