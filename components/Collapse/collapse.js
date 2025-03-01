@@ -19,7 +19,7 @@ const contentStyle = {
 const panel_1 = () => (
 
     <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold"
+        class="font-avant_garde_bold  text-stone-500 ..."
         id={styles._H3}>
         Project Management, Delivery and Consultancy
     </h3>
@@ -27,7 +27,7 @@ const panel_1 = () => (
 
 const panel_2 = () => (
     <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold"
+        class="font-avant_garde_bold text-stone-500 ..."
         id={styles._H3}>
         BIM Strategy, Execution Plan (BEP) and Documentation
         Digital Twin product development

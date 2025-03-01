@@ -44,7 +44,7 @@ return (
                         <br/>We focus on tailoring <a class="text-stone-700 ...">systems</a> conceived from 
                         <a class="text-stone-700 ..."> real-world 
                         experience </a>on projects from <a class="text-stone-700 ...">concept</a>, through to 
-                        <a class="text-stone-700 ...">completion</a>. 
+                        <a class="text-stone-700 ..."> completion</a>. 
 
                         {/*From concept to completion, we deliver precise LOD350 details 
                         and AI-driven clash detection, ensuring flawless coordination across disciplines.*/}
