@@ -72,7 +72,7 @@ const Collapsed_2 = () => {
                     header={panel_1()}
                 >
                     <ul class="list-disc ... font-geist_regular ... text-right ..."
-                        id={styles._H3}
+                        id={styles._H3_2}
                         style={{ color: "rgb(68 64 60)", position: "relative", left: "0px" }}>
                         <li class="text-right ...">Now this is a story all about how, my life got flipped-turned upside down</li>
                         <li class="text-right ...">Now this is a story all about how, my life got flipped-turned upside down</li>
