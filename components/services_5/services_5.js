@@ -38,11 +38,13 @@ return (
                         {" "}
                         
                         We are highly experienced <a class="text-stone-700 ...">RIBA</a> and <a class="text-stone-700 ...">ARB</a> 
-                        <a class="text-stone-700 ...">registered architects
-                        </a> specializing in cutting-edge <a class="text-stone-700 ...">BIM</a>
+                        <a class="text-stone-700 ..."> registered architects
+                        </a> specializing in cutting-edge <a class="text-stone-700 ...">BIM </a>
                         solutions powered by <a class="text-stone-700 ...">Artificial Intelligence</a>. 
-                        <br/>We focus on tailoring systems conceived from real-world 
-                        experience on projects from concept, through to completion. 
+                        <br/>We focus on tailoring <a class="text-stone-700 ...">systems</a> conceived from 
+                        <a class="text-stone-700 ...">real-world 
+                        experience </a>on projects from <a class="text-stone-700 ...">concept</a>, through to 
+                        <a class="text-stone-700 ...">completion</a>. 
 
                         {/*From concept to completion, we deliver precise LOD350 details 
                         and AI-driven clash detection, ensuring flawless coordination across disciplines.*/}
