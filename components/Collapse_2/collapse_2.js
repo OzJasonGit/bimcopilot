@@ -18,7 +18,7 @@ const contentStyle = {
 
 const panel_1 = () => (
 
-    <h3 style={{ color: "rgb(68 64 60)" }}
+    <h3 style={{  }}
         class="font-avant_garde_bold text-right ... text-stone-500 ..."
         id={styles._H3}>
         Project Management, Delivery and Consultancy
@@ -26,7 +26,7 @@ const panel_1 = () => (
 );
 
 const panel_2 = () => (
-    <h3 style={{ color: "rgb(68 64 60)" }}
+    <h3 style={{  }}
         class="font-avant_garde_bold text-right ... text-stone-500 ..."
         id={styles._H3}>
         BIM Strategy, Execution Plan (BEP) and Documentation
