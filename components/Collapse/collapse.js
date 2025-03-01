@@ -69,7 +69,7 @@ const Collapsed = () => {
                     key={"1"}
                     header={panel_1()}
                 >
-                    <ul class="list-disc ... font-geist_regular ... text-stone-500 ..."
+                    <ul class="list-disc ... font-geist_regular ... text-stone-600 ..."
                         id={styles._H3}
                         style={{ position: "relative", left: "35px" }}>
                         <li>Now this is a story all about how, my life got flipped-turned upside down</li>
