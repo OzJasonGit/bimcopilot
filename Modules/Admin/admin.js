@@ -4,7 +4,6 @@ import styles from "./admin.module.css"
 import { useState } from "react";
 
 import Menu from "@/components/Menu/menu";
-import Header from "@/components/Header/Header";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -245,7 +244,6 @@ export function Admin() {
 
     <section >
       <Menu />
-      <Header /><br></br>
       <div className={styles.section1}>
         <div className={styles.formDiv} >
           <h1 style={{ textAlign: "center", fontSize: "x-large", fontWeight: "600" }}>Stories</h1>
