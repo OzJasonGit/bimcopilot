@@ -37,9 +37,14 @@ return (
                       class="text-left ... text-stone-500 ... font-avant_garde_bold">
                         {" "}
                         
-                        We are highly experienced RIBA and ARB registered architects specializing in cutting-edge BIM<br/>
-                        solutions powered by Artificial Intelligence. We focus on tailoring systems conceived from real-world 
-                        experience on projects from concept, through to completion. 
+                        We are highly experienced <a class="text-stone-700 ...">RIBA</a> and <a class="text-stone-700 ...">ARB</a> 
+                        <a class="text-stone-700 ..."> registered architects
+                        </a> specializing in cutting-edge <a class="text-stone-700 ...">BIM </a>
+                        solutions powered by <a class="text-stone-700 ...">Artificial Intelligence</a>. 
+                        <br/>We focus on tailoring <a class="text-stone-700 ...">systems</a> conceived from 
+                        <a class="text-stone-700 ..."> real-world 
+                        experience </a>on projects from <a class="text-stone-700 ...">concept</a>, through to 
+                        <a class="text-stone-700 ..."> completion</a>. 
 
                         {/*From concept to completion, we deliver precise LOD350 details 
                         and AI-driven clash detection, ensuring flawless coordination across disciplines.*/}
@@ -54,7 +59,7 @@ return (
 
                 <div id={styles.SERVICE_1_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
-                    <h3  class="text-left ... text-stone-500 ... font-avant_garde_bold" id={styles._H2}>Building Information Modelling (BIM)
+                    <h3  class="text-left ... text-stone-700 ... font-avant_garde_bold" id={styles._H2}>Building Information Modelling (BIM)
                     </h3>
                   </div>
 
@@ -65,7 +70,7 @@ return (
 
                 <div id={styles.SERVICE_2_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
-                    <h3 class="font-avant_garde_bold ... text-right ..." id={styles._H2}>Analytics and Automation
+                    <h3 class="font-avant_garde_bold ... text-stone-700 ...  text-right ..." id={styles._H2}>Analytics and Automation
                     </h3>
                   </div> 
 
@@ -76,7 +81,7 @@ return (
 
                 <div id={styles.SERVICE_3_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
-                    <h3 class="font-avant_garde_bold ... text-left ..." id={styles._H2}>Design and Tech
+                    <h3 class="font-avant_garde_bold ... text-stone-700 ...  text-left ..." id={styles._H2}>Design and Tech
                     </h3>  
                   </div> 
 

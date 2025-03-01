@@ -23,7 +23,8 @@ module.exports = {
   			geistmono_regular: ["var(--font-geistmono_regular)"],
   			geistmono_semibold: ["var(--font-geistmono_semibold)"],
   			geist_regular: ["var(--font-geist_regular)"],
-  			geist_semibold: ["var(--font-geist_semibold)"]
+  			geist_semibold: ["var(--font-geist_semibold)"],
+			geist_medium: ["var(--font-geist_medium)"],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

@@ -18,16 +18,16 @@ const contentStyle = {
 
 const panel_1 = () => (
 
-    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold"
+    <h3 style={{ alignItems: "end" }}
+        class="font-avant_garde_bold  text-stone-500 ..."
         id={styles._H3}>
         Project Management, Delivery and Consultancy
     </h3>
 );
 
 const panel_2 = () => (
-    <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-        class="font-avant_garde_bold"
+    <h3 style={{ alignItems: "end" }}
+        class="font-avant_garde_bold text-stone-500 ..."
         id={styles._H3}>
         BIM Strategy, Execution Plan (BEP) and Documentation
         Digital Twin product development
@@ -49,7 +49,7 @@ const Collapsed = () => {
                     display: "grid",
                     rowGap: 20,
                 }}
-                accordion={true}
+                accordion={false}
                 expandIcon={({ isActive }) => {
                     return (
                         <CaretRightFilled
@@ -70,7 +70,7 @@ const Collapsed = () => {
                     header={panel_1()}
                 >
                     <ul class="list-disc ... font-geist_regular ... text-stone-500 ..."
-                        id={styles._H3}
+                        id={styles._H3_2}
                         style={{ position: "relative", left: "35px" }}>
                         <li>Now this is a story all about how, my life got flipped-turned upside down</li>
                         <li>Now this is a story all about how, my life got flipped-turned upside down</li>
