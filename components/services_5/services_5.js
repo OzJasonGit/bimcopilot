@@ -37,8 +37,11 @@ return (
                       class="text-left ... text-stone-500 ... font-avant_garde_bold">
                         {" "}
                         
-                        We are highly experienced RIBA and ARB registered architects specializing in cutting-edge BIM
-                        solutions powered by Artificial Intelligence.<br/>We focus on tailoring systems conceived from real-world 
+                        We are highly experienced <a class="text-stone-700 ...">RIBA</a> and <a class="text-stone-700 ...">ARB</a> 
+                        <a class="text-stone-700 ...">registered architects
+                        </a> specializing in cutting-edge <a class="text-stone-700 ...">BIM</a>
+                        solutions powered by <a class="text-stone-700 ...">Artificial Intelligence</a>. 
+                        <br/>We focus on tailoring systems conceived from real-world 
                         experience on projects from concept, through to completion. 
 
                         {/*From concept to completion, we deliver precise LOD350 details 
