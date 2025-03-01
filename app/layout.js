@@ -42,6 +42,13 @@ const geist_semibold = localFont
 });
 
 
+const geist_medium = localFont
+({ 
+  src: '../fonts/geist_medium.woff2',
+  variable: '--font-geist_medium',
+});
+
+
 export const metadata = {
   title: "bimcopilot.com",
   description: "Sustainable, Richer Architects through AI, Analytics and Automation",
@@ -59,7 +66,7 @@ export default function RootLayout({ children }) {
           crossorigin="anonymous"
         />
         </head>
-      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable} ${geist_regular.variable} ${geist_semibold.variable}`}
+      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable} ${geist_regular.variable} ${geist_semibold.variable} ${geist_medium.variable}`}
             >
       
           <>{children}</>
