@@ -12,7 +12,7 @@ export default function Users() {
   // Fetch users from API
   const fetchUsers = async () => {
     try {
-      const res = await fetch("/api/user_route");
+      const res = await fetch("/api/user_route"); 
       if (!res.ok) throw new Error("Failed to fetch users");
       const data = await res.json();
       setUsers(data);
