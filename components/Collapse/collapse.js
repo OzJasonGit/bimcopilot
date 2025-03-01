@@ -49,7 +49,7 @@ const Collapsed = () => {
                     display: "grid",
                     rowGap: 20,
                 }}
-                accordion={true}
+                accordion={false}
                 expandIcon={({ isActive }) => {
                     return (
                         <CaretRightFilled
