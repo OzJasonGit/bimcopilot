@@ -47,14 +47,10 @@ const Signup = () => {
         const { token } = data;
 
         // Store token in HTTP-only cookie (valid for 7 days)
-        Cookies.set("token", token, { expires: 7, path: "/" });
-
-        // Store in localStorage (if needed)
-        // if (typeof window !== "undefined" && window.localStorage) {
-        //   localStorage.setItem("profile", JSON.stringify(data));
-        // }
-
-        router.push("/"); 
+        Cookies.set("token", token, { expires: 7, path: "/" }); 
+        setTimeout(()=>(
+          router.push("/")
+        ),1500)
       }
     } catch (error) {
       toast.error(error.response?.data?.message || "Signup failed!");
@@ -93,12 +89,22 @@ const Signup = () => {
       <Menu/>
       <Header/>
       <Sides/>
-
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
         <div className={styles.grid_0_blogimageholder}>
           <div id={styles.SIGN_UP}>
             <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
-              <ToastContainer />
+
               <div className={`${isLoading && "flex justify-center items-center"}`}>
                 {isLoading ? (
                   <div role="status">

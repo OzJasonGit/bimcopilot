@@ -1,7 +1,6 @@
 "use client";
 
 import styles from './sign_in.module.css';
-
 import axios from "axios";
 import React, { useState } from "react";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
@@ -9,14 +8,11 @@ import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Subfooter2 from "@/components/Subfooter2/subfooter2";
-import { Button } from "@/components/ui/button"
-
+import { Button } from "@/components/ui/button";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides";
-
-
 
 const SignIn = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -36,82 +32,84 @@ const SignIn = () => {
     setIsLoading(true);
     try {
       const { data } = await axios.post("/api/signin", formData);
-  
+
       if (data.error) {
-        toast.error(data.error?.message);
+        toast.error(data.error?.message); // Show error toast
       } else {
-        toast("Logged in successfully!");
-  
-        // Store in localStorage
-        // if (typeof window !== "undefined" && window.localStorage) {
-        //   localStorage.setItem("profile", JSON.stringify(data));
-        // }
-  
-        // Set token in cookies (client-side, ideally should be set from the server)
+        toast.success("Logged in successfully!"); // Show success toast
         document.cookie = `token=${data.token}; path=/; Secure; SameSite=Strict`;
-  
-        router.push("/");
+
+        // Redirect after 3 seconds
+        setTimeout(() => {
+          router.push("/");
+        }, 1000);
       }
     } catch (error) {
-      toast.error("Login failed! Please try again.");
+      toast.error("Login failed! Please try again."); // Show error toast
       console.error("Login failed!", error);
     }
     setIsLoading(false);
   };
-  
+
   const googleSuccess = async (res) => {
     try {
       const { credential } = res;
       const response = await axios.get(
         `https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=${credential}`
       );
-  
+
       const { name, email } = response.data;
-  
+
       const form = {
         name,
         email,
         jwt: credential,
       };
-  
+
       // Store in localStorage
-      if (typeof window !== "undefined" && window.localStorage) {
-        localStorage.setItem("profile", JSON.stringify(form));
-      }
-  
+      // if (typeof window !== "undefined" && window.localStorage) {
+      //   localStorage.setItem("profile", JSON.stringify(form));
+      // }
+
       // Set token in cookies
       document.cookie = `token=${credential}; path=/; Secure; SameSite=Strict`;
-  
-      toast.success("Logged in with Google!");
-      router.push("/");
+
+      toast.success("Logged in with Google!"); // Show success toast
+      // Redirect after 3 seconds
+      setTimeout(() => {
+        router.push("/");
+      }, 1000);
     } catch (error) {
-      toast.error("Google login failed! Please try again.");
+      toast.error("Google login failed! Please try again."); // Show error toast
       console.error("Google login failed!", error);
     }
   };
-  
 
   return (
     <>
-      <Menu/>
-      <Header/>
-      <Sides/>
+      <Menu />
+      <Header />
+      <Sides />
 
-      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-        <div class={styles.grid_0_blogimageholder}>
+      {/* ToastContainer must be included for toasts to work */}
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
 
+      <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
+        <div className={styles.grid_0_blogimageholder}>
           <div id={styles.SIGN_IN}>
-
             <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
-              <ToastContainer />
-              <div
-                style={{
-                  gridArea: "SIGN_IN",             
-                }}
-              >
-                <div
-                  className={` ${ isLoading && "flex justify-left items-center" }`}
-                >
+              <div style={{ gridArea: "SIGN_IN" }}>
+                <div className={`${isLoading && "flex justify-left items-center"}`}>
                   {isLoading ? (
                     <div role="status">
                       <svg
@@ -134,13 +132,11 @@ const SignIn = () => {
                     </div>
                   ) : (
                     <>
-                      <h2 id={styles._H2}  className="text-left ... text-stone-400 ... font-avant_garde_bold">Sign In</h2>
+                      <h2 id={styles._H2} className="text-left ... text-stone-400 ... font-avant_garde_bold">
+                        Sign In
+                      </h2>
                       <form onSubmit={handleSubmit}>
                         <div className="mb-4">
-
-
-
-
                           <label
                             htmlFor="email"
                             className="text-left ... text-stone-400 ... font-avant_garde_bold"
@@ -148,10 +144,6 @@ const SignIn = () => {
                           >
                             Email
                           </label>
-
-
-
-
                           <input
                             type="email"
                             id="email"
@@ -162,18 +154,13 @@ const SignIn = () => {
                             className="mt-1 border rounded-md"
                             required
                             style={{
-                                  width: "100%",
-                                  height: "65px",
-                                  padding: "20px",
-                                  }}
+                              width: "100%",
+                              height: "65px",
+                              padding: "20px",
+                            }}
                           />
                         </div>
                         <div className="mb-4">
-
-
-
-
-
                           <label
                             htmlFor="password"
                             className="text-left ... text-stone-400 ... font-avant_garde_bold"
@@ -181,9 +168,6 @@ const SignIn = () => {
                           >
                             Password
                           </label>
-
-
-
                           <input
                             type="password"
                             id="password"
@@ -193,62 +177,47 @@ const SignIn = () => {
                             onChange={handleChange}
                             className="mt-1 border rounded-md"
                             required
-
                             style={{
-                                  width: "100%",
-                                  height: "65px",
-                                  padding: "20px",
-                                  }}
+                              width: "100%",
+                              height: "65px",
+                              padding: "20px",
+                            }}
                           />
                         </div>
-
-
-                        {/*<button
-                          type="submit"
-                          className="w-full shadow bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
+                        <Button
+                          variant="outline"
+                          id={styles.FORM_BUTTON}
+                          type="primary"
+                          htmlType="submit"
+                          loading={isLoading}
+                          style={{
+                            width: "170px",
+                            height: "65px",
+                            marginTop: "20px",
+                          }}
                         >
-                          Sign In
-                        </button>*/}
-
-                        <Button variant="outline"
-                            id={styles.FORM_BUTTON}
-                            type="primary"
-                            htmlType="submit"
-                            loading={isLoading}
-                            style={{
-                                width: "170px",
-                                height: "65px",
-                                margintop:"20px",
-                                }}>
-                            Sign In!
+                          Sign In!
                         </Button>
-
-
-                          {/* Google Sign-In Button */}
-                          <div className="mt-4 w-full flex justify-left" id={styles.GOOGLE_BUTTON}>
-                            <GoogleLogin
-                              onSuccess={googleSuccess}
-                              onError={() => {
-                                toast.error("Google Login failed.");
-                              }}
-                            />
-                          </div>
-                        </form>
-                      </>
-                    )}
-                  </div>
+                        <div className="mt-4 w-full flex justify-left" id={styles.GOOGLE_BUTTON}>
+                          <GoogleLogin
+                            onSuccess={googleSuccess}
+                            onError={() => {
+                              toast.error("Google Login failed.");
+                            }}
+                          />
+                        </div>
+                      </form>
+                    </>
+                  )}
                 </div>
-              </GoogleOAuthProvider>
-
+              </div>
+            </GoogleOAuthProvider>
           </div>
-          
-          
-
         </div>
       </section>
 
-      <Subfooter2/>
-      <Footer/>
+      <Subfooter2 />
+      <Footer />
     </>
   );
 };

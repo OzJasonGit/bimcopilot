@@ -1,5 +1,4 @@
 "use client";
-import Password from "antd/es/input/Password";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -12,7 +11,7 @@ export default function Users() {
   // Fetch users from API
   const fetchUsers = async () => {
     try {
-      const res = await fetch("/api/user_route"); 
+      const res = await fetch("/api/user_route");
       if (!res.ok) throw new Error("Failed to fetch users");
       const data = await res.json();
       setUsers(data);
@@ -51,19 +50,54 @@ export default function Users() {
     }
   };
 
-  // Delete user
-  const deleteUser = async (id) => {
-    try {
-      const res = await fetch(`/api/user_route/${id}`, { method: "DELETE" });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Failed to delete user");
-      toast.success(data.message || "User deleted successfully");
-      await fetchUsers();
-    } catch (error) {
-      console.error("Error deleting user:", error);
-      toast.error(error.message);
+// Delete user with custom Toastify confirmation
+const deleteUser = (id) => {
+  // Dismiss any existing toasts before creating a new one
+  toast.dismiss();
+
+  // Custom toast with confirmation buttons
+  toast.info(
+    <div>
+      <p>Are you sure you want to delete this user?</p>
+      <div className="flex gap-2 mt-2">
+        <button
+          className="px-4 py-2 bg-red-500 text-white rounded"
+          onClick={() => {
+            toast.dismiss(); // Dismiss the toast immediately
+            confirmDelete(id); // Proceed with deletion
+          }}
+        >
+          Confirm
+        </button>
+        <button
+          className="px-4 py-2 bg-gray-500 text-white rounded"
+          onClick={() => toast.dismiss()} // Dismiss the toast immediately
+        >
+          Cancel
+        </button>
+      </div>
+    </div>,
+    {
+      autoClose: false, // Don't auto-close the toast
+      closeButton: false, // Hide the default close button
+      toastId: "delete-confirmation", // Assign a unique ID to the toast
     }
-  };
+  );
+};
+
+// Handle confirmed deletion
+const confirmDelete = async (id) => {
+  try {
+    const res = await fetch(`/api/user_route/${id}`, { method: "DELETE" });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Failed to delete user");
+    toast.success(data.message || "User deleted successfully");
+    await fetchUsers();
+  } catch (error) {
+    console.error("Error deleting user:", error);
+    toast.error(error.message);
+  }
+};
 
   // Start editing
   const startEdit = (user) => {
