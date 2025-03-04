@@ -165,7 +165,7 @@ export default function Header() {
               <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "100%" }}>
                 <div className="flex justify-end ..." id={styles.SIGNUP_RIGHT} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "200px", left: "4.5px" }}>
                   {isAuthenticated ? (
-                    <div className="relative" ref={dropdownRef}>
+                    <div className="relative left-[8px]" ref={dropdownRef}>
                       {/* User Icon Button */}
                       <button
                         onClick={toggleDropdown}
