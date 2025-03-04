@@ -41,6 +41,7 @@ export async function GET(req) {
       {
         isAuthenticated: true,
         user: {
+          name:user.name,
           id: user._id,
           email: user.email,
           role: user.role,

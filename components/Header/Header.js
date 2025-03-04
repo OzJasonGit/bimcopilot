@@ -167,17 +167,22 @@ export default function Header() {
                   {isAuthenticated ? (
                     <div className="relative left-[8px]" ref={dropdownRef}>
                       {/* User Icon Button */}
+                      <div className="flex items-center gap-5">
+
+                      <span className="text-slate-50 font-medium">Hi, {user.name}</span>
+
                       <button
                         onClick={toggleDropdown}
                         className="flex items-center justify-center p-2 rounded-full hover:bg-gray-100/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
                         aria-haspopup="true"
                         aria-expanded={isDropdownOpen}
-                      >
+                        >
                         <FontAwesomeIcon
                           icon={faUser}
                           className="text-slate-50 w-6 h-6 hover:text-gray-300 transition-colors duration-200"
-                        />
+                          />
                       </button>
+                          </div>
 
                       {/* Dropdown Menu */}
                       {isDropdownOpen && (
@@ -186,7 +191,7 @@ export default function Header() {
                           onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the dropdown
                         >
                           {/* Profile Link */}
-                          <Link
+                          {/* <Link
                             href="/profile"
                             className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
                           >
@@ -194,7 +199,7 @@ export default function Header() {
                               <FontAwesomeIcon icon={faUser} className="mr-2 w-4 h-4" />
                               Profile
                             </span>
-                          </Link>
+                          </Link> */}
 
                           {/* Logout Button */}
                           <button
