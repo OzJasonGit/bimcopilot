@@ -81,7 +81,7 @@ return (
                                       }}>
                                       <Image
                                         alt="Picture of the author"
-                                        key={story._id}
+                                       
                                         width={500}
                                         height={500}
                                         src={Placeholder_2}
