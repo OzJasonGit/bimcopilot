@@ -4,7 +4,7 @@ import styles from './services_10.module.css';
 
 import React, { Component } from 'react';
 import Image from "next/image";
-import Placeholder_1 from './placeholder_1.jpeg';
+import Placeholder_2 from './placeholder_2.jpeg';
 import Collapsed_FAQ from "../../components/Collapse_FAQ/collapse_FAQ";
 
 
@@ -72,7 +72,7 @@ return (
                                     width: "100%",
                                     height: "400px",
                                     gridArea: "WHO_WEVE_HELPED",                               
-                                }}>
+                                    }}>
                                     <div class="rounded-2xl ..." 
                                       style={{
                                       position: "relative",
@@ -84,7 +84,7 @@ return (
                                         key={story._id}
                                         width={500}
                                         height={500}
-                                        src={Placeholder_1}
+                                        src={Placeholder_2}
                                         style={{
                                           position: "absolute",
                                           width: "100%",
