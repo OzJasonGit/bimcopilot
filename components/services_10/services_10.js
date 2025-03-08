@@ -64,59 +64,57 @@ return (
                                   manufacturers</a> and <a class="text-stone-700 ...">students</a>, leverage 
                                   technology <br/> to streamline projects.                                                                                    
                               </p>
-                              <br/>  
-
-                              <div
-                                style={{
-                                    position: "relative",
-                                    width: "100%",
-                                    height: "400px",
-                                    gridArea: "WHO_WEVE_HELPED",                               
-                                    }}>
-                                    <div class="rounded-2xl ..." 
-                                      style={{
-                                      position: "relative",
-                                      width: "100%",
-                                      height: "100%",                                                                       
-                                      }}>
-                                      <Image
-                                        alt="Picture of the author"
-                                       
-                                        width={500}
-                                        height={500}
-                                        src={Placeholder_2}
-                                        style={{
-                                          position: "absolute",
-                                          width: "100%",
-                                          height: "100%",
-                                          objectFit: "cover",
-                                        }}
-                                      />                               
-                                    </div>
-                              </div>
-
-                              
-
-                              <br/>   
-                              <p  id={styles._H3}
-                                  class=" text-stone-500 ... font-avant_garde_bold ... ">          
-                                  Our digital products and technical services streamline workflows, automate branding, 
-                                  and accelerate client acquisition—saving you time while maximizing profitability. 
-                                  Whether you need a powerful online presence, automated lead generation, or AI-driven 
-                                  business growth, our solutions are designed for real impact. Backed by industry experience, 
-                                  our tools don’t just support your work—they transform it, giving you a competitive edge 
-                                  in an evolving market.                                                       
-                              </p>
+                              <br/>                                                                                                                
                             </div>
-
-                            <br/>
-                          
-                          
-
+                            <br/>                                                  
                           </div>
-                      
-                        </div>                       
-                      </div>
+
+                          <div
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                height: "400px",
+                                gridArea: "WHO_WEVE_HELPED",                               
+                                }}>
+                                <div class="rounded-2xl ..." 
+                                  style={{
+                                  position: "relative",
+                                  width: "100%",
+                                  height: "100%",                                                                       
+                                  }}>
+                                  <Image
+                                    alt="Picture of the author"
+                                    
+                                    width={500}
+                                    height={500}
+                                    src={Placeholder_2}
+                                    style={{
+                                      position: "absolute",
+                                      width: "100%",
+                                      height: "100%",
+                                      objectFit: "cover",
+                                    }}
+                                  />                               
+                                </div>
+                          </div>
+
+                          <br/> 
+                          <div>
+                            <p  id={styles._H3}
+                              class=" text-stone-500 ... font-avant_garde_bold ... ">          
+                              Our digital products and technical services streamline workflows, automate branding, 
+                              and accelerate client acquisition—saving you time while maximizing profitability. 
+                              Whether you need a powerful online presence, automated lead generation, or AI-driven 
+                              business growth, our solutions are designed for real impact. Backed by industry experience, 
+                              our tools don’t just support your work—they transform it, giving you a competitive edge 
+                              in an evolving market.                                                       
+                            </p>
+                          </div>                           
+                          <br/> 
+
+                                           
+                      </div>                       
+                    </div>
                                                                                     
                   </div>
                 </div>                  
