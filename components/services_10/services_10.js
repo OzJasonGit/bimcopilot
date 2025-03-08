@@ -58,8 +58,9 @@ return (
                               <p  id={styles._H3}
                                   class=" text-stone-500 ... font-avant_garde_bold ... ">
                                   With expertise in <a class="text-stone-700 ...">design</a>, <a class="text-stone-700 ...">software development</a>, 
-                                  and <a class="text-stone-700 ...">Artificial Intelligence</a>, we've helped architects, 
-                                  designers, manufacturers and students, leverage <br/> technology to streamline projects. 
+                                  and <a class="text-stone-700 ...">Artificial Intelligence</a>, we've helped <a class="text-stone-700 ...">architects</a>, 
+                                  <a class="text-stone-700 ...">designers</a>, <a class="text-stone-700 ...">manufacturers</a> and <a class="text-stone-700 ...">students</a>, leverage <br/> 
+                                  technology to streamline projects. 
                                   <br/>
                                   <br/>
 
