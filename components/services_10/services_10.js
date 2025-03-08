@@ -56,9 +56,13 @@ return (
                               <br/>
 
                               <p  id={styles._H3}
-                                  class=" text-stone-700 ... font-avant_garde_bold ... ">
-                                  With expertise in architecture, coding, and AI, we helped architects, 
-                                  designers and manufacturers, leverage technology for financial freedom. 
+                                  class=" text-stone-500 ... font-avant_garde_bold ... ">
+                                  With expertise in <a class="text-stone-700 ...">design</a>, <a class="text-stone-700 ...">software development</a>, 
+                                  and <a class="text-stone-700 ...">Artificial Intelligence</a>, we've helped architects, 
+                                  designers, manufacturers and students, leverage technology to strweamline projects. 
+                                  <br/>
+
+
                                   Our digital products and technical services streamline workflows, automate branding, 
                                   and accelerate client acquisition—saving you time while maximizing profitability. 
                                   Whether you need a powerful online presence, automated lead generation, or AI-driven 
@@ -67,6 +71,8 @@ return (
                                   in an evolving market.                                                       
                               </p>
                             </div>
+
+                            <br/>
                           
                             <div id={styles.MY_FACE} class=" border-8 border-stone-200 ... rounded-full ...">
                               <Image></Image>
