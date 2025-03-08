@@ -59,7 +59,8 @@ return (
                                   class=" text-stone-500 ... font-avant_garde_bold ... ">
                                   With expertise in <a class="text-stone-700 ...">design</a>, <a class="text-stone-700 ...">software development</a>, 
                                   and <a class="text-stone-700 ...">Artificial Intelligence</a>, we've helped architects, 
-                                  designers, manufacturers and students, leverage technology to strweamline projects. 
+                                  designers, manufacturers and students, leverage <br/> technology to streamline projects. 
+                                  <br/>
                                   <br/>
 
 
