@@ -37,7 +37,7 @@ return (
                             <h1
                               id={styles._H1}
                               class="text-stone-700 ... font-avant_garde_bold ...">
-                              <a class="text-left ... text-4xl">My background and who <br/> I've helped.</a>
+                              <a class="text-left ... text-4xl">Our background and who <br/> We've helped.</a>
                             </h1>
                           </div>
                                          
@@ -49,19 +49,22 @@ return (
                               <h2
                                   id={styles._H2}
                                   class="text-xl ... text-stone-700 ... font-avant_garde_bold ...">
-                                  Hi, I'm Oz Jason. I'm a registered architect, BIM
-                                  manager and the founder of{" "}
-                                  <a class="text-yellow-200 ...">bimcopilot.com</a>.
-                                  <br/> However, I'm a firm believer that titles are
-                                  becoming less important. What matters is how I can
-                                  help you and your business. 
+
+                                  We've helped businesses eliminate bottlenecks and unlock growth with technology.
                               </h2>
+
                               <br/>
-                              <p
-                                  class=" text-stone-700 ... font-geist_regular ... ">
-                                  Hi, I'm Oz Jason. I'm a registered architect, BIM
-                                  manager and the founder of{" "}
-                                  <a class="text-yellow-200 ...">bimcopilot.com</a>.                                  
+
+                              <p  id={styles._H3}
+                                  class=" text-stone-700 ... font-avant_garde_bold ... ">
+                                  With expertise in architecture, coding, and AI, we helped architects, 
+                                  designers and manufacturers, leverage technology for financial freedom. 
+                                  Our digital products and technical services streamline workflows, automate branding, 
+                                  and accelerate client acquisition—saving you time while maximizing profitability. 
+                                  Whether you need a powerful online presence, automated lead generation, or AI-driven 
+                                  business growth, our solutions are designed for real impact. Backed by industry experience, 
+                                  our tools don’t just support your work—they transform it, giving you a competitive edge 
+                                  in an evolving market.                                                       
                               </p>
                             </div>
                           
