@@ -59,12 +59,11 @@ return (
                                   class=" text-stone-500 ... font-avant_garde_bold ... ">
                                   With expertise in <a class="text-stone-700 ...">design</a>, <a class="text-stone-700 ...">software development</a>, 
                                   and <a class="text-stone-700 ...">Artificial Intelligence</a>, we've helped <a class="text-stone-700 ...">architects</a>, 
-                                  <a class="text-stone-700 ...">designers</a>, <a class="text-stone-700 ...">manufacturers</a> and <a class="text-stone-700 ...">students</a>, leverage <br/> 
-                                  technology to streamline projects. 
+                                  <a class="text-stone-700 ...">designers</a>, <a class="text-stone-700 ...">
+                                  manufacturers</a> and <a class="text-stone-700 ...">students</a>, leverage 
+                                  technology <br/> to streamline projects. 
                                   <br/>
                                   <br/>
-
-
                                   Our digital products and technical services streamline workflows, automate branding, 
                                   and accelerate client acquisition—saving you time while maximizing profitability. 
                                   Whether you need a powerful online presence, automated lead generation, or AI-driven 
@@ -76,9 +75,7 @@ return (
 
                             <br/>
                           
-                            <div id={styles.MY_FACE} class=" border-8 border-stone-200 ... rounded-full ...">
-                              <Image></Image>
-                            </div>
+                          
 
                           </div>
                       
