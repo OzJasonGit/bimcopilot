@@ -52,6 +52,31 @@ return (
                   </p>
                 </div>
 
+                <div id={styles.IMAGE}
+                  style={{ gridArea: "IMAGE" }}>
+                  
+                      <div class="rounded-2xl ..." 
+                              style={{
+                              position: "relative",
+                              width: "100%",
+                              height: "100%",                                                                       
+                              }}>
+                              <Image
+                                alt="Picture of the author"                                    
+                                width={500}
+                                height={500}
+                                src={Placeholder_2}
+                                style={{
+                                  position: "absolute",
+                                  width: "100%",
+                                  height: "100%",
+                                  objectFit: "cover",
+                                }}
+                              />                                                          
+                      </div>  
+
+                </div>
+
           </div>
         </div>
       </section>
