@@ -77,6 +77,13 @@ return (
 
                 </div>
 
+
+
+                <div id={styles.TITLE}
+                  style={{ gridArea: "CONCLUSION" }}>
+                  
+                </div>
+
           </div>
         </div>
       </section>
