@@ -20,6 +20,18 @@ return (
 
       <>
 
+
+      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+        <div class={styles.grid_0_who_weve_helped}>
+
+        </div>
+      </section>
+
+
+
+
+
+
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_who_weve_helped}>
              
@@ -65,8 +77,7 @@ return (
                                   technology <br/> to streamline projects.                                                                                    
                               </p>
                               <br/>                                                                                                                
-                            </div>
-                            <br/>                                                  
+                            </div>                                                                           
                           </div>
 
                           
