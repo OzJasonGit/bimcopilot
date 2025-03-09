@@ -23,7 +23,36 @@ return (
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_who_weve_helped}>
+          <div id={styles.WE_HELPED_GRID}
+               style={{ gridArea: "PORTFOLIO" }}>
 
+                <div id={styles.TITLE}
+                  style={{ gridArea: "TITLE" }}>
+                  <h1
+                    id={styles._H1}
+                    class="text-stone-700 ... font-avant_garde_bold ...">
+                    <a class="text-left ... text-4xl">Our background and who <br/> We've helped.</a>
+                  </h1>
+                  <br/> 
+                  <br/> 
+                  <h2
+                      id={styles._H2}
+                      class="text-xl ... text-stone-700 ... font-avant_garde_bold ...">
+                      We've helped businesses eliminate bottlenecks and unlock growth with technology.
+                  </h2>
+                  <br/> 
+                  <br/> 
+                  <p  id={styles._H3}
+                      class=" text-stone-500 ... font-avant_garde_bold ... ">
+                      With expertise in <a class="text-stone-700 ...">design</a>, <a class="text-stone-700 ...">software development</a>, 
+                      and <a class="text-stone-700 ...">Artificial Intelligence</a>, we've helped <a class="text-stone-700 ...">architects</a>, 
+                      <a class="text-stone-700 ..."> designers</a>, <a class="text-stone-700 ...">
+                      manufacturers</a> and <a class="text-stone-700 ...">students</a>, leverage 
+                      technology <br/> to streamline projects.                                                                                    
+                  </p>
+                </div>
+
+          </div>
         </div>
       </section>
 

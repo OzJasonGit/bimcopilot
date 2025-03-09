@@ -72,6 +72,31 @@
     ". . . . . . ."
     ". . . PORTFOLIO . . .";
 }
+
+
+#WE_HEPLED_GRID {
+  position: relative;
+  grid-area: PORTFOLIO;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto; 
+  grid-template-areas:
+      "TITLE TITLE . . . . "
+      ". . IMAGE IMAGE IMAGE . "
+      "CONCLUSION CONCLUSION . . . . ";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
