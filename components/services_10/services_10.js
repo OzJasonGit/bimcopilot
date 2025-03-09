@@ -24,7 +24,7 @@ return (
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_who_weve_helped}>
           <div id={styles.WE_HELPED_GRID}
-               style={{ gridArea: "PORTFOLIO" }}>
+               style={{  }}>
 
                 <div id={styles.TITLE}
                   style={{ gridArea: "TITLE" }}>
