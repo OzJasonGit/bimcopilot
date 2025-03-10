@@ -34,14 +34,14 @@ return (
                     <a class="text-left ... text-4xl">Our background and who <br/> We've helped.</a>
                   </h1>
                   <br/> 
-                  <br/> 
+           
                   <h2
                       id={styles._H2}
                       class="text-xl ... text-stone-700 ... font-avant_garde_bold ...">
                       We've helped businesses eliminate bottlenecks and unlock growth with technology.
                   </h2>
                   <br/> 
-                  <br/> 
+        
                   <p  id={styles._H3}
                       class=" text-stone-500 ... font-avant_garde_bold ... ">
                       With expertise in <a class="text-stone-700 ...">design</a>, <a class="text-stone-700 ...">software development</a>, 
@@ -53,13 +53,12 @@ return (
                 </div>
 
                 <div id={styles.IMAGE}
-                  style={{ gridArea: "IMAGE" }}>
-                  
+                  style={{ gridArea: "IMAGE" }}>                  
                       <div class="rounded-2xl ..." 
                               style={{
                               position: "relative",
                               width: "100%",
-                              height: "100%",                                                                       
+                              height: "350px",                                                                       
                               }}>
                               <Image
                                 alt="Picture of the author"                                    
@@ -74,14 +73,21 @@ return (
                                 }}
                               />                                                          
                       </div>  
-
                 </div>
 
 
 
                 <div id={styles.TITLE}
                   style={{ gridArea: "CONCLUSION" }}>
-                  
+                    <p  id={styles._H3}
+                      class=" text-stone-500 ... font-avant_garde_bold ... ">          
+                      Our digital products and technical services streamline workflows, automate branding, 
+                      and accelerate client acquisition—saving you time while maximizing profitability. 
+                      Whether you need a powerful online presence, automated lead generation, or AI-driven 
+                      business growth, our solutions are designed for real impact. Backed by industry experience, 
+                      our tools don’t just support your work—they transform it, giving you a competitive edge 
+                      in an evolving market.                                                       
+                    </p>               
                 </div>
 
           </div>

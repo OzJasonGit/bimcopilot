@@ -81,9 +81,9 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto auto; 
   grid-template-areas:
-      "TITLE TITLE . . . . "
+      "TITLE TITLE TITLE . . . "
       ". . IMAGE IMAGE IMAGE . "
-      "CONCLUSION CONCLUSION . . . . ";
+      "CONCLUSION CONCLUSION CONCLUSION . . . ";
 
 }
 
