@@ -55,32 +55,32 @@ return (
                 <br/>
 
                 <div id={styles.IMAGE}
-                     className="bg-transparent ... rounded-xl ..."
-                  style={{ gridArea: "IMAGE", overflow: "hidden" }}>                  
-                      <div class="rounded-2xl ..." 
+                    className="bg-transparent ... rounded-xl ..."
+                    style={{ gridArea: "IMAGE", overflow: "hidden" }}>                  
+                    <div class="rounded-2xl ..." 
+                            style={{
+                            position: "relative",
+                            width: "100%",
+                            height: "350px",                                                                       
+                            }}>
+                            <Image
+                              alt="Picture of the author"                                    
+                              width={500}
+                              height={500}
+                              src={Placeholder_2}
                               style={{
-                              position: "relative",
-                              width: "100%",
-                              height: "350px",                                                                       
-                              }}>
-                              <Image
-                                alt="Picture of the author"                                    
-                                width={500}
-                                height={500}
-                                src={Placeholder_2}
-                                style={{
-                                  position: "absolute",
-                                  width: "100%",
-                                  height: "100%",
-                                  objectFit: "cover",
-                                }}
-                              />                                                          
-                      </div>  
+                                position: "absolute",
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                              }}
+                            />                                                          
+                    </div>  
                 </div>
 
                 <br/>
 
-                <div id={styles.TITLE}
+                <div id={styles.CONCLUSION}
                   style={{ gridArea: "CONCLUSION" }}>
                     <p  id={styles._H3}
                       class=" text-stone-500 ... font-avant_garde_bold ... ">          
@@ -92,7 +92,8 @@ return (
                       in an evolving market.                                                       
                     </p>               
                 </div>
-
+                <br/>
+                <br/>
           </div>
         </div>
       </section>
