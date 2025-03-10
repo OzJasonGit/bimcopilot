@@ -33,15 +33,13 @@ return (
                     class="text-stone-700 ... font-avant_garde_bold ...">
                     <a class="text-left ... text-4xl">Our background and who <br/> We've helped.</a>
                   </h1>
-                  <br/> 
-           
+                  <br/>            
                   <h2
                       id={styles._H2}
                       class="text-xl ... text-stone-700 ... font-avant_garde_bold ...">
                       We've helped businesses eliminate bottlenecks and unlock growth with technology.
                   </h2>
-                  <br/> 
-        
+                  <br/>        
                   <p  id={styles._H3}
                       class=" text-stone-500 ... font-avant_garde_bold ... ">
                       With expertise in <a class="text-stone-700 ...">design</a>, <a class="text-stone-700 ...">software development</a>, 
@@ -50,6 +48,8 @@ return (
                       manufacturers</a> and <a class="text-stone-700 ...">students</a>, leverage 
                       technology <br/> to streamline projects.                                                                                    
                   </p>
+                  <br/>
+                  <br/>
                 </div>
 
                 <br/>
@@ -78,10 +78,11 @@ return (
                     </div>  
                 </div>
 
-                <br/>
 
                 <div id={styles.CONCLUSION}
                   style={{ gridArea: "CONCLUSION" }}>
+                  <br/>
+                  <br/>
                     <p  id={styles._H3}
                       class=" text-stone-500 ... font-avant_garde_bold ... ">          
                       Our digital products and technical services streamline workflows, automate branding, 

@@ -82,9 +82,9 @@
   grid-template-rows: 60px auto auto auto; 
   grid-template-areas:
       ". . . . . ."
-      "TITLE TITLE TITLE . . . "
-      ". IMAGE IMAGE IMAGE . . "
-      "CONCLUSION CONCLUSION CONCLUSION . . . ";
+      ". . . TITLE TITLE TITLE "
+      ".  . IMAGE IMAGE IMAGE .  "
+      ". . . CONCLUSION CONCLUSION CONCLUSION  ";
 
 }
 
