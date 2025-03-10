@@ -29,18 +29,18 @@ return (
                 <div id={styles.TITLE}
                   style={{ gridArea: "TITLE" }}>
                   <h1
-                    id={styles._H1}
+                    id={styles._H1_RIGHT}
                     class="text-stone-700 ... font-avant_garde_bold ...">
                     <a class="text-left ... text-4xl">Our background and who <br/> We've helped.</a>
                   </h1>
                   <br/>            
                   <h2
-                      id={styles._H2}
+                      id={styles._H2_RIGHT}
                       class="text-xl ... text-stone-700 ... font-avant_garde_bold ...">
                       We've helped businesses eliminate bottlenecks and unlock growth with technology.
                   </h2>
                   <br/>        
-                  <p  id={styles._H3}
+                  <p  id={styles._H3_RIGHT}
                       class=" text-stone-500 ... font-avant_garde_bold ... ">
                       With expertise in <a class="text-stone-700 ...">design</a>, <a class="text-stone-700 ...">software development</a>, 
                       and <a class="text-stone-700 ...">Artificial Intelligence</a>, we've helped <a class="text-stone-700 ...">architects</a>, 
