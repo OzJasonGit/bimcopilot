@@ -52,8 +52,11 @@ return (
                   </p>
                 </div>
 
+                <br/>
+
                 <div id={styles.IMAGE}
-                  style={{ gridArea: "IMAGE" }}>                  
+                     className="bg-transparent ... rounded-xl ..."
+                  style={{ gridArea: "IMAGE", overflow: "hidden" }}>                  
                       <div class="rounded-2xl ..." 
                               style={{
                               position: "relative",
@@ -75,7 +78,7 @@ return (
                       </div>  
                 </div>
 
-
+                <br/>
 
                 <div id={styles.TITLE}
                   style={{ gridArea: "CONCLUSION" }}>
