@@ -104,8 +104,8 @@
   grid-template-areas:
       ". . . . . ."
       ". . . TITLE TITLE TITLE "
-      ".  . IMAGE IMAGE IMAGE .  "
-      ". . . CONCLUSION CONCLUSION CONCLUSION  ";
+      ". . . IMAGE IMAGE IMAGE "
+      ". . . CONCLUSION CONCLUSION CONCLUSION ";
 
 }
 
