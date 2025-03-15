@@ -13,35 +13,39 @@ import { Collapse } from "antd";
 
 
 const text_1 = `
- What tools or technology do you use for planning and visualization?   
+What types of digital products do you offer? 
 `;
 
 const text_2 = `
- What is your process from concept to completion?
+How can your AI-driven tools help my architecture, design or manufacturing business?
 `;
 
 const text_3 = `
- How will you ensure the project stays on schedule?
+Do you offer custom design solutions, or are your products pre-made?
 `;
 
 const text_4 = `
- How involved can I be in the design process?
+Are your digital products easy to integrate into my existing workflow?
 `;
 
 const text_5 = `
- What experience do you have with projects like mine?
+Can your automation tools help me save time on repetitive design tasks?
 `;
 
 const text_6 = `
- How do you handle unexpected challenges during a project?
+What makes your services different from other design and tech solutions?
 `;
 
 const text_7 = `
- What sets you apart from others in your field?
+Do you work with individual professionals, small firms, or large businesses?
 `;
 
 const text_8 = `
  How do you incorporate sustainability into your designs?
+`;
+
+const text_9 = `
+How do I get started with your services, and what are the pricing options?
 `;
 
 
@@ -115,6 +119,14 @@ const items = [
 
   {
     key: '8',
+    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end", paddingBottom: "0px" }}
+      class="font-avant_garde_bold"
+      id={styles._H3}> How do you incorporate sustainability into your designs?
+    </h3>,
+    children: <p style={{ position: "relative", left: "25px" }}  > {text_8} </p>
+  },
+
+   {  key: '9',
     label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end", paddingBottom: "0px" }}
       class="font-avant_garde_bold"
       id={styles._H3}> How do you incorporate sustainability into your designs?
