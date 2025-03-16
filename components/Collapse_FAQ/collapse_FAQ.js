@@ -67,6 +67,14 @@ const items = [
 
     {text_1} 
     <br/>    
+    <ul class="list-disc ... font-geist_regular ..."
+        id={styles._H3_2}
+        style={{ position: "relative", left: "35px" }}>
+        <li> <a class="font-geist_semibold ...">Design Automation Tools</a> – Grasshopper scripts and 
+                AI-powered solutions to speed up complex design tasks.</li>
+        <li> <a class="font-geist_semibold ...">BIM & Project Management Resources</a> – Smart templates, workflows, 
+                and automation tools to improve coordination and efficiency.</li>
+    </ul>
 
     </p>
     
