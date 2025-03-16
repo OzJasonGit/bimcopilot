@@ -33,7 +33,10 @@ to BIM optimization, we deliver seamless, high-impact solutions that integrate f
 `;
 
 const text_4 = `
-Are your digital products easy to integrate into my existing workflow?
+Yes, our digital products are designed to integrate seamlessly into your workflow, 
+enhancing BIM, parametric design, and project management without 
+disruption. With intuitive interfaces and automation, they 
+streamline tasks and boost efficiency with a minimal learning curve.
 `;
 
 const text_5 = `
@@ -85,6 +88,7 @@ const items = [
         <li> <a class="font-geist_semibold ...">Time Management</a> – AI-driven task planners and productivity tools eliminate inefficiencies 
                 and help teams focus on high-impact work.</li>
     </ul>
+    <a class="font-avant_garde_bold ..."><Link>Learn More here!</Link></a>
 
     </p>
     
