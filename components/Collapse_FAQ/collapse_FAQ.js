@@ -74,6 +74,10 @@ const items = [
                 AI-powered solutions to speed up complex design tasks.</li>
         <li> <a class="font-geist_semibold ...">BIM & Project Management Resources</a> – Smart templates, workflows, 
                 and automation tools to improve coordination and efficiency.</li>
+        <li> <a class="font-geist_semibold ...">Drawing & Design Templates</a> – Pre-built, intelligent templates speed up drafting 
+                and ensure consistency across projects.</li>
+        <li> <a class="font-geist_semibold ...">Time Management</a> – AI-driven task planners and productivity tools eliminate inefficiencies 
+                and help teams focus on high-impact work.</li>
     </ul>
 
     </p>
