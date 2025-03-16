@@ -19,7 +19,11 @@ These optimize efficiency and our solutions include the following:
 `;
 
 const text_2 = `
-How can your AI-driven tools help my architecture, design or manufacturing business?
+Our AI-driven tools automate design, eliminate inefficiencies, 
+and enhance accuracy—helping your business work smarter and faster. 
+From generating complex designs to optimizing workflows, we cut manual work, 
+reduce errors, and lower costs. The result? Faster project delivery, 
+increased precision, and a powerful competitive edge.
 `;
 
 const text_3 = `
