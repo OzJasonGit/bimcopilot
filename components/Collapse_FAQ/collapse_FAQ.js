@@ -27,7 +27,9 @@ increased precision, and a powerful competitive edge.
 `;
 
 const text_3 = `
-Do you offer custom design solutions, or are your products pre-made?
+We offer both pre-made digital products for instant efficiency and custom 
+solutions tailored to your needs. From AI-driven design automation 
+to BIM optimization, we deliver seamless, high-impact solutions that integrate flawlessly into your business.
 `;
 
 const text_4 = `
