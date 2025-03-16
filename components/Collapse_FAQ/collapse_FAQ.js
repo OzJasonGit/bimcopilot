@@ -16,6 +16,8 @@ const text_1 = `
 We offer a range of digital products and technical services designed to 
 streamline design workflows, enhance project management and are always adding to our library. 
 These optimize efficiency and our solutions include the following:
+<br/>
+<a>Design Automation Tools</a> – Grasshopper scripts and AI-powered solutions to speed up complex design tasks.
 `;
 
 const text_2 = `
