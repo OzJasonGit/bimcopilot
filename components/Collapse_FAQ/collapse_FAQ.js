@@ -13,7 +13,9 @@ import { Collapse } from "antd";
 
 
 const text_1 = `
-What types of digital products do you offer? 
+We offer a range of digital products and technical services designed to 
+streamline design workflows, enhance project management and are always adding to our library. 
+These optimize efficiency and our solutions include the following:
 `;
 
 const text_2 = `
