@@ -90,7 +90,7 @@ const items = [
         <li> <a class="font-geist_semibold ...">Time Management</a> – AI-driven task planners and productivity tools eliminate inefficiencies 
                 and help teams focus on high-impact work.</li>
     </ul>
-    <a class="font-avant_garde_bold ..."><Link>Learn More here!</Link></a>
+    <a class="font-avant_garde_bold ..."><Link href="/products">Learn More here!</Link></a>
 
     </p>
     
