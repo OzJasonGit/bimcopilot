@@ -42,11 +42,19 @@ streamline tasks and boost efficiency with a minimal learning curve.
 `;
 
 const text_5 = `
-Can your automation tools help me save time on repetitive design tasks?
+Yes, our automation tools eliminate repetitive design tasks, 
+allowing you to focus on creativity and high-value work. 
+By leveraging AI, parametric design, and smart workflows, 
+our solutions accelerate drafting, modeling, and data management 
+with precision and efficiency. Whether automating complex geometries 
+or streamlining documentation, our tools save hours while maintaining accuracy and design integrity.
 `;
 
 const text_6 = `
-What makes your services different from other design and tech solutions?
+We fuse architectural expertise with cutting-edge AI and automation 
+to create powerful, industry-specific solutions. Unlike off-the-shelf 
+tech, our tools are built for architects, designers, and manufacturers—seamlessly 
+integrating into your workflow to boost efficiency, precision, and creativity.
 `;
 
 const text_7 = `
