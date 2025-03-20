@@ -51,10 +51,10 @@ or streamlining documentation, our tools save hours while maintaining accuracy a
 `;
 
 const text_6 = `
-We fuse architectural expertise with cutting-edge AI and automation 
-to create powerful, industry-specific solutions. Unlike off-the-shelf 
-tech, our tools are built for architects, designers, and manufacturers—seamlessly 
-integrating into your workflow to boost efficiency, precision, and creativity.
+Rooted in architecture and design, our expertise go beyond theory. We’ve lived the challenges. 
+By fusing a deep industry knowledge of project delivery with cutting-edge AI, automation, 
+and a bold creative vision, We cultivate a unique and powerful 
+edge which we apply to your projects.
 `;
 
 const text_7 = `
