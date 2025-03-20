@@ -66,7 +66,11 @@ and unlock new opportunities with technology.
 `;
 
 const text_8 = `
- How do you incorporate sustainability into your designs?
+ Sustainability drives everything we do—but we go beyond green buildings. 
+ As part of Plastic Free by Design, we focus on cutting plastic waste 
+ and promoting organic food systems. Our digital tools optimize workflows, 
+ reduce waste, and push design toward a smarter, more responsible future. 
+ Technology and sustainability aren’t separate—they’re a powerful force for change.
 `;
 
 const text_9 = `
