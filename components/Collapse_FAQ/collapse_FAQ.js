@@ -58,7 +58,11 @@ edge which we apply to your projects.
 `;
 
 const text_7 = `
-Do you work with individual professionals, small firms, or large businesses?
+We excel at helping large businesses scale, streamline, and grow. 
+But we also work with solo designers and small firms.  
+Compatibility will be based on culture fit, rather than size. We tailor 
+our tools to aid various workflows with our goal being the same. To sharpen precision, save time, 
+and unlock new opportunities with technology.
 `;
 
 const text_8 = `
