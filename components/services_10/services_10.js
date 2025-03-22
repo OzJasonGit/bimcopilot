@@ -48,7 +48,7 @@ return (
                       With expertise in <a class="text-stone-700 ...">design</a>, <a class="text-stone-700 ...">software development</a>, 
                       and <a class="text-stone-700 ...">Artificial Intelligence</a>, we've helped <a class="text-stone-700 ...">architects</a>, 
                       <a class="text-stone-700 ..."> designers</a>, <a class="text-stone-700 ...">
-                      manufacturers</a> and <a class="text-stone-700 ...">students</a>, leverage 
+                      manufacturers</a> <br/> and <a class="text-stone-700 ...">students</a>, leverage 
                       technology to streamline projects.                                                                                    
                   </p>
                   <br/>
