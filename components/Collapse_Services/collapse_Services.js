@@ -36,8 +36,8 @@ const items = [
 
   {
     key: '1',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-      class="font-avant_garde_bold ... text-stone-200 ..."
+    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
+      class="font-avant_garde_bold ... "
       id={styles._H3}> What types of digital products do you offer? 
     </h3>,
     children: 
@@ -64,8 +64,8 @@ const items = [
 
   {
     key: '2',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-      class="font-avant_garde_bold ... text-stone-200 ..."
+    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
+      class="font-avant_garde_bold ... "
       id={styles._H3}> How can your AI-driven tools help my architecture, design
       <br/> or manufacturing business?
     </h3>,
@@ -75,8 +75,8 @@ const items = [
 
   {
     key: '3',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-      class="font-avant_garde_bold ... text-stone-200 ..."
+    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
+      class="font-avant_garde_bold ... "
       id={styles._H3}> Do you offer custom design solutions, or are your 
       <br/> products pre-made?
     </h3>,
@@ -93,7 +93,7 @@ const Collapsed_Services = () => <Collapse style={{ display: "grid", rowGap: "0p
     return (
       <CaretRightFilled
         style={{
-          color: "rgb(68 64 60)",
+          color: "rgb(231 229 228)",
         }}
         rotate={isActive ? 90 : 0}
       />
