@@ -27,7 +27,10 @@ return (
                style={{  }}>
 
                 <div id={styles.TITLE}
-                  style={{ gridArea: "TITLE" }}>
+                  style={{ gridArea: "TITLE",
+                           paddingLeft: "30px",
+                           paddingRight: "30px"
+                   }}>
                   <h1
                     id={styles._H1_RIGHT}
                     class="text-stone-700 ... font-avant_garde_bold ...">
@@ -46,7 +49,7 @@ return (
                       and <a class="text-stone-700 ...">Artificial Intelligence</a>, we've helped <a class="text-stone-700 ...">architects</a>, 
                       <a class="text-stone-700 ..."> designers</a>, <a class="text-stone-700 ...">
                       manufacturers</a> and <a class="text-stone-700 ...">students</a>, leverage 
-                      technology <br/> to streamline projects.                                                                                    
+                      technology to streamline projects.                                                                                    
                   </p>
                   <br/>
                   <br/>
