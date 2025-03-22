@@ -55,6 +55,7 @@ return (
                 </div>
 
                 <br/>
+                <br/>
 
                 <div id={styles.IMAGE}
                     className="bg-transparent ... rounded-xl ..."
