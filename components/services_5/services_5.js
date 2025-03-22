@@ -20,13 +20,13 @@ return (
             <div  id={styles.SERVICES_HOLDER}>
 
               <div id={styles.SERVICES_PADDING}
-                   className="bg-stone-800" 
+                   className="bg-stone-800 ... rounded-xl ... " 
                    style={{
                       gridArea: "SERVICES",
                       paddingLeft: "60px",
                       paddingRight: "60px",
                       paddingTop: "60px",
-                      paddingBottom:"60px"
+                      paddingBottom: "60px"
                    }}>
 
                     <div id={styles.SERVICES_GRID}>
@@ -34,7 +34,7 @@ return (
                       <div id={styles.COLLAPSE_TITLE_2}>
                         <h2                 
                               id={styles._H2_2}
-                              class="text-left ... text-stone-700 ... font-avant_garde_bold">         
+                              class="text-left ... text-stone-200 ... font-avant_garde_bold">         
                               Our Services
                         </h2>
                       </div>
@@ -43,7 +43,7 @@ return (
                         <div id={styles.COLLAPSE_TAG}>
                           <h3
                             id={styles._H3}
-                            class="text-left ... text-stone-500 ... font-avant_garde_bold">
+                            class="text-left ... text-stone-200 ... font-avant_garde_bold">
                               {" "}
                               
                               We are highly experienced <a class="text-stone-700 ...">RIBA</a> and <a class="text-stone-700 ...">ARB</a> 
