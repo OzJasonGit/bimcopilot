@@ -112,18 +112,28 @@ return (
              
               <div id={styles.FAQ_BLOCK}>   
 
-                <div  id={styles.FAQ}>                
-                  <div class=" rounded-xl ..."
-                       id={styles.FAQ_TEXT}>
-                    <h1
-                      style={{ paddingBottom: "20px" }}
-                      id={styles._H1}
-                      class="text-stone-700 ... font-avant_garde_bold ...">
-                      <a class="text-left ... text-4xl">Frequently Asked <br/> Questions (FAQ) </a>
-                    </h1> 
-                    <Collapsed_FAQ/>                                      
-                  </div>
-                  
+                <div  id={styles.FAQ}>  
+
+                  <div id={styles.FAQ_PADDING}
+                       className="bg-stone-800 ... rounded-xl ... " 
+                       style={{ gridArea: "FAQ",
+                                paddingLeft: "60px",
+                                paddingRight: "60px",
+                                paddingTop: "60px",
+                                paddingBottom:"60px"}}>
+
+                                  <div class=" rounded-xl ..."
+                                      id={styles.FAQ_TEXT}>
+                                        <h1
+                                          style={{ paddingBottom: "20px" }}
+                                          id={styles._H1}
+                                          class="text-stone-700 ... font-avant_garde_bold ...">
+                                          <a class="text-left ... text-4xl">Frequently Asked <br/> Questions (FAQ) </a>
+                                        </h1> 
+                                    <Collapsed_FAQ/>                                      
+                                  </div>
+                  </div>  
+                                 
                 </div>  
 
               </div> 
