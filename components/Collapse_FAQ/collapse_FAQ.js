@@ -90,11 +90,12 @@ const items = [
     </h3>,
     children: 
     
-    <p style={{ position: "relative", left: "25px" }}> 
+    <p style={{ position: "relative", left: "25px" }}
+       class="bg-stone-200 ..."> 
 
     {text_1} 
     <br/>    
-    <ul class="list-disc ... font-geist_regular ... bg-stone-200 ..."
+    <ul class="list-disc ... font-geist_regular ..."
         id={styles._H3_2}
         style={{ position: "relative", left: "35px" }}>
         <li> <a class="font-geist_semibold ... bg-stone-200 ...">Design Automation Tools</a> – Grasshopper scripts and 
