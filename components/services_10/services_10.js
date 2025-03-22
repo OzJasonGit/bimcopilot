@@ -31,13 +31,13 @@ return (
                   <h1
                     id={styles._H1_RIGHT}
                     class="text-stone-700 ... font-avant_garde_bold ...">
-                    <a class="text-left ... text-4xl">Our background and who <br/> We've helped.</a>
+                    <a class="text-left ... text-4xl">Our background and <br/>who We've helped.</a>
                   </h1>
                   <br/>            
                   <h2
                       id={styles._H2_RIGHT}
                       class="text-xl ... text-stone-700 ... font-avant_garde_bold ...">
-                      We've helped businesses eliminate bottlenecks and unlock growth with technology.
+                      We've helped businesses eliminate <br/>bottlenecks and unlock growth with technology.
                   </h2>
                   <br/>        
                   <p  id={styles._H3_RIGHT}
