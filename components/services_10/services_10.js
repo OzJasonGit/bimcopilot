@@ -83,7 +83,9 @@ return (
 
 
                 <div id={styles.CONCLUSION}
-                  style={{ gridArea: "CONCLUSION" }}>
+                  style={{ gridArea: "CONCLUSION",
+                           paddingLeft: "30px",
+                           paddingRight: "30px"}}>
                   <br/>
                 
                     <p  id={styles._H3_CENTER}
