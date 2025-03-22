@@ -85,11 +85,11 @@
   display: grid;
   grid-column-gap: 0;
   grid-row-gap: 20px;
-  grid-template-columns: 40px 120px 20px 1fr 20px 120px 40px;
+  grid-template-columns: 40px 60px 60px 20px 1fr 20px 60px 60px 40px;
   grid-template-areas:
-    ". . .  .  . .  ."
-    ". . .      SUB      . .      ."
-    ". .        .        .        .        .        .";
+    ". . . . . . . . ."
+    ". . . SUB SUB . . . ."
+    ". . . . . . . . .";
 }
 
 #SERVICES_HOLDER {
