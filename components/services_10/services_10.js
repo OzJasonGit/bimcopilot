@@ -52,7 +52,7 @@ return (
                       technology to streamline projects.                                                                                    
                   </p>
                   <br/>
-                  <br/>
+                  
                 </div>
 
                 <br/>
@@ -85,7 +85,7 @@ return (
                 <div id={styles.CONCLUSION}
                   style={{ gridArea: "CONCLUSION" }}>
                   <br/>
-                  <br/>
+                
                     <p  id={styles._H3_RIGHT}
                       class=" text-stone-500 ... font-avant_garde_bold ... ">          
                       Our digital products and technical services streamline workflows, automate branding, 
