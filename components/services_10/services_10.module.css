@@ -14,6 +14,14 @@
   text-align: right;
 }
 
+
+#_H1_CENTER {
+  margin-bottom: 0px;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
 #_H2 {
   margin-bottom: 0px;
   font-size: 1.15rem;
@@ -27,6 +35,13 @@
   font-size: 1.15rem;
   line-height: 1.35rem;
   text-align: right;
+}
+
+#_H2_CENTER {
+  margin-bottom: 0px;
+  font-size: 1.15rem;
+  line-height: 1.35rem;
+  text-align: center;
 }
 
 

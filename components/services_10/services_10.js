@@ -32,18 +32,18 @@ return (
                            paddingRight: "30px"
                    }}>
                   <h1
-                    id={styles._H1_RIGHT}
+                    id={styles._H1_CENTER}
                     class="text-stone-700 ... font-avant_garde_bold ...">
                     <a class="text-left ... text-4xl">Our background and <br/>who We've helped.</a>
                   </h1>
                   <br/>            
                   <h2
-                      id={styles._H2_RIGHT}
+                      id={styles._H2_CENTER}
                       class="text-xl ... text-stone-700 ... font-avant_garde_bold ...">
                       We've helped businesses eliminate <br/>bottlenecks and unlock growth with technology.
                   </h2>
                   <br/>        
-                  <p  id={styles._H3_RIGHT}
+                  <p  id={styles._H3_CENTER}
                       class=" text-stone-500 ... font-avant_garde_bold ... ">
                       With expertise in <a class="text-stone-700 ...">design</a>, <a class="text-stone-700 ...">software development</a>, 
                       and <a class="text-stone-700 ...">Artificial Intelligence</a>, we've helped <a class="text-stone-700 ...">architects</a>, 
