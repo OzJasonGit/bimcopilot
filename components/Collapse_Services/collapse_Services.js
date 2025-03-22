@@ -37,7 +37,7 @@ const items = [
   {
     key: '1',
     label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-      class="font-avant_garde_bold"
+      class="font-avant_garde_bold text-stone-200 ..."
       id={styles._H3}> What types of digital products do you offer? 
     </h3>,
     children: 
@@ -46,7 +46,7 @@ const items = [
 
     {text_1} 
     <br/>    
-    <ul class="list-disc ... font-geist_regular ..."
+    <ul class="list-disc ... font-geist_regular ... text-stone-200 ..."
         id={styles._H3_2}
         style={{ position: "relative", left: "35px" }}>
         <li> <a class="font-geist_semibold ...">Design Automation Tools</a> – Grasshopper scripts and 
@@ -64,7 +64,7 @@ const items = [
   {
     key: '2',
     label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-      class="font-avant_garde_bold"
+      class="font-avant_garde_bold ... text-stone-200 ..."
       id={styles._H3}> How can your AI-driven tools help my architecture, design
       <br/> or manufacturing business?
     </h3>,
@@ -74,7 +74,7 @@ const items = [
   {
     key: '3',
     label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-      class="font-avant_garde_bold"
+      class="font-avant_garde_bold ... text-stone-200 ..."
       id={styles._H3}> Do you offer custom design solutions, or are your 
       <br/> products pre-made?
     </h3>,
