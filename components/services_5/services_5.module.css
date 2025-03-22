@@ -85,6 +85,7 @@
   display: grid;
   grid-column-gap: 0;
   grid-row-gap: 20px;
+  grid-template-rows: 100px auto 60px;
   grid-template-columns: 40px 60px 60px 20px 1fr 20px 60px 60px 40px;
   grid-template-areas:
     ". . . . . . . . ."
@@ -173,7 +174,6 @@
 #COLLAPSE_TITLE_2 {
   grid-area: TITLE;
   position: relative;
-  padding-top: 50px;
 }
 
 #COLLAPSE_MESSAGE {

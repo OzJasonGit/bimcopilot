@@ -46,14 +46,14 @@ return (
                             class="text-left ... text-stone-200 ... font-avant_garde_bold">
                               {" "}
                               
-                              We are highly experienced <a class="text-stone-700 ...">RIBA</a> and <a class="text-stone-700 ...">ARB</a> 
-                              <a class="text-stone-700 ..."> registered architects
-                              </a> specializing in cutting-edge <a class="text-stone-700 ...">BIM </a>
-                              solutions powered by <a class="text-stone-700 ...">Artificial Intelligence</a>. 
-                              <br/>We focus on tailoring <a class="text-stone-700 ...">systems</a> conceived from 
-                              <a class="text-stone-700 ..."> real-world 
-                              experience </a>on projects from <a class="text-stone-700 ...">concept</a>, through to 
-                              <a class="text-stone-700 ..."> completion</a>.                  
+                              We are highly experienced <a class="text-stone-400 ...">RIBA</a> and <a class="text-stone-400 ...">ARB</a> 
+                              <a class="text-stone-400 ..."> registered architects
+                              </a> specializing in cutting-edge <a class="text-stone-400 ...">BIM </a>
+                              solutions powered by <a class="text-stone-400 ...">Artificial Intelligence</a>. 
+                              <br/>We focus on tailoring <a class="text-stone-400 ...">systems</a> conceived from 
+                              <a class="text-stone-400 ..."> real-world 
+                              experience </a>on projects from <a class="text-stone-400 ...">concept</a>, through to 
+                              <a class="text-stone-400 ..."> completion</a>.                  
                               <br/>
                               <br/>                                                                    
                           </h3>
@@ -62,7 +62,7 @@ return (
 
                       <div id={styles.SERVICE_1_HOLDER}>
                         <div id={styles.SERVICE_TITLE}>
-                          <h3  class="text-left ... text-stone-700 ... font-avant_garde_bold" id={styles._H2}>Building Information Modelling (BIM)
+                          <h3  class="text-left ... text-stone-200 ... font-avant_garde_bold" id={styles._H2}>Building Information Modelling (BIM)
                           </h3>
                         </div>
 
