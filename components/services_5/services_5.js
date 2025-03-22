@@ -64,7 +64,7 @@ return (
                   </div>
                 </div>
 
-                <div id={styles.SERVICE_2_HOLDER}>
+                {/*<div id={styles.SERVICE_2_HOLDER}>
                   <div id={styles.SERVICE_TITLE}>
                     <h3 class="font-avant_garde_bold ... text-stone-700 ...  text-right ..." id={styles._H2}>Analytics and Automation
                     </h3>
@@ -84,7 +84,7 @@ return (
                   <div id={styles.COLLAPSE_HOLDER}> 
                      <Collapsed_3/>                  
                   </div>                
-                </div>
+                </div>*/}
 
               </div>
             </div>
