@@ -102,7 +102,7 @@
   grid-row-gap: 0;
   grid-template-columns: 100px 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "SERVICES SERVICES SERVICES SERVICES .";
+  grid-template-areas: "SERVICES SERVICES SERVICES . .";
 }
 
 #SERVICES_GRID {
@@ -113,18 +113,14 @@
   display: grid;
   grid-column-gap: 60px;
   grid-row-gap: 0;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 20px auto 20px auto 20px auto 20px auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 20px auto 20px auto;
   grid-template-areas:
-    "TITLE TITLE"
-    ". ."
-    "SUBTITLE SUBTITLE"
-    ". ."
-    "SERVICES_1 ."
-    ". ."
-    ". SERVICES_2"
-    ". ."
-    "SERVICES_3 .";
+    "TITLE "
+    ". "
+    "SUBTITLE "
+    ". "
+    "SERVICES_1 ";
 }
 
 #SERVICE_1_HOLDER {
