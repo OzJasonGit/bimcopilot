@@ -51,10 +51,10 @@ return (
                       manufacturers</a>  and <br/><a class="text-stone-700 ...">students</a>, leverage 
                       technology to streamline projects.                                                                                    
                   </p>
-                  
+                  <br/>                 
                 </div>
 
-                <br/>
+                
                 <br/>
 
                 <div id={styles.IMAGE}
