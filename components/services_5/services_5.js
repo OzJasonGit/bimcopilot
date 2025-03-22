@@ -24,7 +24,7 @@ return (
                   <h2                 
                         id={styles._H2_2}
                         class="text-left ... text-stone-700 ... font-avant_garde_bold">         
-                        Services
+                        Our Services
                   </h2>
                 </div>
 
