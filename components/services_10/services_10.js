@@ -127,13 +127,13 @@ return (
                                         <h1
                                           style={{ paddingBottom: "20px" }}
                                           id={styles._H1}
-                                          class="text-stone-700 ... font-avant_garde_bold ...">
+                                          class="text-stone-200 ... font-avant_garde_bold ...">
                                           <a class="text-left ... text-4xl">Frequently Asked <br/> Questions (FAQ) </a>
                                         </h1> 
                                     <Collapsed_FAQ/>                                      
                                   </div>
                   </div>  
-                                 
+
                 </div>  
 
               </div> 

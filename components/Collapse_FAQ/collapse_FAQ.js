@@ -84,7 +84,7 @@ const items = [
 
   {
     key: '1',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}> What types of digital products do you offer? 
     </h3>,
@@ -94,19 +94,19 @@ const items = [
 
     {text_1} 
     <br/>    
-    <ul class="list-disc ... font-geist_regular ..."
+    <ul class="list-disc ... font-geist_regular ... bg-stone-200 ..."
         id={styles._H3_2}
         style={{ position: "relative", left: "35px" }}>
-        <li> <a class="font-geist_semibold ...">Design Automation Tools</a> – Grasshopper scripts and 
+        <li> <a class="font-geist_semibold ... bg-stone-200 ...">Design Automation Tools</a> – Grasshopper scripts and 
                 AI-powered solutions to speed up complex design tasks.</li>
-        <li> <a class="font-geist_semibold ...">BIM & Project Management Resources</a> – Smart templates, workflows, 
+        <li> <a class="font-geist_semibold ... bg-stone-200 ...">BIM & Project Management Resources</a> – Smart templates, workflows, 
                 and automation tools to improve coordination and efficiency.</li>
-        <li> <a class="font-geist_semibold ...">Drawing & Design Templates</a> – Pre-built, intelligent templates speed up drafting 
+        <li> <a class="font-geist_semibold ... bg-stone-200 ...">Drawing & Design Templates</a> – Pre-built, intelligent templates speed up drafting 
                 and ensure consistency across projects.</li>
-        <li> <a class="font-geist_semibold ...">Time Management</a> – AI-driven task planners and productivity tools eliminate inefficiencies 
+        <li> <a class="font-geist_semibold ... bg-stone-200 ...">Time Management</a> – AI-driven task planners and productivity tools eliminate inefficiencies 
                 and help teams focus on high-impact work.</li>
     </ul>
-    <a class="font-avant_garde_bold ..."><Link href="/products">Learn More here!</Link></a>
+    <a class="font-avant_garde_bold ... bg-stone-200 ..."><Link href="/products">Learn More here!</Link></a>
 
     </p>
     
@@ -115,7 +115,7 @@ const items = [
 
   {
     key: '2',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}> How can your AI-driven tools help my architecture, design
       <br/> or manufacturing business?
@@ -125,7 +125,7 @@ const items = [
 
   {
     key: '3',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}> Do you offer custom design solutions, or are your 
       <br/> products pre-made?
@@ -135,7 +135,7 @@ const items = [
 
   {
     key: '4',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}>Are your digital products easy to integrate into 
       <br/> my existing workflow?
@@ -145,7 +145,7 @@ const items = [
 
   {
     key: '5',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}> Can your automation tools help me save time on 
       <br/> repetitive design tasks?
@@ -155,7 +155,7 @@ const items = [
 
   {
     key: '6',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}>What makes your services different from other design 
       <br/> and tech solutions?
@@ -165,7 +165,7 @@ const items = [
 
   {
     key: '7',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
+    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}>Do you work with individual professionals, small firms, or 
       <br/> large businesses?
@@ -175,7 +175,7 @@ const items = [
 
   {
     key: '8',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end", paddingBottom: "0px" }}
+    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end", paddingBottom: "0px" }}
       class="font-avant_garde_bold"
       id={styles._H3}> How do you incorporate sustainability into your designs?
     </h3>,
@@ -183,7 +183,7 @@ const items = [
   },
 
    {  key: '9',
-    label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end", paddingBottom: "0px" }}
+    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end", paddingBottom: "0px" }}
       class="font-avant_garde_bold"
       id={styles._H3}> How do I get started with your services, and what are 
       <br/> the pricing options?
@@ -202,7 +202,7 @@ const Collapsed_3 = () => <Collapse style={{ display: "grid", rowGap: "0px", }}
     return (
       <CaretRightFilled
         style={{
-          color: "rgb(68 64 60)",
+          color: "rgb(231 229 228)",
         }}
         rotate={isActive ? 90 : 0}
       />
