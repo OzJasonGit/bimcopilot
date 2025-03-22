@@ -37,24 +37,25 @@ const items = [
   {
     key: '1',
     label: <h3 style={{ color: "rgb(68 64 60)", alignItems: "end" }}
-      class="font-avant_garde_bold text-stone-200 ..."
+      class="font-avant_garde_bold ... text-stone-200 ..."
       id={styles._H3}> What types of digital products do you offer? 
     </h3>,
     children: 
     
-    <p style={{ position: "relative", left: "25px" }}> 
+    <p style={{ position: "relative", left: "25px" }}
+       class="font-geist_regular ... text-stone-200 ..."> 
 
     {text_1} 
     <br/>    
     <ul class="list-disc ... font-geist_regular ... text-stone-200 ..."
         id={styles._H3_2}
         style={{ position: "relative", left: "35px" }}>
-        <li> <a class="font-geist_semibold ...">Design Automation Tools</a> – Grasshopper scripts and 
+        <li> <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools</a> – Grasshopper scripts and 
                 AI-powered solutions to speed up complex design tasks.</li>
-        <li> <a class="font-geist_semibold ...">BIM & Project Management Resources</a> – Smart templates, workflows, 
+        <li> <a class="font-geist_semibold ... text-stone-200 ...">BIM & Project Management Resources</a> – Smart templates, workflows, 
                 and automation tools to improve coordination and efficiency.</li>
     </ul>
-    <a class="font-avant_garde_bold ..."><Link href="/products">Learn More here!</Link></a>
+    <a class="font-avant_garde_bold ... text-stone-200 ..."><Link href="/products">Learn More here!</Link></a>
 
     </p>
     
@@ -68,7 +69,8 @@ const items = [
       id={styles._H3}> How can your AI-driven tools help my architecture, design
       <br/> or manufacturing business?
     </h3>,
-    children: <p style={{ position: "relative", left: "25px" }} > {text_2} </p>
+    children: <p style={{ position: "relative", left: "25px" }} 
+                 class="font-geist_regular ... text-stone-200 ..."> {text_2} </p>
   },
 
   {
@@ -78,7 +80,8 @@ const items = [
       id={styles._H3}> Do you offer custom design solutions, or are your 
       <br/> products pre-made?
     </h3>,
-    children: <p style={{ position: "relative", left: "25px" }} > {text_3} </p>
+    children: <p style={{ position: "relative", left: "25px" }} 
+                 class="font-geist_regular ... text-stone-200 ..."> {text_3} </p>
   },
 
 ];
