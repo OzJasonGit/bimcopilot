@@ -20,11 +20,13 @@ return (
             <div  id={styles.SERVICES_HOLDER}>
 
               <div id={styles.SERVICES_PADDING}
+                   className="bg-stone-800" 
                    style={{
                       gridArea: "SERVICES",
                       paddingLeft: "60px",
-                      paddingRight: "120px",
-                      paddingTop: "60px"
+                      paddingRight: "60px",
+                      paddingTop: "60px",
+                      paddingBottom:"60px"
                    }}>
 
                     <div id={styles.SERVICES_GRID}>
