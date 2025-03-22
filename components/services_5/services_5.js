@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './services_5.module.css';
-import Collapsed from "../../components/Collapse/collapse";
+import Collapsed_Services from "../Collapse_Services/collapse_Services";
 import Collapsed_2 from "../../components/Collapse_2/collapse_2";
 import Collapsed_3 from "../../components/Collapse_3/collapse_3";
 import React, { Component } from 'react';
@@ -44,11 +44,7 @@ return (
                         <br/>We focus on tailoring <a class="text-stone-700 ...">systems</a> conceived from 
                         <a class="text-stone-700 ..."> real-world 
                         experience </a>on projects from <a class="text-stone-700 ...">concept</a>, through to 
-                        <a class="text-stone-700 ..."> completion</a>. 
-
-                        {/*From concept to completion, we deliver precise LOD350 details 
-                        and AI-driven clash detection, ensuring flawless coordination across disciplines.*/}
-                        {" "}
+                        <a class="text-stone-700 ..."> completion</a>.                  
                         <br/>
                         <br/>                                                                    
                     </h3>
@@ -64,7 +60,7 @@ return (
                   </div>
 
                   <div id={styles.COLLAPSE_HOLDER}> 
-                     <Collapsed/>              
+                     <Collapsed_Services/>              
                   </div>
                 </div>
 
