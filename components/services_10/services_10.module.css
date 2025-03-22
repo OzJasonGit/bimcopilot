@@ -277,10 +277,10 @@
   grid-column-gap: 0px;
   grid-row-gap: 20px;
   grid-template-rows: 100px auto auto;
-  grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+  grid-template-columns: 20px 60px 60px 20px 1fr 20px 60px 60px 20px;
   grid-template-areas:
-    ". . . . . . ."
-    ". . . SUB . . ."
+    ". . . . . . . . ."
+    ". SUB SUB SUB . . ."
     ". . . PORTFOLIO . . .";
 }
 
