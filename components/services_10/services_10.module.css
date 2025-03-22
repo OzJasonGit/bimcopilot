@@ -43,6 +43,13 @@
   text-align: right;
 }
 
+#_H3_CENTER {
+  margin-bottom: 0px;
+  font-size: 0.85rem;
+  line-height: 1.3rem;
+  text-align: center;
+}
+
 #_H4 {
   margin-bottom: 0px;
 }
