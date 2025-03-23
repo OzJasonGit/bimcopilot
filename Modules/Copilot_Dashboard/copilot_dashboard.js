@@ -14,7 +14,7 @@ import Subscribe_Dashboard from "../../components/Subscribetop/subscribe_dashboa
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
 import Header_White from "../../components/Header_White/Header_White";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer/Footer_White";
 import Chart_1 from "./Charts/Chart_1/Chart_1";
 import Chart_2 from "./Charts/Chart_2/Chart_2";
 import Chart_3 from './Charts/Chart_3/Chart_3';
