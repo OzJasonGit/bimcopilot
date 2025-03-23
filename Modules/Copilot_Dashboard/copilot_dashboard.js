@@ -86,7 +86,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                     <div id={styles.DASHBOARD_GRID}>
 
-                        <div id={styles.SPECKLE} class="rounded-xl ..." style={{
+                        <div id={styles.SPECKLE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                             gridArea: "SPECKLE",
                             position: "relative",
                             overflow: "hidden",
@@ -133,7 +133,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         </div>
 
 
-                        <div id={styles.DOUGHNUT} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
+                        <div id={styles.DOUGHNUT} class="rounded-xl ... " style={{
                             gridArea: "DOUGHNUT",
                             position: "relative",
                             overflow: "hidden",
@@ -209,7 +209,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         </div>
 
 
-                        <div id={styles.GRID_HOLDER} class="rounded-xl ... border-stone-800 ... border-solid ... border-2..." style={{
+                        <div id={styles.GRID_HOLDER} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                             gridArea: "HOLDER",
                             position: "relative",
                             overflow: "hidden",
@@ -217,7 +217,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             background: "#f5f5f4"
                         }}>
 
-                            <div id={styles.FORCE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2..." style={{
+                            <div id={styles.FORCE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                                 gridArea: "FORCE",
                                 position: "relative",
                                 overflow: "hidden",
