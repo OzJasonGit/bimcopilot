@@ -13,6 +13,7 @@ import Chart_8 from './Charts/Chart_8/Chart_8';
 import Subscribe_Dashboard from "../../components/Subscribetop/subscribe_dashboard";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
+import Header_White from "../../components/Header_White/Header_White";
 import Footer from "../../components/Footer/Footer";
 import Chart_1 from "./Charts/Chart_1/Chart_1";
 import Chart_2 from "./Charts/Chart_2/Chart_2";
@@ -74,7 +75,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
             <Menu />
             {/*<Menu_Dashboard/>*/}
             <Dashboard_Right />
-            <Header />
+            <Header_White />
             {/*<Sides/>*/}
 
             {/*<Services_1/>*/}
