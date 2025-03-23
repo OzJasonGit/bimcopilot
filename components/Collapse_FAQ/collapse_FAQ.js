@@ -84,7 +84,8 @@ const items = [
 
   {
     key: '1',
-    label: <h3 style={{ alignItems: "end", position: "relative", left:"20px" }}
+    label: 
+    <h3 style={{ alignItems: "end", }}
       class="font-avant_garde_bold"
       id={styles._H3}> What types of digital products do you offer? 
     </h3>,
@@ -197,7 +198,7 @@ const items = [
 
 
 ];
-const Collapsed_3 = () => <Collapse style={{ display: "grid", rowGap: "0px", left:"60px"}}
+const Collapsed_3 = () => <Collapse style={{ display: "grid", rowGap: "0px", position:"relative", left:"60px"}}
   accordion items={items}
   expandIcon={({ isActive }) => {
     return (
