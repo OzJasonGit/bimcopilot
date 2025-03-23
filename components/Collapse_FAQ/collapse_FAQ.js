@@ -197,7 +197,7 @@ const items = [
 
 
 ];
-const Collapsed_3 = () => <Collapse style={{ display: "grid", rowGap: "0px", }}
+const Collapsed_3 = () => <Collapse style={{ display: "grid", rowGap: "0px", left:"60px"}}
   accordion items={items}
   expandIcon={({ isActive }) => {
     return (
