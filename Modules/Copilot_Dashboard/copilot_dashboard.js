@@ -111,7 +111,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             </div>
                         </div>
 
-                        <div id={styles.MAP} class="rounded-xl ...  border-stone-800 ..." style={{
+                        <div id={styles.MAP} class="rounded-xl ...  border-stone-800 ... border-solid ... border-2 ..." style={{
                             gridArea: "MAP",
                             position: "relative",
                             overflow: "hidden",
@@ -122,7 +122,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         </div>
 
 
-                        <div id={styles.TITLE} class="rounded-xl ... border-stone-800 ..." style={{
+                        <div id={styles.TITLE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                             gridArea: "TITLE",
                             position: "relative",
                             overflow: "hidden",
@@ -133,7 +133,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         </div>
 
 
-                        <div id={styles.DOUGHNUT} class="rounded-xl ... border-stone-800 ..." style={{
+                        <div id={styles.DOUGHNUT} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                             gridArea: "DOUGHNUT",
                             position: "relative",
                             overflow: "hidden",
@@ -141,7 +141,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             background: "#f5f5f4"
                         }}>
 
-                            <div id={styles.DOUGHNUT_1} class="rounded-xl ... border-stone-800 ..." style={{
+                            <div id={styles.DOUGHNUT_1} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                                 gridArea: "DOUGHNUT_1",
                                 position: "relative",
                                 overflow: "hidden",
@@ -151,7 +151,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 <Chart_10 data={treeMapData}/>
                             </div>
 
-                            <div id={styles.DOUGHNUT_2} class="rounded-xl ... border-stone-800 ..." style={{
+                            <div id={styles.DOUGHNUT_2} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                                 gridArea: "DOUGHNUT_2",
                                 position: "relative",
                                 overflow: "hidden",
@@ -166,7 +166,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     </div>
 
                  
-                    <div id={styles.TREE} class="rounded-xl ... border-stone-800 ..." style={{
+                    <div id={styles.TREE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                         gridArea: "TREE",
                         position: "relative",                        
                         overflow: "hidden",  
@@ -176,7 +176,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                              {/*<Chart_4/>*/}
                     </div>
 
-                    <div id={styles.BAR} class="rounded-xl ... border-stone-800 ..." style={{
+                    <div id={styles.BAR} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                         gridArea: "BAR",
                         position: "relative",                        
                         overflow: "hidden",  
@@ -186,7 +186,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
 
 
-                        <div id={styles.TREE} class="rounded-xl ... border-stone-800 ..." style={{
+                        <div id={styles.TREE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                             gridArea: "TREE",
                             position: "relative",
                             overflow: "hidden",
@@ -197,7 +197,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             <Chart_4 />
                         </div>
 
-                        <div id={styles.BAR} class="rounded-xl ... border-stone-800 ..." style={{
+                        <div id={styles.BAR} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                             gridArea: "BAR",
                             position: "relative",
                             overflow: "hidden",
@@ -209,7 +209,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         </div>
 
 
-                        <div id={styles.GRID_HOLDER} class="rounded-xl ... border-stone-800 ..." style={{
+                        <div id={styles.GRID_HOLDER} class="rounded-xl ... border-stone-800 ... border-solid ... border-2..." style={{
                             gridArea: "HOLDER",
                             position: "relative",
                             overflow: "hidden",
@@ -217,7 +217,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             background: "#f5f5f4"
                         }}>
 
-                            <div id={styles.FORCE} class="rounded-xl ... border-stone-800 ..." style={{
+                            <div id={styles.FORCE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2..." style={{
                                 gridArea: "FORCE",
                                 position: "relative",
                                 overflow: "hidden",
@@ -227,7 +227,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             }}>
                             </div>
 
-                            <div id={styles.LINE} class="rounded-xl ... border-stone-800 ..." style={{
+                            <div id={styles.LINE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                                 gridArea: "LINE",
                                 position: "relative",
                                 overflow: "hidden",
@@ -239,7 +239,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                             </div>
 
-                            <div id={styles.SCATTER} class="rounded-xl ... border-stone-800 ..." style={{
+                            <div id={styles.SCATTER} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                                 gridArea: "SCATTER",
                                 position: "relative",
                                 overflow: "hidden",
