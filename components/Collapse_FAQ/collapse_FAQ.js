@@ -99,16 +99,16 @@ const items = [
     <ul class="list-disc ... font-geist_regular ..."
         id={styles._H3_2}
         style={{ position: "relative", left: "35px" }}>
-        <li> <a class="font-geist_semibold ... bg-stone-200 ...">Design Automation Tools</a> – Grasshopper scripts and 
+        <li> <a class="font-geist_semibold ... text-stone-700 ...">Design Automation Tools</a> – Grasshopper scripts and 
                 AI-powered solutions to speed up complex design tasks.</li>
-        <li> <a class="font-geist_semibold ... bg-stone-200 ...">BIM & Project Management Resources</a> – Smart templates, workflows, 
+        <li> <a class="font-geist_semibold ... text-stone-700 ...">BIM & Project Management Resources</a> – Smart templates, workflows, 
                 and automation tools to improve coordination and efficiency.</li>
-        <li> <a class="font-geist_semibold ... bg-stone-200 ...">Drawing & Design Templates</a> – Pre-built, intelligent templates speed up drafting 
+        <li> <a class="font-geist_semibold ... text-stone-700 ...">Drawing & Design Templates</a> – Pre-built, intelligent templates speed up drafting 
                 and ensure consistency across projects.</li>
-        <li> <a class="font-geist_semibold ... bg-stone-200 ...">Time Management</a> – AI-driven task planners and productivity tools eliminate inefficiencies 
+        <li> <a class="font-geist_semibold ... text-stone-700 ...">Time Management</a> – AI-driven task planners and productivity tools eliminate inefficiencies 
                 and help teams focus on high-impact work.</li>
     </ul>
-    <a class="font-avant_garde_bold ... bg-stone-200 ..."><Link href="/products">Learn More here!</Link></a>
+    <a class="font-avant_garde_bold ... text-stone-700 ..."><Link href="/products">Learn More here!</Link></a>
 
     </p>
     
@@ -117,7 +117,8 @@ const items = [
 
   {
     key: '2',
-    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
+    label: 
+    <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}> How can your AI-driven tools help my architecture, design
       <br/> or manufacturing business?
@@ -127,12 +128,12 @@ const items = [
 
   {
     key: '3',
-    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
+    label: <h3 style={{ color: "#44403C", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}> Do you offer custom design solutions, or are your 
       <br/> products pre-made?
     </h3>,
-    children: <p style={{ position: "relative", left: "25px" }} > {text_3} </p>
+    children: <p style={{ position: "relative", left: "25px", }} > {text_3} </p>
   },
 
   {
@@ -157,7 +158,7 @@ const items = [
 
   {
     key: '6',
-    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
+    label: <h3 style={{ color: "#44403C", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}>What makes your services different from other design 
       <br/> and tech solutions?
@@ -167,7 +168,7 @@ const items = [
 
   {
     key: '7',
-    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
+    label: <h3 style={{ color: "#44403C", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}>Do you work with individual professionals, small firms, or 
       <br/> large businesses?
