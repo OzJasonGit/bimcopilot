@@ -562,9 +562,8 @@
   grid-column-gap: 40px;
   grid-row-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 180px auto auto 0px;
+  grid-template-rows: auto auto 0px;
   grid-template-areas:
-    ".  .  .  .  ."
     "IMAGE IMAGE IMAGE IMAGE ."
     "DESCRIPTION DESCRIPTION DESCRIPTION . ."
     ".  .  .  .  .";
