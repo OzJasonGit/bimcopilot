@@ -86,13 +86,13 @@ const items = [
     key: '1',
     label: 
     <h3 style={{ alignItems: "end", }}
-      class="font-avant_garde_bold"
+      class="font-avant_garde_bold, text-stone-700 ..."
       id={styles._H3}> What types of digital products do you offer? 
     </h3>,
     children: 
     
     <p style={{ position: "relative", left: "25px" }}
-       class=""> 
+       class="text-stone-700 ..."> 
 
     {text_1} 
     <br/>    
@@ -118,7 +118,7 @@ const items = [
   {
     key: '2',
     label: 
-    <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
+    <h3 style={{ color: "#44403C", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}> How can your AI-driven tools help my architecture, design
       <br/> or manufacturing business?
@@ -138,7 +138,7 @@ const items = [
 
   {
     key: '4',
-    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
+    label: <h3 style={{ color: "#44403C", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}>Are your digital products easy to integrate into 
       <br/> my existing workflow?
@@ -148,7 +148,7 @@ const items = [
 
   {
     key: '5',
-    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
+    label: <h3 style={{ color: "#44403C", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}> Can your automation tools help me save time on 
       <br/> repetitive design tasks?
@@ -178,7 +178,7 @@ const items = [
 
   {
     key: '8',
-    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end", paddingBottom: "0px" }}
+    label: <h3 style={{ color: "#44403C", alignItems: "end", paddingBottom: "0px" }}
       class="font-avant_garde_bold"
       id={styles._H3}> How do you incorporate sustainability into your designs?
     </h3>,
