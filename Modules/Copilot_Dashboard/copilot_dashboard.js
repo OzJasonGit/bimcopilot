@@ -209,7 +209,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         </div>
 
 
-                        <div id={styles.GRID_HOLDER} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
+                        <div id={styles.GRID_HOLDER} class="rounded-xl ... " style={{
                             gridArea: "HOLDER",
                             position: "relative",
                             overflow: "hidden",
