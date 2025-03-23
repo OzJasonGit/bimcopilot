@@ -123,75 +123,91 @@ const items = [
       id={styles._H3}> How can your AI-driven tools help my architecture, design
       <br/> or manufacturing business?
     </h3>,
-    children: <p style={{ position: "relative", left: "25px" }} > {text_2} </p>
+    children: <p style={{ position: "relative", left: "25px" }} 
+                 class=" text-stone-700 ..."> {text_2} </p>
   },
 
   {
     key: '3',
-    label: <h3 style={{ color: "#44403C", alignItems: "end" }}
+    label: 
+    <h3 style={{ color: "#44403C", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}> Do you offer custom design solutions, or are your 
       <br/> products pre-made?
     </h3>,
-    children: <p style={{ position: "relative", left: "25px", }} > {text_3} </p>
+    children: <p style={{ position: "relative", left: "25px", }} 
+                 class=" text-stone-700 ..."> {text_3} </p>
   },
 
   {
     key: '4',
-    label: <h3 style={{ color: "#44403C", alignItems: "end" }}
+    label: 
+    <h3 style={{ color: "#44403C", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}>Are your digital products easy to integrate into 
       <br/> my existing workflow?
     </h3>,
-    children: <p style={{ position: "relative", left: "25px" }} > {text_4} </p>
+    children: <p style={{ position: "relative", left: "25px" }} 
+                class=" text-stone-700 ..."> {text_4} </p>
   },
 
   {
     key: '5',
-    label: <h3 style={{ color: "#44403C", alignItems: "end" }}
+    label: 
+    <h3 style={{ color: "#44403C", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}> Can your automation tools help me save time on 
       <br/> repetitive design tasks?
     </h3>,
-    children: <p style={{ position: "relative", left: "25px" }} > {text_5} </p>
+    children: <p style={{ position: "relative", left: "25px" }} 
+                 class=" text-stone-700 ..."> {text_5} </p>
   },
 
   {
     key: '6',
-    label: <h3 style={{ color: "#44403C", alignItems: "end" }}
+    label: 
+    <h3 style={{ color: "#44403C", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}>What makes your services different from other design 
       <br/> and tech solutions?
     </h3>,
-    children: <p style={{ position: "relative", left: "25px" }} > {text_6} </p>
+    children: <p style={{ position: "relative", left: "25px" }} 
+                 class=" text-stone-700 ..."> {text_6} </p>
   },
 
   {
     key: '7',
-    label: <h3 style={{ color: "#44403C", alignItems: "end" }}
+    label: 
+    <h3 style={{ color: "#44403C", alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}>Do you work with individual professionals, small firms, or 
       <br/> large businesses?
     </h3>,
-    children: <p style={{ position: "relative", left: "25px" }} > {text_7} </p>
+    children: <p style={{ position: "relative", left: "25px" }} 
+                 class=" text-stone-700 ..."> {text_7} </p>
   },
 
   {
     key: '8',
-    label: <h3 style={{ color: "#44403C", alignItems: "end", paddingBottom: "0px" }}
+    label: 
+    <h3 style={{ color: "#44403C", alignItems: "end", paddingBottom: "0px" }}
       class="font-avant_garde_bold"
       id={styles._H3}> How do you incorporate sustainability into your designs?
     </h3>,
-    children: <p style={{ position: "relative", left: "25px" }}  > {text_8} </p>
+    children: <p style={{ position: "relative", left: "25px" }}  
+                 class=" text-stone-700 ..."> {text_8} </p>
   },
 
-   {  key: '9',
-    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end", paddingBottom: "0px" }}
+   {  
+    key: '9',
+    label: 
+    <h3 style={{ color: "#44403C", alignItems: "end", paddingBottom: "0px" }}
       class="font-avant_garde_bold"
       id={styles._H3}> How do I get started with your services, and what are 
       <br/> the pricing options?
     </h3>,
-    children: <p style={{ position: "relative", left: "25px" }}  > {text_9} </p>
+    children: <p style={{ position: "relative", left: "25px" }}  
+                 class=" text-stone-700 ..."> {text_9} </p>
   },
 
 
