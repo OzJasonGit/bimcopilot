@@ -4,7 +4,7 @@ import styles from './copilot_dashboard.module.css';
 
 import { useRouter } from "next/navigation";
 
-import Menu from "../../components/Menu/menu";
+import Menu_White from "../../components/Menu_White/menu_white";
 //import Menu_Dashboard from "../../components/Menu_Dashboard/menu_dashboard";//
 import Dashboard_Right from "../../components/Dashboard_Right/dashboard_right";
 
@@ -72,7 +72,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
     return (
 
         <>
-            <Menu />
+            <Menu_White />
             {/*<Menu_Dashboard/>*/}
             <Dashboard_Right />
             <Header_White />
