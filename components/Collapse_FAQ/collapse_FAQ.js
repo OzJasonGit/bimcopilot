@@ -221,7 +221,7 @@ const Collapsed_3 = () => <Collapse style={{ display: "grid", rowGap: "0px", pos
     return (
       <CaretRightFilled
         style={{
-          color: "rgb(231 229 228)",
+          color: "#44403C",
         }}
         rotate={isActive ? 90 : 0}
       />
