@@ -86,11 +86,12 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                     <div id={styles.DASHBOARD_GRID}>
 
-                        <div id={styles.SPECKLE} class="rounded-xl ... bg-zinc-200 ..." style={{
+                        <div id={styles.SPECKLE} class="rounded-xl ..." style={{
                             gridArea: "SPECKLE",
                             position: "relative",
                             overflow: "hidden",
-                            height: "450px"
+                            height: "450px",
+                            background: "#f5f5f4"
                         }}>
                             <div class="rounded-xl ..." style={{
                                 position: "relative",
@@ -110,47 +111,52 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             </div>
                         </div>
 
-                        <div id={styles.MAP} class="rounded-xl ...  bg-zinc-200 ..." style={{
+                        <div id={styles.MAP} class="rounded-xl ...  border-stone-800 ..." style={{
                             gridArea: "MAP",
                             position: "relative",
                             overflow: "hidden",
-                            height: "100%"
+                            height: "100%",
+                            background: "#f5f5f4"
                         }}>
                             <Chart_8 data={data} />
                         </div>
 
 
-                        <div id={styles.TITLE} class="rounded-xl ... bg-zinc-200 ..." style={{
+                        <div id={styles.TITLE} class="rounded-xl ... border-stone-800 ..." style={{
                             gridArea: "TITLE",
                             position: "relative",
                             overflow: "hidden",
-                            height: "auto"
+                            height: "auto",
+                            background: "#f5f5f4"
                         }}>
                             <Chart_9 />
                         </div>
 
 
-                        <div id={styles.DOUGHNUT} class="rounded-xl ..." style={{
+                        <div id={styles.DOUGHNUT} class="rounded-xl ... border-stone-800 ..." style={{
                             gridArea: "DOUGHNUT",
                             position: "relative",
                             overflow: "hidden",
-                            height: "250px"
+                            height: "250px",
+                            background: "#f5f5f4"
                         }}>
 
-                            <div id={styles.DOUGHNUT_1} class="rounded-xl ... bg-zinc-200 ..." style={{
+                            <div id={styles.DOUGHNUT_1} class="rounded-xl ... border-stone-800 ..." style={{
                                 gridArea: "DOUGHNUT_1",
                                 position: "relative",
                                 overflow: "hidden",
-                                height: "100%"
+                                height: "100%",
+                                background: "#f5f5f4"
                             }}>
                                 <Chart_10 data={treeMapData}/>
                             </div>
 
-                            <div id={styles.DOUGHNUT_2} class="rounded-xl ... bg-zinc-200 ..." style={{
+                            <div id={styles.DOUGHNUT_2} class="rounded-xl ... border-stone-800 ..." style={{
                                 gridArea: "DOUGHNUT_2",
                                 position: "relative",
                                 overflow: "hidden",
-                                height: "100%"
+                                height: "100%",
+                                background: "#f5f5f4"
                             }}>
                             </div>
 
@@ -160,78 +166,86 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     </div>
 
                  
-                    <div id={styles.TREE} class="rounded-xl ... bg-zinc-200 ..." style={{
+                    <div id={styles.TREE} class="rounded-xl ... border-stone-800 ..." style={{
                         gridArea: "TREE",
                         position: "relative",                        
                         overflow: "hidden",  
-                        height: "450px"}}>
+                        height: "450px",
+                        background: "#f5f5f4"}}>
 
                              {/*<Chart_4/>*/}
                     </div>
 
-                    <div id={styles.BAR} class="rounded-xl ... bg-zinc-200 ..." style={{
+                    <div id={styles.BAR} class="rounded-xl ... border-stone-800 ..." style={{
                         gridArea: "BAR",
                         position: "relative",                        
                         overflow: "hidden",  
-                        height: "100%"}}>
+                        height: "100%",
+                        background: "#f5f5f4"}}>
                     </div>
 
 
 
-                        <div id={styles.TREE} class="rounded-xl ... bg-zinc-200 ..." style={{
+                        <div id={styles.TREE} class="rounded-xl ... border-stone-800 ..." style={{
                             gridArea: "TREE",
                             position: "relative",
                             overflow: "hidden",
-                            height: "450px"
+                            height: "450px",
+                            background: "#f5f5f4"
                         }}>
 
                             <Chart_4 />
                         </div>
 
-                        <div id={styles.BAR} class="rounded-xl ... bg-zinc-200 ..." style={{
+                        <div id={styles.BAR} class="rounded-xl ... border-stone-800 ..." style={{
                             gridArea: "BAR",
                             position: "relative",
                             overflow: "hidden",
-                            height: "100%"
+                            height: "100%",
+                            background: "#f5f5f4"
                         }}>
                                                         {/* <Chart_8  /> */}
 
                         </div>
 
 
-                        <div id={styles.GRID_HOLDER} class="rounded-xl ..." style={{
+                        <div id={styles.GRID_HOLDER} class="rounded-xl ... border-stone-800 ..." style={{
                             gridArea: "HOLDER",
                             position: "relative",
                             overflow: "hidden",
-                            height: "100%"
+                            height: "100%",
+                            background: "#f5f5f4"
                         }}>
 
-                            <div id={styles.FORCE} class="rounded-xl ... bg-zinc-200 ..." style={{
+                            <div id={styles.FORCE} class="rounded-xl ... border-stone-800 ..." style={{
                                 gridArea: "FORCE",
                                 position: "relative",
                                 overflow: "hidden",
                                 width: "100%",
-                                height: "100%"
+                                height: "100%",
+                                background: "#f5f5f4"
                             }}>
                             </div>
 
-                            <div id={styles.LINE} class="rounded-xl ... bg-zinc-200 ..." style={{
+                            <div id={styles.LINE} class="rounded-xl ... border-stone-800 ..." style={{
                                 gridArea: "LINE",
                                 position: "relative",
                                 overflow: "hidden",
                                 width: "100%",
-                                height: "100%"
+                                height: "100%",
+                                background: "#f5f5f4"
                             }}>
                                                             {/* <Chart_8  /> */}
 
                             </div>
 
-                            <div id={styles.SCATTER} class="rounded-xl ... bg-zinc-200 ..." style={{
+                            <div id={styles.SCATTER} class="rounded-xl ... border-stone-800 ..." style={{
                                 gridArea: "SCATTER",
                                 position: "relative",
                                 overflow: "hidden",
                                 width: "100%",
-                                height: "100%"
+                                height: "100%",
+                                background: "#f5f5f4"
                             }}>
 
 
@@ -256,18 +270,18 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                         <div id={styles.PRODUCT_DESCRIPTION}>
                             <div id={styles.P_TITLE}>
-                                <h2 id={styles._H3} class="text-4xl ... text-stone-400 ... font-avant_garde_bold">
+                                <h2 id={styles._H3} class="text-4xl ... text-stone-700 ... font-avant_garde_bold">
                                     Shop Here
                                 </h2>
                             </div>
 
                             <div id={styles.P_SUBTITLE}>
-                                <h3 id={styles._H3} class="text-lg ... text-stone-200 ... font-avant_garde_bold">
+                                <h3 id={styles._H3} class="text-lg ... text-stone-700 ... font-avant_garde_bold">
                                     This is the description title
                                     Delta compression using up to 12 threads
                                     Compressing objects: 100% (5/5), done.
 
-                                    <a class="text-stone-200 ... font-avant_garde_bold"
+                                    <a class="text-stone-700 ... font-avant_garde_bold"
                                     >
                                         Automated systems for Architects, Designers and Manufacturers.
                                     </a>{" "}
@@ -275,7 +289,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             </div>
 
                             <div id={styles.P_DESCRIPTION}>
-                                <h3 id={styles._H3} class="text-md ... text-stone-200 ... font-geist_regular">
+                                <h3 id={styles._H3} class="text-md ... text-stone-700 ... font-geist_regular">
                                     Delta compression using up to 12 threads
                                     Compressing objects: 100% (5/5), done.
                                     Writing objects: 100% (5/5), 440 bytes | 440.00 KiB/s, done.
