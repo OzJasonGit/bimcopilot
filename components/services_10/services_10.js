@@ -115,7 +115,7 @@ return (
                 <div  id={styles.FAQ}>  
 
                   <div id={styles.FAQ_PADDING}
-                       className="bg-teal-300 ... rounded-xl ... " 
+                       className="bg-stone-50 ... rounded-xl ... border-solid ... border-4 border-stone-800 ... " 
                        style={{ gridArea: "FAQ",
                                 paddingLeft: "60px",
                                 paddingRight: "60px",
