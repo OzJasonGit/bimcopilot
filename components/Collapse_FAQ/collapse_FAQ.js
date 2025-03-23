@@ -84,7 +84,7 @@ const items = [
 
   {
     key: '1',
-    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
+    label: <h3 style={{ alignItems: "end" }}
       class="font-avant_garde_bold"
       id={styles._H3}> What types of digital products do you offer? 
     </h3>,
