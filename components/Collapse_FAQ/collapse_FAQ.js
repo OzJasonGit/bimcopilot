@@ -86,7 +86,7 @@ const items = [
     key: '1',
     label: 
     <h3 style={{ alignItems: "end", }}
-      class="font-avant_garde_bold, text-stone-700 ..."
+      class="font-avant_garde_bold ... text-stone-700 ..."
       id={styles._H3}> What types of digital products do you offer? 
     </h3>,
     children: 
