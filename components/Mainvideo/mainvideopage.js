@@ -49,15 +49,14 @@ const Mainvideopage = ({ stories }) => {
                     {stories[0].subtitle}
                   </h3>
                 
-
-           
-                  
+                             
                 </div>
                 <div class="rounded ..." id={styles.SHARE}></div>
               </div>
             </div>
 
-            <div class="rounded-xl ...  border-4 ... border-stone-200" id={styles.GRAPHIC}></div>
+            <div class="rounded-xl ...  border-4 ... border-stone-200" id={styles.GRAPHIC}>             
+            </div>
 
             <div id={styles.SERVICES_HOLDER}>
               <div id={styles.SERVICES}>
@@ -97,6 +96,11 @@ const Mainvideopage = ({ stories }) => {
               </div>
             </div>
            
+          </div>
+
+          <div class={styles.video_section_back}>
+            <div class="rounded-xl ...  border-4 ... border-stone-200" id={styles.GRAPHIC}>             
+            </div>
           </div>
         </div>
       </section>

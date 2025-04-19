@@ -43,8 +43,6 @@ export default class Services_6 extends Component {
                   </h2>
                   <br/>
                   <br/>
-                  <br/>
-                  <br/>
               </div>
               
 
