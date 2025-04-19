@@ -41,9 +41,12 @@ export default class Services_6 extends Component {
                   >         
                     How we Work
                   </h2>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
               </div>
-              <br/>
-              <br/>
+              
 
 
               <div id={styles.WORKING_IMAGES}>  
