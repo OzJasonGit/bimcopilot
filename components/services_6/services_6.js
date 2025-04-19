@@ -36,7 +36,8 @@ import React, { Component } from 'react';
                   >
                     {" "}
                 
-                    <a class="text-stone-500 ... font-avant_garde_bold">
+                    <a class="text-stone-500 ... font-avant_garde_bold" 
+                    id={styles._H2}>
 
                       " ... Oz's <a class="text-stone-700 ... font-avant_garde_bold"> deep industry knowledge</a> 
                       allows him to <a class="text-stone-700 ... font-avant_garde_bold"> quickly</a> 
