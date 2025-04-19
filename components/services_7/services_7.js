@@ -61,9 +61,9 @@ export default class Services_6 extends Component {
                             </TooltipTrigger>
                             <TooltipContent>
                               <p>
-                                We begin by gathering data—project goals, site context, 
+                                We begin by gathering data—project goals, site context,<br/>
                                 user needs, technical constraints, and business objectives. 
-                                This phase sets the foundation for a tailored, 
+                                This phase sets the foundation<br/> for a tailored, 
                                 tech-forward design strategy.
                               </p>
                             </TooltipContent>
