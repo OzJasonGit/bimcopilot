@@ -89,13 +89,12 @@ return (
                   <br/>
                 
                     <p  id={styles._H3_CENTER}
-                      class=" text-stone-500 ... font-avant_garde_bold ... ">          
-                      Our digital products and technical services streamline workflows, automate branding, 
-                      and accelerate client acquisition—saving you time while maximizing profitability. 
-                      Whether you need a powerful online presence, automated lead generation, or AI-driven 
-                      business growth, our solutions are designed for real impact. Backed by industry experience, 
-                      our tools don’t just support your work—they transform it, giving you a competitive edge 
-                      in an evolving market.                                                       
+                      class=" text-stone-500 ... font-avant_garde_bold ... "> 
+                      Previously, we’ve worked with <a>Perkins and Will</a> on several successful 
+                      projects, streamlining their workflows with custom automation and smart BIM tools. 
+                      By introducing AI-assisted processes and parametric scripting, 
+                      we helped their team reduce manual tasks and enhance precision. 
+                      This enabled them to focus on bold, high-impact design.                                                   
                     </p>               
                 </div>
                 <br/>
