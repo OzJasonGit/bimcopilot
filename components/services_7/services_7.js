@@ -55,7 +55,7 @@ export default class Services_6 extends Component {
                         <Tooltip>
                             <TooltipTrigger asChild>
                               <BreadcrumbLink asChild>
-                                <Link href="/docs/components">Home
+                                <Link href="/docs/components">Discover
                                 </Link>
                               </BreadcrumbLink>
                             </TooltipTrigger>
@@ -78,7 +78,7 @@ export default class Services_6 extends Component {
                           <Tooltip>
                             <TooltipTrigger asChild>
                               <BreadcrumbLink asChild>
-                                <Link href="/docs/components">Components
+                                <Link href="/docs/components">Define
                                 </Link>                               
                               </BreadcrumbLink>
                             </TooltipTrigger>
@@ -102,7 +102,7 @@ export default class Services_6 extends Component {
                           <Tooltip>
                             <TooltipTrigger asChild>
                               <BreadcrumbLink asChild>
-                                <Link href="/docs/components">Breadcrumb
+                                <Link href="/docs/components">Ideate
                                 </Link>                               
                               </BreadcrumbLink>
                             </TooltipTrigger>
@@ -126,7 +126,7 @@ export default class Services_6 extends Component {
                           <Tooltip>
                             <TooltipTrigger asChild>
                               <BreadcrumbLink asChild>
-                                <Link href="/docs/components">This is the Sparta
+                                <Link href="/docs/components">Develop
                                 </Link>                               
                               </BreadcrumbLink>
                             </TooltipTrigger>
@@ -150,7 +150,7 @@ export default class Services_6 extends Component {
                           <Tooltip>
                             <TooltipTrigger asChild>
                               <BreadcrumbLink asChild>
-                                <Link href="/docs/components">Luke I am your Father
+                                <Link href="/docs/components">Deliver
                                 </Link>                               
                               </BreadcrumbLink>
                             </TooltipTrigger>
