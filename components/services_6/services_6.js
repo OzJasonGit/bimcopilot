@@ -32,20 +32,21 @@ import React, { Component } from 'react';
                 <div id={styles.SUB_TAG}>
                   <h2
                     id={styles._H2}
-                    class="text-center ... text-stone-500 ... font-avant_garde_bold"
-                  >
-                    {" "}
-                
+                    class="text-center ... text-stone-500 ... font-avant_garde_bold">
+                      
+                    {" "}               
                     <a class="text-stone-500 ... font-avant_garde_bold" 
-                    id={styles._H2}>
 
-                      " ... Oz's <a class="text-stone-700 ... font-avant_garde_bold"> deep industry knowledge</a> 
+                      id={styles._H2}>
+                      " ... Oz's <a class="text-stone-700 ... font-avant_garde_bold"> deep industry knowledge </a> 
                       allows him to <a class="text-stone-700 ... font-avant_garde_bold"> quickly</a> 
-                      <a class="text-stone-700 ... font-avant_garde_bold"> identify problems</a> 
-                      and deliver <a class="text-stone-700 ... font-avant_garde_bold"> actionable strategies</a>. "
-                                
-                    </a>
-                    . <br /> <br />{" "}
+                      <a class="text-stone-700 ... font-avant_garde_bold"> identify problems </a> 
+                      and deliver <a class="text-stone-700 ... font-avant_garde_bold"> actionable strategies</a>. " 
+
+                    </a>. 
+                    <br /> 
+                    <br />
+                    {" "}
                   
                   </h2>
                 </div>
