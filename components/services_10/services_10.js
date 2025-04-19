@@ -90,7 +90,7 @@ return (
                 
                     <p  id={styles._H3_CENTER}
                       class=" text-stone-500 ... font-avant_garde_bold ... "> 
-                      Previously, we’ve worked with <a>Perkins and Will</a> on several successful 
+                      Previously, we’ve worked with < a class="text-stone-700 ...">Perkins and Will</a> on several successful 
                       projects, streamlining their workflows with custom automation and smart BIM tools. 
                       By introducing AI-assisted processes and parametric scripting, 
                       we helped their team reduce manual tasks and enhance precision. 
