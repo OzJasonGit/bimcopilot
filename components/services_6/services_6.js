@@ -26,7 +26,7 @@ import React, { Component } from 'react';
                     class="text-center ... text-lg ... text-stone-700 ... font-avant_garde_bold" 
                   >
            
-                    <a class="text-2xl ..."> Services </a> 
+                    <a class="text-sm"> Pedro Sanchez Reche, Foster and Partners, London, UK </a> 
                   </h2>
                 </div>
                 <div id={styles.SUB_TAG}>
@@ -36,23 +36,13 @@ import React, { Component } from 'react';
                   >
                     {" "}
                 
-                    <a class="text-stone-700 ... font-avant_garde_bold">
-                      
+                    <a class="text-stone-500 ... font-avant_garde_bold">
 
-                    </a>{" "}
-                    <a  class="text-2xl ...">"</a> The world is changing and so is{" "}
-                    <a class="text-stone-700 ... font-avant_garde_bold">
-                      architecture
-                    </a>
-                    . Discover new narratives, build better{" "}
-                    <a class="text-stone-700 ... font-avant_garde_bold">
-                      systems
-                    </a>
-                    , make more{" "}
-                    <a class="text-stone-700 ... font-avant_garde_bold">money</a>,
-                    be more{" "}
-                    <a class="text-stone-700 ... font-avant_garde_bold">
-                      sustainable <a class="text-2xl ...">"</a>
+                      " ... Oz's <a class="text-stone-700 ... font-avant_garde_bold"> deep industry knowledge</a> 
+                      allows him to <a class="text-stone-700 ... font-avant_garde_bold"> quickly</a> 
+                      <a class="text-stone-700 ... font-avant_garde_bold"> identify problems</a> 
+                      and deliver <a class="text-stone-700 ... font-avant_garde_bold"> actionable strategies</a>. "
+                                
                     </a>
                     . <br /> <br />{" "}
                   
