@@ -168,8 +168,9 @@ return (
                       or <a class="text-stone-700 ... font-avant_garde_bold">developer</a> ready to work 
                       <a class="text-stone-700 ... font-avant_garde_bold">smarter</a>, 
                       move <a class="text-stone-700 ... font-avant_garde_bold">faster</a>, and deliver 
-                      <a class="text-stone-700 ... font-avant_garde_bold">better</a>. This is for you. Our tools cut 
-                      friction, boost precision, and free you up to focus on what 
+                      <a class="text-stone-700 ... font-avant_garde_bold"> better</a>. This is for you. Our tools 
+                      <a class="text-stone-700 ... font-avant_garde_bold">cut friction</a>, 
+                      <a class="text-stone-700 ... font-avant_garde_bold">boost precision</a>, and free you up to focus on what 
                       matters most, <a class="text-stone-700 ... font-avant_garde_bold">great design and big ideas</a>.
                                                        
                      <br /> <br />
