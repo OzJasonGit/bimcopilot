@@ -52,12 +52,13 @@ const Mainvideopage = ({ stories }) => {
                 
                              
                 </div>
-                <div class="rounded ..." id={styles.SHARE}></div>
+                <div class="rounded ..." id={styles.SHARE}>                
+                </div>
               </div>
             </div>
 
-            <div class="rounded-xl ...  border-4 ... " id={styles.GRAPHIC}>             
-            </div>
+            {/*<div class="rounded-xl ...  border-4 ... " id={styles.GRAPHIC}>             
+            </div>*/}
 
             <div id={styles.SERVICES_HOLDER}>
               <div id={styles.SERVICES}>
