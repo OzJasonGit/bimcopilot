@@ -108,7 +108,7 @@ const Mainvideopage = ({ stories }) => {
           <div class={styles.grid_0_main_back} style={{
                     gridArea: "two"                   
                 }}>
-            <div class={styles.video_section}>
+            <div class={styles.video_section_back}>
               <div class="rounded-xl ...  border-4 ... border-stone-200" id={styles.GRAPHIC}>             
               </div>          
             </div>
