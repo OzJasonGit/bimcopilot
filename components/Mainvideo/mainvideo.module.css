@@ -118,13 +118,13 @@
 #SHADOW_SECTION {
   position: relative;
   width: 100%;
-  display: inline-block;
+  display: flex;
   -webkit-box-pack: center;
   justify-content: center;
   background-color: rgb(23, 23, 23);
   z-index: -30000;
   top: 0px;
-  align-content: center ;
+  
 }
 
 #SHADOW_SECTION_BLOG {
