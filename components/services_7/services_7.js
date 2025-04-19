@@ -61,8 +61,8 @@ export default class Services_6 extends Component {
                             </TooltipTrigger>
                             <TooltipContent>
                               <p>
-                                We begin by gathering data—project goals, site context,<br/>
-                                user needs, technical constraints, and business objectives. 
+                                We begin by gathering data—project goals, site context,
+                                user needs,<br/> technical constraints, and business objectives. 
                                 This phase sets the foundation<br/> for a tailored, 
                                 tech-forward design strategy.
                               </p>
@@ -90,8 +90,8 @@ export default class Services_6 extends Component {
                             <TooltipContent>
                               <p>
                                 Using the insights collected, 
-                                we clarify the problem and outline key design parameters. 
-                                This is where we align with the client on scope, timelines, 
+                                we clarify the problem and outline<br/> key design parameters. 
+                                This is where we align with the client on<br/> scope, timelines, 
                                 sustainability goals, and desired outcomes.
                               </p>
                             </TooltipContent>
@@ -118,9 +118,9 @@ export default class Services_6 extends Component {
                             </TooltipTrigger>
                             <TooltipContent>
                               <p>
-                                We generate and explore concepts using AI-assisted design tools, 
+                                We generate and explore concepts using AI-assisted design tools,<br/> 
                                 parametric workflows, and creative thinking. 
-                                This is a fast-paced, iterative phase where 
+                                This is a fast-paced,<br/> iterative phase where 
                                 innovation meets practicality.
                               </p>
                             </TooltipContent>
@@ -147,9 +147,9 @@ export default class Services_6 extends Component {
                             </TooltipTrigger>
                             <TooltipContent>
                               <p>
-                                We refine selected concepts into robust, data-informed solutions. 
+                                We refine selected concepts into robust, data-informed solutions.<br/>
                                 BIM integration, automation, and technical 
-                                detailing happen here—ensuring precision, efficiency, 
+                                detailing happen here—ensuring<br/> precision, efficiency, 
                                 and real-world viability.
                               </p>
                             </TooltipContent>
@@ -177,8 +177,8 @@ export default class Services_6 extends Component {
                             <TooltipContent>
                               <p>
                                 Final outputs are prepared and delivered—design files, 
-                                digital products, templates, and technical packages—ready 
-                                for implementation. We ensure everything is optimized, 
+                                digital products,<br/> templates, and technical packages—ready 
+                                for implementation.<br/> We ensure everything is optimized, 
                                 scalable, and aligned with your goals.
                               </p>
                             </TooltipContent>
