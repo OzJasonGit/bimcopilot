@@ -60,7 +60,12 @@ export default class Services_6 extends Component {
                               </BreadcrumbLink>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p>Add to library</p>
+                              <p>
+                                We begin by gathering data—project goals, site context, 
+                                user needs, technical constraints, and business objectives. 
+                                This phase sets the foundation for a tailored, 
+                                tech-forward design strategy.
+                              </p>
                             </TooltipContent>
                         </Tooltip>
                       </TooltipProvider>
@@ -83,7 +88,12 @@ export default class Services_6 extends Component {
                               </BreadcrumbLink>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p>Add to library</p>
+                              <p>
+                                Using the insights collected, 
+                                we clarify the problem and outline key design parameters. 
+                                This is where we align with the client on scope, timelines, 
+                                sustainability goals, and desired outcomes.
+                              </p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>                                                                                   
@@ -107,7 +117,12 @@ export default class Services_6 extends Component {
                               </BreadcrumbLink>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p>Add to library</p>
+                              <p>
+                                We generate and explore concepts using AI-assisted design tools, 
+                                parametric workflows, and creative thinking. 
+                                This is a fast-paced, iterative phase where 
+                                innovation meets practicality.
+                              </p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
@@ -131,7 +146,12 @@ export default class Services_6 extends Component {
                               </BreadcrumbLink>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p>Add to library</p>
+                              <p>
+                                We refine selected concepts into robust, data-informed solutions. 
+                                BIM integration, automation, and technical 
+                                detailing happen here—ensuring precision, efficiency, 
+                                and real-world viability.
+                              </p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
@@ -155,7 +175,12 @@ export default class Services_6 extends Component {
                               </BreadcrumbLink>
                             </TooltipTrigger>
                             <TooltipContent>
-                              <p>Add to library</p>
+                              <p>
+                                Final outputs are prepared and delivered—design files, 
+                                digital products, templates, and technical packages—ready 
+                                for implementation. We ensure everything is optimized, 
+                                scalable, and aligned with your goals.
+                              </p>
                             </TooltipContent>
                           </Tooltip>
                         </TooltipProvider>
