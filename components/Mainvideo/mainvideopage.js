@@ -17,8 +17,11 @@ const Mainvideopage = ({ stories }) => {
 
       <section id={styles.SHADOW_SECTION} class={styles.center_holder}>
 
+        <div class={styles.half_2}>
 
-        <div class={styles.grid_0_main}>
+          <div class={styles.grid_0_main} style={{
+                    gridArea: "one"                   
+                }}>
           <div class={styles.video_section}>
             <div id={styles.VIDEO_LATEST_HOLDER}>
 
@@ -99,15 +102,25 @@ const Mainvideopage = ({ stories }) => {
             </div>
            
           </div>
+          </div>
+
+
+          <div class={styles.grid_0_main_back} style={{
+                    gridArea: "two"                   
+                }}>
+            <div class={styles.video_section}>
+              <div class="rounded-xl ...  border-4 ... border-stone-200" id={styles.GRAPHIC}>             
+              </div>          
+            </div>
+          </div>
+
         </div>
 
 
-        {/*<div class={styles.grid_0_main_back}>
-          <div class={styles.video_section}>
-            <div class="rounded-xl ...  border-4 ... border-stone-200" id={styles.GRAPHIC}>             
-            </div>          
-          </div>
-        </div>*/}
+        
+
+
+        {/**/}
 
 
       </section>

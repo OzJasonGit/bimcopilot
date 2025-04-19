@@ -1124,6 +1124,20 @@
 /*SECTION_8////PROCESS/////////////////////////////////////////////////////////////////////////////////*/
 
 /*SECTION_9////VIDEO///////////////////////////////////////////////////////////////////////////////////*/
+
+.half_2 {
+
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "one"
+    "two";
+}
+
+
 .video_section {
   grid-area: MAIN-AREA;
   display: grid;
