@@ -102,12 +102,12 @@ const Mainvideopage = ({ stories }) => {
         </div>
 
 
-        <div class={styles.grid_0_main_back}>
+        {/*<div class={styles.grid_0_main_back}>
           <div class={styles.video_section}>
             <div class="rounded-xl ...  border-4 ... border-stone-200" id={styles.GRAPHIC}>             
             </div>          
           </div>
-        </div>
+        </div>*/}
 
 
       </section>
