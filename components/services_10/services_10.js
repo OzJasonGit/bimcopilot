@@ -162,21 +162,19 @@ return (
                       class="text-right ... text-neutral-500 ... font-avant_garde_bold"
                     >
                       {" "}
-                  
-                      <a class="text-stone-700 ... font-avant_garde_bold"
-                        >
-                        Automated systems for Architects, Designers and Manufacturers.
-                      </a>{" "}
-                      Gain valuable insights, streamline your business, be more{" "} 
-                      <a class="text-stone-700 ... font-avant_garde_bold"
-                        >
-                        profitable 
-                      </a>, be more{" "}
-                      <a class="text-stone-700 ... font-avant_garde_bold"
-                        >
-                        sustainable
-                      </a>                  
-                      . <br /> <br />{" "}                 
+
+                      If you’re an <a class="text-stone-700 ... font-avant_garde_bold">architect</a>, 
+                      <a class="text-stone-700 ... font-avant_garde_bold">designer</a>, 
+                      or <a class="text-stone-700 ... font-avant_garde_bold">developer</a> ready to work 
+                      <a class="text-stone-700 ... font-avant_garde_bold">smarter</a>, 
+                      move <a class="text-stone-700 ... font-avant_garde_bold">faster</a>, and deliver 
+                      <a class="text-stone-700 ... font-avant_garde_bold">better</a>. This is for you. Our tools cut 
+                      friction, boost precision, and free you up to focus on what 
+                      matters most, <a class="text-stone-700 ... font-avant_garde_bold">great design and big ideas</a>.
+                                                       
+                     <br /> <br />
+                     
+                     {" "}                 
                     </h3>
                                                      
                   </div>
@@ -185,6 +183,7 @@ return (
      
           </div>
       </section>
+ 
     </>
 
     )
