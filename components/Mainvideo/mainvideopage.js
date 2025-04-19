@@ -36,10 +36,6 @@ const Mainvideopage = ({ stories }) => {
                 <div id={styles.V_TITLE_HOLDER}>
 
 
-
-
-
-
                   <h2
                     id={styles._H2}
                     class=" text-slate-100 ... drop-shadow-xl font-avant_garde_bold">
@@ -60,7 +56,7 @@ const Mainvideopage = ({ stories }) => {
               </div>
             </div>
 
-            <div class="rounded-xl ...  border-4 ... border-stone-200" id={styles.GRAPHIC}>             
+            <div class="rounded-xl ...  border-4 ... " id={styles.GRAPHIC}>             
             </div>
 
             <div id={styles.SERVICES_HOLDER}>
