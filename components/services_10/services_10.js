@@ -166,7 +166,7 @@ return (
                       If you’re an <a class="text-stone-700 ... font-avant_garde_bold">architect</a>, 
                       <a class="text-stone-700 ... font-avant_garde_bold">designer</a>, 
                       or <a class="text-stone-700 ... font-avant_garde_bold">developer</a> ready to work 
-                      <a class="text-stone-700 ... font-avant_garde_bold">smarter</a>, 
+                      <a class="text-stone-700 ... font-avant_garde_bold"> smarter</a>, 
                       move <a class="text-stone-700 ... font-avant_garde_bold">faster</a>, and deliver 
                       <a class="text-stone-700 ... font-avant_garde_bold"> better</a>. This is for you. Our tools 
                       <a class="text-stone-700 ... font-avant_garde_bold">cut friction</a>, 
