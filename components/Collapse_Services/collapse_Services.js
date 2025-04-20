@@ -43,22 +43,22 @@ const items = [
     <p style={{ position: "relative", left: "25px" }}
        class="font-geist_regular ... text-stone-200 ..."> 
 
-    {text_1} 
-    <br/>    
-    <ul class="list-disc ... font-geist_regular ... text-stone-200 ..."
-        id={styles._H3_2}
-        style={{ position: "relative", left: "35px" }}>
-        <li> <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools - </a> 
-            Bespoke templates and families - 
-            Streamlined documentation workflows - 
-            Cloud coordination
-        </li>
+      {text_1} 
+      <br/>    
+      <ul class="list-disc ... font-geist_regular ... text-stone-200 ..."
+          id={styles._H3_2}
+          style={{ position: "relative", left: "35px" }}>
+          <li> <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools - </a> 
+              Bespoke Revit templates and families - 
+              Streamlined documentation workflows - 
+              Cloud coordination - 
+              Bespoke Dynamo scripts - 
+          </li>
 
-        <li> <a class="font-geist_semibold ... text-stone-200 ...">BIM & Project Management Resources</a> – Smart templates, workflows, 
-                and automation tools to improve coordination and efficiency.</li>
-    </ul>
-    <a class="font-avant_garde_bold ... text-stone-200 ..."><Link href="/products">Learn More here!</Link></a>
-
+          <li> <a class="font-geist_semibold ... text-stone-200 ...">BIM & Project Management Resources</a> – Smart templates, workflows, 
+                  and automation tools to improve coordination and efficiency.
+          </li>
+      </ul>
     </p>
     
 
