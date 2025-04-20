@@ -95,7 +95,9 @@ const items = [
           id={styles._H3_2}
           style={{ position: "relative", left: "35px" }}>
           
-          <li> <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools - </a> 
+          <li class="font-geist_regular ... text-stone-400 ..."> 
+            <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools - 
+            </a> 
               Bespoke Revit templates and families - 
               <br/> Streamlined documentation workflows - 
               Cloud coordination - 
