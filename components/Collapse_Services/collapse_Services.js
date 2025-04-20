@@ -73,13 +73,30 @@ const items = [
 
   {
     key: '2',
-    label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
-      class="font-avant_garde_bold ... "
-      id={styles._H3}>AI-driven Automation and Tech Application
-      <br/> 
-    </h3>,
-    children: <p style={{ position: "relative", left: "25px" }} 
-                 class="font-geist_regular ... text-stone-200 ..."> {text_2} </p>
+    label:  <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
+              class="font-avant_garde_bold ... "
+              id={styles._H3}>AI-driven Automation and Tech Application
+              <br/> 
+            </h3>,
+    children: 
+
+    <p style={{ position: "relative", left: "25px" }} 
+        class="font-geist_regular ... text-stone-200 ..."> 
+        {text_2} 
+        <br/> 
+        <ul class="list-disc ... font-geist_regular ... text-stone-200 ..."
+          id={styles._H3_2}
+          style={{ position: "relative", left: "35px" }}>
+          
+          <li> <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools - </a> 
+              Bespoke Revit templates and families - 
+              <br/> Streamlined documentation workflows - 
+              Cloud coordination - 
+              Bespoke Dynamo scripting. 
+          </li>  
+                 
+        </ul>
+    </p>
   },
 
   {
