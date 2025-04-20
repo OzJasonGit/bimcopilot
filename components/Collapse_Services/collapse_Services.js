@@ -36,7 +36,7 @@ const items = [
     key: '1',
     label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
       class="font-avant_garde_bold ... "
-      id={styles._H3}> BIM Optimization & Implementation
+      id={styles._H3}> BIM Optimization, Management & Implementation
     </h3>,
     children: 
     
@@ -50,7 +50,7 @@ const items = [
           style={{ position: "relative", left: "35px" }}>
           <li> <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools - </a> 
               Bespoke Revit templates and families - 
-              Streamlined documentation workflows - 
+              <br/> Streamlined documentation workflows - 
               Cloud coordination - 
               Bespoke Dynamo scripting. 
           </li>
