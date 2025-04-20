@@ -52,11 +52,12 @@ const items = [
               Bespoke Revit templates and families - 
               Streamlined documentation workflows - 
               Cloud coordination - 
-              Bespoke Dynamo scripts - 
+              Bespoke Dynamo scripting. 
           </li>
 
-          <li> <a class="font-geist_semibold ... text-stone-200 ...">BIM & Project Management Resources</a> – Smart templates, workflows, 
-                  and automation tools to improve coordination and efficiency.
+          <li> <a class="font-geist_semibold ... text-stone-200 ...">Advanced Parametric Design – </a> 
+              Smart templates, workflows, 
+              and automation tools to improve coordination and efficiency.
           </li>
       </ul>
     </p>
