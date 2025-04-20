@@ -56,8 +56,15 @@ const items = [
           </li>
 
           <li> <a class="font-geist_semibold ... text-stone-200 ...">Advanced Parametric Design – </a> 
-              Smart templates, workflows, 
-              and automation tools to improve coordination and efficiency.
+              Grasshopper facade and envelope Scripts - 
+              Parametric design solutions -  
+              Advanced parametric form finding -  
+          </li>
+
+          <li> <a class="font-geist_semibold ... text-stone-200 ...">Advanced Parametric Design – </a> 
+              Grasshopper facade and envelope Scripts - 
+              Parametric design solutions -  
+              Advanced parametric form finding -  
           </li>
       </ul>
     </p>
