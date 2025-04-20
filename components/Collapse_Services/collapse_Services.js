@@ -47,25 +47,30 @@ const items = [
           id={styles._H3_2}
           style={{ position: "relative", left: "35px" }}>
           <li class="font-geist_regular ... text-stone-400 ..."> 
-              <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools - </a> 
+              <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools - 
+              </a> 
                 Bespoke Revit templates and families - 
                 <br/> Streamlined documentation workflows - 
                 Cloud coordination - 
                 Bespoke Dynamo scripting. 
           </li>
 
-          <li> <a class="font-geist_semibold ... text-stone-200 ...">Advanced Parametric Design – </a> 
-              Grasshopper facade and envelope Scripts - 
-              Parametric design solutions -  
-              Advanced parametric form finding.   
+          <li class="font-geist_regular ... text-stone-400 ..."> 
+              <a class="font-geist_semibold ... text-stone-200 ...">Advanced Parametric Design – 
+              </a> 
+                Grasshopper facade and envelope Scripts - 
+                Parametric design solutions -  
+                Advanced parametric form finding.   
           </li>
 
-          <li> <a class="font-geist_semibold ... text-stone-200 ...">Project and Design Management – </a> 
-              End-to-end project coordination (Coordination between clients,
-              <br/> consultants, and contractors) - 
-              QA/QC checklists tailored to your project -  
-              Resolving conflicts and aligning goals early -  
-              <br/> Budget tracking and resource forecasting.
+          <li class="font-geist_regular ... text-stone-400 ..."> 
+              <a class="font-geist_semibold ... text-stone-200 ...">Project and Design Management – 
+              </a> 
+                End-to-end project coordination (Coordination between clients,
+                <br/> consultants, and contractors) - 
+                QA/QC checklists tailored to your project -  
+                Resolving conflicts and aligning goals early -  
+                <br/> Budget tracking and resource forecasting.
           </li>
       </ul>
     </p>
