@@ -40,9 +40,11 @@ const items = [
     <p style={{ position: "relative", left: "25px" }}
       class="font-geist_regular ... text-stone-200 ..."> 
 
-      {text_1} 
+      <a class="font-geist_semibold ... text-stone-200 ..."> 
+        {text_1} 
+      </a>
       <br/> 
-      <br/>       
+            
       <ul class="list-disc ..."
           id={styles._H3_2}
           style={{ position: "relative", left: "35px" }}>
@@ -89,15 +91,18 @@ const items = [
     children: 
 
     <p style={{ position: "relative", left: "25px" }} 
-        class="font-geist_semibold ... text-stone-200 ..."> 
-        {text_2} 
+        class="font-geist_regular ... text-stone-200 ...">
+           
+        <a class="font-geist_semibold ... text-stone-200 ...">
+          {text_2} 
+        </a>
         <br/> 
         <ul class="list-disc ... "
           id={styles._H3_2}
           style={{ position: "relative", left: "35px" }}>
           
           <li class="font-geist_regular ... text-stone-400 ..."> 
-            <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools - 
+            <a class="font-geist_semibold ... text-stone-200 ...">AI driven specification writing - 
             </a> 
               Bespoke Revit templates and families - 
               <br/> Streamlined documentation workflows - 
