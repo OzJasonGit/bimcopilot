@@ -40,7 +40,7 @@ const items = [
     <p style={{ position: "relative", left: "25px" }}
       class="font-geist_regular ... text-stone-200 ..."> 
 
-      <a class="font-geist_semibold ... text-stone-200 ..."> 
+      <a class="font-geist_regular ... text-stone-200 ..."> 
         {text_1} 
       </a>
       <br/> 
@@ -92,8 +92,8 @@ const items = [
 
     <p style={{ position: "relative", left: "25px" }} 
         class="font-geist_regular ... text-stone-200 ...">
-           
-        <a class="font-geist_semibold ... text-stone-200 ...">
+
+        <a class="font-geist_regular ... text-stone-200 ...">
           {text_2} 
         </a>
         <br/> 
@@ -104,7 +104,25 @@ const items = [
           <li class="font-geist_regular ... text-stone-400 ..."> 
             <a class="font-geist_semibold ... text-stone-200 ...">AI driven specification writing - 
             </a> 
-              Bespoke Revit templates and families - 
+              {" "}Bespoke Revit templates and families - 
+              <br/> Streamlined documentation workflows - 
+              Cloud coordination - 
+              Bespoke Dynamo scripting. 
+          </li>  
+
+          <li class="font-geist_regular ... text-stone-400 ..."> 
+            <a class="font-geist_semibold ... text-stone-200 ...">AI driven specification writing - 
+            </a> 
+              {" "}Bespoke Revit templates and families - 
+              <br/> Streamlined documentation workflows - 
+              Cloud coordination - 
+              Bespoke Dynamo scripting. 
+          </li>  
+
+          <li class="font-geist_regular ... text-stone-400 ..."> 
+            <a class="font-geist_semibold ... text-stone-200 ...">AI driven specification writing - 
+            </a> 
+              {" "}Bespoke Revit templates and families - 
               <br/> Streamlined documentation workflows - 
               Cloud coordination - 
               Bespoke Dynamo scripting. 
