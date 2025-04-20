@@ -38,11 +38,12 @@ const items = [
     children: 
     
     <p style={{ position: "relative", left: "25px" }}
-       class="font-geist_regular ... text-stone-200 ..."> 
+       class="font-geist_semibold ... text-stone-200 ..."> 
 
       {text_1} 
-      <br/>    
-      <ul class="list-disc ... font-geist_regular ... text-stone-400 ..."
+      <br/> 
+      <br/>       
+      <ul class="list-disc ... font-geist_regular ... text-stone-300 ..."
           id={styles._H3_2}
           style={{ position: "relative", left: "35px" }}>
           <li> <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools - </a> 
