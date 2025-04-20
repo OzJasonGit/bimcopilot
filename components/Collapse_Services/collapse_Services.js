@@ -58,13 +58,15 @@ const items = [
           <li> <a class="font-geist_semibold ... text-stone-200 ...">Advanced Parametric Design – </a> 
               Grasshopper facade and envelope Scripts - 
               Parametric design solutions -  
-              Advanced parametric form finding -  
+              Advanced parametric form finding.   
           </li>
 
-          <li> <a class="font-geist_semibold ... text-stone-200 ...">Advanced Parametric Design – </a> 
-              Grasshopper facade and envelope Scripts - 
-              Parametric design solutions -  
-              Advanced parametric form finding -  
+          <li> <a class="font-geist_semibold ... text-stone-200 ...">Project and Design Management – </a> 
+              End-to-end project coordination (Coordination between clients,
+              <br/> consultants, and contractors) - 
+              QA/QC checklists tailored to your project -  
+              Resolving conflicts and aligning goals early -  
+              <br/> Budget tracking and resource forecasting.
           </li>
       </ul>
     </p>
