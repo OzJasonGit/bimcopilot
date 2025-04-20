@@ -38,7 +38,7 @@ const items = [
     children: 
     
     <p style={{ position: "relative", left: "25px" }}
-      class="font-geist_semibold ... text-stone-200 ..."> 
+      class="font-geist_regular ... text-stone-200 ..."> 
 
       {text_1} 
       <br/> 
@@ -57,7 +57,7 @@ const items = [
           </li>
 
           <li class="font-geist_regular ... text-stone-400 ..."> 
-              <a class="font-geist_semibold ... text-stone-200 ...">Advanced Parametric Design – 
+              <a class="font-geist_semibold ... text-stone-200 ...">Advanced Parametric Design -
               </a> 
                 {" "}Grasshopper facade and envelope Scripts - 
                 Parametric design solutions -  
@@ -65,7 +65,7 @@ const items = [
           </li>
 
           <li class="font-geist_regular ... text-stone-400 ..."> 
-              <a class="font-geist_semibold ... text-stone-200 ...">Project and Design Management – 
+              <a class="font-geist_semibold ... text-stone-200 ...">Project and Design Management - 
               </a> 
                 {" "}End-to-end project coordination (Coordination between clients,
                 <br/> consultants, and contractors) - 
