@@ -11,9 +11,8 @@ import Link from "next/link";
 
 
 const text_1 = `
-We offer a range of digital products and technical services designed to 
-streamline design workflows, enhance project management and are always adding to our library. 
-These optimize efficiency and our solutions include the following:
+We optimize your BIM systems for clarity, speed, and effortless collaboration,
+whether you're just getting started or growing your business.
 `;
 
 const text_2 = `
@@ -38,7 +37,7 @@ const items = [
     key: '1',
     label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
       class="font-avant_garde_bold ... "
-      id={styles._H3}> What types of digital products do you offer? 
+      id={styles._H3}> BIM Optimization & Implementation
     </h3>,
     children: 
     
