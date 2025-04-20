@@ -104,10 +104,10 @@ const items = [
           <li class="font-geist_regular ... text-stone-400 ..."> 
             <a class="font-geist_semibold ... text-stone-200 ...">AI driven specification writing - 
             </a> 
-              {" "}Bespoke Revit templates and families - 
-              <br/> Streamlined documentation workflows - 
-              Cloud coordination - 
-              Bespoke Dynamo scripting. 
+              {" "}Custom GPTs and AI tools trained on your projects - 
+              <br/> AI driven specification writing - 
+              AI support embedded in your design platforms -
+              . 
           </li>  
 
           <li class="font-geist_regular ... text-stone-400 ..."> 
