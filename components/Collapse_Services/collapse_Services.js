@@ -11,8 +11,7 @@ import Link from "next/link";
 
 
 const text_1 = `
-We optimize your BIM systems for clarity, speed, and effortless collaboration,
-whether you're just getting started or growing your business.
+We optimize your BIM systems for clarity, speed, and effortless collaboration.
 `;
 
 const text_2 = `
@@ -49,8 +48,12 @@ const items = [
     <ul class="list-disc ... font-geist_regular ... text-stone-200 ..."
         id={styles._H3_2}
         style={{ position: "relative", left: "35px" }}>
-        <li> <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools</a> – Grasshopper scripts and 
-                AI-powered solutions to speed up complex design tasks.</li>
+        <li> <a class="font-geist_semibold ... text-stone-200 ...">Design Automation Tools</a> 
+            Bespoke templates and families - 
+            Streamlined documentation workflows - 
+            Cloud coordination
+        </li>
+
         <li> <a class="font-geist_semibold ... text-stone-200 ...">BIM & Project Management Resources</a> – Smart templates, workflows, 
                 and automation tools to improve coordination and efficiency.</li>
     </ul>
