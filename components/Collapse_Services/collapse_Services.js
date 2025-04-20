@@ -38,7 +38,7 @@ const items = [
     children: 
     
     <p style={{ position: "relative", left: "25px" }}
-       class="font-geist_regular ... text-stone-200 ..."> 
+       class="font-geist_semibold ... text-stone-200 ..."> 
 
       {text_1} 
       <br/> 
