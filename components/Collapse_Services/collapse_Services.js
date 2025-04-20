@@ -16,10 +16,7 @@ We optimize your BIM systems for clarity, speed, and effortless collaboration.
 
 const text_2 = `
 Our AI-driven tools automate design, eliminate inefficiencies, 
-and enhance accuracy—helping your business work smarter and faster. 
-From generating complex designs to optimizing workflows, we cut manual work, 
-reduce errors, and lower costs. The result? Faster project delivery, 
-increased precision, and a powerful competitive edge.
+and enhance accuracy. 
 `;
 
 const text_3 = `
@@ -78,8 +75,8 @@ const items = [
     key: '2',
     label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
       class="font-avant_garde_bold ... "
-      id={styles._H3}> How can your AI-driven tools help my architecture, design
-      <br/> or manufacturing business?
+      id={styles._H3}>AI-driven Automation and Tech Application
+      <br/> 
     </h3>,
     children: <p style={{ position: "relative", left: "25px" }} 
                  class="font-geist_regular ... text-stone-200 ..."> {text_2} </p>
