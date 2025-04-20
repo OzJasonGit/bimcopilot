@@ -62,7 +62,8 @@ return (
 
                       <div id={styles.SERVICE_1_HOLDER}>
                         <div id={styles.SERVICE_TITLE}>
-                          <h3  class="text-left ... text-stone-200 ... font-avant_garde_bold" id={styles._H2}>Building Information Modelling (BIM)
+                          <h3  class="text-left ... text-stone-200 ... font-avant_garde_bold" 
+                          id={styles._H2}>Architecture, Design and Technology 
                           </h3>
                         </div>
 
@@ -70,28 +71,6 @@ return (
                             <Collapsed_Services/>              
                         </div>
                       </div>
-
-                      {/*<div id={styles.SERVICE_2_HOLDER}>
-                        <div id={styles.SERVICE_TITLE}>
-                          <h3 class="font-avant_garde_bold ... text-stone-700 ...  text-right ..." id={styles._H2}>Analytics and Automation
-                          </h3>
-                        </div> 
-
-                        <div id={styles.COLLAPSE_HOLDER}> 
-                          <Collapsed_2/>                                 
-                        </div>                
-                      </div>
-
-                      <div id={styles.SERVICE_3_HOLDER}>
-                        <div id={styles.SERVICE_TITLE}>
-                          <h3 class="font-avant_garde_bold ... text-stone-700 ...  text-left ..." id={styles._H2}>Design and Tech
-                          </h3>  
-                        </div> 
-
-                        <div id={styles.COLLAPSE_HOLDER}> 
-                          <Collapsed_3/>                  
-                        </div>                
-                      </div>*/}
                     </div>
             </div>
 

@@ -57,7 +57,7 @@ const Mainvideopage = ({ stories }) => {
               </div>
             </div>
 
-            {/*<div class="rounded-xl ...  border-4 ... " id={styles.GRAPHIC}>             
+            {/*<div class="rounded-xl ...  border-4 ... border-stone-200 ..." id={styles.GRAPHIC}>             
             </div>*/}
 
             <div id={styles.SERVICES_HOLDER}>
@@ -107,7 +107,7 @@ const Mainvideopage = ({ stories }) => {
                     marginTop: "-2082px"                   
                 }}>
             <div class={styles.video_section_back}>
-              <div class="rounded-xl ...  border-4 ... border-stone-200" id={styles.GRAPHIC}>             
+              <div class="rounded-xl ...  border-4 ... border-stone-200 ..." id={styles.GRAPHIC}>             
               </div>          
             </div>
           </div>
