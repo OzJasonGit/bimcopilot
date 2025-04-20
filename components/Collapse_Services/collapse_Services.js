@@ -81,7 +81,7 @@ const items = [
     children: 
 
     <p style={{ position: "relative", left: "25px" }} 
-        class="font-geist_regular ... text-stone-200 ..."> 
+        class="font-geist_regular ... text-stone-400 ..."> 
         {text_2} 
         <br/> 
         <ul class="list-disc ... font-geist_regular ... text-stone-200 ..."
