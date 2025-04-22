@@ -83,7 +83,7 @@ const items = [
                 <br/> BIM project set up and coordination, set up projects correctly 
                 from the start, defining levels, grids, naming conventions, worksets, 
                 <br/> shared coordinates, and collaboration workflows -
-                BIM 360 / ACC Setup & Training Configure Autodesk Construction Cloud environments(Common Data Environment CDE) - 
+                <br/> BIM 360 / ACC Setup & Training Configure Autodesk Construction Cloud environments(Common Data Environment CDE) - 
                 BIM Automation & Scripting (Dynamo, Python, Grasshopper).
           </li>
       </ul>
