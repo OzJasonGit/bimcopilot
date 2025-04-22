@@ -75,6 +75,17 @@ const items = [
                 Resolving conflicts and aligning goals early -  
                 <br/> Budget tracking and resource forecasting.
           </li>
+
+          <li class="font-geist_regular ... text-stone-400 ..."> 
+              <a class="font-geist_semibold ... text-stone-200 ...">BIM Management - 
+              </a> 
+                {" "}AI assisted BIM Execution Plan (BEP) -
+                <br/> BIM project set up and coordination, set up projects correctly 
+                from the start, defining levels, grids, naming conventions, worksets, 
+                <br/> shared coordinates, and collaboration workflows -
+                BIM 360 / ACC Setup & Training Configure Autodesk Construction Cloud environments(Common Data Environment CDE) - 
+                BIM Automation & Scripting (Dynamo, Python, Grasshopper).
+          </li>
       </ul>
     </p>
     
