@@ -95,8 +95,7 @@ const items = [
                     </Link>                 
                   </div>
                 </a>
-                
-                <br/> Budget tracking and resource forecasting.
+                Budget tracking and resource forecasting.
           </li>
 
           <li class="font-geist_regular ... text-stone-400 ..."> 
