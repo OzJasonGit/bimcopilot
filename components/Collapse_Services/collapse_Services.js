@@ -75,7 +75,7 @@ const items = [
                 {" "}End-to-end project coordination (Coordination between clients,
                 <br/> consultants, and contractors) - 
                 QA/QC checklists tailored to your project -  
-                Resolving conflicts and aligning goals early - <br/> 
+                Resolving conflicts and aligning goals early - 
                 Advanced project deployment and management with Airtable 
                 <a>
                   <div>
