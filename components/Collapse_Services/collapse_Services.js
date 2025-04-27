@@ -145,7 +145,7 @@ const items = [
           </li>  
 
           <li class="font-geist_regular ... text-stone-400 ..."> 
-            <a class="font-geist_semibold ... text-stone-200 ...">AI driven specification writing - 
+            <a class="font-geist_semibold ... text-stone-200 ...">AI workflows for the construction industry - 
             </a> 
               {" "}Bespoke Revit templates and families - 
               <br/> Streamlined documentation workflows - 
