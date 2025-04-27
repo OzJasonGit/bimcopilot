@@ -154,14 +154,10 @@ const items = [
             <a class="font-geist_semibold ... text-stone-200 ...">Advanced parametric, AI 
               <br/>assisted space planning - 
             </a> 
-              {" "} -
-              Trained AI agents for advanced client communication - 
-              <br/> AI client proposal & report writing automation -
-              <br/>
-             
-              <a class="font-geist_regular ... text-stone-200 ...">AI assisted graphics and rendering
-              </a> AI-assisted renders using <a class="font-geist_regular ... text-stone-200 ..."><Link href= "https://www.kaedim3d.com/">midjourney </Link ></a>and 
-              <a class="font-geist_regular ... text-stone-200 ..."> <Link href= "https://www.midjourney.com/home">kaedim </Link></a>-
+              {" "} Generative design exploration - Performance driven design optimization          
+              <br/> Automated space layouts based on program requirements, 
+              circulation logic, and spatial efficiency targets -
+              <br/> <a class="font-geist_regular ... text-stone-200 ...">Client-Facing Design Portals - </a> AI-driven platforms where clients can explore design options             
               <br/>          
           </li>  
            
