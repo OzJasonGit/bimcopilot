@@ -143,36 +143,18 @@ const items = [
               Trained AI agents for advanced client communication - 
               <br/> AI client proposal & report writing automation -
               <br/>
-              <br/> 
-              <a class="font-geist_semibold ... text-stone-200 ...">AI assisted graphics and rendering
-              </a> AI-assisted renders using <a class="font-geist_semibold ... text-stone-200 ..."><Link href= "https://www.kaedim3d.com/">midjourney </Link ></a>and <a class="font-geist_semibold ... text-stone-200 ..."> <Link href= "https://www.midjourney.com/home">kaedim </Link></a>-
-              <br/>
-           
+             
+              <a class="font-geist_regular ... text-stone-200 ...">AI assisted graphics and rendering
+              </a> AI-assisted renders using <a class="font-geist_regular ... text-stone-200 ..."><Link href= "https://www.kaedim3d.com/">midjourney </Link ></a>and 
+              <a class="font-geist_regular ... text-stone-200 ..."> <Link href= "https://www.midjourney.com/home">kaedim </Link></a>-
+              <br/>          
               Bespoke Revit templates and families - 
               <br/> Streamlined documentation workflows - 
               Cloud coordination - 
               Bespoke Dynamo scripting. 
           </li>  
           
-          <li class="font-geist_regular ... text-stone-400 ..."> 
-            <a class="font-geist_semibold ... text-stone-200 ...">AI driven specification writing - 
-            </a> 
-              {" "}Custom GPTs and AI tools trained on your projects - 
-              <br/> AI driven specification writing - 
-              AI support embedded in your design platforms -
-              . 
-          </li>  
-
-          
-
-          <li class="font-geist_regular ... text-stone-400 ..."> 
-            <a class="font-geist_semibold ... text-stone-200 ...">AI driven specification writing - 
-            </a> 
-              {" "}Bespoke Revit templates and families - 
-              <br/> Streamlined documentation workflows - 
-              Cloud coordination - 
-              Bespoke Dynamo scripting. 
-          </li>  
+           
                  
         </ul>
     </p>
