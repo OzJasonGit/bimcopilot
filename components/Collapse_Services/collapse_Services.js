@@ -77,22 +77,25 @@ const items = [
                 QA/QC checklists tailored to your project -  
                 Resolving conflicts and aligning goals early - <br/> 
                 Advanced project deployment and management with Airtable 
-                <div>
-                  <Link href= "/https://www.airtable.com/lp/campaign/brand?utm_source=google&utm_medium=paidsearch&utm_extra5=kwd-98523555182&utm_extra2=17283319569&utm_extra10=135482497423&creative=719486220936&utm_extra8=c&utm_term=airtable&utm_campaign=demand_br_brand_all_uk_en&gad_source=1">
-                    <Image
-                    src={perkinsWill}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    style={{
-                        gridArea: "MAIN",
-                        position: "relative",
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                    }}/>
-                  </Link>                 
-                </div>
+                <a>
+                  <div>
+                    <Link href= "/https://www.airtable.com/lp/campaign/brand?utm_source=google&utm_medium=paidsearch&utm_extra5=kwd-98523555182&utm_extra2=17283319569&utm_extra10=135482497423&creative=719486220936&utm_extra8=c&utm_term=airtable&utm_campaign=demand_br_brand_all_uk_en&gad_source=1">
+                      <Image
+                      src={perkinsWill}
+                      alt="Picture of the author"
+                      width={500}
+                      height={500}
+                      style={{
+                          gridArea: "MAIN",
+                          position: "relative",
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                      }}/>
+                    </Link>                 
+                  </div>
+                </a>
+                
                 <br/> Budget tracking and resource forecasting.
           </li>
 
