@@ -46,8 +46,8 @@ return (
                             class="text-left ... text-stone-400 ... font-avant_garde_bold">
                               {" "}
                               
-                              We are highly experienced <a class="text-stone-200 ...">RIBA</a> and <a class="text-stone-400 ...">ARB</a> 
-                              <a class="text-stone-200 ..."> registered architects
+                              We are highly experienced <a class="text-stone-200 ...">RIBA</a> and <a class="text-stone-200 ...">ARB</a> 
+                              <a class="text-stone-400 ..."> registered architects
                               </a> specializing in cutting-edge <a class="text-stone-200 ...">BIM </a>
                               solutions powered by <a class="text-stone-200 ...">Artificial Intelligence</a>. 
                               <br/>We focus on tailoring <a class="text-stone-200 ...">systems</a> conceived from 
