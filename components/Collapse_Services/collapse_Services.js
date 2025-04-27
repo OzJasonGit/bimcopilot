@@ -136,7 +136,7 @@ const items = [
           style={{ position: "relative", left: "35px" }}>
 
           <li class="font-geist_regular ... text-stone-400 ..."> 
-            <a class="font-geist_semibold ... text-stone-200 ...">AI workflows for the 
+            <a class="font-geist_semibold ... text-stone-200 ...">AI workflows for the design and
               <br/>construction industry - 
             </a> 
               {" "}AI driven specification writing - AI assisted material and product optimization -
@@ -150,6 +150,20 @@ const items = [
               <br/>          
           </li>  
           
+          <li class="font-geist_regular ... text-stone-400 ..."> 
+            <a class="font-geist_semibold ... text-stone-200 ...">Advanced parametric, AI 
+              <br/>assisted space planning - 
+            </a> 
+              {" "} -
+              Trained AI agents for advanced client communication - 
+              <br/> AI client proposal & report writing automation -
+              <br/>
+             
+              <a class="font-geist_regular ... text-stone-200 ...">AI assisted graphics and rendering
+              </a> AI-assisted renders using <a class="font-geist_regular ... text-stone-200 ..."><Link href= "https://www.kaedim3d.com/">midjourney </Link ></a>and 
+              <a class="font-geist_regular ... text-stone-200 ..."> <Link href= "https://www.midjourney.com/home">kaedim </Link></a>-
+              <br/>          
+          </li>  
            
                  
         </ul>
