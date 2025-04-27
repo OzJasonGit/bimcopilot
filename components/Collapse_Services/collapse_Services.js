@@ -148,10 +148,6 @@ const items = [
               </a> AI-assisted renders using <a class="font-geist_regular ... text-stone-200 ..."><Link href= "https://www.kaedim3d.com/">midjourney </Link ></a>and 
               <a class="font-geist_regular ... text-stone-200 ..."> <Link href= "https://www.midjourney.com/home">kaedim </Link></a>-
               <br/>          
-              Bespoke Revit templates and families - 
-              <br/> Streamlined documentation workflows - 
-              Cloud coordination - 
-              Bespoke Dynamo scripting. 
           </li>  
           
            
