@@ -7,6 +7,8 @@ import styles from "./collapse_services.module.css";
 import { CaretRightFilled } from "@ant-design/icons";
 import { Collapse } from "antd";
 import Link from "next/link";
+import Image from "next/image";
+import perkinsWill from "./Bim-copilot-logo_Mobile_2.png";
 
 
 
@@ -73,7 +75,24 @@ const items = [
                 {" "}End-to-end project coordination (Coordination between clients,
                 <br/> consultants, and contractors) - 
                 QA/QC checklists tailored to your project -  
-                Resolving conflicts and aligning goals early -  
+                Resolving conflicts and aligning goals early - <br/> 
+                Advanced project deployment and management with Airtable 
+                <div>
+                  <Link href= "/https://www.airtable.com/lp/campaign/brand?utm_source=google&utm_medium=paidsearch&utm_extra5=kwd-98523555182&utm_extra2=17283319569&utm_extra10=135482497423&creative=719486220936&utm_extra8=c&utm_term=airtable&utm_campaign=demand_br_brand_all_uk_en&gad_source=1">
+                    <Image
+                    src={perkinsWill}
+                    alt="Picture of the author"
+                    width={500}
+                    height={500}
+                    style={{
+                        gridArea: "MAIN",
+                        position: "relative",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                    }}/>
+                  </Link>                 
+                </div>
                 <br/> Budget tracking and resource forecasting.
           </li>
 
@@ -108,6 +127,7 @@ const items = [
         <a class="font-geist_regular ... text-stone-200 ...">
           {text_2} 
         </a>
+        <br/> 
         <br/> 
         <ul class="list-disc ... "
           id={styles._H3_2}
