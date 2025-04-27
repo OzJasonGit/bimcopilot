@@ -151,13 +151,13 @@ const items = [
           </li>  
           
           <li class="font-geist_regular ... text-stone-400 ..."> 
-            <a class="font-geist_semibold ... text-stone-200 ...">Advanced parametric, AI 
-              <br/>assisted space planning - 
+            <a class="font-geist_semibold ... text-stone-200 ...">Advanced parametric, AI assisted
+              <br/> space planning - 
             </a> 
               {" "} Generative design exploration - Performance driven design optimization          
               <br/> Automated space layouts based on program requirements, 
               circulation logic, and spatial efficiency targets -
-              <br/> <a class="font-geist_regular ... text-stone-200 ...">Client-Facing Design Portals - </a> AI-driven platforms where clients can explore design options             
+              <br/> <a class="font-geist_regular ... text-stone-200 ...">Client-Facing Design Portals - </a> AI-driven platforms where clients can explore design options.             
               <br/>          
           </li>  
            
@@ -170,8 +170,7 @@ const items = [
     key: '3',
     label: <h3 style={{ color: "rgb(231 229 228)", alignItems: "end" }}
       class="font-avant_garde_bold ... "
-      id={styles._H3}> Do you offer custom design solutions, or are your 
-      <br/> products pre-made?
+      id={styles._H3}> Analytics and advanced project data visualization
     </h3>,
     children: <p style={{ position: "relative", left: "25px" }} 
                  class="font-geist_regular ... text-stone-200 ..."> {text_3} </p>
