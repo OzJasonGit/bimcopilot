@@ -359,10 +359,10 @@
 #LOGO {
   position: relative;
   grid-area: LOGO;
-  width: 85%;
-  height: 85%;
+  width: 75%;
+  height: 75%;
   left: -20px;
-  top: 3px;
+  top: 8px;
 }
 
 #LOGO_ICON {
