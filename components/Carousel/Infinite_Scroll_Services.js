@@ -5,7 +5,7 @@ import logoImage from "./Bim-copilot-logo_Mobile_2.png";
 
 
 import logoNike from "./logoNike.png";
-import logoPopulous from "./logoPopulous.png";
+import logoPopulous from "./logoPopulous_(Black).png";
 import logoPerkinsWill from "./logoPerkinsWill.png";
 
 import logoAutodesk from "./logoAutodesk.png";
