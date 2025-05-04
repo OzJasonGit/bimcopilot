@@ -9,7 +9,7 @@ import logoPopulous from "./logoPopulous_(Black).png";
 import logoPerkinsWill from "./logoPerkinsWill.png";
 
 import logoAutodesk from "./logoAutodesk.png";
-import logoBenoy from "./logoBenoy.png";
+import logoBenoy from "./logoBenoy_(Black).png";
 import logoPFBD from "./logoPFBD.png";
 
 
