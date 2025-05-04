@@ -8,7 +8,7 @@ import logoNike from "./logoNike_(Black).png";
 import logoPopulous from "./logoPopulous_(Black).png";
 import logoPerkinsWill from "./logoPerkinsWill_(Black).png";
 
-import logoAutodesk from "./logoAutodesk.png";
+import logoAutodesk from "./logoAutodesk_(Black).png";
 import logoBenoy from "./logoBenoy_(Black).png";
 import logoPFBD from "./logoPFBD.png";
 
