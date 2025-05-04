@@ -4,7 +4,7 @@ import Image from "next/image";
 import logoImage from "./Bim-copilot-logo_Mobile_2.png";
 
 
-import logoNike from "./logoNike.png";
+import logoNike from "./logoNike_(Black).png";
 import logoPopulous from "./logoPopulous_(Black).png";
 import logoPerkinsWill from "./logoPerkinsWill_(Black).png";
 
