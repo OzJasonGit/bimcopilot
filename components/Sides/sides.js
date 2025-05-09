@@ -100,10 +100,10 @@ export default class Sides extends Component {
 
                                     <div id={styles.NAV_LINK}>
 
-                                        <Link class="bg-slate-50  ..." id={styles.ANCHOR_1} href="/">
+                                        <Link class="bg-slate-50 ..." id={styles.ANCHOR_1} href="/">
                                         </Link>
 
-                                        <Link class="bg-slate-50  ..." id={styles.ANCHOR_2} href="/">
+                                        <Link class="bg-slate-50 ..." id={styles.ANCHOR_2} href="/">
                                         </Link>
 
                                         <Link class="bg-slate-50 ..." id={styles.ANCHOR_3} href="/">
@@ -111,14 +111,11 @@ export default class Sides extends Component {
 
                                         <Link class="bg-slate-50 ..." id={styles.ANCHOR_4} href="/">
                                         </Link>
-
-                                        <Link class="bg-slate-50 ..." id={styles.ANCHOR_5} href="/">
-                                        </Link>
-
+                                      
                                     </div>
 
-                                    <div class="bg-slate-50 ..." id={styles.LINE_2}>
-                                    </div>
+                                    {/*<div class="bg-slate-50 ..." id={styles.LINE_2}>
+                                    </div>*/}
                                 </div>
                             </div>
                         </div>
