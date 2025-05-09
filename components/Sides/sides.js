@@ -9,7 +9,7 @@ import 'antd/dist/reset.css';
 
 
 import Image from "next/image";
-import pfbdImage from './pfbd_2.svg';
+import pfbdImage from './pfbd_2.png';
 import dlpfbdImage from './_dlpfbd_.svg';
 
 
