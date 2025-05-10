@@ -109,7 +109,8 @@ export default class Sides extends Component {
                                         <Link class="bg-slate-50 ..." id={styles.ANCHOR_2} href="/">
                                         </Link>
 
-                                        <Link class="bg-slate-50 ..." id={styles.ANCHOR_3} href="/">
+                                        <Link class="" id={styles.ANCHOR_3} href="/">
+                                            <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faYoutube} size="2xs" />  
                                         </Link>
 
                                         <Link class="bg-slate-50 ..." id={styles.ANCHOR_4} href="/">
