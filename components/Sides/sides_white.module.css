@@ -255,7 +255,7 @@
      height: 100%;
      grid-template-columns: 1fr 1000px;
      grid-row-gap: 40px;
-     grid-template-rows: 400px 300px 1fr;
+     grid-template-rows: 400px 1fr 1fr;
      grid-template-areas: "SIDE-1 ."
          "NAVIGATION ."
          "SIDE-3 .";
@@ -277,20 +277,21 @@
          "PFBD";
  }
 
- #PAGE_NAVIGATION {
-     position: relative;
-     grid-area: NAVIGATION;
-     display: grid;
-     width: 100%;
-     height: 100%;
-     grid-template-rows: 1fr 15px 110px 15px 1fr;
-     grid-template-columns: 40px 1fr 3.5px 1px 3.5px 1fr 40px;
-     grid-template-areas: ". . . LINE_1 . . ."
-         ". . . . . . ."
-         ". . NAV NAV NAV . ."
-         ". . . . . . ."
-         ". . . LINE_2 . . .";
- }
+  #PAGE_NAVIGATION {
+      position: relative;
+      grid-area: NAVIGATION;
+      top: 30px;
+      display: grid;
+      width: 100%;
+      height: 100%;
+      grid-template-rows: 200px 20px 1fr 20px;
+      grid-template-columns: 40px 1fr 11.5px 1px 11.5px 1fr 40px;
+      grid-template-areas: ". . . LINE_1 . . ."
+          ". . . . . . ."
+          ". . NAV NAV NAV . ."
+          ". . . . . . ."
+          ". . . LINE_2 . . .";
+  }
 
 
  #LINE_1 {
@@ -303,16 +304,16 @@
      width: 100%;
      height: 100%;
      grid-template-columns: 1fr;
-     grid-template-rows: 8px 1fr 8px 1fr 8px 1fr 8px 1fr 8px;
-     grid-template-areas: "ONE"
+     grid-template-rows: 23px 15px 23px 15px 23px 15px 23px;
+     grid-template-areas:
+
+         "ONE"
          "."
          "TWO"
          "."
          "THREE"
          "."
-         "FOUR"
-         "."
-         "FIVE";
+         "FOUR";
  }
 
 
