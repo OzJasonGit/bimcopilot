@@ -1,7 +1,7 @@
 "use client";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faYoutube, faInstagram, SquareXTwitter, faGithub, faMedium, fa } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faYoutube, faInstagram, faSquareXTwitter, faGithub, faMedium, fa } from '@fortawesome/free-brands-svg-icons'
 
 import styles from './sides.module.css'
 import React, { Component } from 'react';
@@ -115,7 +115,7 @@ export default class Sides extends Component {
                                         </Link>
 
                                         <Link class="" id={styles.ANCHOR_4} href="/">
-                                            <FontAwesomeIcon class={styles.xtwitter} id={styles.CENTER} icon={SquareXTwitter} size="2xs" />  
+                                            <FontAwesomeIcon class={styles.xtwitter} id={styles.CENTER} icon={faSquareXTwitter} size="2xs" />  
                                         </Link>
                                       
                                     </div>
