@@ -542,6 +542,110 @@
  }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#CENTER {
+    grid-area: CENTER;
+    width: 100%;
+    height: 100%;
+}
+
+
+.github {
+    color: rgb(231 229 228);
+}
+
+
+.medium {
+    color: rgb(231 229 228);
+}
+
+.linkedin {
+    color: rgb(231 229 228);
+}
+
+.youtube {
+    color: rgb(231 229 228);
+}
+
+.dribbble {
+    color: rgb(231 229 228);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  @media all and (min-width: 960px) and (max-width: 1280px) {
      .grid_0_fixed {
          display: none;
