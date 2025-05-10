@@ -1,5 +1,7 @@
 "use client";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faYoutube, faInstagram, faSquareXTwitter, faGithub, faMedium, fa } from '@fortawesome/free-brands-svg-icons'
 
 import styles from './sides_white.module.css'
 import React, { Component } from 'react';
@@ -95,30 +97,30 @@ export default class Sides extends Component {
                                 </div>
 
                                 <div id={styles.PAGE_NAVIGATION}>
-                                    <div class="bg-stone-700   ..." id={styles.LINE_1}>
+
+                                    <div class="bg-stone-700  ..." id={styles.LINE_1}>
                                     </div>
 
                                     <div id={styles.NAV_LINK}>
 
-                                        <Link class="bg-stone-700  ..." id={styles.ANCHOR_1} href="/">
+                                        <Link class="" id={styles.ANCHOR_1} href="/">                                            
+                                            <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
                                         </Link>
 
-                                        <Link class="bg-stone-700  ..." id={styles.ANCHOR_2} href="/">
+                                        <Link class="" id={styles.ANCHOR_2} href="/">
+                                            <FontAwesomeIcon class={styles.instagram} id={styles.CENTER} icon={faInstagram} size="2xs" />  
                                         </Link>
 
-                                        <Link class="bg-stone-700  ..." id={styles.ANCHOR_3} href="/">
+                                        <Link class="" id={styles.ANCHOR_3} href="/">
+                                            <FontAwesomeIcon class={styles.youtube} id={styles.CENTER} icon={faYoutube} size="2xs" />  
                                         </Link>
 
-                                        <Link class="bg-stone-700  ..." id={styles.ANCHOR_4} href="/">
+                                        <Link class="" id={styles.ANCHOR_4} href="/">
+                                            <FontAwesomeIcon class={styles.xtwitter} id={styles.CENTER} icon={faSquareXTwitter} size="2xs" />  
                                         </Link>
-
-                                        <Link class="bg-stone-700  ..." id={styles.ANCHOR_5} href="/">
-                                        </Link>
-
+                                        
                                     </div>
-
-                                    <div class="bg-stone-700  ..." id={styles.LINE_2}>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>

@@ -542,6 +542,52 @@
  }
 
 
+
+
+
+
+
+
+#CENTER {
+    grid-area: CENTER;
+    width: 100%;
+    height: 100%;
+}
+
+
+.github {
+    color: rgb(68 64 60);
+}
+
+
+.medium {
+    color: rgb(68 64 60);
+}
+
+.instagram {
+    color: rgb(68 64 60);
+}
+
+.linkedin {
+    color: rgb(68 64 60);
+}
+
+.youtube {
+    color: rgb(68 64 60);
+}
+
+.dribbble {
+    color: rgb(68 64 60);
+}
+
+.xtwitter {
+    color: rgb(68 64 60);
+}
+
+
+
+
+
  @media all and (min-width: 960px) and (max-width: 1280px) {
      .grid_0_fixed {
          display: none;
