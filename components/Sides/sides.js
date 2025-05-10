@@ -102,7 +102,7 @@ export default class Sides extends Component {
 
                                     <div id={styles.NAV_LINK}>
 
-                                        <Link class="bg-slate-50 ..." id={styles.ANCHOR_1} href="/">
+                                        <Link class="" id={styles.ANCHOR_1} href="/">
                                             <a id={styles.PFBD_LINK} href="https://github.com/OzJasonGit" target="_blank">
                                                 <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />
                                             </a>
