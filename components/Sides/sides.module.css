@@ -285,7 +285,7 @@
      width: 100%;
      height: 100%;
      grid-template-rows: 200px 20px 1fr 20px;
-     grid-template-columns: 40px 1fr 12.5px 1px 12.5px 1fr 40px;
+     grid-template-columns: 40px 1fr 11.5px 1px 11.5px 1fr 40px;
      grid-template-areas: ". . . LINE_1 . . ."
          ". . . . . . ."
          ". . NAV NAV NAV . ."
@@ -304,7 +304,7 @@
      width: 100%;
      height: 100%;
      grid-template-columns: 1fr;
-     grid-template-rows: 26px 15px 26px 15px 26px 15px 26px;
+     grid-template-rows: 23px 15px 23px 15px 23px 15px 23px;
      grid-template-areas: 
 
          "ONE"
@@ -588,6 +588,10 @@
 }
 
 .dribbble {
+    color: rgb(231 229 228);
+}
+
+.xtwitter {
     color: rgb(231 229 228);
 }
 
