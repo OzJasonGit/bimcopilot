@@ -5,7 +5,7 @@ import styles from './saleslanding.module.css';
 import { useRouter } from "next/navigation";
 
 import Menu_White from "../../components/Menu_White/menu_white";
-import Sides from "../../components/Sides/sides";
+import Sides from "../../components/Sides/sides_white";
 import Header_White from "../../components/Header_White/Header_White";
 
 import Subfooter_White from "../../components/Subfooter_White/subfooter_white";
