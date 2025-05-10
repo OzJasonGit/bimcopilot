@@ -280,6 +280,7 @@
  #PAGE_NAVIGATION {
      position: relative;
      grid-area: NAVIGATION;
+     top: 30px;
      display: grid;
      width: 100%;
      height: 100%;
