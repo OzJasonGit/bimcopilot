@@ -53,8 +53,14 @@ const Menu = () => {
                               id={styles.CENTER}
                               src={logoBC}   
                               loading="lazy"
-                              style={{objectFit: "contain"}} 
+                              style={{
+                                objectFit: "contain",
+                                position: "relative",
+                                width: "30%",
+                                height: "100%",
+                              }} 
                               quality={100}
+                              
                             />  
                            </div>
                         </Link>                        
