@@ -50,7 +50,7 @@ export default class Products extends Component {
                             class=" text-neutral-700 ... font-geist_regular ...">
                             Parametric Title Block Catalogue Colored Title Blocks (Metric + Imperial)
                           </h3>
-                          <br/>
+                          
                           <h3 id={styles._H3} class=" text-neutral-700 ... font-avant_garde_bold ... ">
                             {" "}
                             From $53.90
@@ -89,7 +89,7 @@ export default class Products extends Component {
                                     class=" text-neutral-700 ... font-geist_regular ...">
                                     Parametric Title Block Catalogue  Colored Title Blocks (Metric + Imperial)
                                   </h3>
-                                  <br/>
+                                  
                                   <h3 id={styles._H3} class=" text-neutral-700 ... font-avant_garde_bold ...">
                                     {" "}
                                     From $53.90
@@ -133,7 +133,7 @@ export default class Products extends Component {
                         Parametric Title Block Catalogue  Colored Title Blocks (Metric + Imperial)
                         
                       </h3>
-                      <br/>
+                      
                       <h3 id={styles._H3} class=" text-neutral-700 ... font-avant_garde_bold ...">
                         {" "}
                         From $53.90
@@ -170,7 +170,7 @@ export default class Products extends Component {
                             }}>
                       Parametric Title Block Catalogue  Colored Title Blocks (Metric + Imperial)               
                     </h3>
-                    <br/>
+                    
                     <h3 id={styles._H3} class=" text-neutral-700 ... font-avant_garde_bold ...">
                       {" "}
                       From $33.00
@@ -207,7 +207,7 @@ export default class Products extends Component {
                     >
                       Parametric Colored Title Blocks Colored Title Blocks (Metric + Imperial)
                     </h3>
-                    <br/>
+                    
                     <h3 id={styles._H3} class=" text-neutral-700 ... font-avant_garde_bold ...">
                       {" "}
                       From $31.90
