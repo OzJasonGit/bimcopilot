@@ -140,7 +140,7 @@
     position: relative;
     width: 100%;
     display: grid;
-    grid-row-gap: 30px;
+    grid-row-gap: 25px;
     grid-template-columns: 1fr;
     grid-template-rows: 25px auto auto auto auto 20vh 40px auto auto;
     grid-template-areas:
