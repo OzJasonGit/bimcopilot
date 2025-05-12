@@ -62,7 +62,7 @@ const Menu = () => {
                     <h3 id={styles._H2} class="text-right ...  text-stone-700 font-avant_garde_bold"><a class="">Services</a></h3>
                 </Link>  
 
-                <Link id={styles.PROJECTS} href="/projects"> 
+                <Link id={styles.COPILOT_DASHBOARD} href="/copilot_dashboard"> 
                   <h3 id={styles._H2} class="text-right ...  text-stone-700  font-avant_garde_bold"><a class="">Copilot_Dashboard</a></h3>
                 </Link>  
 
