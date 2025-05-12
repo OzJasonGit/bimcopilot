@@ -1,7 +1,7 @@
 'use client'
 
 import styles from './services.module.css';
-import Menu from "../../components/Menu/menu";
+import Menu_White from "../../components/Menu_White/menu_white";
 import Sides from "../../components/Sides/sides_white";
 import Header_White from "../../components/Header_White/Header_White";
 import Footer from "../../components/Footer/Footer_White";
@@ -22,7 +22,7 @@ const Servicesmain = ({ stories}) => {
    return (
 
     <>
-      <Menu/>
+      <Menu_White/>
       <Header_White/>
       <Sides/>
 
