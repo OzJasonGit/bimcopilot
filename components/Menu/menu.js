@@ -46,9 +46,17 @@ const Menu = () => {
 
 
                 title= {<h1  id={styles.H_3} class="text-right ...  text-stone-700 font-avant_garde_bold">
-                        <a class="text-4xl">
-                            MENU
-                        </a>                        
+                        <Link class="text-4xl" href="/services">
+                           <div>
+                            <Image 
+                              id={styles.CENTER}
+                              src={pfbdImage}   
+                              loading="lazy"
+                              style={{objectFit: "contain"}} 
+                              quality={100}
+                            />  
+                           </div>
+                        </Link>                        
                       </h1>
                      }
 
