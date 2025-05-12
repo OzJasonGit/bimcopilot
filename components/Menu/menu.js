@@ -17,6 +17,7 @@ import pfbdImage from './_pfbd_.svg';
 import dlpfbdImage from './_dlpfbd_.svg';
 import logoARB from './logoARB_DARK.png';
 import logoRIBA from './logoRIBA_Dark.png';
+import logoBC from './Tesseract_Simple_Black_2.png';
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -50,7 +51,7 @@ const Menu = () => {
                            <div>
                             <Image 
                               id={styles.CENTER}
-                              src={pfbdImage}   
+                              src={logoBC}   
                               loading="lazy"
                               style={{objectFit: "contain"}} 
                               quality={100}
