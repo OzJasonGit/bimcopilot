@@ -3,6 +3,13 @@
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 
+
+#_H2 {
+    margin-bottom: 0;
+    font-size: 1.15rem;
+    line-height: 1.35rem;
+}
+
 #H_3 {
     margin-bottom: 0%;
     font-size: smaller;
@@ -124,8 +131,8 @@
     height: 100%;
     width: 100%;
     z-index: 800000000000000000000000000000000000000000000000;
- 
-    
+
+
 }
 
 
@@ -278,14 +285,14 @@
     display: grid;
     grid-area: MEDIUM;
     align-items: center;
-        justify-content: left;
+    justify-content: left;
 }
 
 #LINKEDIN_ICON {
     display: grid;
     grid-area: LINKEDIN;
     align-items: center;
-        justify-content: left;
+    justify-content: left;
 }
 
 #YOUTUBE_ICON {
@@ -386,7 +393,7 @@
     grid-column-gap: 20px;
     grid-template-columns: 40px 40px 40px 1fr;
     grid-template-areas:
-            "PFBD DLPFBD BIMCOPILOT";
+        "PFBD DLPFBD BIMCOPILOT";
 }
 
 
@@ -462,7 +469,7 @@
         "  ."
         "BURGER"
         " .";
-    
+
 }
 
 #B_H_2 {
@@ -479,7 +486,7 @@
     width: 100%;
     height: 100%;
     grid-area: AREA;
-    
+
 }
 
 
@@ -726,10 +733,10 @@
 
 
 
-#DRAWER_LEFT {
-    height: 100%;
-    z-index: 800000000000000000000000000000000000000000000000;
-}
+    #DRAWER_LEFT {
+        height: 100%;
+        z-index: 800000000000000000000000000000000000000000000000;
+    }
 
 
 
@@ -810,57 +817,57 @@
     }
 
 
-    
-
-
-        #FIXED_HEADER {
-            grid-area: MAIN-AREA;
-            display: grid;
-            grid-row-gap: 0px;
-            grid-column-gap: 40px;
-            grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: 0px auto 0px;
-            grid-template-areas:
-                ". . . . . . . . . . . . ."
-                "LOGO_HOLDER MENU MENU MENU MENU MENU . . SIGN_IN SIGN_IN SIGN_IN MENU-BUTTON MENU-BUTTON"
-                ". . . . . . . . . . . . .";
-            margin-top: -204.5px;
-        }
-
-        #NAV_MENU {
-            grid-area: MENU;
-            display: grid;
-            width: 100%;
-            max-width: 600px;
-            justify-self: right;
-            grid-template-columns: auto 1.5px auto 1.5px auto 1.5px auto;
-            grid-template-rows: 0px auto 0px;
-            grid-template-areas:
-                " . . . . . . ."
-                " ABOUT . OUR_PROCESS . SERVICES . BLOG"
-                " . . . . . . .";
-            background: transparent;
-        }
 
 
 
-        #SIGNUP {
-            grid-area: SIGN_IN;
-            display: grid;
-            width: 100%;
-            max-width: 600px;
-            justify-self: right;
-            grid-template-columns: 1fr 1.5px 1fr;
-            grid-template-rows: 0px auto 0px;
-            grid-template-areas:
-                " . . ."
-                " ABOUT B1 HOME"
-                " . . .";
-            background: transparent;
-        }
+    #FIXED_HEADER {
+        grid-area: MAIN-AREA;
+        display: grid;
+        grid-row-gap: 0px;
+        grid-column-gap: 40px;
+        grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0px auto 0px;
+        grid-template-areas:
+            ". . . . . . . . . . . . ."
+            "LOGO_HOLDER MENU MENU MENU MENU MENU . . SIGN_IN SIGN_IN SIGN_IN MENU-BUTTON MENU-BUTTON"
+            ". . . . . . . . . . . . .";
+        margin-top: -204.5px;
+    }
+
+    #NAV_MENU {
+        grid-area: MENU;
+        display: grid;
+        width: 100%;
+        max-width: 600px;
+        justify-self: right;
+        grid-template-columns: auto 1.5px auto 1.5px auto 1.5px auto;
+        grid-template-rows: 0px auto 0px;
+        grid-template-areas:
+            " . . . . . . ."
+            " ABOUT . OUR_PROCESS . SERVICES . BLOG"
+            " . . . . . . .";
+        background: transparent;
+    }
 
 
-        
+
+    #SIGNUP {
+        grid-area: SIGN_IN;
+        display: grid;
+        width: 100%;
+        max-width: 600px;
+        justify-self: right;
+        grid-template-columns: 1fr 1.5px 1fr;
+        grid-template-rows: 0px auto 0px;
+        grid-template-areas:
+            " . . ."
+            " ABOUT B1 HOME"
+            " . . .";
+        background: transparent;
+    }
+
+
+
 
 
 
@@ -1147,10 +1154,10 @@
 
 
 
-#DRAWER_LEFT {
-    height: 100%;
-    z-index: 800000000000000000000000000000000000000000000000;
-}
+    #DRAWER_LEFT {
+        height: 100%;
+        z-index: 800000000000000000000000000000000000000000000000;
+    }
 
 
     .center_holder {
@@ -1231,19 +1238,19 @@
     }
 
 
-#FIXED_HEADER {
-    grid-area: MAIN-AREA;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-column-gap: 20px;
-    grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0px auto 0px;
-    grid-template-areas:
-        ". . . . . . . . . . . . ."
-        "LOGO_HOLDER SIGN_IN SIGN_IN SIGN_IN SIGN_IN . . MENU_BUTTON MENU_BUTTON MENU_BUTTON . . . "
-        ". . . . . . . . . . . . .";
-    margin-top: -204.5px;
-}
+    #FIXED_HEADER {
+        grid-area: MAIN-AREA;
+        display: grid;
+        grid-row-gap: 0px;
+        grid-column-gap: 20px;
+        grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0px auto 0px;
+        grid-template-areas:
+            ". . . . . . . . . . . . ."
+            "LOGO_HOLDER SIGN_IN SIGN_IN SIGN_IN SIGN_IN . . MENU_BUTTON MENU_BUTTON MENU_BUTTON . . . "
+            ". . . . . . . . . . . . .";
+        margin-top: -204.5px;
+    }
 
 
 
@@ -1499,11 +1506,11 @@
 /* ---------------------------------------------------------------------------------------*/
 @media all and (min-width: 0px) and (max-width: 480px) {
 
-#DRAWER_LEFT {
-       
+    #DRAWER_LEFT {
+
         height: 100%;
         z-index: 800000000000000000000000000000000000000000000000;
-            width: 70vw;
+        width: 70vw;
     }
 
 
@@ -1598,8 +1605,8 @@
             " . . ."
             "LOGO_HOLDER .  MENU-BUTTON"
             " . . .";
-}
- 
+    }
+
 
     #NAV_MENU {
         display: none;

@@ -59,19 +59,19 @@ const Menu = () => {
               <div id={styles.DRAWER_MENU}>
 
                 <Link class="content-center ..." id={styles.SERVICES} href="/services"> 
-                    <h3 id={styles.H_3} class="text-right ...  text-stone-700 font-avant_garde_bold"><a class="text-4xl">Services</a></h3>
+                    <h3 id={styles._H2} class="text-right ...  text-stone-700 font-avant_garde_bold"><a class="">Services</a></h3>
                 </Link>  
 
                 <Link id={styles.PROJECTS} href="/projects"> 
-                  <h3 id={styles.H_3} class="text-right ...  text-stone-700  font-avant_garde_bold"><a class="text-4xl">Projects</a></h3>
+                  <h3 id={styles._H2} class="text-right ...  text-stone-700  font-avant_garde_bold"><a class="">Projects</a></h3>
                 </Link>  
 
                 <Link id={styles.STORIES} href="/bloghome"> 
-                  <h3 id={styles.H_3} class="text-right ...  text-stone-700 font-avant_garde_bold"><a class="text-4xl">Stories</a></h3>
+                  <h3 id={styles._H2} class="text-right ...  text-stone-700 font-avant_garde_bold"><a class="">Stories</a></h3>
                 </Link>  
 
                 <Link id={styles.SHOP} href="/products"> 
-                  <h3 id={styles.H_3} class="text-right ...  text-stone-700  font-avant_garde_bold"><a class="text-4xl">Shop</a></h3>
+                  <h3 id={styles._H2} class="text-right ...  text-stone-700  font-avant_garde_bold"><a class="">Shop</a></h3>
                 </Link>  
 
 
