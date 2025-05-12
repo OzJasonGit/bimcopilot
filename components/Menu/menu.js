@@ -63,7 +63,7 @@ const Menu = () => {
                 </Link>  
 
                 <Link id={styles.PROJECTS} href="/projects"> 
-                  <h3 id={styles._H2} class="text-right ...  text-stone-700  font-avant_garde_bold"><a class="">Projects</a></h3>
+                  <h3 id={styles._H2} class="text-right ...  text-stone-700  font-avant_garde_bold"><a class="">Copilot_Dashboard</a></h3>
                 </Link>  
 
                 <Link id={styles.STORIES} href="/bloghome"> 

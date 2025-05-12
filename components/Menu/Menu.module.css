@@ -147,7 +147,7 @@
         "."
         "SERVICES"
         "STORIES"
-        "PROJECTS"
+        "COPILOT_DASHBOARD"
         "SHOP"
         "."
         "ICONS"
@@ -415,8 +415,8 @@
 }
 
 
-#PROJECTS {
-    grid-area: PROJECTS;
+#COPILOT_DASHBOARD {
+    grid-area: COPILOT_DASHBOARD;
 }
 
 
