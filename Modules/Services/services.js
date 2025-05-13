@@ -162,7 +162,8 @@ const Servicesmain = ({ stories}) => {
               <div id={styles.PORTFOLIO_IMAGES}>  
                 <div style={{
                           gridArea: "SUB",
-                          height: "250px"
+                          height: "250px",
+                          width: "100%"
                         }}>
 
                           <Infinite_Scroll_Portfolio/>
