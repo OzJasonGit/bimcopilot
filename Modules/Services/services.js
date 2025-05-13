@@ -160,15 +160,17 @@ const Servicesmain = ({ stories}) => {
               
 
               <div id={styles.PORTFOLIO_IMAGES}>  
-                <div class="" id={styles.PORTFOLIO_CLIENT}>
-
-                  <div style={{
+                <div style={{
                           gridArea: "SUB",
+                          height: "250px"
                         }}>
 
                           <Infinite_Scroll_Portfolio/>
 
-                  </div>
+                </div>
+                <div class="" id={styles.PORTFOLIO_CLIENT}>
+
+                  
 
             
                   
