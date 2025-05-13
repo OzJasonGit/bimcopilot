@@ -16,6 +16,8 @@ import Services_7 from "../../components/services_7/services_7";
 import Services_10 from "../../components/services_10/services_10";
 import Image from "next/image";
 
+import Infinite_Scroll_Portfolio from "../../components/Carousel/Infinite_Scroll_portfolio";
+
 const Servicesmain = ({ stories}) => {
 
 
@@ -159,6 +161,7 @@ const Servicesmain = ({ stories}) => {
 
               <div id={styles.PORTFOLIO_IMAGES}>  
                 <div class="" id={styles.PORTFOLIO_CLIENT}>
+                  <Infinite_Scroll_Portfolio/>
 
 
 
