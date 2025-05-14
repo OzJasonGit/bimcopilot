@@ -153,7 +153,7 @@ const TAGS = [
                 ];
 
 
-const DURATION = 15000;
+const DURATION = 150000;
 const ROWS = 1;
 const TAGS_PER_ROW = 7;
 
