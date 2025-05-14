@@ -16,7 +16,9 @@ import logoPFBD from "./logoPFBD.png";
 
 
 const COLORS = ['#bbf7d0', '#99f6e4', '#bfdbfe', '#ddd6fe', '#f5d0fe', '#fed7aa', '#fee2e2'];
-const TAGS = [ <div id={styles.IMAGE_C_HOLDER}>
+const TAGS = [ 
+
+                <div id={styles.IMAGE_C_HOLDER}>
                   <Image
                       id={styles.IMAGE_1}
                       src={logoBenoy}
