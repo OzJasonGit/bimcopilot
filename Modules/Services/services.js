@@ -162,7 +162,7 @@ const Servicesmain = ({ stories}) => {
               <div id={styles.PORTFOLIO_IMAGES}>  
                 <div style={{
                           gridArea: "SUB",
-                          height: "250px",
+                          height: "auto",
                           width: "100%"
                         }}>
 
