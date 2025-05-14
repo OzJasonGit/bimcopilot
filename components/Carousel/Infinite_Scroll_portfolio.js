@@ -175,9 +175,9 @@ const TAGS = [
 
                 <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
-                              padding: "20px",
-                              width: "800px",
-                              height: "1000px"
+                              padding: "15px",
+                              width: "1000px",
+                              height: "1200px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
