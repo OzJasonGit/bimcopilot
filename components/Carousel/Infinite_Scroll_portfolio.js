@@ -18,12 +18,18 @@ import logoPFBD from "./logoPFBD.png";
 const COLORS = ['#bbf7d0', '#99f6e4', '#bfdbfe', '#ddd6fe', '#f5d0fe', '#fed7aa', '#fee2e2'];
 const TAGS = [ 
 
-                <div 
+                <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "20px",
                               width: "800px",
                               height: "1000px"
                           }}>
+                            <div className="bg-stone-800 ... rounded-xl ... " 
+                              style={{                                       
+                                        width: "100%",
+                                        height: "100%"
+                                    }}>
+                            </div>
                   
                 </div>, 
 
