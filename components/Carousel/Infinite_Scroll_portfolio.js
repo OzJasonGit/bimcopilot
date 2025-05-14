@@ -23,136 +23,168 @@ const TAGS = [
                               padding: "20px",
                               width: "800px",
                               height: "1000px"
-                          }}>
-                            <div className="bg-stone-800 ... rounded-xl ... " 
-                              style={{                                       
+                           }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
                                         width: "100%",
                                         height: "100%"
-                                    }}>
-                            </div>
-                  
+                                      }}>
+                          </div>              
                 </div>, 
 
-                <div id={styles.IMAGE_C_HOLDER}>
-                  <Image
-                      id={styles.IMAGE_1}
-                      src={logoPopulous}
-                      style={{ objectFit: "contain" }}
-                      quality={100}
-                      //object-fit="cover"
-                      alt=""
-                  />
+                <div className="bg-stone-800 ... rounded-xl ... " 
+                     style={{
+                              padding: "20px",
+                              width: "800px",
+                              height: "1000px"
+                           }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                        width: "100%",
+                                        height: "100%"
+                                      }}>
+                          </div>  
                 </div>, 
 
-                 <div id={styles.IMAGE_C_HOLDER}>
-                  <Image
-                      id={styles.IMAGE_1}
-                      src={logoPerkinsWill}
-                      style={{ objectFit: "contain" }}
-                      quality={100}
-                      //object-fit="cover"
-                      alt=""
-                  />
+                 <div className="bg-stone-800 ... rounded-xl ... " 
+                     style={{
+                              padding: "20px",
+                              width: "800px",
+                              height: "1000px"
+                           }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                        width: "100%",
+                                        height: "100%"
+                                      }}>
+                          </div> 
                 </div>, 
 
-                <div id={styles.IMAGE_C_HOLDER}>
-                  <Image
-                      id={styles.IMAGE_1}
-                      src={logoNike}
-                      style={{ objectFit: "contain" }}
-                      quality={100}
-                      //object-fit="cover"
-                      alt=""
-                  />
+                <div className="bg-stone-800 ... rounded-xl ... " 
+                     style={{
+                              padding: "20px",
+                              width: "800px",
+                              height: "1000px"
+                           }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                        width: "100%",
+                                        height: "100%"
+                                      }}>
+                          </div> 
                 </div>, 
 
-                <div id={styles.IMAGE_C_HOLDER}>
-                  <Image
-                      id={styles.IMAGE_1}
-                      src={logoAutodesk}
-                      style={{ objectFit: "contain" }}
-                      quality={100}
-                      //object-fit="cover"
-                      alt=""
-                  />
+                <div className="bg-stone-800 ... rounded-xl ... " 
+                     style={{
+                              padding: "20px",
+                              width: "800px",
+                              height: "1000px"
+                           }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                        width: "100%",
+                                        height: "100%"
+                                      }}>
+                          </div> 
                 </div>,
 
-                 <div id={styles.IMAGE_C_HOLDER}>
-                  <Image
-                      id={styles.IMAGE_1}
-                      src={logoPFBD}
-                      style={{ objectFit: "contain" }}
-                      quality={100}
-                      //object-fit="cover"
-                      alt=""
-                  />
+                 <div className="bg-stone-800 ... rounded-xl ... " 
+                     style={{
+                              padding: "20px",
+                              width: "800px",
+                              height: "1000px"
+                           }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                        width: "100%",
+                                        height: "100%"
+                                      }}>
+                          </div> 
                 </div>,
 
 
-                <div id={styles.IMAGE_C_HOLDER}>
-                  <Image
-                      id={styles.IMAGE_1}
-                      src={logoBenoy}
-                      style={{ objectFit: "contain" }}
-                      quality={100}
-                      //object-fit="cover"
-                      alt=""
-                  />
+                <div className="bg-stone-800 ... rounded-xl ... " 
+                     style={{
+                              padding: "20px",
+                              width: "800px",
+                              height: "1000px"
+                           }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                        width: "100%",
+                                        height: "100%"
+                                      }}>
+                          </div> 
                 </div>, 
 
-                <div id={styles.IMAGE_C_HOLDER}>
-                  <Image
-                      id={styles.IMAGE_1}
-                      src={logoPopulous}
-                      style={{ objectFit: "contain" }}
-                      quality={100}
-                      //object-fit="cover"
-                      alt=""
-                  />
+                <div className="bg-stone-800 ... rounded-xl ... " 
+                     style={{
+                              padding: "20px",
+                              width: "800px",
+                              height: "1000px"
+                           }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                        width: "100%",
+                                        height: "100%"
+                                      }}>
+                          </div> 
                 </div>, 
 
-                 <div id={styles.IMAGE_C_HOLDER}>
-                  <Image
-                      id={styles.IMAGE_1}
-                      src={logoPerkinsWill}
-                      style={{ objectFit: "contain" }}
-                      quality={100}
-                      //object-fit="cover"
-                      alt=""
-                  />
+                 <div className="bg-stone-800 ... rounded-xl ... " 
+                     style={{
+                              padding: "20px",
+                              width: "800px",
+                              height: "1000px"
+                           }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                        width: "100%",
+                                        height: "100%"
+                                      }}>
+                          </div> 
                 </div>, 
 
-                <div id={styles.IMAGE_C_HOLDER}>
-                  <Image
-                      id={styles.IMAGE_1}
-                      src={logoNike}
-                      style={{ objectFit: "contain" }}
-                      quality={100}
-                      //object-fit="cover"
-                      alt=""
-                  />
+                <div className="bg-stone-800 ... rounded-xl ... " 
+                     style={{
+                              padding: "20px",
+                              width: "800px",
+                              height: "1000px"
+                           }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                        width: "100%",
+                                        height: "100%"
+                                      }}>
+                          </div> 
                 </div>, 
 
-                <div id={styles.IMAGE_C_HOLDER}>
-                  <Image
-                      id={styles.IMAGE_1}
-                      src={logoAutodesk}
-                      style={{ objectFit: "contain" }}
-                      quality={100}
-                      //object-fit="cover"
-                      alt=""
-                  />
+                <div className="bg-stone-800 ... rounded-xl ... " 
+                     style={{
+                              padding: "20px",
+                              width: "800px",
+                              height: "1000px"
+                           }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                        width: "100%",
+                                        height: "100%"
+                                      }}>
+                          </div> 
                 </div>,
 
-                <div id={styles.IMAGE_C_HOLDER}>
-                  <Image
-                      id={styles.IMAGE_1}
-                      src={logoPFBD}
-                      style={{ objectFit: "contain" }}
-                      quality={100}
-                      //object-fit="cover"
-                      alt=""
-                  />
+                <div className="bg-stone-800 ... rounded-xl ... " 
+                     style={{
+                              padding: "20px",
+                              width: "800px",
+                              height: "1000px"
+                           }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                        width: "100%",
+                                        height: "100%"
+                                      }}>
+                          </div> 
                 </div>,
                 ];
 
