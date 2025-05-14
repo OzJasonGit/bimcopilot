@@ -18,10 +18,12 @@ import logoPFBD from "./logoPFBD.png";
 const COLORS = ['#bbf7d0', '#99f6e4', '#bfdbfe', '#ddd6fe', '#f5d0fe', '#fed7aa', '#fee2e2'];
 const TAGS = [ 
 
-                <div id={styles.IMAGE_C_HOLDER}
-                style={{
-                          padding: "20px"
-                      }}>
+                <div 
+                     style={{
+                              padding: "20px",
+                              width: "800px",
+                              height: "1000px"
+                          }}>
                   
                 </div>, 
 
