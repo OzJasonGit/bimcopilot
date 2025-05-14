@@ -23,7 +23,7 @@
 }
 
 .tag_list {
-  width: 30rem;
+  width: 100%;
   max-width: 90vw;
   display: flex;
   flex-shrink: 0;
