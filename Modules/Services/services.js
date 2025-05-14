@@ -169,7 +169,9 @@ const Servicesmain = ({ stories}) => {
                           <Infinite_Scroll_Portfolio/>
 
                 </div>
-                <div class="" id={styles.PORTFOLIO_CLIENT}>
+
+
+                {/*<div class="" id={styles.PORTFOLIO_CLIENT}>
 
                   
 
@@ -306,7 +308,9 @@ const Servicesmain = ({ stories}) => {
                     </div>
                   </div>
                  
-                </div>                   
+                </div>*/} 
+
+
               </div> 
      
           </div>
