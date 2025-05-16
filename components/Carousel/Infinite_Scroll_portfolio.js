@@ -127,22 +127,7 @@ const TAGS = [
                 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                {/*<div className="bg-stone-800 ... rounded-xl ... " 
+                /*<div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
                               width: "800px",
@@ -182,7 +167,7 @@ const TAGS = [
                                         height: "100%"
                                       }}>
                           </div> 
-                </div>,*/}
+                </div>,*/
    
                 ];
 
