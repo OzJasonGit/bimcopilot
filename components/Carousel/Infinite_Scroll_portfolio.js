@@ -100,7 +100,7 @@ const TAGS = [
 
                 <div className="" 
                      style={{
-                        padding: "15px",
+                        padding: "0px",
                         width: "1000px",
                         height: "1200px"
                       }}>
