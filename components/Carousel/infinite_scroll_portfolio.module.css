@@ -107,12 +107,13 @@
   display: grid;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "P1 P1"
     "P1 P1"
-    "P2 P3";
+    "P2 P2"
+    "P2 P2";
 }
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
