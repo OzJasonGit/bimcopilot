@@ -21,8 +21,8 @@ const TAGS = [
                 <div className=""                    
                      style={{
                      padding: "0px",
-                     width: "1000px",
-                     height: "1200px"
+                     width: "800px",
+                     height: "1100px"
                      }}>
                       <div 
                            id={styles.CAROUSEL_GRID_1}
@@ -64,8 +64,8 @@ const TAGS = [
                 <div className="" 
                      style={{
                         padding: "15px",
-                        width: "1000px",
-                        height: "1200px"
+                        width: "800px",
+                        height: "1100px"
                       }}>
                       <div 
                         id={styles.CAROUSEL_GRID_2}
@@ -101,8 +101,8 @@ const TAGS = [
                 <div className="" 
                      style={{
                         padding: "0px",
-                        width: "1000px",
-                        height: "1200px"
+                        width: "800px",
+                        height: "1100px"
                       }}>
                       <div 
                         id={styles.CAROUSEL_GRID_3}
