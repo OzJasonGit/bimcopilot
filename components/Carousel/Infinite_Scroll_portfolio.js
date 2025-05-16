@@ -21,8 +21,8 @@ const TAGS = [
                 <div className=""                    
                      style={{
                      padding: "0px",
-                     width: "1000px",
-                     height: "1200px"
+                     width: "800px",
+                     height: "1000px"
                      }}>
                       <div 
                            id={styles.CAROUSEL_GRID_1}
@@ -63,17 +63,66 @@ const TAGS = [
 
                 <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
-                              padding: "15px",
-                              width: "800px",
-                              height: "1000px"
-                           }}>
+                        padding: "15px",
+                        width: "800px",
+                        height: "1000px"
+                      }}>
+                      <div 
+                        id={styles.CAROUSEL_GRID_2}
+                        style={{                                       
+                            width: "100%",
+                            height: "100%"
+                        }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                              style={{                                       
+                              gridArea: "P1",
+                              width: "100%",
+                              height: "100%"
+                              }}>
+                          </div>  
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
-                                        width: "100%",
-                                        height: "100%"
-                                      }}>
-                          </div>  
+                                gridArea: "P2",
+                                width: "100%",
+                                height: "100%"
+                                }}>
+                          </div> 
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                gridArea: "P3",
+                                width: "100%",
+                                height: "100%"
+                                }}>
+                        </div> 
+                      </div>                        
                 </div>, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                  <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
