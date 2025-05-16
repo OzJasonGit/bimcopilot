@@ -150,7 +150,7 @@ const TAGS = [
 
 
 
-                <div className="bg-stone-800 ... rounded-xl ... " 
+                {/*<div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
                               width: "800px",
@@ -275,16 +275,16 @@ const TAGS = [
                                         height: "100%"
                                       }}>
                           </div> 
-                </div>,
+                </div>,*/}
                 ];
 
 
 const DURATION = 150000;
 const ROWS = 1;
-const TAGS_PER_ROW = 7;
+const TAGS_PER_ROW = 3;
 
 const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-const shuffle = (arr) => [...arr].sort( () => .7 - Math.random() );
+const shuffle = (arr) => [...arr].sort( () => .3 - Math.random() );
 
 const InfiniteLoopSlider = ({children, duration, reverse = false}) => {
   return (
