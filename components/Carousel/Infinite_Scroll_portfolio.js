@@ -98,45 +98,57 @@ const TAGS = [
                 </div>, 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                 <div className="bg-stone-800 ... rounded-xl ... " 
+                <div className="" 
                      style={{
-                              padding: "15px",
-                              width: "800px",
-                              height: "1000px"
-                           }}>
+                        padding: "15px",
+                        width: "1000px",
+                        height: "1200px"
+                      }}>
+                      <div 
+                        id={styles.CAROUSEL_GRID_3}
+                        style={{                                       
+                            width: "100%",
+                            height: "100%"
+                        }}>
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                              style={{                                       
+                              gridArea: "P1",
+                              width: "100%",
+                              height: "100%"
+                              }}>
+                          </div>  
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
-                                        width: "100%",
-                                        height: "100%"
-                                      }}>
+                                gridArea: "P2",
+                                width: "100%",
+                                height: "100%"
+                                }}>
                           </div> 
-                </div>, 
+                          <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                gridArea: "P3",
+                                width: "100%",
+                                height: "100%"
+                                }}>
+                        </div> 
+                      </div>                        
+                </div>,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{

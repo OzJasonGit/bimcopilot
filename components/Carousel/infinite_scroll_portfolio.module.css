@@ -102,6 +102,18 @@
     "P3 P3"
     "P3 P3";
 }
+
+#CAROUSEL_GRID_3 {
+  display: grid;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "P1 P1"
+    "P1 P1"
+    "P2 P3";
+}
 /*/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
