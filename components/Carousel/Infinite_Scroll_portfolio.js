@@ -97,7 +97,6 @@ const TAGS = [
                       </div>                        
                 </div>, 
 
-
                 <div className="" 
                      style={{
                         padding: "0px",
@@ -125,7 +124,7 @@ const TAGS = [
                                 }}>
                           </div>                          
                       </div>                        
-                </div>,
+                </div>
 
 
 
@@ -183,92 +182,8 @@ const TAGS = [
                                         height: "100%"
                                       }}>
                           </div> 
-                </div>,
-
-
-                <div className="bg-stone-800 ... rounded-xl ... " 
-                     style={{
-                              padding: "15px",
-                              width: "800px",
-                              height: "1000px"
-                           }}>
-                          <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
-                                        width: "100%",
-                                        height: "100%"
-                                      }}>
-                          </div> 
-                </div>, 
-
-                <div className="bg-stone-800 ... rounded-xl ... " 
-                     style={{
-                              padding: "20px",
-                              width: "800px",
-                              height: "1000px"
-                           }}>
-                          <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
-                                        width: "100%",
-                                        height: "100%"
-                                      }}>
-                          </div> 
-                </div>, 
-
-                 <div className="bg-stone-800 ... rounded-xl ... " 
-                     style={{
-                              padding: "15px",
-                              width: "800px",
-                              height: "1000px"
-                           }}>
-                          <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
-                                        width: "100%",
-                                        height: "100%"
-                                      }}>
-                          </div> 
-                </div>, 
-
-                <div className="bg-stone-800 ... rounded-xl ... " 
-                     style={{
-                              padding: "15px",
-                              width: "800px",
-                              height: "1000px"
-                           }}>
-                          <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
-                                        width: "100%",
-                                        height: "100%"
-                                      }}>
-                          </div> 
-                </div>, 
-
-                <div className="bg-stone-800 ... rounded-xl ... " 
-                     style={{
-                              padding: "15px",
-                              width: "800px",
-                              height: "1000px"
-                           }}>
-                          <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
-                                        width: "100%",
-                                        height: "100%"
-                                      }}>
-                          </div> 
-                </div>,
-
-                <div className="bg-stone-800 ... rounded-xl ... " 
-                     style={{
-                              padding: "15px",
-                              width: "800px",
-                              height: "1000px"
-                           }}>
-                          <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
-                                        width: "100%",
-                                        height: "100%"
-                                      }}>
-                          </div> 
                 </div>,*/}
+   
                 ];
 
 
