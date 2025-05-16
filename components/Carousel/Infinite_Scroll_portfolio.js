@@ -21,8 +21,8 @@ const TAGS = [
                 <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
-                              width: "1000px",
-                              height: "1200px"
+                              width: "800px",
+                              height: "1000px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -35,8 +35,8 @@ const TAGS = [
                 <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
-                              width: "1000px",
-                              height: "1200px"
+                              width: "800px",
+                              height: "1000px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -49,8 +49,8 @@ const TAGS = [
                  <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
-                              width: "1000px",
-                              height: "1200px"
+                              width: "800px",
+                              height: "1000px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -63,8 +63,8 @@ const TAGS = [
                 <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
-                              width: "1000px",
-                              height: "1200px"
+                              width: "800px",
+                              height: "1000px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -77,8 +77,8 @@ const TAGS = [
                 <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
-                              width: "1000px",
-                              height: "1200px"
+                              width: "800px",
+                              height: "1000px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -91,8 +91,8 @@ const TAGS = [
                  <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
-                              width: "1000px",
-                              height: "1200px"
+                              width: "800px",
+                              height: "1000px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -106,8 +106,8 @@ const TAGS = [
                 <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
-                              width: "1000px",
-                              height: "1200px"
+                              width: "800px",
+                              height: "1000px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -120,8 +120,8 @@ const TAGS = [
                 <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "20px",
-                              width: "1000px",
-                              height: "1200px"
+                              width: "800px",
+                              height: "1000px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -134,8 +134,8 @@ const TAGS = [
                  <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
-                              width: "1000px",
-                              height: "1200px"
+                              width: "800px",
+                              height: "1000px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -148,8 +148,8 @@ const TAGS = [
                 <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
-                              width: "1000px",
-                              height: "1200px"
+                              width: "800px",
+                              height: "1000px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -162,8 +162,8 @@ const TAGS = [
                 <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
-                              width: "1000px",
-                              height: "1200px"
+                              width: "800px",
+                              height: "1000px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -176,8 +176,8 @@ const TAGS = [
                 <div className="bg-stone-800 ... rounded-xl ... " 
                      style={{
                               padding: "15px",
-                              width: "1000px",
-                              height: "1200px"
+                              width: "800px",
+                              height: "1000px"
                            }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
