@@ -21,8 +21,8 @@ const TAGS = [
                 <div className=""                    
                      style={{
                      padding: "0px",
-                     width: "800px",
-                     height: "1000px"
+                     width: "1000px",
+                     height: "1200px"
                      }}>
                       <div 
                            id={styles.CAROUSEL_GRID_1}
