@@ -21,7 +21,7 @@ const TAGS = [
                 <div className=""                    
                      style={{
                      padding: "0px",
-                     width: "800px",
+                     width: "750px",
                      height: "1100px"
                      }}>
                       <div 
@@ -64,7 +64,7 @@ const TAGS = [
                 <div className="" 
                      style={{
                         padding: "0px",
-                        width: "800px",
+                        width: "750px",
                         height: "1100px"
                       }}>
                       <div 
@@ -101,7 +101,7 @@ const TAGS = [
                 <div className="" 
                      style={{
                         padding: "0px",
-                        width: "800px",
+                        width: "750px",
                         height: "1100px"
                       }}>
                       <div 
