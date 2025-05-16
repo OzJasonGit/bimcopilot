@@ -123,14 +123,7 @@ const TAGS = [
                                 width: "100%",
                                 height: "100%"
                                 }}>
-                          </div> 
-                          <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
-                                gridArea: "P3",
-                                width: "100%",
-                                height: "100%"
-                                }}>
-                        </div> 
+                          </div>                          
                       </div>                        
                 </div>,
 
