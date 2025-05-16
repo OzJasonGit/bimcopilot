@@ -18,18 +18,47 @@ import logoPFBD from "./logoPFBD.png";
 const COLORS = ['#bbf7d0', '#99f6e4', '#bfdbfe', '#ddd6fe', '#f5d0fe', '#fed7aa', '#fee2e2'];
 const TAGS = [ 
 
-                <div className="bg-stone-800 ... rounded-xl ... " 
+                <div className=""                    
                      style={{
-                              padding: "15px",
-                              width: "800px",
-                              height: "1000px"
+                     padding: "0px",
+                     width: "800px",
+                     height: "1000px"
+                     }}>
+                      <div 
+                           id={styles.CAROUSEL_GRID_1}
+                           style={{                                       
+                              width: "100%",
+                              height: "100%"
                            }}>
-                          <div className="bg-stone-800 ... rounded-xl ... " 
+                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
-                                        width: "100%",
-                                        height: "100%"
-                                      }}>
-                          </div>              
+                                gridArea: "P1",
+                                width: "100%",
+                                height: "100%"
+                                }}>
+                           </div>  
+                           <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                gridArea: "P2",
+                                width: "100%",
+                                height: "100%"
+                                }}>
+                           </div> 
+                           <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                gridArea: "P3",
+                                width: "100%",
+                                height: "100%"
+                                }}>
+                           </div>  
+                           <div className="bg-stone-800 ... rounded-xl ... " 
+                                style={{                                       
+                                gridArea: "P4",
+                                width: "100%",
+                                height: "100%"
+                                }}>
+                           </div>                         
+                      </div>              
                 </div>, 
 
                 <div className="bg-stone-800 ... rounded-xl ... " 
