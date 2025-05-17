@@ -97,7 +97,7 @@
 #CAROUSEL_GRID_1_1 {
   display: grid;
   grid-row-gap: 30px;
-  grid-template-rows: 300px 1fr;
+  grid-template-rows: 150px 1fr;
   grid-template-columns: 1fr;
   grid-template-areas:
     "P1"
