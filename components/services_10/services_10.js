@@ -40,6 +40,7 @@ return (
                   <h2
                       id={styles._H2_CENTER}
                       class="text-xl ... text-stone-700 ... font-avant_garde_bold ...">
+                      We're a Dubai based company, born in the UK. <br/>
                       We've helped businesses eliminate <br/>bottlenecks and unlock growth with technology.
                   </h2>
                   <br/>        
