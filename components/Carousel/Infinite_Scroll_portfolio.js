@@ -48,7 +48,9 @@ const TAGS = [
                                     }}
                                   />
                            </div>  
+
                            <div className="bg-stone-800 ... rounded-xl ... " 
+                                id={styles.CAROUSEL_GRID_1_1}
                                 style={{  
                                 overflow:"hidden",
                                 position: "relative",                                     
@@ -56,19 +58,53 @@ const TAGS = [
                                 width: "100%",
                                 height: "100%"
                                 }}>
-                                  <Image
-                                    src={Placeholder_1}   
-                                    alt="Picture of the author"
-                                    width={500}
-                                    height={500}
-                                    style={{
-                                      position: "absolute",   
-                                      width: "100%",
-                                      height: "100%",
-                                      objectFit: "cover",
-                                    }}
-                                  />
+
+                                  <div className="bg-stone-800 ... rounded-xl ... " 
+                                        style={{   
+                                        overflow:"hidden",  
+                                        position: "relative",                                  
+                                        gridArea: "P1",
+                                        width: "100%",
+                                        height: "100%"
+                                        }}>
+                                          <Image
+                                            src={Placeholder_1}   
+                                            alt="Picture of the author"
+                                            width={500}
+                                            height={500}
+                                            style={{    
+                                              position: "absolute",                                   
+                                              width: "100%",
+                                              height: "100%",
+                                              objectFit: "cover",
+                                            }}
+                                          />
+                                  </div> 
+
+                                  <div className="bg-stone-800 ... rounded-xl ... " 
+                                        style={{   
+                                        overflow:"hidden",  
+                                        position: "relative",                                  
+                                        gridArea: "P2",
+                                        width: "100%",
+                                        height: "100%"
+                                        }}>
+                                          <Image
+                                            src={Placeholder_1}   
+                                            alt="Picture of the author"
+                                            width={500}
+                                            height={500}
+                                            style={{    
+                                              position: "absolute",                                   
+                                              width: "100%",
+                                              height: "100%",
+                                              objectFit: "cover",
+                                            }}
+                                          />
+                                  </div> 
+                                 
                            </div> 
+
                            <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{  
                                 overflow:"hidden",
@@ -90,27 +126,7 @@ const TAGS = [
                                     }}
                                   />
                            </div>  
-                           <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{ 
-                                overflow:"hidden", 
-                                position: "relative",                                     
-                                gridArea: "P4",
-                                width: "100%",
-                                height: "100%"
-                                }}>
-                                  <Image
-                                    src={Placeholder_1}   
-                                    alt="Picture of the author"
-                                    width={500}
-                                    height={500}
-                                    style={{  
-                                      position: "absolute",                                       
-                                      width: "100%",
-                                      height: "100%",
-                                      objectFit: "cover",
-                                    }}
-                                  />
-                           </div>                         
+                                                   
                       </div>              
                 </div>, 
 
