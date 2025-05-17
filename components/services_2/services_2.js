@@ -123,8 +123,7 @@ return (
 
               <div class="rounded-xl ... " id={styles.P_IMAGE_2}> 
                 <div id={styles.IMAGE_POST_2}>
-
-                  <Image
+                    <Image
                       src={Placeholder_1}   
                       alt="Picture of the author"
                       width={500}
@@ -136,7 +135,6 @@ return (
                         objectFit: "cover",
                       }}
                     />
-
                 </div>   
               </div>   
 

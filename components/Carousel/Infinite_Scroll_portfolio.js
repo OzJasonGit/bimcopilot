@@ -1,16 +1,13 @@
 
 import styles from "./infinite_scroll_portfolio.module.css";
 import Image from "next/image";
-import logoImage from "./Bim-copilot-logo_Mobile_2.png";
+import Placeholder_1 from './placeholder_1.jpeg';
 
 
-import logoNike from "./logoNike.png";
-import logoPopulous from "./logoPopulous.png";
-import logoPerkinsWill from "./logoPerkinsWill.png";
 
-import logoAutodesk from "./logoAutodesk.png";
-import logoBenoy from "./logoBenoy.png";
-import logoPFBD from "./logoPFBD.png";
+
+
+
 
 
 
@@ -36,6 +33,18 @@ const TAGS = [
                                 width: "100%",
                                 height: "100%"
                                 }}>
+                                  <Image
+                                    src={Placeholder_1}   
+                                    alt="Picture of the author"
+                                    width={500}
+                                    height={500}
+                                    style={{
+                                      position: "absolute",
+                                      width: "100%",
+                                      height: "100%",
+                                      objectFit: "cover",
+                                    }}
+                                  />
                            </div>  
                            <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -43,6 +52,18 @@ const TAGS = [
                                 width: "100%",
                                 height: "100%"
                                 }}>
+                                  <Image
+                                    src={Placeholder_1}   
+                                    alt="Picture of the author"
+                                    width={500}
+                                    height={500}
+                                    style={{
+                                      position: "absolute",
+                                      width: "100%",
+                                      height: "100%",
+                                      objectFit: "cover",
+                                    }}
+                                  />
                            </div> 
                            <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -50,6 +71,18 @@ const TAGS = [
                                 width: "100%",
                                 height: "100%"
                                 }}>
+                                  <Image
+                                    src={Placeholder_1}   
+                                    alt="Picture of the author"
+                                    width={500}
+                                    height={500}
+                                    style={{
+                                      position: "absolute",
+                                      width: "100%",
+                                      height: "100%",
+                                      objectFit: "cover",
+                                    }}
+                                  />
                            </div>  
                            <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -57,6 +90,18 @@ const TAGS = [
                                 width: "100%",
                                 height: "100%"
                                 }}>
+                                  <Image
+                                    src={Placeholder_1}   
+                                    alt="Picture of the author"
+                                    width={500}
+                                    height={500}
+                                    style={{
+                                      position: "absolute",
+                                      width: "100%",
+                                      height: "100%",
+                                      objectFit: "cover",
+                                    }}
+                                  />
                            </div>                         
                       </div>              
                 </div>, 
@@ -79,6 +124,18 @@ const TAGS = [
                               width: "100%",
                               height: "100%"
                               }}>
+                                <Image
+                                    src={Placeholder_1}   
+                                    alt="Picture of the author"
+                                    width={500}
+                                    height={500}
+                                    style={{
+                                      position: "absolute",
+                                      width: "100%",
+                                      height: "100%",
+                                      objectFit: "cover",
+                                    }}
+                                  />
                           </div>  
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -86,6 +143,18 @@ const TAGS = [
                                 width: "100%",
                                 height: "100%"
                                 }}>
+                                  <Image
+                                    src={Placeholder_1}   
+                                    alt="Picture of the author"
+                                    width={500}
+                                    height={500}
+                                    style={{
+                                      position: "absolute",
+                                      width: "100%",
+                                      height: "100%",
+                                      objectFit: "cover",
+                                    }}
+                                  />
                           </div> 
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -93,6 +162,18 @@ const TAGS = [
                                 width: "100%",
                                 height: "100%"
                                 }}>
+                                  <Image
+                                    src={Placeholder_1}   
+                                    alt="Picture of the author"
+                                    width={500}
+                                    height={500}
+                                    style={{
+                                      position: "absolute",
+                                      width: "100%",
+                                      height: "100%",
+                                      objectFit: "cover",
+                                    }}
+                                  />
                         </div> 
                       </div>                        
                 </div>, 
@@ -115,6 +196,18 @@ const TAGS = [
                               width: "100%",
                               height: "100%"
                               }}>
+                                <Image
+                                    src={Placeholder_1}   
+                                    alt="Picture of the author"
+                                    width={500}
+                                    height={500}
+                                    style={{
+                                      position: "absolute",
+                                      width: "100%",
+                                      height: "100%",
+                                      objectFit: "cover",
+                                    }}
+                                  />
                           </div>  
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{                                       
@@ -122,54 +215,24 @@ const TAGS = [
                                 width: "100%",
                                 height: "100%"
                                 }}>
+                                  <Image
+                                    src={Placeholder_1}   
+                                    alt="Picture of the author"
+                                    width={500}
+                                    height={500}
+                                    style={{
+                                      position: "absolute",
+                                      width: "100%",
+                                      height: "100%",
+                                      objectFit: "cover",
+                                    }}
+                                  />
                           </div>                          
                       </div>                        
                 </div>
 
-
-                /*<div className="bg-stone-800 ... rounded-xl ... " 
-                     style={{
-                              padding: "15px",
-                              width: "800px",
-                              height: "1000px"
-                           }}>
-                          <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
-                                        width: "100%",
-                                        height: "100%"
-                                      }}>
-                          </div> 
-                </div>, 
-
-                <div className="bg-stone-800 ... rounded-xl ... " 
-                     style={{
-                              padding: "15px",
-                              width: "800px",
-                              height: "1000px"
-                           }}>
-                          <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
-                                        width: "100%",
-                                        height: "100%"
-                                      }}>
-                          </div> 
-                </div>,
-
-                 <div className="bg-stone-800 ... rounded-xl ... " 
-                     style={{
-                              padding: "15px",
-                              width: "800px",
-                              height: "1000px"
-                           }}>
-                          <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
-                                        width: "100%",
-                                        height: "100%"
-                                      }}>
-                          </div> 
-                </div>,*/
    
-                ];
+            ];
 
 
 const DURATION = 150000;

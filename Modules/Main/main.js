@@ -45,7 +45,7 @@ const Main = ({ }) => {
           </div>
           {/* <Tiktoktop /> */}
           <div style={{ position: "relative", zIndex: 1, marginTop: "-50px" }}>
-        <Tiktoktop />
+          <Tiktoktop />
       </div>
           <Herotitle />
           <Products />
