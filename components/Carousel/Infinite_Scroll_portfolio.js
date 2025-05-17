@@ -264,10 +264,9 @@ const TAGS = [
                                   />
                           </div>                          
                       </div>                        
-                </div>
-
-   
-            ];
+                </div>   
+                
+             ];
 
 
 const DURATION = 150000;
