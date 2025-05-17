@@ -279,12 +279,8 @@ const Tag = ({ text }) => (
 );
 
 const Infinite_Scroll = () => (
-  <div className={styles.app}>
-    
-    
-    
-    
-    
+  <div className={styles.app}>   
+        
     <div className={styles.tag_list}>
       {[...new Array(ROWS)].map((_, i) => (
         <InfiniteLoopSlider key={i} duration={random(DURATION - 5000, DURATION + 5000)} reverse={i % 2}>

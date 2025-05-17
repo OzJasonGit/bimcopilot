@@ -4,7 +4,7 @@ import styles from './services_10.module.css';
 
 import React, { Component } from 'react';
 import Image from "next/image";
-import Placeholder_2 from './placeholder_2.jpeg';
+import Placeholder_2 from './pexels-apasaric-2044434.jpeg';
 import Collapsed_FAQ from "../../components/Collapse_FAQ/collapse_FAQ";
 
 
