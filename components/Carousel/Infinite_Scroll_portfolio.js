@@ -28,7 +28,7 @@ const TAGS = [
                               height: "100%"
                            }}>
                             
-                           <div className="bg-stone-800 ... rounded-xl ... " 
+                           <div className=" rounded-xl ... " 
                                 style={{   
                                 overflow:"hidden",  
                                 position: "relative",                                  
@@ -50,7 +50,7 @@ const TAGS = [
                                   />
                            </div>  
 
-                           <div className="bg-stone-800 ... rounded-xl ... " 
+                           <div className=" rounded-xl ... " 
                                 id={styles.CAROUSEL_GRID_1_1}
                                 style={{  
                                 overflow:"hidden",
@@ -60,7 +60,7 @@ const TAGS = [
                                 height: "100%"
                                 }}>
 
-                                  <div className="bg-stone-800 ... rounded-xl ... " 
+                                  <div className=" rounded-xl ... " 
                                         style={{   
                                         overflow:"hidden",  
                                         position: "relative",                                  
@@ -82,7 +82,7 @@ const TAGS = [
                                           />
                                   </div> 
 
-                                  <div className="bg-stone-800 ... rounded-xl ... " 
+                                  <div className=" rounded-xl ... " 
                                         style={{   
                                         overflow:"hidden",  
                                         position: "relative",                                  
@@ -106,7 +106,7 @@ const TAGS = [
                                  
                            </div> 
 
-                           <div className="bg-stone-800 ... rounded-xl ... " 
+                           <div className=" rounded-xl ... " 
                                 style={{  
                                 overflow:"hidden",
                                 position: "relative",                                     
@@ -143,7 +143,7 @@ const TAGS = [
                             width: "100%",
                             height: "100%"
                         }}>
-                          <div className="bg-stone-800 ... rounded-xl ... " 
+                          <div className=" rounded-xl ... " 
                               style={{   
                               overflow:"hidden",
                               position: "relative",                                    
@@ -164,7 +164,7 @@ const TAGS = [
                                     }}
                                   />
                           </div>  
-                          <div className="bg-stone-800 ... rounded-xl ... " 
+                          <div className=" rounded-xl ... " 
                                 style={{ 
                                 overflow:"hidden",  
                                 position: "relative",                                    
@@ -185,7 +185,7 @@ const TAGS = [
                                     }}
                                   />
                           </div> 
-                          <div className="bg-stone-800 ... rounded-xl ... " 
+                          <div className=" rounded-xl ... " 
                                 style={{ 
                                 overflow:"hidden",
                                 position: "relative",                                      
@@ -221,7 +221,7 @@ const TAGS = [
                             width: "100%",
                             height: "100%"
                         }}>
-                          <div className="bg-stone-800 ... rounded-xl ... " 
+                          <div className=" rounded-xl ... " 
                               style={{ 
                               overflow:"hidden", 
                               position: "relative",                                     
@@ -242,7 +242,7 @@ const TAGS = [
                                     }}
                                   />
                           </div>  
-                          <div className="bg-stone-800 ... rounded-xl ... " 
+                          <div className=" rounded-xl ... " 
                                 style={{ 
                                 overflow:"hidden", 
                                 position: "relative",                                     
