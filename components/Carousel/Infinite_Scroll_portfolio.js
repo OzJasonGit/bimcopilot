@@ -39,7 +39,7 @@ const TAGS = [
                                     width={500}
                                     height={500}
                                     style={{
-                                      position: "absolute",
+                                      position: "relative",
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -58,7 +58,7 @@ const TAGS = [
                                     width={500}
                                     height={500}
                                     style={{
-                                      position: "absolute",
+                                      position: "relative",
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -77,7 +77,7 @@ const TAGS = [
                                     width={500}
                                     height={500}
                                     style={{
-                                      position: "absolute",
+                                      position: "relative",
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -96,7 +96,7 @@ const TAGS = [
                                     width={500}
                                     height={500}
                                     style={{
-                                      position: "absolute",
+                                      position: "relative",
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -130,7 +130,7 @@ const TAGS = [
                                     width={500}
                                     height={500}
                                     style={{
-                                      position: "absolute",
+                                      position: "relative",
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -149,7 +149,7 @@ const TAGS = [
                                     width={500}
                                     height={500}
                                     style={{
-                                      position: "absolute",
+                                      position: "relative",
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -168,7 +168,7 @@ const TAGS = [
                                     width={500}
                                     height={500}
                                     style={{
-                                      position: "absolute",
+                                      position: "relative",
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -202,7 +202,7 @@ const TAGS = [
                                     width={500}
                                     height={500}
                                     style={{
-                                      position: "absolute",
+                                      position: "relative",
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -221,7 +221,7 @@ const TAGS = [
                                     width={500}
                                     height={500}
                                     style={{
-                                      position: "absolute",
+                                      position: "relative",
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
