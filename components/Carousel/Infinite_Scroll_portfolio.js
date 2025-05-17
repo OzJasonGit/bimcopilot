@@ -28,7 +28,8 @@ const TAGS = [
                               height: "100%"
                            }}>
                            <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{     
+                                style={{   
+                                overflow:"hidden",  
                                 position: "relative",                                  
                                 gridArea: "P1",
                                 width: "100%",
@@ -49,6 +50,7 @@ const TAGS = [
                            </div>  
                            <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{  
+                                overflow:"hidden",
                                 position: "relative",                                     
                                 gridArea: "P2",
                                 width: "100%",
@@ -69,6 +71,7 @@ const TAGS = [
                            </div> 
                            <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{  
+                                overflow:"hidden",
                                 position: "relative",                                     
                                 gridArea: "P3",
                                 width: "100%",
@@ -88,7 +91,8 @@ const TAGS = [
                                   />
                            </div>  
                            <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{  
+                                style={{ 
+                                overflow:"hidden", 
                                 position: "relative",                                     
                                 gridArea: "P4",
                                 width: "100%",
@@ -124,6 +128,7 @@ const TAGS = [
                         }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
                               style={{   
+                              overflow:"hidden",
                               position: "relative",                                    
                               gridArea: "P1",
                               width: "100%",
@@ -143,7 +148,8 @@ const TAGS = [
                                   />
                           </div>  
                           <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{   
+                                style={{ 
+                                overflow:"hidden",  
                                 position: "relative",                                    
                                 gridArea: "P2",
                                 width: "100%",
@@ -164,6 +170,7 @@ const TAGS = [
                           </div> 
                           <div className="bg-stone-800 ... rounded-xl ... " 
                                 style={{ 
+                                overflow:"hidden",
                                 position: "relative",                                      
                                 gridArea: "P3",
                                 width: "100%",
@@ -198,7 +205,8 @@ const TAGS = [
                             height: "100%"
                         }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
-                              style={{  
+                              style={{ 
+                              overflow:"hidden", 
                               position: "relative",                                     
                               gridArea: "P1",
                               width: "100%",
@@ -218,7 +226,8 @@ const TAGS = [
                                   />
                           </div>  
                           <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{  
+                                style={{ 
+                                overflow:"hidden", 
                                 position: "relative",                                     
                                 gridArea: "P2",
                                 width: "100%",
