@@ -28,7 +28,8 @@ const TAGS = [
                               height: "100%"
                            }}>
                            <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
+                                style={{     
+                                position: "relative",                                  
                                 gridArea: "P1",
                                 width: "100%",
                                 height: "100%"
@@ -38,8 +39,7 @@ const TAGS = [
                                     alt="Picture of the author"
                                     width={500}
                                     height={500}
-                                    style={{
-                                      position: "relative",
+                                    style={{                                      
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -47,7 +47,8 @@ const TAGS = [
                                   />
                            </div>  
                            <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
+                                style={{  
+                                position: "relative",                                     
                                 gridArea: "P2",
                                 width: "100%",
                                 height: "100%"
@@ -58,7 +59,7 @@ const TAGS = [
                                     width={500}
                                     height={500}
                                     style={{
-                                      position: "relative",
+                                      
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -66,7 +67,8 @@ const TAGS = [
                                   />
                            </div> 
                            <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
+                                style={{  
+                                position: "relative",                                     
                                 gridArea: "P3",
                                 width: "100%",
                                 height: "100%"
@@ -77,7 +79,7 @@ const TAGS = [
                                     width={500}
                                     height={500}
                                     style={{
-                                      position: "relative",
+                                      
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -85,7 +87,8 @@ const TAGS = [
                                   />
                            </div>  
                            <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
+                                style={{  
+                                position: "relative",                                     
                                 gridArea: "P4",
                                 width: "100%",
                                 height: "100%"
@@ -95,8 +98,7 @@ const TAGS = [
                                     alt="Picture of the author"
                                     width={500}
                                     height={500}
-                                    style={{
-                                      position: "relative",
+                                    style={{                                      
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -119,7 +121,8 @@ const TAGS = [
                             height: "100%"
                         }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
-                              style={{                                       
+                              style={{   
+                              position: "relative",                                    
                               gridArea: "P1",
                               width: "100%",
                               height: "100%"
@@ -129,8 +132,7 @@ const TAGS = [
                                     alt="Picture of the author"
                                     width={500}
                                     height={500}
-                                    style={{
-                                      position: "relative",
+                                    style={{                                     
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -138,7 +140,8 @@ const TAGS = [
                                   />
                           </div>  
                           <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
+                                style={{   
+                                position: "relative",                                    
                                 gridArea: "P2",
                                 width: "100%",
                                 height: "100%"
@@ -148,8 +151,7 @@ const TAGS = [
                                     alt="Picture of the author"
                                     width={500}
                                     height={500}
-                                    style={{
-                                      position: "relative",
+                                    style={{                                    
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -157,7 +159,8 @@ const TAGS = [
                                   />
                           </div> 
                           <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
+                                style={{ 
+                                position: "relative",                                      
                                 gridArea: "P3",
                                 width: "100%",
                                 height: "100%"
@@ -167,8 +170,7 @@ const TAGS = [
                                     alt="Picture of the author"
                                     width={500}
                                     height={500}
-                                    style={{
-                                      position: "relative",
+                                    style={{                                      
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -191,7 +193,8 @@ const TAGS = [
                             height: "100%"
                         }}>
                           <div className="bg-stone-800 ... rounded-xl ... " 
-                              style={{                                       
+                              style={{  
+                              position: "relative",                                     
                               gridArea: "P1",
                               width: "100%",
                               height: "100%"
@@ -201,8 +204,7 @@ const TAGS = [
                                     alt="Picture of the author"
                                     width={500}
                                     height={500}
-                                    style={{
-                                      position: "relative",
+                                    style={{                                     
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
@@ -210,7 +212,8 @@ const TAGS = [
                                   />
                           </div>  
                           <div className="bg-stone-800 ... rounded-xl ... " 
-                                style={{                                       
+                                style={{  
+                                position: "relative",                                     
                                 gridArea: "P2",
                                 width: "100%",
                                 height: "100%"
@@ -220,8 +223,7 @@ const TAGS = [
                                     alt="Picture of the author"
                                     width={500}
                                     height={500}
-                                    style={{
-                                      position: "relative",
+                                    style={{                                    
                                       width: "100%",
                                       height: "100%",
                                       objectFit: "cover",
