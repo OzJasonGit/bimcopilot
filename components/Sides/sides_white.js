@@ -98,7 +98,7 @@ export default class Sides extends Component {
 
                                 <div id={styles.PAGE_NAVIGATION}>
 
-                                    <div class="bg-stone-700  ..." id={styles.LINE_1}>
+                                    <div class="bg-stone-600  ..." id={styles.LINE_1}>
                                     </div>
 
                                     <div id={styles.NAV_LINK}>
