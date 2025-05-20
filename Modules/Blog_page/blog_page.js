@@ -372,10 +372,6 @@ const Blog_page = (stories) => {
                     
             </div>
 
-                
-        
-
-        </div>
             <div id="AFFILIATE_CONTAINER"
                 style={{
                     position: "relative",
@@ -392,6 +388,9 @@ const Blog_page = (stories) => {
                         }}>
                     </div>                
             </div>
+
+        </div>
+            
 
     </section>
 
