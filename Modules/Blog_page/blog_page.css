@@ -149,9 +149,9 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-        ". . . TITLE TITLE TITLE TITLE TITLE TITLE . . ."
-        ". . . VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO . . ."
-        ". . . TEXT TEXT TEXT TEXT TEXT TEXT . . .";
+        ". . . TITLE TITLE TITLE TITLE TITLE TITLE AFFILIATE AFFILIATE AFFILIATE"
+        ". . . VIDEO VIDEO VIDEO VIDEO VIDEO VIDEO AFFILIATE AFFILIATE AFFILIATE"
+        ". . . TEXT TEXT TEXT TEXT TEXT TEXT AFFILIATE AFFILIATE AFFILIATE";
 }
 
 
