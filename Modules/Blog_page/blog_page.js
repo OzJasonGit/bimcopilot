@@ -369,27 +369,30 @@ const Blog_page = (stories) => {
                             fugiat nulla pariatur.                                    
                         </p>                 
                     </div>
+
+
+                    <div id="AFFILIATE_CONTAINER"
+                        style={{
+                            position: "relative",
+                            gridArea: "AFFILIATE",
+                            width: "100%",
+                            height: "100%",
+                            paddingLeft: "30px"
+                            }}>    
+                            <div id="AFFILIATE"
+                                class="rounded-2xl ... bg-stone-700 ..."
+                                style={{
+                                    width: "100%",
+                                    height: "100%",                           
+                                }}>
+                            </div>                
+                    </div>
                     
             </div>
 
 
 
-            <div id="AFFILIATE_CONTAINER"
-                style={{
-                    position: "relative",
-                    gridArea: "AFFILIATE",
-                    width: "100%",
-                    height: "100%",
-                    paddingLeft: "30px"
-                    }}>    
-                    <div id="AFFILIATE"
-                        class="rounded-2xl ... bg-stone-700 ..."
-                        style={{
-                            width: "100%",
-                            height: "100%",                           
-                        }}>
-                    </div>                
-            </div>
+            
 
             
 
