@@ -100,7 +100,6 @@ const Blog_page = (stories) => {
         </div>
     </section>
 
-
     <section id="SHADOW_SECTION_BLOG" className={styles.center_holder}>
         <div className="grid_0_blogimageholder">
 
@@ -131,7 +130,6 @@ const Blog_page = (stories) => {
         </div>
     </section>
 
-
     <section id="SHADOW_SECTION_BLOG" className={styles.center_holder}>
         <div className="grid_0_tag">
             <div className="sub_head">
@@ -158,109 +156,6 @@ const Blog_page = (stories) => {
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-
-    <section id="SHADOW_SECTION_SIDE" className={styles.center_holder}>
-
-        <div className="grid_0_blog">
-
-            <div id="SIDE_TEXT_HOLDER"
-                style={{
-                        position: "relative",
-                        gridArea: "MAIN_AREA",
-                        position: "sticky"}}>
-
-                {/*<div id="DISCLAIMER_HOLDER">
-                    <h3
-                        id="_H3"
-                        className="text-2xl ... text-stone-700 ... font-avant_garde_bold">
-                    </h3>
-                    <p
-                        className="text-lg ... text-neutral-700 ... font-avant_garde_bold">
-                        {parse(story.disclaimer || "")}
-                    </p>
-                </div>*/}
-
-
-                <div id="SIDE_NAV_HOLDER"> 
-                    <div id="SIDE_NAV" >
-
-                        <div id="TITLE_1" >
-                            <Link href="#PARAGRAPH_1">
-                                <p
-                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                    {parse(story.body1_title || "")}
-                                </p>
-                            </Link>
-                        </div>
-                        <div id="TITLE_2">
-                            <Link href="#PARAGRAPH_2">
-                                <p
-                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                    {parse(story.body2_title || "")}
-                                </p>
-                            </Link>
-                        </div>
-
-                        <div id="TITLE_3">
-                            <a>
-                                <Link href="#PARAGRAPH_3">
-                                    <p
-                                        className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                        {parse(story.body3_title || "")}
-                                    </p>
-                                </Link>
-                            </a>
-                        </div>
-
-                        <div id="TITLE_4">
-                            <Link href="#PARAGRAPH_4">
-                                <p
-                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                    {parse(story.body4_title || "")}
-                                </p>
-                            </Link>
-                        </div>
-                        <div id="TITLE_5">
-                            <Link href="#PARAGRAPH_5">
-                                <p
-                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                    {parse(story.body5_title || "")}
-                                </p>
-                            </Link>
-                        </div>
-                        <div id="TITLE_6">
-                            <Link href="PARAGRAPH_6">
-                                <p
-                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                    {parse(story.body6_title || "")}
-                                </p>
-                            </Link>
-                        </div>
-                        <div id="TITLE_7">
-                            <Link href="PARAGRAPH_7">
-                                <p
-                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                    {parse(story.body7_title || "")}
-                                </p>
-                            </Link>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </section> 
-
-
 
 
 
@@ -346,18 +241,127 @@ const Blog_page = (stories) => {
                             </div>                
                     </div>
                     
-            </div>
-
-
-
-            
-
-            
+            </div>         
 
         </div>
             
-
     </section>
+
+
+
+
+
+
+
+
+    {/*<section id="SHADOW_SECTION_SIDE" className={styles.center_holder}>
+
+        <div className="grid_0_blog">
+
+            <div id="SIDE_TEXT_HOLDER"
+                style={{
+                        position: "relative",
+                        gridArea: "MAIN_AREA",
+                        position: "sticky"}}>
+
+
+
+
+
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+                <div id="SIDE_NAV_HOLDER"> 
+                    <div id="SIDE_NAV" >
+
+                        <div id="TITLE_1" >
+                            <Link href="#PARAGRAPH_1">
+                                <p
+                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                    {parse(story.body1_title || "")}
+                                </p>
+                            </Link>
+                        </div>
+                        <div id="TITLE_2">
+                            <Link href="#PARAGRAPH_2">
+                                <p
+                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                    {parse(story.body2_title || "")}
+                                </p>
+                            </Link>
+                        </div>
+
+                        <div id="TITLE_3">
+                            <a>
+                                <Link href="#PARAGRAPH_3">
+                                    <p
+                                        className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                        {parse(story.body3_title || "")}
+                                    </p>
+                                </Link>
+                            </a>
+                        </div>
+
+                        <div id="TITLE_4">
+                            <Link href="#PARAGRAPH_4">
+                                <p
+                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                    {parse(story.body4_title || "")}
+                                </p>
+                            </Link>
+                        </div>
+                        <div id="TITLE_5">
+                            <Link href="#PARAGRAPH_5">
+                                <p
+                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                    {parse(story.body5_title || "")}
+                                </p>
+                            </Link>
+                        </div>
+                        <div id="TITLE_6">
+                            <Link href="PARAGRAPH_6">
+                                <p
+                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                    {parse(story.body6_title || "")}
+                                </p>
+                            </Link>
+                        </div>
+                        <div id="TITLE_7">
+                            <Link href="PARAGRAPH_7">
+                                <p
+                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                    {parse(story.body7_title || "")}
+                                </p>
+                            </Link>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section> */}
+
+
+
+
+
+
+
+
+    
 
 
 
@@ -854,6 +858,18 @@ const Blog_page = (stories) => {
           </section>
         )
       })} */}
+
+
+      {/*<div id="DISCLAIMER_HOLDER">
+            <h3
+                id="_H3"
+                className="text-2xl ... text-stone-700 ... font-avant_garde_bold">
+            </h3>
+            <p
+                className="text-lg ... text-neutral-700 ... font-avant_garde_bold">
+                {parse(story.disclaimer || "")}
+            </p>
+        </div>*/}
 
 
 
