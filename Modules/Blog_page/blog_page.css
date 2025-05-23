@@ -315,7 +315,6 @@
     position: relative;
     width: 100%;
     display: flex;
-    margin-top: -50vh;
     -webkit-box-pack: center;
     justify-content: center;
     background-color: transparent;
