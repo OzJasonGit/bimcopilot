@@ -76,7 +76,7 @@ const Blog_page = (stories) => {
             <div className="sub_head">
 
 
-                <div id="SUBSCRIBE" className={"border-emerald-200"}>
+                <div id={styles.SUBSCRIBE} className={"border-emerald-200"}>
 
                     <div id="MAIN_TAG">
                         <div
@@ -94,6 +94,18 @@ const Blog_page = (stories) => {
                         </div>
                     </div>
                         
+                </div>
+
+                <div id= {styles.AUTHOR_GRID} className="bg-stone-100" 
+                    style={{
+                        display: "grid",
+                        width: "100%",
+                        height: "300px",
+                        gridArea: "AUTHOR",
+                        position: "relative",
+                                              
+                    }}>
+
                 </div>
 
             </div>
