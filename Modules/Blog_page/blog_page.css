@@ -421,7 +421,7 @@
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-template-areas:
-            ". . AUTHOR"
+            "NUMBER NUMBER AUTHOR"
             ". . ."
             ". . .";
 
@@ -453,7 +453,7 @@
     grid-row-gap: 20px;
     grid-column-gap: 20px;
     grid-template-columns: 1fr 180px;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 0px auto auto;
     grid-template-areas:
         "ICON . "
         "TAG_MAIN TAG_MAIN"

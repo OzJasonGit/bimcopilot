@@ -48,227 +48,243 @@ const Blog_page = (stories) => {
     const router = useRouter();
     return (
 
-    <>
+        <>
 
-        {storiesToMap?.map((story, index) => {
-            return (
+            {storiesToMap?.map((story, index) => {
+                return (
 
-                <Head>
-                    <title>
-                        {parse(story.title || "")}
-                    </title>
-
-                    <meta
-                        name={parse(story.title || "")}
-                        content={parse(story.title || "")}
-                        key={parse(story.title || "")}
-                    />
-                </Head>
-            )
-        })}
-
-
-
-
-
-    <section id="SHADOW_SECTION_BLOG" className="center_holder">
-        <div className="grid_0_subscribe">
-            <div className="sub_head" 
-                    style={{
-                        paddingTop: "80px"                                              
-                    }}>
-
-
-                <div id="SUBSCRIBE" className={"border-emerald-200"}>
-
-                    <div id="MAIN_TAG">
-                        <div
-                            id="_H1"
-                            className=" text-stone-200 ... font-avant_garde_bold">
+                    <Head>
+                        <title>
                             {parse(story.title || "")}
+                        </title>
+
+                        <meta
+                            name={parse(story.title || "")}
+                            content={parse(story.title || "")}
+                            key={parse(story.title || "")}
+                        />
+                    </Head>
+                )
+            })}
+
+
+
+
+
+            <section id="SHADOW_SECTION_BLOG" className="center_holder">
+                <div className="grid_0_subscribe">
+                    <div className="sub_head"
+                        style={{
+                            paddingTop: "80px"
+                        }}>
+
+
+                        <div id="SUBSCRIBE" className={"border-emerald-200"}>
+
+                            <div id="MAIN_TAG">
+                                <div
+                                    id="_H1"
+                                    className=" text-stone-200 ... font-avant_garde_bold">
+                                    {parse(story.title || "")}
+                                </div>
+                            </div>
+
+                            <div id="SUB_TAG">
+                                <div
+                                    id="_H3"
+                                    className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">
+                                    {parse(story.subtitle || "")}
+                                </div>
+                            </div>
+
                         </div>
-                    </div>
 
-                    <div id="SUB_TAG">
-                        <div
-                            id="_H3"
-                            className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">                                     
-                            {parse(story.subtitle || "")}         
-                        </div>
-                    </div>
-                        
-                </div>
-
-                <div id="AUTHOR_GRID"
-                    style={{
-                        display: "grid",                       
-                        position: "relative",                                              
-                    }}>
-                        <div className="bg-stone-100 rounded-full" 
-                             style={{
-                                gridArea:"AUTHOR",  
-                                height:"100%",
-                                width: "100%"                                           
-                             }}>
-
-                        </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="SHADOW_SECTION_BLOG" className="center_holder">
-        <div className="grid_0_blogimageholder">
-
-            <div className="rounded-2xl ..." 
-                    id="MAIN_IMAGE"
-                    style={{
-                        display: "block",
-                        width: "100%",
-                        height: "600px",
-                        gridArea: "SUB",
-                        position: "relative"                       
-                    }}>
-                <Image
-                    alt="Story Image"
-                    key={story._id}
-                    width={500}
-                    height={500}
-                    src={story.image}
-                    style={{
-                        position: "absolute",
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                    }}
-                />
-
-            </div>
-        </div>
-    </section>
-
-    <section id="SHADOW_SECTION_BLOG" className="center_holder">
-        <div className="grid_0_tag">
-            <div className="sub_head_2">
-                <div id="SUBSCRIBE" className={"border-emerald-200"}>
-
-                    <div id="SUB_ICON">
-                    </div>
-
-                    <div id="MAIN_TAG">
-                        <h1
-                            id="_H1"
-                            className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
-                            Introduction
-                            <br /> <br />
-                        </h1>
-                        <p className="text-xl ... text-stone-400 ... font-avant_garde_bold">
-                            {parse(story.Slug || "")} {parse(story.Slug || "")}
-                            <br /> 
-                            {parse(story.introduction || "")}
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-    <section id="SHADOW_SECTION_TOP" className="center_holder"
-        style={{           
-            left: "-100vw",
-            }}>
-
-        <div className="grid_0_blog">
-
-            <div id="FIRST_TEXT_HOLDER"
-                style={{
-                    position: "relative",
-                    display: "grid",
-                    width: "100%",
-                    height: "auto",
-                    gridArea: "MAIN_AREA",
-                    left: "100vw",
-                    zIndex: "200000"}}>
-
-
-                    <div id="PARAGRAPH"
+                        <div id="AUTHOR_GRID"
                             style={{
-                            position: "relative",
-                            width: "100%",                     
-                            gridArea: "TITLE",}}>
-                        <br/> <br/>
-                        <h3
-                            className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                            id="_H3_2">
-                            {parse(story.body1_title || "")}
-                            consectetur adipiscing elit, sed do eiusmod tempor 
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        </h3>
-                        <br/> 
+                                display: "grid",
+                                position: "relative",
+                            }}>
+                            <div className="bg-stone-100 rounded-full"
+                                style={{
+                                    gridArea: "AUTHOR",
+                                    height: "100%",
+                                    width: "100%",
+                                    position: "relative",
+                                    right: "-15px"
+                                }}>
+
+                            </div>
+                        </div>
+
+                        <div id="NUMBER_GRID"
+                            style={{
+                                gridArea: "NUMBER",
+                                height: "100%",
+                                width: "100%",
+                                display: "grid",
+                                position: "relative",
+                            }}>
+
+
+                        </div>
+
                     </div>
+                </div>
+            </section>
 
-                    
+            <section id="SHADOW_SECTION_BLOG" className="center_holder">
+                <div className="grid_0_blogimageholder">
 
-                    <div className="bg-transparent ... rounded-xl ... justify-center ..."
+                    <div className="rounded-2xl ..."
+                        id="MAIN_IMAGE"
+                        style={{
+                            display: "block",
+                            width: "100%",
+                            height: "600px",
+                            gridArea: "SUB",
+                            position: "relative"
+                        }}>
+                        <Image
+                            alt="Story Image"
+                            key={story._id}
+                            width={500}
+                            height={500}
+                            src={story.image}
+                            style={{
+                                position: "absolute",
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",
+                            }}
+                        />
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="SHADOW_SECTION_BLOG" className="center_holder">
+                <div className="grid_0_tag">
+                    <div className="sub_head_2">
+                        <div id="SUBSCRIBE" className={"border-emerald-200"}>
+
+                            <div id="SUB_ICON">
+                            </div>
+
+                            <div id="MAIN_TAG">
+                                <h1
+                                    id="_H1"
+                                    className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
+                                    Introduction
+                                    <br /> <br />
+                                </h1>
+                                <p className="text-xl ... text-stone-400 ... font-avant_garde_bold">
+                                    {parse(story.Slug || "")} {parse(story.Slug || "")}
+                                    <br />
+                                    {parse(story.introduction || "")}
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+            <section id="SHADOW_SECTION_TOP" className="center_holder"
+                style={{
+                    left: "-100vw",
+                }}>
+
+                <div className="grid_0_blog">
+
+                    <div id="FIRST_TEXT_HOLDER"
                         style={{
                             position: "relative",
+                            display: "grid",
                             width: "100%",
                             height: "auto",
-                            gridArea: "VIDEO",
+                            gridArea: "MAIN_AREA",
+                            left: "100vw",
+                            zIndex: "200000"
                         }}>
-                        <Video />
-                    </div>
-
-                    
-
-                    <div
-                        style={{
-                            position: "relative",
-                            width: "100%",
-                            height: "auto",
-                            gridArea: "TEXT",                               
-                        }}>
-                        <br/> <br/>
-                        <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                            {parse(story.body1 || "")}                               
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                            fugiat nulla pariatur.                                    
-                        </p>                 
-                    </div>
 
 
-                    <div id="AFFILIATE_CONTAINER"
-                        style={{
-                            position: "relative",
-                            gridArea: "AFFILIATE",
-                            width: "100%",
-                            height: "100%",
-                            paddingLeft: "30px"
-                            }}>    
+                        <div id="PARAGRAPH"
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                gridArea: "TITLE",
+                            }}>
+                            <br /> <br />
+                            <h3
+                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                id="_H3_2">
+                                {parse(story.body1_title || "")}
+                                consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </h3>
+                            <br />
+                        </div>
+
+
+
+                        <div className="bg-transparent ... rounded-xl ... justify-center ..."
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "VIDEO",
+                            }}>
+                            <Video />
+                        </div>
+
+
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "TEXT",
+                            }}>
+                            <br /> <br />
+                            <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                {parse(story.body1 || "")}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+
+
+                        <div id="AFFILIATE_CONTAINER"
+                            style={{
+                                position: "relative",
+                                gridArea: "AFFILIATE",
+                                width: "100%",
+                                height: "100%",
+                                paddingLeft: "30px"
+                            }}>
                             <div id="AFFILIATE"
                                 class="rounded-2xl ... bg-stone-700 ..."
                                 style={{
                                     width: "100%",
-                                    height: "100%",                           
+                                    height: "100%",
                                 }}>
-                            </div>                
+                            </div>
+                        </div>
+
                     </div>
-                    
-            </div>         
 
-        </div>
-            
-    </section>
+                </div>
+
+            </section>
 
 
 
@@ -277,7 +293,7 @@ const Blog_page = (stories) => {
 
 
 
-    {/*<section id="SHADOW_SECTION_SIDE" className={styles.center_holder}>
+            {/*<section id="SHADOW_SECTION_SIDE" className={styles.center_holder}>
 
         <div className="grid_0_blog">
 
@@ -374,7 +390,6 @@ const Blog_page = (stories) => {
 
 
 
-    
 
 
 
@@ -385,223 +400,236 @@ const Blog_page = (stories) => {
 
 
 
-    <section id="SHADOW_SECTION_TITLE" className="center_holder">
-        <div className="grid_0_blog">
 
-            <div id="TEXT_HOLDER"
-                style={{
-                        position: "relative",
-                        display: "grid",
-                        width: "100%",
-                        height: "auto",
-                        gridArea: "MAIN_AREA",}}>
+            <section id="SHADOW_SECTION_TITLE" className="center_holder">
+                <div className="grid_0_blog">
 
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TITLE",}}>
-                    <h3
-                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3_2">
-                        {parse(story.body2_title || "")}
-                        consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    </h3>
-                    <br/> 
-                </div>
-            
-                <div  
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TEXT",}}> 
+                    <div id="TEXT_HOLDER"
+                        style={{
+                            position: "relative",
+                            display: "grid",
+                            width: "100%",
+                            height: "auto",
+                            gridArea: "MAIN_AREA",
+                        }}>
 
-                    <p  
-                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                        {parse(story.body2 || "")}
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                        fugiat nulla pariatur. 
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <section id="SHADOW_SECTION_TITLE" className="center_holder">
-        <div className="grid_0_blog">
-            <div id="IMAGE_TEXT_HOLDER"
-                style={{
-                        position: "relative",
-                        display: "grid",
-                        width: "100%",
-                        height: "auto",
-                        gridArea: "MAIN_AREA",}}>
-
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TITLE",}}>
-                    <h3
-                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3_2">
-                        {parse(story.body3_title || "")}
-                        consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    </h3>
-                    <br/> 
-                </div>
-
-                <div className="bg-transparent ... rounded-xl ... justify-center ..."
-                    style={{
-                        position: "relative",
-                        width: "100%",
-                        height: "350px",
-                        gridArea: "IMAGE",
-                    }}>
-                        <Image
-                            className=" rounded-xl ... justify-center ..."
-                            alt="Story Image"
-                            key={story._id}
-                            width={500}
-                            height={500}
-                            src={story.image}
+                        <div
                             style={{
-                                position: "absolute",
+                                position: "relative",
                                 width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                    }}/>                    
-                </div>          
-           
-                <div  
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TEXT",}}> 
-                    <br/> <br/>
-                    <p  
-                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                        {parse(story.body3 || "")}
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                        fugiat nulla pariatur. 
-                    </p>                   
+                                gridArea: "TITLE",
+                            }}>
+                            <h3
+                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                id="_H3_2">
+                                {parse(story.body2_title || "")}
+                                consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </h3>
+                            <br />
+                        </div>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                gridArea: "TEXT",
+                            }}>
+
+                            <p
+                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                {parse(story.body2 || "")}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+
+                    </div>
+
                 </div>
-
-            </div>
-        </div>
-    </section>
+            </section>
 
 
-    <section id="SHADOW_SECTION_TITLE" className="center_holder">
-        <div className="grid_0_blog">
+            <section id="SHADOW_SECTION_TITLE" className="center_holder">
+                <div className="grid_0_blog">
+                    <div id="IMAGE_TEXT_HOLDER"
+                        style={{
+                            position: "relative",
+                            display: "grid",
+                            width: "100%",
+                            height: "auto",
+                            gridArea: "MAIN_AREA",
+                        }}>
 
-            <div id="TEXT_HOLDER"
-                style={{
-                        position: "relative",
-                        display: "grid",
-                        width: "100%",
-                        height: "auto",
-                        gridArea: "MAIN_AREA",}}>
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                gridArea: "TITLE",
+                            }}>
+                            <h3
+                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                id="_H3_2">
+                                {parse(story.body3_title || "")}
+                                consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </h3>
+                            <br />
+                        </div>
 
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TITLE",}}>
-                    <h3
-                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3_2">
-                        {parse(story.body4_title || "")}
-                        consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    </h3>
-                    <br/> 
+                        <div className="bg-transparent ... rounded-xl ... justify-center ..."
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                height: "350px",
+                                gridArea: "IMAGE",
+                            }}>
+                            <Image
+                                className=" rounded-xl ... justify-center ..."
+                                alt="Story Image"
+                                key={story._id}
+                                width={500}
+                                height={500}
+                                src={story.image}
+                                style={{
+                                    position: "absolute",
+                                    width: "100%",
+                                    height: "100%",
+                                    objectFit: "cover",
+                                }} />
+                        </div>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                gridArea: "TEXT",
+                            }}>
+                            <br /> <br />
+                            <p
+                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                {parse(story.body3 || "")}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
-            
-                <div  
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TEXT",}}> 
+            </section>
 
-                    <p  
-                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                        {parse(story.body4 || "")}
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                        fugiat nulla pariatur. 
-                    </p>
+
+            <section id="SHADOW_SECTION_TITLE" className="center_holder">
+                <div className="grid_0_blog">
+
+                    <div id="TEXT_HOLDER"
+                        style={{
+                            position: "relative",
+                            display: "grid",
+                            width: "100%",
+                            height: "auto",
+                            gridArea: "MAIN_AREA",
+                        }}>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                gridArea: "TITLE",
+                            }}>
+                            <h3
+                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                id="_H3_2">
+                                {parse(story.body4_title || "")}
+                                consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </h3>
+                            <br />
+                        </div>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                gridArea: "TEXT",
+                            }}>
+
+                            <p
+                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                {parse(story.body4 || "")}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+
+                    </div>
+
                 </div>
-
-            </div>
-
-        </div>
-    </section>
+            </section>
 
 
-    <section id="SHADOW_SECTION_TITLE" className="center_holder">
-        <div className="grid_0_blog">
+            <section id="SHADOW_SECTION_TITLE" className="center_holder">
+                <div className="grid_0_blog">
 
-            <div id="TEXT_HOLDER"
-                style={{
-                        position: "relative",
-                        display: "grid",
-                        width: "100%",
-                        height: "auto",
-                        gridArea: "MAIN_AREA",}}>
+                    <div id="TEXT_HOLDER"
+                        style={{
+                            position: "relative",
+                            display: "grid",
+                            width: "100%",
+                            height: "auto",
+                            gridArea: "MAIN_AREA",
+                        }}>
 
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TITLE",}}>
-                    <h3
-                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3_2">
-                        {parse(story.body5_title || "")}
-                        consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    </h3>
-                    <br/> 
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                gridArea: "TITLE",
+                            }}>
+                            <h3
+                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                id="_H3_2">
+                                {parse(story.body5_title || "")}
+                                consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </h3>
+                            <br />
+                        </div>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",
+                                gridArea: "TEXT",
+                            }}>
+
+                            <p
+                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                {parse(story.body5 || "")}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                fugiat nulla pariatur.
+                            </p>
+                        </div>
+
+                    </div>
+
                 </div>
-            
-                <div  
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TEXT",}}> 
-
-                    <p  
-                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                        {parse(story.body5 || "")}
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                        fugiat nulla pariatur. 
-                    </p>          
-                </div>
-
-            </div>
-
-        </div>
-    </section>
+            </section>
 
 
-    {/*<section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
+            {/*<section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
         <div className="grid_0_blog">
 
             <div id="TEXT_HOLDER"
@@ -650,7 +678,7 @@ const Blog_page = (stories) => {
     </section>*/}
 
 
-    {/*<section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
+            {/*<section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
         <div className="grid_0_blog">
 
             <div id="TEXT_HOLDER"
@@ -699,7 +727,7 @@ const Blog_page = (stories) => {
     </section>*/}
 
 
-    {/*<section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
+            {/*<section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
             <div className="grid_0_blog">
 
                 <div id="TEXT_HOLDER"
@@ -741,7 +769,7 @@ const Blog_page = (stories) => {
     </section>*/}
 
 
-    {/*<section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
+            {/*<section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
         <div className="grid_0_blog">
 
             <div id="TEXT_HOLDER"
@@ -783,7 +811,7 @@ const Blog_page = (stories) => {
     </section>*/}
 
 
-    {/*<section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
+            {/*<section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
         <div className="grid_0_blog_end">
 
             <div id="TEXT_HOLDER"
@@ -824,7 +852,7 @@ const Blog_page = (stories) => {
     </section>*/}
 
 
-    
+
 
 
 
@@ -873,7 +901,7 @@ const Blog_page = (stories) => {
       })} */}
 
 
-      {/*<div id="DISCLAIMER_HOLDER">
+            {/*<div id="DISCLAIMER_HOLDER">
             <h3
                 id="_H3"
                 className="text-2xl ... text-stone-700 ... font-avant_garde_bold">
