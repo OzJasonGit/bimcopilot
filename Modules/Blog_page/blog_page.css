@@ -1034,19 +1034,6 @@
 
 
 
-/*SECTION_5////ASTRONAUT_1/////////////////////////////////////////////////////////////////////////////////*/
-#ASTRONAUT_IMAGE_1 {
-    grid-area: IMAGE;
-    width: 100%;
-    height: 600px;
-}
-
-#ASTRONAUT_IMAGE_1_TEXT {
-    grid-area: ADVERT;
-}
-
-/*SECTION_5////ASTRONAUT_1/////////////////////////////////////////////////////////////////////////////////*/
-
 
 
 
@@ -1058,29 +1045,8 @@
 
 
 /*SECTION_6////WORLD??/////////////////////////////////////////////////////////////////////////////////////*/
-#SHADOW_SECTION_WORLD {
-    position: relative;
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: rgb(228 228 231);
-    z-index: -30000;
-}
 
-.grid_0_main_world {
-    width: 100%;
-    max-width: 2160px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 40px;
-    grid-template-rows: 0px auto 0px;
-    grid-template-columns: 0px 0px 0px 1fr 0px 0px 0px;
-    grid-template-areas: ". . . . . . ."
-        ". BANNER-1 . MAIN-AREA . BANNER-2 ."
-        ". . . . . . .";
-}
+
 
 #BACKGROUND_GRID {
     grid-area: BACKGROUND_MAIN;
