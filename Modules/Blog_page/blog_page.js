@@ -146,6 +146,7 @@ const Blog_page = (stories) => {
                                     gridArea: "NAME",
                                     height: "auto",
                                     width: "100%",
+                                    left: "10px",
                                     position: "relative",
                                 }}>
 
