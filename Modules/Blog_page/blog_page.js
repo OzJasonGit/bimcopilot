@@ -102,9 +102,7 @@ const Blog_page = (stories) => {
                 <div id= {styles.AUTHOR_GRID} className="bg-stone-100" 
                     style={{
                         display: "grid",
-                        width: "100%",
-                        height: "200px",
-                        gridArea: "AUTHOR",
+                        
                         position: "relative",
                                               
                     }}>
