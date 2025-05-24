@@ -99,13 +99,19 @@ const Blog_page = (stories) => {
                         
                 </div>
 
-                <div id="AUTHOR_GRID" className="bg-stone-100" 
+                <div id="AUTHOR_GRID"
                     style={{
                         display: "grid",                       
-                        position: "relative",
-                                              
+                        position: "relative",                                              
                     }}>
+                        <div className="bg-stone-100 rounded-full" 
+                             style={{
+                                gridArea:"AUTHOR",  
+                                height:"100%",
+                                width: "100%"                                           
+                             }}>
 
+                        </div>
                 </div>
 
             </div>
