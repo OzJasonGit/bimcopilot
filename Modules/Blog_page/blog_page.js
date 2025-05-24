@@ -146,7 +146,7 @@ const Blog_page = (stories) => {
                                     gridArea: "NAME",
                                     height: "auto",
                                     width: "100%",
-                                    left: "10px",
+                                    left: "5px",
                                     position: "relative",
                                 }}>
 
@@ -156,8 +156,19 @@ const Blog_page = (stories) => {
                                         className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
                                         {parse(story.Author || "")}
                                         001
-                                    </h3>                 
+                                    </h3>    
+                                    <br/>
+                                    <h3 
+                                        id="_H3"
+                                        className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
+                                        {parse(story.Author || "")}
+                                        23rd January 2025
+                                    </h3>   
+
+                                                 
                                 </div>
+
+                                
                             </div>
 
                         </div>
