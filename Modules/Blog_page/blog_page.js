@@ -177,7 +177,10 @@ const Blog_page = (stories) => {
 
 
 
-    <section id="SHADOW_SECTION_TOP" className={styles.center_holder}>
+    <section id="SHADOW_SECTION_TOP" className={styles.center_holder}
+        style={{           
+            left: "-100vw",
+            }}>
 
         <div className="grid_0_blog">
 
@@ -187,7 +190,9 @@ const Blog_page = (stories) => {
                     display: "grid",
                     width: "100%",
                     height: "auto",
-                    gridArea: "MAIN_AREA",}}>
+                    gridArea: "MAIN_AREA",
+                    left: "100vw",
+                    zIndex: "200000"}}>
 
 
                     <div id="PARAGRAPH"
