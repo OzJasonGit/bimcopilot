@@ -142,7 +142,7 @@ const Blog_page = (stories) => {
 
 
                             <div id="NAME"
-                                style={{
+                                 style={{
                                     gridArea: "NAME",
                                     height: "auto",
                                     width: "100%",
@@ -150,8 +150,9 @@ const Blog_page = (stories) => {
                                 }}>
 
                                 <div>
-                                    <h3
-                                        className="text-6xl ... text-stone-400 ... font-avant_garde_bold ... text-right ...">
+                                    <h3 
+                                        id="_H3"
+                                        className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
                                         {parse(story.Author || "")}
                                         001
                                     </h3>                 
