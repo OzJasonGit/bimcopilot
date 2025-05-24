@@ -76,7 +76,7 @@ const Blog_page = (stories) => {
             <div className="sub_head">
 
 
-                <div id={styles.SUBSCRIBE} className={"border-emerald-200"}>
+                <div id="SUBSCRIBE" className={"border-emerald-200"}>
 
                     <div id="MAIN_TAG">
                         <div
