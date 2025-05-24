@@ -382,7 +382,7 @@ const Blog_page = (stories) => {
 
 
 
-    {/*<section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
+    <section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
         <div className="grid_0_blog">
 
             <div id="TEXT_HOLDER"
@@ -428,7 +428,7 @@ const Blog_page = (stories) => {
             </div>
 
         </div>
-    </section>*/}
+    </section>
 
 
     {/*<section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
