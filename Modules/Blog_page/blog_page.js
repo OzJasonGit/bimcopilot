@@ -274,7 +274,7 @@ const Blog_page = (stories) => {
 
 
 
-    {/*<section id="SHADOW_SECTION_SIDE" className={styles.center_holder}>
+    <section id="SHADOW_SECTION_SIDE" className={styles.center_holder}>
 
         <div className="grid_0_blog">
 
@@ -283,16 +283,6 @@ const Blog_page = (stories) => {
                         position: "relative",
                         gridArea: "MAIN_AREA",
                         position: "sticky"}}>
-
-
-
-
-
-
-
-
-                
-
 
 
 
@@ -372,7 +362,7 @@ const Blog_page = (stories) => {
             </div>
         </div>
 
-    </section> */}
+    </section> 
 
 
 
