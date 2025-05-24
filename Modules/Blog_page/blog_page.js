@@ -141,6 +141,33 @@ const Blog_page = (stories) => {
                                 
 
                             </div>
+
+
+
+
+
+
+
+                            <div id="NAME"
+                                style={{
+                                    gridArea: "NAME",
+                                    height: "auto",
+                                    width: "100%",
+                                    position: "relative",
+                                }}>
+
+                                    <div>
+
+                                        <h3
+                                            className="text-6xl ... text-stone-400 ... font-avant_garde_bold ... text-right ...">
+                                            {parse(story.Author || "")}
+                                            001
+                                        </h3>                 
+                                    </div>
+
+                                
+
+                            </div>
                         </div>
 
                         
