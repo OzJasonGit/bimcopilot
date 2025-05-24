@@ -73,7 +73,10 @@ const Blog_page = (stories) => {
 
     <section id="SHADOW_SECTION_BLOG" className={styles.center_holder}>
         <div className="grid_0_subscribe">
-            <div className="sub_head">
+            <div className="sub_head" 
+                    style={{
+                        paddingTop: "80px"                                              
+                    }}>
 
 
                 <div id="SUBSCRIBE" className={"border-emerald-200"}>
@@ -100,7 +103,7 @@ const Blog_page = (stories) => {
                     style={{
                         display: "grid",
                         width: "100%",
-                        height: "300px",
+                        height: "200px",
                         gridArea: "AUTHOR",
                         position: "relative",
                                               
