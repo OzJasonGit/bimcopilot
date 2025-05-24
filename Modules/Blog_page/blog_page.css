@@ -410,6 +410,22 @@
     left: 0;
 }
 
+.sub_head_2 {
+    position: relative;
+    grid-area: SUB;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-column-gap: 40px;
+    grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "BC BC BC BC BC BC BC BC . . AUTHOR AUTHOR AUTHOR AUTHOR";
+    left: 0;
+}
+
+
+
 #SUBSCRIBE {
     position: relative;
     grid-area: BC;

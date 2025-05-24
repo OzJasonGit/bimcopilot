@@ -147,7 +147,7 @@ const Blog_page = (stories) => {
 
     <section id="SHADOW_SECTION_BLOG" className={styles.center_holder}>
         <div className="grid_0_tag">
-            <div className="sub_head">
+            <div className="sub_head_2">
                 <div id="SUBSCRIBE" className={"border-emerald-200"}>
 
                     <div id="SUB_ICON">
