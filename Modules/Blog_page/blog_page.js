@@ -112,21 +112,20 @@ const Blog_page = (stories) => {
                                     position: "relative",
                                     right: "-15px"
                                 }}>
+                            </div>
 
+                            <div id="NUMBER_GRID"
+                                style={{
+                                    gridArea: "NUMBER",
+                                    height: "100%",
+                                    width: "100%",
+                                    display: "grid",
+                                    position: "relative",
+                                }}>
                             </div>
                         </div>
 
-                        <div id="NUMBER_GRID"
-                            style={{
-                                gridArea: "NUMBER",
-                                height: "100%",
-                                width: "100%",
-                                display: "grid",
-                                position: "relative",
-                            }}>
-
-
-                        </div>
+                        
 
                     </div>
                 </div>
