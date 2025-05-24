@@ -122,6 +122,25 @@ const Blog_page = (stories) => {
                                     display: "grid",
                                     position: "relative",
                                 }}>
+
+                                    <div  
+                                        style={{
+                                            gridArea: "NUMBER",
+                                            height: "100%",
+                                            width: "100%",
+                                            position: "relative",
+                                        }}>
+
+                                        <h3
+                                            className="text-3xl ... text-stone-100 ... font-avant_garde_bold"
+                                            id="_H1">
+                                            {parse(story.post_number || "")}
+                                            001
+                                        </h3>                 
+                                    </div>
+
+                                
+
                             </div>
                         </div>
 

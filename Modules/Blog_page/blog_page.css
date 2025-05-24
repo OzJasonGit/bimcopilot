@@ -429,6 +429,18 @@
 
 
 
+#NUMBER_GRID {
+    display: grid;  
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px auto auto;   
+    grid-template-areas:
+        "."
+        "NUMBER"
+        ".";
+}
+
+
+
 .sub_head_2 {
     position: relative;
     grid-area: SUB;
