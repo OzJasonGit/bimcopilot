@@ -416,10 +416,14 @@
     grid-area: AUTHOR;
     height: auto;
     width: 100%;
-    grid-template-columns: 1fr 1fr 120px;
-    grid-template-rows: 120px auto auto;
+    grid-template-columns: 1fr 1fr 110px;
+    grid-template-rows: 110px auto auto;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
+    grid-template-areas:
+            ". . AUTHOR"
+            ". . ."
+            ". . .";
 
 }
 
