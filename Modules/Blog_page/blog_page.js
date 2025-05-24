@@ -104,6 +104,7 @@ const Blog_page = (stories) => {
                                 display: "grid",
                                 position: "relative",
                             }}>
+
                             <div className="bg-stone-100 rounded-full"
                                 style={{
                                     gridArea: "AUTHOR",
@@ -123,29 +124,21 @@ const Blog_page = (stories) => {
                                     position: "relative",
                                 }}>
 
-                                    <div  
-                                        style={{
-                                            gridArea: "NUMBER",
-                                            height: "100%",
-                                            width: "100%",
-                                            position: "relative",
-                                        }}>
+                                <div  
+                                    style={{
+                                        gridArea: "NUMBER",
+                                        height: "100%",
+                                        width: "100%",
+                                        position: "relative",
+                                    }}>
 
-                                        <h3
-                                            className="text-6xl ... text-stone-200 ... font-avant_garde_bold">
-                                            {parse(story.post_number || "")}
-                                            001
-                                        </h3>                 
-                                    </div>
-
-                                
-
+                                    <h3
+                                        className="text-6xl ... text-stone-200 ... font-avant_garde_bold">
+                                        {parse(story.post_number || "")}
+                                        001
+                                    </h3>                 
+                                </div>                               
                             </div>
-
-
-
-
-
 
 
                             <div id="NAME"
@@ -156,21 +149,16 @@ const Blog_page = (stories) => {
                                     position: "relative",
                                 }}>
 
-                                    <div>
-
-                                        <h3
-                                            className="text-6xl ... text-stone-400 ... font-avant_garde_bold ... text-right ...">
-                                            {parse(story.Author || "")}
-                                            001
-                                        </h3>                 
-                                    </div>
-
-                                
-
+                                <div>
+                                    <h3
+                                        className="text-6xl ... text-stone-400 ... font-avant_garde_bold ... text-right ...">
+                                        {parse(story.Author || "")}
+                                        001
+                                    </h3>                 
+                                </div>
                             </div>
-                        </div>
 
-                        
+                        </div>
 
                     </div>
                 </div>
