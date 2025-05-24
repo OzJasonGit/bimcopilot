@@ -132,8 +132,7 @@ const Blog_page = (stories) => {
                                         }}>
 
                                         <h3
-                                            className="text-3xl ... text-stone-100 ... font-avant_garde_bold"
-                                            id="_H1">
+                                            className="text-6xl ... text-stone-200 ... font-avant_garde_bold">
                                             {parse(story.post_number || "")}
                                             001
                                         </h3>                 
