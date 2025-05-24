@@ -155,7 +155,7 @@ const Blog_page = (stories) => {
                                         id="_H3"
                                         className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
                                         {parse(story.Author || "")}
-                                        001
+                                        Oz Jason
                                     </h3>    
                                     <br/>
                                     <h3 
