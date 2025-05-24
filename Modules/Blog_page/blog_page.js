@@ -1,7 +1,7 @@
 "use client";
 
 // import styles from "../../../../Modules/Bloghome/bloghome.module.css";
-import styles from "./blog_page.module.css"
+import styles from "./blog_page.css"
 import Link from "next/link";
 import Video from "@/Modules/Blog/client/Video/video";
 import { useParams, useRouter } from "next/navigation";
@@ -71,7 +71,7 @@ const Blog_page = (stories) => {
 
 
 
-    <section id="SHADOW_SECTION_BLOG" className={styles.center_holder}>
+    <section id="SHADOW_SECTION_BLOG" className="center_holder">
         <div className="grid_0_subscribe">
             <div className="sub_head" 
                     style={{
@@ -99,7 +99,7 @@ const Blog_page = (stories) => {
                         
                 </div>
 
-                <div id= {styles.AUTHOR_GRID} className="bg-stone-100" 
+                <div id="AUTHOR_GRID" className="bg-stone-100" 
                     style={{
                         display: "grid",
                         
@@ -113,7 +113,7 @@ const Blog_page = (stories) => {
         </div>
     </section>
 
-    <section id="SHADOW_SECTION_BLOG" className={styles.center_holder}>
+    <section id="SHADOW_SECTION_BLOG" className="center_holder">
         <div className="grid_0_blogimageholder">
 
             <div className="rounded-2xl ..." 
@@ -143,7 +143,7 @@ const Blog_page = (stories) => {
         </div>
     </section>
 
-    <section id="SHADOW_SECTION_BLOG" className={styles.center_holder}>
+    <section id="SHADOW_SECTION_BLOG" className="center_holder">
         <div className="grid_0_tag">
             <div className="sub_head_2">
                 <div id="SUBSCRIBE" className={"border-emerald-200"}>
@@ -175,7 +175,7 @@ const Blog_page = (stories) => {
 
 
 
-    <section id="SHADOW_SECTION_TOP" className={styles.center_holder}
+    <section id="SHADOW_SECTION_TOP" className="center_holder"
         style={{           
             left: "-100vw",
             }}>
@@ -380,7 +380,7 @@ const Blog_page = (stories) => {
 
 
 
-    <section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
+    <section id="SHADOW_SECTION_TITLE" className="center_holder">
         <div className="grid_0_blog">
 
             <div id="TEXT_HOLDER"
@@ -429,7 +429,7 @@ const Blog_page = (stories) => {
     </section>
 
 
-    <section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
+    <section id="SHADOW_SECTION_TITLE" className="center_holder">
         <div className="grid_0_blog">
             <div id="IMAGE_TEXT_HOLDER"
                 style={{
@@ -498,7 +498,7 @@ const Blog_page = (stories) => {
     </section>
 
 
-    <section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
+    <section id="SHADOW_SECTION_TITLE" className="center_holder">
         <div className="grid_0_blog">
 
             <div id="TEXT_HOLDER"
@@ -547,7 +547,7 @@ const Blog_page = (stories) => {
     </section>
 
 
-    <section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
+    <section id="SHADOW_SECTION_TITLE" className="center_holder">
         <div className="grid_0_blog">
 
             <div id="TEXT_HOLDER"
