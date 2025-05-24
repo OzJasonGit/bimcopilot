@@ -406,7 +406,7 @@
     grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "BC BC BC BC BC BC BC BC . . AUTHOR AUTHOR AUTHOR AUTHOR";
+        "BC BC BC BC BC BC BC BC AUTHOR AUTHOR AUTHOR AUTHOR AUTHOR AUTHOR";
     left: 0;
 }
 
