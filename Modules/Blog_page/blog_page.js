@@ -172,9 +172,10 @@ const Blog_page = (stories) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
+                                                padding:"6px"
                                              }}> 
                                              <Link class="" id="ANCHOR_1" href="/">                                            
-                                                <FontAwesomeIcon class="linkedin" id="CENTER" icon={faLinkedin} size="2xs" />                                       
+                                                <FontAwesomeIcon class="linkedin" className="text-stone-100" id="CENTER" icon={faLinkedin} size="2xs" />                                       
                                              </Link>
 
                                         </div>
@@ -185,9 +186,10 @@ const Blog_page = (stories) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
+                                                padding:"6px"
                                              }}>   
                                              <Link class="" id="ANCHOR_2" href="/">                                            
-                                                <FontAwesomeIcon class="twitter" id="CENTER" icon={faSquareXTwitter} size="2xs" />                                       
+                                                <FontAwesomeIcon class="twitter" className="text-stone-100" id="CENTER" icon={faSquareXTwitter} size="2xs" />                                       
                                              </Link>                                        
                                         </div>
 
@@ -197,9 +199,10 @@ const Blog_page = (stories) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
+                                                padding:"6px"
                                              }}>    
                                              <Link class="" id="ANCHOR_3" href="/">                                            
-                                                <FontAwesomeIcon class="facebook" id="CENTER" icon={faSquareFacebook} size="2xs" />                                       
+                                                <FontAwesomeIcon class="facebook" className="text-stone-100" id="CENTER" icon={faSquareFacebook} size="2xs" />                                       
                                              </Link>                                       
                                         </div>
 
@@ -209,9 +212,10 @@ const Blog_page = (stories) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
+                                                padding:"6px"
                                              }}>     
                                              <Link class="" id="ANCHOR_4" href="/">                                            
-                                                <FontAwesomeIcon class="reddit" id="CENTER" icon={faSquareReddit} size="2xs" />                                       
+                                                <FontAwesomeIcon class="reddit" className="text-stone-100" id="CENTER" icon={faSquareReddit} size="2xs" />                                       
                                              </Link>                                      
                                         </div>
 
