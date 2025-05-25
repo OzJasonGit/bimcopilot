@@ -161,7 +161,7 @@ const Blog_page = (stories) => {
                                              }}>  
                                              <h3 
                                                 id="_H3"
-                                                className=" text-stone-400 ... font-avant_garde_bold ... ">                                               
+                                                className=" text-stone-400 ... font-avant_garde_bold ... align-middle ...">                                               
                                                 Share -
                                              </h3>                                          
                                         </div>
