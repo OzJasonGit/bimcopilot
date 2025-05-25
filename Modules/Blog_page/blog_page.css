@@ -442,7 +442,7 @@
 
 #SHARE {
     display: grid;
-    grid-template-columns: auto 35px 35px 35px 35px;
+    grid-template-columns: 60px 35px 35px 35px 35px;
     grid-template-rows: 35px;
     grid-template-areas:
         "SHARE LINKEDIN TWITTER FACEBOOK REDDIT";
