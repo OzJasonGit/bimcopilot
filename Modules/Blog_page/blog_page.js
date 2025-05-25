@@ -124,13 +124,13 @@ const Blog_page = (stories) => {
                                     position: "relative",
                                 }}>
 
-                                <div  
-                                    style={{
-                                        gridArea: "NUMBER",
-                                        height: "100%",
-                                        width: "100%",
-                                        position: "relative",
-                                    }}>
+                                <div id="NUMBER" 
+                                        style={{
+                                            gridArea: "NUMBER",
+                                            height: "100%",
+                                            width: "100%",
+                                            position: "relative",
+                                        }}>
                                     <h3
                                         className="text-6xl ... text-stone-200 ... font-avant_garde_bold"
                                          style={{
@@ -144,10 +144,24 @@ const Blog_page = (stories) => {
                                 <div id="SHARE"
                                      style={{
                                         gridArea: "SHARE",
-                                        height: "35px",
+                                        height: "AUTHOR",
                                         width: "100%",
                                         position: "relative",
                                     }}>
+                                        <div 
+                                             style={{
+                                                gridArea: "SHARE",
+                                                height: "auto",
+                                                width: "100%",
+                                                position: "relative",
+                                             }}>  
+                                             <h3 
+                                                id="_H3"
+                                                className=" text-stone-400 ... font-avant_garde_bold ... ">                                               
+                                                Share -
+                                             </h3>                                          
+                                        </div>
+
                                 </div>                            
                             </div>
 
