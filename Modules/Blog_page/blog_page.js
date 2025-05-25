@@ -173,45 +173,45 @@ const Blog_page = (stories) => {
                                                 width: "100%",
                                                 position: "relative",
                                              }}> 
-                                             <Link class="" id={styles.ANCHOR_1} href="/">                                            
-                                                <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
+                                             <Link class="" id="ANCHOR_1" href="/">                                            
+                                                <FontAwesomeIcon class="linkedin" id="CENTER" icon={faLinkedin} size="2xs" />                                       
                                              </Link>
 
                                         </div>
 
                                         <div id="TWITTER_LINK"
                                              style={{                                              
-                                                gridArea: "LINKEDIN",
+                                                gridArea: "TWITTER",
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
                                              }}>   
-                                             <Link class="" id={styles.ANCHOR_1} href="/">                                            
-                                                <FontAwesomeIcon class={styles.twitter} id={styles.CENTER} icon={faSquareXTwitter} size="2xs" />                                       
+                                             <Link class="" id="ANCHOR_2" href="/">                                            
+                                                <FontAwesomeIcon class="twitter" id="CENTER" icon={faSquareXTwitter} size="2xs" />                                       
                                              </Link>                                        
                                         </div>
 
                                         <div id="FACEBOOK_LINK"
                                              style={{                                              
-                                                gridArea: "LINKEDIN",
+                                                gridArea: "FACEBOOK",
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
                                              }}>    
-                                             <Link class="" id={styles.ANCHOR_1} href="/">                                            
-                                                <FontAwesomeIcon class={styles.facebook} id={styles.CENTER} icon={faSquareFacebook} size="2xs" />                                       
+                                             <Link class="" id="ANCHOR_3" href="/">                                            
+                                                <FontAwesomeIcon class="facebook" id="CENTER" icon={faSquareFacebook} size="2xs" />                                       
                                              </Link>                                       
                                         </div>
 
                                         <div id="REDDIT_LINK"
                                              style={{                                              
-                                                gridArea: "LINKEDIN",
+                                                gridArea: "REDDIT",
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
                                              }}>     
-                                             <Link class="" id={styles.ANCHOR_1} href="/">                                            
-                                                <FontAwesomeIcon class={styles.reddit} id={styles.CENTER} icon={faSquareReddit} size="2xs" />                                       
+                                             <Link class="" id="ANCHOR_4" href="/">                                            
+                                                <FontAwesomeIcon class="reddit" id="CENTER" icon={faSquareReddit} size="2xs" />                                       
                                              </Link>                                      
                                         </div>
 
