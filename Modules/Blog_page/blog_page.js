@@ -132,7 +132,10 @@ const Blog_page = (stories) => {
                                         position: "relative",
                                     }}>
                                     <h3
-                                        className="text-6xl ... text-stone-200 ... font-avant_garde_bold">
+                                        className="text-6xl ... text-stone-200 ... font-avant_garde_bold"
+                                         style={{
+                                         marginBottom:"0px",                 
+                                        }}>
                                         {parse(story.post_number || "")}
                                         001
                                     </h3>                 
