@@ -164,6 +164,7 @@ const Blog_page = (stories) => {
                                                         height: "100%",
                                                         width: "100%",
                                                         position: "relative",
+                                                        paddingTop:"10px"
                                                      }}>
                                                 <h3 
                                                     id="_H3"
