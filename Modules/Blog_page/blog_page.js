@@ -159,11 +159,19 @@ const Blog_page = (stories) => {
                                                 width: "100%",
                                                 position: "relative",
                                              }}>  
-                                             <h3 
-                                                id="_H3"
-                                                className=" text-stone-400 ... font-avant_garde_bold ... align-middle ...">                                               
-                                                Share -
-                                             </h3>                                          
+                                             <div className=""
+                                                    style={{                                                                                              
+                                                        height: "100%",
+                                                        width: "100%",
+                                                        position: "relative",
+                                                     }}>
+                                                <h3 
+                                                    id="_H3"
+                                                    className=" text-stone-400 ... font-avant_garde_bold ... inline-block align-middle">                                               
+                                                    Share -
+                                                </h3>
+                                             </div>
+                                                                                      
                                         </div>
 
                                         <div id="LINKEDIN_LINK"
