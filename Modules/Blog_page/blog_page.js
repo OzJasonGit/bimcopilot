@@ -137,7 +137,16 @@ const Blog_page = (stories) => {
                                         {parse(story.post_number || "")}
                                         001
                                     </h3>                 
-                                </div>                               
+                                </div>   
+
+                                <div id="SHARE"
+                                     style={{
+                                        gridArea: "NUMBER",
+                                        height: "30px",
+                                        width: "100%",
+                                        position: "relative",
+                                    }}>
+                                </div>                            
                             </div>
 
 
