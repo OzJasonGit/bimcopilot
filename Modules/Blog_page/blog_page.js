@@ -1,6 +1,10 @@
 "use client";
 
 // import styles from "../../../../Modules/Bloghome/bloghome.module.css";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin, faSquareXTwitter, faSquareFacebook, faReddit } from '@fortawesome/free-brands-svg-icons' <FontAwesomeIcon icon={faSquareReddit} />
+
 import styles from "./blog_page.css"
 import Link from "next/link";
 import Video from "@/Modules/Blog/client/Video/video";
@@ -140,7 +144,7 @@ const Blog_page = (stories) => {
                                         001
                                     </h3>                 
                                 </div>   
-
+                                <br/>
                                 <div id="SHARE"
                                      style={{
                                         gridArea: "SHARE",
@@ -148,8 +152,8 @@ const Blog_page = (stories) => {
                                         width: "100%",
                                         position: "relative",
                                     }}>
-                                        <div 
-                                             style={{
+                                        <div id="SHARE_LINK"
+                                             style={{                                              
                                                 gridArea: "SHARE",
                                                 height: "auto",
                                                 width: "100%",
@@ -160,6 +164,43 @@ const Blog_page = (stories) => {
                                                 className=" text-stone-400 ... font-avant_garde_bold ... ">                                               
                                                 Share -
                                              </h3>                                          
+                                        </div>
+
+                                        <div id="LINKEDIN_LINK"
+                                             style={{                                              
+                                                gridArea: "LINKEDIN",
+                                                height: "100%",
+                                                width: "100%",
+                                                position: "relative",
+                                             }}> 
+
+                                        </div>
+
+                                        <div id="TWITTER_LINK"
+                                             style={{                                              
+                                                gridArea: "LINKEDIN",
+                                                height: "100%",
+                                                width: "100%",
+                                                position: "relative",
+                                             }}>                                           
+                                        </div>
+
+                                        <div id="FACEBOOK_LINK"
+                                             style={{                                              
+                                                gridArea: "LINKEDIN",
+                                                height: "100%",
+                                                width: "100%",
+                                                position: "relative",
+                                             }}>                                           
+                                        </div>
+
+                                        <div id="REDDIT_LINK"
+                                             style={{                                              
+                                                gridArea: "LINKEDIN",
+                                                height: "100%",
+                                                width: "100%",
+                                                position: "relative",
+                                             }}>                                           
                                         </div>
 
                                 </div>                            
