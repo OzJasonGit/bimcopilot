@@ -131,7 +131,6 @@ const Blog_page = (stories) => {
                                         width: "100%",
                                         position: "relative",
                                     }}>
-
                                     <h3
                                         className="text-6xl ... text-stone-200 ... font-avant_garde_bold">
                                         {parse(story.post_number || "")}
@@ -141,8 +140,8 @@ const Blog_page = (stories) => {
 
                                 <div id="SHARE"
                                      style={{
-                                        gridArea: "NUMBER",
-                                        height: "30px",
+                                        gridArea: "SHARE",
+                                        height: "35px",
                                         width: "100%",
                                         position: "relative",
                                     }}>
