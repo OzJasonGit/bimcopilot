@@ -3,7 +3,7 @@
 // import styles from "../../../../Modules/Bloghome/bloghome.module.css";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faSquareXTwitter, faSquareFacebook, faReddit } from '@fortawesome/free-brands-svg-icons' <FontAwesomeIcon icon={faSquareReddit} />
+import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit } from '@fortawesome/free-brands-svg-icons' 
 
 import styles from "./blog_page.css"
 import Link from "next/link";
@@ -173,6 +173,9 @@ const Blog_page = (stories) => {
                                                 width: "100%",
                                                 position: "relative",
                                              }}> 
+                                             <Link class="" id={styles.ANCHOR_1} href="/">                                            
+                                                <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
+                                             </Link>
 
                                         </div>
 
@@ -182,7 +185,10 @@ const Blog_page = (stories) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
-                                             }}>                                           
+                                             }}>   
+                                             <Link class="" id={styles.ANCHOR_1} href="/">                                            
+                                                <FontAwesomeIcon class={styles.twitter} id={styles.CENTER} icon={faSquareXTwitter} size="2xs" />                                       
+                                             </Link>                                        
                                         </div>
 
                                         <div id="FACEBOOK_LINK"
@@ -191,7 +197,10 @@ const Blog_page = (stories) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
-                                             }}>                                           
+                                             }}>    
+                                             <Link class="" id={styles.ANCHOR_1} href="/">                                            
+                                                <FontAwesomeIcon class={styles.facebook} id={styles.CENTER} icon={faSquareFacebook} size="2xs" />                                       
+                                             </Link>                                       
                                         </div>
 
                                         <div id="REDDIT_LINK"
@@ -200,7 +209,10 @@ const Blog_page = (stories) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
-                                             }}>                                           
+                                             }}>     
+                                             <Link class="" id={styles.ANCHOR_1} href="/">                                            
+                                                <FontAwesomeIcon class={styles.reddit} id={styles.CENTER} icon={faSquareReddit} size="2xs" />                                       
+                                             </Link>                                      
                                         </div>
 
                                 </div>                            

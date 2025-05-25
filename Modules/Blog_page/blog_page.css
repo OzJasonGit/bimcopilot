@@ -733,7 +733,21 @@
 
 
 
+.linkedin {
+    color: rgb(68 64 60);
+}
 
+.twitter {
+    color: rgb(68 64 60);
+}
+
+.facebook {
+    color: rgb(68 64 60);
+}
+
+.reddit {
+    color: rgb(68 64 60);
+}
 
 
 
@@ -1381,6 +1395,16 @@
 #CARD_BULLET {
     grid-area: BULLETS;
 }
+
+
+
+
+
+
+
+
+
+
 
 /*SECTION_8////PROCESS/////////////////////////////////////////////////////////////////////////////////*/
 
