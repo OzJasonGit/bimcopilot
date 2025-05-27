@@ -55,6 +55,16 @@ const Blogsmain = ({ stories, firstStory }) => {
       <Sides_Nav />
       {/*<Subscribetop/>*/}
 
+      <div 
+        style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}>
+
+      </div>
+
       
       {storiesToMap?.map((story, index) => {
         return (
@@ -82,7 +92,7 @@ const Blogsmain = ({ stories, firstStory }) => {
                     <div
                       id={styles._H3}
                       class="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">
-                    
+                      {" "}
                       {parse(story.subtitle || "")}
 
                       . <br /> <br />{" "}
