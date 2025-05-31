@@ -132,7 +132,7 @@ const Blog_page = (stories) => {
                                                             <div 
                                                                 style={{
                                                                     position: "sticky",
-                                                                    top: "1500px",
+                                                                    top: "200px",
                                                                     width: "100%",
                                                                     height: "500px",
                                                                     background: "yellow" }}>                                                       
