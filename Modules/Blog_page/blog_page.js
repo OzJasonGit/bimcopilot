@@ -477,7 +477,7 @@ const Blog_page = (stories) => {
                         </div>
 
 
-                        <div id="AFFILIATE_CONTAINER"
+                        {/*<div id="AFFILIATE_CONTAINER"
                             style={{
                                 position: "relative",
                                 gridArea: "AFFILIATE",
@@ -492,7 +492,7 @@ const Blog_page = (stories) => {
                                     height: "100%",
                                 }}>
                             </div>
-                        </div>
+                        </div>*/}
 
                     </div>
 
