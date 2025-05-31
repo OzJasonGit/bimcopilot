@@ -92,7 +92,7 @@ const Blog_page = (stories) => {
                                 <div id="GRID_NAV_ADVERT"
                                     style={{
                                     position: "relative",
-                                    top: "1590px",
+                                    top: "1615px",
                                     gridArea: "MAIN_AREA",
                                     width: "100%",
                                     height: "320vh",
@@ -434,7 +434,7 @@ const Blog_page = (stories) => {
                                 width: "100%",
                                 gridArea: "TITLE",
                             }}>
-                            <br /> <br />
+                         
                             <h3
                                 className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
                                 id="_H3_2">
