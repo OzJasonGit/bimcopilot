@@ -73,8 +73,8 @@
     max-width: 1820px;
     display: grid;
     grid-column-gap: 0;
-    grid-row-gap: 40px;
-    grid-template-rows: 1500px auto 20px;
+    grid-row-gap: 0px;
+    grid-template-rows: 0px auto 20px;
     grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
     grid-template-areas:
         ". . . . . . ."
