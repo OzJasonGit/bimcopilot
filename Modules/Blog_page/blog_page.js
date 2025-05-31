@@ -78,6 +78,7 @@ const Blog_page = (stories) => {
                         width: "100%",
                         height: "100%",
                         zIndex:"3",
+                        left: "-100vw"
                     }}>
                         <div
                             style={{
@@ -110,7 +111,9 @@ const Blog_page = (stories) => {
                                                         top: "200px",
                                                         width: "100%",
                                                         height: "500px",
-                                                        background: "blue"}}>
+                                                        background: "blue",
+                                                        left:"100vw"
+                                                        }}>
                                                 </div>                                         
                                         </div>
 
@@ -135,7 +138,8 @@ const Blog_page = (stories) => {
                                                                     top: "200px",
                                                                     width: "100%",
                                                                     height: "500px",
-                                                                    background: "yellow" }}>                                                       
+                                                                    background: "yellow",
+                                                                    left:"100vw" }}>                                                       
                                                             </div>
                                                 </div>                                          
                                         </div>
