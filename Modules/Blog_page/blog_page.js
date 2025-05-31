@@ -88,7 +88,7 @@ const Blog_page = (stories) => {
                             justifyContent: "center",
                             }}>
                             <div id="NAV_GRID">  
-                                <div 
+                                <div id="GRID_NAV_ADVERT"
                                     style={{
                                     position: "relative",
                                     gridArea: "MAIN_AREA",

@@ -81,6 +81,14 @@
         ". BANNER-1 . MAIN_AREA . BANNER-2 .";
 }
 
+
+#GRID_NAV_ADVERT {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "NAV NAV NAV . . . . . . AFFILIATE AFFILIATE AFFILIATE"; 
+}
+
 .grid_0 {
     position: relative;
     width: 100%;
@@ -163,12 +171,12 @@
 
 
 #FIRST_TEXT_HOLDER {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-        ". . . TITLE TITLE TITLE TITLE TITLE . AFFILIATE AFFILIATE AFFILIATE"
-        ". . . VIDEO VIDEO VIDEO VIDEO VIDEO . AFFILIATE AFFILIATE AFFILIATE"
-        ". . . TEXT TEXT TEXT TEXT TEXT . AFFILIATE AFFILIATE AFFILIATE";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            ". . . TITLE TITLE TITLE TITLE TITLE . AFFILIATE AFFILIATE AFFILIATE"
+            ". . . VIDEO VIDEO VIDEO VIDEO VIDEO . AFFILIATE AFFILIATE AFFILIATE"
+            ". . . TEXT TEXT TEXT TEXT TEXT . AFFILIATE AFFILIATE AFFILIATE";
 }
 
 
@@ -967,65 +975,13 @@
 
 
 
-#BACKGROUND_GRID {
-    grid-area: BACKGROUND_MAIN;
-    width: 100%;
-    max-width: 2460px;
-    display: grid;
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
-    grid-template-rows: auto;
-    grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20px;
-    grid-template-areas:
-        "PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET . . . .";
-    margin-top: -960px;
-    z-index: -50;
-}
-
-#PLANET_HOLDER_GRID {
-    grid-area: MAIN-AREA;
-    width: 100%;
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr;
-    grid-row-gap: 0px;
-    grid-template-areas:
-        "WORLD"
-        "BACKGROUND_MAIN";
-}
-
-#WORLD_GRID {
-    grid-area: WORLD;
-    width: 100%;
-    max-width: 2460px;
-    display: grid;
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
-    grid-template-rows: auto;
-    grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20px;
-    grid-template-areas:
-
-        ". . . . . . . PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET PLANET";
-    margin-top: -960px;
-    z-index: -20;
-}
-
-#PLANET_HOLDER {
-    grid-area: PLANET;
-    width: 100%;
-    height: 900px;
-    margin-top: -50px;
-}
 
 
 
-#BACKGROUND_GRID {
-    display: none;
-}
 
-#PLANET_HOLDER_GRID {
-    display: none;
-}
+
+
+
 
 /*SECTION_6////WORLD??/////////////////////////////////////////////////////////////////////////////////*/
 
@@ -1053,25 +1009,7 @@
 
 
 
-.main {
-    position: relative;
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-column-gap: 40px;
-    grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 60px auto 20px auto 20px;
-    grid-template-areas:
 
-        "INTRO INTRO INTRO INTRO INTRO INTRO ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT"
-        ". . . . . . ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT"
-        "WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT"
-        ". . . . . . . . . . . ."
-        ". . TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL"
-        ". . . . . . . . . . . .";
-    margin-top: -60px;
-}
 
 #INTRO_HOLDER {
     position: relative;
