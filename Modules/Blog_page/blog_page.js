@@ -78,7 +78,7 @@ const Blog_page = (stories) => {
                         width: "100%",
                         height: "100%",
                         zIndex:"3",
-                        left: "-100vw"
+                        left: "-50vw"
                     }}>
                         <div
                             style={{
@@ -104,7 +104,8 @@ const Blog_page = (stories) => {
                                                 gridArea: "NAV",
                                                 width: "100%",
                                                 height: "100%",
-                                                display: "flex",}}>  
+                                                display: "flex",
+                                                left:"50vw"}}>  
                                                 <div
                                                     style={{
                                                         position: "sticky",
@@ -112,7 +113,7 @@ const Blog_page = (stories) => {
                                                         width: "100%",
                                                         height: "500px",
                                                         background: "blue",
-                                                        left:"100vw"
+                                                        
                                                         }}>
                                                 </div>                                         
                                         </div>
@@ -130,7 +131,7 @@ const Blog_page = (stories) => {
                                                         top: "0px",
                                                         width: "100%",
                                                         height: "100%",
-                                                        background: "" }}>
+                                                        left:"50vw"}}>
 
                                                             <div 
                                                                 style={{
@@ -139,7 +140,7 @@ const Blog_page = (stories) => {
                                                                     width: "100%",
                                                                     height: "500px",
                                                                     background: "yellow",
-                                                                    left:"100vw" }}>                                                       
+                                                                     }}>                                                       
                                                             </div>
                                                 </div>                                          
                                         </div>
