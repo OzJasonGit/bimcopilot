@@ -102,8 +102,15 @@ const Blog_page = (stories) => {
                                                 gridArea: "NAV",
                                                 width: "100%",
                                                 height: "100%",
-                                                display: "flex",    
-                                                background: "blue" }}>                                           
+                                                display: "flex",}}>  
+                                                <div
+                                                    style={{
+                                                        position: "sticky",
+                                                        top: "1500px",
+                                                        width: "100%",
+                                                        height: "500px",
+                                                        background: "blue"}}>
+                                                </div>                                         
                                         </div>
 
                                         <div 
@@ -112,8 +119,15 @@ const Blog_page = (stories) => {
                                                 gridArea: "AFFILIATE",
                                                 width: "100%",
                                                 height: "100%",
-                                                display: "flex",    
-                                                background: "yellow" }}>                                          
+                                                display: "flex",}}>
+                                                <div
+                                                    style={{
+                                                        position: "sticky",
+                                                        top: "1500px",
+                                                        width: "100%",
+                                                        height: "500px",
+                                                        background: "yellow" }}>
+                                                </div>                                          
                                         </div>
                                 </div>                     
                             </div>
