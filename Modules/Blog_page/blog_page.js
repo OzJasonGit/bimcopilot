@@ -78,7 +78,6 @@ const Blog_page = (stories) => {
                         width: "100%",
                         height: "100%",
                         zIndex:"3",
-                        background: "blue"
                     }}>
                         <div
                             style={{
@@ -88,7 +87,17 @@ const Blog_page = (stories) => {
                             display: "flex",
                             justifyContent: "center",
                             }}>
-                            <div id="NAV_GRID">                       
+                            <div id="NAV_GRID">  
+                                <div 
+                                    style={{
+                                    position: "relative",
+                                    gridArea: "MAIN_AREA",
+                                    width: "100%",
+                                    height: "100%",
+                                    display: "grid",    
+                                    background: "blue"                              
+                                    }}>
+                                </div>                     
                             </div>
                         </div>
 
