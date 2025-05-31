@@ -84,16 +84,11 @@ const Blog_page = (stories) => {
                             style={{
                             position: "absolute",
                             width: "100%",
-                            height: "100vh",
+                            height: "100%",
                             display: "flex",
                             justifyContent: "center",
                             }}>
-                            <div
-                                style={{
-                                position: "fixed",
-                                width: "100vw",
-                                maxWidth: "1820px", 
-                                }}>                       
+                            <div id="NAV_GRID">                       
                             </div>
                         </div>
 
