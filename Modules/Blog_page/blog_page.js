@@ -94,7 +94,7 @@ const Blog_page = (stories) => {
                                     top: "1590px",
                                     gridArea: "MAIN_AREA",
                                     width: "100%",
-                                    height: "360vh",
+                                    height: "320vh",
                                     display: "grid",                                 
                                     }}>
                                         <div 
@@ -107,7 +107,7 @@ const Blog_page = (stories) => {
                                                 <div
                                                     style={{
                                                         position: "sticky",
-                                                        top: "1500px",
+                                                        top: "200px",
                                                         width: "100%",
                                                         height: "500px",
                                                         background: "blue"}}>
