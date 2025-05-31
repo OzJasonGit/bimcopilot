@@ -68,9 +68,8 @@
 #NAV_GRID {
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     max-width: 2160px;
-    background-color: #f0f8ff;
     display: grid;
     grid-column-gap: 0;
     grid-row-gap: 40px;
