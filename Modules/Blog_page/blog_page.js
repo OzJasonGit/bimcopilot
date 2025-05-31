@@ -106,7 +106,7 @@ const Blog_page = (stories) => {
                                                 height: "100%",
                                                 display: "flex",
                                                 left:"100vw"}}>  
-                                                <div
+                                                <div id="NAVIGATION"
                                                     style={{
                                                         position: "sticky",
                                                         top: "200px",

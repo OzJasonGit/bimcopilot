@@ -81,6 +81,14 @@
         ". BANNER-1 . MAIN_AREA . BANNER-2 .";
 }
 
+#NAVIGATION {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-row-gap: 10px;
+}
+
 
 #GRID_NAV_ADVERT {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
