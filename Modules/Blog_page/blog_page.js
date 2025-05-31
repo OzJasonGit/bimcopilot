@@ -94,9 +94,27 @@ const Blog_page = (stories) => {
                                     gridArea: "MAIN_AREA",
                                     width: "100%",
                                     height: "100vh",
-                                    display: "grid",    
-                                    background: "blue"                              
+                                    display: "grid",                                 
                                     }}>
+                                        <div 
+                                            style={{
+                                                position: "relative",
+                                                gridArea: "NAV",
+                                                width: "100%",
+                                                height: "100%",
+                                                display: "flex",    
+                                                background: "blue" }}>                                           
+                                        </div>
+
+                                        <div 
+                                            style={{
+                                                position: "relative",
+                                                gridArea: "NAV",
+                                                width: "100%",
+                                                height: "100%",
+                                                display: "flex",    
+                                                background: "yellow" }}>                                          
+                                        </div>
                                 </div>                     
                             </div>
                         </div>
