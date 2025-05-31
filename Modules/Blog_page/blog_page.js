@@ -78,7 +78,7 @@ const Blog_page = (stories) => {
                         width: "100%",
                         height: "100%",
                         zIndex:"3",
-                        left: "-50vw"
+                        left: "-100vw"
                     }}>
                         <div
                             style={{
@@ -105,7 +105,7 @@ const Blog_page = (stories) => {
                                                 width: "100%",
                                                 height: "100%",
                                                 display: "flex",
-                                                left:"50vw"}}>  
+                                                left:"100vw"}}>  
                                                 <div
                                                     style={{
                                                         position: "sticky",
@@ -131,7 +131,7 @@ const Blog_page = (stories) => {
                                                         top: "0px",
                                                         width: "100%",
                                                         height: "100%",
-                                                        left:"50vw"}}>
+                                                        left:"100vw"}}>
 
                                                             <div 
                                                                 style={{
