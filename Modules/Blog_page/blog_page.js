@@ -72,6 +72,34 @@ const Blog_page = (stories) => {
             })}
 
 
+            <div 
+                style={{
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",
+                        zIndex:"3",
+                        background: "blue"
+                    }}>
+                        <div
+                            style={{
+                            position: "absolute",
+                            width: "100%",
+                            height: "100vh",
+                            display: "flex",
+                            justifyContent: "center",
+                            }}>
+                            <div
+                                style={{
+                                position: "fixed",
+                                width: "100vw",
+                                maxWidth: "1820px", 
+                                }}>                       
+                            </div>
+                        </div>
+
+            </div>
+
+
 
 
 
