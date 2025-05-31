@@ -86,7 +86,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "NAV NAV NAV . . . . . . AFFILIATE AFFILIATE AFFILIATE"; 
+        "NAV NAV . . . . . . . AFFILIATE AFFILIATE AFFILIATE"; 
 }
 
 .grid_0 {

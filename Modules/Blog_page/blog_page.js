@@ -109,7 +109,7 @@ const Blog_page = (stories) => {
                                         <div 
                                             style={{
                                                 position: "relative",
-                                                gridArea: "NAV",
+                                                gridArea: "AFFILIATE",
                                                 width: "100%",
                                                 height: "100%",
                                                 display: "flex",    
