@@ -60,8 +60,24 @@ const Blogsmain = ({ stories, firstStory }) => {
                 position: "absolute",
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                zIndex:"3",
+                background: "blue"
               }}>
+                <div
+                    style={{
+                      position: "absolute",
+                      width: "100%",
+                      height: "100vh",
+                      display: "flex",
+                      justifyContent: "center",
+                    }}>
+                      <div>
+                        style={{
+                          position: "fixed",
+                          width: "100vw",
+                        }}
+                      </div>
+                </div>
 
       </div>
 
