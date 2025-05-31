@@ -90,10 +90,11 @@ const Blog_page = (stories) => {
                             <div id="NAV_GRID">  
                                 <div id="GRID_NAV_ADVERT"
                                     style={{
-                                    position: "relative",
+                                    position: "absolute",
+                                    top: "180px",
                                     gridArea: "MAIN_AREA",
                                     width: "100%",
-                                    height: "100vh",
+                                    height: "450vh",
                                     display: "grid",                                 
                                     }}>
                                         <div 
@@ -122,11 +123,20 @@ const Blog_page = (stories) => {
                                                 display: "flex",}}>
                                                 <div
                                                     style={{
-                                                        position: "sticky",
-                                                        top: "1500px",
+                                                        position: "relative",
+                                                        top: "0px",
                                                         width: "100%",
-                                                        height: "500px",
-                                                        background: "yellow" }}>
+                                                        height: "100%",
+                                                        background: "" }}>
+
+                                                            <div 
+                                                                style={{
+                                                                    position: "sticky",
+                                                                    top: "1500px",
+                                                                    width: "100%",
+                                                                    height: "500px",
+                                                                    background: "yellow" }}>                                                       
+                                                            </div>
                                                 </div>                                          
                                         </div>
                                 </div>                     

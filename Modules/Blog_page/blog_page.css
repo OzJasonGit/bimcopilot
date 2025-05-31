@@ -66,10 +66,10 @@
 
 
 #NAV_GRID {
-    position: fixed;
+   
     width: 100vw;
     height: 100%;
-    top: 110px;
+    top: 0px;
     max-width: 1820px;
     display: grid;
     grid-column-gap: 0;
