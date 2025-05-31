@@ -93,7 +93,7 @@ const Blog_page = (stories) => {
                                     position: "relative",
                                     gridArea: "MAIN_AREA",
                                     width: "100%",
-                                    height: "100%",
+                                    height: "100vh",
                                     display: "grid",    
                                     background: "blue"                              
                                     }}>
