@@ -106,15 +106,22 @@ const Blog_page = (stories) => {
                                                 height: "100%",
                                                 display: "flex",
                                                 left:"100vw"}}>  
-                                                <div id="NAVIGATION"
+                                                <div id="NAVIGATION_HOLDER"
                                                     style={{
                                                         position: "sticky",
                                                         top: "200px",
                                                         width: "100%",
-                                                        height: "500px",
-                                                        background: "blue",
-                                                        
+                                                        height: "500px",                                        
                                                         }}>
+                                                            <div id="NAVIGATION"
+                                                                 style={{
+                                                                    position: "relative",                                   
+                                                                    width: "100%",
+                                                                    height: "100%",
+                                                                    background: "blue",    
+                                                                    maxHeight: "0"                                      
+                                                                    }}>                                              
+                                                            </div>
                                                 </div>                                         
                                         </div>
 
