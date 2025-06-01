@@ -1127,54 +1127,7 @@ const Blog_page = (stories) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            {/* 
-      {storiesToMap.map((story, index) => {
-        return (
-          <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}>
-
-            <div className={styles.grid_0_blog}>
-              <div id={styles.MAIN_TEXT_HOLDER}>
-
-                <div id={styles.PARAGRAPH}>
-                  <h3
-                    className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                    id={styles._H3}>
-                    Conclusion
-                  </h3>
-                  <br />
-                  <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                    {parse(story.conclusion || "")}                  
-                  </p>
-                </div>
-
-              </div>
-            </div>
-
-          </section>
-        )
-      })} */}
-
-
-            {/*<div id="DISCLAIMER_HOLDER">
+        {/*<div id="DISCLAIMER_HOLDER">
             <h3
                 id="_H3"
                 className="text-2xl ... text-stone-700 ... font-avant_garde_bold">
