@@ -128,6 +128,7 @@ const Blog_page = (stories) => {
                                                                             gridArea: "1"                                                                            
                                                                             }}>
                                                                         <p
+                                                                            id="_H4"
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 1 
@@ -142,6 +143,7 @@ const Blog_page = (stories) => {
                                                                             gridArea: "2"                                                                            
                                                                             }}>
                                                                         <p
+                                                                            id="_H4"
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 2
@@ -156,6 +158,7 @@ const Blog_page = (stories) => {
                                                                             gridArea: "3"                                                                            
                                                                             }}>
                                                                         <p
+                                                                            id="_H4"
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 3
@@ -170,6 +173,7 @@ const Blog_page = (stories) => {
                                                                             gridArea: "4"                                                                            
                                                                             }}>
                                                                         <p
+                                                                            id="_H4"
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 4
@@ -184,6 +188,7 @@ const Blog_page = (stories) => {
                                                                             gridArea: "5"                                                                            
                                                                             }}>
                                                                         <p
+                                                                            id="_H4"
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 5
@@ -198,6 +203,7 @@ const Blog_page = (stories) => {
                                                                             gridArea: "6"                                                                            
                                                                             }}>
                                                                         <p
+                                                                            id="_H4"
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 6
@@ -212,11 +218,57 @@ const Blog_page = (stories) => {
                                                                             gridArea: "7"                                                                            
                                                                             }}>
                                                                         <p
+                                                                            id="_H4"
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 7
                                                                         </p>
-                                                                    </Link>                              
+                                                                    </Link>      
+
+                                                                     <Link href="#PARAGRAPH_8"
+                                                                            style={{
+                                                                            position: "relative",                                   
+                                                                            width: "100%",
+                                                                            height: "auto",
+                                                                            gridArea: "8"                                                                            
+                                                                            }}>
+                                                                        <p
+                                                                            id="_H4"
+                                                                            className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                            {parse(story.body1_title || "")}
+                                                                            testing some text 8
+                                                                        </p>
+                                                                    </Link>    
+
+                                                                     <Link href="#PARAGRAPH_9"
+                                                                            style={{
+                                                                            position: "relative",                                   
+                                                                            width: "100%",
+                                                                            height: "auto",
+                                                                            gridArea: "9"                                                                            
+                                                                            }}>
+                                                                        <p
+                                                                            id="_H4"
+                                                                            className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                            {parse(story.body1_title || "")}
+                                                                            testing some text 9
+                                                                        </p>
+                                                                    </Link>  
+
+                                                                     <Link href="#PARAGRAPH_10"
+                                                                            style={{
+                                                                            position: "relative",                                   
+                                                                            width: "100%",
+                                                                            height: "auto",
+                                                                            gridArea: "10"                                                                            
+                                                                            }}>
+                                                                        <p
+                                                                            id="_H4"
+                                                                            className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                            {parse(story.body1_title || "")}
+                                                                            testing some text 10
+                                                                        </p>
+                                                                    </Link>                        
                                                             </div>
                                                 </div>                                         
                                         </div>
