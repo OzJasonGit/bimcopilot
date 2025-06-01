@@ -313,7 +313,7 @@ const Blog_page = (stories) => {
                                                                                         display: "block"
                                                                                         }}>
                                                                                         <Image
-                                                                                            className=" rounded-xl ... justify-center ..."
+                                                                                            className=" rounded-md ... justify-center ..."
                                                                                             alt="Story Image"
                                                                                             key={story._id}
                                                                                             width={500}
@@ -628,7 +628,7 @@ const Blog_page = (stories) => {
 
 
 
-                        <div className="bg-transparent ... rounded-xl ... justify-center ..."
+                        <div className="bg-transparent ... rounded-md ... justify-center ..."
                             style={{
                                 position: "relative",
                                 width: "100%",
@@ -769,7 +769,7 @@ const Blog_page = (stories) => {
                                 gridArea: "IMAGE",
                             }}>
                             <Image
-                                className=" rounded-xl ... justify-center ..."
+                                className=" rounded-md ... justify-center ..."
                                 alt="Story Image"
                                 key={story._id}
                                 width={500}
