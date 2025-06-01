@@ -74,6 +74,7 @@ const Blog_page = (stories) => {
 
 
             <div 
+                id="MAIN_NAV"
                 style={{
                         position: "absolute",
                         width: "100%",
