@@ -118,7 +118,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "NAV NAV . . . . . . . AFFILIATE AFFILIATE AFFILIATE"; 
+        "NAV NAV . . . . . . . AFFILIATE AFFILIATE AFFILIATE";
+    top: 1615px; 
     
 }
 
@@ -1655,7 +1656,7 @@
         grid-template-rows: auto;
         grid-template-areas:
             "NAV NAV . . . . . . . AFFILIATE AFFILIATE AFFILIATE";
-        top: "2015px"
+        top: 2015px;
     }
 
 
