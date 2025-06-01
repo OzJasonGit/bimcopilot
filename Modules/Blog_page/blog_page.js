@@ -14,6 +14,7 @@ import axios from "axios";
 import Image from "next/image";
 import parse from "html-react-parser";
 import SkeletonLoader from "@/components/Loader/loader";
+import { display } from '@mui/system';
 
 const Blog_page = (stories) => {
     const params = useParams();
@@ -309,6 +310,7 @@ const Blog_page = (stories) => {
                                                                                         position: "relative",                                                  
                                                                                         width: "100%",
                                                                                         height: "100%",
+                                                                                        display: "block"
                                                                                         }}>
                                                                                         <Image
                                                                                             className=" rounded-xl ... justify-center ..."
