@@ -289,7 +289,7 @@ const Blog_page = (stories) => {
                                                         left:"100vw"}}>
 
                                                             <div
-                                                                id=
+                                                                id="AFFILIATE_HOLDER"
                                                                 style={{
                                                                     position: "sticky",
                                                                     top: "200px",
@@ -297,7 +297,33 @@ const Blog_page = (stories) => {
                                                                     height: "700px",
                                                                     background: "yellow",
                                                                      }}>      
-                                                                     <div>
+                                                                     <div
+                                                                        id="AFFILIATE"
+                                                                        style={{
+                                                                            position: "relative",                                                  
+                                                                            width: "100%",
+                                                                            height: "100%",
+                                                                            }}>
+                                                                                <Link href="#PARAGRAPH_10"
+                                                                                      style={{
+                                                                                        position: "relative",                                                  
+                                                                                        width: "100%",
+                                                                                        height: "100%",
+                                                                                        }}>
+                                                                                        <Image
+                                                                                            className=" rounded-xl ... justify-center ..."
+                                                                                            alt="Story Image"
+                                                                                            key={story._id}
+                                                                                            width={500}
+                                                                                            height={500}
+                                                                                            src={story.image}
+                                                                                            style={{
+                                                                                                position: "absolute",
+                                                                                                width: "100%",
+                                                                                                height: "100%",
+                                                                                                objectFit: "cover",
+                                                                                        }}/>
+                                                                                </Link>
                                                                      </div>                                                 
                                                             </div>
                                                 </div>                                          
