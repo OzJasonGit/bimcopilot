@@ -733,7 +733,6 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-
             <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_3">
                 <div className="grid_0_blog">
                     <div id="IMAGE_TEXT_HOLDER"
@@ -805,7 +804,6 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-
             <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_4">
                 <div className="grid_0_blog">
 
@@ -856,7 +854,6 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
-
 
             <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_5">
                 <div className="grid_0_blog">
@@ -909,7 +906,6 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-
             <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_6">
                 <div className="grid_0_blog">
 
@@ -957,7 +953,6 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
-
 
             <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_7">
                 <div className="grid_0_blog">
@@ -1007,7 +1002,6 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-
             <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_8">
             <div className="grid_0_blog">
 
@@ -1049,7 +1043,6 @@ const Blog_page = (stories) => {
             </div>
             </section>
  
-
             <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_9">
         <div className="grid_0_blog">
 
@@ -1090,7 +1083,6 @@ const Blog_page = (stories) => {
 
         </div>
             </section>
-
 
             <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_10">
         <div className="grid_0_blog_end">
