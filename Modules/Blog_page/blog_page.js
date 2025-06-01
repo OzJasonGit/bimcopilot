@@ -120,7 +120,105 @@ const Blog_page = (stories) => {
                                                                     height: "100%",
                                                                     background: "blue",    
                                                                     maxHeight: "0"                                      
-                                                                    }}>                                              
+                                                                    }}>  
+                                                                    <Link href="#PARAGRAPH_1"
+                                                                            style={{
+                                                                            position: "relative",                                   
+                                                                            width: "100%",
+                                                                            height: "auto",
+                                                                            gridArea: "1"                                                                            
+                                                                            }}>
+                                                                        <p
+                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            {parse(story.body1_title || "")}
+                                                                            testing some text 1 
+                                                                        </p>
+                                                                    </Link>  
+
+                                                                    <Link href="#PARAGRAPH_1"
+                                                                            style={{
+                                                                            position: "relative",                                   
+                                                                            width: "100%",
+                                                                            height: "auto",
+                                                                            gridArea: "2"                                                                            
+                                                                            }}>
+                                                                        <p
+                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            {parse(story.body1_title || "")}
+                                                                            testing some text 2
+                                                                        </p>
+                                                                    </Link>   
+
+                                                                    <Link href="#PARAGRAPH_1"
+                                                                            style={{
+                                                                            position: "relative",                                   
+                                                                            width: "100%",
+                                                                            height: "auto",
+                                                                            gridArea: "3"                                                                            
+                                                                            }}>
+                                                                        <p
+                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            {parse(story.body1_title || "")}
+                                                                            testing some text 3
+                                                                        </p>
+                                                                    </Link>  
+
+                                                                    <Link href="#PARAGRAPH_1"
+                                                                            style={{
+                                                                            position: "relative",                                   
+                                                                            width: "100%",
+                                                                            height: "auto",
+                                                                            gridArea: "4"                                                                            
+                                                                            }}>
+                                                                        <p
+                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            {parse(story.body1_title || "")}
+                                                                            testing some text 4
+                                                                        </p>
+                                                                    </Link>     
+
+                                                                    <Link href="#PARAGRAPH_1"
+                                                                            style={{
+                                                                            position: "relative",                                   
+                                                                            width: "100%",
+                                                                            height: "auto",
+                                                                            gridArea: "5"                                                                            
+                                                                            }}>
+                                                                        <p
+                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            {parse(story.body1_title || "")}
+                                                                            testing some text 5
+                                                                        </p>
+                                                                    </Link>   
+
+
+                                                                    <Link href="#PARAGRAPH_1"
+                                                                            style={{
+                                                                            position: "relative",                                   
+                                                                            width: "100%",
+                                                                            height: "auto",
+                                                                            gridArea: "6"                                                                            
+                                                                            }}>
+                                                                        <p
+                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            {parse(story.body1_title || "")}
+                                                                            testing some text 6
+                                                                        </p>
+                                                                    </Link>   
+
+                                                                    <Link href="#PARAGRAPH_1"
+                                                                            style={{
+                                                                            position: "relative",                                   
+                                                                            width: "100%",
+                                                                            height: "auto",
+                                                                            gridArea: "7"                                                                            
+                                                                            }}>
+                                                                        <p
+                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            {parse(story.body1_title || "")}
+                                                                            testing some text 7
+                                                                        </p>
+                                                                    </Link>                              
                                                             </div>
                                                 </div>                                         
                                         </div>
