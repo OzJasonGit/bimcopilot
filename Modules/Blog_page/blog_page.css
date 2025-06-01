@@ -1701,10 +1701,11 @@
         grid-column-gap: 0px;
         grid-row-gap: 20px;
         grid-template-rows: 170px auto 20px;
-        grid-template-columns: 40px 120px 1fr 120px 40px;
-        grid-template-areas: ". . . . ."
-            ". SUB SUB . ."
-            ". . . . .";
+        grid-template-columns: 40px 1fr 40px;
+        grid-template-areas: 
+            ". . ."
+            ". SUB  ."
+            ". . .";
     }
 
     .sub_head {
@@ -1714,10 +1715,11 @@
         width: 100%;
         height: auto;
         grid-column-gap: 40px;
-        grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
         grid-template-areas:
-            "BC BC BC BC BC BC . . . . . . . .";
+            "BC ."
+            ". AUTHOR";
         left: 0;
     }
 
