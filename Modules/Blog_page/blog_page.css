@@ -1636,7 +1636,6 @@
 
 
     #NAV_GRID {
-
         width: 100vw;
         height: 100%;
         top: 0px;
@@ -1645,9 +1644,10 @@
         grid-column-gap: 0;
         grid-row-gap: 0px;
         grid-template-columns: 40px 1fr 40px;
-        grid-template-areas: 
-        ". MAIN_AREA .";
-            }
+        grid-template-areas:
+            ". MAIN_AREA .";
+    }
+
 
 
     #GRID_NAV_ADVERT {
@@ -1655,8 +1655,15 @@
         grid-template-rows: auto;
         grid-template-areas:
             "NAV NAV . . . . . . . AFFILIATE AFFILIATE AFFILIATE";
-        top: "2015px",           
-        }
+        top: "2015px"
+    }
+
+
+
+    
+
+
+    
 
 
 
