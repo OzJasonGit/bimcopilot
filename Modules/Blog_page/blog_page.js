@@ -92,8 +92,7 @@ const Blog_page = (stories) => {
                             <div id="NAV_GRID">  
                                 <div id="GRID_NAV_ADVERT"
                                     style={{
-                                    position: "relative",
-                                    top: "1615px",
+                                    position: "relative",                     
                                     gridArea: "MAIN_AREA",
                                     width: "100%",
                                     height: "320vh",
