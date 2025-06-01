@@ -295,7 +295,6 @@ const Blog_page = (stories) => {
                                                                     top: "200px",
                                                                     width: "100%",
                                                                     height: "700px",
-                                                                    background: "yellow",
                                                                      }}>      
                                                                      <div
                                                                         id="AFFILIATE"
@@ -303,6 +302,7 @@ const Blog_page = (stories) => {
                                                                             position: "relative",                                                  
                                                                             width: "100%",
                                                                             height: "100%",
+                                                                            gridArea: "ADVERT"
                                                                             }}>
                                                                                 <Link href="#PARAGRAPH_10"
                                                                                       style={{
