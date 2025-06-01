@@ -117,8 +117,7 @@ const Blog_page = (stories) => {
                                                                  style={{
                                                                     position: "relative",                                   
                                                                     width: "100%",
-                                                                    height: "100%",
-                                                                    background: "blue",    
+                                                                    height: "100%",   
                                                                     maxHeight: "0"                                      
                                                                     }}>  
                                                                     <Link href="#PARAGRAPH_1"
@@ -129,13 +128,13 @@ const Blog_page = (stories) => {
                                                                             gridArea: "1"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 1 
                                                                         </p>
                                                                     </Link>  
 
-                                                                    <Link href="#PARAGRAPH_1"
+                                                                    <Link href="#PARAGRAPH_2"
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -143,13 +142,13 @@ const Blog_page = (stories) => {
                                                                             gridArea: "2"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 2
                                                                         </p>
                                                                     </Link>   
 
-                                                                    <Link href="#PARAGRAPH_1"
+                                                                    <Link href="#PARAGRAPH_3"
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -157,13 +156,13 @@ const Blog_page = (stories) => {
                                                                             gridArea: "3"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 3
                                                                         </p>
                                                                     </Link>  
 
-                                                                    <Link href="#PARAGRAPH_1"
+                                                                    <Link href="#PARAGRAPH_4"
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -171,13 +170,13 @@ const Blog_page = (stories) => {
                                                                             gridArea: "4"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 4
                                                                         </p>
                                                                     </Link>     
 
-                                                                    <Link href="#PARAGRAPH_1"
+                                                                    <Link href="#PARAGRAPH_5"
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -185,14 +184,13 @@ const Blog_page = (stories) => {
                                                                             gridArea: "5"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 5
                                                                         </p>
                                                                     </Link>   
 
-
-                                                                    <Link href="#PARAGRAPH_1"
+                                                                    <Link href="#PARAGRAPH_6"
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -200,13 +198,13 @@ const Blog_page = (stories) => {
                                                                             gridArea: "6"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 6
                                                                         </p>
                                                                     </Link>   
 
-                                                                    <Link href="#PARAGRAPH_1"
+                                                                    <Link href="#PARAGRAPH_7"
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -214,7 +212,7 @@ const Blog_page = (stories) => {
                                                                             gridArea: "7"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            className="text-xs ... text-neutral-700 ... font-geist_semibold">
+                                                                            className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 7
                                                                         </p>
@@ -509,12 +507,7 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-
-
-
-
-
-            <section id="SHADOW_SECTION_TOP" className="center_holder"
+            <section id="SHADOW_SECTION_TOP" className="center_holder" class="PARAGRAPH_1"
                 style={{
                     left: "-100vw",
                 }}>
@@ -606,122 +599,7 @@ const Blog_page = (stories) => {
 
             </section>
 
-
-
-
-
-
-
-
-            {/*<section id="SHADOW_SECTION_SIDE" className={styles.center_holder}>
-
-        <div className="grid_0_blog">
-
-            <div id="SIDE_TEXT_HOLDER"
-                style={{
-                        position: "relative",
-                        gridArea: "MAIN_AREA",
-                        position: "sticky"}}>
-
-
-
-
-
-
-
-
-
-                <div id="SIDE_NAV_HOLDER"> 
-                    <div id="SIDE_NAV" >
-
-                        <div id="TITLE_1" >
-                            <Link href="#PARAGRAPH_1">
-                                <p
-                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                    {parse(story.body1_title || "")}
-                                </p>
-                            </Link>
-                        </div>
-                        <div id="TITLE_2">
-                            <Link href="#PARAGRAPH_2">
-                                <p
-                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                    {parse(story.body2_title || "")}
-                                </p>
-                            </Link>
-                        </div>
-
-                        <div id="TITLE_3">
-                            <a>
-                                <Link href="#PARAGRAPH_3">
-                                    <p
-                                        className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                        {parse(story.body3_title || "")}
-                                    </p>
-                                </Link>
-                            </a>
-                        </div>
-
-                        <div id="TITLE_4">
-                            <Link href="#PARAGRAPH_4">
-                                <p
-                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                    {parse(story.body4_title || "")}
-                                </p>
-                            </Link>
-                        </div>
-                        <div id="TITLE_5">
-                            <Link href="#PARAGRAPH_5">
-                                <p
-                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                    {parse(story.body5_title || "")}
-                                </p>
-                            </Link>
-                        </div>
-                        <div id="TITLE_6">
-                            <Link href="PARAGRAPH_6">
-                                <p
-                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                    {parse(story.body6_title || "")}
-                                </p>
-                            </Link>
-                        </div>
-                        <div id="TITLE_7">
-                            <Link href="PARAGRAPH_7">
-                                <p
-                                    className="text-xs ... text-neutral-700 ... font-geist_semibold">
-                                    {parse(story.body7_title || "")}
-                                </p>
-                            </Link>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-    </section>*/}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <section id="SHADOW_SECTION_TITLE" className="center_holder">
+            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_2">
                 <div className="grid_0_blog">
 
                     <div id="TEXT_HOLDER"
@@ -773,7 +651,7 @@ const Blog_page = (stories) => {
             </section>
 
 
-            <section id="SHADOW_SECTION_TITLE" className="center_holder">
+            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_3">
                 <div className="grid_0_blog">
                     <div id="IMAGE_TEXT_HOLDER"
                         style={{
@@ -845,7 +723,7 @@ const Blog_page = (stories) => {
             </section>
 
 
-            <section id="SHADOW_SECTION_TITLE" className="center_holder">
+            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_4">
                 <div className="grid_0_blog">
 
                     <div id="TEXT_HOLDER"
@@ -897,7 +775,7 @@ const Blog_page = (stories) => {
             </section>
 
 
-            <section id="SHADOW_SECTION_TITLE" className="center_holder">
+            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_5">
                 <div className="grid_0_blog">
 
                     <div id="TEXT_HOLDER"
@@ -949,101 +827,101 @@ const Blog_page = (stories) => {
             </section>
 
 
-            <section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
-        <div className="grid_0_blog">
+            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_6">
+                <div className="grid_0_blog">
 
-            <div id="TEXT_HOLDER"
-                style={{
-                        position: "relative",
-                        display: "grid",
-                        width: "100%",
-                        height: "auto",
-                        gridArea: "MAIN_AREA",}}>
+                    <div id="TEXT_HOLDER"
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
 
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TITLE",}}>
-                    <h3
-                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3_2">
-                        {parse(story.body6_title || "")}
-                        consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    </h3>
-                    <br/> 
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
+                            <h3
+                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                id="_H3_2">
+                                {parse(story.body6_title || "")}
+                                consectetur adipiscing elit, sed do eiusmod tempor 
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </h3>
+                            <br/> 
+                        </div>
+                    
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <p  
+                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                {parse(story.body6 || "")}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                                fugiat nulla pariatur. 
+                            </p>                  
+                        </div>
+
+                    </div>
+
                 </div>
-            
-                <div  
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TEXT",}}> 
-
-                    <p  
-                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                        {parse(story.body6 || "")}
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                        fugiat nulla pariatur. 
-                    </p>                  
-                </div>
-
-            </div>
-
-        </div>
             </section>
 
 
-            <section id="SHADOW_SECTION_TITLE" className={styles.center_holder}>
-        <div className="grid_0_blog">
+            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_7">
+                <div className="grid_0_blog">
 
-            <div id="TEXT_HOLDER"
-                style={{
-                        position: "relative",
-                        display: "grid",
-                        width: "100%",
-                        height: "auto",
-                        gridArea: "MAIN_AREA",}}>
+                    <div id="TEXT_HOLDER"
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
 
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TITLE",}}>
-                    <h3
-                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3_2">
-                        {parse(story.body7_title || "")}
-                        consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    </h3>
-                    <br/> 
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
+                            <h3
+                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                id="_H3_2">
+                                {parse(story.body7_title || "")}
+                                consectetur adipiscing elit, sed do eiusmod tempor 
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            </h3>
+                            <br/> 
+                        </div>
+                    
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <p  
+                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                {parse(story.body7 || "")}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                                fugiat nulla pariatur. 
+                            </p>                  
+                        </div>
+
+                    </div>
+
                 </div>
-            
-                <div  
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TEXT",}}> 
-
-                    <p  
-                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                        {parse(story.body7 || "")}
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                        fugiat nulla pariatur. 
-                    </p>                  
-                </div>
-
-            </div>
-
-        </div>
             </section>
 
 
