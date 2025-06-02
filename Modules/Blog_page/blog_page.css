@@ -2191,17 +2191,18 @@
 
     .grid_0_blogimageholder {
         position: relative;
-        width: 100%;
-        max-width: 1520px;
-        background-color: transparent;
-        display: grid;
-        grid-column-gap: 0px;
-        grid-row-gap: 20px;
-        grid-template-rows: 0px auto 0px;
-        grid-template-columns: 30px 1fr 30px;
-        grid-template-areas: ". . ."
-            ".  SUB  ."
-            ". . .";
+            width: 100%;
+            max-width: 1520px;
+            background-color: transparent;
+            display: grid;
+            grid-column-gap: 0;
+            grid-row-gap: 20px;
+            grid-template-rows: 0 auto 0;
+            grid-template-columns: 40px 1fr 40px;
+            grid-template-areas:
+                ". . ."
+                ". SUB ."
+                ". . .";
     }
 
 
@@ -2235,14 +2236,30 @@
     }
 
 
+
+    .grid_0_tag {
+        position: relative;
+        width: 100%;
+        max-width: 1820px;
+        background-color: transparent;
+        display: grid;
+        grid-column-gap: 0;
+        grid-row-gap: 20px;
+        grid-template-columns: 40px 1fr 40px;
+        grid-template-areas:
+            ". . ."
+            ". SUB ."
+            ". . .";   }
+
+
     .grid_0_blog {
         position: relative;
         width: 100%;
         background-color: rgb(23 23 23);
         display: grid;
 
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
         grid-row-gap: 40px;
         grid-template-rows: 0px auto;
         grid-template-columns: 1fr;
@@ -2250,6 +2267,22 @@
             " MAIN-AREA ";
         margin-bottom: 0px;
     }
+
+
+
+    .grid_0_blog_end {
+        position: relative;
+        width: 100%;
+        max-width: 1820px;
+        background-color: transparent;
+        display: grid;
+        grid-column-gap: 0;
+        grid-row-gap: 20px;
+        grid-template-columns: 40px 1fr 40px;
+        grid-template-areas:
+            ". . ."
+            ". MAIN_AREA ."
+            ". . .";   }
 
 
     .grid_0_main {
@@ -2328,7 +2361,17 @@
         left: 0;
     }
 
-    
+
+    .sub_head_2 {
+        grid-area: SUB;
+        height: auto;
+        grid-column-gap: 40px;
+        grid-template-columns: BC;
+        grid-template-rows: auto;
+        grid-template-areas: "BC ";
+        left: 0;   }
+
+
 
     #BC {
         display: none;
