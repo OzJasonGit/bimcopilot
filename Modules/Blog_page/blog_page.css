@@ -2249,7 +2249,19 @@
         grid-template-areas:
             ". . ."
             ". SUB ."
-            ". . .";   }
+            ". . .";   
+        }
+
+
+        .sub_head_2 {
+            grid-area: SUB;
+            height: auto;
+            grid-column-gap: 40px;
+            grid-template-columns: BC;
+            grid-template-rows: auto;
+            grid-template-areas: "BC ";
+            left: 0;   
+        }
 
 
     .grid_0_blog {
@@ -2362,14 +2374,7 @@
     }
 
 
-    .sub_head_2 {
-        grid-area: SUB;
-        height: auto;
-        grid-column-gap: 40px;
-        grid-template-columns: BC;
-        grid-template-rows: auto;
-        grid-template-areas: "BC ";
-        left: 0;   }
+    
 
 
 
@@ -2806,44 +2811,15 @@
 
 
     /*SECTION_10////TAG/////////////////////////////////////////////////////////////////////////////////////*/
-    #SHADOW_SECTION_TAG {
-        position: relative;
-        width: 100%;
-        display: flex;
-        -webkit-box-pack: center;
-        justify-content: center;
-        background-color: rgb(23, 23, 23);
-        z-index: -30000;
-        ;
-        top: 0px;
-    }
-
-    #TAG_HOLDER {
-        grid-area: MAIN-AREA;
-        display: grid;
-        width: 100%;
-        grid-column-gap: 40px;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "TAG";
-    }
+    
 
     /*SECTION_10////TAG/////////////////////////////////////////////////////////////////////////////////////*/
 
 
     /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
-    #ASTRONAUT_IMAGE_2 {
-        display: none;
-    }
+   
 
-    #SERVICES_HOLDER {
-        position: relative;
-        grid-area: SERVICES;
-        width: 100%;
-        height: 760px;
-        top: 0px;
-    }
+   
 }
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
