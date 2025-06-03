@@ -1,4 +1,4 @@
-"use client";
+
 
 // import styles from "../../../../Modules/Bloghome/bloghome.module.css";
 
