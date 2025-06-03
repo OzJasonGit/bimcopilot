@@ -591,7 +591,7 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id="SHADOW_SECTION_TOP" className="center_holder" class="PARAGRAPH_1"
+            <section id={styles.SHADOW_SECTION_TOP} className={styles.center_holder} class={styles.PARAGRAPH_1}
                 style={{
                     left: "-100vw",
                 }}>
@@ -683,10 +683,10 @@ const Blog_page = (stories) => {
 
             </section>
 
-            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_2">
-                <div className="grid_0_blog">
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_2}>
+                <div className={styles.grid_0_blog}>
 
-                    <div id="TEXT_HOLDER"
+                    <div id={styles.TEXT_HOLDER}
                         style={{
                             position: "relative",
                             display: "grid",
@@ -703,7 +703,7 @@ const Blog_page = (stories) => {
                             }}>
                             <h3
                                 className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                                id="_H3_2">
+                                id={styles._H3_2}>
                                 {parse(story.body2_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -734,9 +734,9 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_3">
-                <div className="grid_0_blog">
-                    <div id="IMAGE_TEXT_HOLDER"
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_3}>
+                <div className={styles.grid_0_blog}>
+                    <div id={styles.IMAGE_TEXT_HOLDER}
                         style={{
                             position: "relative",
                             display: "grid",
@@ -805,10 +805,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_4">
-                <div className="grid_0_blog">
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_4}>
+                <div className={styles.grid_0_blog}>
 
-                    <div id="TEXT_HOLDER"
+                    <div id={styles.TEXT_HOLDER}
                         style={{
                             position: "relative",
                             display: "grid",
@@ -856,10 +856,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_5">
-                <div className="grid_0_blog">
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_5}>
+                <div className={styles.grid_0_blog}>
 
-                    <div id="TEXT_HOLDER"
+                    <div id={styles.TEXT_HOLDER}
                         style={{
                             position: "relative",
                             display: "grid",
@@ -907,10 +907,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_6">
-                <div className="grid_0_blog">
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_6}>
+                <div className={styles.grid_0_blog}>
 
-                    <div id="TEXT_HOLDER"
+                    <div id={styles.TEXT_HOLDER}
                         style={{
                                 position: "relative",
                                 display: "grid",
@@ -955,10 +955,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_7">
-                <div className="grid_0_blog">
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_7}>
+                <div className={styles.grid_0_blog}>
 
-                    <div id="TEXT_HOLDER"
+                    <div id={styles.TEXT_HOLDER}
                         style={{
                                 position: "relative",
                                 display: "grid",
@@ -1003,10 +1003,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_8">
-            <div className="grid_0_blog">
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_8}>
+            <div className={grid_0_blog}>
 
-                <div id="TEXT_HOLDER"
+                <div id={styles.TEXT_HOLDER}
                     style={{
                             position: "relative",
                             display: "grid",
@@ -1044,10 +1044,10 @@ const Blog_page = (stories) => {
             </div>
             </section>
  
-            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_9">
-        <div className="grid_0_blog">
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_9}>
+        <div className={styles.grid_0_blog}>
 
-            <div id="TEXT_HOLDER"
+            <div id={styles.TEXT_HOLDER}
                 style={{
                         position: "relative",
                         display: "grid",
@@ -1085,10 +1085,10 @@ const Blog_page = (stories) => {
         </div>
             </section>
 
-            <section id="SHADOW_SECTION_TITLE" className="center_holder" class="PARAGRAPH_10">
-        <div className="grid_0_blog_end">
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}>
+        <div className={styles.grid_0_blog_end}>
 
-            <div id="TEXT_HOLDER"
+            <div id={styles.TEXT_HOLDER}
                 style={{
                         position: "relative",
                         display: "grid",
@@ -1105,7 +1105,7 @@ const Blog_page = (stories) => {
                         gridArea: "TEXT",}}> 
 
                     <h1
-                        id="_H1"
+                        id={styles._H1}
                         className="text-3xl ... text-stone-700 ... font-avant_garde_bold">
                         Conclusion
                         <br /> <br />
