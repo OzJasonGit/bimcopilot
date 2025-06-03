@@ -343,7 +343,7 @@ const Blog_page = (stories) => {
 
             <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
                 <div class={styles.grid_0_subscribe}>
-                    <div className={sub_head}
+                    <div className={styles.sub_head}
                         style={{
                             paddingTop: "80px"
                         }}>
