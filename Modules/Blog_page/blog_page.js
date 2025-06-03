@@ -5,7 +5,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit } from '@fortawesome/free-brands-svg-icons' 
 
-import styles from "./blog_page.css"
+import styles from "./blog_page.module.css"
 import Link from "next/link";
 import Video from "@/Modules/Blog/client/Video/video";
 import { useParams, useRouter } from "next/navigation";
@@ -74,7 +74,7 @@ const Blog_page = (stories) => {
 
 
             <div 
-                id="MAIN_NAV"
+                id={styles.MAIN_NAV}
                 style={{
                         position: "absolute",
                         width: "100%",
@@ -90,8 +90,8 @@ const Blog_page = (stories) => {
                             display: "flex",
                             justifyContent: "center",
                             }}>
-                            <div id="NAV_GRID">  
-                                <div id="GRID_NAV_ADVERT"
+                            <div id={styles.NAV_GRID}>  
+                                <div id={styles.GRID_NAV_ADVERT}
                                     style={{
                                     position: "relative",
                                    
@@ -108,21 +108,21 @@ const Blog_page = (stories) => {
                                                 height: "100%",
                                                 display: "flex",
                                                 left:"100vw"}}>  
-                                                <div id="NAVIGATION_HOLDER"
+                                                <div id={styles.NAVIGATION_HOLDER}
                                                     style={{
                                                         position: "sticky",
                                                         top: "200px",
                                                         width: "100%",
                                                         height: "500px",                                        
                                                         }}>
-                                                            <div id="NAVIGATION"
+                                                            <div id={styles.NAVIGATION}
                                                                  style={{
                                                                     position: "relative",                                   
                                                                     width: "100%",
                                                                     height: "100%",   
                                                                     maxHeight: "0"                                      
                                                                     }}>  
-                                                                    <Link href="#PARAGRAPH_1"
+                                                                    <Link href={styles.PARAGRAPH_1}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -130,14 +130,14 @@ const Blog_page = (stories) => {
                                                                             gridArea: "1"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            id="_H4"
+                                                                            id={styles._H4}
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 1 
                                                                         </p>
                                                                     </Link>  
 
-                                                                    <Link href="#PARAGRAPH_2"
+                                                                    <Link href={styles.PARAGRAPH_2}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -145,14 +145,14 @@ const Blog_page = (stories) => {
                                                                             gridArea: "2"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            id="_H4"
+                                                                            id={styles._H4}
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 2
                                                                         </p>
                                                                     </Link>   
 
-                                                                    <Link href="#PARAGRAPH_3"
+                                                                    <Link href={styles.PARAGRAPH_3}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -160,14 +160,14 @@ const Blog_page = (stories) => {
                                                                             gridArea: "3"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            id="_H4"
+                                                                            id={styles._H4}
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 3
                                                                         </p>
                                                                     </Link>  
 
-                                                                    <Link href="#PARAGRAPH_4"
+                                                                    <Link href={styles.PARAGRAPH_4}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -175,14 +175,14 @@ const Blog_page = (stories) => {
                                                                             gridArea: "4"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            id="_H4"
+                                                                            id={styles._H4}
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 4
                                                                         </p>
                                                                     </Link>     
 
-                                                                    <Link href="#PARAGRAPH_5"
+                                                                    <Link href={styles.PARAGRAPH_5}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -190,14 +190,14 @@ const Blog_page = (stories) => {
                                                                             gridArea: "5"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            id="_H4"
+                                                                            id={styles._H4}
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 5
                                                                         </p>
                                                                     </Link>   
 
-                                                                    <Link href="#PARAGRAPH_6"
+                                                                    <Link href={styles.PARAGRAPH_6}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -205,14 +205,14 @@ const Blog_page = (stories) => {
                                                                             gridArea: "6"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            id="_H4"
+                                                                            id={styles._H4}
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 6
                                                                         </p>
                                                                     </Link>   
 
-                                                                    <Link href="#PARAGRAPH_7"
+                                                                    <Link href={styles.PARAGRAPH_7}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -220,14 +220,14 @@ const Blog_page = (stories) => {
                                                                             gridArea: "7"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            id="_H4"
+                                                                            id={styles._H4}
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 7
                                                                         </p>
                                                                     </Link>      
 
-                                                                     <Link href="#PARAGRAPH_8"
+                                                                     <Link href={styles.PARAGRAPH_8}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -235,14 +235,14 @@ const Blog_page = (stories) => {
                                                                             gridArea: "8"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            id="_H4"
+                                                                            id={styles._H4}
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 8
                                                                         </p>
                                                                     </Link>    
 
-                                                                     <Link href="#PARAGRAPH_9"
+                                                                     <Link href={styles.PARAGRAPH_9}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -250,14 +250,14 @@ const Blog_page = (stories) => {
                                                                             gridArea: "9"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            id="_H4"
+                                                                            id={styles._H4}
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 9
                                                                         </p>
                                                                     </Link>  
 
-                                                                     <Link href="#PARAGRAPH_10"
+                                                                     <Link href={styles.ARAGRAPH_10}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -265,7 +265,7 @@ const Blog_page = (stories) => {
                                                                             gridArea: "10"                                                                            
                                                                             }}>
                                                                         <p
-                                                                            id="_H4"
+                                                                            id={styles._H4}
                                                                             className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 10
@@ -291,7 +291,7 @@ const Blog_page = (stories) => {
                                                         left:"100vw"}}>
 
                                                             <div
-                                                                id="AFFILIATE_HOLDER"
+                                                                id={styles.AFFILIATE_HOLDER}
                                                                 style={{
                                                                     position: "sticky",
                                                                     top: "200px",
@@ -299,14 +299,14 @@ const Blog_page = (stories) => {
                                                                     height: "700px",
                                                                      }}>      
                                                                      <div
-                                                                        id="AFFILIATE"
+                                                                        id={styles.AFFILIATE}
                                                                         style={{
                                                                             position: "relative",                                                  
                                                                             width: "100%",
                                                                             height: "100%",
                                                                             gridArea: "ADVERT"
                                                                             }}>
-                                                                                <Link href="#PARAGRAPH_10"
+                                                                                <Link href={styles.PARAGRAPH_10}
                                                                                       style={{
                                                                                         position: "relative",                                                  
                                                                                         width: "100%",
@@ -341,27 +341,27 @@ const Blog_page = (stories) => {
 
 
 
-            <section id="SHADOW_SECTION_BLOG" className="center_holder">
-                <div className="grid_0_subscribe">
-                    <div className="sub_head"
+            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
+                <div className={grid_0_subscribe}>
+                    <div className={sub_head}
                         style={{
                             paddingTop: "80px"
                         }}>
 
 
-                        <div id="SUBSCRIBE" className={"border-emerald-200"}>
+                        <div id={styles.SUBSCRIBE} className={"border-emerald-200"}>
 
-                            <div id="MAIN_TAG">
+                            <div id={styles.MAIN_TAG}>
                                 <div
-                                    id="_H1"
+                                    id={styles._H1}
                                     className=" text-stone-200 ... font-avant_garde_bold">
-                                    {parse(story.title || "")}
+                                    {parse(styles.story.title || "")}
                                 </div>
                             </div>
 
-                            <div id="SUB_TAG">
+                            <div id={styles.SUB_TAG}>
                                 <div
-                                    id="_H3"
+                                    id={_H3}
                                     className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">
                                     {parse(story.subtitle || "")}
                                 </div>
@@ -369,7 +369,7 @@ const Blog_page = (stories) => {
 
                         </div>
 
-                        <div id="AUTHOR_GRID"
+                        <div id={styles.AUTHOR_GRID}
                             style={{
                                 display: "grid",
                                 position: "relative",
@@ -385,7 +385,7 @@ const Blog_page = (stories) => {
                                 }}>
                             </div>
 
-                            <div id="NUMBER_GRID"
+                            <div id={styles.NUMBER_GRID}
                                 style={{
                                     gridArea: "NUMBER",
                                     height: "100%",
@@ -394,7 +394,7 @@ const Blog_page = (stories) => {
                                     position: "relative",
                                 }}>
 
-                                <div id="NUMBER" 
+                                <div id={styles.NUMBER} 
                                         style={{
                                             gridArea: "NUMBER",
                                             height: "100%",
@@ -411,14 +411,14 @@ const Blog_page = (stories) => {
                                     </h3>                 
                                 </div>   
                                 <br/>
-                                <div id="SHARE"
+                                <div id={styles.SHARE}
                                      style={{
                                         gridArea: "SHARE",
                                         height: "AUTHOR",
                                         width: "100%",
                                         position: "relative",
                                     }}>
-                                        <div id="SHARE_LINK"
+                                        <div id={styles.SHARE_LINK}
                                              style={{                                              
                                                 gridArea: "SHARE",
                                                 height: "auto",
@@ -433,7 +433,7 @@ const Blog_page = (stories) => {
                                                         paddingTop:"10px"
                                                      }}>
                                                 <h3 
-                                                    id="_H3"
+                                                    id={styles._H3}
                                                     className=" text-stone-400 ... font-avant_garde_bold ... inline-block align-middle">                                               
                                                     Share -
                                                 </h3>
@@ -441,7 +441,7 @@ const Blog_page = (stories) => {
                                                                                       
                                         </div>
 
-                                        <div id="LINKEDIN_LINK"
+                                        <div id={styles.LINKEDIN_LINK}
                                              style={{                                              
                                                 gridArea: "LINKEDIN",
                                                 height: "100%",
@@ -455,7 +455,7 @@ const Blog_page = (stories) => {
 
                                         </div>
 
-                                        <div id="TWITTER_LINK"
+                                        <div id={styles.TWITTER_LINK}
                                              style={{                                              
                                                 gridArea: "TWITTER",
                                                 height: "100%",
@@ -463,12 +463,12 @@ const Blog_page = (stories) => {
                                                 position: "relative",
                                                 padding:"6px"
                                              }}>   
-                                             <Link class="" id="ANCHOR_2" href="/">                                            
+                                             <Link class="" id={styles.ANCHOR_2} href="/">                                            
                                                 <FontAwesomeIcon class="twitter" id="CENTER" icon={faSquareXTwitter} size="2xs" />                                       
                                              </Link>                                        
                                         </div>
 
-                                        <div id="FACEBOOK_LINK"
+                                        <div id={styles.FACEBOOK_LINK}
                                              style={{                                              
                                                 gridArea: "FACEBOOK",
                                                 height: "100%",
@@ -476,12 +476,12 @@ const Blog_page = (stories) => {
                                                 position: "relative",
                                                 padding:"6px"
                                              }}>    
-                                             <Link class="" id="ANCHOR_3" href="/">                                            
+                                             <Link class="" id={styles.ANCHOR_3} href="/">                                            
                                                 <FontAwesomeIcon class="facebook"  id="CENTER" icon={faSquareFacebook} size="2xs" />                                       
                                              </Link>                                       
                                         </div>
 
-                                        <div id="REDDIT_LINK"
+                                        <div id={styles.REDDIT_LINK}
                                              style={{                                              
                                                 gridArea: "REDDIT",
                                                 height: "100%",
@@ -489,7 +489,7 @@ const Blog_page = (stories) => {
                                                 position: "relative",
                                                 padding:"6px"
                                              }}>     
-                                             <Link class="" id="ANCHOR_4" href="/">                                            
+                                             <Link class="" id={styles.ANCHOR_4} href="/">                                            
                                                 <FontAwesomeIcon class="reddit"  id="CENTER" icon={faSquareReddit} size="2xs" />                                       
                                              </Link>                                      
                                         </div>
@@ -498,7 +498,7 @@ const Blog_page = (stories) => {
                             </div>
 
 
-                            <div id="NAME"
+                            <div id={styles.NAME}
                                  style={{
                                     gridArea: "NAME",
                                     height: "auto",
@@ -509,14 +509,14 @@ const Blog_page = (stories) => {
 
                                 <div>
                                     <h3 
-                                        id="_H3"
+                                        id={styles._H3}
                                         className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
                                         {parse(story.Author || "")}
                                         Oz Jason
                                     </h3>    
                                     <br/>
                                     <h3 
-                                        id="_H3"
+                                        id={styles._H3}
                                         className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
                                         {parse(story.Author || "")}
                                         23rd January 2025
@@ -534,8 +534,8 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id="SHADOW_SECTION_BLOG" className="center_holder">
-                <div className="grid_0_blogimageholder">
+            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
+                <div className={styles.grid_0_blogimageholder}>
 
                     <div className="rounded-2xl ..."
                         id="MAIN_IMAGE"
@@ -564,17 +564,17 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id="SHADOW_SECTION_BLOG" className="center_holder">
-                <div className="grid_0_tag">
-                    <div className="sub_head_2">
-                        <div id="SUBSCRIBE" className={"border-emerald-200"}>
+            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
+                <div className={styles.grid_0_tag}>
+                    <div className={styles.sub_head_2}>
+                        <div id={styles.SUBSCRIBE} className={"border-emerald-200"}>
 
-                            <div id="SUB_ICON">
+                            <div id={styles.SUB_ICON}>
                             </div>
 
-                            <div id="MAIN_TAG">
+                            <div id={styles.MAIN_TAG}>
                                 <h1
-                                    id="_H1"
+                                    id={styles._H1}
                                     className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
                                     Introduction
                                     <br /> <br />
