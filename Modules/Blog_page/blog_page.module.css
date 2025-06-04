@@ -1261,58 +1261,7 @@
         display: none;
     }
 
-    /*SECTION////PRODUCTS//////////////////////////////////////////////////////////////////////////////////////*/
-
-
-    /*SECTION_5////ASTRONAUT_1/////////////////////////////////////////////////////////////////////////////////*/
-    .grid_0_image_left {
-        width: 100%;
-        max-width: 1960px;
-        background-color: transparent;
-        display: grid;
-        grid-column-gap: 40px;
-        grid-row-gap: 20px;
-        grid-template-rows: 60px 20px auto 20px;
-        grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20px;
-        grid-template-areas:
-            ". . . . . . . . . . ."
-            ". IMAGE IMAGE IMAGE IMAGE IMAGE . . . . ."
-            ". IMAGE IMAGE IMAGE IMAGE IMAGE ADVERT ADVERT ADVERT ADVERT ."
-            ". IMAGE IMAGE IMAGE IMAGE IMAGE . . . . .";
-        z-index: 200;
-    }
-
-    /*SECTION_5////ASTRONAUT_1/////////////////////////////////////////////////////////////////////////////////*/
-
-
-    /*SECTION_6////WORLD??////////////////////////////////////////////////////////////////////////////////////*/
-    /*SECTION_6////WORLD??////////////////////////////////////////////////////////////////////////////////////*/
-
-
-    /*SECTION_7////ABOUT///////////////////////////////////////////////////////////////////////////////////*/
-    .main {
-        position: relative;
-        grid-area: MAIN-AREA;
-        display: grid;
-        width: 100%;
-        height: auto;
-        grid-column-gap: 40px;
-        grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto 60px auto 40px auto 20px;
-        grid-template-areas:
-
-            "INTRO INTRO INTRO INTRO INTRO INTRO ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT"
-            ". . . . . . ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT"
-            "WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT"
-            ". . . . . . . . . . . ."
-            ". . TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL"
-            ". . . . . . . . . . . .";
-        margin-top: -60px;
-    }
-
-    /*SECTION_7////ABOUT////////////////////////////////////////////////////////////////////////////////////*/
-
-
+   
 }
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
@@ -1620,6 +1569,17 @@
         grid-row-gap: 40px;
         grid-template-rows: auto auto;
         grid-template-columns: 1fr 1fr;
+    }
+
+
+
+    #FIRST_TEXT_HOLDER {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            " TITLE "
+            "VIDEO "
+            " TEXT";
     }
 
 
