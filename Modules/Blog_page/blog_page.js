@@ -450,7 +450,7 @@ const Blog_page = (stories) => {
                                                 padding:"6px"
                                              }}> 
                                              <Link class="" id="ANCHOR_1" href="/">                                            
-                                                <FontAwesomeIcon class="linkedin"  id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
+                                                <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
                                              </Link>    
 
                                         </div>
