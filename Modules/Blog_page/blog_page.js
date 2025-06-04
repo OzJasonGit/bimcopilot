@@ -122,7 +122,7 @@ const Blog_page = (stories) => {
                                                                     height: "100%",   
                                                                     maxHeight: "0"                                      
                                                                     }}>  
-                                                                    <Link href={styles.PARAGRAPH_1}
+                                                                    <div className={styles.PARAGRAPH_1}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -135,9 +135,9 @@ const Blog_page = (stories) => {
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 1 
                                                                         </p>
-                                                                    </Link>  
+                                                                    </div>  
 
-                                                                    <Link href={styles.PARAGRAPH_2}
+                                                                    <div className={styles.PARAGRAPH_2}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -150,9 +150,9 @@ const Blog_page = (stories) => {
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 2
                                                                         </p>
-                                                                    </Link>   
+                                                                    </div>   
 
-                                                                    <Link href={styles.PARAGRAPH_3}
+                                                                    <div className={styles.PARAGRAPH_3}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -165,9 +165,9 @@ const Blog_page = (stories) => {
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 3
                                                                         </p>
-                                                                    </Link>  
+                                                                    </div>  
 
-                                                                    <Link href={styles.PARAGRAPH_4}
+                                                                    <div className={styles.PARAGRAPH_4}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -180,9 +180,9 @@ const Blog_page = (stories) => {
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 4
                                                                         </p>
-                                                                    </Link>     
+                                                                    </div>     
 
-                                                                    <Link href={styles.PARAGRAPH_5}
+                                                                    <div className={styles.PARAGRAPH_5}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -195,9 +195,9 @@ const Blog_page = (stories) => {
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 5
                                                                         </p>
-                                                                    </Link>   
+                                                                    </div>   
 
-                                                                    <Link href={styles.PARAGRAPH_6}
+                                                                    <div className={styles.PARAGRAPH_6}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -210,9 +210,9 @@ const Blog_page = (stories) => {
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 6
                                                                         </p>
-                                                                    </Link>   
+                                                                    </div>   
 
-                                                                    <Link href={styles.PARAGRAPH_7}
+                                                                    <div className={styles.PARAGRAPH_7}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -225,9 +225,9 @@ const Blog_page = (stories) => {
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 7
                                                                         </p>
-                                                                    </Link>      
+                                                                    </div>      
 
-                                                                     <Link href={styles.PARAGRAPH_8}
+                                                                     <div className={styles.PARAGRAPH_8}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -240,9 +240,9 @@ const Blog_page = (stories) => {
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 8
                                                                         </p>
-                                                                    </Link>    
+                                                                    </div>    
 
-                                                                     <Link href={styles.PARAGRAPH_9}
+                                                                     <div className={styles.PARAGRAPH_9}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -255,9 +255,9 @@ const Blog_page = (stories) => {
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 9
                                                                         </p>
-                                                                    </Link>  
+                                                                    </div>  
 
-                                                                     <Link href={styles.ARAGRAPH_10}
+                                                                     <div className={styles.PARAGRAPH_10}
                                                                             style={{
                                                                             position: "relative",                                   
                                                                             width: "100%",
@@ -270,7 +270,7 @@ const Blog_page = (stories) => {
                                                                             {parse(story.body1_title || "")}
                                                                             testing some text 10
                                                                         </p>
-                                                                    </Link>                        
+                                                                    </div>                        
                                                             </div>
                                                 </div>                                         
                                         </div>
@@ -306,7 +306,7 @@ const Blog_page = (stories) => {
                                                                             height: "100%",
                                                                             gridArea: "ADVERT"
                                                                             }}>
-                                                                                <Link href={styles.PARAGRAPH_10}
+                                                                                <div class={styles.PARAGRAPH_10}
                                                                                       style={{
                                                                                         position: "relative",                                                  
                                                                                         width: "100%",
@@ -326,7 +326,7 @@ const Blog_page = (stories) => {
                                                                                                 height: "100%",
                                                                                                 objectFit: "cover",
                                                                                         }}/>
-                                                                                </Link>
+                                                                                </div>
                                                                      </div>                                                 
                                                             </div>
                                                 </div>                                          
@@ -355,13 +355,13 @@ const Blog_page = (stories) => {
                                 <div
                                     id={styles._H1}
                                     className=" text-stone-200 ... font-avant_garde_bold">
-                                    {parse(styles.story.title || "")}
+                                    {parse(story.title || "")}
                                 </div>
                             </div>
 
                             <div id={styles.SUB_TAG}>
                                 <div
-                                    id={_H3}
+                                    // id={_H3}
                                     className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">
                                     {parse(story.subtitle || "")}
                                 </div>
@@ -449,9 +449,15 @@ const Blog_page = (stories) => {
                                                 position: "relative",
                                                 padding:"6px"
                                              }}> 
+<<<<<<< HEAD
                                              <Link class="" id={styles.ANCHOR_1} href="/">                                            
                                                 <FontAwesomeIcon class={styles.linkedin}  id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
                                              </Link>
+=======
+                                             <Link class="" id="ANCHOR_1" href="/">                                            
+                                                <FontAwesomeIcon class="linkedin"  id="CENTER" icon={faLinkedin} size="2xs" />                                       
+                                             </Link>    
+>>>>>>> b3b8457e3228129c014004c7c58b7bb4bffec190
 
                                         </div>
 
@@ -1004,7 +1010,7 @@ const Blog_page = (stories) => {
             </section>
 
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_8}>
-            <div className={grid_0_blog}>
+            <div className={"grid_0_blog"}>
 
                 <div id={styles.TEXT_HOLDER}
                     style={{
