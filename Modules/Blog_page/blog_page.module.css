@@ -1949,6 +1949,14 @@
     }
 
 
+        #TEXT_HOLDER {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+                "TITLE "
+                "TEXT ";   }
+
+
     #SUB_TEXT_HOLDER {
         position: relative;
         grid-area: TEXT;
