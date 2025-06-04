@@ -449,15 +449,9 @@ const Blog_page = (stories) => {
                                                 position: "relative",
                                                 padding:"6px"
                                              }}> 
-<<<<<<< HEAD
-                                             <Link class="" id={styles.ANCHOR_1} href="/">                                            
-                                                <FontAwesomeIcon class={styles.linkedin}  id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
-                                             </Link>
-=======
                                              <Link class="" id="ANCHOR_1" href="/">                                            
-                                                <FontAwesomeIcon class="linkedin"  id="CENTER" icon={faLinkedin} size="2xs" />                                       
+                                                <FontAwesomeIcon class="linkedin"  id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
                                              </Link>    
->>>>>>> b3b8457e3228129c014004c7c58b7bb4bffec190
 
                                         </div>
 
