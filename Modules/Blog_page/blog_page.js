@@ -337,9 +337,7 @@ const Blog_page = (stories) => {
 
             </div>
 
-
-
-
+            
 
             <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
                 <div class={styles.grid_0_subscribe}>
