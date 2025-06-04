@@ -337,7 +337,7 @@ const Blog_page = (stories) => {
 
             </div>
 
-            
+
 
             <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
                 <div class={styles.grid_0_subscribe}>
@@ -359,7 +359,7 @@ const Blog_page = (stories) => {
 
                             <div id={styles.SUB_TAG}>
                                 <div
-                                    // id={_H3}
+                                     id={styles._H3}
                                     className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">
                                     {parse(story.subtitle || "")}
                                 </div>
