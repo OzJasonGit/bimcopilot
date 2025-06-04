@@ -1626,6 +1626,23 @@
         }
 
 
+        .sub_head {
+            position: relative;
+            grid-area: SUB;
+            display: grid;
+            width: 100%;
+            height: auto;
+            grid-column-gap: 40px;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+                "BC "
+                " AUTHOR";
+            left: 0;   }
+
+
+
+
         .sub_head_2 {
             grid-area: SUB;
             height: auto;
