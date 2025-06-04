@@ -1583,6 +1583,15 @@
     }
 
 
+        #IMAGE_TEXT_HOLDER {
+            grid-template-columns:  1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                "TITLE "
+                "IMAGE"
+                "TEXT ";   }
+
+
     .grid_0 {
         position: relative;
         width: 100%;
@@ -2518,6 +2527,9 @@
             "TEXT"
             "."
     }
+
+
+
 
 
     #SUB_TEXT_HOLDER {
