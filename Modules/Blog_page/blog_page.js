@@ -596,9 +596,9 @@ const Blog_page = (stories) => {
                     left: "-100vw",
                 }}>
 
-                <div className="grid_0_blog">
+                <div className={styles.grid_0_blog}>
 
-                    <div id="FIRST_TEXT_HOLDER"
+                    <div id={styles.FIRST_TEXT_HOLDER}
                         style={{
                             position: "relative",
                             display: "grid",
@@ -610,7 +610,7 @@ const Blog_page = (stories) => {
                         }}>
 
 
-                        <div id="PARAGRAPH"
+                        <div id={styles.PARAGRAPH}
                             style={{
                                 position: "relative",
                                 width: "100%",
@@ -619,7 +619,7 @@ const Blog_page = (stories) => {
                          
                             <h3
                                 className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                                id="_H3_2">
+                                id={styles._H3_2}>
                                 {parse(story.body1_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
