@@ -2396,6 +2396,22 @@
         left: 0;
     }
 
+
+    .sub_head_2 {
+        position: relative;
+        grid-area: SUB;
+        display: grid;
+        width: 100%;
+        height: auto;
+        grid-column-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "BC ";
+        left: 0;   }
+
+
+
     #SUBSCRIBE {
         position: relative;
         grid-area: BC;
@@ -2657,23 +2673,6 @@
 
 
     /*SECTION_4////TITLE////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-
-
-
-    /*SECTION////PRODUCTS///////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-    /*SECTION_5////ASTRONAUT_1//////////////////////////////////////////////////////////////////////////////*/
-
-
-    /*SECTION_5////ASTRONAUT_1//////////////////////////////////////////////////////////////////////////////*/
-
 
 
  
