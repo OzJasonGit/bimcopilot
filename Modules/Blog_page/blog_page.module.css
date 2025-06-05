@@ -2249,16 +2249,16 @@
     .grid_0_blogimageholder {
         position: relative;
         width: 100%;
-        max-width: 1520px;
         background-color: transparent;
         display: grid;
-        grid-column-gap: 0px;
+        grid-column-gap: 0;
         grid-row-gap: 20px;
-        grid-template-rows: 0px auto 0px;
+        grid-template-rows: 0 auto 0;
         grid-template-columns: 30px 1fr 30px;
-        grid-template-areas: ". . ."
-                             ".  SUB  ."
-                             ". . .";
+        grid-template-areas:
+            ". . ."
+            ". SUB ."
+            ". . .";
     }
 
 
@@ -2305,6 +2305,22 @@
         grid-column-gap: 0;
         grid-row-gap: 20px;
         grid-template-rows: 170px auto 0;
+        grid-template-columns: 30px 1fr 30px;
+        grid-template-areas:
+            ". . ."
+            ". SUB ."
+            ". . .";
+    }
+
+
+
+    .grid_0_tag {
+        position: relative;
+        width: 100%;
+        background-color: transparent;
+        display: grid;
+        grid-column-gap: 0;
+        grid-row-gap: 10px;
         grid-template-columns: 30px 1fr 30px;
         grid-template-areas:
             ". . ."
@@ -2371,20 +2387,35 @@
         display: grid;
         grid-row-gap: 20px;
         grid-column-gap: 20px;
-        grid-template-columns: 200px 1fr;
-        grid-template-rows: auto auto auto 52.5px 60px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
         grid-template-areas:
-            "ICON ICON"
-            "TAG_MAIN TAG_MAIN"
-            "SUB_MAIN SUB_MAIN"
-            "FORM FORM"
-            "BUTTON BUTTON";
+            "ICON"
+            "SUB_MAIN";
     }
 
 
     #BC {
         display: none;
     }
+
+
+
+
+    #AUTHOR_GRID {
+        display: grid;
+        grid-area: AUTHOR;
+        height: auto;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 90px;
+        grid-template-rows: auto 90px auto;
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
+        grid-template-areas:
+            "NUMBER NUMBER ."
+            ". . AUTHOR"
+            "NAME NAME NAME";
+        }
 
     /*SECTION_1/////////////////////////////////////////////////////////////////////////////////////////////*/
 
