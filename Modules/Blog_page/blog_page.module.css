@@ -2345,6 +2345,9 @@
         padding-bottom: 0px
     }
 
+
+
+
     .sub_head {
         position: relative;
         grid-area: SUB;
@@ -2353,12 +2356,12 @@
         height: auto;
         grid-column-gap: 40px;
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: auto auto;
         grid-template-areas:
-            "BC";
+            "BC "
+            " AUTHOR";
         left: 0;
     }
-
 
     #SUBSCRIBE {
         position: relative;
