@@ -2416,6 +2416,16 @@
     }
 
 
+    #MAIN_TAG {
+        grid-area: ICON;   
+    }
+
+
+    #SUB_TAG {
+        grid-area: SUB_MAIN;   
+    }
+
+
 
 
     #AUTHOR_GRID {
