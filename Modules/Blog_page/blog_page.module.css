@@ -2328,6 +2328,23 @@
     }
 
 
+
+        .grid_0_blog_end {
+            position: relative;
+            width: 100%;
+            background-color: transparent;
+            display: grid;
+            grid-column-gap: 0;
+            grid-row-gap: 20px;
+            grid-template-columns: 30px 1fr 30px;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                ". . ."
+                " BANNER-1 MAIN_AREA BANNER-2 "
+                ". . .";
+        }
+
+
     #IMAGE_POST_NUMBER {
         grid-area: CONTENT;
         background: transparent;
