@@ -2272,7 +2272,7 @@
         grid-template-rows: 0px auto 0px;
         grid-template-columns: 0px 1fr 0px;
         grid-template-areas: ". . ."
-            "BANNER-1 MAIN-AREA BANNER-2"
+            "BANNER-1 MAIN_AREA BANNER-2"
             ". . .";
 
     }
@@ -2286,7 +2286,7 @@
         grid-template-rows: 0px auto 0px;
         grid-template-columns: 0px 1fr 0px;
         grid-template-areas: ". . ."
-            "BANNER-1 MAIN-AREA BANNER-2"
+            "BANNER-1 MAIN_AREA BANNER-2"
             ". . .";
 
     }
