@@ -1157,6 +1157,16 @@ const Blog_page = (stories) => {
                         display: "grid",
                         width: "100%",
                         height: "auto"}}>
+                            <div id={styles.READ_NEXT_TITLE}
+                                 style={{
+                                    position: "relative",
+                                    gridArea: "TITLE"
+                                    }}>
+                                        <h1
+                                            id={styles._H1}>
+                                                Read Next...
+                                        </h1>
+                            </div>
                 </div>
 
             </div>

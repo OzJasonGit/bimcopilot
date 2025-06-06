@@ -246,13 +246,14 @@
 
 
 #READ_NEXT {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 350px auto;
     grid-row-gap: 20px;
+    grid-column-gap: 20px;
     grid-template-areas:
-            " TITLE "
-            " IMAGE "
-            " FOOTER ";
+        " TITLE TITLE . "
+        " IMAGE IMAGE IMAGE "
+        " FOOTER FOOTER . ";
 }
 
 
