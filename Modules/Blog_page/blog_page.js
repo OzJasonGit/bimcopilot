@@ -536,11 +536,10 @@ const Blog_page = (stories) => {
                 <div className={styles.grid_0_blogimageholder}>
 
                     <div className="rounded-2xl ..."
-                        id="MAIN_IMAGE"
+                        id={styles.MAIN_IMAGE}
                         style={{
                             display: "block",
                             width: "100%",
-                            height: "600px",
                             gridArea: "SUB",
                             position: "relative"
                         }}>
