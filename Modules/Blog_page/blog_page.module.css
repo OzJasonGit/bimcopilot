@@ -2387,6 +2387,7 @@
         display: grid;
         width: 100%;
         height: auto;
+        padding-top: 20px;
         grid-column-gap: 40px;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;

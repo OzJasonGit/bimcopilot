@@ -343,7 +343,7 @@ const Blog_page = (stories) => {
                 <div class={styles.grid_0_subscribe}>
                     <div className={styles.sub_head}
                         style={{
-                            paddingTop: "80px"
+                            
                         }}>
 
 
