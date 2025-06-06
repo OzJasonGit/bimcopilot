@@ -1151,7 +1151,7 @@ const Blog_page = (stories) => {
 
                     
                 
-                    <div id={styles.READ_NEXT}
+                    <div class={styles.READ_NEXT}
                         style={{
                             position: "relative",
                             display: "grid",
@@ -1233,7 +1233,7 @@ const Blog_page = (stories) => {
                                                 gridArea: "TEXT"
                                                 }}>
                                                 {parse(story.title || "")}                                                                                                                       </div>                               
-                                            </div>  
+                                </div>  
                     </div>
 
                 </div>
