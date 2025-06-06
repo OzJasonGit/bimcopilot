@@ -1044,7 +1044,7 @@
         grid-column-gap: 20px;
         grid-row-gap: 20px;
         grid-template-rows: 100px auto 20px;
-        grid-template-columns: 20px 1fr 20px;
+        grid-template-columns: 40px 1fr 40px;
         grid-template-areas: ". . ."
             "BANNER-1 MAIN_AREA BANNER-2"
             "VIDEO_B VIDEO_B VIDEO_B";
