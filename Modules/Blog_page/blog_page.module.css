@@ -245,7 +245,15 @@
 
 
 
-
+#READ_NEXT {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 20px;
+    grid-template-areas:
+            " TITLE "
+            " IMAGE "
+            " FOOTER ";
+}
 
 
 
