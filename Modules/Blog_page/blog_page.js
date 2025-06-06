@@ -633,7 +633,7 @@ const Blog_page = (stories) => {
                                 height: "auto",
                                 gridArea: "VIDEO",
                             }}>
-                            <Video />
+                            <Video id={styles.VIDEO_HEIGHT} />
                         </div>
 
 

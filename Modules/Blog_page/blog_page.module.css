@@ -2357,6 +2357,11 @@
     }
 
 
+    #VIDEO_HEIGHT {
+        height: 300px;
+    }
+
+
     #IMAGE_POST_NUMBER {
         grid-area: CONTENT;
         background: transparent;
