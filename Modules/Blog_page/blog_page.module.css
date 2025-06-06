@@ -1654,32 +1654,36 @@
         }
 
 
-        .sub_head {
-            position: relative;
-            grid-area: SUB;
-            display: grid;
-            width: 100%;
-            height: auto;
-            grid-column-gap: 40px;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto;
-            grid-template-areas:
-                "BC "
-                " AUTHOR";
-            left: 0;   }
+        
+
+
+    .sub_head {
+        position: relative;
+        grid-area: SUB;
+        display: grid;
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+        grid-column-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "BC "
+            " AUTHOR";
+        left: 0;       }
 
 
 
 
-        .sub_head_2 {
-            grid-area: SUB;
-            height: auto;
-            grid-column-gap: 40px;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto;
-            grid-template-areas: "BC ";
-            left: 0;   
-        }
+    .sub_head_2 {
+        grid-area: SUB;
+        height: auto;
+        grid-column-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "BC ";
+        left: 0;   
+    }
 
 
     .grid_0_blog {
@@ -1781,15 +1785,7 @@
 
 
 
-    .sub_head {
-        grid-area: SUB;
-        height: auto;
-        grid-column-gap: 40px;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "BC";
-        left: 0;
-    }
+    
 
 
     
