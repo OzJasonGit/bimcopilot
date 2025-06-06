@@ -758,13 +758,14 @@ const Blog_page = (stories) => {
                             <br />
                         </div>
 
-                        <div className="bg-transparent ... rounded-xl ... justify-center ..."
-                            style={{
+                        <div className="bg-transparent ... rounded-xl ... justify-center ..." 
+                             id={SUB_IMAGE_HEIGHT}
+                             style={{
                                 position: "relative",
                                 width: "100%",
                                 height: "350px",
                                 gridArea: "IMAGE",
-                            }}>
+                             }}>
                             <Image
                                 className=" rounded-md ... justify-center ..."
                                 alt="Story Image"

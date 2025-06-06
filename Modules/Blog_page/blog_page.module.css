@@ -207,6 +207,11 @@
 }
 
 
+#SUB_IMAGE_HEIGHT {
+    height: 350px;
+}
+
+
 
 
 #FIRST_TEXT_HOLDER {
@@ -2360,6 +2365,12 @@
     #VIDEO_HEIGHT {
         height: 300px;
     }
+
+    #SUB_IMAGE_HEIGHT {
+        height: 300px;
+    }
+
+
 
 
     #IMAGE_POST_NUMBER {
