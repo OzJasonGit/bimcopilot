@@ -249,7 +249,7 @@
     display: grid;
     grid-template-columns: 350px 350px 1fr;
     grid-template-rows: auto auto auto;
-    grid-row-gap: 20px;
+    grid-row-gap: 30px;
     grid-column-gap: 30px;
     grid-template-areas:
         " TITLE TITLE . "
