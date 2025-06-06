@@ -759,7 +759,7 @@ const Blog_page = (stories) => {
                         </div>
 
                         <div className="bg-transparent ... rounded-xl ... justify-center ..." 
-                             id={SUB_IMAGE_HEIGHT}
+                             id={styles.SUB_IMAGE_HEIGHT}
                              style={{
                                 position: "relative",
                                 width: "100%",
