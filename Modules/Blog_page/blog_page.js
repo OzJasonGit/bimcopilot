@@ -1126,52 +1126,52 @@ const Blog_page = (stories) => {
 
 
 
-        {/*<div id="DISCLAIMER_HOLDER">
-            <h3
-                id="_H3"
-                className="text-2xl ... text-stone-700 ... font-avant_garde_bold">
-            </h3>
-            <p
-                className="text-lg ... text-neutral-700 ... font-avant_garde_bold">
-                {parse(story.disclaimer || "")}
-            </p>
-        </div>*/}
+            {/*<div id="DISCLAIMER_HOLDER">
+                <h3
+                    id="_H3"
+                    className="text-2xl ... text-stone-700 ... font-avant_garde_bold">
+                </h3>
+                <p
+                    className="text-lg ... text-neutral-700 ... font-avant_garde_bold">
+                    {parse(story.disclaimer || "")}
+                </p>
+            </div>*/}
 
 
-<section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}>
-        <div className={styles.grid_0_blog_end}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}>
+            <div className={styles.grid_0_blog_end}>
 
-            <div id={styles.READ_NEXT_HOLDER}
-                style={{
-                        position: "relative",
-                        display: "grid",
-                        width: "100%",
-                        height: "auto",
-                        gridArea: "MAIN_AREA",}}>
-
-                
-            
-                <div id={styles.READ_NEXT}
+                <div id={styles.READ_NEXT_HOLDER}
                     style={{
-                        position: "relative",
-                        display: "grid",
-                        width: "100%",
-                        height: "auto"}}>
-                            <div id={styles.READ_NEXT_TITLE}
-                                 style={{
-                                    position: "relative",
-                                    gridArea: "TITLE"
-                                    }}>
-                                        <h1
-                                            id={styles._H1}>
-                                                Read Next...
-                                        </h1>
-                            </div>
+                            position: "relative",
+                            display: "grid",
+                            width: "100%",
+                            height: "auto",
+                            gridArea: "MAIN_AREA",}}>
+
+                    
+                
+                    <div id={styles.READ_NEXT}
+                        style={{
+                            position: "relative",
+                            display: "grid",
+                            width: "100%",
+                            height: "auto"}}>
+                                <div id={styles.READ_NEXT_TITLE}
+                                    style={{
+                                        position: "relative",
+                                        gridArea: "TITLE"
+                                        }}>
+                                            <h1
+                                                id={styles._H1}>
+                                                    Read Next...
+                                            </h1>
+                                </div>
+                    </div>
+
                 </div>
 
             </div>
-
-        </div>
             </section>
 
 
