@@ -258,12 +258,11 @@
 }
 
 
-.READ_HOLDER {
+#READ_HOLDER {
     display: grid;
     grid-area: READ_1;
     grid-template-columns: 350px 350px ;
     grid-template-rows: auto;
-    grid-row-gap: 30px;
     grid-column-gap: 30px;
     grid-template-areas:
     
