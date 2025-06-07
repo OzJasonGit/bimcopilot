@@ -253,8 +253,21 @@
     grid-column-gap: 30px;
     grid-template-areas:
         " TITLE TITLE . "
-        " READ_1 READ_2 READ_3 "
+        " READ_1 READ_1 READ_3 "
         " FOOTER FOOTER . ";
+}
+
+
+.READ_HOLDER {
+    display: grid;
+    grid-area: READ_1;
+    grid-template-columns: 350px 350px ;
+    grid-template-rows: auto;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+    grid-template-areas:
+    
+        " READ_1 READ_2 ";
 }
 
 
