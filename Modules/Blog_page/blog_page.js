@@ -1162,8 +1162,9 @@ const Blog_page = (stories) => {
                                         position: "relative",
                                         gridArea: "TITLE"
                                         }}>
-                                            <h1
-                                                id={styles._H1}>
+                                            <h1 id={styles._H1}
+                                                className="text-3xl ... text-stone-700 ... font-avant_garde_bold"
+                                                >
                                                     Read Next...
                                             </h1>
                                 </div>
