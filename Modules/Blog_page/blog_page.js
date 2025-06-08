@@ -1171,7 +1171,8 @@ const Blog_page = (stories) => {
                                 display: "grid",
                                 width: "100%",
                                 height: "auto",
-                                gridArea: "MAIN_AREA",}}>
+                                gridArea: "MAIN_AREA",
+                                overflowX: "scroll"}}>
 
                         
                     

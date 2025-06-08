@@ -263,7 +263,6 @@
 #READ_SCROLL {
     display: grid;
     grid-area: READ_1;
-    overflow-x: scroll;
     position: relative;
 }
 
