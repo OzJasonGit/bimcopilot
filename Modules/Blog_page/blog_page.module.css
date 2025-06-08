@@ -1695,6 +1695,9 @@
         
 
 
+    
+
+
     .sub_head {
         position: relative;
         grid-area: SUB;
@@ -1702,13 +1705,14 @@
         width: 100%;
         height: auto;
         padding-top: 20px;
+        grid-row-gap: 30px;
         grid-column-gap: 40px;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
         grid-template-areas:
             "BC "
             " AUTHOR";
-        left: 0;       }
+        left: 0;   }
 
 
 
