@@ -255,7 +255,7 @@
         " TITLE TITLE . "
         " READ_1 READ_1 READ_3 "
         " FOOTER FOOTER . ";
-    overflow: hidden;
+    overflow: scroll;
 }
 
 

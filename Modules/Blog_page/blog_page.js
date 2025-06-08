@@ -1172,7 +1172,7 @@ const Blog_page = (stories) => {
                                 width: "100%",
                                 height: "auto",
                                 gridArea: "MAIN_AREA",
-                                overflowX: "scroll"}}>
+                               }}>
 
                         
                     
