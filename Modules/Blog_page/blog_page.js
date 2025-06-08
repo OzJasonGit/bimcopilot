@@ -1168,7 +1168,8 @@ const Blog_page = (stories) => {
                                             </h1>
                                 </div>
 
-                                <div id={styles.READ_HOLDER}>
+                                <div id={styles.READ_SCROLL}>
+                                    <div id={styles.READ_HOLDER}>
 
                                         <div id={styles.READ_1} class={styles.read_container}
                                             style={{
@@ -1236,8 +1237,11 @@ const Blog_page = (stories) => {
                                                         }}>
                                                         {parse(story.title || "")}                                                                                                                       </div>                               
                                         </div>  
-                                    
+
+                                    </div>
                                 </div>
+
+                                
 
                                 
                     </div>
