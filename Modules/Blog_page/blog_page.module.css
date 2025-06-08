@@ -255,6 +255,7 @@
         " TITLE TITLE . "
         " READ_1 READ_1 READ_3 "
         " FOOTER FOOTER . ";
+    overflow: hidden;
 }
 
 
@@ -1623,6 +1624,20 @@
     }
 
 
+    #MAIN_IMAGE {
+        height: 300px;
+    }
+
+
+    #VIDEO_HEIGHT {
+        height: 300px;
+    }
+
+    #SUB_IMAGE_HEIGHT {
+        height: 300px;
+    }
+
+
 
     #FIRST_TEXT_HOLDER {
         grid-template-columns: 1fr;
@@ -1634,13 +1649,13 @@
     }
 
 
-        #IMAGE_TEXT_HOLDER {
-            grid-template-columns:  1fr;
-            grid-template-rows: auto auto auto;
-            grid-template-areas:
-                "TITLE "
-                "IMAGE"
-                "TEXT ";   }
+    #IMAGE_TEXT_HOLDER {
+        grid-template-columns:  1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "TITLE "
+            "IMAGE"
+            "TEXT ";   }
 
 
     .grid_0 {
