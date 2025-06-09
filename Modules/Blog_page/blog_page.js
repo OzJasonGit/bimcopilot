@@ -1141,17 +1141,18 @@ const Blog_page = (stories) => {
 
                         
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}> 
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.grid_0_blog}> 
                 <div class={styles.READ_NEXT}
                     style={{
                         position: "relative",
                         display: "grid",
                         width: "100%",
-                        height: "auto"}}>
+                        height: "auto",
+                        gridArea: "MAIN_AREA"}}>
                         <div id={styles.READ_NEXT_TITLE}
                             style={{
                                 position: "relative",
-                                gridArea: "TITLE"
+                                gridArea: "READ_1"
                                 }}>
                                     <h1 id={styles._H1}
                                         className="text-3xl ... text-stone-700 ... font-avant_garde_bold"
