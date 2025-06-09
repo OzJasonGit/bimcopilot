@@ -1162,8 +1162,7 @@ const Blog_page = (stories) => {
                                     </h1>
                         </div>
                     </div>                    
-                </div>
-                             
+                </div>                           
             </section>
 
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}>
