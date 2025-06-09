@@ -1255,6 +1255,39 @@ const Blog_page = (stories) => {
                                                             {parse(story.title || "")}                                                                                                                       </div>                               
                                             </div>  
 
+                                            <div id={styles.READ_3} class={styles.read_container}
+                                                style={{
+                                                    position: "relative",
+                                                    gridArea: "READ_3"
+                                                    }}>    
+                                                        <div id={styles.READ_IMAGE}
+                                                            style={{
+                                                            position: "relative",
+                                                            gridArea: "IMAGE"
+                                                            }}>
+                                                            <Image
+                                                                className=" rounded-md ... justify-center ..."
+                                                                alt="Story Image"
+                                                                key={story._id}
+                                                                width={500}
+                                                                height={500}
+                                                                src={story.image}
+                                                                style={{
+                                                                    position: "absolute",
+                                                                    width: "100%",
+                                                                    height: "100%",
+                                                                    objectFit: "cover",
+                                                                }}/>                                                 
+                                                        </div>   
+
+                                                        <div id={styles._H3} class={styles.READ_TEXT}  className=" text-stone-700 ... font-avant_garde_bold"
+                                                            style={{
+                                                            position: "relative",
+                                                            gridArea: "TEXT"
+                                                            }}>
+                                                            {parse(story.title || "")}                                                                                                                       </div>                               
+                                            </div> 
+
                                         </div>
                                     </div>
 
