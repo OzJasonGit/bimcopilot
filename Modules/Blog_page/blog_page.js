@@ -1141,9 +1141,10 @@ const Blog_page = (stories) => {
 
                         
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.grid_0_blog}> 
-                <div class={styles.READ_NEXT}
-                    style={{
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} > 
+                <div class={styles.grid_0_blog}>
+                    <div class={styles.READ_NEXT}
+                        style={{
                         position: "relative",
                         display: "grid",
                         width: "100%",
@@ -1160,7 +1161,9 @@ const Blog_page = (stories) => {
                                             Read Next...
                                     </h1>
                         </div>
-                </div>               
+                    </div>                    
+                </div>
+                             
             </section>
 
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}>
