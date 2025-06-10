@@ -1075,15 +1075,12 @@
 
 
     .grid_0_blog {
-        width: 100%;
         max-width: 1520px;
         background-color: #f5f5f4;
-        display: grid;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
+        grid-column-gap: 0px;
         grid-template-rows: 100px auto 20px;
-        grid-template-columns: 40px 1fr 40px;
-        grid-template-areas: ". . ."
+        grid-template-areas:
+            ". . ."
             "BANNER-1 MAIN_AREA BANNER-2"
             "VIDEO_B VIDEO_B VIDEO_B";
     }
@@ -1745,17 +1742,17 @@
     .grid_0_blog {
         position: relative;
         width: 100%;
-        background-color:#f5f5f4;
+        background-color: #f5f5f4;
         display: grid;
-
         padding-left: 40px;
         padding-right: 40px;
         grid-row-gap: 40px;
-        grid-template-rows: 0px auto;
+        grid-template-rows: 0 auto;
         grid-template-columns: 1fr;
-        grid-template-areas: "  .  "
+        grid-template-areas:
+            " . "
             " MAIN-AREA ";
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 
 
@@ -2358,17 +2355,17 @@
     }
 
     .grid_0_blog {
-        width: 100%;
+        width: 100%;      
         background-color: transparent;
         display: grid;
-        grid-column-gap: 30px;
         grid-row-gap: 40px;
-        grid-template-rows: 0px auto 0px;
-        grid-template-columns: 0px 1fr 0px;
-        grid-template-areas: ". . ."
+        grid-column-gap: 30px;
+        grid-template-rows: 0 auto 0;
+        grid-template-columns: 0 1fr 0;
+        grid-template-areas:
+            ". . ."
             "BANNER-1 MAIN_AREA BANNER-2"
             ". . .";
-
     }
 
     /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
