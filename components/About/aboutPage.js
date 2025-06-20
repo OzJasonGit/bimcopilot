@@ -126,7 +126,19 @@ export default class Aboutpage extends Component {
                             id={styles.MY_FACE}
                             class=" border-8 border-stone-200 ... rounded-full ..."
                           >
-                            <Image></Image>
+                            <Image
+                              alt="Story Image"
+                              key={story._id}
+                              width={500}
+                              height={500}
+                              src={story.image}
+                              style={{
+                                  position: "absolute",
+                                  width: "100%",
+                                  height: "100%",
+                                  objectFit: "cover",
+                              }}
+                          />
                           </div>
                         </div>
 
