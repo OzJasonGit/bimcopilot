@@ -22,105 +22,236 @@ export default class Products extends Component {
               <div id={styles.PRODUCTS_HORIZONTAL_MOBILE}>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div
-                      class="rounded-2xl ..."
-                      id={styles.PRODUCT_CARD}
-                      styles={{ gridArea: "2" }}>
+                  class="rounded-2xl ..."
+                  id={styles.PRODUCT_CARD}
+                  styles={{ gridArea: "2" }}>
 
 
-                      <div 
-                        id={styles.IMAGE_1}>
-                        
-                          <Image
-                            class=" rounded-2xl ... "
-                            id={styles.PRODUCT_IMAGE}
-                            src={revitBlinds}                    
-                            style={{objectFit: "cover"}}
-                            quality={100}
-                            //object-fit="cover"                      
-                            alt=""/>                                                                            
-                          <Image/>
+                  <div 
+                    id={styles.IMAGE_1}>
+                    
+                      <Image
+                        class=" rounded-2xl ... "
+                        id={styles.PRODUCT_IMAGE}
+                        src={revitBlinds}                    
+                        style={{objectFit: "cover"}}
+                        quality={100}
+                        //object-fit="cover"                      
+                        alt=""/>                                                                            
+                      <Image/>
 
-                      </div>
+                  </div>
+                  
+                  <div>
+                    <Link href="/">
+                      <h3
+                        id={styles._H3}
+                        class=" text-neutral-700 ... font-geist_regular ...">
+                        Parametric Title Block Catalogue Colored Title Blocks (Metric + Imperial)
+                      </h3>
                       
-                      <div>
-                        <Link href="/">
-                          <h3
-                            id={styles._H3}
-                            class=" text-neutral-700 ... font-geist_regular ...">
-                            Parametric Title Block Catalogue Colored Title Blocks (Metric + Imperial)
-                          </h3>
+                      <h3 id={styles._H3} class=" text-neutral-700 ... font-avant_garde_bold ... ">
+                        {" "}
+                        From $53.90
+                      </h3>
+                    </Link>
+                  </div>
+
+
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <div
+                class="rounded-2xl ..."
+                id={styles.PRODUCT_CARD}
+                styles={{ gridArea: "1" }}>
+
+                        <div 
+                          id={styles.IMAGE_1}>
                           
-                          <h3 id={styles._H3} class=" text-neutral-700 ... font-avant_garde_bold ... ">
-                            {" "}
-                            From $53.90
-                          </h3>
-                        </Link>
-                      </div>
+                            <Image
+                              class=" rounded-2xl ... "
+                              id={styles.PRODUCT_IMAGE}
+                              src={drawingSheets}                     
+                              style={{objectFit: "cover"}}
+                              quality={100}
+                              //object-fit="cover"                      
+                              alt=""/>                                                                            
+                            <Image/>
 
-
-              </div>
-
-
-              <div
-                      class="rounded-2xl ..."
-                      id={styles.PRODUCT_CARD}
-                      styles={{ gridArea: "1" }}>
-
-                              <div 
-                                id={styles.IMAGE_1}>
-                                
-                                  <Image
-                                    class=" rounded-2xl ... "
-                                    id={styles.PRODUCT_IMAGE}
-                                    src={drawingSheets}                     
-                                    style={{objectFit: "cover"}}
-                                    quality={100}
-                                    //object-fit="cover"                      
-                                    alt=""/>                                                                            
-                                  <Image/>
-
-                              </div>
-                              
-                              <div>
-                                <Link href="/">
-                                  <h3
-                                    id={styles._H3}
-                                    class=" text-neutral-700 ... font-geist_regular ...">
-                                    Parametric Title Block Catalogue  Colored Title Blocks (Metric + Imperial)
-                                  </h3>
-                                  
-                                  <h3 id={styles._H3} class=" text-neutral-700 ... font-avant_garde_bold ...">
-                                    {" "}
-                                    From $53.90
-                                  </h3>
-                                </Link>
-                              </div>
+                        </div>
+                        
+                        <div>
+                          <Link href="/">
+                            <h3
+                              id={styles._H3}
+                              class=" text-neutral-700 ... font-geist_regular ...">
+                              Parametric Title Block Catalogue  Colored Title Blocks (Metric + Imperial)
+                            </h3>
+                            
+                            <h3 id={styles._H3} class=" text-neutral-700 ... font-avant_garde_bold ...">
+                              {" "}
+                              From $53.90
+                            </h3>
+                          </Link>
+                        </div>
 
               </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               <div
-                      class="rounded-2xl ..."
-                      id={styles.PRODUCT_CARD}
-                      styles={{ gridArea: "3" }}>
+                class="rounded-2xl ..."
+                id={styles.PRODUCT_CARD}
+                styles={{ gridArea: "3" }}>
 
 
-                              <div 
-                                id={styles.IMAGE_1}>
+                        <div 
+                          id={styles.IMAGE_1}>
 
-                                  <Link href="/sales">
-                                    <Image
-                                      class=" rounded-2xl ... "
-                                      id={styles.PRODUCT_IMAGE}
-                                      src={volumesByRoom}                     
-                                      style={{objectFit: "cover"}}
-                                      quality={100}
-                                      //object-fit="cover"                      
-                                      alt=""/>                                                                            
-                                    <Image/>
-                                  </Link>
-                              </div>
-                              
+                            <Link href="/sales">
+                              <Image
+                                class=" rounded-xl ... "
+                                id={styles.PRODUCT_IMAGE}
+                                src={volumesByRoom}                     
+                                style={{objectFit: "cover"}}
+                                quality={100}
+                                //object-fit="cover"                      
+                                alt=""/>                                                                            
+                              <Image/>
+                            </Link>
+                        </div>
+                        
 
                   <div>
                     <Link href="/sales">
@@ -145,11 +276,50 @@ export default class Products extends Component {
             </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div id={styles.PRODUCTS_HOLDER}>
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_1" }}>
                 <Link href="/sales">
                   <Image
-                    class=" rounded-2xl ... "
+                    class=" rounded-xl ... "
                     id={styles.PRODUCT_IMAGE}
                     src={revitBlinds}                    
                     style={{objectFit: "cover"}}
@@ -182,10 +352,49 @@ export default class Products extends Component {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_2" }}>
                 <Link href="/sales">
                   <Image
-                      class=" rounded-2xl ... drop-shadow-xl ... "
+                      class=" rounded-xl ... drop-shadow-xl ... "
                       id={styles.PRODUCT_IMAGE}
                       src={drawingSheets}                    
                       style={{objectFit: "cover"}}
@@ -220,7 +429,49 @@ export default class Products extends Component {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_3" }}>
+
                 <Link href="/sales">
                   <Image
                       class="rounded-2xl ..."
