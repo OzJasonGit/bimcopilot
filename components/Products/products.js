@@ -167,6 +167,8 @@ export default class Products extends Component {
                         style={{
                           position: "absolute",
                           objectFit: "cover",
+                          width: "100%",
+                          height: "100%",
                         }}>
                           <Image
                             class=" rounded-xl ... "
