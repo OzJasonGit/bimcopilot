@@ -163,7 +163,7 @@ export default class Products extends Component {
                         objectFit: "cover",
                       }}>
                       <div                  
-                        id={styles.OVERLAY_GRID}
+                        id={styles.PRODUCT_OVERLAY_GRID}
                         style={{
                           position: "absolute",
                           objectFit: "cover",

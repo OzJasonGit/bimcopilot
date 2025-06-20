@@ -127,6 +127,16 @@
     "TEXT";
 }
 
+#PRODUCT_OVERLAY_GRID {
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  grid-template-rows: 30px 1fr 30px;
+  grid-template-areas:
+      ". . ."
+      ". AREA ."
+      ". . .";
+}
+
 #PRODUCT_IMAGE {
   grid-area: IMAGE;
   position: relative;
