@@ -31,14 +31,7 @@ export default class Products extends Component {
                   <Link
                     href="/sales"
                     id={styles.IMAGE_1}> 
-                      <div  
-                        style={{
-                          position: "absolute",
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                        }}>
-                      </div>                       
+                                            
                       <Image
                         class=" rounded-2xl ... "
                         id={styles.PRODUCT_IMAGE}
@@ -162,16 +155,29 @@ export default class Products extends Component {
 
 
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_1" }}>
-                <Link href="/sales">
-                  <Image
-                    class=" rounded-xl ... "
-                    id={styles.PRODUCT_IMAGE}
-                    src={revitBlinds}                    
-                    style={{objectFit: "cover"}}
-                    quality={100}
-                    //object-fit="cover"                      
-                    alt=""/>                                                                            
-                  <Image/>
+                <Link href="/sales"
+                      style={{
+                        position: "relative",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}>
+                      <div                  
+                        id={styles.OVERLAY_GRID}
+                        style={{
+                          position: "absolute",
+                          objectFit: "cover",
+                        }}>
+                          <Image
+                            class=" rounded-xl ... "
+                            id={styles.PRODUCT_IMAGE}
+                            src={revitBlinds}                    
+                            style={{objectFit: "cover"}}
+                            quality={100}
+                            //object-fit="cover"                      
+                            alt=""/>                                                                            
+                          <Image/>
+                      </div>                  
                 </Link>
                                               
                 <div>
@@ -191,6 +197,7 @@ export default class Products extends Component {
                     </h3>
                   </Link>
                 </div>
+
               </div>
 
 
