@@ -30,7 +30,15 @@ export default class Products extends Component {
                 styles={{ gridArea: "1" }}>
                   <Link
                     href="/sales"
-                    id={styles.IMAGE_1}>                        
+                    id={styles.IMAGE_1}> 
+                      <div  
+                        style={{
+                          position: "absolute",
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}>
+                      </div>                       
                       <Image
                         class=" rounded-2xl ... "
                         id={styles.PRODUCT_IMAGE}
