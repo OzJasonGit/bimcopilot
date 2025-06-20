@@ -14,64 +14,59 @@ export default class Products extends Component {
 
  
 
-        <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
-          <div class={styles.grid_0_main}>
-            <div
+<section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
+
+{/* Mobile /////////////////////////////////////////////////////////////////////////// */}   
+        <div class={styles.grid_0_main}>           
+          <div
               id={styles.PRODUCTS_HOLDER_MOBILE}
               styles={{ position: "absolute" }}>
               <div id={styles.PRODUCTS_HORIZONTAL_MOBILE}>
 
 
+              <div
+                class="rounded-xl ..."
+                id={styles.PRODUCT_CARD}
+                styles={{ gridArea: "1" }}>
+                  <Link
+                    href="/sales"
+                    id={styles.IMAGE_1}>                        
+                      <Image
+                        class=" rounded-2xl ... "
+                        id={styles.PRODUCT_IMAGE}
+                        src={drawingSheets}                     
+                        style={{objectFit: "cover"}}
+                        quality={100}
+                        //object-fit="cover"                      
+                        alt=""/>                                                                            
+                      <Image/>
+                  </Link>
+                  
+                  <div>
+                    <Link href="/sales">
+                      <h3
+                        id={styles._H3}
+                        class=" text-neutral-700 ... font-geist_regular ...">
+                        Parametric Title Block Catalogue  Colored Title Blocks (Metric + Imperial)
+                      </h3>
+                      
+                      <h3 id={styles._H3} class=" text-neutral-700 ... font-avant_garde_bold ...">
+                        {" "}
+                        From $53.90
+                      </h3>
+                    </Link>
+                  </div>
+              </div>
 
 
+              <div
+                class="rounded-xl ..."
+                id={styles.PRODUCT_CARD}
+                styles={{ gridArea: "2" }}>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div
-                  class="rounded-2xl ..."
-                  id={styles.PRODUCT_CARD}
-                  styles={{ gridArea: "2" }}>
-
-
-                  <div 
-                    id={styles.IMAGE_1}>
-                    
+                  <Link 
+                    href="/sales"
+                    id={styles.IMAGE_1}>                   
                       <Image
                         class=" rounded-2xl ... "
                         id={styles.PRODUCT_IMAGE}
@@ -81,11 +76,10 @@ export default class Products extends Component {
                         //object-fit="cover"                      
                         alt=""/>                                                                            
                       <Image/>
-
-                  </div>
+                  </Link>
                   
                   <div>
-                    <Link href="/">
+                    <Link href="/sales">
                       <h3
                         id={styles._H3}
                         class=" text-neutral-700 ... font-geist_regular ...">
@@ -98,160 +92,27 @@ export default class Products extends Component {
                       </h3>
                     </Link>
                   </div>
-
-
               </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
               <div
-                class="rounded-2xl ..."
-                id={styles.PRODUCT_CARD}
-                styles={{ gridArea: "1" }}>
-
-                        <div 
-                          id={styles.IMAGE_1}>
-                          
-                            <Image
-                              class=" rounded-2xl ... "
-                              id={styles.PRODUCT_IMAGE}
-                              src={drawingSheets}                     
-                              style={{objectFit: "cover"}}
-                              quality={100}
-                              //object-fit="cover"                      
-                              alt=""/>                                                                            
-                            <Image/>
-
-                        </div>
-                        
-                        <div>
-                          <Link href="/">
-                            <h3
-                              id={styles._H3}
-                              class=" text-neutral-700 ... font-geist_regular ...">
-                              Parametric Title Block Catalogue  Colored Title Blocks (Metric + Imperial)
-                            </h3>
-                            
-                            <h3 id={styles._H3} class=" text-neutral-700 ... font-avant_garde_bold ...">
-                              {" "}
-                              From $53.90
-                            </h3>
-                          </Link>
-                        </div>
-
-              </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <div
-                class="rounded-2xl ..."
+                class="rounded-xl ..."
                 id={styles.PRODUCT_CARD}
                 styles={{ gridArea: "3" }}>
 
-
-                        <div 
-                          id={styles.IMAGE_1}>
-
-                            <Link href="/sales">
-                              <Image
-                                class=" rounded-xl ... "
-                                id={styles.PRODUCT_IMAGE}
-                                src={volumesByRoom}                     
-                                style={{objectFit: "cover"}}
-                                quality={100}
-                                //object-fit="cover"                      
-                                alt=""/>                                                                            
-                              <Image/>
-                            </Link>
-                        </div>
-                        
+                  <Link 
+                    href="/sales"
+                    id={styles.IMAGE_1}>                 
+                        <Image
+                          class=" rounded-xl ... "
+                          id={styles.PRODUCT_IMAGE}
+                          src={volumesByRoom}                     
+                          style={{objectFit: "cover"}}
+                          quality={100}
+                          //object-fit="cover"                      
+                          alt=""/>                                                                            
+                        <Image/>                
+                  </Link>                    
 
                   <div>
                     <Link href="/sales">
@@ -259,8 +120,7 @@ export default class Products extends Component {
                         id={styles._H3}
                         class=" text-neutral-700 ... font-geist_regular ..."
                         style={{
-                              marginBottom: "7.5px"
-                            }}>
+                              marginBottom: "7.5px"}}>
                         Parametric Title Block Catalogue  Colored Title Blocks (Metric + Imperial)
                         
                       </h3>
@@ -271,9 +131,12 @@ export default class Products extends Component {
                       </h3>
                     </Link>
                   </div>
-                </div>
               </div>
-            </div>
+              
+                          
+          </div>
+        </div>
+{/* Mobile /////////////////////////////////////////////////////////////////////////// */}   
 
 
 
@@ -286,36 +149,10 @@ export default class Products extends Component {
 
 
 
+{/* Desktop /////////////////////////////////////////////////////////////////////////// */}   
+          <div id={styles.PRODUCTS_HOLDER}>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div id={styles.PRODUCTS_HOLDER}>
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_1" }}>
                 <Link href="/sales">
                   <Image
@@ -328,8 +165,7 @@ export default class Products extends Component {
                     alt=""/>                                                                            
                   <Image/>
                 </Link>
-                
-                               
+                                              
                 <div>
                   <Link href="/sales">
                     <h3
@@ -347,51 +183,11 @@ export default class Products extends Component {
                     </h3>
                   </Link>
                 </div>
-
               </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <div id={styles.PRODUCT} style={{ gridArea: "AREA_2" }}>
+              <div id={styles.PRODUCT} style={{ gridArea: "AREA_2" }}>               
                 <Link href="/sales">
                   <Image
                       class=" rounded-xl ... drop-shadow-xl ... "
@@ -404,7 +200,6 @@ export default class Products extends Component {
                   <Image/>
                 </Link>
                 
-
                 <div>
                   <Link href="/sales">
                     <h3
@@ -412,8 +207,7 @@ export default class Products extends Component {
                       class=" text-neutral-700 ... font-geist_regular ..."
                       style={{
                               marginBottom: "7.5px"
-                            }}
-                    >
+                            }}>
                       Parametric Colored Title Blocks Colored Title Blocks (Metric + Imperial)
                     </h3>
                     
@@ -423,55 +217,11 @@ export default class Products extends Component {
                     </h3>
                   </Link>
                 </div>
-
               </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_3" }}>
-
                 <Link href="/sales">
                   <Image
                       class="rounded-2xl ..."
@@ -502,7 +252,6 @@ export default class Products extends Component {
                     </h3>
                   </Link>
                 </div>
-
               </div>
 
 
@@ -524,10 +273,11 @@ export default class Products extends Component {
                   Custom designed resources to help streamline, automate and enhance your workflow in architecture, design and manufacturing. 
                 </h3>
               </div>
-
+          
             </div>
           </div>
-      </section>
+{/* Desktop /////////////////////////////////////////////////////////////////////////// */} 
+</section>
 
     
 
