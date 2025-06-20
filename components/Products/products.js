@@ -5,6 +5,7 @@ import Link from "next/link";
 import revitBlinds from './revit_blinds.webp';
 import drawingSheets from './drawing_sheets.webp';
 import volumesByRoom from './volumes_by_room.webp';
+import logo from './Tesseract_Simple_Black_2.png';
 
 
 export default class Products extends Component {
@@ -150,6 +151,31 @@ export default class Products extends Component {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {/* Desktop /////////////////////////////////////////////////////////////////////////// */}   
           <div id={styles.PRODUCTS_HOLDER}>
 
@@ -171,7 +197,23 @@ export default class Products extends Component {
                           width: "100%",
                           height: "100%",
                           zIndex: "100",
-                        }}>                         
+                        }}> 
+                          <div                 
+                            style={{
+                              gridArea:"LOGO",
+                              position: "relative",
+                            }}>   
+                              <Image                                   
+                                    src={logo}                    
+                                    style={{
+                                      objectFit: "cover",
+                                      position: "absolute",
+                                      width: "100%",
+                                      height: "100%",}}
+                                      quality={100}                                             
+                                    alt=""/>                                                                            
+                              <Image/>                       
+                          </div>                          
                       </div>   
                       <Image
                             id={styles.PRODUCT_IMAGE}
@@ -217,7 +259,23 @@ export default class Products extends Component {
                       objectFit: "cover",
                       width: "100%",
                       height: "100%",
-                      zIndex: "100",}}>                         
+                      zIndex: "100",}}> 
+                        <div                 
+                          style={{
+                            gridArea:"LOGO",
+                            position: "relative",
+                          }}>   
+                            <Image                                   
+                                  src={logo}                    
+                                  style={{
+                                    objectFit: "cover",
+                                    position: "absolute",
+                                    width: "100%",
+                                    height: "100%",}}
+                                    quality={100}                                             
+                                  alt=""/>                                                                            
+                            <Image/>                       
+                        </div>                                              
                   </div> 
                   <Image
                       class=" rounded-xl ... drop-shadow-xl ... "
@@ -263,7 +321,23 @@ export default class Products extends Component {
                       objectFit: "cover",
                       width: "100%",
                       height: "100%",
-                      zIndex: "100",}}>                         
+                      zIndex: "100",}}>   
+                      <div                 
+                        style={{
+                          gridArea:"LOGO",
+                          position: "relative",
+                        }}>   
+                          <Image                                   
+                                src={logo}                    
+                                style={{
+                                  objectFit: "cover",
+                                  position: "absolute",
+                                  width: "100%",
+                                  height: "100%",}}
+                                  quality={100}                                             
+                                alt=""/>                                                                            
+                          <Image/>                       
+                      </div>                       
                   </div> 
                   <Image
                       class="rounded-2xl ..."
