@@ -341,35 +341,7 @@
 
 /*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
 @media all and (min-width: 960px) and (max-width: 1280px) {
-  .grid_0 {
-    width: 100%;
-    max-width: 1520px;
-    background-color: rgb(23 23 23);
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-rows: 100px auto 20px;
-    grid-template-columns: 20px 1fr 20px;
-    grid-template-areas:
-      ". . ."
-      "BANNER-1 MAIN-AREA BANNER-2"
-      "VIDEO_B VIDEO_B VIDEO_B";
-  }
-
-  .grid_0_blog {
-    width: 100%;
-    max-width: 1520px;
-    background-color: rgb(23 23 23);
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-rows: 100px auto 20px;
-    grid-template-columns: 20px 1fr 20px;
-    grid-template-areas:
-      ". . ."
-      "BANNER-1 MAIN-AREA BANNER-2"
-      "VIDEO_B VIDEO_B VIDEO_B";
-  }
+ 
 
   .grid_0_main {
     width: 100%;
@@ -386,28 +358,7 @@
       ". . .";
   }
 
-  #SHADOW_SECTION {
-    position: relative;
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: rgb(23, 23, 23);
-    z-index: -30000;
-    top: 0px;
-  }
-
-  #SHADOW_SECTION_BLOG {
-    position: relative;
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: rgb(23, 23, 23);
-    z-index: 1;
-    top: 0px;
-    left: 0;
-  }
+ 
 
   #SHADOW_SECTION_TITLE {
     position: relative;
@@ -422,90 +373,15 @@
   /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
   /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
-  .grid_0_subscribe {
-    position: relative;
-    width: 100%;
-    max-width: 1520px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 20px;
-    grid-template-rows: 170px auto 20px;
-    grid-template-columns: 40px 120px 1fr 120px 40px;
-    grid-template-areas:
-      ". . . . ."
-      ". SUB SUB . ."
-      ". . . . .";
-  }
 
-  .sub_head {
-    position: relative;
-    grid-area: SUB;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-column-gap: 40px;
-    grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "BC BC BC BC BC BC . . . . . . . .";
-    left: 0;
-  }
 
+  
   /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
 
   /*SECTION_2///////////////////////////////////////////////////////////////////////////////////////////*/
-  .head {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    height: 920px;
-    grid-column-gap: 40px;
-    grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px auto auto auto auto auto;
-    grid-template-areas:
-      "BC . . . . . . . . . . . . ."
-      "BC CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT NEWS NEWS NEWS NEWS NEWS NEWS"
-      "BC CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT NEWS NEWS NEWS NEWS NEWS NEWS"
-      "BC CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT NEWS NEWS NEWS NEWS NEWS NEWS"
-      "BC TITLE TITLE TITLE TITLE TITLE TITLE TITLE NEWS NEWS NEWS NEWS NEWS NEWS"
-      "BC TITLE TITLE TITLE TITLE TITLE TITLE TITLE NEWS NEWS NEWS NEWS NEWS NEWS";
-  }
 
-  #ARTICLES {
-    grid-area: ARTICLES;
-    display: grid;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto 150px;
-    width: 100%;
-    grid-template-areas:
-      "1"
-      "2"
-      "3"
-      "4";
-  }
 
-  #BLOG_SMALL_1 {
-    grid-area: 1;
-    width: 100%;
-    height: 100%;
-    max-height: 0;
-    display: grid;
-    grid-row-gap: 2.5px;
-    grid-column-gap: 15px;
-    grid-template-columns: 30px 1fr 120px;
-    grid-template-rows: 30px 60px 5px auto auto 5px auto 5px auto;
-    grid-template-areas:
-      "NUMBER TITLE IMAGE"
-      ". TITLE IMAGE"
-      ". TITLE ."
-      ". TITLE AUTHOR"
-      ". TITLE AUTHOR"
-      ". . ."
-      ". TIMESTAMP TIMESTAMP"
-      ". . ."
-      ". . BORDER";
-  }
+
 
   /*SECTION_2///////////////////////////////////////////////////////////////////////////////////////////*/
 
