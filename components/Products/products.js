@@ -156,6 +156,7 @@ export default class Products extends Component {
 
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_1" }}>
                 <Link href="/sales"
+                      class=" rounded-xl ... "
                       style={{
                         position: "relative",
                         width: "100%",
@@ -172,7 +173,6 @@ export default class Products extends Component {
                         }}>                         
                       </div>   
                       <Image
-                            class=" rounded-xl ... "
                             id={styles.PRODUCT_IMAGE}
                             src={revitBlinds}                    
                             style={{
