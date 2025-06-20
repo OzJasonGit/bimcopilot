@@ -429,21 +429,7 @@
   left: -100vw;
 }
 
-#MAIN_TIKTOK_HOLDER {
-  position: relative;
-  grid-area: MAIN-AREA;
-  display: grid;
-  width: 100%;
-  grid-column-gap: 40px;
-  grid-row-gap: 20px;
-  grid-template-columns: auto auto 1fr;
-  grid-template-rows: 40px auto 0px;
-  grid-template-areas:
-    ". . ."
-    "TIKTOK ICON ."
-    ". . .";
-  margin-top: -700px;
-}
+
 
 #ICON_HOLDER {
   position: relative;
@@ -461,56 +447,6 @@
   left: 100vw;
 }
 
-#ICON_TIKTOK {
-  background-color: rgb(23 23 23);
-  position: relative;
-  grid-area: TIKTOK;
-  display: grid;
-  height: 120px;
-  top: 430px;
-  left: 33px;
-  grid-template-columns: 30px 1fr 30px;
-  grid-template-rows: 30px auto 30px;
-  grid-template-areas:
-    " . . . "
-    " . TIKTOK . "
-    " . . . ";
-}
-
-#TIKTOK_FONT {
-  display: grid;
-  grid-area: TIKTOK;
-  align-items: center;
-  justify-content: center;
-  color: rgb(228 228 231);
-}
-
-#TIKTOK_HOLDER {
-  position: relative;
-  grid-area: TIKTOK;
-  display: grid;
-  width: 300px;
-  min-width: 100%;
-  height: 600px;
-  grid-template-columns: 0px 1fr 0px;
-  grid-template-rows: 0px auto 0px;
-  grid-template-areas:
-    ". . ."
-    ". TIKTOK ."
-    ". . .";
-  left: 100vw;
-}
-
-#TIKTOK {
-  position: relative;
-  grid-area: TIKTOK;
-  width: 100%;
-  height: 100%;
-  background: #efefef;
-  top: 460px;
-  left: 33px;
-  overflow: hidden;
-}
 
 .CENTER {
   grid-area: CENTER;
@@ -575,7 +511,7 @@
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0px auto 100px;
+  grid-template-rows: 0px auto auto;
   grid-template-areas:
     ". . ."
     "AREA_1 AREA_2 AREA_3"
@@ -639,69 +575,7 @@
 
 
 /*SECTION_7////ABOUT///////////////////////////////////////////////////////////////////////////////////*/
-#SHADOW_SECTION_BLACK {
-  position: relative;
-  width: 100%;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  background-color: rgb(23, 23, 23);
-  z-index: -30000;
-}
 
-.main {
-  position: relative;
-  grid-area: MAIN-AREA;
-  display: grid;
-  width: 100%;
-  height: auto;
-  grid-column-gap: 40px;
-  grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto 60px auto 20px auto 20px;
-  grid-template-areas:
-    "INTRO INTRO INTRO INTRO INTRO INTRO ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT"
-    ". . . . . . ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT"
-    "WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT"
-    ". . . . . . . . . . . ."
-    ". . TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL"
-    ". . . . . . . . . . . .";
-  margin-top: -60px;
-}
-
-#INTRO_HOLDER {
-  position: relative;
-  display: grid;
-  grid-area: INTRO;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-  grid-row-gap: 20px;
-  width: 100%;
-  height: auto;
-  grid-template-areas:
-    "TITLE"
-    "SUBTITLE"
-    "IMAGE";
-}
-
-#INTRO {
-  grid-area: TITLE;
-  position: relative;
-  width: 100%;
-}
-
-#INTRO_SUBTITLE {
-  grid-area: SUBTITLE;
-  position: relative;
-  width: 100%;
-}
-
-#IMAGE {
-  overflow: hidden;
-  position: relative;
-  grid-area: IMAGE;
-  width: 100%;
-  height: 700px;
-}
 
 
 
