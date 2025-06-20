@@ -169,17 +169,21 @@ export default class Products extends Component {
                           objectFit: "cover",
                           width: "100%",
                           height: "100%",
-                        }}>
-                          <Image
+                        }}>                         
+                      </div>   
+                      <Image
                             class=" rounded-xl ... "
                             id={styles.PRODUCT_IMAGE}
                             src={revitBlinds}                    
-                            style={{objectFit: "cover"}}
-                            quality={100}
-                            //object-fit="cover"                      
+                            style={{
+                              objectFit: "cover",
+                              position: "absolute",
+                              width: "100%",
+                              height: "100%",}}
+                              quality={100}
+                                             
                             alt=""/>                                                                            
-                          <Image/>
-                      </div>                  
+                      <Image/>               
                 </Link>
                                               
                 <div>

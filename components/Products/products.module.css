@@ -129,12 +129,14 @@
 
 #PRODUCT_OVERLAY_GRID {
   display: grid;
-  grid-template-columns: 30px 1fr 30px;
-  grid-template-rows: 30px 1fr 30px;
+  grid-template-columns: 20px auto 1fr 30px 20px;
+  grid-template-rows: 20px 30px 1fr 30px 20px;
   grid-template-areas:
-      ". . ."
-      ". AREA ."
-      ". . .";
+      ". . . . ."
+      ". TEXT . . ."
+      ". . . . ."
+      ". . . LOGO ."
+      ". . . . .";
 }
 
 #PRODUCT_IMAGE {
