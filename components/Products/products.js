@@ -180,8 +180,7 @@ export default class Products extends Component {
                               position: "absolute",
                               width: "100%",
                               height: "100%",}}
-                              quality={100}
-                                             
+                              quality={100}                                             
                             alt=""/>                                                                            
                       <Image/>               
                 </Link>
@@ -210,13 +209,24 @@ export default class Products extends Component {
 
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_2" }}>               
                 <Link href="/sales">
+                  <div                  
+                    id={styles.PRODUCT_OVERLAY_GRID}
+                    style={{
+                      position: "absolute",
+                      objectFit: "cover",
+                      width: "100%",
+                      height: "100%",}}>                         
+                  </div> 
                   <Image
                       class=" rounded-xl ... drop-shadow-xl ... "
                       id={styles.PRODUCT_IMAGE}
                       src={drawingSheets}                    
-                      style={{objectFit: "cover"}}
-                      quality={100}
-                      //object-fit="cover"                      
+                      style={{
+                        objectFit: "cover",
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",}}
+                      quality={100}                    
                       alt=""/>                                                                            
                   <Image/>
                 </Link>
@@ -244,13 +254,24 @@ export default class Products extends Component {
 
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_3" }}>
                 <Link href="/sales">
+                  <div                  
+                    id={styles.PRODUCT_OVERLAY_GRID}
+                    style={{
+                      position: "absolute",
+                      objectFit: "cover",
+                      width: "100%",
+                      height: "100%",}}>                         
+                  </div> 
                   <Image
                       class="rounded-2xl ..."
                       id={styles.PRODUCT_IMAGE}
                       src={volumesByRoom}                    
-                      style={{objectFit: "cover"}}
-                      quality={100}
-                      //object-fit="cover"                      
+                      style={{
+                        objectFit: "cover",
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",}}
+                      quality={100}                  
                       alt=""/>                                                                            
                   <Image/>
                 </Link>
