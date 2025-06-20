@@ -129,8 +129,8 @@
 
 #PRODUCT_OVERLAY_GRID {
   display: grid;
-  grid-template-columns: 20px 40px 80px 1fr 80px 40px 20px;
-  grid-template-rows: 20px 40px 80px 1fr 80px 40px 20px;
+  grid-template-columns: 20px 35px 80px 1fr 80px 35px 20px;
+  grid-template-rows: 20px 35px 80px 1fr 80px 35px 20px;
   grid-template-areas:
       ". . . . . . ."
       ". TEXT TEXT . . . ."
