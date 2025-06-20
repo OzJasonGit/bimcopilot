@@ -196,8 +196,7 @@ export default class Products extends Component {
                           objectFit: "cover",
                           width: "100%",
                           height: "100%",
-                          zIndex: "100",
-                        }}> 
+                          zIndex: "100",}}> 
                           <div                 
                             style={{
                               gridArea:"LOGO",
