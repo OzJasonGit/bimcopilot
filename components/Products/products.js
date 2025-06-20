@@ -250,7 +250,14 @@ export default class Products extends Component {
 
 
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_2" }}>               
-                <Link href="/sales">
+                <Link href="/sales"
+                      class=" rounded-xl ... "
+                      style={{
+                        position: "relative",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}>
                   <div                  
                     id={styles.PRODUCT_OVERLAY_GRID}
                     style={{
@@ -312,7 +319,14 @@ export default class Products extends Component {
 
 
               <div id={styles.PRODUCT} style={{ gridArea: "AREA_3" }}>
-                <Link href="/sales">
+                <Link href="/sales"
+                      class=" rounded-xl ... "
+                      style={{
+                        position: "relative",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}>
                   <div                  
                     id={styles.PRODUCT_OVERLAY_GRID}
                     style={{
