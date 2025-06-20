@@ -440,12 +440,11 @@ export default class Products extends Component {
 
 
               <div id={styles.TEXT_HOLDER} style={{ gridArea: "TITLE" }}>
-                <h2
-                    id={styles.TEXT_OUTLINE_2}>
-                 <a class=" text-yellow-200 ... font-avant_garde_bold ...">
-                    <Link href="/products">Shop</Link>
-                 </a>
-                </h2>
+
+                <br/> 
+                <div id={styles.SHOP_GRID}>                
+                </div>
+                <br/>                
                 <h3 id={styles._H3}
                     class=" text-neutral-700 ... font-avant_garde_bold ... ">
                   Click Here! <a></a>
