@@ -170,6 +170,7 @@ export default class Products extends Component {
                           objectFit: "cover",
                           width: "100%",
                           height: "100%",
+                          zIndex: "100",
                         }}>                         
                       </div>   
                       <Image
@@ -215,7 +216,8 @@ export default class Products extends Component {
                       position: "absolute",
                       objectFit: "cover",
                       width: "100%",
-                      height: "100%",}}>                         
+                      height: "100%",
+                      zIndex: "100",}}>                         
                   </div> 
                   <Image
                       class=" rounded-xl ... drop-shadow-xl ... "
@@ -260,7 +262,8 @@ export default class Products extends Component {
                       position: "absolute",
                       objectFit: "cover",
                       width: "100%",
-                      height: "100%",}}>                         
+                      height: "100%",
+                      zIndex: "100",}}>                         
                   </div> 
                   <Image
                       class="rounded-2xl ..."
