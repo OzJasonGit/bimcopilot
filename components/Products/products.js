@@ -6,7 +6,7 @@ import revitBlinds from './revit_blinds.webp';
 import drawingSheets from './drawing_sheets.webp';
 import volumesByRoom from './volumes_by_room.webp';
 import logo from './bimcopilot_logo_black.svg';
-import text_logo from './Bim-copilot-logo_Horizontal_4.png';
+import text_logo from './bimcopilot_logo_text_horizontal_black.svg';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faSignOutAlt, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
