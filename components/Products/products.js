@@ -450,12 +450,10 @@ export default class Products extends Component {
                 <br/> 
                 <br/> 
                 <div id={styles.SHOP_GRID}> 
-                  <div  className="content-center ... align-middle ..."
-                        style={{ gridArea: "ICON",
-                                 height: "100px",}}>
-                                 <FontAwesomeIcon icon={faCartShopping} 
-                                                  size="3xs" className="text-stone-700"
-                                                  style={{ fontSize: "90px"}} />
+                  <div  className="flex flex-wrap items-center gap-2 md:flex-row" style={{ gridArea: "ICON",}}>
+                    <FontAwesomeIcon icon={faCartShopping} 
+                                    size="3xs" className="text-stone-700"
+                                    style={{ fontSize: "40px"}} />
                   </div>  
 
                   <div className="flex flex-wrap items-center gap-2 md:flex-row" style={{ gridArea: "BUTTON",}}>
@@ -472,7 +470,8 @@ export default class Products extends Component {
                         class=" text-neutral-700 ... font-avant_garde_bold ... ">
                       Custom designed resources to help streamline, automate and enhance your workflow in architecture, design and manufacturing. 
                     </h3>
-                  </div>               
+                  </div>   
+
                 </div>
                 <br/> 
                 <br/>    
