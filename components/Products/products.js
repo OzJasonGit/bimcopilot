@@ -457,7 +457,7 @@ export default class Products extends Component {
                   </div>  
 
                   <div className="flex flex-wrap items-center gap-2 md:flex-row" style={{ gridArea: "BUTTON",}}>
-                    <Button>Button</Button>
+                    <Button>Shop</Button>
                   </div> 
 
                   <div style={{ gridArea: "TEXT",}}>
