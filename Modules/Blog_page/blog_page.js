@@ -299,17 +299,17 @@ const Blog_page = (stories) => {
                                                                     height: "700px",
                                                                      }}> 
 
-                                                                     <div id={styles.SUBSCRIBE_HOLDER}                                                                        
+                                                                     {/*<div id={styles.SUBSCRIBE_HOLDER}                                                                        
                                                                         style={{
                                                                             position: "relative",                                                  
                                                                             width: "100%",
                                                                             height: "auto",
                                                                             gridArea: "SUBSCRIBE"
                                                                             }}>
-                                                                     </div>   
+                                                                     </div>   */}
 
 
-                                                                     <div id={styles.AFFILIATE}                                     
+                                                                     {/*<div id={styles.AFFILIATE}                                     
                                                                             style={{
                                                                             position: "relative",                                                  
                                                                             width: "100%",
@@ -337,7 +337,7 @@ const Blog_page = (stories) => {
                                                                                                 objectFit: "cover",
                                                                                         }}/>
                                                                                 </div>
-                                                                     </div>                                                 
+                                                                     </div>*/}                                                 
                                                             </div>
                                                 </div>                                          
                                         </div>
