@@ -309,7 +309,7 @@ const Blog_page = (stories) => {
                                                                      </div>   */}
 
 
-                                                                     {/*<div id={styles.AFFILIATE}                                     
+                                                                     <div id={styles.AFFILIATE}                                     
                                                                             style={{
                                                                             position: "relative",                                                  
                                                                             width: "100%",
@@ -337,7 +337,7 @@ const Blog_page = (stories) => {
                                                                                                 objectFit: "cover",
                                                                                         }}/>
                                                                                 </div>
-                                                                     </div>*/}                                                 
+                                                                     </div>                                                 
                                                             </div>
                                                 </div>                                          
                                         </div>
