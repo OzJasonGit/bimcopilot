@@ -297,14 +297,24 @@ const Blog_page = (stories) => {
                                                                     top: "200px",
                                                                     width: "100%",
                                                                     height: "700px",
-                                                                     }}>      
-                                                                     <div
-                                                                        id={styles.AFFILIATE}
+                                                                     }}> 
+
+                                                                     <div id={styles.SUBSCRIBE_HOLDER}                                                                        
                                                                         style={{
                                                                             position: "relative",                                                  
                                                                             width: "100%",
+                                                                            height: "auto",
+                                                                            gridArea: "SUBSCRIBE"
+                                                                            }}>
+                                                                     </div>   
+
+
+                                                                     <div id={styles.AFFILIATE}                                     
+                                                                            style={{
+                                                                            position: "relative",                                                  
+                                                                            width: "100%",
                                                                             height: "100%",
-                                                                            gridArea: "ADVERT"
+                                                                            gridArea: "AFILLIATE"
                                                                             }}>
                                                                                 <div class={styles.PARAGRAPH_10}
                                                                                       style={{
