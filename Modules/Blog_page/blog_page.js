@@ -313,7 +313,7 @@ const Blog_page = (stories) => {
                                                                             style={{
                                                                             position: "relative",                                                  
                                                                             width: "100%",
-                                                                            height: "100%",
+                                                                            height: "550px",
                                                                             gridArea: "AFFILIATE"
                                                                             }}>
                                                                                 <div class={styles.PARAGRAPH_10}
