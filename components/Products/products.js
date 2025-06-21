@@ -8,6 +8,8 @@ import volumesByRoom from './volumes_by_room.webp';
 import logo from './Tesseract_Simple_Black_2.png';
 import text_logo from './Bim-copilot-logo_Horizontal_4.png';
 
+import { Button } from "@/components/ui/button"
+
 
 export default class Products extends Component {
 
@@ -442,7 +444,12 @@ export default class Products extends Component {
               <div id={styles.TEXT_HOLDER} style={{ gridArea: "TITLE" }}>
 
                 <br/> 
-                <div id={styles.SHOP_GRID}>                
+                <div id={styles.SHOP_GRID}> 
+                  <div  style={{ gridArea: "ICON",
+                                 height: "100px",}}>
+                  </div>
+                  <div>
+                  </div>               
                 </div>
                 <br/>                
                 <h3 id={styles._H3}

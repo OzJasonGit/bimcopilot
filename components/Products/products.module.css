@@ -169,8 +169,13 @@
 
 #SHOP_GRID {
   width: 500px;
-    height: 150px;
-
+  height: auto;
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 150px 100px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+      "ICON BUTTON . ";
 }
 
 /*SECTION////PRODUCTS//////////////////////////////////////////////////////////////////////////////////////*/
