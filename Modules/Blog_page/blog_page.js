@@ -324,7 +324,7 @@ const Blog_page = (stories) => {
                                                                                         Automation
                                                                                     </h1>
                                                                                 </div>
-
+                                                                                <br/>
                                                                                 <div id={styles.SUB_TAG}
                                                                                      style={{
                                                                                         position: "relative",                                                  
@@ -362,10 +362,9 @@ const Blog_page = (stories) => {
                                                                                         </h1>
                                                                                     </h3>
                                                                                 </div>
-
+                                                                                <br/>
                                                                                 <Subform/>
                                                                      </div>   
-
 
                                                                      <div id={styles.AFFILIATE}                                     
                                                                             style={{
@@ -395,7 +394,37 @@ const Blog_page = (stories) => {
                                                                                                 objectFit: "cover",
                                                                                         }}/>
                                                                                 </div>
-                                                                     </div>                                                 
+                                                                     </div>     
+
+                                                                     <div id={styles.PFBD}                                     
+                                                                            style={{
+                                                                            position: "relative",                                                  
+                                                                            width: "100%",
+                                                                            height: "300px",
+                                                                            gridArea: "PFBD"
+                                                                            }}>
+                                                                            <div class={styles.PARAGRAPH_10}
+                                                                                    style={{
+                                                                                    position: "relative",                                                  
+                                                                                    width: "100%",
+                                                                                    height: "100%",
+                                                                                    display: "block"
+                                                                                    }}>
+                                                                                    <Image
+                                                                                        className=" rounded-md ... justify-center ..."
+                                                                                        alt="Story Image"
+                                                                                        key={story._id}
+                                                                                        width={500}
+                                                                                        height={500}
+                                                                                        src={story.image}
+                                                                                        style={{
+                                                                                            position: "absolute",
+                                                                                            width: "100%",
+                                                                                            height: "100%",
+                                                                                            objectFit: "cover",
+                                                                                    }}/>
+                                                                            </div>
+                                                                     </div>                                             
                                                             </div>
                                                 </div>                                          
                                         </div>
