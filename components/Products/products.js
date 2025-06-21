@@ -5,7 +5,7 @@ import Link from "next/link";
 import revitBlinds from './revit_blinds.webp';
 import drawingSheets from './drawing_sheets.webp';
 import volumesByRoom from './volumes_by_room.webp';
-import logo from './Tesseract_Simple_Black_2.png';
+import logo from './bimcopilot_logo_black.svg';
 import text_logo from './Bim-copilot-logo_Horizontal_4.png';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
