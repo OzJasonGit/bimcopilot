@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faSignOutAlt, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
 
 import { Button } from "@/components/ui/button"
+import { fontSize, fontStyle } from '@mui/system';
 
 
 export default class Products extends Component {
@@ -447,16 +448,19 @@ export default class Products extends Component {
               <div id={styles.TEXT_HOLDER} style={{ gridArea: "TITLE" }}>
 
                 <br/> 
+                <br/> 
                 <div id={styles.SHOP_GRID}> 
                   <div  className="content-center ... align-middle ..."
                         style={{ gridArea: "ICON",
                                  height: "100px",}}>
-                                 <FontAwesomeIcon icon={faCartShopping} size="3xs" className="text-stone-700" />
-                  </div>
-                  <div>
-                  </div>               
+                                 <FontAwesomeIcon icon={faCartShopping} 
+                                                  size="3xs" className="text-stone-700"
+                                                  style={{ fontSize: "90px"}} />
+                  </div>             
                 </div>
-                <br/>                
+                <br/> 
+                <br/>    
+                            
                 <h3 id={styles._H3}
                     class=" text-neutral-700 ... font-avant_garde_bold ... ">
                   Click Here! <a></a>
