@@ -8,6 +8,9 @@ import volumesByRoom from './volumes_by_room.webp';
 import logo from './Tesseract_Simple_Black_2.png';
 import text_logo from './Bim-copilot-logo_Horizontal_4.png';
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping, faSignOutAlt, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
+
 import { Button } from "@/components/ui/button"
 
 
@@ -445,8 +448,10 @@ export default class Products extends Component {
 
                 <br/> 
                 <div id={styles.SHOP_GRID}> 
-                  <div  style={{ gridArea: "ICON",
+                  <div  className="content-center ... align-middle ..."
+                        style={{ gridArea: "ICON",
                                  height: "100px",}}>
+                                 <FontAwesomeIcon icon={faCartShopping} size="3xs" className="text-stone-700" />
                   </div>
                   <div>
                   </div>               
