@@ -314,7 +314,7 @@ const Blog_page = (stories) => {
                                                                             position: "relative",                                                  
                                                                             width: "100%",
                                                                             height: "100%",
-                                                                            gridArea: "AFILLIATE"
+                                                                            gridArea: "AFFILIATE"
                                                                             }}>
                                                                                 <div class={styles.PARAGRAPH_10}
                                                                                       style={{
