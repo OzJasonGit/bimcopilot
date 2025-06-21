@@ -460,16 +460,19 @@ export default class Products extends Component {
                 </div>
                 <br/> 
                 <br/>    
-                            
-                <h3 id={styles._H3}
-                    class=" text-neutral-700 ... font-avant_garde_bold ... ">
-                  Click Here! <a></a>
-                </h3>
-                <br/>                
-                <h3 id={styles._H3}
-                    class=" text-neutral-700 ... font-avant_garde_bold ... ">
-                  Custom designed resources to help streamline, automate and enhance your workflow in architecture, design and manufacturing. 
-                </h3>
+
+                <div style={{ gridArea: "TEXT",}}>
+                  <h3 id={styles._H3}
+                      class=" text-neutral-700 ... font-avant_garde_bold ... ">
+                    Click Here! <a></a>
+                  </h3>
+                  <br/>                
+                  <h3 id={styles._H3}
+                      class=" text-neutral-700 ... font-avant_garde_bold ... ">
+                    Custom designed resources to help streamline, automate and enhance your workflow in architecture, design and manufacturing. 
+                  </h3>
+                </div>        
+                
               </div>
           
             </div>
