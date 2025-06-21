@@ -16,6 +16,8 @@ import parse from "html-react-parser";
 import SkeletonLoader from "@/components/Loader/loader";
 import { display } from '@mui/system';
 
+import Subform from "./Client/subform";
+
 const Blog_page = (stories) => {
     const params = useParams();
     const slug = params?.slug;
@@ -296,17 +298,73 @@ const Blog_page = (stories) => {
                                                                     position: "sticky",
                                                                     top: "200px",
                                                                     width: "100%",
-                                                                    height: "700px",
+                                                                    height: "auto",
                                                                      }}> 
 
-                                                                     {/*<div id={styles.SUBSCRIBE_HOLDER}                                                                        
+                                                                     <div id={styles.SUBSCRIBE_HOLDER}                                                                        
                                                                         style={{
                                                                             position: "relative",                                                  
                                                                             width: "100%",
                                                                             height: "auto",
                                                                             gridArea: "SUBSCRIBE"
                                                                             }}>
-                                                                     </div>   */}
+
+                                                                                <div id={styles.MAIN_TAG}
+                                                                                    style={{
+                                                                                        position: "relative",                                                  
+                                                                                        width: "100%",
+                                                                                        height: "auto",
+                                                                                        gridArea: "TAG_MAIN"
+                                                                                        }}>
+                                                                                    <h1
+                                                                                        id={styles._H1}
+                                                                                        
+                                                                                        class=" text-stone-200 ... font-avant_garde_bold">
+                                                                                        Sustainable, Richer Architects through AI, Analytics and
+                                                                                        Automation
+                                                                                    </h1>
+                                                                                </div>
+
+                                                                                <div id={styles.SUB_TAG}
+                                                                                     style={{
+                                                                                        position: "relative",                                                  
+                                                                                        width: "100%",
+                                                                                        height: "auto",
+                                                                                        gridArea: "SUB_MAIN"
+                                                                                        }}>
+                                                                                    <h3
+                                                                                        id={styles._H3}
+                                                                                        class="text-left ... text-stone-400 ... font-avant_garde_medium"
+                                                                                    >
+                                                                                        {" "}
+                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">
+                                                                                        The design revolution is here.
+                                                                                        </a>{" "}
+                                                                                        The world is changing and so is{" "}
+                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">
+                                                                                        architecture
+                                                                                        </a>
+                                                                                        . Discover new narratives, build better{" "}
+                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">
+                                                                                        systems
+                                                                                        </a>
+                                                                                        , make more{" "}
+                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">money</a>,
+                                                                                        be more{" "}
+                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">
+                                                                                        sustainable
+                                                                                        </a>
+                                                                                        . <br /> <br />{" "}
+                                                                                        <h1 
+                                                                                        id={styles._H1} 
+                                                                                        class="text-stone-200 ... font-avant_garde_bold">
+                                                                                        Join the Waiting List!
+                                                                                        </h1>
+                                                                                    </h3>
+                                                                                </div>
+
+                                                                                <Subform/>
+                                                                     </div>   
 
 
                                                                      <div id={styles.AFFILIATE}                                     
