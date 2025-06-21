@@ -449,10 +449,11 @@ export default class Products extends Component {
 
                 <br/> 
                 <br/> 
+                <br/> 
                 <div id={styles.SHOP_GRID}> 
                   <div  className="flex flex-wrap items-center gap-2 md:flex-row" style={{ gridArea: "ICON",}}>
                     <FontAwesomeIcon icon={faCartShopping} 
-                                    size="3xs" className="text-stone-700"
+                                    size="3xs" className="text-stone-800"
                                     style={{ fontSize: "40px"}} />
                   </div>  
 
@@ -473,6 +474,7 @@ export default class Products extends Component {
                   </div>   
 
                 </div>
+                <br/> 
                 <br/> 
                 <br/>    
 
