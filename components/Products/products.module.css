@@ -171,7 +171,7 @@
   height: auto;
   display: grid;
   grid-column-gap: 20px;
-  grid-template-columns: 50px 0px 1fr;
+  grid-template-columns: 50px 70px 1fr;
   grid-template-rows: auto;
   grid-template-areas:
       "ICON BUTTON TEXT ";
