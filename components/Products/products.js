@@ -456,22 +456,28 @@ export default class Products extends Component {
                                  <FontAwesomeIcon icon={faCartShopping} 
                                                   size="3xs" className="text-stone-700"
                                                   style={{ fontSize: "90px"}} />
-                  </div>             
+                  </div>  
+
+                  <div className="flex flex-wrap items-center gap-2 md:flex-row" style={{ gridArea: "BUTTON",}}>
+                    <Button>Button</Button>
+                  </div> 
+
+                  <div style={{ gridArea: "TEXT",}}>
+                    <h3 id={styles._H3}
+                        class=" text-neutral-700 ... font-avant_garde_bold ... ">
+                      Click Here! <a></a>
+                    </h3>
+                    <br/>                
+                    <h3 id={styles._H3}
+                        class=" text-neutral-700 ... font-avant_garde_bold ... ">
+                      Custom designed resources to help streamline, automate and enhance your workflow in architecture, design and manufacturing. 
+                    </h3>
+                  </div>               
                 </div>
                 <br/> 
                 <br/>    
 
-                <div style={{ gridArea: "TEXT",}}>
-                  <h3 id={styles._H3}
-                      class=" text-neutral-700 ... font-avant_garde_bold ... ">
-                    Click Here! <a></a>
-                  </h3>
-                  <br/>                
-                  <h3 id={styles._H3}
-                      class=" text-neutral-700 ... font-avant_garde_bold ... ">
-                    Custom designed resources to help streamline, automate and enhance your workflow in architecture, design and manufacturing. 
-                  </h3>
-                </div>        
+                    
                 
               </div>
           
