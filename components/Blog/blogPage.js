@@ -4,7 +4,7 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import logoImage from "./bimcopilot_logo_text_horizontal_white.svg";
+import logoImage from "./bimcopilot_logo_text_vertical_white.svg";
 import parse from "html-react-parser";
 
 const Blogpage = ({ stories, topStories }) => {
