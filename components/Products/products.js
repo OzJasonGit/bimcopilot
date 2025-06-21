@@ -466,7 +466,12 @@ export default class Products extends Component {
                   </div>  
 
                   <div className="flex flex-wrap items-center gap-2 md:flex-row" style={{ gridArea: "BUTTON",}}>
-                    <Button>Shop</Button>
+                    <Button>
+                      <Link href="/products"
+                            style={{ height: "100%",
+                                     width: "100%"}}>Shop
+                      </Link>
+                    </Button>
                   </div> 
 
                   <div style={{ gridArea: "TEXT",}}>
