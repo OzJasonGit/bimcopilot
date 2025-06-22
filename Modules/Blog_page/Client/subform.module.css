@@ -51,7 +51,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 62.5px 80px;
+    grid-template-rows: 62.5px 10px;
     column-gap: 15px;
     grid-template-areas:
         "INPUT"
