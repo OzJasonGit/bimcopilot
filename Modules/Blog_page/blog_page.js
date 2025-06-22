@@ -400,7 +400,7 @@ const Blog_page = (stories) => {
                                                                             style={{
                                                                             position: "relative",                                                  
                                                                             width: "100%",
-                                                                            height: "300px",
+                                                                            height: "400px",
                                                                             gridArea: "PFBD"
                                                                             }}>
                                                                             <div class={styles.PARAGRAPH_10}
