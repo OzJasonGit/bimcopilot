@@ -66,9 +66,14 @@ const Subform = () => {
             placeholder="Enter your email"
           />
         </Form.Item>
+        <br/>
 
         <Form.Item id={styles.FORM_BUTTON}>
           <Button variant="outline"
+                  style={{
+                    width: "100px",
+                    height: "60px",
+                     }}
                   
                   type="primary"
                   htmlType="submit"
