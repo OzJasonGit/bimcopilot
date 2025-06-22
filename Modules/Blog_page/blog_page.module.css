@@ -1067,7 +1067,7 @@
         grid-template-rows: 100px auto 20px;
         grid-template-columns: 20px 1fr 20px;
         grid-template-areas: ". . ."
-            "BANNER-1 MAIN-AREA BANNER-2"
+            "BANNER-1 MAIN_AREA BANNER-2"
             "VIDEO_B VIDEO_B VIDEO_B";
     }
 
@@ -1161,7 +1161,7 @@
         grid-template-rows: 100px auto 20;
         grid-template-columns: 0px 1fr 0px;
         grid-template-areas: ". . ."
-            "BANNER-1 MAIN-AREA BANNER-2"
+            "BANNER-1 MAIN_AREA BANNER-2"
             ". . .";
     }
 
