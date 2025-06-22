@@ -1330,7 +1330,27 @@
     }
 
     /*SECTION_4////TITLE//////////////////////////////////////////////////////////////////////////////////*/
-
+        #AFFILIATE_HOLDER {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 30px;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                "SUBSCRIBE"
+                "AFFILIATE"
+                "PFBD";
+        }
+    
+        #SUBSRIBE_HOLDER {
+            display: grid;
+            grid-row-gap: 10px;
+            grid-column-gap: 20px;
+            grid-template-columns: 1fr 180px;
+            grid-template-rows: auto auto 70px;
+            grid-template-areas:
+                "TAG_MAIN TAG_MAIN"
+                "SUB_MAIN SUB_MAIN"
+                "FORM FORM";   }
 
 
     /*SECTION////PRODUCTS//////////////////////////////////////////////////////////////////////////////////////*/
