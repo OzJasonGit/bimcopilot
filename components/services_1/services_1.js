@@ -3,7 +3,7 @@
 import styles from './services_1.module.css';
 
 import Image from "next/image";
-import bimcopilot from './Bim-copilot-logo_Horizontal_4.png';
+import bimcopilot from './bimcopilot_logo_text_vertical_white_(2).svg';
 
 import React, { Component } from 'react';
 
