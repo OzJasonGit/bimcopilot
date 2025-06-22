@@ -41,14 +41,13 @@ const Subform = () => {
 
   return (
     <div id={styles.SUBSCRIBE}>
-      <Form
+      <Form id={styles.FORM}
         form={form}
-        onFinish={handleSubmit}
-        id={styles.FORM}
+        onFinish={handleSubmit}        
         style={{ marginBottom: "0", height: "100%", width: "100%" }}
       >
-        <Form.Item
-          id={styles.FORM_ITEM}
+        <Form.Item id={styles.FORM_ITEM}
+          
           name="email"
           rules={[
             {
@@ -68,9 +67,9 @@ const Subform = () => {
           />
         </Form.Item>
 
-        <Form.Item>
+        <Form.Item id={styles.FORM_BUTTON}>
           <Button variant="outline"
-                  id={styles.FORM_BUTTON}
+                  
                   type="primary"
                   htmlType="submit"
                   loading={isLoading}
