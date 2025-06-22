@@ -115,14 +115,15 @@ const Blog_page = (stories) => {
                                                         position: "sticky",
                                                         top: "200px",
                                                         width: "100%",
-                                                        height: "500px",                                        
+                                                        height: "auto",                                        
                                                         }}>
                                                             <div id={styles.NAVIGATION}
                                                                  style={{
                                                                     position: "relative",                                   
                                                                     width: "100%",
                                                                     height: "100%",   
-                                                                    maxHeight: "0"                                      
+                                                                    maxHeight: "0",  
+                                                                    paddingRight: "50px",                                    
                                                                     }}>  
                                                                     <div className={styles.PARAGRAPH_1}
                                                                             style={{
@@ -1140,44 +1141,44 @@ const Blog_page = (stories) => {
             </section>
  
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_9}>
-        <div class={styles.grid_0_blog}>
+                <div class={styles.grid_0_blog}>
 
-            <div id={styles.TEXT_HOLDER}
-                style={{
-                        position: "relative",
-                        display: "grid",
-                        width: "100%",
-                        height: "auto",
-                        gridArea: "MAIN_AREA",}}>
+                    <div id={styles.TEXT_HOLDER}
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
 
-                <div
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TITLE",}}>
-                    <h3
-                        className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
-                        id="_H3_2">
-                        {parse(story.body9_title || "")}                        
-                    </h3>
-                    <br/> 
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
+                            <h3
+                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                id="_H3_2">
+                                {parse(story.body9_title || "")}                        
+                            </h3>
+                            <br/> 
+                        </div>
+                    
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <p  
+                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                {parse(story.body9 || "")}                    
+                            </p>                  
+                        </div>
+
+                    </div>
+
                 </div>
-            
-                <div  
-                    style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TEXT",}}> 
-
-                    <p  
-                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
-                        {parse(story.body9 || "")}                    
-                    </p>                  
-                </div>
-
-            </div>
-
-        </div>
             </section>
 
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}>
