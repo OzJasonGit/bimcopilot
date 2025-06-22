@@ -52,7 +52,7 @@ export default class Sides extends Component {
                                                 </Link>
                                             </div>
 
-                                            <div id={styles.DESIGN_LAB_ICON} class={styles.icon}>
+                                            <div id={styles.DESIGN_LAB_ICON} class={styles.icon_bimcopilot}>
                                                 <Link id={styles.PFBD_LINK} href="/" target="_blank">
                                                     <div id={styles._PFBD_}>
                                                         <Image id={styles.CENTER}

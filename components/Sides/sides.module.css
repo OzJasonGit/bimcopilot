@@ -418,6 +418,20 @@
          ". . .";
  }
 
+
+ .icon_bimcopilot {
+     display: grid;
+     position: relative;
+     width: 100%;
+     height: 100%;
+     grid-row-gap: 0px;
+     grid-template-rows: 0px 1fr 0px;
+     grid-template-columns: 0px 1fr 0px;
+     grid-template-areas: ". . ."
+         ". ICON ."
+         ". . .";
+ }
+
  #PFBD_ICON {
      display: grid;
      grid-area: PFBD;
