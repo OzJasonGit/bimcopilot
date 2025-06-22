@@ -13,6 +13,8 @@ import 'antd/dist/reset.css';
 import Image from "next/image";
 import pfbdImage from './pfbd_3.png';
 import dlpfbdImage from './_dlpfbd_.svg';
+import bimcopilotLogo from './bimcopilot_logo.svg';
+
 
 
 export default class Sides extends Component {
@@ -56,7 +58,7 @@ export default class Sides extends Component {
                                                         <Image id={styles.CENTER}
                                                             loading='lazy'
                                                             alt=''
-                                                            src={dlpfbdImage}
+                                                            src={bimcopilotLogo}
                                                             style={{ objectFit: "contain" }}
                                                             quality={100}
                                                         />
