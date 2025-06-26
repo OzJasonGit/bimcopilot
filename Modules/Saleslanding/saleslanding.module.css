@@ -117,8 +117,8 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto auto auto auto auto;
   grid-template-areas:
-    "C1"
     "SLUG"
+    "C1"
     "C2"
     "C3"
     "C4"

@@ -188,19 +188,18 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     position: "relative",           
                                     gridArea: "SLUG",
                                 }}>
-                        <h3 
-                            class=" text-md ... text-stone-700 ... font-geist_regular">
+                        <h3 class=" text-md ... text-stone-700 ... font-geist_regular">              
                             This is a test title slug also used for SEO 
                         </h3>
                     </div>
 
                     <div  
                           style={{
-                                position: "relative",           
-                                gridArea: "C1",
-                            }}>
+                                    position: "relative",           
+                                    gridArea: "C1",
+                                }}>
                         <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
-                            $12.99
+                            $12.99 <a></a>
                         </h3>
                         <br/>
                         <h3 class="text-md ... text-stone-700 ... font-geist_regular">
