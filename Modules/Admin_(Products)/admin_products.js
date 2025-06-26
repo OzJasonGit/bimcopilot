@@ -26,149 +26,349 @@ import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
 
-  post_number: z.string().min(1, {
+
+  //Core Metadata 
+  product_id: z.string().min(1, {
     message: "Title must be at least 1 characters.",
   }),
+
   title: z.string().min(3, {
     message: "Title must be at least 3 characters.",
   }),
+
   slug: z.string().min(3, {
     message: "slug must be at least 3 characters.",
   }),
-  author: z.string().min(2, {
+
+  description: z.string().min(2, {
     message: "Author name must be at least 2 characters.",
   }),
-  subtitle: z.string().optional(),
+
+  category: z.string().optional(),
   image: z.string().url({
     message: "Image must be a valid URL.",
   }),
-  image2: z.string().url({
+
+  tags: z.string().url({
     message: "Image must be a valid URL.",
   }),
-  avatar: z.string().url({
+
+  status: z.string().url({
     message: "Avatar must be a valid URL.",
   }),
-  introduction: z.string().min(3, {
+
+  visibility: z.string().min(3, {
     message: "introduction must be at least 3 chharacters",
   }),
 
-  body1_title: z.string().min(3, {
-    message: "body must be at least 3 characters.",
-  }),
-  body1: z.string().min(3, {
+  created: z.string().min(3, {
     message: "body must be at least 3 characters.",
   }),
 
-  body2_title: z.string().min(3, {
-    message: "body must be at least 3 characters.",
-  }),
-  body2: z.string().min(3, {
+  updated: z.string().min(3, {
     message: "body must be at least 3 characters.",
   }),
 
-  body3_title: z.string().min(3, {
+
+
+
+
+
+
+
+
+  //Pricing and Sales Info
+  price: z.string().min(3, {
     message: "body must be at least 3 characters.",
-  }).optional(),
-  body3: z.string().min(3, {
+  }),
+
+  currency: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }),
+
+  discount: z.string().min(3, {
     message: "body must be at least 3 characters.",
   }).optional(),
 
-  body4_title: z.string().min(3, {
+  is_free: z.string().min(3, {
     message: "body must be at least 3 characters.",
-  }).optional(),
-  body4: z.string().min(3, {
+  }).optioisnal(),
+
+  license_type: z.string().min(3, {
     message: "body must be at least 3 characters.",
   }).optional(),
 
-  body5_title: z.string().min(3, {
-    message: "body must be at least 3 characters.",
-  }).optional(),
-  body5: z.string().min(3, {
-    message: "body must be at least 3 characters.",
-  }).optional(),
-
-  body6_title: z.string().min(3, {
-    message: "body must be at least 3 characters.",
-  }).optional(),
-  body6: z.string().min(3, {
-    message: "body must be at least 3 characters.",
-  }).optional(),
-
-  body7_title: z.string().min(3, {
-    message: "body must be at least 3 characters.",
-  }).optional(),
-  body7: z.string().min(3, {
+  license_terms_url: z.string().min(3, {
     message: "body must be at least 3 characters.",
   }).optional(),
 
 
-  body8_title: z.string().min(3, {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //Download & File Info
+  file_url: z.string().min(3, {
     message: "body must be at least 3 characters.",
   }).optional(),
-  body8: z.string().min(3, {
+
+  file_size_mb: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+
+  download_count: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+
+  max_downloads_per_user: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+
+  version: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+
+  changelog: [
+    {
+
+    },
+    {
+
+    }
+  ],
+  
+  
+  
+  
+  
+  //Media
+  thumbnail_url: z.string().min(3, {
     message: "body must be at least 3 characters.",
   }).optional(),
 
 
-  body9_title: z.string().min(3, {
-    message: "body must be at least 3 characters.",
-  }).optional(),
-  body9: z.string().min(3, {
+  gallery_images: z.string().min(3, 
+    [
+      "https://cdn.mysite.com/img/toolkit-1.png",
+      "https://cdn.mysite.com/img/toolkit-2.png"
+    ]
+  ).optional(),
+
+
+  video_demo_url: z.string().min(3, {
     message: "body must be at least 3 characters.",
   }).optional(),
 
 
-  body10_title: z.string().min(3, {
-    message: "body must be at least 3 characters.",
-  }).optional(),
-  body10: z.string().min(3, {
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //AI/Tech Metadata (Optional, for AI-based products)
+  tech_stack: z.string().min(3, {
     message: "body must be at least 3 characters.",
   }).optional(),
 
-  video: z.string().url({
+  ai_model: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+
+  integration: {
+    platform: ["Python", "Revit API", "OpenAI API"],
+    instructions_url: z.string().min(3, {
+      message: "body must be at least 3 characters.",
+    }).optional(),
+  },
+
+  dependencies: z.string().min(3, {
+    dependencies: ["Python", "Revit API", "OpenAI API"],
+  }).optional(),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //Marketing + SEO
+  seo_title: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+
+  seo_description: z.string().url({
     message: "Video must be a valid URL.",
   }).optional(),
-  conclusion: z.string().optional(),
+
+  keywords: z.string().url({
+    message: "Video must be a valid URL.",
+  }).optional(),
+
+  featured: true,
+
+  bestseller: false,
+
+ 
+
+
+
+
+
+
+
+
+
+ //Author + Support  
+ author_id: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+
+ author_name: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+
+ support_email: z.string().min(3, {
+  message: "body must be at least 3 characters.",
+  }).optional(),
+
+ support_page_url: z.string().min(3, {
+    message: "body must be at least 3 characters.",
+  }).optional(),
+
+
+
+
+
+
+
+
+
+
+//Purchase/Access Control (optional per user if extended) 
+access_roles: z.string().min(3, {
+  access_roles: ["buyer", "subscriber", "member"],
+}).optional(),
+
+requires_login: z.string().min(3, {
+  message: "body must be at least 3 characters.",
+}).optional(),
+
+requires_subscription: z.string().min(3, {
+message: "body must be at least 3 characters.",
+}).optional(),
+
+
+
+
 });
+
+
+
+
+
+
+
+
+
+
+
 
 export function Admin() {
   const form = useForm({
     resolver: zodResolver(formSchema),
       defaultValues: {
-      post_number: "",
+
+
+      //Core Metadata   
+      product_id: "",
       title: "",
-      author: "",
-      subtitle: "",
-      image: "",
-      image2: "",
-      avatar: "",
       slug: "",
-      body1_title: "",
-      body1: "",
-      body2_title: "",
-      body2: "",
-      body3_title: "",
-      body3: "",
-      body4_title: "",
-      body4: "",
-      body5_title: "",
-      body5: "",
-      body6_title: "",
-      body6: "",
-      body7_title: "",
-      body7: "",
-      body8_title: "",
-      body8: "",
-      body9_title: "",
-      body9: "",
+      description: "",
+      category: "",
+      tags: "",
+      status: "",
+      visibility: "",
+      created_at: "",
+      updated_at: "",
+
+
+      //Pricing and Sales Info
+      price: "",
+      currency: "",
+      discount: "",
+      percentage: "",
+      active: "",
+      expires_at: "",
+      is_free: "",
+      license_type: "",
+      license_terms_url: "",
+
+
+      //Download & File Info
+      file_url: "",
+      file_size_mb: "",
+      file_format: "",
+      download_count: "",
+      max_downloads_per_user: "",
+      version: "",
+      changelog: "",
       body10_title: "",
       body10: "",
       introduction: "",
       video: "",
       conclusion: "",
 
+
+      //Download & File Info
+      thumbnail_url: "",
+      gallery_images: "",
+      video_demo_url: "",    
+
     },
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const [story, setStory] = useState({
       post_number: "",
       title: "",
@@ -238,6 +438,55 @@ export function Admin() {
       setLoading(false); // Hide loading spinner
     }
   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   return (

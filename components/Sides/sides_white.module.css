@@ -428,7 +428,9 @@
      grid-area: DESIGN-LAB;
      display: grid;
      align-items: center;
-     justify-content: center;
+     justify-content: center;  
+     position: relative;
+     left: -7px;
  }
 
  #OZ_JASON_ICON {
