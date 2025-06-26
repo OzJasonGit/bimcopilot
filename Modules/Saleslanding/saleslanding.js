@@ -212,8 +212,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             class="text-md ... text-stone-700 ... font-geist_semibold">
                             License Type.
                         </h3>
-
-                       
+                        <br/>
 
                         <Tabs defaultValue="account" className="w-[400px]">
                             <TabsList>
@@ -222,8 +221,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             </TabsList>
                         </Tabs>
 
-                      
-                       
+                        <br/>                      
                         <h3  class="text-md ... text-stone-700 ...font-geist_regular">
                             Are you a student? Select Educational Use.
                         </h3>
@@ -232,13 +230,17 @@ const Saleslanding = ({ stories, firstStory }) => {
                     <div  id={styles.C4}>
                        <div  id={styles.CHECKOUT_GRID}>
 
-                            <div id={styles.ADD_TO_CART}>          
-                                <Button style={{
-                                        position: "absolute",
-                                        width: "100%",
-                                        height: "100%",}}> Add To Cart 
-                                </Button>                  
+                            <div id={styles.ADD_TO_CART}>  
+                                <Link href="/payment">        
+                                    <Button style={{
+                                            position: "absolute",
+                                            width: "100%",
+                                            height: "100%",}}> Add To Cart 
+                                    </Button>  
+                                </Link>                 
                             </div>
+
+                            
 
                             <div id={styles.PAYPAL}>  
                                 <Link href="/payment">
@@ -247,8 +249,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                         width: "100%",
                                         height: "100%",}}>Buy With Paypal
                                     </Button>     
-                                </Link>
-                                                            
+                                </Link>                                                           
                             </div>
 
                             <div id={styles.MORE_OPTIONS}>    
