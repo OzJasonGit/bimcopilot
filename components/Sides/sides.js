@@ -14,6 +14,7 @@ import Image from "next/image";
 import pfbdImage from './pfbd_3.png';
 import dlpfbdImage from './_dlpfbd_.svg';
 import bimcopilotLogo from './bimcopilot_logo.svg';
+import { height, width } from '@mui/system';
 
 
 
@@ -51,7 +52,9 @@ export default class Sides extends Component {
                                                         src={pfbdImage}
                                                         alt=''
                                                         style={{ objectFit: "contain",
-                                                                    gridArea: "CENTER", 
+                                                                    gridArea: "CENTER",
+                                                                    height: "80%", 
+                                                                    width: "80%"
                                                                 }}
                                                         quality={100}
                                                     />                             
