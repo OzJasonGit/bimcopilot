@@ -50,13 +50,6 @@ const Blog_page = (stories) => {
     if (error) return <div className="error-message">{error}</div>;
     if (!story) return <div>Story not found</div>;
 
-    const platforms = {
-        linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
-        twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}`,
-        facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
-        reddit: `https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`
-    };
-
 
     const storiesToMap = stories?.data?.filter((story, i) => story._id == params.slug) || [];
     const router = useRouter();
@@ -544,34 +537,6 @@ const Blog_page = (stories) => {
                                                                                       
                                         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                         <div id={styles.LINKEDIN_LINK}
                                              style={{                                              
                                                 gridArea: "LINKEDIN",
@@ -580,7 +545,7 @@ const Blog_page = (stories) => {
                                                 position: "relative",
                                                 padding:"6px"
                                              }}> 
-                                             <Link class="" id="ANCHOR_1" href="/" onClick={() => openShareWindow(platforms.linkedin)} aria-label="Share on LinkedIn">                                            
+                                             <Link class="" id="ANCHOR_1" href="/">                                            
                                                 <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
                                              </Link>    
 
