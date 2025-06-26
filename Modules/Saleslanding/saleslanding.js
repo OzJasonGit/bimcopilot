@@ -53,7 +53,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                         height: "100%",
                         }}>
                         <h1 id={styles._H1} class=" text-stone-700 ... font-avant_garde_bold">
-                           <a class="text-md ... text-stone-700 ... font-geist_regular">Product_ID</a> B1001
+                           <a class="text-md ... text-stone-700 ... font-geist_regular"
+                              style={{marginBottom:"0px"}}>Product_ID</a> B1001
                         </h1>
                 </div>
 
@@ -181,7 +182,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     gridArea: "C1",
                                 }}>
                         <h2 id={styles._H2}
-                            class=" text-stone-700 ... font-avant_garde_bold">
+                            class=" text-stone-700 ... font-avant_garde_bold"
+                            style={{marginBottom:"0px"}}>
                             This is a test title
                         </h2>
                     </div>
@@ -191,7 +193,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     position: "relative",           
                                     gridArea: "SLUG",
                                 }}>
-                        <h3 class=" text-md ... text-stone-700 ... font-geist_regular">              
+                        <h3 class=" text-md ... text-stone-700 ... font-geist_regular"
+                            style={{marginBottom:"0px"}}>              
                             This is a test title slug also used for SEO 
                         </h3>
                     </div>
@@ -201,15 +204,16 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     position: "relative",           
                                     gridArea: "C2",
                                 }}>
-                        <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
+                        <h3 class="text-md ... text-stone-700 ... font-geist_semibold"
+                            style={{marginBottom:"0px"}}>
                             $12.99 <a class="text-md ... text-stone-700 ... font-geist_regular ..."> Tax included.</a>
                         </h3>                                     
                     </div>
 
                     <div  id={styles.C3}>
-                        <h3 
-                            id={styles._H3}
-                            class="text-md ... text-stone-700 ... font-geist_semibold">
+                        <h3                           
+                            class="text-md ... text-stone-700 ... font-geist_semibold"
+                            style={{marginBottom:"0px"}}>
                             License Type.
                         </h3>
                         <br/>
@@ -222,7 +226,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                         </Tabs>
 
                         <br/>                      
-                        <h3  class="text-md ... text-stone-700 ...font-geist_regular">
+                        <h3  class="text-md ... text-stone-700 ...font-geist_regular"
+                             style={{marginBottom:"0px"}}>
                             Are you a student? Select Educational Use.
                         </h3>
                     </div>
@@ -261,7 +266,8 @@ const Saleslanding = ({ stories, firstStory }) => {
 
 
                     <div  id={styles.C5}>
-                        <h3 class="text-md ... text-stone-700 ... font-geist_regular">
+                        <h3 class="text-md ... text-stone-700 ... font-geist_regular"
+                            style={{marginBottom:"0px"}}>
                            For Educational Use (Reduced price) please send us an email with your 
                            student card and info to <a>info@bimcopilot.com</a>
                         </h3>
@@ -378,7 +384,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                             <div class="rounded-lg ..." id={styles.SALES_IMAGE_A}>
                                 {storiesSolo_1.map((story, index) => {
-                                        return (                      
+                                    return (                      
                                     <Image
                                     alt="Picture of the author"
                                     key={story._id}
@@ -396,39 +402,39 @@ const Saleslanding = ({ stories, firstStory }) => {
 
 
                             <div class="rounded-lg ..." id={styles.SALES_IMAGE_B}>
-                                    {storiesSolo_1.map((story, index) => {
-                                        return (                 
-                                        <Image
-                                        alt="Picture of the author"
-                                        key={story._id}
-                                        width={500}
-                                        height={500}
-                                        src={story.image}
-                                        style={{
-                                        position: "absolute",
-                                        width: "100%",
-                                        height: "100%",
-                                        objectFit: "cover",
-                                        }}/>                 
-                                    )})} 
+                                {storiesSolo_1.map((story, index) => {
+                                    return (                 
+                                    <Image
+                                    alt="Picture of the author"
+                                    key={story._id}
+                                    width={500}
+                                    height={500}
+                                    src={story.image}
+                                    style={{
+                                    position: "absolute",
+                                    width: "100%",
+                                    height: "100%",
+                                    objectFit: "cover",
+                                    }}/>                 
+                                )})} 
                                 </div>  
 
                             <div class="rounded-lg ..." id={styles.SALES_IMAGE_C}>
-                                    {storiesSolo_1.map((story, index) => {
-                                        return (                
-                                        <Image
-                                        alt="Picture of the author"
-                                        key={story._id}
-                                        width={500}
-                                        height={500}
-                                        src={story.image}
-                                        style={{
-                                        position: "absolute",
-                                        width: "100%",
-                                        height: "100%",
-                                        objectFit: "cover",
-                                        }}/>              
-                                    )})} 
+                                {storiesSolo_1.map((story, index) => {
+                                    return (                
+                                    <Image
+                                    alt="Picture of the author"
+                                    key={story._id}
+                                    width={500}
+                                    height={500}
+                                    src={story.image}
+                                    style={{
+                                    position: "absolute",
+                                    width: "100%",
+                                    height: "100%",
+                                    objectFit: "cover",
+                                    }}/>              
+                                )})} 
                                 </div>  
 
                     </div> 
