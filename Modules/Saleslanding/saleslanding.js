@@ -207,7 +207,9 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
                     <div  id={styles.C3}>
-                        <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
+                        <h3 
+                            id={styles._H3}
+                            class="text-md ... text-stone-700 ... font-geist_semibold">
                             License Type.
                         </h3>
 
