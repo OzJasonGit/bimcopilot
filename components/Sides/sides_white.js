@@ -36,48 +36,81 @@ export default class Sides extends Component {
                                         <div id={styles.ICON_GRID} class={styles.container}>
 
 
-                                            <div id={styles.PFBD_ICON} class={styles.icon}>
+                                            <div class={styles.icon}
+                                                style={{
+                                                    gridArea: " PFBD",
+                                                    display: "grid",
+                                                    alignItems: "center",
+                                                    justifyContent: "center",
+                                                }}>
                                                 <Link id={styles.PFBD_LINK} href="/" target="_blank">
-                                                    <div id={styles._PFBD_}>
-                                                        <Image id={styles.CENTER}
-                                                            loading='lazy'
-                                                            src={pfbdImage}
-                                                            alt=''
-                                                            style={{ objectFit: "contain" }}
-                                                            quality={100}
-                                                        />
-                                                    </div>
+                                                    <Image id={styles.CENTER}
+                                                        loading='lazy'
+                                                        src={pfbdImage}
+                                                        alt=''
+                                                        style={{
+                                                            objectFit: "contain",
+                                                            gridArea: "CENTER",
+                                                            height: "92.5%",
+                                                            width: "92.5%"
+                                                        }}
+                                                        quality={100}
+                                                    />
                                                 </Link>
                                             </div>
 
-                                            <div id={styles.DESIGN_LAB_ICON} class={styles.icon}>
-                                                <Link id={styles.PFBD_LINK} href="/" target="_blank">
-                                                    <div id={styles._PFBD_}>
-                                                        <Image id={styles.CENTER}
-                                                            loading='lazy'
-                                                            alt=''
-                                                            src={dlpfbdImage}
-                                                            style={{ objectFit: "contain" }}
-                                                            quality={100}
-                                                        />
-                                                    </div>
+                                            <div class={styles.icon}
+                                                style={{
+                                                    gridArea: "BIM_COPILOT",
+                                                    display: "grid",
+                                                    alignItems: "center",
+                                                    justifyContent: "center",
+                                                }}>
+                                                <Link id={styles.BIMCOPILOT_LINK} href="/" target="_blank"
+                                                    style={{
+                                                        position: "relative",
+                                                        left: "-6px"
+                                                    }}>
+                                                    <Image id={styles.CENTER}
+                                                        loading='lazy'
+                                                        alt=''
+                                                        src={bimcopilotLogo}
+                                                        style={{
+                                                            position: "relative",
+                                                            top: "-3.5px",
+                                                            left: "-1.5px",
+                                                            objectFit: "contain",
+                                                            gridArea: "CENTER",
+                                                            height: "100%",
+                                                            width: "100%"
+                                                        }}
+                                                        quality={100}
+                                                    />
                                                 </Link>
                                             </div>
 
-                                            <div id={styles.OZ_JASON_ICON} class={styles.icon}>
-                                                <Link id={styles.PFBD_LINK} href="/" target="_blank">
-                                                    <div id={styles._PFBD_}>
-                                                        <Image id={styles.CENTER}
-                                                            src={pfbdImage}
-                                                            loading='lazy'
-                                                            alt=''
-                                                            style={{ objectFit: "contain" }}
-                                                            quality={100}
-                                                        />
-                                                    </div>
+                                            <div class={styles.icon}
+                                                style={{
+                                                    gridArea: "OZ_JASON",
+                                                    display: "grid",
+                                                    alignItems: "center",
+                                                    justifyContent: "center",
+                                                }}>
+                                                <Link id={styles.OZ_JASON_LINK} href="/" target="_blank">
+                                                    <Image id={styles.CENTER}
+                                                        src={pfbdImage}
+                                                        loading='lazy'
+                                                        alt=''
+                                                        style={{
+                                                            objectFit: "contain",
+                                                            gridArea: "CENTER",
+                                                            height: "92.5%",
+                                                            width: "92.5%"
+                                                        }}
+                                                        quality={100}
+                                                    />
                                                 </Link>
                                             </div>
-
 
                                         </div>
                                     </div>
@@ -103,24 +136,24 @@ export default class Sides extends Component {
 
                                     <div id={styles.NAV_LINK}>
 
-                                        <Link class="" id={styles.ANCHOR_1} href="/">                                            
-                                            <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
+                                        <Link class="" id={styles.ANCHOR_1} href="/">
+                                            <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />
                                         </Link>
 
                                         <Link class="" id={styles.ANCHOR_2} href="/">
-                                            <FontAwesomeIcon class={styles.instagram} id={styles.CENTER} icon={faInstagram} size="2xs" />  
+                                            <FontAwesomeIcon class={styles.instagram} id={styles.CENTER} icon={faInstagram} size="2xs" />
                                         </Link>
 
                                         <Link class="" id={styles.ANCHOR_3} href="/">
-                                            <FontAwesomeIcon class={styles.youtube} id={styles.CENTER} icon={faYoutube} size="2xs" />  
+                                            <FontAwesomeIcon class={styles.youtube} id={styles.CENTER} icon={faYoutube} size="2xs" />
                                         </Link>
 
                                         <Link class="" id={styles.ANCHOR_4} href="/">
-                                            <FontAwesomeIcon class={styles.xtwitter} id={styles.CENTER} icon={faSquareXTwitter} size="2xs" />  
+                                            <FontAwesomeIcon class={styles.xtwitter} id={styles.CENTER} icon={faSquareXTwitter} size="2xs" />
                                         </Link>
-                                        
+
                                     </div>
-                                   
+
                                 </div>
                             </div>
                         </div>
