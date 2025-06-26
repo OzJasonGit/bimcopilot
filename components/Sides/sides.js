@@ -79,7 +79,8 @@ export default class Sides extends Component {
                                                             src={bimcopilotLogo}
                                                             style={{ 
                                                                     position: "relative",
-                                                                    top: "5px",
+                                                                    top: "-3px",
+                                                                    left: "-1.5px",
                                                                     objectFit: "contain",
                                                                     gridArea: "CENTER", 
                                                                     height: "100%", 
