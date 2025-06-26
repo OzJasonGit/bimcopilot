@@ -176,7 +176,10 @@ const Saleslanding = ({ stories, firstStory }) => {
                 </div>
 
                 <div id={styles.SALES_CHECKOUT_HOLDER}>
-                    <div  id={styles.C1}>
+                    <div  style={{
+                                    position: "relative",           
+                                    gridArea: "C1",
+                                }}>
                         <h2 id={styles._H2}
                             class=" text-stone-700 ... font-avant_garde_bold">
                             This is a test title
@@ -196,7 +199,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                     <div  
                           style={{
                                     position: "relative",           
-                                    gridArea: "C1",
+                                    gridArea: "C2",
                                 }}>
                         <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
                             $12.99 <a></a>
