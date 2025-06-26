@@ -38,21 +38,27 @@ export default class Sides extends Component {
                                         <div id={styles.ICON_GRID} class={styles.container}>
 
 
-                                            <div id={styles.PFBD_ICON} class={styles.icon}>
-                                                <Link id={styles.PFBD_LINK} href="/" target="_blank">
-                                                    <div id={styles._PFBD_}>
-                                                        <Image id={styles.CENTER}
-                                                            loading='lazy'
-                                                            src={pfbdImage}
-                                                            alt=''
-                                                            style={{ objectFit: "contain" }}
-                                                            quality={100}
-                                                        />
-                                                    </div>
-                                                </Link>
+                                            <div class={styles.icon}
+                                                 style={{
+                                                    gridArea: " PFBD",
+                                                    display: "grid",
+                                                    alignItems: "center",
+                                                    justifyContent: "center",
+                                                 }}>
+                                                    <Link id={styles.PFBD_LINK} href="/" target="_blank">
+                                                        <div id={styles._PFBD_}>
+                                                            <Image id={styles.CENTER}
+                                                                loading='lazy'
+                                                                src={pfbdImage}
+                                                                alt=''
+                                                                style={{ objectFit: "contain" }}
+                                                                quality={100}
+                                                            />
+                                                        </div>
+                                                    </Link>
                                             </div>
 
-                                            <div id={styles.DESIGN_LAB_ICON} class={styles.icon_bimcopilot}>
+                                            <div id={styles.BIMCOPILOT_ICON} class={styles.icon}>
                                                 <Link id={styles.BIMCOPILOT_LINK} href="/" target="_blank">
                                                     <div id={styles._PFBD_}>
                                                         <Image id={styles.CENTER}

@@ -446,6 +446,14 @@
      justify-content: center;
  }
 
+
+ #DESIGN_LAB_ICON {
+     grid-area: DESIGN-LAB;
+     display: grid;
+     align-items: center;
+     justify-content: center;
+ }
+
  #OZ_JASON_ICON {
      grid-area: BIM-COPILOT;
      display: grid;
