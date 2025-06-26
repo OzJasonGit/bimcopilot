@@ -53,7 +53,7 @@ export default class Sides extends Component {
                                             </div>
 
                                             <div id={styles.DESIGN_LAB_ICON} class={styles.icon_bimcopilot}>
-                                                <Link id={styles.PFBD_LINK} href="/" target="_blank">
+                                                <Link id={styles.BIMCOPILOT_LINK} href="/" target="_blank">
                                                     <div id={styles._PFBD_}>
                                                         <Image id={styles.CENTER}
                                                             loading='lazy'
@@ -67,7 +67,7 @@ export default class Sides extends Component {
                                             </div>
 
                                             <div id={styles.OZ_JASON_ICON} class={styles.icon}>
-                                                <Link id={styles.PFBD_LINK} href="/" target="_blank">
+                                                <Link id={styles.OZ_JASON_LINK} href="/" target="_blank">
                                                     <div id={styles._PFBD_}>
                                                         <Image id={styles.CENTER}
                                                             src={pfbdImage}

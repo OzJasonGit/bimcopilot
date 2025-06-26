@@ -455,6 +455,32 @@
  }
 
 
+ #BIMCOPILOT_LINK {
+     grid-area: ICON;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 20.5px 1fr 2.5px;
+     grid-template-rows: 11.5px 1fr 11.5px;
+     grid-template-areas: ". . ."
+         ". CENTER ."
+         ". . .";
+ }
+
+
+ #OZ_JASON_LINK {
+     grid-area: ICON;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 20.5px 1fr 2.5px;
+     grid-template-rows: 11.5px 1fr 11.5px;
+     grid-template-areas: ". . ."
+         ". CENTER ."
+         ". . .";
+ }
+
+
  #_PFBD_ {
      grid-area: CENTER;
  }
