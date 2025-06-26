@@ -12,7 +12,7 @@ import Image from 'next/image';
 
 import Subform from "../Subscribetop/Client/subform";
 
-import logoMobile from './bimcopilot_logo_text_horizontal_white.svg';    
+import logoMobile from './bimcopilot_logo_text_vertical_white_(2).svg';    
 import rocketShip from './giphy.gif';
 import logoARB from './logoARB_DARK.png';
 import logoRIBA from './logoRIBA_Dark.png';
