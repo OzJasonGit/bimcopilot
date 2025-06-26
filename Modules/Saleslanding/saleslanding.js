@@ -202,12 +202,8 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     gridArea: "C2",
                                 }}>
                         <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
-                            $12.99 <a></a>
-                        </h3>
-                        <br/>
-                        <h3 class="text-md ... text-stone-700 ... font-geist_regular">
-                            Tax included. 
-                        </h3>
+                            $12.99 <a class="text-md ... text-stone-700 ... font-geist_regular"> Tax included. </a>
+                        </h3>                                     
                     </div>
 
                     <div  id={styles.C3}>
