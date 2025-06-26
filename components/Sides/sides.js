@@ -51,11 +51,12 @@ export default class Sides extends Component {
                                                         loading='lazy'
                                                         src={pfbdImage}
                                                         alt=''
-                                                        style={{ objectFit: "contain",
-                                                                    gridArea: "CENTER",
-                                                                    height: "80%", 
-                                                                    width: "80%"
-                                                                }}
+                                                        style={{ 
+                                                                 objectFit: "contain",
+                                                                 gridArea: "CENTER",
+                                                                 height: "90%", 
+                                                                 width: "90%"
+                                                              }}
                                                         quality={100}
                                                     />                             
                                                 </Link>
@@ -76,9 +77,10 @@ export default class Sides extends Component {
                                                             loading='lazy'
                                                             alt=''
                                                             src={bimcopilotLogo}
-                                                            style={{ objectFit: "contain",
-                                                                        gridArea: "CENTER", 
-                                                                    }}
+                                                            style={{ 
+                                                                    objectFit: "contain",
+                                                                    gridArea: "CENTER", 
+                                                                  }}
                                                             quality={100}
                                                         />                                       
                                                 </Link>
@@ -96,8 +98,11 @@ export default class Sides extends Component {
                                                             src={pfbdImage}
                                                             loading='lazy'
                                                             alt=''
-                                                            style={{ objectFit: "contain",
+                                                            style={{ 
+                                                                     objectFit: "contain",
                                                                      gridArea: "CENTER", 
+                                                                     height: "90%", 
+                                                                     width: "90%"
                                                                   }}
                                                             quality={100}
                                                         />        
