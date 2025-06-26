@@ -45,17 +45,17 @@ export default class Sides extends Component {
                                                     alignItems: "center",
                                                     justifyContent: "center",
                                                  }}>
-                                                    <Link id={styles.PFBD_LINK} href="/" target="_blank">                                        
-                                                        <Image id={styles.CENTER}                                                               
-                                                            loading='lazy'
-                                                            src={pfbdImage}
-                                                            alt=''
-                                                            style={{ objectFit: "contain",
-                                                                     gridArea: "CENTER", 
-                                                                  }}
-                                                            quality={100}
-                                                        />                             
-                                                    </Link>
+                                                <Link id={styles.PFBD_LINK} href="/" target="_blank">                                        
+                                                    <Image id={styles.CENTER}                                                               
+                                                        loading='lazy'
+                                                        src={pfbdImage}
+                                                        alt=''
+                                                        style={{ objectFit: "contain",
+                                                                    gridArea: "CENTER", 
+                                                                }}
+                                                        quality={100}
+                                                    />                             
+                                                </Link>
                                             </div>
 
                                             <div class={styles.icon}
@@ -65,17 +65,20 @@ export default class Sides extends Component {
                                                     alignItems: "center",
                                                     justifyContent: "center",
                                                  }}>
-                                                    <Link id={styles.BIMCOPILOT_LINK} href="/" target="_blank">                            
-                                                            <Image id={styles.CENTER}
-                                                                loading='lazy'
-                                                                alt=''
-                                                                src={bimcopilotLogo}
-                                                                style={{ objectFit: "contain",
-                                                                         gridArea: "CENTER", 
-                                                                      }}
-                                                                quality={100}
-                                                            />                                       
-                                                    </Link>
+                                                <Link id={styles.BIMCOPILOT_LINK} href="/" target="_blank"
+                                                            style={{ position:"relative",
+                                                                        left:"-6px" 
+                                                                    }}>                            
+                                                        <Image id={styles.CENTER}
+                                                            loading='lazy'
+                                                            alt=''
+                                                            src={bimcopilotLogo}
+                                                            style={{ objectFit: "contain",
+                                                                        gridArea: "CENTER", 
+                                                                    }}
+                                                            quality={100}
+                                                        />                                       
+                                                </Link>
                                             </div>
 
                                             <div class={styles.icon}
