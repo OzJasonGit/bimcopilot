@@ -53,7 +53,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                         height: "100%",
                         }}>
                         <h1 id={styles._H1} class=" text-stone-700 ... font-avant_garde_bold">
-                           <a></a> B1001
+                           <a><h3 class="text-md ... text-stone-700 ... font-geist_regular"> </h3></a> B1001
                         </h1>
                 </div>
 
@@ -240,7 +240,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                             <div id={styles.PAYPAL}>  
                                 <Link href="/payment">
-                                    <Button variant="secondary" class="border-2 border-solid ..." style={{
+                                    <Button variant="secondary" class="border border-solid ... rounded-md ... border-stone-800 ..." style={{
                                         position: "absolute",
                                         width: "100%",
                                         height: "100%",}}>Buy With Paypal
