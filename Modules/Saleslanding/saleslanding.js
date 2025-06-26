@@ -184,19 +184,21 @@ const Saleslanding = ({ stories, firstStory }) => {
                     </div>
 
                     <div  id={styles.SLUG}
-                        style={{
-                                position: "relative",
-                                width: "100%",
-                                height: "100%",
-                                gridArea: "SLUG",
-                            }}>
-                        <h2 id={styles._H3}
-                            class=" text-md ... text-stone-700 ... font-geist_semibold">
+                          style={{
+                                    position: "relative",           
+                                    gridArea: "SLUG",
+                                }}>
+                        <h3 
+                            class=" text-md ... text-stone-700 ... font-geist_regular">
                             This is a test title slug also used for SEO 
-                        </h2>
+                        </h3>
                     </div>
 
-                    <div  id={styles.C2}>
+                    <div  
+                          style={{
+                                position: "relative",           
+                                gridArea: "C1",
+                            }}>
                         <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
                             $12.99
                         </h3>
