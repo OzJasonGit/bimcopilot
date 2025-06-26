@@ -45,20 +45,27 @@ export default class Sides extends Component {
                                                     alignItems: "center",
                                                     justifyContent: "center",
                                                  }}>
-                                                    <Link id={styles.PFBD_LINK} href="/" target="_blank">
-                                                        <div id={styles._PFBD_}>
-                                                            <Image id={styles.CENTER}
+                                                    <Link id={styles.PFBD_LINK} href="/" target="_blank">                                        
+                                                            <Image id={styles.CENTER}                                                               
                                                                 loading='lazy'
                                                                 src={pfbdImage}
                                                                 alt=''
-                                                                style={{ objectFit: "contain" }}
+                                                                style={{ objectFit: "contain",
+                                                                         gridArea: "CENTER", 
+                                                                 }}
                                                                 quality={100}
                                                             />
-                                                        </div>
+                                                 
                                                     </Link>
                                             </div>
 
-                                            <div id={styles.BIMCOPILOT_ICON} class={styles.icon}>
+                                            <div class={styles.icon}
+                                                 style={{
+                                                    gridArea: "BIM_COPILOT",
+                                                    display: "grid",
+                                                    alignItems: "center",
+                                                    justifyContent: "center",
+                                                 }}>
                                                 <Link id={styles.BIMCOPILOT_LINK} href="/" target="_blank">
                                                     <div id={styles._PFBD_}>
                                                         <Image id={styles.CENTER}
@@ -72,8 +79,14 @@ export default class Sides extends Component {
                                                 </Link>
                                             </div>
 
-                                            <div id={styles.OZ_JASON_ICON} class={styles.icon}>
-                                                <Link id={styles.OZ_JASON_LINK} href="/" target="_blank">
+                                            <div class={styles.icon}
+                                                 style={{
+                                                    gridArea: "DESIGN_LAB",
+                                                    display: "grid",
+                                                    alignItems: "center",
+                                                    justifyContent: "center",
+                                                 }}>
+                                                 <Link id={styles.OZ_JASON_LINK} href="/" target="_blank">
                                                     <div id={styles._PFBD_}>
                                                         <Image id={styles.CENTER}
                                                             src={pfbdImage}
@@ -83,7 +96,7 @@ export default class Sides extends Component {
                                                             quality={100}
                                                         />
                                                     </div>
-                                                </Link>
+                                                 </Link>
                                             </div>
 
 
