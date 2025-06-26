@@ -53,7 +53,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                         height: "100%",
                         }}>
                         <h1 id={styles._H1} class=" text-stone-700 ... font-avant_garde_bold">
-                           <a><h3 class="text-md ... text-stone-700 ... font-geist_regular"> </h3></a> B1001
+                           <a class="text-md ... text-stone-700 ... font-geist_regular">Product_ID</a> B1001
                         </h1>
                 </div>
 
