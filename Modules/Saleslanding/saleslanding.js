@@ -202,7 +202,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                         <h3 class="text-md ... text-stone-700 ... font-geist_semibold">
                             $12.99
                         </h3>
-
+                        <br/>
                         <h3 class="text-md ... text-stone-700 ... font-geist_regular">
                             Tax included. 
                         </h3>
