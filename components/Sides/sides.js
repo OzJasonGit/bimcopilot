@@ -54,8 +54,8 @@ export default class Sides extends Component {
                                                         style={{ 
                                                                  objectFit: "contain",
                                                                  gridArea: "CENTER",
-                                                                 height: "90%", 
-                                                                 width: "90%"
+                                                                 height: "92.5%", 
+                                                                 width: "92.5%"
                                                               }}
                                                         quality={100}
                                                     />                             
@@ -106,8 +106,8 @@ export default class Sides extends Component {
                                                             style={{ 
                                                                      objectFit: "contain",
                                                                      gridArea: "CENTER", 
-                                                                     height: "90%", 
-                                                                     width: "90%"
+                                                                     height: "92.5%", 
+                                                                     width: "92.5%"
                                                                   }}
                                                             quality={100}
                                                         />        
