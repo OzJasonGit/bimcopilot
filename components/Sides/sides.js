@@ -46,16 +46,15 @@ export default class Sides extends Component {
                                                     justifyContent: "center",
                                                  }}>
                                                     <Link id={styles.PFBD_LINK} href="/" target="_blank">                                        
-                                                            <Image id={styles.CENTER}                                                               
-                                                                loading='lazy'
-                                                                src={pfbdImage}
-                                                                alt=''
-                                                                style={{ objectFit: "contain",
-                                                                         gridArea: "CENTER", 
-                                                                 }}
-                                                                quality={100}
-                                                            />
-                                                 
+                                                        <Image id={styles.CENTER}                                                               
+                                                            loading='lazy'
+                                                            src={pfbdImage}
+                                                            alt=''
+                                                            style={{ objectFit: "contain",
+                                                                     gridArea: "CENTER", 
+                                                                  }}
+                                                            quality={100}
+                                                        />                             
                                                     </Link>
                                             </div>
 
@@ -66,36 +65,36 @@ export default class Sides extends Component {
                                                     alignItems: "center",
                                                     justifyContent: "center",
                                                  }}>
-                                                <Link id={styles.BIMCOPILOT_LINK} href="/" target="_blank">
-                                                    <div id={styles._PFBD_}>
-                                                        <Image id={styles.CENTER}
-                                                            loading='lazy'
-                                                            alt=''
-                                                            src={bimcopilotLogo}
-                                                            style={{ objectFit: "contain" }}
-                                                            quality={100}
-                                                        />
-                                                    </div>
-                                                </Link>
+                                                    <Link id={styles.BIMCOPILOT_LINK} href="/" target="_blank">                            
+                                                            <Image id={styles.CENTER}
+                                                                loading='lazy'
+                                                                alt=''
+                                                                src={bimcopilotLogo}
+                                                                style={{ objectFit: "contain",
+                                                                         gridArea: "CENTER", 
+                                                                      }}
+                                                                quality={100}
+                                                            />                                       
+                                                    </Link>
                                             </div>
 
                                             <div class={styles.icon}
                                                  style={{
-                                                    gridArea: "DESIGN_LAB",
+                                                    gridArea: "OZ_JASON",
                                                     display: "grid",
                                                     alignItems: "center",
                                                     justifyContent: "center",
                                                  }}>
-                                                 <Link id={styles.OZ_JASON_LINK} href="/" target="_blank">
-                                                    <div id={styles._PFBD_}>
+                                                 <Link id={styles.OZ_JASON_LINK} href="/" target="_blank">                                                 
                                                         <Image id={styles.CENTER}
                                                             src={pfbdImage}
                                                             loading='lazy'
                                                             alt=''
-                                                            style={{ objectFit: "contain" }}
+                                                            style={{ objectFit: "contain",
+                                                                     gridArea: "CENTER", 
+                                                                  }}
                                                             quality={100}
-                                                        />
-                                                    </div>
+                                                        />        
                                                  </Link>
                                             </div>
 
