@@ -122,8 +122,7 @@ const Blog_page = (stories) => {
                                                                     position: "relative",                                   
                                                                     width: "100%",
                                                                     height: "100%",   
-                                                                    maxHeight: "0",  
-                                                                    paddingRight: "50px",                                    
+                                                                    maxHeight: "0",                                                                  
                                                                     }}>  
                                                                     <div className={styles.PARAGRAPH_1}
                                                                             style={{
@@ -1182,7 +1181,7 @@ const Blog_page = (stories) => {
             </section>
 
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}>
-        <div class={styles.grid_0_blog_end}>
+            <div class={styles.grid_0_blog_end}>
 
             <div id={styles.TEXT_HOLDER}
                 style={{
