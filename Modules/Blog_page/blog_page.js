@@ -688,7 +688,7 @@ const Blog_page = (stories) => {
 
             <section id={styles.SHADOW_SECTION_TOP} className={styles.center_holder} class={styles.PARAGRAPH_1}
                 style={{
-                   
+                 
                 }}>
 
                 <div class={styles.grid_0_blog}>

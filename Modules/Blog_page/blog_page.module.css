@@ -1041,7 +1041,285 @@
 /*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
 @media all and (min-width: 960px) and (max-width: 1280px) {
 
-    .grid_0_blogimageholder {
+
+    .center_holder {
+        position: relative;
+        width: 100%;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: aliceblue;
+        margin: 0;
+    }
+    
+    
+    #NAV_GRID {  
+        width: 100vw;
+        height: 100%;
+        top: 0px;
+        max-width: 1820px;
+        display: grid;
+        grid-column-gap: 0;
+        grid-row-gap: 0px;
+        grid-template-rows: 0px auto 20px;
+        grid-template-columns: 40px 1fr 40px;
+        grid-template-areas:
+            ". . ."
+            ". MAIN_AREA .";
+    }
+    
+    #NAVIGATION {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+        grid-row-gap: 10px;
+        grid-template-areas:
+                "1"
+                "2"
+                "3"
+                "4"
+                "5"
+                "6"
+                "7"
+                "8"
+                "9"
+                "10";
+    }
+    
+    
+    
+    #AFFILIATE_HOLDER {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+                "SUBSCRIBE"
+                "AFFILIATE"
+                "PFBD";
+    }
+    
+    #SUBSRIBE_HOLDER {
+        display: grid;
+        grid-row-gap: 10px;
+        grid-column-gap: 20px;
+        grid-template-columns: 1fr 180px;
+        grid-template-rows: auto auto 70px;
+        grid-template-areas:
+            "TAG_MAIN TAG_MAIN"
+            "SUB_MAIN SUB_MAIN"
+            "FORM FORM";
+    
+    
+    }
+    
+    
+    #GRID_NAV_ADVERT {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "NAV NAV . . . . . . . AFFILIATE AFFILIATE AFFILIATE";
+        top: 1615px; 
+        
+    }
+    
+    .grid_0 {
+        position: relative;
+        width: 100%;
+        max-width: 1520px;
+        background-color: transparent;
+        display: grid;
+        grid-column-gap: 0px;
+        grid-row-gap: 20px;
+        grid-template-rows: 100px auto auto 20px;
+        grid-template-columns: 40px 1fr 40px;
+        grid-template-areas: " . . ."
+            ". MAIN_AREA ."
+            ". VIDEO_B ."
+            ". . .";
+    }
+    
+    
+    .grid_0_main {
+        width: 100%;
+        max-width: 1520px;
+        background-color: transparent;
+        display: grid;
+        grid-column-gap: 0px;
+        grid-row-gap: 40px;
+        grid-template-rows: 0px auto 0px;
+        grid-template-columns: 40px 1fr 40px;
+        grid-template-areas: ". . ."
+            ". MAIN-AREA ."
+            ". . .";
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .grid_0_blog {
+        position: relative;
+        width: 100%;
+        max-width: 1820px;
+        background-color: transparent;
+        display: grid;
+        grid-column-gap: 0;
+        grid-row-gap: 20px;
+        grid-template-rows: 40px auto 0px;
+        grid-template-columns: 40px 1fr 40px;
+        grid-template-areas:
+            ". . ."
+            ". MAIN_AREA ."
+            ". . .";
+    }
+    
+    
+    
+    .grid_0_blog_end {
+        position: relative;
+        width: 100%;
+        max-width: 1820px;
+        background-color: transparent;
+        display: grid;
+        grid-column-gap: 0;
+        grid-row-gap: 20px;
+        grid-template-rows: 40px auto 150px;
+        grid-template-columns: 40px 1fr 40px;
+        grid-template-areas:
+            ". . ."
+            ". MAIN_AREA ."
+            ". . .";
+    }
+    
+    
+    
+    
+    #MAIN_IMAGE {
+        height: 600px;
+    }
+    
+    
+    #SUB_IMAGE_HEIGHT {
+        height: 350px;
+    }
+    
+    
+    
+    
+    #FIRST_TEXT_HOLDER {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                ". . . TITLE TITLE TITLE TITLE TITLE . AFFILIATE AFFILIATE AFFILIATE"
+                ". . . VIDEO VIDEO VIDEO VIDEO VIDEO . AFFILIATE AFFILIATE AFFILIATE"
+                ". . . TEXT TEXT TEXT TEXT TEXT . AFFILIATE AFFILIATE AFFILIATE";
+    }
+    
+    
+    
+    #TEXT_HOLDER {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            ". . . TITLE TITLE TITLE TITLE TITLE . . . ."
+            ". . . TEXT TEXT TEXT TEXT TEXT . . . .";
+    }
+    
+    
+    #IMAGE_TEXT_HOLDER {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            ". . . TITLE TITLE TITLE TITLE TITLE . . . ."
+            ". . . IMAGE IMAGE IMAGE IMAGE IMAGE . . . ."
+            ". . . TEXT TEXT TEXT TEXT TEXT . . . .";
+    }
+    
+    
+    
+    
+    
+    
+    .READ_NEXT {
+        display: grid;
+        grid-template-columns: 350px 350px 1fr;
+        grid-template-rows: auto auto auto;
+        grid-row-gap: 0px;
+        grid-column-gap: 30px;
+        grid-template-areas:
+            " TITLE TITLE . "
+            " READ_1 READ_1 READ_3 "
+            " FOOTER FOOTER . ";
+    }
+    
+    .READ_NEXT_SCROLL {
+        display: grid;
+        grid-template-columns: 350px 350px 1fr;
+        grid-template-rows: auto auto auto;
+        grid-row-gap: 30px;
+        grid-column-gap: 30px;
+        grid-template-areas:
+            " TITLE TITLE . "
+            " READ_1 READ_1 READ_3 "
+            " FOOTER FOOTER . ";
+        overflow-x: scroll;
+    }
+    
+    
+    
+    #READ_SCROLL {
+        display: grid;
+        grid-area: READ_1;
+        position: relative;
+    }
+    
+    #READ_HOLDER {
+        display: grid;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        grid-area: READ_1;
+        grid-template-columns: 350px 350px 350px ;
+        grid-template-rows: auto;
+        grid-column-gap: 30px;
+        grid-template-areas:
+        
+            " READ_1 READ_2 READ_3 ";
+    }
+    
+    
+    .read_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px auto;
+        grid-row-gap: 20px;
+        grid-template-areas:
+                " IMAGE "
+                " TEXT";
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .grid_0_blogimage {
+        grid-area: SUB;
         position: relative;
         width: 100%;
         max-width: 1520px;
@@ -1052,136 +1330,87 @@
         grid-template-rows: 0px auto 0px;
         grid-template-columns: 40px 1fr 40px;
         grid-template-areas: ". . ."
-            ".  SUB  ."
+            ". MAIN-AREA ."
             ". . .";
     }
-
-
-
-    .grid_0 {
-        width: 100%;
-        max-width: 1520px;
-        background-color: #f5f5f4;
-        display: grid;
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-        grid-template-rows: 100px auto 20px;
-        grid-template-columns: 20px 1fr 20px;
-        grid-template-areas: ". . ."
-            "BANNER-1 MAIN_AREA BANNER-2"
-            "VIDEO_B VIDEO_B VIDEO_B";
-    }
-
-
-
-        .grid_0_tag {
-            position: relative;
-            width: 100%;
-            max-width: 1820px;
-            background-color: transparent;
-            display: grid;
-            grid-column-gap: 0px;
-            grid-row-gap: 20px;
-            grid-template-rows: 0px auto 40px;
-            grid-template-columns: 40px 1fr 40px;
-            grid-template-areas: ". . ."
-                ". SUB ."
-                ". . ."; }
-
-
-    .grid_0_blog {
-        max-width: 1520px;
-        background-color: #f5f5f4;
-        grid-column-gap: 0px;
-        grid-template-rows: 100px auto 20px;
-        grid-template-areas:
-            ". . ."
-            "BANNER-1 MAIN_AREA BANNER-2"
-            "VIDEO_B VIDEO_B VIDEO_B";
-    }
-
-
-    .grid_0_blog_end {
+    
+    
+    
+    .grid_0_blogimageholder {
         position: relative;
         width: 100%;
         max-width: 1820px;
         background-color: transparent;
         display: grid;
-        grid-column-gap: 0;
+        grid-column-gap: 0px;
         grid-row-gap: 20px;
-        grid-template-rows: 40px auto 150px;
-        grid-template-columns: 20px 1fr 20px;
-        grid-template-areas:
-            ". . ."
-            " BANNER-1  MAIN_AREA  BANNER-2 "
-            ". . .";   }
-
-
-
-    #NAV_GRID {
-        width: 100vw;
-        height: 100%;
-        top: 0px;
-        max-width: 1820px;
-        display: grid;
-        grid-column-gap: 0;
-        grid-row-gap: 0px;
+        grid-template-rows: 0px auto 0px;
         grid-template-columns: 40px 1fr 40px;
-        grid-template-areas:
-            ". MAIN_AREA .";
-    }
-
-
-
-    #GRID_NAV_ADVERT {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "NAV NAV . . . . . . . AFFILIATE AFFILIATE AFFILIATE";
-        top: 2015px;
-    }
-
-
-
-    
-    .grid_0_main {
-        width: 100%;
-        max-width: 1640px;
-        background-color: transparent;
-        display: grid;
-        grid-column-gap: 40px;
-        grid-row-gap: 40px;
-        grid-template-rows: 100px auto 20;
-        grid-template-columns: 0px 1fr 0px;
         grid-template-areas: ". . ."
-            "BANNER-1 MAIN_AREA BANNER-2"
+            ". SUB ."
             ". . .";
     }
-
+    
+    
+    
+    
+    
+    #BLOGIMAGE_HOLDER {
+        width: 100%;
+        height: auto;
+        display:inline-block;
+        grid-area: MAIN-AREA;
+        position: relative;
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    #B_IMAGE {
+        position: relative;
+        grid-area: IMAGE;
+        overflow: hidden;
+    }
+    
+    
     #SHADOW_SECTION {
         position: relative;
         width: 100%;
         display: flex;
         -webkit-box-pack: center;
         justify-content: center;
-        background-color: #f5f5f4;
+        background-color: rgb(23, 23, 23);
         z-index: -30000;
         ;
         top: 0px;
     }
-
+    
     #SHADOW_SECTION_BLOG {
         position: relative;
         width: 100%;
         display: flex;
         -webkit-box-pack: center;
         justify-content: center;
-      
+        background-color: rgb(23, 23, 23);
         z-index: 1;
         top: 0px;
         left: 0;
     }
-
+    
     #SHADOW_SECTION_TITLE {
         position: relative;
         width: 100%;
@@ -1191,27 +1420,109 @@
         background-color: transparent;
         z-index: -20000;
     }
-
-    /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
+    
+    
+    
+    
+    #SHADOW_SECTION_SIDE {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: transparent;
+    }
+    
+    
+    
+    
+    #SHADOW_SECTION_TOP {
+        position: relative;
+        width: 100%;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: transparent;
+        z-index: -20000;
+        left: -100vw;
+    }
+    
+    
+    .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        border-radius: 1.5px;
+    }
+    
+    /*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
     .grid_0_subscribe {
         position: relative;
         width: 100%;
-        max-width: 1520px;
+        max-width: 1820px;
         background-color: transparent;
         display: grid;
         grid-column-gap: 0px;
         grid-row-gap: 20px;
-        grid-template-rows: 170px auto 20px;
+        grid-template-rows: 170px auto 0px;
         grid-template-columns: 40px 1fr 40px;
-        grid-template-areas: 
-            ". . ."
+        grid-template-areas: ". . ."
+            ". SUB ."
+            ". . .";
+    }
+    
+    
+    .grid_0_tag {
+        position: relative;
+        width: 100%;
+        max-width: 1820px;
+        background-color: transparent;
+        display: grid;
+        grid-column-gap: 0px;
+        grid-row-gap: 20px;
+        grid-template-rows: 0px auto 40px;
+        grid-template-columns: 40px 1fr 40px;
+        grid-template-areas: ". . ."
             ". SUB  ."
             ". . .";
     }
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     .sub_head {
         position: relative;
         grid-area: SUB;
@@ -1219,137 +1530,429 @@
         width: 100%;
         height: auto;
         grid-column-gap: 40px;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
+        grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas:
-            "BC ."
-            ". AUTHOR";
+            "BC BC BC BC BC BC BC BC AUTHOR AUTHOR AUTHOR AUTHOR AUTHOR AUTHOR";
         left: 0;
     }
-
-
-
-        .sub_head_2 {
-            grid-area: SUB;
-            height: auto;
-            grid-column-gap: 40px;
-            grid-template-columns: 1fr 150px;
-            grid-template-rows: auto;
-            grid-template-areas: "BC . ";
-            left: 0; }
-
-
-        #AFFILIATE_HOLDER {
-            display: grid;
-            grid-template-columns: 0.0125fr auto;
-            grid-template-rows: auto;
-            grid-column-gap: 10px;
-            grid-template-areas:
-                ". ADVERT" }
-
-    /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-    /*SECTION_2///////////////////////////////////////////////////////////////////////////////////////////*/
-    .head {
-        grid-area: MAIN-AREA;
+    
+    
+    
+    #AUTHOR_GRID {
+        display: grid;
+        grid-area: AUTHOR;
+        height: auto;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 110px;
+        grid-template-rows: 110px auto auto;
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
+        grid-template-areas:
+                "NUMBER NUMBER AUTHOR"
+                ". NAME NAME"
+                ". . .";
+    
+    }
+    
+    
+    
+    #NUMBER_GRID {
+        display: grid;  
+        grid-template-columns: 1fr;
+        grid-template-rows: 20px auto auto;   
+        grid-template-areas:
+            "."
+            "NUMBER"
+            "SHARE";
+    }
+    
+    
+    #SHARE {
+        display: grid;
+        grid-template-columns: 60px 35px 35px 35px 35px;
+        grid-template-rows: 35px;
+        grid-template-areas:
+            "SHARE LINKEDIN TWITTER FACEBOOK REDDIT";
+    }
+    
+    
+    
+    .sub_head_2 {
+        position: relative;
+        grid-area: SUB;
         display: grid;
         width: 100%;
-        height: 920px;
+        height: auto;
         grid-column-gap: 40px;
         grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 100px auto auto auto auto auto;
+        grid-template-rows: auto;
         grid-template-areas:
-            "BC . . . . . . . . . . . . ."
-            "BC CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT NEWS NEWS NEWS NEWS NEWS NEWS"
-            "BC CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT NEWS NEWS NEWS NEWS NEWS NEWS"
-            "BC CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT NEWS NEWS NEWS NEWS NEWS NEWS"
-            "BC TITLE TITLE TITLE TITLE TITLE TITLE TITLE NEWS NEWS NEWS NEWS NEWS NEWS"
-            "BC TITLE TITLE TITLE TITLE TITLE TITLE TITLE NEWS NEWS NEWS NEWS NEWS NEWS";
+            "BC BC BC BC BC BC BC BC . . AUTHOR AUTHOR AUTHOR AUTHOR";
+        left: 0;
     }
-
-    #ARTICLES {
-        grid-area: ARTICLES;
+    
+    
+    
+    #SUBSCRIBE {
+        position: relative;
+        grid-area: BC;
+        width: 100%;
         display: grid;
         grid-row-gap: 20px;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto 150px;
-        width: 100%;
+        grid-column-gap: 20px;
+        grid-template-columns: 1fr 180px;
+        grid-template-rows: 0px auto auto;
         grid-template-areas:
-            "1"
-            "2"
-            "3"
-            "4";
+            "ICON . "
+            "TAG_MAIN TAG_MAIN"
+            "SUB_MAIN SUB_MAIN";
     }
-
-    #BLOG_SMALL_1 {
-        grid-area: 1;
-        width: 100%;
+    
+    #SUB_ICON {
+        grid-area: ICON;
+    }
+    
+    #MAIN_TAG {
+        grid-area: TAG_MAIN;
+    }
+    
+    #SUB_TAG {
+        grid-area: SUB_MAIN;
+    }
+    
+    #FORM {
+        grid-area: FORM;
         height: 100%;
-        max-height: 0;
-        display: grid;
-        grid-row-gap: 2.5px;
-        grid-column-gap: 15px;
-        grid-template-columns: 30px 1fr 120px;
-        grid-template-rows: 30px 60px 5px auto auto 5px auto 5px auto;
-        grid-template-areas:
-
-            "NUMBER TITLE IMAGE"
-            ". TITLE IMAGE"
-            ". TITLE ."
-            ". TITLE AUTHOR"
-            ". TITLE AUTHOR"
-            ". . ."
-            ". TIMESTAMP TIMESTAMP"
-            ". . ."
-            ". . BORDER";
     }
-
-    /*SECTION_2///////////////////////////////////////////////////////////////////////////////////////////*/
-
-    /*SECTION_4////TITLE//////////////////////////////////////////////////////////////////////////////////*/
-    #MAIN_TEXT_HOLDER {
+    
+    #SUB_BUTTON {
+        grid-area: BUTTON;
+        height: 100%;
+    }
+    
+    /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*SECTION_3////TIKTOK/////////////////////////////////////////////////////////////////////////////////*/
+    
+    
+    
+    .linkedin {
+        color: rgb(231 229 228);
+    }
+    
+    .twitter {
+        color: rgb(231 229 228);
+    }
+    
+    .facebook {
+        color: rgb(231 229 228);
+    }
+    
+    .reddit {
+        color: rgb(231 229 228);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    /*SECTION_3////TIKTOK/////////////////////////////////////////////////////////////////////////////////*/
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*SECTION_4////TITLE///////////////////////////////////////////////////////////////////////////////////*/
+    
+    
+    
+    
+    
+    
+    /*SECTION_4////TITLE///////////////////////////////////////////////////////////////////////////////////*/
+    #SIDE_TEXT_HOLDER {
         grid-area: MAIN-AREA;
         display: grid;
         width: 100%;
         grid-column-gap: 40px;
         grid-row-gap: 20px;
-        grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 300px auto 0px;
+        grid-template-columns: 200px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas:
-            ". . . . . . . . . . . ."
-            "TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT ."
-            ". . . . . . . . . . . ."
+            
+            "SIDE_NAV TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT ADVERT ADVERT ADVERT"
     }
-
-    /*SECTION_4////TITLE//////////////////////////////////////////////////////////////////////////////////*/
-        #AFFILIATE_HOLDER {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-row-gap: 30px;
-            grid-template-rows: auto auto auto;
-            grid-template-areas:
-                "SUBSCRIBE"
-                "AFFILIATE"
-                "PFBD";
-        }
     
-        #SUBSRIBE_HOLDER {
-            display: grid;
-            grid-row-gap: 10px;
-            grid-column-gap: 20px;
-            grid-template-columns: 1fr 180px;
-            grid-template-rows: auto auto 70px;
-            grid-template-areas:
-                "TAG_MAIN TAG_MAIN"
-                "SUB_MAIN SUB_MAIN"
-                "FORM FORM";   }
-
-
-    /*SECTION////PRODUCTS//////////////////////////////////////////////////////////////////////////////////////*/
-    #PRODUCTS_HOLDER_MOBILE {
-        display: none;
+    
+    
+    
+    #SUB_TEXT_HOLDER {
+        position: relative;
+        grid-area: TEXT;
+        top: 60px;
     }
+    
+    
+    #SIDE_NAV_HOLDER {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        grid-area: SIDE_NAV;
+    }
+    
+    
+    #SIDE_NAV {
+        width: 100%;
+        position: sticky;
+        top: 200px;
+        grid-area: SIDE_NAV;
+    }
+    
+    
+    #DISCLAIMER_HOLDER {
+        position: relative;
+        grid-area: DISCLAIMER;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    
 }
