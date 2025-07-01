@@ -183,57 +183,54 @@ export default function Product_Management() {
   };
 
   // PRODUCT CRUD
-//   const submitProduct = async (data) => {
-//     setLoading(true);
-//     try {
-//       // Ensure numeric fields are numbers
-//       const formattedData = {
-//         ...data,
-//         student_price: Number(data.student_price),
-//         commercial_price: Number(data.commercial_price),
-//         tags: data.tags ? data.tags.split(",").map(t => t.trim()).join(",") : "",
-//       };
-//       console.log("Submitting product data:", JSON.stringify(formattedData, null, 2)); // Debug
-//       // Validate form data
-//       const validation = productSchema.safeParse(formattedData);
-//       if (!validation.success) {
-//         const errors = validation.error.issues.map(issue => `${issue.path.join(".")}: ${issue.message}`).join("; ");
-//         console.error("Validation errors:", errors); // Debug
-//         toast.error(`Validation failed: ${errors}`);
-//         throw new Error(errors);
-//       }
-//       if (!formattedData.images.length) {
-//         toast.error("Please upload at least one image before saving");
-//         throw new Error("No images uploaded");
-//       }
-//       const res = await fetch("/api/products", {
-//         method: editingProd ? "PUT" : "POST",
-//         headers: { "Content-Type": "application/json" },
-//         body: JSON.stringify({ ...(editingProd || {}), ...formattedData }),
-//       });
-//       if (!res.ok) {
-//         const errorData = await res.json();
-//         console.error("API error response:", errorData); // Debug
-//         throw new Error(errorData.message || "Product operation failed");
-//       }
-//       const responseData = await res.json();
-//       console.log("Product saved:", responseData); // Debug
-//       toast.success(`Product ${editingProd ? "updated" : "added"} successfully`);
-//       prodForm.reset();
-//       setEditingProd(null);
-//       setSelectedImages([]); // Clear selected images
-//       setProducts(await fetch("/api/products").then(r => r.json()));
-//     } catch (error) {
-//       console.error("Product submission error:", error); // Debug
-//       toast.error(error.message || "Failed to save product");
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-const submitProduct = (data) => {
-  console.log("SUBMIT WORKING ✅", data);
-  alert("Submitted!");
-};
+  const submitProduct = async (data) => {
+    setLoading(true);
+    try {
+      // Ensure numeric fields are numbers
+      const formattedData = {
+        ...data,
+        student_price: Number(data.student_price),
+        commercial_price: Number(data.commercial_price),
+        tags: data.tags ? data.tags.split(",").map(t => t.trim()).join(",") : "",
+      };
+      console.log("Submitting product data:", JSON.stringify(formattedData, null, 2)); // Debug
+      // Validate form data
+      const validation = productSchema.safeParse(formattedData);
+      if (!validation.success) {
+        const errors = validation.error.issues.map(issue => `${issue.path.join(".")}: ${issue.message}`).join("; ");
+        console.error("Validation errors:", errors); // Debug
+        toast.error(`Validation failed: ${errors}`);
+        throw new Error(errors);
+      }
+      if (!formattedData.images.length) {
+        toast.error("Please upload at least one image before saving");
+        throw new Error("No images uploaded");
+      }
+      const res = await fetch("/api/products", {
+        method: editingProd ? "PUT" : "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...(editingProd || {}), ...formattedData }),
+      });
+      if (!res.ok) {
+        const errorData = await res.json();
+        console.error("API error response:", errorData); // Debug
+        throw new Error(errorData.message || "Product operation failed");
+      }
+      const responseData = await res.json();
+      console.log("Product saved:", responseData); // Debug
+      toast.success(`Product ${editingProd ? "updated" : "added"} successfully`);
+      prodForm.reset();
+      setEditingProd(null);
+      setSelectedImages([]); // Clear selected images
+      setProducts(await fetch("/api/products").then(r => r.json()));
+    } catch (error) {
+      console.error("Product submission error:", error); // Debug
+      toast.error(error.message || "Failed to save product");
+    } finally {
+      setLoading(false);
+    }
+  };
+
 
 
   const deleteProduct = async (id) => {
