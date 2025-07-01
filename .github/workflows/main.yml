@@ -24,12 +24,6 @@ jobs:
           curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
           source ~/.bashrc  # Source the .bashrc file after installation
 
-      - name: Install project dependencies
-        run: npm install  # No need for `-f` flag anymore
-
-      - name: Build production folder
-        run: npm run build
-
       - name: Deploy using ssh
         uses: appleboy/ssh-action@master
         with:
