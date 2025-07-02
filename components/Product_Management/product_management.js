@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect, useState, useCallback, useMemo, useRef } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -26,12 +26,15 @@ const productSchema = z.object({
   slug: z.string().min(2, "Slug must be at least 2 characters").regex(/^[a-z0-9-]+$/i, "Slug must contain only letters, numbers, or hyphens"),
   short_description: z.string().min(5, "Short description must be at least 5 characters"),
   description: z.string().min(5, "Description must be at least 5 characters"),
-  license_type: z.enum(["student", "commercial"], { message: "Select a valid license type" }),
+  license_type: z.enum(["student", "commercial"]),
   student_price: z.coerce.number().positive("Student price must be positive"),
   commercial_price: z.coerce.number().positive("Commercial price must be positive"),
   category: z.string().min(1, "Category is required"),
   tags: z.string().optional(),
-  images: z.array(z.string().url()).min(1, "At least one image is required"),
+  main_image: z.string().url("Main image must be a valid URL"),
+  image_1: z.string().url("Image 1 must be a valid URL").optional().or(z.literal("")),
+  image_2: z.string().url("Image 2 must be a valid URL").optional().or(z.literal("")),
+  image_3: z.string().url("Image 3 must be a valid URL").optional().or(z.literal("")),
 });
 
 export default function Product_Management() {
@@ -53,7 +56,10 @@ export default function Product_Management() {
       commercial_price: 0,
       category: "",
       tags: "",
-      images: [],
+      main_image: "",
+      image_1: "",
+      image_2: "",
+      image_3: "",
     },
   });
 
@@ -68,10 +74,8 @@ export default function Product_Management() {
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [availableTags, setAvailableTags] = useState([]);
-  const [selectedImages, setSelectedImages] = useState([]); // Track selected images with local URLs
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
-  const fileInputRef = useRef(null);
 
   // Auto-generate slug
   const generateSlug = (text) => text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
@@ -96,16 +100,12 @@ export default function Product_Management() {
         const catData = await catRes.json();
         const prodData = await prodRes.json();
 
-        console.log("Fetched categories:", catData); // Debug
-        console.log("Fetched products:", prodData); // Debug
-
         setCategories(catData);
         setProducts(prodData);
 
         const tags = [...new Set(prodData.flatMap(p => p.tags ? p.tags.split(",").map(t => t.trim()) : []))];
         setAvailableTags(tags);
       } catch (error) {
-        console.error("Error loading data:", error);
         toast.error(error.message || "Failed to load data. Please try again.");
       } finally {
         setLoading(false);
@@ -147,14 +147,11 @@ export default function Product_Management() {
         const errorData = await res.json();
         throw new Error(errorData.message || "Category operation failed");
       }
-      const responseData = await res.json();
-      console.log("Category saved:", responseData); // Debug
       toast.success("Category saved");
       catForm.reset();
       setEditingCat(null);
       setCategories(await fetch("/api/categories").then(r => r.json()));
     } catch (error) {
-      console.error("Category error:", error);
       toast.error(error.message || "Failed to save category");
     } finally {
       setLoading(false);
@@ -165,17 +162,14 @@ export default function Product_Management() {
     if (!confirm(`Are you sure you want to delete the category "${slug}"?`)) return;
     setLoading(true);
     try {
-      console.log("Attempting to delete category with slug:", slug); // Debug
       const res = await fetch(`/api/categories?slug=${encodeURIComponent(slug)}`, { method: "DELETE" });
       if (!res.ok) {
         const errorData = await res.json();
-        console.error("Delete category response:", errorData); // Debug
         throw new Error(errorData.message || "Failed to delete category");
       }
       toast.success("Category deleted");
       setCategories(prev => prev.filter(c => c.slug !== slug));
     } catch (error) {
-      console.error("Delete category error:", error);
       toast.error(error.message || "Failed to delete category");
     } finally {
       setLoading(false);
@@ -186,170 +180,69 @@ export default function Product_Management() {
   const submitProduct = async (data) => {
     setLoading(true);
     try {
-      // Ensure numeric fields are numbers
+      const images = [data.image_1, data.image_2, data.image_3].filter(url => url && url.trim() !== "");
       const formattedData = {
         ...data,
         student_price: Number(data.student_price),
         commercial_price: Number(data.commercial_price),
         tags: data.tags ? data.tags.split(",").map(t => t.trim()).join(",") : "",
+        images, // Use the filtered images array
+        main_image: data.main_image,
       };
-      console.log("Submitting product data:", JSON.stringify(formattedData, null, 2)); // Debug
-      // Validate form data
+
+      // Explicit validation for main_image
+      if (!formattedData.main_image || !z.string().url().safeParse(formattedData.main_image).success) {
+        toast.error("Please provide a valid main image URL");
+        throw new Error("Invalid or missing main image");
+      }
+
       const validation = productSchema.safeParse(formattedData);
       if (!validation.success) {
         const errors = validation.error.issues.map(issue => `${issue.path.join(".")}: ${issue.message}`).join("; ");
-        console.error("Validation errors:", errors); // Debug
         toast.error(`Validation failed: ${errors}`);
         throw new Error(errors);
       }
-      if (!formattedData.images.length) {
-        toast.error("Please upload at least one image before saving");
-        throw new Error("No images uploaded");
-      }
+
       const res = await fetch("/api/products", {
         method: editingProd ? "PUT" : "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...(editingProd || {}), ...formattedData }),
+        body: JSON.stringify(formattedData),
       });
+
       if (!res.ok) {
         const errorData = await res.json();
-        console.error("API error response:", errorData); // Debug
         throw new Error(errorData.message || "Product operation failed");
       }
-      const responseData = await res.json();
-      console.log("Product saved:", responseData); // Debug
+
       toast.success(`Product ${editingProd ? "updated" : "added"} successfully`);
       prodForm.reset();
       setEditingProd(null);
-      setSelectedImages([]); // Clear selected images
       setProducts(await fetch("/api/products").then(r => r.json()));
     } catch (error) {
-      console.error("Product submission error:", error); // Debug
       toast.error(error.message || "Failed to save product");
     } finally {
       setLoading(false);
     }
   };
 
-
-
   const deleteProduct = async (id) => {
     if (!confirm(`Are you sure you want to delete the product with ID "${id}"?`)) return;
     setLoading(true);
     try {
-      console.log("Attempting to delete product with ID:", id); // Debug
       const res = await fetch(`/api/products?id=${encodeURIComponent(id)}`, { method: "DELETE" });
       if (!res.ok) {
         const errorData = await res.json();
-        console.error("Delete product response:", errorData); // Debug
         throw new Error(errorData.message || "Failed to delete product");
       }
       toast.success("Product deleted");
       setProducts(prev => prev.filter(p => p.product_id !== id));
       if (preview?.product_id === id) setPreview(null);
     } catch (error) {
-      console.error("Delete product error:", error);
       toast.error(error.message || "Failed to delete product");
     } finally {
       setLoading(false);
     }
   };
-
-  // Image upload
-  const handleFiles = useCallback(async (files) => {
-    const validFiles = Array.from(files).filter(file => {
-      if (!file.type.startsWith("image/")) {
-        toast.error(`File "${file.name}" is not an image`);
-        return false;
-      }
-      return true;
-    });
-
-    if (validFiles.length === 0) {
-      toast.error("No valid images selected");
-      return;
-    }
-
-    // Add local URLs for preview
-    const newImages = validFiles.map(file => ({
-      file,
-      localUrl: URL.createObjectURL(file),
-      name: file.name,
-      status: "uploading",
-    }));
-    setSelectedImages(prev => [...prev, ...newImages]);
-    toast.info(`${validFiles.length} image${validFiles.length > 1 ? "s" : ""} selected`);
-
-    try {
-      const urls = [];
-      const cloudinaryUrl = process.env.NEXT_PUBLIC_CLOUDINARY_URL || "https://api.cloudinary.com/v1_1/dbj8h56jj/image/upload";
-      console.log("Cloudinary URL:", cloudinaryUrl); // Debug
-      for (let file of validFiles) {
-        try {
-          const form = new FormData();
-          form.append("file", file);
-          form.append("upload_preset", "unsigned");
-          form.append("folder", "Folders/Product_Main");
-          console.log("FormData content:", { file: file.name, upload_preset: "unsigned", folder: "Folders/Product_Main" }); // Debug
-          const res = await fetch(cloudinaryUrl, {
-            method: "POST",
-            body: form,
-          });
-          if (!res.ok) {
-            const errorData = await res.json();
-            console.error("Cloudinary upload error:", errorData); // Debug
-            toast.error(`Failed to upload ${file.name}: ${errorData.error?.message || "Unknown error"}`);
-            setSelectedImages(prev => prev.map(img => img.name === file.name ? { ...img, status: "failed" } : img));
-            continue;
-          }
-          const data = await res.json();
-          console.log("Cloudinary response:", data); // Debug
-          urls.push(data.secure_url);
-          setSelectedImages(prev => prev.map(img => img.name === file.name ? { ...img, status: "success", cloudinaryUrl: data.secure_url } : img));
-        } catch (error) {
-          console.error(`Error uploading file ${file.name}:`, error); // Debug
-          toast.error(`Failed to upload ${file.name}: ${error.message || "Unknown error"}`);
-          setSelectedImages(prev => prev.map(img => img.name === file.name ? { ...img, status: "failed" } : img));
-        }
-      }
-      if (urls.length > 0) {
-        prodForm.setValue("images", [...prodForm.getValues("images"), ...urls]);
-        toast.success(`${urls.length} image${urls.length > 1 ? "s" : ""} uploaded successfully`);
-      } else {
-        toast.error("No images uploaded successfully");
-      }
-    } catch (error) {
-      console.error("Image upload error:", error); // Debug
-      toast.error(error.message || "Failed to upload images");
-      setSelectedImages(prev => prev.map(img => img.status === "uploading" ? { ...img, status: "failed" } : img));
-    }
-  }, [prodForm]);
-
-  const onDrop = useCallback((ev) => {
-    ev.preventDefault();
-    handleFiles(ev.dataTransfer.files);
-  }, [handleFiles]);
-
-  const handleFileClick = () => {
-    fileInputRef.current?.click();
-  };
-
-  const removeImage = (index) => {
-    const image = selectedImages[index];
-    setSelectedImages(prev => prev.filter((_, i) => i !== index));
-    if (image.cloudinaryUrl) {
-      prodForm.setValue("images", prodForm.getValues("images").filter(url => url !== image.cloudinaryUrl));
-    }
-    toast.success(`Image "${image.name}" removed`);
-    URL.revokeObjectURL(image.localUrl); // Clean up local URL
-  };
-
-  // Clean up local URLs on unmount or form reset
-  useEffect(() => {
-    return () => {
-      selectedImages.forEach(img => URL.revokeObjectURL(img.localUrl));
-    };
-  }, [selectedImages]);
 
   // Tag filter and search
   const handleTagFilter = useCallback(
@@ -381,11 +274,6 @@ export default function Product_Management() {
   const cancelEditing = (form, setEditing) => {
     form.reset();
     setEditing(null);
-    if (form === prodForm) {
-      setSelectedImages([]);
-      prodForm.setValue("images", []);
-      selectedImages.forEach(img => URL.revokeObjectURL(img.localUrl));
-    }
   };
 
   return (
@@ -403,7 +291,7 @@ export default function Product_Management() {
         <div className="flex-1 flex flex-col gap-8">
           {/* Category Form */}
           <Form {...catForm}>
-            <form onSubmit={catForm.handleSubmit(submitCategory)} className="bg-white p-6 rounded-2xl shadow-xl space-y-6 transform hover:scale-[1.02] transition-transform duration-200 border border-gray-100">
+            <form onSubmit={catForm.handleSubmit(submitCategory)} className="bg-white p-6 rounded-2xl border border-gray-100 space-y-6">
               <h3 className="text-2xl font-semibold text-gray-800">{editingCat ? "Edit Category" : "Add Category"}</h3>
               <FormField
                 name="name"
@@ -461,7 +349,7 @@ export default function Product_Management() {
 
           {/* Product Form */}
           <Form {...prodForm}>
-            <form onSubmit={prodForm.handleSubmit(submitProduct)} className="bg-white p-6 rounded-2xl shadow-xl space-y-6 transform hover:scale-[1.02] transition-transform duration-200 border border-gray-100">
+            <form onSubmit={prodForm.handleSubmit(submitProduct)} className="bg-white p-6 rounded-2xl border border-gray-100 space-y-6">
               <h3 className="text-2xl font-semibold text-gray-800">{editingProd ? "Edit Product" : "Add Product"}</h3>
               {["product_id", "title", "slug", "short_description", "description", "tags"].map(f => (
                 <FormField
@@ -477,7 +365,7 @@ export default function Product_Management() {
                       <FormMessage className="text-red-500" />
                     </FormItem>
                   )}
-               />
+                  />
                 ))}
               <FormField
                 name="license_type"
@@ -550,66 +438,69 @@ export default function Product_Management() {
                   </FormItem>
                 )}
               />
-              <FormItem>
-                <FormLabel className="text-gray-700 font-medium">Images (click or drag & drop)</FormLabel>
-                <div
-                  onDrop={onDrop}
-                  onDragOver={e => e.preventDefault()}
-                  onClick={handleFileClick}
-                  className="p-6 border-2 border-dashed border-gray-300 rounded-lg hover:bg-blue-50 transition-colors cursor-pointer"
-                >
-                  <input
-                    type="file"
-                    multiple
-                    accept="image/*"
-                    ref={fileInputRef}
-                    hidden
-                    onChange={e => handleFiles(e.target.files)}
-                  />
-                  <p className="text-gray-500 text-center font-medium">Click or drag images here</p>
-                </div>
-                <FormMessage className="text-red-500" />
-                {/* Selected Images */}
-                {selectedImages.length > 0 && (
-                  <div className="mt-3">
-                    <p className="text-sm text-gray-600 font-medium">Selected Images:</p>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-2">
-                      {selectedImages.map((img, i) => (
-                        <div key={i} className="relative group">
+              <FormField
+                name="main_image"
+                control={prodForm.control}
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-gray-700 font-medium">Main Image URL</FormLabel>
+                    <FormControl>
+                      <Input
+                        {...field}
+                        placeholder="Enter main image URL"
+                        className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-lg"
+                      />
+                    </FormControl>
+                    <FormMessage className="text-red-500" />
+                    {field.value && (
+                      <div className="mt-3">
+                        <p className="text-sm text-gray-600 font-medium">Main Image Preview:</p>
+                        <img
+                          src={field.value}
+                          alt="Main Image Preview"
+                          className="w-full h-24 object-cover rounded-md mt-2"
+                          onError={(e) => {
+                            e.target.src = "/placeholder-image.jpg";
+                          }}
+                        />
+                      </div>
+                    )}
+                  </FormItem>
+                )}
+              />
+              {["image_1", "image_2", "image_3"].map((fieldName, index) => (
+                <FormField
+                  key={fieldName}
+                  name={fieldName}
+                  control={prodForm.control}
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-700 font-medium">Image {index + 1} URL (Optional)</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          placeholder={`Enter image ${index + 1} URL`}
+                          className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-lg"
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                      {field.value && (
+                        <div className="mt-3">
+                          <p className="text-sm text-gray-600 font-medium">Image {index + 1} Preview:</p>
                           <img
-                            src={img.cloudinaryUrl || img.localUrl}
-                            alt={img.name}
-                            className="w-full h-24 object-cover rounded-md shadow-sm"
+                            src={field.value}
+                            alt={`Image ${index + 1} Preview`}
+                            className="w-full h-24 object-cover rounded-md mt-2"
                             onError={(e) => {
-                              console.error(`Failed to load image: ${img.cloudinaryUrl || img.localUrl}`); // Debug
-                              e.target.src = "/placeholder-image.jpg"; // Fallback image
+                              e.target.src = "/placeholder-image.jpg";
                             }}
                           />
-                          <div className="absolute bottom-1 left-1 bg-black bg-opacity-50 text-white text-xs px-1 rounded">
-                            {img.name}
-                            {img.status === "uploading" && (
-                              <span className="ml-1 animate-pulse"> (Uploading...)</span>
-                            )}
-                            {img.status === "success" && (
-                              <span className="ml-1 text-green-400">✔</span>
-                            )}
-                            {img.status === "failed" && (
-                              <span className="ml-1 text-red-400">✖</span>
-                            )}
-                          </div>
-                          <button
-                            type="button"
-                            className="absolute top-1 right-1 bg-red-500 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
-                            onClick={() => removeImage(i)}
-                          >
-                            X
-                          </button>
                         </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </FormItem>
+                      )}
+                    </FormItem>
+                  )}
+                />
+              ))}
               <div className="flex gap-4">
                 <Button type="submit" disabled={loading} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg px-6">
                   {editingProd ? "Update" : "Add"}
@@ -640,7 +531,7 @@ export default function Product_Management() {
         </div>
 
         {/* Right: Lists + Preview */}
-        <div className="flex-1 flex flex-col gap-8 transition-all duration-300">
+        <div className="flex-1 flex flex-col gap-8">
           {/* Search and Tag Filter */}
           <div className="flex flex-col sm:flex-row gap-4">
             <Input
@@ -648,10 +539,10 @@ export default function Product_Management() {
               placeholder="Search by title or ID"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
-              className="flex-1 border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-lg bg-white shadow-sm"
+              className="flex-1 border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-lg bg-white"
             />
             <Select onValueChange={value => handleTagFilter(value.join(","))} multiple>
-              <SelectTrigger className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-lg bg-white shadow-sm">
+              <SelectTrigger className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-lg bg-white">
                 <SelectValue placeholder="Select tags" />
               </SelectTrigger>
               <SelectContent>
@@ -663,13 +554,13 @@ export default function Product_Management() {
           </div>
 
           {/* Category List */}
-          <div className="bg-white p-6 rounded-2xl shadow-xl space-y-4 border border-gray-100">
+          <div className="bg-white p-6 rounded-2xl border border-gray-100 space-y-4">
             <h4 className="text-xl font-semibold text-gray-800">Categories</h4>
             {categories.length === 0 && <p className="text-gray-500">No categories available</p>}
             {categories.map(c => (
               <div
                 key={c.slug}
-                className="flex justify-between items-center py-3 border-b border-gray-200 hover:bg-blue-50 transition-colors"
+                className="flex justify-between items-center py-3 border-b border-gray-200"
               >
                 <span className="text-gray-700 font-medium">{c.name}</span>
                 <div className="space-x-3">
@@ -685,13 +576,13 @@ export default function Product_Management() {
           </div>
 
           {/* Product List */}
-          <div className="bg-white p-6 rounded-2xl shadow-xl space-y-4 flex-1 overflow-y-auto border border-gray-100">
+          <div className="bg-white p-6 rounded-2xl border border-gray-100 space-y-4 flex-1 overflow-y-auto">
             <h4 className="text-xl font-semibold text-gray-800">Products</h4>
             {paginatedProducts.length === 0 && <p className="text-gray-500">No products available</p>}
             {paginatedProducts.map(p => (
               <div
                 key={p.product_id}
-                className="flex justify-between items-center py-3 border-b border-gray-200 hover:bg-blue-50 transition-colors cursor-pointer"
+                className="flex justify-between items-center py-3 border-b border-gray-200 cursor-pointer"
                 onClick={() => setPreview(p)}
               >
                 <div>
@@ -700,7 +591,17 @@ export default function Product_Management() {
                   <small className="text-gray-500">ID: {p.product_id}</small>
                 </div>
                 <div className="space-x-3">
-                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg" onClick={e => { e.stopPropagation(); prodForm.reset(p); setEditingProd(p); }}>
+                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg" onClick={e => {
+                    e.stopPropagation();
+                    prodForm.reset({
+                      ...p,
+                      main_image: p.main_image || "",
+                      image_1: p.images?.[0] || "",
+                      image_2: p.images?.[1] || "",
+                      image_3: p.images?.[2] || "",
+                    });
+                    setEditingProd(p);
+                  }}>
                     Edit
                   </Button>
                   <Button size="sm" variant="outline" className="border-red-500 text-red-500 hover:bg-red-50 font-semibold rounded-lg" onClick={e => { e.stopPropagation(); deleteProduct(p.product_id); }}>
@@ -732,9 +633,9 @@ export default function Product_Management() {
 
           {/* Product Preview */}
           {preview && (
-            <div className="bg-white p-6 rounded-2xl shadow-xl space-y-4 border border-gray-100">
+            <div className="bg-white p-6 rounded-2xl border border-gray-100 space-y-4">
               <h4 className="text-xl font-semibold text-gray-800">Preview: {preview.title}</h4>
-              {preview.images?.length > 1 && (
+              {preview.images?.length > 0 && (
                 <Button
                   size="sm"
                   className="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg"
@@ -743,7 +644,7 @@ export default function Product_Management() {
                   {showCarousel ? "Hide Carousel" : "Show Carousel"}
                 </Button>
               )}
-              {showCarousel && preview.images?.length > 1 ? (
+              {showCarousel && preview.images?.length > 0 ? (
                 <Carousel showThumbs={false} dynamicHeight={true} className="mt-2">
                   {preview.images.map((u, i) => (
                     <div key={i}>
@@ -752,8 +653,7 @@ export default function Product_Management() {
                         alt={`Preview ${i}`}
                         className="w-full h-48 object-cover rounded-lg"
                         onError={(e) => {
-                          console.error(`Failed to load preview image: ${u}`); // Debug
-                          e.target.src = "/placeholder-image.jpg"; // Fallback image
+                          e.target.src = "/placeholder-image.jpg";
                         }}
                       />
                     </div>
@@ -761,12 +661,11 @@ export default function Product_Management() {
                 </Carousel>
               ) : (
                 <img
-                  src={preview.images?.[0]}
-                  alt=""
+                  src={preview.main_image}
+                  alt="Main Image"
                   className="w-full h-48 object-cover rounded-lg mt-2"
                   onError={(e) => {
-                    console.error(`Failed to load preview image: ${preview.images?.[0]}`); // Debug
-                    e.target.src = "/placeholder-image.jpg"; // Fallback image
+                    e.target.src = "/placeholder-image.jpg";
                   }}
                 />
               )}
