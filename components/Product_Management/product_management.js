@@ -533,7 +533,7 @@ export default function Product_Management() {
         {/* Right: Lists + Preview */}
         <div className="flex-1 flex flex-col gap-8">
           {/* Search and Tag Filter */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          {/* <div className="flex flex-col sm:flex-row gap-4">
             <Input
               type="text"
               placeholder="Search by title or ID"
@@ -551,7 +551,7 @@ export default function Product_Management() {
                 ))}
               </SelectContent>
             </Select>
-          </div>
+          </div> */}
 
           {/* Category List */}
           <div className="bg-white p-6 rounded-2xl border border-gray-100 space-y-4">
