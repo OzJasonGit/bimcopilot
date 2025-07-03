@@ -20,6 +20,7 @@ const categorySchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   slug: z.string().min(2, "Slug must be at least 2 characters").regex(/^[a-z0-9-]+$/i, "Slug must contain only letters, numbers, or hyphens"),
 });
+
 const productSchema = z.object({
   product_id: z.string().min(1, "Product ID is required"),
   title: z.string().min(2, "Title must be at least 2 characters"),
@@ -35,6 +36,8 @@ const productSchema = z.object({
   image_1: z.string().url("Image 1 must be a valid URL").optional().or(z.literal("")),
   image_2: z.string().url("Image 2 must be a valid URL").optional().or(z.literal("")),
   image_3: z.string().url("Image 3 must be a valid URL").optional().or(z.literal("")),
+  image_4: z.string().url("Image 4 must be a valid URL").optional().or(z.literal("")),
+  image_5: z.string().url("Image 5 must be a valid URL").optional().or(z.literal("")),
 });
 
 export default function Product_Management() {
@@ -60,6 +63,8 @@ export default function Product_Management() {
       image_1: "",
       image_2: "",
       image_3: "",
+      image_4: "",
+      image_5: "",
     },
   });
 
@@ -100,10 +105,12 @@ export default function Product_Management() {
         const catData = await catRes.json();
         const prodData = await prodRes.json();
 
-        setCategories(catData);
-        setProducts(prodData);
+        console.log("Fetched products:", prodData); // Debug log
 
-        const tags = [...new Set(prodData.flatMap(p => p.tags ? p.tags.split(",").map(t => t.trim()) : []))];
+        setCategories(Array.isArray(catData) ? catData : catData.data || []);
+        setProducts(Array.isArray(prodData.data) ? prodData.data : prodData || []);
+
+        const tags = [...new Set(prodData.data?.flatMap(p => p.tags ? p.tags.split(",").map(t => t.trim()) : []) || [])];
         setAvailableTags(tags);
       } catch (error) {
         toast.error(error.message || "Failed to load data. Please try again.");
@@ -180,13 +187,14 @@ export default function Product_Management() {
   const submitProduct = async (data) => {
     setLoading(true);
     try {
-      const images = [data.image_1, data.image_2, data.image_3].filter(url => url && url.trim() !== "");
+      // Include all image fields in the images array
+      const images = [data.image_1, data.image_2, data.image_3, data.image_4, data.image_5].filter(url => url && url.trim() !== "");
       const formattedData = {
         ...data,
         student_price: Number(data.student_price),
         commercial_price: Number(data.commercial_price),
         tags: data.tags ? data.tags.split(",").map(t => t.trim()).join(",") : "",
-        images, // Use the filtered images array
+        images, // Include all valid image URLs
         main_image: data.main_image,
       };
 
@@ -214,11 +222,15 @@ export default function Product_Management() {
         throw new Error(errorData.message || "Product operation failed");
       }
 
+      const newProduct = await res.json();
+      console.log("Product saved:", newProduct); // Debug log
+
       toast.success(`Product ${editingProd ? "updated" : "added"} successfully`);
       prodForm.reset();
       setEditingProd(null);
-      setProducts(await fetch("/api/products").then(r => r.json()));
+      setProducts(await fetch("/api/products").then(r => r.json()).then(d => Array.isArray(d.data) ? d.data : d));
     } catch (error) {
+      console.error("Product submission error:", error);
       toast.error(error.message || "Failed to save product");
     } finally {
       setLoading(false);
@@ -321,7 +333,7 @@ export default function Product_Management() {
               />
               <div className="flex gap-4">
                 <Button type="submit" disabled={loading} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg px-6">
-                  {editingCat ? "Update" : "Add"}
+                  {editingCat ? "Update" : "submit"}
                 </Button>
                 {editingCat && (
                   <>
@@ -468,7 +480,7 @@ export default function Product_Management() {
                   </FormItem>
                 )}
               />
-              {["image_1", "image_2", "image_3"].map((fieldName, index) => (
+              {["image_1", "image_2", "image_3", "image_4", "image_5"].map((fieldName, index) => (
                 <FormField
                   key={fieldName}
                   name={fieldName}
@@ -503,7 +515,7 @@ export default function Product_Management() {
               ))}
               <div className="flex gap-4">
                 <Button type="submit" disabled={loading} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg px-6">
-                  {editingProd ? "Update" : "Add"}
+                  {editingProd ? "Update" : "submit"}
                 </Button>
                 {editingProd && (
                   <>
@@ -533,7 +545,8 @@ export default function Product_Management() {
         {/* Right: Lists + Preview */}
         <div className="flex-1 flex flex-col gap-8">
           {/* Search and Tag Filter */}
-          {/* <div className="flex flex-col sm:flex-row gap-4">
+          {/* Commented out as per original code
+          <div className="flex flex-col sm:flex-row gap-4">
             <Input
               type="text"
               placeholder="Search by title or ID"
@@ -551,7 +564,8 @@ export default function Product_Management() {
                 ))}
               </SelectContent>
             </Select>
-          </div> */}
+          </div>
+          */}
 
           {/* Category List */}
           <div className="bg-white p-6 rounded-2xl border border-gray-100 space-y-4">
@@ -599,6 +613,8 @@ export default function Product_Management() {
                       image_1: p.images?.[0] || "",
                       image_2: p.images?.[1] || "",
                       image_3: p.images?.[2] || "",
+                      image_4: p.images?.[3] || "",
+                      image_5: p.images?.[4] || "",
                     });
                     setEditingProd(p);
                   }}>
