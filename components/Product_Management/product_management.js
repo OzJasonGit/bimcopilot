@@ -188,14 +188,14 @@ export default function Product_Management() {
     setLoading(true);
     try {
       // Include all image fields in the images array
-      const images = [data.image_1, data.image_2, data.image_3, data.image_4, data.image_5].filter(url => url && url.trim() !== "");
+      const images = [data.main_image, data.image_1, data.image_2, data.image_3, data.image_4, data.image_5].filter(url => url && url.trim() !== "");
       const formattedData = {
         ...data,
         student_price: Number(data.student_price),
         commercial_price: Number(data.commercial_price),
         tags: data.tags ? data.tags.split(",").map(t => t.trim()).join(",") : "",
         images, // Include all valid image URLs
-        main_image: data.main_image,
+
       };
 
       // Explicit validation for main_image
@@ -377,8 +377,8 @@ export default function Product_Management() {
                       <FormMessage className="text-red-500" />
                     </FormItem>
                   )}
-                  />
-                ))}
+                />
+              ))}
               <FormField
                 name="license_type"
                 control={prodForm.control}
@@ -677,7 +677,7 @@ export default function Product_Management() {
                 </Carousel>
               ) : (
                 <img
-                  src={preview.main_image}
+                  src={preview.images?.[0]}
                   alt="Main Image"
                   className="w-full h-48 object-cover rounded-lg mt-2"
                   onError={(e) => {
