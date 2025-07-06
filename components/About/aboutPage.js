@@ -110,7 +110,7 @@ export default class Aboutpage extends Component {
                         <div className="content-center" id={styles.MY_FACE_HOLDER}>
                           <div
                             id={styles.MY_FACE}
-                            className="border-8 border-stone-200 rounded-full"
+                            
                           >
                             {firstStory && ( // Check if firstStory exists
                               <Image
