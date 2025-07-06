@@ -107,7 +107,7 @@ export default class Aboutpage extends Component {
                           </h1>
                         </div>
 
-                        <div className="content-center" id={styles.MY_FACE_HOLDER}>
+                        <div className="content-center ... rounded-full ... overflow-hidden ..." id={styles.MY_FACE_HOLDER}>
                           <div
                             id={styles.MY_FACE}
                             
