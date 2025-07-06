@@ -6,7 +6,7 @@ import SkeletonLoader from '../Loader/loader';
 import Infinite_Scroll from '../Carousel/Infinite_Scroll';
 import Tab from '../Tabs/tabs';
 
-import Oz_Jason from "./Oz_Jason.png";
+import Oz_Jason from "./Oz_Jason_Trimmed.png";
     
 
 export default class Aboutpage extends Component {
