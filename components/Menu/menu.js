@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import styles from './Menu.module.css'
 
 
-import bimcopilot_icon from "./Tesseract_Logo_2.png";
+import bimcopilot_icon from "./bimcopilot_logo.svg";
 import dynamic from "next/dynamic";
 
 const Hamburger = dynamic(() => import("./Burger/burger"), { ssr: false });
