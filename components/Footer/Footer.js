@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 import Subform from "../Subscribetop/Client/subform";
 
-import logoMobile from './Bim-copilot-logo_Mobile_3.png';    
+import logoMobile from './bimcopilot_logo_text_horizontal_white.svg';    
 import rocketShip from './giphy.gif';
 import logoARB from './logo_ARB.png';
 import logoRIBA from './logo_RIBA.png';
