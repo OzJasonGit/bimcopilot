@@ -6,6 +6,9 @@ import SkeletonLoader from '../Loader/loader';
 import Infinite_Scroll from '../Carousel/Infinite_Scroll';
 import Tab from '../Tabs/tabs';
 
+import Oz_Jason from "./Oz_Jason.png";
+    
+
 export default class Aboutpage extends Component {
   constructor(props) {
     super(props);
@@ -118,7 +121,7 @@ export default class Aboutpage extends Component {
                                 key={firstStory._id}
                                 width={500}
                                 height={500}
-                                src={firstStory.image}
+                                src={Oz_Jason}
                                 style={{
                                   position: 'absolute',
                                   width: '100%',
