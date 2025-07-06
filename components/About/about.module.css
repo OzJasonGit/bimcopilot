@@ -198,6 +198,8 @@
   width: 200px;
   align-items: center;
   justify-content: center;
+  border-radius: calc(infinity * 1px);
+  overflow: hidden;
 }
 
 #WHO_WE_WORK_WITH_HOLDER {
