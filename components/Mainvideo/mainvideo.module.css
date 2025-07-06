@@ -1724,6 +1724,20 @@
       ". . .";
   }
 
+
+
+
+.grid_0_main_back {
+    z-index: -10;
+    grid-row-gap: 40px;
+    grid-template-rows: 0 auto 0;
+    grid-template-areas:
+        ". . . . . . ."
+        ". MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA ."
+        ". . . . . . .";
+    vertical-align: middle;
+}
+
   #SHADOW_SECTION {
     position: relative;
     width: 100%;
@@ -1775,6 +1789,40 @@
       ". SUB SUB . ."
       ". . . . .";
   }
+
+
+
+
+
+
+
+.video_section_back {
+    grid-area: MAIN-AREA;
+    display: grid
+;
+    width: 100%;
+    height: auto;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto 100px 250px 150px 100px auto 700px auto 140px auto;
+    grid-template-areas:
+        " ."
+        " GRAPHIC"
+        " GRAPHIC"
+        " GRAPHIC"
+        " GRAPHIC"
+        " GRAPHIC"
+        " GRAPHIC"
+        " ASTRONAUT"
+        " ASTRONAUT"
+        " ASTRONAUT";
+}
+
+
+
+
+
+
 
   .sub_head {
     position: relative;
