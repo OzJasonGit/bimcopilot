@@ -90,7 +90,7 @@
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
   grid-template-areas:
     ". . . . . . ."
-    ". BANNER-1 . MAIN-AREA MAIN-AREA MAIN-AREA ."
+    ". . . MAIN-AREA MAIN-AREA MAIN-AREA ."
     ". . . . . . .";
   vertical-align: middle;
 }
@@ -1064,63 +1064,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*SECTION_8////PROCESS/////////////////////////////////////////////////////////////////////////////////*/
 
 /*SECTION_9////VIDEO///////////////////////////////////////////////////////////////////////////////////*/
@@ -1183,77 +1126,6 @@
     "TAG TAG TAG TAG TAG ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT"
     ". . . . . ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT ASTRONAUT";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1367,94 +1239,355 @@
   max-height: 0;
 }
 
-@media all and (max-width: 480px) {
-  #VIDEO_LATEST_HOLDER {
-    position: relative;
-    grid-area: VIDEO;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-row-gap: 20px !important ;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "VIDEO"
-      "TITLE";
-  }
-}
 
-/*SECTION_9////VIDEO/////////////////////////////////////////////////////////////////////////////////*/
 
-/*SECTION_10////TAG///////////////////////////////////////////////////////////////////////////////////*/
-#SHADOW_SECTION_TAG {
-  position: relative;
-  width: 100%;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  background-color: rgb(23, 23, 23);
-  z-index: -30000;
-  top: 0px;
-}
 
-#TAG_HOLDER {
-  grid-area: MAIN-AREA;
-  display: grid;
-  width: 100%;
-  grid-column-gap: 40px;
-  grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "TAG TAG TAG TAG TAG TAG . . . . . .";
-}
 
-#TAG {
-  grid-area: TAG;
-  width: 100%;
-}
 
-/*SECTION_10////TAG////////////////////////////////////////////////////////////////////////////////////////*/
 
-/*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////////*/
-#SHADOW_SECTION_ASTRONAUT {
-  position: relative;
-  width: 100%;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  background-color: rgb(23, 23, 23);
-  z-index: -30000;
-  top: 0px;
-}
 
-.grid_0_image_right {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  background-color: transparent;
-  display: grid;
-  grid-column-gap: 40px;
-  grid-row-gap: 20px;
-  grid-template-rows: 20px auto 20px;
-  grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20px;
-  grid-template-areas:
-    ". . . . . . . . . . . . ."
-    ". . . . . . . IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2 IMAGE_2"
-    ". . . . . . . . . . . . .";
-}
 
-#ASTRONAUT_IMAGE_2 {
-  position: sticky;
-  grid-area: IMAGE_2;
-  width: 100%;
-  height: 900px;
-  margin-top: -980px;
-}
 
-/*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////////*/
-/*SECTION_2////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
-/*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-/*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 960px) and (max-width: 1280px) {
   .grid_0 {
     width: 100%;
@@ -1500,6 +1633,20 @@
       "BANNER-1 MAIN-AREA BANNER-2"
       ". . .";
   }
+
+
+
+
+.grid_0_main_back {
+    z-index: -10;
+    grid-row-gap: 40px;
+    grid-template-rows: 0 auto 0;
+    grid-template-areas:
+        ". . ."
+        ". MAIN-AREA ."
+        ". . .";
+    vertical-align: middle;
+}
 
   #SHADOW_SECTION {
     position: relative;
@@ -1552,6 +1699,40 @@
       ". SUB SUB . ."
       ". . . . .";
   }
+
+
+
+
+
+
+
+.video_section_back {
+    grid-area: MAIN-AREA;
+    display: grid
+;
+    width: 100%;
+    height: auto;
+    grid-column-gap: 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto 100px 250px 150px 100px auto 700px auto 140px auto;
+    grid-template-areas:
+        " ."
+        " GRAPHIC"
+        " GRAPHIC"
+        " GRAPHIC"
+        " GRAPHIC"
+        " GRAPHIC"
+        " GRAPHIC"
+        " ASTRONAUT"
+        " ASTRONAUT"
+        " ASTRONAUT";
+}
+
+
+
+
+
+
 
   .sub_head {
     position: relative;
@@ -1718,6 +1899,194 @@
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
 
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 480px) and (max-width: 960px) {
   .center_holder {
     width: 100%;
@@ -2271,37 +2640,218 @@
     height: 760px;
     top: 0px;
   }
+
+
+  
 }
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
 /*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 0px) and (max-width: 480px) {
-  /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
-  /*#_H1 {
-    margin-bottom: 0px;
-    font-size: 40px;
-  }
-
-  #_H2 {
-    margin-bottom: 0px;
-    font-size: 30px;
-  }
-
-  #_H3 {
-    margin-bottom: 0px;
-  }
-
-  #_H4 {
-    margin-bottom: 0px;
-  }
-
-  #_H5 {
-    margin-bottom: -2.5px;
-  }*/
-
-  /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
-
+ 
   /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
   .grid_0_main {
     width: 100%;

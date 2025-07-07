@@ -6,6 +6,9 @@ import SkeletonLoader from '../Loader/loader';
 import Infinite_Scroll from '../Carousel/Infinite_Scroll';
 import Tab from '../Tabs/tabs';
 
+import Oz_Jason from "./Oz_Jason_Trimmed.png";
+    
+
 export default class Aboutpage extends Component {
   constructor(props) {
     super(props);
@@ -107,10 +110,10 @@ export default class Aboutpage extends Component {
                           </h1>
                         </div>
 
-                        <div className="content-center" id={styles.MY_FACE_HOLDER}>
+                        <div className="content-center ... rounded-full ... overflow-hidden ..." id={styles.MY_FACE_HOLDER}>
                           <div
                             id={styles.MY_FACE}
-                            className="border-8 border-stone-200 rounded-full"
+                            
                           >
                             {firstStory && ( // Check if firstStory exists
                               <Image
@@ -118,7 +121,7 @@ export default class Aboutpage extends Component {
                                 key={firstStory._id}
                                 width={500}
                                 height={500}
-                                src={firstStory.image}
+                                src={Oz_Jason}
                                 style={{
                                   position: 'absolute',
                                   width: '100%',
