@@ -93,6 +93,9 @@
     ". . . MAIN-AREA MAIN-AREA MAIN-AREA ."
     ". . . . . . .";
   vertical-align: middle;
+  grid-area: two;
+  margin-top: -2082px;
+
 }
 
 
@@ -1652,6 +1655,8 @@
         ". . . MAIN-AREA MAIN-AREA MAIN-AREA ."
         ". . . . . . .";
       vertical-align: middle;
+      grid-area: two;
+      margin-top: -2082px;
     }
   
   
@@ -3075,6 +3080,8 @@
       ". MAIN-AREA ."
       ". . .";
     vertical-align: middle;
+    grid-area: two;
+    margin-top: -2082px;
   }
 
   .grid_0_image_left {
@@ -3862,6 +3869,8 @@
       ". MAIN-AREA ."
       ". . .";
     vertical-align: middle;
+    grid-area: two;
+    margin-top: -1200px;
   }
 
 
