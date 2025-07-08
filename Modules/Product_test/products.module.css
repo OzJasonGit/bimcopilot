@@ -5,6 +5,29 @@
   justify-content: center;
 }
 
+
+.center_holder {
+  position: relative;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: aliceblue;
+  margin: 0;
+}
+
+#SHADOW_SECTION {
+  position: relative;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: rgb(23, 23, 23);
+  z-index: -30000;
+  top: 0px;
+
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

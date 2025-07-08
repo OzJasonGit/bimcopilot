@@ -55,33 +55,33 @@ const Products = () => {
       <Subscribetop />
 
       {loading ? (
-        <div className={styles.loader}><div className={styles.spinner}></div></div>
-      ) : (
-        <section className={styles.container}>
-        <div className={styles.grid}>
-  {products.map((product, index) => (
-    <div
-      key={product.id}
-      className={`${styles.card} ${index === 4 ? styles.cardLarge : ''}`}
-    >
-      <Link href={`/products/${product.slug}`}>
-        <div className={styles.imageWrapper}>
-          <Image
-            src={product.image}
-            alt={product.title}
-            fill
-            className={styles.image}
-          />
+        <div className={styles.loader}><div className={styles.spinner}></div>
         </div>
-      </Link>
-      <div className={styles.text}>
-        <h2 className={styles.title}>{parse(product.title)}</h2>
-        <p className={styles.subtitle}>{parse(product.subtitle)}</p>
-      </div>
-    </div>
-  ))}
-</div>
-
+      ) : (
+        <section  id={styles.SHADOW_SECTION} class={styles.center_holder}>
+            <div className={styles.grid}>
+                {products.map((product, index) => (
+                  <div
+                    key={product.id}
+                    className={`${styles.card} ${index === 4 ? styles.cardLarge : ''}`}
+                  >
+                    <Link href={`/products/${product.slug}`}>
+                      <div className={styles.imageWrapper}>
+                        <Image
+                          src={product.image}
+                          alt={product.title}
+                          fill
+                          className={styles.image}
+                        />
+                      </div>
+                    </Link>
+                    <div className={styles.text}>
+                      <h2 className={styles.title}>{parse(product.title)}</h2>
+                      <p className={styles.subtitle}>{parse(product.subtitle)}</p>
+                    </div>
+                  </div>
+                ))}
+            </div>
         </section>
       )}
 
