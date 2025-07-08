@@ -124,6 +124,17 @@
   to { transform: rotate(360deg); }
 }
 
+
+
+
+
+
+
+
+
+
+
+
 /* Responsive */
 @media (max-width: 1024px) {
   .grid {
@@ -132,7 +143,27 @@
   .cardLarge {
     grid-column: span 2;
   }
+
+
+  .grid_0_product {
+    width: 100%;
+    max-width: 1640px;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 40px;
+    grid-row-gap: 40px;
+    grid-template-rows: 40px auto 20px;
+    grid-template-columns: 0px 1fr 0px;
+    grid-template-areas:
+      ". . ."
+      "BANNER-1 MAIN_AREA BANNER-2"
+      ". . .";
+  }
 }
+
+
+
+
 @media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
@@ -140,4 +171,23 @@
   .cardLarge {
     grid-column: span 1;
   }
+
+
+  .grid_0_product {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    grid-template-rows: 40px auto 0px;
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-areas:
+      ". . ."
+      ". MAIN_AREA ."
+      ". . .";
+  }
 }
+
+
