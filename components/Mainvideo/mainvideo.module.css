@@ -1616,6 +1616,9 @@
         ". . .";
     }
   
+    
+
+
     .grid_0_main {
       width: 100%;
       max-width: 1520px;
@@ -1623,12 +1626,12 @@
       display: grid;
       grid-column-gap: 0px;
       grid-row-gap: 40px;
-      grid-template-rows: 0px auto 0px;
-      grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+      grid-template-rows: 0 auto 0;
+      grid-template-columns: 40px 1fr 40px;
       grid-template-areas:
-        ". . . . . . ."
-        ". BANNER-1 . MAIN-AREA MAIN-AREA MAIN-AREA ."
-        ". . . . . . .";
+        ". . ."
+        ". MAIN-AREA ."
+        ". . .";
     }
   
   
