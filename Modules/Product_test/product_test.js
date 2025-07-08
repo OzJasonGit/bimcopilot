@@ -59,7 +59,13 @@ const Products = () => {
         </div>
       ) : (
         <section  id={styles.SHADOW_SECTION} class={styles.center_holder}>
-            <div className={styles.grid}>
+          <div class={styles.grid_0_product} >
+
+          </div>
+
+            <div className={styles.grid}
+                 style={{gridArea:"MAIN_AREA"}}
+                 >
                 {products.map((product, index) => (
                   <div
                     key={product.id}
