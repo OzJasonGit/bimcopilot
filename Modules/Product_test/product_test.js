@@ -59,10 +59,7 @@ const Products = () => {
         </div>
       ) : (
         <section  id={styles.SHADOW_SECTION} class={styles.center_holder}>
-          <div class={styles.grid_0_product} >
-
-          </div>
-
+          <div class={styles.grid_0_product}>
             <div className={styles.grid}
                  style={{gridArea:"MAIN_AREA"}}
                  >
@@ -88,6 +85,9 @@ const Products = () => {
                   </div>
                 ))}
             </div>
+          </div>
+
+            
         </section>
       )}
 
