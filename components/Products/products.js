@@ -60,7 +60,8 @@ export default class Products extends Component {
                       </h3>
                       
                       <h3 id={styles._H3} class=" text-neutral-700 ... font-avant_garde_bold ...">
-                        {" "}
+                        <br/>
+                        <br/>
                         From $53.90
                       </h3>
                     </Link>
