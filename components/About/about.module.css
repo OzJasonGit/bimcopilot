@@ -777,7 +777,7 @@
     position: sticky;
     display: grid;
     width: 100%;
-    height: 650px;
+    height: 420px;
     top: 160px;
     grid-template-columns: 15px 1fr 15px;
     grid-template-rows: 30px auto 20px;
