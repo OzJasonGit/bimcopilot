@@ -3262,6 +3262,7 @@
         z-index: -30000;
         ;
         top: 0px;
+        margin-top: -280px;
     }
 
     #TAG_HOLDER {
