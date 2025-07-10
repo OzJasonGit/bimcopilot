@@ -14,8 +14,8 @@
 
 #_H3 {
   margin-bottom: 0px;
-  font-size: 0.85rem;
-  line-height: 1.3rem;
+  font-size: 0.80rem;
+  line-height: 1.2rem;
 }
 
 #_H4 {
@@ -3890,7 +3890,7 @@
   height: auto;
   grid-column-gap: 40px;
   grid-template-columns: 1fr;
-  grid-template-rows: 60px auto 250px 150px 60px auto 700px auto 140px auto;
+  grid-template-rows: 60px auto 250px 50px 60px auto 700px auto 140px auto;
   grid-template-areas:
     " ."
     " GRAPHIC"
