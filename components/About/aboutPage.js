@@ -240,7 +240,8 @@ export default class Aboutpage extends Component {
                           <br />
                           <br />
                           <a
-                            className="text-emerald-200 drop-shadow-xl font-avant_garde_medium text-lg"
+                            className="text-emerald-200 drop-shadow-xl font-avant_garde_bold text-lg"
+                            id={styles._H2}
                           >
                             <Link href="/">plasticfreebydesign.com</Link>
                           </a>
