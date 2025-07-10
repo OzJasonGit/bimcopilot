@@ -67,7 +67,7 @@ export default class Tiktoktop extends Component {
             <div id={styles.TIKTOK_HOLDER}>
               <div
                 id={styles.TIKTOK}
-                className="rounded-2xl border-4 border-stone-700 ..."
+                className="rounded-2xl drop-shadow-2xl shadow-black"
               >
                 <Tiktok />
                 <div className="tiktok-video" style={{ position: "relative" }}>
