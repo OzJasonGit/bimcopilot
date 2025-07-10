@@ -104,7 +104,7 @@ const Blogpage = ({ stories, topStories }) => {
             <div id={styles.HEAD_TITLE}>
               {mainStory.slug && (
                 <Link href={`/blog/${mainStory.slug}`}>
-                  <h2 id={styles._H2} className="text-stone-200 font-avant_garde_bold">
+                  <h2 id={styles._H2} className="text-stone-200 font-avant_garde_medium">
                     {parse(mainStory.title || "Untitled")}
                   </h2>
                 </Link>
@@ -114,7 +114,7 @@ const Blogpage = ({ stories, topStories }) => {
             <div id={styles.HEAD_SUBTITLE}>
               {mainStory.slug && (
                 <Link href={`/blog/${mainStory.slug}`}>
-                  <h3 id={styles._H3} className="text-left text-xl text-stone-400 font-avant_garde_bold">
+                  <h3 id={styles._H3} className="text-left text-xl text-stone-400 font-avant_garde_medium">
                     {parse(mainStory.subtitle || "")}
                   </h3>
                 </Link>
@@ -124,7 +124,7 @@ const Blogpage = ({ stories, topStories }) => {
             <div id={styles.AUTHOR}>
               {mainStory.slug && (
                 <Link href={`/blog/${mainStory.slug}`}>
-                  <h3 id={styles._H3} className="text-left text-xl text-stone-400 font-avant_garde_bold">
+                  <h3 id={styles._H3} className="text-left text-xl text-stone-400 font-avant_garde_medium">
                     {parse(mainStory.author || "Unknown Author")}
                   </h3>
                 </Link>
