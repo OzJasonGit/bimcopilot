@@ -104,7 +104,7 @@ const Blogpage = ({ stories, topStories }) => {
             <div id={styles.HEAD_TITLE}>
               {mainStory.slug && (
                 <Link href={`/blog/${mainStory.slug}`}>
-                  <h2 id={styles._H2} className="text-stone-200 font-avant_garde_medium">
+                  <h2 id={styles._H2} className="text-stone-200 font-avant_garde_bold">
                     {parse(mainStory.title || "Untitled")}
                   </h2>
                 </Link>
