@@ -16,6 +16,7 @@ import Collapsed_Sales from '@/components/Collapse_Sales/collapse_sales';
 import Services_1 from '@/components/services_1/services_1';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import handleCheckout from '@/components/Payment/payment';
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -36,9 +37,9 @@ const ProductDetail = () => {
         }
         const data = await res.json();
         const fetchedProducts = Array.isArray(data.data) ? data.data : Array.isArray(data) ? data : [];
-        
+
         const foundProduct = fetchedProducts.find(p => p.slug === slug);
-        
+
         if (!foundProduct) {
           throw new Error('Product not found');
         }
@@ -46,11 +47,11 @@ const ProductDetail = () => {
         const formattedProduct = {
           _id: foundProduct._id || '',
           product_id: foundProduct.product_id || 'Unknown',
-          image: Array.isArray(foundProduct.images) && foundProduct.images.length > 0 
-            ? foundProduct.images[0] 
+          image: Array.isArray(foundProduct.images) && foundProduct.images.length > 0
+            ? foundProduct.images[0]
             : '/images/placeholder.jpg',
-          images: Array.isArray(foundProduct.images) && foundProduct.images.length > 0 
-            ? foundProduct.images 
+          images: Array.isArray(foundProduct.images) && foundProduct.images.length > 0
+            ? foundProduct.images
             : ['/images/placeholder.jpg'],
           title: foundProduct.title || 'Untitled Product',
           subtitle: foundProduct.short_description || 'No description available',
@@ -92,8 +93,8 @@ const ProductDetail = () => {
     setLicenseType(value);
   };
 
-  const currentPrice = licenseType === 'commercial' 
-    ? product?.commercial_price 
+  const currentPrice = licenseType === 'commercial'
+    ? product?.commercial_price
     : product?.student_price;
 
   if (loading) {
@@ -222,8 +223,8 @@ const ProductDetail = () => {
                     License Type
                   </h3>
                   <br />
-                  <Tabs 
-                    value={licenseType} 
+                  <Tabs
+                    value={licenseType}
                     onValueChange={handleLicenseChange}
                     className="w-[400px]"
                   >
@@ -249,15 +250,25 @@ const ProductDetail = () => {
                     </div>
 
                     <div id={styles.PAYPAL}>
-                      <Link href="/payment">
-                        <Button
-                          variant="secondary"
-                          className="border border-solid rounded-md border-stone-800"
-                          style={{ position: 'absolute', width: '100%', height: '100%' }}
-                        >
-                          Buy With Paypal
-                        </Button>
-                      </Link>
+                    <Button
+  variant="secondary"
+  className="border border-solid rounded-md border-stone-800"
+  style={{ position: 'absolute', width: '100%', height: '100%' }}
+  onClick={() => {
+    handleCheckout({
+      amount: currentPrice * 100, // Stripe expects amount in cents
+      currency: 'USD',
+      product: {
+        title: product.title,
+        image: product.image,
+        slug: product.slug,
+      },
+    });
+  }}
+>
+  Buy With Paypal
+</Button>
+
                     </div>
 
                     <div id={styles.MORE_OPTIONS}>

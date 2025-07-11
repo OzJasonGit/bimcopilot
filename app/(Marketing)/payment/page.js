@@ -1,47 +1,39 @@
-"use client";
+'use client';
 
-import Salespayment from "../../../Modules/Salespayment/salespayment";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import SkeletonLoader from "@/components/Loader/loader";
-import CheckoutButton from "@/components/Payment/checkoutButton";
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import Image from 'next/image';
+import handleCheckout from '@/components/Payment/payment';
+import CheckoutButton from '@/components/Payment/checkoutButton';
 
-const Payment = () => {
-  const [data, setData] = useState(null);
-  const [firstStory, setFirstStory] = useState(null);
-  const [topStories, setTopStories] = useState(null);
+const PaymentPage = () => {
+  const searchParams = useSearchParams();
+  const [product, setProduct] = useState(null);
+
   useEffect(() => {
-    const fetchData = async () => {
+    const productParam = searchParams.get('product');
+    if (productParam) {
       try {
-        const res = await axios.get("https://www.bimcopilot.com/api");
-        const { responseData } = res.data;
-        setData(responseData);
-        setFirstStory(responseData.firstStory);
-        setTopStories(responseData.topStories);
+        const parsedProduct = JSON.parse(decodeURIComponent(productParam));
+        setProduct(parsedProduct);
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Invalid product data:', error);
       }
-    };
+    }
+  }, [searchParams]);
 
-    fetchData();
+  if (!product) return <div>Loading...</div>;
 
-    // Cleanup function
-    return () => {
-      // Cleanup code if needed
-    };
-  }, []); // Empty dependency array ensures the effect runs only once after the initial render
+  return (
+    <div style={{ padding: '2rem' }}>
+      <h1>Checkout</h1>
+      <h2>{product.title}</h2>
+      <p>Price: ${product.price.toFixed(2)}</p>
+      <Image src={product.image} alt={product.title} width={300} height={300} />
+      <br />
+      <CheckoutButton amount={product.price} currency="USD" />
+    </div>
+  );
+};
 
-         if (!data || !firstStory || !topStories) {
-     return <SkeletonLoader/>
-   }
-
-    return (
-
-        <CheckoutButton/>
-        // <Salespayment stories={data.data} firstStory={firstStory} />
-
-    )
-    
-}
-
-export default Payment;
+export default PaymentPage;
