@@ -7,7 +7,7 @@ const stripe = stripeLib(process.env.STRIPE_SECRET_KEY);
 
 export async function POST(req) {
   try {
-    const { amount, currency } = await req.json();
+    const { amount, currency, product } = await req.json();
     const origin = req.headers.get('origin') || 'http://localhost:3000';
 
     const session = await stripe.checkout.sessions.create({
@@ -15,15 +15,17 @@ export async function POST(req) {
       line_items: [
         {
           price_data: {
-            currency: currency,
+            currency,
             product_data: {
-              name: 'Total Price',
+              name: product.title,
+              images: [product.image], // must be a publicly accessible URL
             },
             unit_amount: amount,
           },
           quantity: 1,
         },
       ],
+      
       mode: 'payment',
       success_url: `${origin}/success`, // Update success_url
       cancel_url: `${origin}/cancel`, // Update cancel_url
