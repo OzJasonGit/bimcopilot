@@ -41,29 +41,45 @@ export default class Products extends Component {
           <div id={styles.PRODUCTS_HOLDER_MOBILE}>
             <div id={styles.PRODUCTS_HORIZONTAL_MOBILE}>
              {products.map((product, index) => (
-  <div id={styles.PRODUCT_CARD} key={index}>
-    <Link href={`/products/${product.slug}`}>
-      <div style={{ width: '100%', height: '220px', position: 'relative' }}>
-        <Image
-          src={product.images?.[0] || '/fallback.jpg'}
-          alt={product.title}
-          fill
-          style={{ objectFit: 'cover' }}
-          className="rounded-2xl"
-        />
-      </div>
-    </Link>
-    <div style={{ textAlign: 'center', marginTop: '10px' }}>
-      <Link href={`/products/${product.slug}`}>
-        <h3 id={styles._H3} style={{ marginBottom: '4px' }}>
-          {product.short_description}
-        </h3>
-        <h3 id={styles._H3} style={{ marginTop: '4px' }}>
-          From ${product.commercial_price}
-        </h3>
-      </Link>
+              <div id={styles.PRODUCT_CARD} key={index}>
+  <Link href={`/products/${product.slug}`}>
+    <div
+      style={{
+        width: '100%',
+        height: '220px',
+        position: 'relative',
+        background: '#eee',
+        minWidth: '220px', // ← Add this!
+        borderRadius: '12px',
+        overflow: 'hidden',
+      }}
+    >
+      <Image
+        src={
+          product.images?.[0] && product.images[0].startsWith('/')
+            ? product.images[0]
+            : product.images?.[0] || '/bimcopilot_logo_black.svg'
+        }
+        alt={product.title}
+        fill
+        style={{ objectFit: 'cover' }}
+        className="rounded-2xl"
+        priority
+      />
     </div>
+  </Link>
+
+  <div style={{ textAlign: 'center', marginTop: '10px' }}>
+    <Link href={`/products/${product.slug}`}>
+      <h3 id={styles._H3} style={{ marginBottom: '4px' }}>
+        {product.short_description}
+      </h3>
+      <h3 id={styles._H3} style={{ marginTop: '4px' }}>
+        From ${product.commercial_price}
+      </h3>
+    </Link>
   </div>
+</div>
 ))}
 
             </div>
