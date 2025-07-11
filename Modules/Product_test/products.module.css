@@ -18,9 +18,19 @@
   flex-direction: column;
 }
 
+
 /* 5th product — span 2 columns and taller */
 .cardLarge {
   grid-column: span 2;
+}
+
+/* Featured card positioning */
+.cardRight {
+  grid-column: 2 / span 2; /* starts at 2nd column, spans 2 */
+}
+
+.cardLeft {
+  grid-column: 1 / span 2; /* starts at 1st column, spans 2 */
 }
 
 /* Image wrapper with fixed ratio */

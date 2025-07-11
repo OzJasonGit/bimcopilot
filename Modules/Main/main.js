@@ -36,7 +36,7 @@ const Main = ({ }) => {
       ) : (
         <>
           <Menu />
-          <CheckoutButton/>
+          <CheckoutButton />
           <Header />
           <Sides />
           <Subscribetop />
@@ -45,8 +45,8 @@ const Main = ({ }) => {
           </div>
           {/* <Tiktoktop /> */}
           <div style={{ position: "relative", zIndex: 1, marginTop: "-50px" }}>
-          <Tiktoktop />
-      </div>
+            <Tiktoktop />
+          </div>
           <Herotitle />
           <Products />
           <Astronaut />
@@ -55,7 +55,7 @@ const Main = ({ }) => {
           <Subfooter />
           <Subfooter2 />
           <Footer />
-          
+
         </>
       )}
     </>

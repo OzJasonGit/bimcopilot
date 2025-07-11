@@ -54,16 +54,11 @@
 .grid_0_main {
   width: 100%;
   max-width: 1520px;
-  background-color: transparent;
+  margin: 0 auto;
   display: grid;
-  grid-column-gap: 0px;
-  grid-row-gap: 40px;
-  grid-template-rows: 0px auto 0px;
-  grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    ". . . . . . ."
-    ". BANNER-1 . MAIN-AREA . BANNER-2 ."
-    ". . . . . . .";
+    "MAIN-AREA";
 }
 
 
@@ -82,36 +77,45 @@
 
 /*SECTION////PRODUCTS//////////////////////////////////////////////////////////////////////////////////////*/
 #PRODUCTS_HOLDER {
+  padding-top: 70px;
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 63%;
   grid-area: MAIN-AREA;
   height: auto;
   display: grid;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0px auto auto;
+  grid-template-rows: auto auto;
   grid-template-areas:
-    ". . ."
     "AREA_1 AREA_2 AREA_3"
-    "TITLE TITLE .";
+    "TITLE TITLE TITLE";
+  justify-items: center; /* Add this to center the content inside each grid area */
 }
 
+
 #PRODUCTS_HOLDER_MOBILE {
-  display: none;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 1rem 0;
 }
 
 #PRODUCTS_HORIZONTAL_MOBILE {
-  display: grid;
-  position: relative;
-  grid-column-gap: 40px;
-  grid-template-columns: 425px 425px 425px 425px 425px 425px 1fr;
-  grid-template-rows: 100%;
-  grid-template-areas: "1 2 3 4 5 6 .";
-  height: 100%;
-  width: 3000px;
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+#PRODUCT_CARD {
+  min-width: 280px;
+  max-width: 300px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #PRODUCT {
@@ -211,1754 +215,1471 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
-@media all and (min-width: 960px) and (max-width: 1280px) {
- 
-
-  .grid_0_main {
-    width: 100%;
-    max-width: 1640px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-rows: 100px auto 20;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ". . ."
-      "BANNER-1 MAIN-AREA BANNER-2"
-      ". . .";
-  }
-
- 
-
-  #SHADOW_SECTION_TITLE {
-    position: relative;
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: transparent;
-    z-index: -20000;
-  }
-
-  /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-  
-  /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_2///////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-  /*SECTION_2///////////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_3////TIKTOK/////////////////////////////////////////////////////////////////////////////////*/
-  /*SECTION_3////TIKTOK/////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_4////TITLE//////////////////////////////////////////////////////////////////////////////////*/
-  #MAIN_TEXT_HOLDER {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
-    grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 300px auto 0px;
-    grid-template-areas:
-      ". . . . . . . . . . . ."
-      "TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT TEXT ."
-      ". . . . . . . . . . . .";
-  }
-
-  /*SECTION_4////TITLE//////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION////PRODUCTS//////////////////////////////////////////////////////////////////////////////////////*/
-  #PRODUCTS_HOLDER_MOBILE {
-    display: none;
-  }
-
-  /*SECTION////PRODUCTS//////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_5////ASTRONAUT_1/////////////////////////////////////////////////////////////////////////////////*/
-  .grid_0_image_left {
-    width: 100%;
-    max-width: 1960px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
-    grid-template-rows: 60px 20px auto 20px;
-    grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20px;
-    grid-template-areas:
-      ". . . . . . . . . . ."
-      ". IMAGE IMAGE IMAGE IMAGE IMAGE . . . . ."
-      ". IMAGE IMAGE IMAGE IMAGE IMAGE ADVERT ADVERT ADVERT ADVERT ."
-      ". IMAGE IMAGE IMAGE IMAGE IMAGE . . . . .";
-    z-index: 200;
-  }
-
-  /*SECTION_5////ASTRONAUT_1/////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_6////WORLD??////////////////////////////////////////////////////////////////////////////////////*/
-  /*SECTION_6////WORLD??////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_7////ABOUT///////////////////////////////////////////////////////////////////////////////////*/
-  .main {
-    position: relative;
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-column-gap: 40px;
-    grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 60px auto 40px auto 20px;
-    grid-template-areas:
-      "INTRO INTRO INTRO INTRO INTRO INTRO ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT"
-      ". . . . . . ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT"
-      "WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH WHO_WE_WORK_WITH ABOUT ABOUT ABOUT ABOUT ABOUT ABOUT"
-      ". . . . . . . . . . . ."
-      ". . TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL TESTIMONIAL"
-      ". . . . . . . . . . . .";
-    margin-top: -60px;
-  }
-
-  /*SECTION_7////ABOUT////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
-  /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_9////VIDEO////////////////////////////////////////////////////////////////////////////////////*/
-  /*SECTION_9////VIDEO////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_10////TAG/////////////////////////////////////////////////////////////////////////////////////*/
-  /*SECTION_10////TAG/////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
-  #ASTRONAUT_IMAGE_2 {
-    position: sticky;
-    grid-area: IMAGE_2;
-    width: 100%;
-    height: 900px;
-    margin-top: -980px;
-  }
-}
-
-/*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
-/*BREAKPOINT_2////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-/*BREAKPOINT_3////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-/*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
-#_H1 {
-  margin-bottom: 0px;
-  font-size: 40px;
-}
-
-#_H2 {
-  margin-bottom: 0px;
-  font-size: 30px;
-}
-
-#_H3 {
-  margin-bottom: 0px;
-}
-
-#_H4 {
-  margin-bottom: 0px;
-}
-
-#_H5 {
-  margin-bottom: -2.5px;
-}
-
-/*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media all and (min-width: 480px) and (max-width: 960px) {
-  .center_holder {
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: aliceblue;
-    margin: 0;
-  }
-
-
-
-  .grid_0_main {
-    position: relative;
-    width: 100%;
-    background-color: transparent;
-    display: grid;
-
-    padding-left: 30px;
-    padding-right: 30px;
-    grid-row-gap: 40px;
-    grid-template-rows: 0px auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "  .  "
-      " MAIN-AREA ";
-  }
-
-
-
-
-
-  /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
- 
-
- 
-
-  /*SECTION_1/////////////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_2////VIDEO////////////////////////////////////////////////////////////////////////////////////*/
- 
-
-  #NEWS {
-    grid-area: NEWS;
-    display: grid;
-    grid-row-gap: 30px;
-    grid-template-columns: (1fr 100px) (1fr min-content);
-    grid-template-rows: 30px auto 10px;
-    background-color: rgb(23 23 23);
-    width: 100%;
-    height: 100%;
-    grid-template-areas:
-      ". TOP_STORIES"
-      ". ARTICLES"
-      ". .";
-    position: relative;
-    top: -150px;
-  }
-
-  #ARTICLES_TITLE {
-    grid-area: TOP_STORIES;
-  }
-
-  #LINK_HOLDER {
-    position: relative;
-    grid-area: CONTENT;
-    overflow: hidden;
-    width: 100%;
-    left: 0px;
-  }
-
-  #ARTICLES {
-    grid-area: ARTICLES;
-    display: grid;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    width: 100%;
-    grid-template-areas:
-      "1"
-      "2"
-      "3";
-  }
-
-  #BLOG_SMALL_1 {
-    grid-area: 1;
-    width: 100%;
-    height: 100%;
-    max-height: 0;
-    display: grid;
-    grid-row-gap: 2.5px;
-    grid-column-gap: 17.5px;
-    grid-template-columns: 30px 1fr 120px;
-    grid-template-rows: 30px 60px 5px auto auto 5px auto 5px auto;
-    grid-template-areas:
-      "NUMBER TITLE IMAGE"
-      ". TITLE IMAGE"
-      ". TITLE ."
-      ". TITLE AUTHOR"
-      ". TITLE AUTHOR"
-      ". . ."
-      ". TIMESTAMP TIMESTAMP"
-      ". . ."
-      ". . BORDER";
-  }
-
-  #IMAGE_POST_NUMBER {
-    grid-area: CONTENT;
-    background: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 40px 100px 1fr 10px;
-    grid-template-rows: 60px 100px auto;
-    grid-template-areas:
-      ". . . ."
-      ". NUMBER . ."
-      ". . . .";
-    left: 0px;
-    z-index: 100000;
-  }
-
-  #IMAGE_POST_TITLE {
-    display: grid;
-    position: relative;
-    grid-area: TITLE;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      "TITLE TITLE"
-      "SUBTITLE SUBTITLE"
-      "AUTHOR ."
-      "TIMESTAMP .";
-    grid-row-gap: 10px;
-    grid-column-gap: 5px;
-    width: 100%;
-    top: 30px;
-    left: 0px;
-    max-height: 0;
-  }
-
-  #VID_BACKGROUND {
-    display: none;
-  }
-
-  /*SECTION_2////VIDEO////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_3////TIKTOK///////////////////////////////////////////////////////////////////////////////////*/
-  #SHADOW_SECTION_TIKTOK {
-    display: none;
-  }
-
-  /*SECTION_3////TIKTOK///////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_4////TITLE////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_4////TITLE////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION////PRODUCTS///////////////////////////////////////////////////////////////////////////////////*/
+@media screen and (max-width: 768px) {
   #PRODUCTS_HOLDER {
     display: none;
   }
 
   #PRODUCTS_HOLDER_MOBILE {
     display: block;
-    grid-area: MAIN-AREA;
-    width: 100%;
-    height: 500px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: rgb(64 64 64) rgb(228 228 231);
-    padding-bottom: 60px;
-  }
-
-  #PRODUCTS_HORIZONTAL_MOBILE {
-    display: grid;
-    position: relative;
-    grid-column-gap: 40px;
-    grid-template-columns: 350px 350px 350px 1fr;
-    grid-template-rows: 100%;
-    grid-template-areas: "1 2 3 .";
-    height: 100%;
-    width: 800px;
-  }
-
-  #PRODUCT_CARD {
-    display: grid;
-    position: relative;
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-row-gap: 30px;
-    grid-template-rows: 370px auto;
-    grid-template-areas:
-      "IMAGE"
-      "TEXT ";
-  }
-
-  /*SECTION////PRODUCTS///////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_5////ASTRONAUT_1//////////////////////////////////////////////////////////////////////////////*/
-  #SHADOW_SECTION_ASTRONAUT {
-    display: none;
-  }
-
-  /*SECTION_5////ASTRONAUT_1//////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_6////WORLD??//////////////////////////////////////////////////////////////////////////////////*/
-  #BACKGROUND_GRID {
-    display: none;
-  }
-
-  #PLANET_HOLDER_GRID {
-    display: none;
-  }
-
-  /*SECTION_6////WORLD??//////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_7////ABOUT////////////////////////////////////////////////////////////////////////////////////*/
-  .main {
-    position: relative;
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    top: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-row-gap: 60px;
-    grid-template-areas:
-      "ABOUT"
-      "INTRO"
-      "WHO_WE_WORK_WITH"
-      "TESTIMONIAL";
-  }
-
-  #INTRO_HOLDER {
-    position: relative;
-    display: grid;
-    grid-area: INTRO;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-row-gap: 20px;
-    width: 100%;
-    height: 100%;
-
-    grid-template-areas:
-      "TITLE"
-      "SUBTITLE"
-      "IMAGE";
-  }
-
-  #ABOUT_CONTAINER {
-    position: sticky;
-    display: grid;
-    width: 100%;
-    height: auto;
-    top: 160px;
-    grid-template-columns: 30px 1fr 30px;
-    grid-template-rows: 30px auto 30px;
-    grid-template-areas:
-      ". . ."
-      ". MAIN ."
-      ". . .";
-  }
-
-  #ABOUT_HOLDER {
-    position: relative;
-    grid-area: ABOUT;
-    background-color: rgb(23 23 23);
-    width: 100%;
-    height: auto;
-    padding-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  #ABOUT {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-  }
-
-  #ABOUT_HOLDER {
-    position: relative;
-    grid-area: ABOUT;
-    background-color: rgb(23 23 23);
-    width: 100%;
-    height: 100%;
-    padding-bottom: 0px;
-    margin-top: 0;
-  }
-
-  #ABOUT {
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-    top: 0px;
-  }
-
-  /*SECTION_7////ABOUT////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
-  .grid_0_main_process {
-    position: relative;
-    width: 100%;
-    background-color: rgb(241 245 249);
-    display: grid;
-
-    padding-left: 30px;
-    padding-right: 30px;
-    grid-row-gap: 40px;
-    grid-template-rows: 40px auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "  .  "
-      " MAIN-AREA ";
-  }
-
-  .process_section {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 20px auto auto auto 60px;
-    grid-template-areas:
-      ". . . . . . . . . . . ."
-      "TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE . . . ."
-      "STEPS STEPS STEPS STEPS STEPS STEPS STEPS STEPS STEPS . . ."
-      "PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS"
-      ". . . . . . . . . . . .";
-  }
-
-  /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_9////VIDEO////////////////////////////////////////////////////////////////////////////////////*/
-  #VID_BACKGROUND {
-    display: none;
-  }
-
-  .video_section {
-    position: relative;
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    height: auto;
-    top: 0px;
-    padding-bottom: 0px;
-    grid-column-gap: 40px;
-    grid-row-gap: 100px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 700px auto;
-    grid-template-areas:
-      "VIDEO"
-      "GRAPHIC"
-      "SERVICES";
-  }
-
-  #VIDEO_LATEST {
-    grid-area: VIDEO;
-    width: 100%;
-    height: 100%;
-  }
-
-  #INTRO {
-    grid-area: TITLE;
-    position: relative;
-    width: 100%;
-  }
-
-  #INTRO_SUBTITLE {
-    grid-area: SUBTITLE;
-    position: relative;
-    width: 100%;
-  }
-
-  #MAIN_TEXT_HOLDER {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0px auto 0px;
-    grid-template-areas:
-      "."
-      "TEXT"
-      ".";
-  }
-
-  #SUB_TEXT_HOLDER {
-    position: relative;
-    grid-area: TEXT;
-    top: 0px;
-  }
-
-  #IMAGE {
-    grid-area: IMAGE;
-    width: 100%;
-    height: 500px;
-    max-height: 100%;
-  }
-
-  /*SECTION_9////VIDEO////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_10////TAG/////////////////////////////////////////////////////////////////////////////////////*/
-  #SHADOW_SECTION_TAG {
-    position: relative;
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: rgb(23, 23, 23);
-    z-index: -30000;
-    top: 0px;
-  }
-
-  #TAG_HOLDER {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    grid-column-gap: 40px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "TAG";
-  }
-
-  /*SECTION_10////TAG/////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
-  #ASTRONAUT_IMAGE_2 {
-    display: none;
-  }
-
-  #SERVICES_HOLDER {
-    position: relative;
-    grid-area: SERVICES;
-    width: 100%;
-    height: 760px;
-    top: 0px;
   }
 }
 
-/*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
-/*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media all and (min-width: 0px) and (max-width: 480px) {
-  /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
-  #_H1 {
-    margin-bottom: 0px;
-    font-size: 20px;
-  }
-
-  #_H1_2 {
-    margin-bottom: 0px;
-    font-size: 26.5px;
-    line-height: 32.5px;
-  }
-
-  #_H2 {
-    margin-bottom: 0px;
-    font-size: 16.5px;
-  }
-
-  #_H3 {
-    margin-bottom: 0px;
-    font-size: 14px;
-    line-height: 12.5px;
-  }
-
-  #_H4 {
-    margin-bottom: 0px;
-  }
-
-  #_H5 {
-    margin-bottom: -2.5px;
-  }
-
-  #TEXT_OUTLINE {
-    -webkit-text-stroke: 1px rgb(120, 120, 120);
-    margin-bottom: 0px;
-    font-size: 20px;
-    line-height: 32.5px;
-  }
-
-  /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
-  .grid_0_main {
-    width: 100%;
-    max-width: 1640px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 40px;
-    grid-template-rows: 0px auto 0px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ". . ."
-      "BANNER-1 MAIN-AREA BANNER-2"
-      ". . .";
-  }
-
-  .grid_0_blog {
-    width: 100%;
-    max-width: 1640px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 40px;
-    grid-template-rows: 0px auto 0px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ". . ."
-      "BANNER-1 MAIN-AREA BANNER-2"
-      ". . .";
-  }
-
-  /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_1/////////////////////////////////////////////////////////////////////////////////////////////*/
-  .grid_0_subscribe {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 20px;
-    grid-template-rows: 100px auto 0px;
-    grid-template-columns: 20px 1fr 20px;
-    grid-template-areas:
-      ". . ."
-      ". SUB ."
-      ". . .";
-  }
-
-  #IMAGE_POST_NUMBER {
-    grid-area: CONTENT;
-    background: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 40px 1fr 80px 10px;
-    grid-template-rows: 60px 80px auto;
-    grid-template-areas:
-      ". . . ."
-      ". . NUMBER  ."
-      ". . . .";
-    left: 0px;
-    z-index: 100000;
-  }
-
-  .head {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-column-gap: 40px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 350px 280px 600px;
-    grid-template-areas:
-      "CONTENT"
-      "TITLE"
-      "NEWS";
-    padding-bottom: 0px;
-  }
-
-  .sub_head {
-    position: relative;
-    grid-area: SUB;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-column-gap: 40px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "BC";
-    left: 0;
-  }
-
-  #SUBSCRIBE {
-    position: relative;
-    grid-area: BC;
-    width: 100%;
-    display: grid;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: auto auto auto 52.5px 60px;
-    grid-template-areas:
-      "ICON ICON"
-      "TAG_MAIN TAG_MAIN"
-      "SUB_MAIN SUB_MAIN"
-      "FORM FORM"
-      "BUTTON BUTTON";
-  }
-
-  #BC {
-    display: none;
-  }
-
-  /*SECTION_1/////////////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_2////BLOG/////////////////////////////////////////////////////////////////////////////////////*/
-  .grid_0 {
-    position: relative;
-    width: 100%;
-    background-color: rgb(23 23 23);
-    display: grid;
-
-    padding-left: 20px;
-    padding-right: 20px;
-    grid-row-gap: 20px;
-    grid-template-rows: 0px auto;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "  .  "
-      " MAIN-AREA ";
-    margin-bottom: 0px;
-  }
-
-  #LINK_HOLDER {
-    position: relative;
-    grid-area: CONTENT;
-    background-color: #efefef;
-    width: 100%;
-    left: 0px;
-  }
-
-  #BLOG_SMALL_1 {
-    grid-area: 1;
-    width: 100%;
-    height: 100%;
-    max-height: 0;
-    display: grid;
-    grid-row-gap: 2.5px;
-    grid-column-gap: 16.5px;
-    grid-template-columns: 30px 1fR 90px;
-    grid-template-rows: 30px 30px 5px auto auto 5px auto 5px auto;
-    grid-template-areas:
-      "NUMBER TITLE IMAGE"
-      ". TITLE IMAGE"
-      ". TITLE ."
-      ". TITLE AUTHOR"
-      ". TITLE AUTHOR"
-      ". . ."
-      ". TIMESTAMP TIMESTAMP"
-      ". . ."
-      ". . BORDER";
-  }
-
-  #IMAGE_POST_TITLE {
-    display: grid;
-    position: relative;
-    grid-area: TITLE;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      "TITLE TITLE"
-      "SUBTITLE SUBTITLE"
-      "AUTHOR ."
-      "TIMESTAMP .";
-    grid-row-gap: 10px;
-    grid-column-gap: 5px;
-    width: 100%;
-    top: 30px;
-    left: 0px;
-    max-height: 0;
-  }
-
-  #ARTICLES {
-    grid-area: ARTICLES;
-    display: grid;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    width: 100%;
-    grid-template-areas:
-      "1"
-      "2"
-      "3";
-  }
-
-  #NEWS {
-    grid-area: NEWS;
-    display: grid;
-    position: relative;
-    grid-row-gap: 30px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 30px auto;
-    background-color: rgb(23 23 23);
-    width: 100%;
-    height: 100%;
-    grid-template-areas:
-      "TOP_STORIES"
-      "ARTICLES";
-    top: 0px;
-  }
-
-  /*SECTION_2////BLOG/////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_3////TIKTOK///////////////////////////////////////////////////////////////////////////////////*/
-  #SHADOW_SECTION_TIKTOK {
-    display: none;
-  }
-
-  /*SECTION_3////TIKTOK///////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_4////TITLE////////////////////////////////////////////////////////////////////////////////////*/
-  #MAIN_TEXT_HOLDER {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0px auto 0px;
-    grid-template-areas:
-      "."
-      "TEXT"
-      ".";
-  }
-
-  #SUB_TEXT_HOLDER {
-    display: none;
-  }
-
-  #SUB_TEXT_HOLDER_MOBILE {
-    display: flex;
-    position: relative;
-    grid-area: TEXT;
-    top: 0px;
-  }
-
-  /*SECTION_4////TITLE////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION////PRODUCTS////////////////////////////////////////////////////////////////////////////////////*/
-  #PRODUCTS_HOLDER {
-    display: none;
-  }
-
+@media screen and (min-width: 769px) {
   #PRODUCTS_HOLDER_MOBILE {
-    display: block;
-    grid-area: MAIN-AREA;
-    width: 100%;
-    height: 470px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: rgb(64 64 64) rgb(228 228 231);
-    padding-bottom: 0px;
-  }
-
-  #PRODUCTS_HORIZONTAL_MOBILE {
-    display: grid;
-    position: relative;
-    grid-column-gap: 40px;
-    grid-template-columns: 280px 280px 280px 1fr;
-    grid-template-rows: 100%;
-    grid-template-areas: "1 2 3 .";
-    height: 100%;
-    width: 800px;
-  }
-
-  #PRODUCT_CARD {
-    display: grid;
-    position: relative;
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
-    grid-template-rows: 320px auto;
-    grid-template-areas:
-      "IMAGE"
-      "TEXT ";
-  }
-
-  #IMAGE_1 {
-    overflow: hidden;
-    position: relative;
-    grid-area: IMAGE;
-  }
-
-  /*SECTION////PRODUCTS///////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_5////ASTRONAUT_1//////////////////////////////////////////////////////////////////////////////*/
-  .grid_0_image_left {
-    width: 100%;
-    max-width: 100%;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-rows: auto auto 20px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ". . ."
-      ". IMAGE ."
-      ". IMAGE .";
-  }
-
-  #ASTRONAUT_IMAGE_1 {
-    grid-area: IMAGE;
-    width: 100%;
-    height: 350px;
-  }
-
-  /*SECTION_5////ASTRONAUT_1//////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_6////WORLD??//////////////////////////////////////////////////////////////////////////////////*/
-  #BACKGROUND_GRID {
     display: none;
-  }
-
-  #PLANET_HOLDER_GRID {
-    display: none;
-  }
-
-  /*SECTION_6////WORLD??//////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_7////ABOUT////////////////////////////////////////////////////////////////////////////////////*/
-  .main {
-    position: relative;
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    top: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-row-gap: 40px;
-    grid-template-areas:
-      "ABOUT"
-      "INTRO"
-      "WHO_WE_WORK_WITH"
-      "TESTIMONIAL";
-  }
-
-  #ABOUT_CONTAINER {
-    position: sticky;
-    display: grid;
-    width: 100%;
-    height: 450px;
-    top: 160px;
-    grid-template-columns: 30px 1fr 30px;
-    grid-template-rows: 30px auto 30px;
-    grid-template-areas:
-      ". . ."
-      ". MAIN ."
-      ". . .";
-  }
-
-  #ABOUT_HOLDER {
-    position: relative;
-    grid-area: ABOUT;
-    background-color: transparent;
-    width: 100%;
-    height: auto;
-    padding-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  #ABOUT {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-  }
-
-  /*SECTION_7////ABOUT////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
-  .grid_0_main_process {
-    width: 100%;
-    max-width: 1640px;
-    background-color: rgb(241 245 249);
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 40px;
-    grid-template-rows: 0px auto 20px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ". . ."
-      "BANNER-1 MAIN-AREA BANNER-2"
-      ". . .";
-  }
-
-  .process_section {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-column-gap: 40px;
-    grid-row-gap: 10px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto 0px;
-    grid-template-areas:
-      "TITLE"
-      "STEPS"
-      "PROCESS"
-      ".";
-  }
-
-  #PROCESS_TITLE {
-    grid-area: TITLE;
-  }
-
-  #PROCESS_STEPS {
-    grid-area: STEPS;
-    width: 100%;
-    height: 0px;
-  }
-
-  #PROCESS {
-    grid-area: PROCESS;
-    width: 100%;
-    height: 460px;
-  }
-
-  #PROCESS_HORIZONTAL {
-    display: grid;
-    position: relative;
-    grid-column-gap: 20px;
-    grid-template-columns: 270px 270px 270px 270px 270px 270px 1fr;
-    grid-template-rows: 100%;
-    grid-template-areas: "1 2 3 4 5 6 .";
-    height: 100%;
-    width: 1500px;
-  }
-
-  /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_9////VIDEO////////////////////////////////////////////////////////////////////////////////////*/
-  .video_section {
-    position: relative;
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    height: auto;
-    top: 0px;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 450px 500px;
-    grid-template-areas:
-      "VIDEO"
-      "GRAPHIC"
-      "SERVICES";
-    margin-top: 0px;
-  }
-
-  #VIDEO_LATEST_HOLDER {
-    position: relative;
-    grid-area: VIDEO;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-row-gap: 40px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 350px auto;
-    grid-template-areas:
-      "VIDEO"
-      "TITLE";
-  }
-
-  #VIDEO_LATEST {
-    grid-area: VIDEO;
-    width: 100%;
-    height: 100%;
-  }
-
-  /*SECTION_9////VIDEO////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_10////TAG/////////////////////////////////////////////////////////////////////////////////////*/
-  #SHADOW_SECTION_TAG {
-    display: none;
-  }
-
-  #SHADOW_SECTION_TAG {
-    position: relative;
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: rgb(23, 23, 23);
-    z-index: -30000;
-    top: 0px;
-  }
-
-  #TAG_HOLDER {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    grid-column-gap: 40px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "TAG";
-  }
-
-  #SERVICES_HOLDER {
-    position: relative;
-    grid-area: SERVICES;
-    width: 100%;
-    top: 0px;
-  }
-
-  /*SECTION_10////TAG/////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
-  #SHADOW_SECTION_ASTRONAUT {
-    display: none;
-  }
-
-  #ASTRONAUT_IMAGE_2 {
-    position: sticky;
-    grid-area: IMAGE_2;
-    width: 100%;
-    height: 600px;
-    margin-top: -680px;
-  }
-
-  .grid_0_image_right {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-rows: 20px auto 20px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ". . ."
-      ". IMAGE_2 ."
-      ". . .";
-    margin-top: 0px;
   }
 }
 
-/*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
+
+
+
+@media screen and (min-width: 1024px) {
+  .grid_0_main {
+    display: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
