@@ -107,7 +107,7 @@ export default class Products extends Component {
           ))}
 
           {/* CTA Section */}
-          <div id={styles.TEXT_HOLDER} style={{ gridArea: "TITLE" }}>
+          <div id={styles.TEXT_HOLDER} style={{ gridArea: "TITLE" , paddingTop: "100px" }}>
             <div id={styles.SHOP_GRID}>
               <div style={{ gridArea: "ICON" }}>
                 <FontAwesomeIcon icon={faCartShopping} className="text-stone-900" style={{ fontSize: "40px" }} />
