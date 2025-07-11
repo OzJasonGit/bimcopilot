@@ -114,7 +114,7 @@ const Blogpage = ({ stories, topStories }) => {
             <div id={styles.HEAD_SUBTITLE}>
               {mainStory.slug && (
                 <Link href={`/blog/${mainStory.slug}`}>
-                  <h3 id={styles._H3} className="text-left text-xl text-stone-400 font-avant_garde_bold">
+                  <h3 id={styles._H3} className="text-left text-xl text-stone-400 font-avant_garde_medium">
                     {parse(mainStory.subtitle || "")}
                   </h3>
                 </Link>
@@ -124,7 +124,7 @@ const Blogpage = ({ stories, topStories }) => {
             <div id={styles.AUTHOR}>
               {mainStory.slug && (
                 <Link href={`/blog/${mainStory.slug}`}>
-                  <h3 id={styles._H3} className="text-left text-xl text-stone-400 font-avant_garde_bold">
+                  <h3 id={styles._H3} className="text-left text-xl text-stone-400 font-avant_garde_medium">
                     {parse(mainStory.author || "Unknown Author")}
                   </h3>
                 </Link>
@@ -155,7 +155,7 @@ const Blogpage = ({ stories, topStories }) => {
 
                       <div id={styles.BLOG_TEXT}>
                         <Link href={`/blog/${story.slug}`}>
-                          <h3 id={styles._H3} className="text-lg text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <h3 id={styles._H3} className="text-lg text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             {parse(story.title || "Untitled")}
                           </h3>
                         </Link>
@@ -163,14 +163,14 @@ const Blogpage = ({ stories, topStories }) => {
 
                       <div id={styles.BLOG_AUTHOR}>
                         <Link href={`/blog/${story.slug}`}>
-                          <h3 id={styles._H4} className="text-sm text-right text-stone-400 drop-shadow-xl font-avant_garde_bold">
+                          <h3 id={styles._H4} className="text-sm text-right text-stone-400 drop-shadow-xl font-avant_garde_medium">
                             {parse(story.author || "Unknown")}
                           </h3>
                         </Link>
                       </div>
 
                       <div id={styles.TIMESTAMP}>
-                        <h4 id={styles._H4} className="text-sm text-right text-stone-400 drop-shadow-xl font-avant_garde_bold">
+                        <h4 id={styles._H4} className="text-sm text-right text-stone-400 drop-shadow-xl font-avant_garde_medium">
                           {parse(story.timestamp || "N/A")}
                         </h4>
                       </div>

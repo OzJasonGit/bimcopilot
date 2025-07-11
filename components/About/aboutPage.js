@@ -44,17 +44,17 @@ export default class Aboutpage extends Component {
                   className="text-xl text-stone-400 drop-shadow-xl font-avant_garde_bold"
                 >
                   Find out how we can help your business build{' '}
-                  <a className="text-stone-200 font-avant_garde_bold">systems</a>{' '}
+                  <a className="text-stone-200 font-avant_garde_medium">systems</a>{' '}
                   for{' '}
-                  <a className="text-stone-200 font-avant_garde_bold">
+                  <a className="text-stone-200 font-avant_garde_medium">
                     automation,
                   </a>{' '}
-                  <a className="text-stone-200 font-avant_garde_bold">
+                  <a className="text-stone-200 font-avant_garde_medium">
                     sustainability,
                   </a>{' '}
-                  <a className="text-stone-200 font-avant_garde_bold">profit</a>{' '}
+                  <a className="text-stone-200 font-avant_garde_medium">profit</a>{' '}
                   and{' '}
-                  <a className="text-stone-200 font-avant_garde_bold">growth.</a>
+                  <a className="text-stone-200 font-avant_garde_medium">growth.</a>
                 </h3>
               </div>
 
@@ -147,74 +147,74 @@ export default class Aboutpage extends Component {
                         </h2>
                         <br />
                         <p
-                          className="text-base text-stone-400 drop-shadow-xl font-avant_garde_bold"
+                          className="text-base text-stone-400 drop-shadow-xl font-avant_garde_medium"
                           id={styles._H3}
                         >
                           At{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             bimcopilot.com
                           </a>{' '}
                           we're using Building Information modelling{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             [BIM]
                           </a>{' '}
                           and artificial intelligence{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             [AI]
                           </a>{' '}
                           to develop{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             systems
                           </a>{' '}
                           that{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             automate
                           </a>{' '}
                           tasks,{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             50x output
                           </a>{' '}
                           and{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             eliminate human errors
                           </a>{' '}
                           that result in{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             waste.
                           </a>
                           <br />
                           <br />
                           My focus and passion has always been in preserving the
                           natural world and{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             bimcopilot.com
                           </a>{' '}
                           continues to champion these values of{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             sustainability
                           </a>{' '}
                           and{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             waste-reduction
                           </a>
                           . We believe that{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             bigger profits
                           </a>{' '}
                           come from{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             better systems
                           </a>
                           , that{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             save time
                           </a>
                           ,{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             reduce waste
                           </a>{' '}
                           and{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             improve accuracy
                           </a>
                           . Here, we are choosing to be unafraid to challenge
@@ -222,15 +222,15 @@ export default class Aboutpage extends Component {
                           <br />
                           <br />
                           The future lies somewhere between{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             low-tech
                           </a>{' '}
                           solutions and{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             advanced technology
                           </a>
                           .{' '}
-                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_bold">
+                          <a className="text-stone-200 drop-shadow-xl font-avant_garde_medium">
                             bimcopilot.com
                           </a>
                           , aims to explore where this leads.
@@ -241,6 +241,7 @@ export default class Aboutpage extends Component {
                           <br />
                           <a
                             className="text-emerald-200 drop-shadow-xl font-avant_garde_bold text-lg"
+                            id={styles._H2}
                           >
                             <Link href="/">plasticfreebydesign.com</Link>
                           </a>

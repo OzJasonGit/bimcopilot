@@ -64,6 +64,7 @@ const productGroups = chunkIntoGroupsOfFive(products);
       <Subscribetop />
 
       {loading ? (
+<<<<<<< HEAD
         <div className={styles.loader}><div className={styles.spinner}></div></div>
       ) : (
       <div className={styles.container}>
@@ -174,6 +175,42 @@ const productGroups = chunkIntoGroupsOfFive(products);
       })}
     </div>
   </div>
+=======
+        <div className={styles.loader}><div className={styles.spinner}></div>
+        </div>
+      ) : (
+        <section  id={styles.SHADOW_SECTION} class={styles.center_holder}>
+          <div class={styles.grid_0_product}>
+            <div className={styles.grid}
+                 style={{gridArea:"MAIN_AREA"}}
+                 >
+                {products.map((product, index) => (
+                  <div
+                    key={product.id}
+                    className={`${styles.card} ${index === 4 ? styles.cardLarge : ''}`}
+                  >
+                    <Link href={`/products/${product.slug}`}>
+                      <div className={styles.imageWrapper}>
+                        <Image
+                          src={product.image}
+                          alt={product.title}
+                          fill
+                          className={styles.image}
+                        />
+                      </div>
+                    </Link>
+                    <div className={styles.text}>
+                      <h2 className={styles.title}>{parse(product.title)}</h2>
+                      <p className={styles.subtitle}>{parse(product.subtitle)}</p>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+
+            
+        </section>
+>>>>>>> 14a9d5a2fd7c44b449325bd68284148a8b78f01d
       )}
 
       <Subfooter />

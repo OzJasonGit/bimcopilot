@@ -17,7 +17,7 @@ const Tab = () => {
         <h2 
           id={styles._H2}>
           <a>
-            <h3 className="text-stone-400 font-avant_garde_bold text-sm">
+            <h3 id={styles._H3} className="text-stone-400 font-avant_garde_medium ">
               Pedro Sanchez Reche, Foster and Partners, London, UK
             </h3>
           </a>

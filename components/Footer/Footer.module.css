@@ -1621,9 +1621,9 @@
     #IMAGE_HOLDER {
         grid-area: TITLE;
         position: relative;
-        width: 100%;
+        width: 90%;
         height: 100%;
-        left: -30px;
+        left: -0px;
     }
 
 

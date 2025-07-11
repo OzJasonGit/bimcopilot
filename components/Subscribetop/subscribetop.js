@@ -29,21 +29,21 @@ export default class Subcribetop extends Component {
                   class="text-left ... text-stone-400 ... font-avant_garde_medium"
                 >
                   {" "}
-                  <a class="text-stone-200 ... font-avant_garde_bold">
+                  <a class="text-stone-200 ... font-avant_garde_medium">
                     The design revolution is here.
                   </a>{" "}
                   The world is changing and so is{" "}
-                  <a class="text-stone-200 ... font-avant_garde_bold">
+                  <a class="text-stone-200 ... font-avant_garde_medium">
                     architecture
                   </a>
                   . Discover new narratives, build better{" "}
-                  <a class="text-stone-200 ... font-avant_garde_bold">
+                  <a class="text-stone-200 ... font-avant_garde_medium">
                     systems
                   </a>
                   , make more{" "}
-                  <a class="text-stone-200 ... font-avant_garde_bold">money</a>,
+                  <a class="text-stone-200 ... font-avant_garde_medium">money</a>,
                   be more{" "}
-                  <a class="text-stone-200 ... font-avant_garde_bold">
+                  <a class="text-stone-200 ... font-avant_garde_medium">
                     sustainable
                   </a>
                   . <br /> <br />{" "}
