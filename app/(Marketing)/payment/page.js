@@ -1,12 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import handleCheckout from '@/components/Payment/payment';
 import CheckoutButton from '@/components/Payment/checkoutButton';
 
-const PaymentPage = () => {
+const PaymentPageInner = () => {
   const searchParams = useSearchParams();
   const [product, setProduct] = useState(null);
 
@@ -35,5 +35,11 @@ const PaymentPage = () => {
     </div>
   );
 };
+
+const PaymentPage = () => (
+  <Suspense fallback={<div>Loading...</div>}>
+    <PaymentPageInner />
+  </Suspense>
+);
 
 export default PaymentPage;
