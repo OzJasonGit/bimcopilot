@@ -19,7 +19,7 @@
 }   
 
 #VIDEO video{
-    height: 340px;
+    height: auto;
 }
 
 
@@ -28,7 +28,7 @@
 
 @media all and (min-width: 960px) and (max-width: 1280px) {
     #VIDEO video {
-            height: 320px;
+            height: auto;
         }
 }
 
@@ -43,7 +43,7 @@
 
 
     #VIDEO video{ 
-        height: 340px;
+        height: auto;
         object-fit: cover;
         border-radius: 0.5rem !important;
 
