@@ -17,7 +17,7 @@ import Services_1 from '@/components/services_1/services_1';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import handleCheckout from '@/components/Payment/payment';
-import { CartContext } from '@/components/context/CartContext';
+import { CartContext } from '@/components/Context/CartContext';
 import { useContext } from 'react';
 
 

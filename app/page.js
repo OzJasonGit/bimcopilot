@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Main from "../Modules/Main/main";
 import axios from "axios";
 import SkeletonLoader from "@/components/Loader/loader";
-import { CartProvider } from "@/components/context/CartContext";
+import { CartProvider } from "@/components/Context/CartContext";
 
 
 const Home = () => {
