@@ -11,8 +11,8 @@
 
 
 #VIDEO { 
-    min-height: 320px;
-    height: 320px;
+    min-height: auto;
+    height: auto;
     position: relative;
     border-radius: 0.5rem !important
 
