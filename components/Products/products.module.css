@@ -151,6 +151,7 @@
 
 
 #PRODUCTS_HOLDER_MOBILE {
+  grid-area: MAIN-AREA;
   display: block;
   overflow-x: auto;
   white-space: nowrap;
@@ -344,6 +345,7 @@
 
   #PRODUCTS_HOLDER_MOBILE {
     display: block;
+    grid-area: MAIN-AREA;
   }
 }
 
@@ -367,6 +369,7 @@
 
   #PRODUCTS_HOLDER_MOBILE {
     display: block;
+    grid-area: MAIN-AREA;
   }
 }
 
