@@ -6,7 +6,6 @@ import SkeletonLoader from "@/components/Loader/loader";
 import { CartProvider } from "@/components/context/CartContext";
 
 
-
 const Home = () => {
   const [data, setData] = useState(null);
   const [firstStory, setFirstStory] = useState(null);
