@@ -88,64 +88,7 @@ export default class Products extends Component {
 
         {/* Desktop View */}
 
-        <div id={styles.PRODUCTS_HOLDER}>
-            {products.map((product, index) => (
-              <div key={index} id={styles.PRODUCT} style={{ gridArea: `AREA_${index + 1}` }}>
-                <Link href={`/products/${product.slug}`} className="rounded-xl" style={{ position: "relative", width: "100%", height: "100%" }}>
-                  <div id={styles.PRODUCT_OVERLAY_GRID} style={{ position: "absolute", width: "100%", height: "100%", zIndex: 100 }}>
-                    <div style={{ gridArea: "LOGO", position: "relative" }}>
-                      <Image src={logo} alt="Logo" fill style={{ objectFit: "cover" }} quality={100} />
-                    </div>
-                    <div style={{ gridArea: "TEXT", position: "relative" }}>
-                      <Image src={text_logo} alt="Logo Text" fill style={{ objectFit: "cover" }} quality={100} />
-                    </div>
-                  </div>
-                  <Image
-                    id={styles.PRODUCT_IMAGE}
-                    src={product.images?.[0] || "/fallback.jpg"}
-                    alt={product.title}
-                    style={{ objectFit: "cover", position: "absolute", width: "100%", height: "100%" }}
-                    fill
-                    className="rounded-xl"
-                    quality={100}
-                  />
-                </Link>
-                <div>
-                  <Link href={`/products/${product.slug}`}>
-                    <h3 id={styles._H3} className="text-neutral-700 font-geist_regular" style={{ marginBottom: "7.5px" }}>
-                      {product.description}
-                    </h3>
-                    <h3 id={styles._H3} className="text-neutral-700 font-avant_garde_bold">
-                      From ${product.commercial_price}
-                    </h3>
-                  </Link>
-                </div>
-              </div>
-            ))}
-
-            {/* CTA Section */}
-            <div id={styles.TEXT_HOLDER} style={{ gridArea: "TITLE" , paddingTop: "100px" }}>
-              <div id={styles.SHOP_GRID}>
-                <div style={{ gridArea: "ICON" }}>
-                  <FontAwesomeIcon icon={faCartShopping} className="text-stone-900" style={{ fontSize: "40px" }} />
-                </div>
-                <div style={{ gridArea: "BUTTON" }}>
-                  <Button>
-                    <Link href="/products" style={{ height: "100%", width: "100%" }}>
-                      Shop
-                    </Link>
-                  </Button>
-                </div>
-                <div style={{ gridArea: "TEXT" }}>
-                  <h3 id={styles._H3} className="text-neutral-700 font-avant_garde_bold">Click Here!</h3>
-                  <br />
-                  <h3 id={styles._H3} className="text-neutral-700 font-avant_garde_bold">
-                    Custom designed resources to help streamline, automate and enhance your workflow in architecture, design and manufacturing.
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </div>
+        
 
 
 
@@ -154,6 +97,66 @@ export default class Products extends Component {
 
 
           <div className={styles.grid_0_main}>
+              <div id={styles.PRODUCTS_HOLDER}>
+                
+                {products.map((product, index) => (
+                  <div key={index} id={styles.PRODUCT} style={{ gridArea: `AREA_${index + 1}` }}>
+                    <Link href={`/products/${product.slug}`} className="rounded-xl" style={{ position: "relative", width: "100%", height: "100%" }}>
+                      <div id={styles.PRODUCT_OVERLAY_GRID} style={{ position: "absolute", width: "100%", height: "100%", zIndex: 100 }}>
+                        <div style={{ gridArea: "LOGO", position: "relative" }}>
+                          <Image src={logo} alt="Logo" fill style={{ objectFit: "cover" }} quality={100} />
+                        </div>
+                        <div style={{ gridArea: "TEXT", position: "relative" }}>
+                          <Image src={text_logo} alt="Logo Text" fill style={{ objectFit: "cover" }} quality={100} />
+                        </div>
+                      </div>
+                      <Image
+                        id={styles.PRODUCT_IMAGE}
+                        src={product.images?.[0] || "/fallback.jpg"}
+                        alt={product.title}
+                        style={{ objectFit: "cover", position: "absolute", width: "100%", height: "100%" }}
+                        fill
+                        className="rounded-xl"
+                        quality={100}
+                      />
+                    </Link>
+                    <div>
+                      <Link href={`/products/${product.slug}`}>
+                        <h3 id={styles._H3} className="text-neutral-700 font-geist_regular" style={{ marginBottom: "7.5px" }}>
+                          {product.description}
+                        </h3>
+                        <h3 id={styles._H3} className="text-neutral-700 font-avant_garde_bold">
+                          From ${product.commercial_price}
+                        </h3>
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+
+                {/* CTA Section */}
+                <div id={styles.TEXT_HOLDER} style={{ gridArea: "TITLE" , paddingTop: "100px" }}>
+                  <div id={styles.SHOP_GRID}>
+                    <div style={{ gridArea: "ICON" }}>
+                      <FontAwesomeIcon icon={faCartShopping} className="text-stone-900" style={{ fontSize: "40px" }} />
+                    </div>
+                    <div style={{ gridArea: "BUTTON" }}>
+                      <Button>
+                        <Link href="/products" style={{ height: "100%", width: "100%" }}>
+                          Shop
+                        </Link>
+                      </Button>
+                    </div>
+                    <div style={{ gridArea: "TEXT" }}>
+                      <h3 id={styles._H3} className="text-neutral-700 font-avant_garde_bold">Click Here!</h3>
+                      <br />
+                      <h3 id={styles._H3} className="text-neutral-700 font-avant_garde_bold">
+                        Custom designed resources to help streamline, automate and enhance your workflow in architecture, design and manufacturing.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
 
             
 
