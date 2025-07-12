@@ -4348,7 +4348,7 @@
     height: auto;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 350px auto;
+    grid-template-rows: auto auto;
     grid-template-areas:
       "VIDEO"
       "TITLE";
