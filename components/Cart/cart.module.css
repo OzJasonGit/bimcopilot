@@ -1,0 +1,274 @@
+.cartContainer {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: aliceblue;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cartTitle {
+  font-size: 2rem;
+  font-family: 'Avant Garde', sans-serif;
+  color: #222;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.emptyCart {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.cartList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.cartImageWrap {
+  flex-shrink: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #f0f4fa;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartImage {
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.cartDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cartItemTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.cartItemPrice {
+  color: #444;
+  font-size: 1rem;
+}
+
+.cartQuantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cartQuantityValue {
+  min-width: 2ch;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.removeBtn {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+}
+
+.cartSummary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.subtotal {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.checkoutBtn {
+  width: 100%;
+  font-size: 1.1rem;
+  border-radius: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .cartContainer {
+    padding: 1rem 0.5rem;
+  }
+  .cartItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .cartSummary {
+    align-items: stretch;
+  }
+} 
+
+.cartContainerDark {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #18181b;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cartTitleDark {
+  font-size: 2rem;
+  font-family: 'Avant Garde', sans-serif;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.loadingDark {
+  text-align: center;
+  color: #bbb;
+  font-size: 1.1rem;
+}
+
+.emptyCartDark {
+  text-align: center;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+.cartListDark {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cartItemDark {
+  display: flex;
+  align-items: center;
+  background: #232326;
+  border-radius: 1rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.18);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.cartImageWrapDark {
+  flex-shrink: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #222;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartImageDark {
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.cartDetailsDark {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cartItemTitleDark {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.cartItemPriceDark {
+  color: #e5e5e5;
+  font-size: 1rem;
+}
+
+.cartQuantityDark {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cartQuantityValueDark {
+  min-width: 2ch;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.removeBtnDark {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  color: #fff;
+  border-color: #444;
+}
+
+.cartSummaryDark {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.subtotalDark {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.checkoutBtnDark {
+  width: 100%;
+  font-size: 1.1rem;
+  border-radius: 0.75rem;
+  margin-top: 0.5rem;
+  background: #111;
+  color: #fff;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  transition: background 0.2s;
+}
+.checkoutBtnDark:disabled {
+  background: #333;
+  color: #888;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .cartContainerDark {
+    padding: 1rem 0.5rem;
+  }
+  .cartItemDark {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .cartSummaryDark {
+    align-items: stretch;
+  }
+} 

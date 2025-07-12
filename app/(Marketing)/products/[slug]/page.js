@@ -17,6 +17,12 @@ import Services_1 from '@/components/services_1/services_1';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import handleCheckout from '@/components/Payment/payment';
+import { CartContext } from '@/components/context/CartContext';
+import { useContext } from 'react';
+
+
+
+
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -24,6 +30,7 @@ const ProductDetail = () => {
   const [loading, setLoading] = useState(true);
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [licenseType, setLicenseType] = useState('commercial');
+const { addToCart } = useContext(CartContext);
   const router = useRouter();
 
   useEffect(() => {
@@ -241,13 +248,24 @@ const ProductDetail = () => {
 
                 <div id={styles.C4}>
                   <div id={styles.CHECKOUT_GRID}>
-                    <div id={styles.ADD_TO_CART}>
-                      <Link href="/payment">
-                        <Button style={{ position: 'absolute', width: '100%', height: '100%' }}>
-                          Add To Cart
-                        </Button>
-                      </Link>
-                    </div>
+                  <div id={styles.ADD_TO_CART}>
+  <Button
+    onClick={() => {
+      addToCart({
+        _id: product._id,
+        title: product.title,
+        price: licenseType === 'commercial' ? product.commercial_price : product.student_price,
+        image: product.image,
+      });
+      toast.success(' Product added to cart!');
+    }}
+    style={{ position: 'absolute', width: '100%', height: '100%' }}
+  >
+    Add To Cart
+  </Button>
+</div>
+
+
 
                     <div id={styles.PAYPAL}>
                     <Button

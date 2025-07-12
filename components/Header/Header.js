@@ -148,7 +148,7 @@ export default function Header() {
 
               {/* Basket and Favorites */}
               <div className="content-right ..." id={styles.BASKET_CONTAINER}>
-                <Link className="content-center ... align-middle ..." href="/bloghome" style={{ gridArea: "BASKET", position: "relative", top: "0.75px", left: "-30px" }}>
+                <Link className="content-center ... align-middle ..." href="/cart" style={{ gridArea: "BASKET", position: "relative", top: "0.75px", left: "-30px" }}>
                   <div className="content-center ... align-middle ...">
                     <FontAwesomeIcon icon={faCartShopping} size="3xs" className="text-slate-50" />
                   </div>
