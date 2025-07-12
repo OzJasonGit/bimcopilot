@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -15,8 +17,9 @@ export default function CheckoutPage() {
       .then((res) => res.json())
       .then((data) => {
         setCartItems(data);
-        setSelectedItems(data.map((item) => item._id)); // Select all by default
-        calculateTotal(data, data.map((item) => item._id));
+        const allIds = data.map((item) => item._id);
+        setSelectedItems(allIds);
+        calculateTotal(data, allIds);
       });
   }, []);
 
@@ -35,6 +38,17 @@ export default function CheckoutPage() {
     calculateTotal(cartItems, updated);
   };
 
+  const updateQuantity = (id, delta) => {
+    const updatedItems = [...cartItems].map((item) =>
+      item._id === id
+        ? { ...item, quantity: Math.max(1, item.quantity + delta) }
+        : item
+    );
+    setCartItems(updatedItems);
+    calculateTotal(updatedItems, selectedItems);
+  };
+  
+
   const handleStripeCheckout = async () => {
     const itemsToBuy = cartItems.filter((item) => selectedItems.includes(item._id));
     const amount = itemsToBuy.reduce((acc, item) => acc + item.price * item.quantity, 0) * 100;
@@ -50,52 +64,97 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 bg-black text-white p-8 gap-8">
-      {/* Left: Cart Items */}
-      <div>
-        <h2 className="text-3xl font-bold mb-6">Shopping Cart</h2>
-        {cartItems.map((item) => (
-          <div
-            key={item._id}
-            className="flex items-center justify-between py-4 border-b border-gray-700"
-          >
-            <div className="flex items-center gap-4">
-              <input
-                type="checkbox"
-                checked={selectedItems.includes(item._id)}
-                onChange={() => toggleSelection(item._id)}
-              />
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={64}
-                height={64}
-                className="rounded-md"
-              />
-              <div>
-                <p className="font-semibold">{item.title}</p>
-                <p className="text-sm text-gray-400">Quantity: {item.quantity}</p>
+    <div className="min-h-screen bg-[#151515] text-white p-8 pt-[110px] md:pt-[110px] sm:pt-[65px]">
+      <h2 className="text-3xl font-bold mb-6">Your Cart ({cartItems.length} items)</h2>
+
+      <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-8">
+        {/* Cart Items List */}
+        <div className="space-y-6">
+          {cartItems.length === 0 ? (
+            <p className="text-gray-400">Your cart is empty.</p>
+          ) : (
+            cartItems.map((item) => (
+              <div
+                key={item._id}
+                className="flex items-center justify-between border-b border-gray-700 pb-4"
+              >
+                {/* Left: Image + Info */}
+                <div className="flex items-center gap-4">
+                  <input
+                    type="checkbox"
+                    checked={selectedItems.includes(item._id)}
+                    onChange={() => toggleSelection(item._id)}
+                    className="accent-green-500"
+                  />
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={64}
+                    height={64}
+                    className="rounded-md object-cover"
+                  />
+                  <div>
+                    <p className="font-semibold">{item.title}</p>
+                    <p className="text-sm text-gray-400">${item.price.toFixed(2)} each</p>
+                  </div>
+                </div>
+
+                {/* Right: Quantity + Total */}
+                <div className="flex items-center gap-3">
+                  <button
+                    className="px-2 text-xl bg-zinc-800 rounded"
+                    onClick={() => updateQuantity(item._id, -1)}
+                  >
+                    −
+                  </button>
+                  <span>{item.quantity}</span>
+                  <button
+                    className="px-2 text-xl bg-zinc-800 rounded"
+                    onClick={() => updateQuantity(item._id, 1)}
+                  >
+                    +
+                  </button>
+                  <p className="w-20 text-right font-medium">
+                    ${(item.quantity * item.price).toFixed(2)}
+                  </p>
+                </div>
+              </div>
+            ))
+          )}
+
+          {cartItems.length > 0 && (
+            <div className="text-right text-xl font-semibold mt-6">
+              Subtotal: ${totalPrice.toFixed(2)}
+            </div>
+          )}
+        </div>
+
+        {/* Checkout Summary */}
+        {cartItems.length > 0 && (
+          <div className="bg-zinc-900 p-6 rounded-xl shadow-md space-y-4 h-fit">
+            <h3 className="text-xl font-bold">Checkout Summary</h3>
+            <div className="border-t border-zinc-700 pt-4 space-y-2 text-sm">
+              <div className="flex justify-between">
+                <span>Subtotal</span>
+                <span>${totalPrice.toFixed(2)}</span>
+              </div>
+              <div className="flex justify-between text-gray-400">
+                <span>Sales Tax</span>
+                <span>$0.00</span>
+              </div>
+              <div className="flex justify-between font-semibold text-white border-t border-zinc-700 pt-2">
+                <span>Grand Total</span>
+                <span>${totalPrice.toFixed(2)}</span>
               </div>
             </div>
-            <div className="text-right">
-              <p>${(item.price * item.quantity).toFixed(2)}</p>
-            </div>
+            <Button
+              onClick={handleStripeCheckout}
+              className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white"
+            >
+              Proceed to Stripe Payment
+            </Button>
           </div>
-        ))}
-        <div className="mt-6 text-right text-lg font-bold">
-          Subtotal: ${totalPrice.toFixed(2)}
-        </div>
-      </div>
-
-      {/* Right: Stripe Checkout */}
-      <div className="bg-zinc-900 p-6 rounded-xl shadow-xl">
-        <h3 className="text-xl font-semibold mb-4">Secure Checkout</h3>
-        <p className="text-sm text-gray-400 mb-4">
-          You will be redirected to Stripe for payment.
-        </p>
-        <Button onClick={handleStripeCheckout} className="mt-6 w-full bg-blue-600 text-white">
-          Proceed to Stripe Payment
-        </Button>
+        )}
       </div>
     </div>
   );
