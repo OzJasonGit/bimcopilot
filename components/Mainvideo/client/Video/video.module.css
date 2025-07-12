@@ -43,7 +43,7 @@
 
 
     #VIDEO video{ 
-        height: 340px;
+        height: auto;
         object-fit: cover;
         border-radius: 0.5rem !important;
 
