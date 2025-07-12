@@ -84,47 +84,11 @@ export default class Products extends Component {
 
             </div>
           </div>
+        </div>
 
+        {/* Desktop View */}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div id={styles.PRODUCTS_HOLDER}>
+        <div id={styles.PRODUCTS_HOLDER}>
           
             {products.map((product, index) => (
               <div key={index} id={styles.PRODUCT} style={{ gridArea: `AREA_${index + 1}` }}>
@@ -184,11 +148,6 @@ export default class Products extends Component {
             </div>
 
         </div>
-        </div>
-
-        {/* Desktop View */}
-
-        
 
 
 
