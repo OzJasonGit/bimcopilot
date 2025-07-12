@@ -36,8 +36,10 @@ export default class Products extends Component {
     return (
       <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}>
 
-        {/* Mobile View */}
+        
         <div className={styles.grid_0_main}>
+
+          {/* Mobile View */}
           <div id={styles.PRODUCTS_HOLDER_MOBILE}>
             <div id={styles.PRODUCTS_HORIZONTAL_MOBILE}>
              {products.map((product, index) => (
@@ -84,17 +86,9 @@ export default class Products extends Component {
 
             </div>
           </div>
-        </div>
 
-
-
-
-
-
-        {/* Desktop View */}
-        <div className={styles.grid_0_main}>
-
-            <div id={styles.PRODUCTS_HOLDER}>
+          {/* Desktop View */}
+          <div id={styles.PRODUCTS_HOLDER}>
               
               {products.map((product, index) => (
                 <div key={index} id={styles.PRODUCT} style={{ gridArea: `AREA_${index + 1}` }}>
@@ -130,6 +124,8 @@ export default class Products extends Component {
                 </div>
               ))}
 
+      
+
               {/* CTA Section */}
               <div id={styles.TEXT_HOLDER} style={{ gridArea: "TITLE" , paddingTop: "100px" }}>
                 <div id={styles.SHOP_GRID}>
@@ -153,13 +149,10 @@ export default class Products extends Component {
                 </div>
               </div>
 
-      </div>
-
-
-          
+          </div>
 
         </div>
-               
+
       </section>
     );
   }
