@@ -87,9 +87,8 @@ export default class Products extends Component {
         </div>
 
         {/* Desktop View */}
-        <div className={styles.grid_0_main}>
-          
-          <div id={styles.PRODUCTS_HOLDER}>
+
+        <div id={styles.PRODUCTS_HOLDER}>
             {products.map((product, index) => (
               <div key={index} id={styles.PRODUCT} style={{ gridArea: `AREA_${index + 1}` }}>
                 <Link href={`/products/${product.slug}`} className="rounded-xl" style={{ position: "relative", width: "100%", height: "100%" }}>
@@ -148,7 +147,17 @@ export default class Products extends Component {
             </div>
           </div>
 
-        </div>
+
+
+
+
+
+
+          <div className={styles.grid_0_main}>
+
+            
+
+          </div>
 
 
 
