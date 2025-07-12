@@ -39,7 +39,9 @@
 
 
 
-
+#PRODUCTS_HOLDER_MOBILE {
+  display: none;
+}
 
 
 
@@ -299,18 +301,27 @@
 
 
 @media all and (min-width: 960px) and (max-width: 1280px) {
-
-
+  #PRODUCTS_HOLDER_MOBILE {
+    display: none;
+  }
 }
 
 
 
 
 
-@media screen and (max-width: 768px) {
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 480px) and (max-width: 960px) {
   #PRODUCTS_HOLDER {
     display: none;
-  
   }
 
   #PRODUCTS_HOLDER_MOBILE {
@@ -318,20 +329,44 @@
   }
 }
 
-@media screen and (min-width: 769px) {
-  #PRODUCTS_HOLDER_MOBILE {
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 0px) and (max-width: 480px) {
+  #PRODUCTS_HOLDER {
     display: none;
   }
-}
 
-
-
-
-@media screen and (min-width: 1024px) {
-  .grid_0_main {
-    display: none !important;
+  #PRODUCTS_HOLDER_MOBILE {
+    display: block;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
