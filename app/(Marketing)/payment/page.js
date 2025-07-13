@@ -31,7 +31,7 @@ const PaymentPageInner = () => {
       <p>Price: ${product.price.toFixed(2)}</p>
       <Image src={product.image} alt={product.title} width={300} height={300} />
       <br />
-      <CheckoutButton amount={product.price} currency="USD" />
+      <CheckoutButton amount={product.price} currency="USD" product={product} />
     </div>
   );
 };

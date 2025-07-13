@@ -53,15 +53,18 @@ export default function CheckoutPage() {
 
   const handleStripeCheckout = async () => {
     const itemsToBuy = cartItems.filter((item) => selectedItems.includes(item._id));
-    const amount = itemsToBuy.reduce((acc, item) => acc + item.price * item.quantity, 0) * 100;
+    
+    // Convert cart items to products format
+    const products = itemsToBuy.map(item => ({
+      title: item.title,
+      price: item.price,
+      image: item.image,
+      quantity: item.quantity
+    }));
 
     await handleCheckout({
-      amount,
+      products,
       currency: 'USD',
-      product: {
-        title: 'Selected Items',
-        image: itemsToBuy[0]?.image || '',
-      },
     });
   };
 

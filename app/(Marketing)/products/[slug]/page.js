@@ -274,13 +274,13 @@ const { addToCart } = useContext(CartContext);
   style={{ position: 'absolute', width: '100%', height: '100%' }}
   onClick={() => {
     handleCheckout({
-      amount: currentPrice * 100, // Stripe expects amount in cents
-      currency: 'USD',
-      product: {
+      products: [{
         title: product.title,
+        price: currentPrice,
         image: product.image,
-        slug: product.slug,
-      },
+        quantity: 1
+      }],
+      currency: 'USD',
     });
   }}
 >
