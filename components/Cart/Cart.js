@@ -71,7 +71,7 @@ export default function CheckoutPage() {
 
       <div className={styles.grid_0}>
 
-          <div className="min-h-screen bg-[#151515] text-white p-8 pt-[110px] md:pt-[110px] sm:pt-[65px]"           
+          <div className="min-h-screen bg-[#171717] text-white p-8 pt-[110px] md:pt-[110px] sm:pt-[65px]"           
                 style={{
                   gridArea: "MAIN-AREA",
                   position: 'relative',      

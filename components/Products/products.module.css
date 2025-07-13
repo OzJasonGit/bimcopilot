@@ -150,12 +150,11 @@
 }
 
 
+
+
+
 #PRODUCTS_HOLDER_MOBILE {
-  grid-area: MAIN-AREA;
-  display: block;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding: 1rem 0;
+  display: none;
 }
 
 #PRODUCTS_HORIZONTAL_MOBILE {
@@ -361,9 +360,16 @@
     display: none;
   }
 
+ 
+
+
+
   #PRODUCTS_HOLDER_MOBILE {
-    display: block;
     grid-area: MAIN-AREA;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem 0; 
   }
 }
 
@@ -401,9 +407,13 @@
     display: none;
   }
 
+
   #PRODUCTS_HOLDER_MOBILE {
-    display: block;
     grid-area: MAIN-AREA;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem 0;
   }
 }
 
