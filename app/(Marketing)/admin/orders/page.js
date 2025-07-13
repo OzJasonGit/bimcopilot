@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Header from '@/components/Header/Header';
+import Sidebar from '@/components/Sidebar/sidebar';
 
 export default function AdminOrders() {
   const [orders, setOrders] = useState([]);
@@ -80,6 +82,28 @@ export default function AdminOrders() {
     );
   };
 
+  const updateOrderStatus = async (orderId, newStatus) => {
+    try {
+      const response = await fetch('/api/orders', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
+        body: JSON.stringify({ orderId, status: newStatus }),
+      });
+
+      if (response.ok) {
+        toast.success('Order status updated');
+        // Reload orders
+        checkAuthAndLoadOrders();
+      } else {
+        toast.error('Failed to update order status');
+      }
+    } catch (error) {
+      console.error('Error updating order status:', error);
+      toast.error('Error updating order status');
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-100 flex items-center justify-center">
@@ -92,104 +116,118 @@ export default function AdminOrders() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <div className="flex justify-between items-center mb-6">
-            <h1 className="text-3xl font-bold text-gray-900">Orders Management</h1>
-            <div className="text-sm text-gray-600">
-              Welcome, {user?.name}
-            </div>
-          </div>
-
-          {orders.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">No orders found</p>
-            </div>
-          ) : (
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Order ID
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Customer
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Products
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Amount
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Status
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Date
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  {orders.map((order) => (
-                    <tr key={order._id} className="hover:bg-gray-50">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        {order.stripeSessionId || order._id}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <div>
-                          <div className="text-sm font-medium text-gray-900">
-                            {order.userName || 'N/A'}
-                          </div>
-                          <div className="text-sm text-gray-500">
-                            {order.userEmail}
-                          </div>
-                        </div>
-                      </td>
-                      <td className="px-6 py-4">
-                        <div className="text-sm text-gray-900">
-                          {order.products && order.products.length > 0 ? (
-                            <div>
-                              {order.products.map((product, index) => (
-                                <div key={index} className="mb-1">
-                                  <span className="font-medium">{product.title}</span>
-                                  <span className="text-gray-500 ml-2">x{product.quantity}</span>
-                                  <span className="text-gray-500 ml-2">${product.price}</span>
-                                </div>
-                              ))}
-                            </div>
-                          ) : order.lineItems && order.lineItems.length > 0 ? (
-                            <div>
-                              {order.lineItems.map((item, index) => (
-                                <div key={index} className="mb-1">
-                                  <span className="font-medium">{item.description || item.price_data?.product_data?.name}</span>
-                                  <span className="text-gray-500 ml-2">x{item.quantity}</span>
-                                </div>
-                              ))}
-                            </div>
-                          ) : (
-                            <span className="text-gray-500">No items</span>
-                          )}
-                        </div>
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        ${order.amount?.toFixed(2) || '0.00'} {order.currency?.toUpperCase()}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        {getStatusBadge(order.status)}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {formatDate(order.createdAt)}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
+    <>
+      <Header />
+      <div className="flex">
+        <div className="w-64 pt-28 fixed h-full bg-gray-900 text-white">
+          <Sidebar />
         </div>
+        <main className="ml-64 p-6 w-full pt-24">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <div className="flex justify-between items-center mb-6">
+              <h1 className="text-3xl font-bold text-gray-900">Orders Management</h1>
+              <div className="text-sm text-gray-600">
+                Welcome, {user?.name}
+              </div>
+            </div>
+
+            {orders.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-gray-500 text-lg">No orders found</p>
+              </div>
+            ) : (
+              <div className="overflow-x-auto">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <thead className="bg-gray-50">
+                    <tr>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Order ID
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Customer
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Products
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Amount
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Status
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Date
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white divide-y divide-gray-200">
+                    {orders.map((order) => (
+                      <tr key={order._id} className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                          {order.stripeSessionId || order._id}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          <div>
+                            <div className="text-sm font-medium text-gray-900">
+                              {order.userName || 'N/A'}
+                            </div>
+                            <div className="text-sm text-gray-500">
+                              {order.userEmail}
+                            </div>
+                          </div>
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className="text-sm text-gray-900">
+                            {order.products && order.products.length > 0 ? (
+                              <div>
+                                {order.products.map((product, index) => (
+                                  <div key={index} className="mb-1">
+                                    <span className="font-medium">{product.title}</span>
+                                    <span className="text-gray-500 ml-2">x{product.quantity}</span>
+                                    <span className="text-gray-500 ml-2">${product.price}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : order.lineItems && order.lineItems.length > 0 ? (
+                              <div>
+                                {order.lineItems.map((item, index) => (
+                                  <div key={index} className="mb-1">
+                                    <span className="font-medium">{item.description || item.price_data?.product_data?.name}</span>
+                                    <span className="text-gray-500 ml-2">x{item.quantity}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : (
+                              <span className="text-gray-500">No items</span>
+                            )}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                          ${order.amount?.toFixed(2) || '0.00'} {order.currency?.toUpperCase()}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap">
+                          {getStatusBadge(order.status)}
+                          {order.status === 'pending' && (
+                            <button
+                              onClick={() => updateOrderStatus(order._id, 'paid')}
+                              className="ml-2 px-2 py-1 bg-green-500 text-white text-xs rounded hover:bg-green-600"
+                            >
+                              Mark as Paid
+                            </button>
+                          )}
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                          {formatDate(order.createdAt)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        </main>
       </div>
-    </div>
+    </>
   );
 } 

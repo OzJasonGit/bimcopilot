@@ -6,6 +6,13 @@ import { ObjectId } from 'mongodb';
 const stripe = stripeLib(process.env.STRIPE_SECRET_KEY);
 const ORDERS_COLLECTION = 'orders';
 
+export async function GET() {
+  return NextResponse.json({ 
+    message: 'Stripe webhook endpoint is working',
+    timestamp: new Date().toISOString()
+  });
+}
+
 export async function POST(req) {
   const body = await req.text();
   const signature = req.headers.get('stripe-signature');
@@ -30,23 +37,31 @@ export async function POST(req) {
       case 'checkout.session.completed':
         const session = event.data.object;
         
+        console.log('Processing checkout.session.completed for session:', session.id);
+        console.log('Session metadata:', session.metadata);
+        console.log('Session amount:', session.amount_total);
+        
         // Update existing order or create new one
         const orderId = session.metadata?.orderId;
         
         if (orderId) {
+          console.log('Updating existing order with ID:', orderId);
           // Update existing order
-          await db.collection(ORDERS_COLLECTION).updateOne(
+          const updateResult = await db.collection(ORDERS_COLLECTION).updateOne(
             { _id: new ObjectId(orderId) },
             { 
               $set: {
                 status: 'paid',
                 paymentStatus: 'completed',
+                stripeSessionId: session.id,
+                amount: session.amount_total / 100,
                 updatedAt: new Date()
               }
             }
           );
-          console.log('Order updated for session:', session.id);
+          console.log('Order update result:', updateResult);
         } else {
+          console.log('Creating new order for session:', session.id);
           // Create new order (fallback)
           const order = {
             stripeSessionId: session.id,
@@ -63,8 +78,8 @@ export async function POST(req) {
             updatedAt: new Date()
           };
 
-          await db.collection(ORDERS_COLLECTION).insertOne(order);
-          console.log('Order created for session:', session.id);
+          const insertResult = await db.collection(ORDERS_COLLECTION).insertOne(order);
+          console.log('Order created with ID:', insertResult.insertedId);
         }
         break;
 

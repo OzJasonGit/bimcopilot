@@ -16,6 +16,8 @@ export async function GET() {
       .find({ userId: user.id.toString() })
       .toArray();
     
+    console.log('Retrieved cart items for user:', user.id.toString(), 'Items:', items);
+    
     return NextResponse.json(items);
   } catch (error) {
     console.error('Error fetching cart:', error);
@@ -101,10 +103,28 @@ export async function DELETE(request) {
     const db = await connectToDatabase();
     const { id } = await request.json();
     
-    await db.collection(CART_COLLECTION).deleteOne({ 
-      id, 
+    console.log('Attempting to delete item with id:', id, 'for user:', user.id.toString());
+    
+    // Delete the item using the id field
+    const deleteResult = await db.collection(CART_COLLECTION).deleteOne({ 
+      id: id, 
       userId: user.id.toString() 
     });
+    
+    console.log('Delete result:', deleteResult);
+    
+    if (deleteResult.deletedCount === 0) {
+      console.log('Item not found with id field, trying _id field...');
+      // Try with _id field as fallback
+      const alternativeDelete = await db.collection(CART_COLLECTION).deleteOne({ 
+        _id: id, 
+        userId: user.id.toString() 
+      });
+      
+      if (alternativeDelete.deletedCount === 0) {
+        return NextResponse.json({ error: 'Item not found in cart' }, { status: 404 });
+      }
+    }
     
     const items = await db.collection(CART_COLLECTION)
       .find({ userId: user.id.toString() })

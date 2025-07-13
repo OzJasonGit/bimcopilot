@@ -22,14 +22,14 @@ export default function CheckoutPage() {
   useEffect(() => {
     // Only set all items as selected if no items are currently selected
     if (cartItems.length > 0 && selectedItems.length === 0) {
-      const allIds = cartItems.map((item) => item._id);
+      const allIds = cartItems.map((item) => item.id || item._id);
       setSelectedItems(allIds);
     }
   }, [cartItems, selectedItems.length]);
 
   const calculateTotal = (items, selectedIds) => {
     return items
-      .filter((item) => selectedIds.includes(item._id))
+      .filter((item) => selectedIds.includes(item.id || item._id))
       .reduce((sum, item) => sum + item.price * item.quantity, 0);
   };
 
@@ -41,7 +41,7 @@ export default function CheckoutPage() {
   };
 
   const handleQuantityChange = async (id, delta) => {
-    const item = cartItems.find(item => item._id === id);
+    const item = cartItems.find(item => (item.id || item._id) === id);
     if (item) {
       const newQuantity = Math.max(1, item.quantity + delta);
       await updateQuantity(id, newQuantity);
@@ -54,7 +54,7 @@ export default function CheckoutPage() {
       return;
     }
 
-    const itemsToBuy = cartItems.filter((item) => selectedItems.includes(item._id));
+    const itemsToBuy = cartItems.filter((item) => selectedItems.includes(item.id || item._id));
     
     // Convert cart items to products format
     const products = itemsToBuy.map(item => ({
@@ -121,15 +121,15 @@ export default function CheckoutPage() {
               ) : (
                 cartItems.map((item) => (
                   <div
-                    key={item._id}
+                    key={item.id || item._id}
                     className="flex items-center justify-between border-b border-gray-700 pb-4"
                   >
                     {/* Left: Image + Info */}
                     <div className="flex items-center gap-4">
                       <input
                         type="checkbox"
-                        checked={selectedItems.includes(item._id)}
-                        onChange={() => toggleSelection(item._id)}
+                        checked={selectedItems.includes(item.id || item._id)}
+                        onChange={() => toggleSelection(item.id || item._id)}
                         className="accent-green-500"
                       />
                       <Image
@@ -149,14 +149,14 @@ export default function CheckoutPage() {
                     <div className="flex items-center gap-3">
                       <button
                         className="px-2 text-xl bg-zinc-800 rounded"
-                        onClick={() => handleQuantityChange(item._id, -1)}
+                        onClick={() => handleQuantityChange(item.id || item._id, -1)}
                       >
                         −
                       </button>
                       <span>{item.quantity}</span>
                       <button
                         className="px-2 text-xl bg-zinc-800 rounded"
-                        onClick={() => handleQuantityChange(item._id, 1)}
+                        onClick={() => handleQuantityChange(item.id || item._id, 1)}
                       >
                         +
                       </button>
@@ -164,7 +164,7 @@ export default function CheckoutPage() {
                         ${(item.quantity * item.price).toFixed(2)}
                       </p>
                       <button
-                        onClick={() => removeFromCart(item._id)}
+                        onClick={() => removeFromCart(item.id || item._id)}
                         className="text-red-400 hover:text-red-300 ml-2"
                       >
                         Remove
