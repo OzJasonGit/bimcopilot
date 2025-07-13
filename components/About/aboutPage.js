@@ -41,20 +41,20 @@ export default class Aboutpage extends Component {
                 <br />
                 <h3
                   id={styles._H3}
-                  className="text-xl text-stone-400 drop-shadow-xl font-avant_garde_bold"
+                  className="text-xl text-stone-400 drop-shadow-xl font-avant_garde_medium"
                 >
                   Find out how we can help your business build{' '}
-                  <a className="text-stone-200 font-avant_garde_medium">systems</a>{' '}
+                  <a className="text-stone-200 font-avant_garde_bold">systems</a>{' '}
                   for{' '}
-                  <a className="text-stone-200 font-avant_garde_medium">
+                  <a className="text-stone-200 font-avant_garde_bold">
                     automation,
                   </a>{' '}
-                  <a className="text-stone-200 font-avant_garde_medium">
+                  <a className="text-stone-200 font-avant_garde_bold">
                     sustainability,
                   </a>{' '}
-                  <a className="text-stone-200 font-avant_garde_medium">profit</a>{' '}
+                  <a className="text-stone-200 font-avant_garde_bold">profit</a>{' '}
                   and{' '}
-                  <a className="text-stone-200 font-avant_garde_medium">growth.</a>
+                  <a className="text-stone-200 font-avant_garde_bold">growth.</a>
                 </h3>
               </div>
 
