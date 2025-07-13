@@ -1,26 +1,38 @@
 
-import Products from '@/Modules/Product_test/product_test';
-import { connectToDatabase } from '@/app/utils/mongodb';
+import { NextResponse } from "next/server";
+import mongoose from "mongoose";
+import { connectToDatabase } from "@/app/utils/mongodb";
 
-export default async function handler(req, res) {
-  const { slug } = req.query;
+const ProductSchema = new mongoose.Schema({
+  product_id: { type: String, required: true },
+  title: { type: String, required: true },
+  slug: { type: String, required: true, unique: true },
+  short_description: { type: String, required: true },
+  description: { type: String, required: true },
+  license_type: { type: String, enum: ["student", "commercial"], required: true },
+  student_price: { type: Number, required: true, min: 0 },
+  commercial_price: { type: Number, required: true, min: 0 },
+  category: { type: String, required: true },
+  tags: { type: String },
+  images: { type: [String], required: true },
+}, { timestamps: true });
 
-  await connectToDatabase();
+const Product = mongoose.models.Product || mongoose.model('Product', ProductSchema);
 
-  if (req.method === 'GET') {
-    try {
-      const product = await Product.findOne({ slug });
+export async function GET(req, { params }) {
+  try {
+    await connectToDatabase();
+    const { slug } = params;
 
-      if (!product) {
-        return res.status(404).json({ message: 'Product not found' });
-      }
+    const product = await Product.findOne({ slug });
 
-      res.status(200).json(product);
-    } catch (error) {
-      res.status(500).json({ message: 'Server error', error });
+    if (!product) {
+      return NextResponse.json({ success: false, message: 'Product not found' }, { status: 404 });
     }
-  } else {
-    res.setHeader('Allow', ['GET']);
-    res.status(405).end(`Method ${req.method} Not Allowed`);
+
+    return NextResponse.json({ success: true, product });
+  } catch (error) {
+    console.error("GET /api/products/[slug] error:", error);
+    return NextResponse.json({ success: false, message: `Server error: ${error.message}` }, { status: 500 });
   }
 }
