@@ -66,114 +66,116 @@ const productGroups = chunkIntoGroupsOfFive(products);
       {loading ? (
         <div className={styles.loader}><div className={styles.spinner}></div></div>
       ) : (
-      <div className={styles.container}>
-    <div className={styles.grid}>
-      {productGroups.map((group, groupIndex) => {
-        const isEvenGroup = groupIndex % 2 === 0;
+        <section className={styles.center_holder}>
+          <div className={styles.grid_0_product}>
+            <div className={styles.grid}>
+              {productGroups.map((group, groupIndex) => {
+                const isEvenGroup = groupIndex % 2 === 0;
 
-        return (
-          <React.Fragment key={groupIndex}>
-            {/* Row 1: First 3 small cards */}
-            {group.slice(0, 3).map((product, i) => (
-              <div key={product.id} className={styles.card}>
-                <Link href={`/products/${product.slug}`}>
-                  <div className={styles.imageWrapper}>
-                    <Image
-                      src={product.image}
-                      alt={product.title}
-                      fill
-                      className={styles.image}
-                    />
-                  </div>
-                </Link>
-                <div className={styles.text}>
-                  <h2 className={styles.title}>{parse(product.title)}</h2>
-                  <p className={styles.subtitle}>{parse(product.subtitle)}</p>
-                </div>
-              </div>
-            ))}
+                return (
+                  <React.Fragment key={groupIndex}>
+                    {/* Row 1: First 3 small cards */}
+                    {group.slice(0, 3).map((product, i) => (
+                      <div key={product.id} className={styles.card}>
+                        <Link href={`/products/${product.slug}`}>
+                          <div className={styles.imageWrapper}>
+                            <Image
+                              src={product.image}
+                              alt={product.title}
+                              fill
+                              className={styles.image}
+                            />
+                          </div>
+                        </Link>
+                        <div className={styles.text}>
+                          <h2 className={styles.title}>{parse(product.title)}</h2>
+                          <p className={styles.subtitle}>{parse(product.subtitle)}</p>
+                        </div>
+                      </div>
+                    ))}
 
-            {/* Row 2: Small + Large (aligned left or right) */}
-            {group.length >= 5 && (
-              <>
-                {isEvenGroup ? (
-                  <>
-                    <div key={group[3].id} className={styles.card}>
-                      <Link href={`/products/${group[3].slug}`}>
-                        <div className={styles.imageWrapper}>
-                          <Image
-                            src={group[3].image}
-                            alt={group[3].title}
-                            fill
-                            className={styles.image}
-                          />
-                        </div>
-                      </Link>
-                      <div className={styles.text}>
-                        <h2 className={styles.title}>{parse(group[3].title)}</h2>
-                        <p className={styles.subtitle}>{parse(group[3].subtitle)}</p>
-                      </div>
-                    </div>
-                    <div key={group[4].id} className={`${styles.card} ${styles.cardLarge} ${styles.cardRight}`}>
-                      <Link href={`/products/${group[4].slug}`}>
-                        <div className={styles.imageWrapper}>
-                          <Image
-                            src={group[4].image}
-                            alt={group[4].title}
-                            fill
-                            className={styles.image}
-                          />
-                        </div>
-                      </Link>
-                      <div className={styles.text}>
-                        <h2 className={styles.title}>{parse(group[4].title)}</h2>
-                        <p className={styles.subtitle}>{parse(group[4].subtitle)}</p>
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div key={group[4].id} className={`${styles.card} ${styles.cardLarge} ${styles.cardLeft}`}>
-                      <Link href={`/products/${group[4].slug}`}>
-                        <div className={styles.imageWrapper}>
-                          <Image
-                            src={group[4].image}
-                            alt={group[4].title}
-                            fill
-                            className={styles.image}
-                          />
-                        </div>
-                      </Link>
-                      <div className={styles.text}>
-                        <h2 className={styles.title}>{parse(group[4].title)}</h2>
-                        <p className={styles.subtitle}>{parse(group[4].subtitle)}</p>
-                      </div>
-                    </div>
-                    <div key={group[3].id} className={styles.card}>
-                      <Link href={`/products/${group[3].slug}`}>
-                        <div className={styles.imageWrapper}>
-                          <Image
-                            src={group[3].image}
-                            alt={group[3].title}
-                            fill
-                            className={styles.image}
-                          />
-                        </div>
-                      </Link>
-                      <div className={styles.text}>
-                        <h2 className={styles.title}>{parse(group[3].title)}</h2>
-                        <p className={styles.subtitle}>{parse(group[3].subtitle)}</p>
-                      </div>
-                    </div>
-                  </>
-                )}
-              </>
-            )}
-          </React.Fragment>
-        );
-      })}
-    </div>
-  </div>
+                    {/* Row 2: Small + Large (aligned left or right) */}
+                    {group.length >= 5 && (
+                      <>
+                        {isEvenGroup ? (
+                          <>
+                            <div key={group[3].id} className={styles.card}>
+                              <Link href={`/products/${group[3].slug}`}>
+                                <div className={styles.imageWrapper}>
+                                  <Image
+                                    src={group[3].image}
+                                    alt={group[3].title}
+                                    fill
+                                    className={styles.image}
+                                  />
+                                </div>
+                              </Link>
+                              <div className={styles.text}>
+                                <h2 className={styles.title}>{parse(group[3].title)}</h2>
+                                <p className={styles.subtitle}>{parse(group[3].subtitle)}</p>
+                              </div>
+                            </div>
+                            <div key={group[4].id} className={`${styles.card} ${styles.cardLarge} ${styles.cardRight}`}>
+                              <Link href={`/products/${group[4].slug}`}>
+                                <div className={styles.imageWrapper}>
+                                  <Image
+                                    src={group[4].image}
+                                    alt={group[4].title}
+                                    fill
+                                    className={styles.image}
+                                  />
+                                </div>
+                              </Link>
+                              <div className={styles.text}>
+                                <h2 className={styles.title}>{parse(group[4].title)}</h2>
+                                <p className={styles.subtitle}>{parse(group[4].subtitle)}</p>
+                              </div>
+                            </div>
+                          </>
+                        ) : (
+                          <>
+                            <div key={group[4].id} className={`${styles.card} ${styles.cardLarge} ${styles.cardLeft}`}>
+                              <Link href={`/products/${group[4].slug}`}>
+                                <div className={styles.imageWrapper}>
+                                  <Image
+                                    src={group[4].image}
+                                    alt={group[4].title}
+                                    fill
+                                    className={styles.image}
+                                  />
+                                </div>
+                              </Link>
+                              <div className={styles.text}>
+                                <h2 className={styles.title}>{parse(group[4].title)}</h2>
+                                <p className={styles.subtitle}>{parse(group[4].subtitle)}</p>
+                              </div>
+                            </div>
+                            <div key={group[3].id} className={styles.card}>
+                              <Link href={`/products/${group[3].slug}`}>
+                                <div className={styles.imageWrapper}>
+                                  <Image
+                                    src={group[3].image}
+                                    alt={group[3].title}
+                                    fill
+                                    className={styles.image}
+                                  />
+                                </div>
+                              </Link>
+                              <div className={styles.text}>
+                                <h2 className={styles.title}>{parse(group[3].title)}</h2>
+                                <p className={styles.subtitle}>{parse(group[3].subtitle)}</p>
+                              </div>
+                            </div>
+                          </>
+                        )}
+                      </>
+                    )}
+                  </React.Fragment>
+                );
+              })}
+            </div>
+          </div>
+        </section>
       )}
 
       <Subfooter />

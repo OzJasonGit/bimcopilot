@@ -1,6 +1,6 @@
 "use client";
 
-import Products from "@/Modules/Product_test/product_test";
+import Productsmain from "@/Modules/Products/products";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import SkeletonLoader from "@/components/Loader/loader";
@@ -35,7 +35,7 @@ const Product_test = () => {
 
     return (
 
-        <Products stories={data.data} firstStory={firstStory} />
+        <Productsmain stories={data.data} firstStory={firstStory} />
 
     ) 
 }
