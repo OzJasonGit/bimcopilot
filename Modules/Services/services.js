@@ -100,7 +100,7 @@ const Servicesmain = ({ stories}) => {
               <div id={styles.COPY_TAG}>
                 <h2                  
                   id={styles._H2}
-                  class="text-right ... text-4xl ... text-stone-700 ... font-avant_garde_bold">          
+                  class="text-right ... text-stone-700 ... font-avant_garde_bold">          
                   We understand the value and potential of your projects.                                  
                 </h2> 
               </div>                     
@@ -117,7 +117,7 @@ const Servicesmain = ({ stories}) => {
                 <h2 
                 id={styles._H2_RIGHT}
                 
-                class="text-lg ... text-stone-500 ... font-avant_garde_bold ...">
+                class=" text-stone-500 ... font-avant_garde_bold ...">
                 <br/>  
                 See them realized with <a class="text-stone-700 ... font-avant_garde_bold">Automation, </a> 
                 <a class="text-stone-700 ... font-avant_garde_bold">AI, </a> 
@@ -128,11 +128,8 @@ const Servicesmain = ({ stories}) => {
 
               <div id={styles.SECONDCOPY_TAG}>
                 <h3
-                    id={styles._H3_RIGHT}
-                    
-                    class="text-lg ... text-stone-500 ... font-avant_garde_bold"
-                  >
-
+                    id={styles._H3_RIGHT}                   
+                    class=" text-stone-500 ... font-avant_garde_medium">
 
                   Don't leave your profits on the table. Streamline your<a  class="text-stone-700 ... font-avant_garde_bold"> processes</a>, save time, and boost 
                   revenue with <a  class="text-stone-700 ... font-avant_garde_bold">efficient,</a> <a class="text-stone-700 ... font-avant_garde_bold"> automated, </a> 
