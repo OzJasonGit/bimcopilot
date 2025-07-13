@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
   padding: 60px 20px;
   background: #181818;
@@ -5,14 +6,17 @@
   justify-content: center;
 }
 
+=======
+>>>>>>> 52e3e4105f706b26ea9df0f8deb1be8ce6da8a32
 .center_holder {
   position: relative;
   width: 100%;
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
-  background-color: aliceblue;
+  background-color: rgb(23, 23, 23);
   margin: 0;
+  padding: 60px 0;
 }
 
 #SHADOW_SECTION {
@@ -22,12 +26,10 @@
   -webkit-box-pack: center;
   justify-content: center;
   background-color: rgb(23, 23, 23);
-  z-index: -30000;
+  z-index: 1;
   top: 0px;
-
+  left: 0;
 }
-
-
 
 .grid_0_product {
   position: relative;
@@ -37,31 +39,30 @@
   display: grid;
   grid-column-gap: 0px;
   grid-row-gap: 20px;
-  grid-template-rows: 40px auto 20px;
+  grid-template-rows: 0px auto 0px;
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
   grid-template-areas:
     ". . . . . . ."
-    ". BANNER-1 . MAIN_AREA . BANNER-2 ."
+    ". . . MAIN_AREA . . ."
     ". . . . . . .";
 }
-
-
-
-
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
-  max-width: 1440px;
   width: 100%;
+  grid-area: MAIN_AREA;
+  position: relative;
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+  grid-template-rows: auto;
 }
 
 .card {
   display: flex;
   flex-direction: column;
 }
-
 
 /* 5th product — span 2 columns and taller */
 .cardLarge {
@@ -97,12 +98,14 @@
 .text {
   padding-top: 12px;
 }
+
 .title {
   font-size: 1.1rem;
   color: #f2f2f2;
   font-weight: 600;
   margin: 0;
 }
+
 .subtitle {
   color: #aaa;
   font-size: 0.9rem;
@@ -116,6 +119,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .spinner {
   width: 48px;
   height: 48px;
@@ -124,58 +128,45 @@
   border-top: 4px solid #3b82f6;
   animation: spin 1s linear infinite;
 }
+
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Responsive */
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
   .cardLarge {
     grid-column: span 2;
   }
 
-
   .grid_0_product {
     width: 100%;
-    max-width: 1640px;
+    max-width: 1520px;
     background-color: transparent;
     display: grid;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-rows: 40px auto 20px;
-    grid-template-columns: 0px 1fr 0px;
+    grid-column-gap: 0px;
+    grid-row-gap: 20px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 30px 1fr 30px;
     grid-template-areas:
       ". . ."
-      "BANNER-1 MAIN_AREA BANNER-2"
+      ". MAIN_AREA ."
       ". . .";
   }
 }
-
-
-
 
 @media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
   }
+  
   .cardLarge {
     grid-column: span 1;
   }
-
 
   .grid_0_product {
     position: relative;
@@ -185,7 +176,7 @@
     display: grid;
     grid-column-gap: 0px;
     grid-row-gap: 20px;
-    grid-template-rows: 40px auto 0px;
+    grid-template-rows: 0px auto 0px;
     grid-template-columns: 20px 1fr 20px;
     grid-template-areas:
       ". . ."

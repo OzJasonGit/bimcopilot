@@ -15,7 +15,7 @@ import Subfooter from "@/components/Subfooter/subfooter";
 import Subfooter2 from "@/components/Subfooter2/subfooter2";
 import SkeletonLoader from "@/components/Loader/loader";
 import SkeletonLoader2 from "@/components/Loader/loader2";
-import CheckoutButton from "@/components/Payment/checkoutButton";
+
 
 const Main = ({ }) => {
   const [loading, setLoading] = useState(true);
@@ -36,7 +36,7 @@ const Main = ({ }) => {
       ) : (
         <>
           <Menu />
-          <CheckoutButton />
+
           <Header />
           <Sides />
           <Subscribetop />

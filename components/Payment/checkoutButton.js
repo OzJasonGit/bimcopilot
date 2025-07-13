@@ -2,12 +2,25 @@
 import React from 'react';
 import handleCheckout from './payment';
 
-const CheckoutButton = ({ amount, currency }) => {
-  return (
+const CheckoutButton = ({ amount, currency, product }) => {
+  const handleClick = () => {
+    // If product object is provided, use it; otherwise create a generic product
+    const products = [{
+      title: product?.title || 'Product',
+      price: amount,
+      image: product?.image || '',
+      quantity: 1
+    }];
 
-    
+    handleCheckout({
+      products,
+      currency
+    });
+  };
+
+  return (
     <button
-      onClick={() => handleCheckout(amount, currency)}
+      onClick={handleClick}
       style={{
         padding: '10px 20px',
         fontSize: '16px',

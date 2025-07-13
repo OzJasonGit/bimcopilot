@@ -14,7 +14,7 @@ const CartPage = () => {
         <Header className="fixed top-[60px] left-0 w-full z-[9998]" />
         
         {/* Cart starts after Menu + Header */}
-        <div className="pt-[125px] bg-[#151515] relative z-0">
+        <div className="pt-[75px] bg-[#151515] relative z-0">
           <CartModule />
         </div>
 
