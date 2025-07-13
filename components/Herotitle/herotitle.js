@@ -53,7 +53,7 @@ export default class Herotitle extends Component {
 
               <h3 
                 id={styles._H3}
-                class="text-base ... text-neutral-700 ... font-avant_garde_bold">
+                class="text-base ... text-neutral-700 ... font-avant_garde_medium">
                 Explore our resources and systems that can help architects and designers <br/>
                 streamline their processes and be more profitable  throughout their business.
               </h3>
@@ -72,22 +72,22 @@ export default class Herotitle extends Component {
 
             <div id={styles.SUB_TEXT_HOLDER_MOBILE}>
               <h1
-                class="text-5xl ... text-neutral-700 ... font-avant_garde_bold"
+                class=" text-neutral-700 ... font-avant_garde_bold"
                 id={styles._H1_2}
               >
                 <a
                   id={styles.TEXT_OUTLINE}
-                  class="text-5xl ...  text-emerald-200"
+                  class=" text-emerald-200"
                 >
                   Sustainability
                 </a>{" "}
-                <a class="text-5xl ..."
+                <a class=""
                    id={styles._H1_2}>
                   through exploration. We explore new frontiers in
                 </a>
                 <a
                   id={styles.TEXT_OUTLINE}
-                  class="text-5xl ...  text-stone-50 ... underline decoration-4 ... decoration-stone-600 ..."
+                  class=" text-stone-50 ... underline decoration-4 ... decoration-stone-600 ..."
                 >
                   {" "}
                   architecture
@@ -95,7 +95,7 @@ export default class Herotitle extends Component {
                 ,
                 <a
                   id={styles.TEXT_OUTLINE}
-                  class="text-5xl ... text-stone-50 ... underline decoration-4 ... decoration-stone-600 ..."
+                  class=" text-stone-50 ... underline decoration-4 ... decoration-stone-600 ..."
                 >
                   {" "}
                   construction{" "}
@@ -104,7 +104,7 @@ export default class Herotitle extends Component {
                    id={styles._H1_2}>and</a>{" "}
                 <a
                   id={styles.TEXT_OUTLINE}
-                  class="text-5xl ... text-stone-50 ... underline decoration-4 ... decoration-stone-600 ..."
+                  class=" text-stone-50 ... underline decoration-4 ... decoration-stone-600 ..."
                 >
                   {" "}
                   technology
