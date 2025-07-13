@@ -69,7 +69,15 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
     try {
       const stripe = await stripePromise;
       
-      // Create payment request with more lenient settings for testing
+      // Log the current environment for debugging
+      console.log('Apple Pay environment check:', {
+        userAgent: navigator.userAgent,
+        isSecure: window.location.protocol === 'https:',
+        isLocalhost: window.location.hostname === 'localhost',
+        hasPaymentRequest: !!window.PaymentRequest
+      });
+      
+      // Create payment request with proper Apple Pay configuration
       const paymentRequest = stripe.paymentRequest({
         country: 'US',
         currency: currency.toLowerCase(),
@@ -79,7 +87,13 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
         },
         requestPayerName: true,
         requestPayerEmail: true,
+        requestPayerPhone: false,
         disableWallets: ['googlePay'], // Disable Google Pay to focus on Apple Pay
+        // Add Apple Pay specific configuration
+        paymentRequestApplePay: {
+          merchantCapabilities: ['supports3DS'],
+          supportedNetworks: ['visa', 'mastercard', 'amex'],
+        },
       });
 
       // For testing, we'll try to show the payment sheet even if canMakePayment fails
@@ -181,18 +195,33 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
 
       // Show Apple Pay sheet
       console.log('Attempting to show Apple Pay sheet...');
-      const showResult = await paymentRequest.show();
-      if (showResult && showResult.error) {
-        console.log('Apple Pay show error:', showResult.error);
-        throw new Error(showResult.error.message);
+      try {
+        const showResult = await paymentRequest.show();
+        console.log('Apple Pay show result:', showResult);
+        if (showResult && showResult.error) {
+          console.log('Apple Pay show error:', showResult.error);
+          throw new Error(showResult.error.message);
+        }
+      } catch (showError) {
+        console.log('Apple Pay show() failed:', showError);
+        throw new Error(`Failed to show Apple Pay: ${showError.message}`);
       }
-    } catch (error) {
-      console.error('Apple Pay error:', error);
-      if (onError) {
-        onError(error.message);
+          } catch (error) {
+        console.error('Apple Pay error:', error);
+        
+        // Provide more specific error messages
+        let errorMessage = error.message;
+        if (error.message.includes('Payment Request is not available')) {
+          errorMessage = 'Apple Pay is not available in this browser. Please use Safari, Chrome, or Edge on a supported device.';
+        } else if (error.message.includes('Failed to show Apple Pay')) {
+          errorMessage = 'Unable to show Apple Pay. Please ensure you have Apple Pay set up on your device.';
+        }
+        
+        if (onError) {
+          onError(errorMessage);
+        }
+        setIsLoading(false);
       }
-      setIsLoading(false);
-    }
   };
 
   // Show informative message when Apple Pay is not available
