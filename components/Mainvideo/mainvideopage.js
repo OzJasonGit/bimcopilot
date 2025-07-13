@@ -46,7 +46,7 @@ const Mainvideopage = ({ stories }) => {
                   
                   <h3
                     id={styles._H3}
-                    class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">
+                    class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_medium">
                     {stories[0].subtitle}
                   </h3>
                 
@@ -75,13 +75,13 @@ const Mainvideopage = ({ stories }) => {
                   <h2 
 
                      id={styles._H2}
-                     class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_bold">       
+                     class=" text-stone-400 ... drop-shadow-xl font-avant_garde_bold">       
                      We identify <a  class="text-stone-200">problems and systems</a> that can be <a class="text-stone-200">improved or eliminated</a> with <a  class="text-emerald-200">Automation</a>, <a class="text-emerald-200">AI</a> and <a class="text-emerald-200">Building Information Modelling</a>. 
                     <br/> <br/> 
 
                     <p    
                       id={styles._H3}                   
-                      class="text-base ...">
+                      class=" font-avant_garde_medium ... ">
                       This involves first learning and assessing you business processes and then developing a unique solution.
                     <br/><br/>
                     Although our focus and background are aimed towards the <a class="text-stone-200">built environment</a>, our services can also be applied effectively within
