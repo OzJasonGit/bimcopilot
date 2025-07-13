@@ -242,7 +242,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #151515;
+  background-color: #171717;
   z-index: 10000;
   top: 0px;
 }
@@ -253,7 +253,7 @@
   top: 0px;
   height: 65px;
   max-width: 1520px;
-  background-color: #151515;
+  background-color: #171717;
   display: grid;
   grid-row-gap: 40px;
   grid-template-rows: auto;
@@ -264,7 +264,7 @@
 
 .burger_dot {
   border-radius: 100%;
-  background-color: #151515;
+  background-color: #171717;
 }
 
 #FIXED_HEADER {
@@ -507,7 +507,7 @@
     top: 0px;
     height: 65px;
     max-width: 1640px;
-    background-color: #151515;
+    background-color: #171717;
     display: grid;
     grid-row-gap: 40px;
     grid-template-rows: auto;
@@ -814,13 +814,13 @@
 
   .burger_dot {
     border-radius: 100%;
-    background-color: #151515;
+    background-color: #171717;
   }
 
   #HEADER_MENU_1 {
     height: 100%;
     grid-area: AREA;
-    background-color: #151515;
+    background-color: #171717;
   }
 
 
@@ -907,7 +907,7 @@
     top: 0px;
     height: 65px;
     max-width: 100%;
-    background-color: #151515;
+    background-color: #171717;
     display: grid;
     grid-row-gap: 40px;
     grid-template-rows: auto;
