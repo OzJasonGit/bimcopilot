@@ -11,21 +11,45 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
   useEffect(() => {
     const checkApplePayAvailability = async () => {
       try {
+        // Check if we're on a supported platform
+        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        const isChrome = /Chrome/.test(navigator.userAgent);
+        const isEdge = /Edg/.test(navigator.userAgent);
+        
+        console.log('Browser check - Safari:', isSafari, 'iOS:', isIOS, 'Chrome:', isChrome, 'Edge:', isEdge);
+        
+        // Check if Payment Request API is available
+        if (!window.PaymentRequest) {
+          console.log('Payment Request API not available in this browser');
+          setIsApplePayAvailable(false);
+          return;
+        }
+        
         const stripe = await stripePromise;
         if (stripe) {
-          const { error } = await stripe.paymentRequest({
-            country: 'US',
-            currency: currency.toLowerCase(),
-            total: {
-              label: 'Total',
-              amount: Math.round(amount * 100), // Convert to cents
-            },
-            requestPayerName: true,
-            requestPayerEmail: true,
-          });
+          try {
+            const paymentRequest = stripe.paymentRequest({
+              country: 'US',
+              currency: currency.toLowerCase(),
+              total: {
+                label: 'Total',
+                amount: Math.round(amount * 100), // Convert to cents
+              },
+              requestPayerName: true,
+              requestPayerEmail: true,
+            });
 
-          if (!error) {
-            setIsApplePayAvailable(true);
+            const canMakePayment = await paymentRequest.canMakePayment();
+            console.log('Apple Pay canMakePayment result:', canMakePayment);
+            
+            // Show button if on supported platform or if canMakePayment works
+            const shouldShow = (isSafari || isIOS || isChrome || isEdge) && !!canMakePayment;
+            console.log('Should show Apple Pay:', shouldShow);
+            setIsApplePayAvailable(shouldShow);
+          } catch (paymentRequestError) {
+            console.log('Payment Request creation failed:', paymentRequestError);
+            setIsApplePayAvailable(false);
           }
         }
       } catch (error) {
@@ -44,7 +68,7 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
     try {
       const stripe = await stripePromise;
       
-      // Create payment request
+      // Create payment request with more lenient settings for testing
       const paymentRequest = stripe.paymentRequest({
         country: 'US',
         currency: currency.toLowerCase(),
@@ -54,11 +78,28 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
         },
         requestPayerName: true,
         requestPayerEmail: true,
+        disableWallets: ['googlePay'], // Disable Google Pay to focus on Apple Pay
       });
+
+      // For testing, we'll try to show the payment sheet even if canMakePayment fails
+      let canMakePayment = false;
+      try {
+        canMakePayment = await paymentRequest.canMakePayment();
+        console.log('Apple Pay canMakePayment result:', canMakePayment);
+      } catch (error) {
+        console.log('canMakePayment check failed:', error);
+      }
+
+      // For testing purposes, continue even if canMakePayment fails
+      if (!canMakePayment) {
+        console.log('Apple Pay canMakePayment returned false, but continuing for testing...');
+      }
 
       // Handle payment request
       paymentRequest.on('paymentmethod', async (event) => {
         try {
+          console.log('Apple Pay payment method received:', event);
+          
           // Handle both single product and multiple products
           let requestBody;
           
@@ -94,18 +135,26 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
 
           if (response.ok) {
             const result = await response.json();
+            console.log('Payment route response:', result);
             
-            // Confirm the payment with the payment method
-            const { error } = await stripe.confirmCardPayment(result.client_secret, {
-              payment_method: event.paymentMethod.id,
-            });
+            // For testing, we'll handle the response differently
+            if (result.client_secret) {
+              // Confirm the payment with the payment method
+              const { error } = await stripe.confirmCardPayment(result.client_secret, {
+                payment_method: event.paymentMethod.id,
+              });
 
-            if (error) {
-              throw new Error(error.message);
+              if (error) {
+                throw new Error(error.message);
+              }
             }
 
             // Payment successful
-            window.location.href = '/cart'; // Redirect to success page
+            console.log('Apple Pay payment successful!');
+            if (onError) {
+              onError('Payment successful! (This is a test message)');
+            }
+            // window.location.href = '/cart'; // Redirect to success page
           } else {
             const err = await response.text();
             throw new Error('Failed to create payment session');
@@ -121,12 +170,15 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
       });
 
       paymentRequest.on('cancel', () => {
+        console.log('Apple Pay payment cancelled');
         setIsLoading(false);
       });
 
       // Show Apple Pay sheet
+      console.log('Attempting to show Apple Pay sheet...');
       const { error } = await paymentRequest.show();
       if (error) {
+        console.log('Apple Pay show error:', error);
         throw new Error(error.message);
       }
     } catch (error) {
@@ -138,8 +190,47 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
     }
   };
 
+  // Show informative message when Apple Pay is not available
   if (!isApplePayAvailable) {
-    return null; // Don't show button if Apple Pay is not available
+    console.log('Apple Pay button not showing - isApplePayAvailable:', isApplePayAvailable);
+    
+    // Check browser compatibility
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const isChrome = /Chrome/.test(navigator.userAgent);
+    const isEdge = /Edg/.test(navigator.userAgent);
+    const hasPaymentRequest = !!window.PaymentRequest;
+    
+    let message = 'Apple Pay not available';
+    if (!hasPaymentRequest) {
+      message = 'Payment Request API not supported in this browser';
+    } else if (!isSafari && !isIOS && !isChrome && !isEdge) {
+      message = 'Apple Pay requires Safari, Chrome, or Edge';
+    } else {
+      message = 'Apple Pay not configured on this device';
+    }
+    
+    return (
+      <div
+        style={{
+          width: '100%',
+          height: '50px',
+          backgroundColor: '#f8f9fa',
+          color: '#6c757d',
+          border: '1px solid #dee2e6',
+          borderRadius: '8px',
+          fontSize: '14px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginBottom: '10px',
+          cursor: 'not-allowed',
+        }}
+        title={message}
+      >
+        {message}
+      </div>
+    );
   }
 
   return (

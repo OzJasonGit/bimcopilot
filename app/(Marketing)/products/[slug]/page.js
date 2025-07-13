@@ -17,6 +17,7 @@ import Services_1 from '@/components/services_1/services_1';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import handleCheckout from '@/components/Payment/payment';
+import ApplePayButton from '@/components/Payment/ApplePayButton';
 import { CartContext } from '@/components/Context/CartContext';
 import { useContext } from 'react';
 
@@ -267,27 +268,43 @@ const { addToCart } = useContext(CartContext);
 
 
 
-                    <div id={styles.PAYPAL}>
-                    <Button
-  variant="secondary"
-  className="border border-solid rounded-md border-stone-800"
-  style={{ position: 'absolute', width: '100%', height: '100%' }}
-  onClick={() => {
-    handleCheckout({
-      products: [{
-        title: product.title,
-        price: currentPrice,
-        image: product.image,
-        quantity: 1
-      }],
-      currency: 'USD',
-    });
-  }}
->
-  Buy With Paypal
-</Button>
+                                         <div id={styles.PAYPAL}>
+                     <Button
+   variant="secondary"
+   className="border border-solid rounded-md border-stone-800"
+   style={{ position: 'absolute', width: '100%', height: '100%' }}
+   onClick={() => {
+     handleCheckout({
+       products: [{
+         title: product.title,
+         price: currentPrice,
+         image: product.image,
+         quantity: 1
+       }],
+       currency: 'USD',
+     });
+   }}
+ >
+   Buy With Paypal
+ </Button>
 
-                    </div>
+                     </div>
+
+                     <div id={styles.APPLE_PAY}>
+                       <ApplePayButton
+                         amount={currentPrice}
+                         currency="USD"
+                         product={{
+                           title: product.title,
+                           price: currentPrice,
+                           image: product.image,
+                           quantity: 1
+                         }}
+                         onError={(error) => {
+                           toast.error(error || 'Apple Pay payment failed');
+                         }}
+                       />
+                     </div>
 
                     <div id={styles.MORE_OPTIONS}>
                       <a></a>

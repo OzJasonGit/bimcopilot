@@ -244,11 +244,12 @@
   width: 100%;
   height: auto;
   grid-row-gap: 15px;
-  grid-template-rows: 0px auto auto auto;
+  grid-template-rows: 0px auto auto auto auto;
   grid-template-areas:
     "."
     "ADD_TO_CART"
     "PAYPAL"
+    "APPLE_PAY"
     "MORE_OPTIONS";
 }
 
@@ -271,6 +272,13 @@
   width: 100%;
   height: 60px;
   grid-area: PAYPAL;
+}
+
+#APPLE_PAY {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  grid-area: APPLE_PAY;
 }
 
 
