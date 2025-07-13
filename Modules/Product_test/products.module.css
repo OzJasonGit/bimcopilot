@@ -42,7 +42,7 @@
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
   grid-template-areas:
     ". . . . . . ."
-    ". . . MAIN_AREA . . ."
+    ". . . MAIN-AREA . . ."
     ". . . . . . .";
 }
 
@@ -182,7 +182,6 @@
       width: 100%;
       background-color: rgb(23 23 23);
       display: grid;
-  
       padding-left: 20px;
       padding-right: 20px;
       grid-row-gap: 20px;
@@ -217,7 +216,6 @@
       width: 100%;
       background-color: rgb(23 23 23);
       display: grid;
-  
       padding-left: 20px;
       padding-right: 20px;
       grid-row-gap: 20px;
