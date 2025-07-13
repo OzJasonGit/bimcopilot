@@ -233,6 +233,7 @@
   grid-template-rows: auto;
   grid-template-areas:
       "ICON BUTTON TEXT ";
+  padding-right: 250px;
 }
 
 /*SECTION////PRODUCTS//////////////////////////////////////////////////////////////////////////////////////*/
