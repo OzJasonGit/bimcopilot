@@ -129,16 +129,23 @@ export default class Products extends Component {
               {/* CTA Section */}
               <div id={styles.TEXT_HOLDER} style={{ gridArea: "TITLE" , paddingTop: "100px" }}>
                 <div id={styles.SHOP_GRID}>
-                  <div style={{ gridArea: "ICON" }}>
+
+
+
+                  <div style={{ gridArea: "ICON",
+                                alignSelf: "center"}}>
                     <FontAwesomeIcon icon={faCartShopping} className="text-stone-900" style={{ fontSize: "40px" }} />
                   </div>
-                  <div style={{ gridArea: "BUTTON" }}>
+
+                  <div style={{ gridArea: "BUTTON",
+                                alignSelf: "center"}}>
                     <Button>
                       <Link href="/products" style={{ height: "100%", width: "100%" }}>
                         Shop
                       </Link>
                     </Button>
                   </div>
+
                   <div style={{ gridArea: "TEXT" }}>
                     <h3 id={styles._H3} className="text-neutral-700 font-avant_garde_bold">Click Here!</h3>
                    
