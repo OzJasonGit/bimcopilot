@@ -43,7 +43,7 @@ return (
                         <div id={styles.COLLAPSE_TAG}>
                           <h3
                             id={styles._H3}
-                            class="text-left ... text-stone-400 ... font-avant_garde_bold">
+                            class="text-left ... text-stone-400 ... font-avant_garde_medium">
                               {" "}
                               
                               We are highly experienced <a class="text-stone-200 ...">RIBA</a> and <a class="text-stone-200 ...">ARB</a> 
