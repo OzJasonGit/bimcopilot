@@ -35,7 +35,7 @@ const Tab = () => {
         <h2
           id={styles._H2}>
           <a>
-            <h3 className="text-stone-400 font-avant_garde_bold text-sm">
+            <h3 className="text-stone-400 font-avant_garde_medium">
               Stas Louca, H + A Architects, Dubai, UAE                         
             </h3>
           </a>
@@ -56,7 +56,7 @@ const Tab = () => {
         <h2
           id={styles._H2}>        
           <a>
-            <h3 className="text-stone-400 font-avant_garde_bold text-sm">
+            <h3 className="text-stone-400 font-avant_garde_medium">
               Raj Deb, Perkins + Will, London, UK                 
             </h3>
           </a>
