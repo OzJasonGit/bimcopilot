@@ -345,10 +345,10 @@
   }
 
   #TEXT_OUTLINE {
-    -webkit-text-stroke: 0.15px rgb(120, 120, 120);
+    -webkit-text-stroke: 0.35px rgb(120, 120, 120);
     margin-bottom: 0px;
-    font-size: 35px;
-    line-height: 33.5px;
+    font-size: 1.75rem;
+    line-height: 1.8rem;
   }
 
   /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
