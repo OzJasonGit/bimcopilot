@@ -1,46 +1,118 @@
 import { NextResponse } from 'next/server';
 import { connectToDatabase } from '@/app/utils/mongodb';
+import { getCurrentUser } from '@/app/utils/auth';
 
-// For now, use a single cart for demonstration (no user/session logic)
-const CART_COLLECTION = 'cart';
+const CART_COLLECTION = 'user_carts';
 
 export async function GET() {
-  const db = await connectToDatabase();
-  const items = await db.collection(CART_COLLECTION).find({}).toArray();
-  return NextResponse.json(items);
+  try {
+    const user = await getCurrentUser();
+    if (!user) {
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 });
+    }
+
+    const db = await connectToDatabase();
+    const items = await db.collection(CART_COLLECTION)
+      .find({ userId: user.id.toString() })
+      .toArray();
+    
+    return NextResponse.json(items);
+  } catch (error) {
+    console.error('Error fetching cart:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
 }
 
 export async function POST(request) {
-  const db = await connectToDatabase();
-  const item = await request.json();
-  const existing = await db.collection(CART_COLLECTION).findOne({ id: item.id });
-  if (existing) {
-    await db.collection(CART_COLLECTION).updateOne(
-      { id: item.id },
-      { $inc: { quantity: item.quantity || 1 } }
-    );
-  } else {
-    await db.collection(CART_COLLECTION).insertOne({ ...item, quantity: item.quantity || 1 });
+  try {
+    const user = await getCurrentUser();
+    if (!user) {
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 });
+    }
+
+    const db = await connectToDatabase();
+    const item = await request.json();
+    
+    // Add userId to the item
+    const cartItem = {
+      ...item,
+      userId: user.id.toString(),
+      quantity: item.quantity || 1
+    };
+
+    const existing = await db.collection(CART_COLLECTION).findOne({ 
+      id: item.id, 
+      userId: user.id.toString() 
+    });
+
+    if (existing) {
+      await db.collection(CART_COLLECTION).updateOne(
+        { id: item.id, userId: user.id.toString() },
+        { $inc: { quantity: item.quantity || 1 } }
+      );
+    } else {
+      await db.collection(CART_COLLECTION).insertOne(cartItem);
+    }
+
+    const items = await db.collection(CART_COLLECTION)
+      .find({ userId: user.id.toString() })
+      .toArray();
+    
+    return NextResponse.json(items);
+  } catch (error) {
+    console.error('Error adding to cart:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
   }
-  const items = await db.collection(CART_COLLECTION).find({}).toArray();
-  return NextResponse.json(items);
 }
 
 export async function PATCH(request) {
-  const db = await connectToDatabase();
-  const { id, quantity } = await request.json();
-  await db.collection(CART_COLLECTION).updateOne(
-    { id },
-    { $set: { quantity: Math.max(1, quantity) } }
-  );
-  const items = await db.collection(CART_COLLECTION).find({}).toArray();
-  return NextResponse.json(items);
+  try {
+    const user = await getCurrentUser();
+    if (!user) {
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 });
+    }
+
+    const db = await connectToDatabase();
+    const { id, quantity } = await request.json();
+    
+    await db.collection(CART_COLLECTION).updateOne(
+      { id, userId: user.id.toString() },
+      { $set: { quantity: Math.max(1, quantity) } }
+    );
+    
+    const items = await db.collection(CART_COLLECTION)
+      .find({ userId: user.id.toString() })
+      .toArray();
+    
+    return NextResponse.json(items);
+  } catch (error) {
+    console.error('Error updating cart:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
 }
 
 export async function DELETE(request) {
-  const db = await connectToDatabase();
-  const { id } = await request.json();
-  await db.collection(CART_COLLECTION).deleteOne({ id });
-  const items = await db.collection(CART_COLLECTION).find({}).toArray();
-  return NextResponse.json(items);
+  try {
+    const user = await getCurrentUser();
+    if (!user) {
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 });
+    }
+
+    const db = await connectToDatabase();
+    const { id } = await request.json();
+    
+    await db.collection(CART_COLLECTION).deleteOne({ 
+      id, 
+      userId: user.id.toString() 
+    });
+    
+    const items = await db.collection(CART_COLLECTION)
+      .find({ userId: user.id.toString() })
+      .toArray();
+    
+    return NextResponse.json(items);
+  } catch (error) {
+    console.error('Error removing from cart:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
 } 

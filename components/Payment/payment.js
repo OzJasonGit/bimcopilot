@@ -29,8 +29,13 @@ const handleCheckout = async ({ amount, currency = 'USD', product, products }) =
     const response = await fetch('/api/payment_route', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
+      credentials: 'include', // Include cookies for authentication
       body: JSON.stringify(requestBody),
     });
+
+    if (response.status === 401) {
+      throw new Error('Authentication required');
+    }
 
     if (response.ok) {
       const session = await response.json();
@@ -38,13 +43,16 @@ const handleCheckout = async ({ amount, currency = 'USD', product, products }) =
       const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
       if (error) {
         console.error('Stripe redirect error:', error.message);
+        throw new Error('Payment redirect failed');
       }
     } else {
       const err = await response.text();
       console.error('Failed to create Stripe session:', err);
+      throw new Error('Failed to create payment session');
     }
   } catch (error) {
     console.error('handleCheckout error:', error);
+    throw error; // Re-throw to let calling component handle it
   }
 };
 

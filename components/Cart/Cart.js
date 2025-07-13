@@ -7,29 +7,30 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import handleCheckout from '@/components/Payment/payment';
+import { useCart } from '@/components/Context/CartContext';
+import { toast } from 'react-toastify';
 
 export default function CheckoutPage() {
-  const [cartItems, setCartItems] = useState([]);
+  const { cartItems, removeFromCart, updateQuantity, loadCart, totalPrice, isLoading } = useCart();
   const [selectedItems, setSelectedItems] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
   const router = useRouter();
 
   useEffect(() => {
-    fetch('/api/cart')
-      .then((res) => res.json())
-      .then((data) => {
-        setCartItems(data);
-        const allIds = data.map((item) => item._id);
-        setSelectedItems(allIds);
-        calculateTotal(data, allIds);
-      });
-  }, []);
+    loadCart();
+  }, [loadCart]);
+
+  useEffect(() => {
+    // Only set all items as selected if no items are currently selected
+    if (cartItems.length > 0 && selectedItems.length === 0) {
+      const allIds = cartItems.map((item) => item._id);
+      setSelectedItems(allIds);
+    }
+  }, [cartItems, selectedItems.length]);
 
   const calculateTotal = (items, selectedIds) => {
-    const total = items
+    return items
       .filter((item) => selectedIds.includes(item._id))
       .reduce((sum, item) => sum + item.price * item.quantity, 0);
-    setTotalPrice(total);
   };
 
   const toggleSelection = (id) => {
@@ -37,21 +38,22 @@ export default function CheckoutPage() {
       ? selectedItems.filter((itemId) => itemId !== id)
       : [...selectedItems, id];
     setSelectedItems(updated);
-    calculateTotal(cartItems, updated);
   };
 
-  const updateQuantity = (id, delta) => {
-    const updatedItems = [...cartItems].map((item) =>
-      item._id === id
-        ? { ...item, quantity: Math.max(1, item.quantity + delta) }
-        : item
-    );
-    setCartItems(updatedItems);
-    calculateTotal(updatedItems, selectedItems);
+  const handleQuantityChange = async (id, delta) => {
+    const item = cartItems.find(item => item._id === id);
+    if (item) {
+      const newQuantity = Math.max(1, item.quantity + delta);
+      await updateQuantity(id, newQuantity);
+    }
   };
-  
 
   const handleStripeCheckout = async () => {
+    if (selectedItems.length === 0) {
+      toast.error('Please select items to checkout');
+      return;
+    }
+
     const itemsToBuy = cartItems.filter((item) => selectedItems.includes(item._id));
     
     // Convert cart items to products format
@@ -62,122 +64,153 @@ export default function CheckoutPage() {
       quantity: item.quantity
     }));
 
-    await handleCheckout({
-      products,
-      currency: 'USD',
-    });
+    try {
+      await handleCheckout({
+        products,
+        currency: 'USD',
+      });
+    } catch (error) {
+      if (error.message?.includes('Authentication required')) {
+        toast.error('Please login to complete your purchase');
+        router.push('/signin');
+      } else {
+        toast.error('Checkout failed. Please try again.');
+      }
+    }
   };
 
+  const currentTotal = calculateTotal(cartItems, selectedItems);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-[#171717] text-white p-8 pt-[110px] flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
+          <p>Loading cart...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
-
     <section id={styles.SHADOW_SECTION_BLACK} className={styles.center_holder}>
-
       <div className={styles.grid_0}>
+        <div className="min-h-screen bg-[#171717] text-white p-8 pt-[110px] md:pt-[110px] sm:pt-[65px]"           
+          style={{
+            gridArea: "MAIN-AREA",
+            position: 'relative',      
+            justifyContent: 'center',
+            alignItems: 'center',            
+            zIndex: 1,
+          }}>
+          <h2 className="text-3xl font-bold mb-6">Your Cart ({cartItems.length} items)</h2>
 
-          <div className="min-h-screen bg-[#171717] text-white p-8 pt-[110px] md:pt-[110px] sm:pt-[65px]"           
-                style={{
-                  gridArea: "MAIN-AREA",
-                  position: 'relative',      
-                  justifyContent: 'center',
-                  alignItems: 'center',            
-                  zIndex: 1,
-                }}>
-              <h2 className="text-3xl font-bold mb-6">Your Cart ({cartItems.length} items)</h2>
-
-              <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-8">
-                {/* Cart Items List */}
-                <div className="space-y-6">
-                  {cartItems.length === 0 ? (
-                    <p className="text-gray-400">Your cart is empty.</p>
-                  ) : (
-                    cartItems.map((item) => (
-                      <div
-                        key={item._id}
-                        className="flex items-center justify-between border-b border-gray-700 pb-4"
-                      >
-                        {/* Left: Image + Info */}
-                        <div className="flex items-center gap-4">
-                          <input
-                            type="checkbox"
-                            checked={selectedItems.includes(item._id)}
-                            onChange={() => toggleSelection(item._id)}
-                            className="accent-green-500"
-                          />
-                          <Image
-                            src={item.image}
-                            alt={item.title}
-                            width={64}
-                            height={64}
-                            className="rounded-md object-cover"
-                          />
-                          <div>
-                            <p className="font-semibold">{item.title}</p>
-                            <p className="text-sm text-gray-400">${item.price.toFixed(2)} each</p>
-                          </div>
-                        </div>
-
-                        {/* Right: Quantity + Total */}
-                        <div className="flex items-center gap-3">
-                          <button
-                            className="px-2 text-xl bg-zinc-800 rounded"
-                            onClick={() => updateQuantity(item._id, -1)}
-                          >
-                            −
-                          </button>
-                          <span>{item.quantity}</span>
-                          <button
-                            className="px-2 text-xl bg-zinc-800 rounded"
-                            onClick={() => updateQuantity(item._id, 1)}
-                          >
-                            +
-                          </button>
-                          <p className="w-20 text-right font-medium">
-                            ${(item.quantity * item.price).toFixed(2)}
-                          </p>
-                        </div>
-                      </div>
-                    ))
-                  )}
-
-                  {cartItems.length > 0 && (
-                    <div className="text-right text-xl font-semibold mt-6">
-                      Subtotal: ${totalPrice.toFixed(2)}
-                    </div>
-                  )}
+          <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-8">
+            {/* Cart Items List */}
+            <div className="space-y-6">
+              {cartItems.length === 0 ? (
+                <div className="text-center py-8">
+                  <p className="text-gray-400 mb-4">Your cart is empty.</p>
+                  <Button 
+                    onClick={() => router.push('/products')}
+                    className="bg-green-600 hover:bg-green-700"
+                  >
+                    Continue Shopping
+                  </Button>
                 </div>
-
-                {/* Checkout Summary */}
-                {cartItems.length > 0 && (
-                  <div className="bg-zinc-900 p-6 rounded-xl shadow-md space-y-4 h-fit">
-                    <h3 className="text-xl font-bold">Checkout Summary</h3>
-                    <div className="border-t border-zinc-700 pt-4 space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span>Subtotal</span>
-                        <span>${totalPrice.toFixed(2)}</span>
-                      </div>
-                      <div className="flex justify-between text-gray-400">
-                        <span>Sales Tax</span>
-                        <span>$0.00</span>
-                      </div>
-                      <div className="flex justify-between font-semibold text-white border-t border-zinc-700 pt-2">
-                        <span>Grand Total</span>
-                        <span>${totalPrice.toFixed(2)}</span>
+              ) : (
+                cartItems.map((item) => (
+                  <div
+                    key={item._id}
+                    className="flex items-center justify-between border-b border-gray-700 pb-4"
+                  >
+                    {/* Left: Image + Info */}
+                    <div className="flex items-center gap-4">
+                      <input
+                        type="checkbox"
+                        checked={selectedItems.includes(item._id)}
+                        onChange={() => toggleSelection(item._id)}
+                        className="accent-green-500"
+                      />
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        width={64}
+                        height={64}
+                        className="rounded-md object-cover"
+                      />
+                      <div>
+                        <p className="font-semibold">{item.title}</p>
+                        <p className="text-sm text-gray-400">${item.price.toFixed(2)} each</p>
                       </div>
                     </div>
-                    <Button
-                      onClick={handleStripeCheckout}
-                      className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white"
-                    >
-                      Proceed to Stripe Payment
-                    </Button>
+
+                    {/* Right: Quantity + Total */}
+                    <div className="flex items-center gap-3">
+                      <button
+                        className="px-2 text-xl bg-zinc-800 rounded"
+                        onClick={() => handleQuantityChange(item._id, -1)}
+                      >
+                        −
+                      </button>
+                      <span>{item.quantity}</span>
+                      <button
+                        className="px-2 text-xl bg-zinc-800 rounded"
+                        onClick={() => handleQuantityChange(item._id, 1)}
+                      >
+                        +
+                      </button>
+                      <p className="w-20 text-right font-medium">
+                        ${(item.quantity * item.price).toFixed(2)}
+                      </p>
+                      <button
+                        onClick={() => removeFromCart(item._id)}
+                        className="text-red-400 hover:text-red-300 ml-2"
+                      >
+                        Remove
+                      </button>
+                    </div>
                   </div>
-                )}
-              </div>
+                ))
+              )}
+
+              {cartItems.length > 0 && (
+                <div className="text-right text-xl font-semibold mt-6">
+                  Subtotal: ${currentTotal.toFixed(2)}
+                </div>
+              )}
             </div>
 
+            {/* Checkout Summary */}
+            {cartItems.length > 0 && (
+              <div className="bg-zinc-900 p-6 rounded-xl shadow-md space-y-4 h-fit">
+                <h3 className="text-xl font-bold">Checkout Summary</h3>
+                <div className="border-t border-zinc-700 pt-4 space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span>Subtotal</span>
+                    <span>${currentTotal.toFixed(2)}</span>
+                  </div>
+                  <div className="flex justify-between text-gray-400">
+                    <span>Sales Tax</span>
+                    <span>$0.00</span>
+                  </div>
+                  <div className="flex justify-between font-semibold text-white border-t border-zinc-700 pt-2">
+                    <span>Grand Total</span>
+                    <span>${currentTotal.toFixed(2)}</span>
+                  </div>
+                </div>
+                <Button
+                  onClick={handleStripeCheckout}
+                  disabled={selectedItems.length === 0}
+                  className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white disabled:bg-gray-600"
+                >
+                  {selectedItems.length === 0 ? 'Select Items to Checkout' : 'Proceed to Payment'}
+                </Button>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
-
     </section>
-
   );
 }
