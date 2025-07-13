@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import handleCheckout from '@/components/Payment/payment';
+import ApplePayButton from '@/components/Payment/ApplePayButton';
 import { useCart } from '@/components/Context/CartContext';
 import { toast } from 'react-toastify';
 
@@ -77,6 +78,26 @@ export default function CheckoutPage() {
         toast.error('Checkout failed. Please try again.');
       }
     }
+  };
+
+  const handleApplePayCheckout = async () => {
+    if (selectedItems.length === 0) {
+      toast.error('Please select items to checkout');
+      return;
+    }
+
+    const itemsToBuy = cartItems.filter((item) => selectedItems.includes(item.id || item._id));
+    
+    // Convert cart items to products format for Apple Pay
+    const products = itemsToBuy.map(item => ({
+      title: item.title,
+      price: item.price,
+      image: item.image,
+      quantity: item.quantity
+    }));
+
+    // Apple Pay will handle the payment through the ApplePayButton component
+    console.log('Apple Pay checkout initiated with products:', products);
   };
 
   const currentTotal = calculateTotal(cartItems, selectedItems);
@@ -199,13 +220,34 @@ export default function CheckoutPage() {
                     <span>${currentTotal.toFixed(2)}</span>
                   </div>
                 </div>
-                <Button
-                  onClick={handleStripeCheckout}
-                  disabled={selectedItems.length === 0}
-                  className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white disabled:bg-gray-600"
-                >
-                  {selectedItems.length === 0 ? 'Select Items to Checkout' : 'Proceed to Payment'}
-                </Button>
+                <div className="space-y-3">
+                  <Button
+                    onClick={handleStripeCheckout}
+                    disabled={selectedItems.length === 0}
+                    className="w-full bg-green-600 hover:bg-green-700 text-white disabled:bg-gray-600"
+                  >
+                    {selectedItems.length === 0 ? 'Select Items to Checkout' : 'Pay with Card'}
+                  </Button>
+                  
+                  <ApplePayButton
+                    amount={currentTotal}
+                    currency="USD"
+                    products={cartItems.filter((item) => selectedItems.includes(item.id || item._id)).map(item => ({
+                      title: item.title,
+                      price: item.price,
+                      image: item.image,
+                      quantity: item.quantity
+                    }))}
+                    onError={(error) => {
+                      if (error.includes('Authentication required')) {
+                        toast.error('Please login to complete your purchase');
+                        router.push('/signin');
+                      } else {
+                        toast.error(error || 'Apple Pay payment failed');
+                      }
+                    }}
+                  />
+                </div>
               </div>
             )}
           </div>

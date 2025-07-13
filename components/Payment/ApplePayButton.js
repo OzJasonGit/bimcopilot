@@ -40,7 +40,8 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
               requestPayerEmail: true,
             });
 
-            const canMakePayment = await paymentRequest.canMakePayment();
+            const canMakePaymentResult = await paymentRequest.canMakePayment();
+          const canMakePayment = canMakePaymentResult || false;
             console.log('Apple Pay canMakePayment result:', canMakePayment);
             
             // Show button if on supported platform or if canMakePayment works
@@ -84,7 +85,8 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
       // For testing, we'll try to show the payment sheet even if canMakePayment fails
       let canMakePayment = false;
       try {
-        canMakePayment = await paymentRequest.canMakePayment();
+        const canMakePaymentResult = await paymentRequest.canMakePayment();
+        canMakePayment = canMakePaymentResult || false;
         console.log('Apple Pay canMakePayment result:', canMakePayment);
       } catch (error) {
         console.log('canMakePayment check failed:', error);
@@ -99,6 +101,9 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
       paymentRequest.on('paymentmethod', async (event) => {
         try {
           console.log('Apple Pay payment method received:', event);
+          if (!event || !event.paymentMethod) {
+            throw new Error('Invalid payment method received');
+          }
           
           // Handle both single product and multiple products
           let requestBody;
@@ -140,12 +145,12 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
             // For testing, we'll handle the response differently
             if (result.client_secret) {
               // Confirm the payment with the payment method
-              const { error } = await stripe.confirmCardPayment(result.client_secret, {
+              const confirmResult = await stripe.confirmCardPayment(result.client_secret, {
                 payment_method: event.paymentMethod.id,
               });
 
-              if (error) {
-                throw new Error(error.message);
+              if (confirmResult.error) {
+                throw new Error(confirmResult.error.message);
               }
             }
 
@@ -176,10 +181,10 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
 
       // Show Apple Pay sheet
       console.log('Attempting to show Apple Pay sheet...');
-      const { error } = await paymentRequest.show();
-      if (error) {
-        console.log('Apple Pay show error:', error);
-        throw new Error(error.message);
+      const showResult = await paymentRequest.show();
+      if (showResult && showResult.error) {
+        console.log('Apple Pay show error:', showResult.error);
+        throw new Error(showResult.error.message);
       }
     } catch (error) {
       console.error('Apple Pay error:', error);
