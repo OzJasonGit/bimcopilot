@@ -45,7 +45,7 @@ return (
                   </h2>
                   <br/>        
                   <p  id={styles._H3_CENTER}
-                      class=" text-stone-500 ... font-avant_garde_bold ... ">
+                      class=" text-stone-500 ... font-avant_garde_medium ... ">
                       With expertise in <a class="text-stone-700 ...">design</a>, <a class="text-stone-700 ...">software development</a>, 
                       and <a class="text-stone-700 ...">Artificial Intelligence</a>, we've helped <a class="text-stone-700 ...">architects</a>, 
                       <a class="text-stone-700 ..."> designers</a>, <a class="text-stone-700 ...">
@@ -90,7 +90,7 @@ return (
                   <br/>
                 
                     <p  id={styles._H3_CENTER}
-                      class=" text-stone-500 ... font-avant_garde_bold ... "> 
+                      class=" text-stone-500 ... font-avant_garde_medium ... "> 
                       Previously, we’ve worked with <a class="text-stone-700 ...">Perkins & Will</a> on several successful 
                       projects.<br/> This involved <a class="text-stone-700 ...">streamlining workflows </a> with 
                       <a class="text-stone-700 ..."> bespoke automation </a> and <a class="text-stone-700 ...">smart BIM tools</a>.
