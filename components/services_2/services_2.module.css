@@ -253,6 +253,39 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 480px) and (max-width: 960px) {
   .grid_0_scroll {
     position: relative;
@@ -419,5 +452,14 @@
     grid-template-areas: "IMAGE_2";
     margin-top: -500px;
     z-index: 1;
+  }
+
+
+  #P_IMAGE_2 {
+      position: relative;
+      grid-area: IMAGE_2;
+      overflow: hidden;
+      height: 400px;
+      top: 0px;
   }
 }
