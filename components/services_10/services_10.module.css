@@ -680,6 +680,15 @@
 
 
 @media all and (min-width: 0px) and (max-width: 480px) {
+
+
+  #_H1_RIGHT {
+      margin-bottom: 0px;
+      font-size: 2rem;
+      line-height: 2rem;
+      text-align: left; 
+    }  
+
   #_H2_RIGHT {
       margin-bottom: 0px;
       font-size: 1.00rem;
@@ -687,12 +696,12 @@
       text-align: left;
     }
   
-    #_H3_RIGHT {
-      margin-bottom: 0px;
-      font-size: 0.83rem;
-      line-height: 1.2rem;
-      text-align: left;
-    }
+  #_H3_RIGHT {
+    margin-bottom: 0px;
+    font-size: 0.83rem;
+    line-height: 1.2rem;
+    text-align: left;
+  }
 
   .grid_0_is_this_for_me {
     position: relative;

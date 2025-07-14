@@ -151,10 +151,10 @@ return (
                       style={{ paddingTop: "40px", paddingBottom: "80px" }}>
                   <div class=" rounded-xl ..." id={styles.IS_THIS_FOR_ME_TEXT}>   
                     <h1
-                      id={styles._H1}
+                      id={styles._H1_RIGHT}
                       style={{ paddingBottom: "20px" }}
                       class="text-stone-700 ... font-avant_garde_bold ... ">
-                      <a class="text-right ... text-4xl">Is This For Me?</a>
+                      <a class=" text-4xl">Is This For Me?</a>
                     </h1>  
 
                     <h3
