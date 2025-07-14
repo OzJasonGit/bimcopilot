@@ -165,6 +165,45 @@
   overflow: hidden;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 960px) and (max-width: 1280px) {
   .grid_0_scroll {
     position: relative;
@@ -263,6 +302,45 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 0px) and (max-width: 480px) {
   .grid_0_scroll {
     position: relative;
@@ -300,7 +378,7 @@
     width: 100%;
     position: relative;
     grid-area: SUB;
-    height: 850px;
+    height: 400px;
     display: grid;
     grid-column-gap: 30px;
     grid-row-gap: 0;
