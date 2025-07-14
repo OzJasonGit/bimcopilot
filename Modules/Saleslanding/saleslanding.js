@@ -45,7 +45,18 @@ const Saleslanding = ({ stories, firstStory }) => {
         <div class={styles.grid_0_scroll}>
             <div id={styles.SALES_GRID_HOLDER}>
 
-                
+                <div id={styles.PRODUCT_ID_HOLDER}
+                    style={{
+                        
+                        position: "relative",
+                        width: "100%",
+                        height: "100%",
+                        }}>
+                        <h1 id={styles._H1} class=" text-stone-700 ... font-avant_garde_bold">
+                           <a class="text-md ... text-stone-700 ... font-geist_regular"
+                              style={{marginBottom:"0px"}}>Product_ID</a> B1001
+                        </h1>
+                </div>
 
                 <div  id={styles.SALES_IMAGE_HOLDER}>
                     

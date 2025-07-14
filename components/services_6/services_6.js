@@ -26,7 +26,7 @@ import React, { Component } from 'react';
                     class="text-center ... text-lg ... text-stone-700 ... font-avant_garde_bold" 
                   >
            
-                    <a class="text-sm"> Pedro Sanchez Reche, Foster and Partners, London, UK </a> 
+                    <a id={styles._H3}> Pedro Sanchez Reche, Foster and Partners, London, UK </a> 
                   </h2>
                 </div>
                 <div id={styles.SUB_TAG}>
