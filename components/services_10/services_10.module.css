@@ -309,8 +309,10 @@
   grid-area: FAQ;
 }
 
-
-
+#CONCLUSION {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 
 
 
@@ -448,6 +450,11 @@
       ". WHO_WEVE_HELPED ."
       ". . .";
   }
+
+    #CONCLUSION {
+      padding-left: 30px;
+      padding-right: 30px; 
+    }
 }
 
 
@@ -615,6 +622,12 @@
     grid-column-gap: 30px;
     grid-template-areas: "FAQ";
   }
+
+  #CONCLUSION {
+    padding-left: 0px;
+    padding-right: 0px; 
+  }
+  
 }
 
 
@@ -746,5 +759,10 @@
     grid-template-rows: 1fr;
     grid-column-gap: 30px;
     grid-template-areas: "FAQ";
+  }
+
+  #CONCLUSION {
+    padding-left: 0px;
+    padding-right: 0px; 
   }
 }
