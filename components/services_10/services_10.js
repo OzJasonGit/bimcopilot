@@ -153,14 +153,14 @@ return (
                     <h1
                       id={styles._H1}
                       style={{ paddingBottom: "20px" }}
-                      class="text-stone-700 ... font-avant_garde_bold ... text-right ... ">
+                      class="text-stone-700 ... font-avant_garde_bold ... ">
                       <a class="text-right ... text-4xl">Is This For Me?</a>
                     </h1>  
 
                     <h3
                       
-                      id={styles._H3}
-                      class="text-right ... text-neutral-500 ... font-avant_garde_bold"
+                      id={styles._H3_RIGHT}
+                      class="text-right ... text-neutral-500 ... font-avant_garde_medium"
                     >
                       {" "}
 
