@@ -459,7 +459,7 @@
       position: relative;
       grid-area: IMAGE_2;
       overflow: hidden;
-      height: 400px;
+      height: 350px;
       top: 0px;
   }
 }
