@@ -800,9 +800,9 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0px auto auto 0px;
+    grid-template-rows: auto auto auto 0px;
     grid-template-areas:
-      " . "
+      "PRODUCT_ID "
       "IMAGE"
       "CHECKOUT"
       " . ";
@@ -1142,9 +1142,9 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0px auto auto 0px;
+    grid-template-rows: auto auto auto 0px;
     grid-template-areas:
-      " . "
+      "PRODUCT_ID "
       "IMAGE"
       "CHECKOUT"
       " . ";
