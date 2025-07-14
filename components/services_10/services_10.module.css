@@ -623,11 +623,18 @@
     grid-template-areas: "FAQ";
   }
 
+  #TITLE {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   #CONCLUSION {
     padding-left: 0px;
     padding-right: 0px; 
   }
   
+
+
 }
 
 
@@ -693,7 +700,7 @@
     width: 100%;
 
     background-color: transparent;
-    display: grid;
+    display: none;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-template-rows: auto;
@@ -740,6 +747,20 @@
       " WHO_WEVE_HELPED "
       ".";
   }
+
+
+  #WE_HELPED_GRID {
+    position: relative;
+    grid-area: PORTFOLIO;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto auto auto;
+    grid-template-areas:
+      " ."
+      "TITLE "
+      "IMAGE "
+      "CONCLUSION ";
+  }
  
   #FAQ {
     display: grid;
@@ -759,6 +780,12 @@
     grid-template-rows: 1fr;
     grid-column-gap: 30px;
     grid-template-areas: "FAQ";
+  }
+
+
+  #TITLE {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   #CONCLUSION {

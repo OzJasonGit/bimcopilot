@@ -28,9 +28,7 @@ return (
 
                 <div id={styles.TITLE}
                   style={{ gridArea: "TITLE",
-                           paddingLeft: "30px",
-                           paddingRight: "30px"
-                   }}>
+                        }}>
                   <h1
                     id={styles._H1_CENTER}
                     class="text-stone-700 ... font-avant_garde_bold ...">
@@ -85,8 +83,7 @@ return (
 
                 <div id={styles.CONCLUSION}
                   style={{ gridArea: "CONCLUSION",
-                           paddingLeft: "30px",
-                           paddingRight: "30px"}}>
+                          }}>
                   <br/>
                 
                     <p  id={styles._H3_CENTER}
