@@ -2335,6 +2335,7 @@
   }
 
   #PORTFOLIO_IMAGES {
+    display: none;
     height: 650px;
     width: 100%;
     position: relative;
@@ -2650,6 +2651,7 @@
   }
 
   #PORTFOLIO_IMAGES {
+    display: none;
     height: 650px;
     width: 100%;
     position: relative;
