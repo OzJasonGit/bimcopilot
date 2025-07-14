@@ -802,7 +802,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto 0px;
     grid-template-areas:
-      "PRODUCT_ID "
+      " PRODUCT_ID "
       "IMAGE"
       "CHECKOUT"
       " . ";
@@ -1091,6 +1091,18 @@
     line-height: 1;
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
   /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -1144,7 +1156,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto 0px;
     grid-template-areas:
-      "PRODUCT_ID "
+      " PRODUCT_ID "
       "IMAGE"
       "CHECKOUT"
       " . ";
