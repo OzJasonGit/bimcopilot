@@ -250,6 +250,12 @@ export default function CheckoutPage() {
                   />
                   <PayPalButton
                     amount={currentTotal}
+                    products={cartItems.filter((item) => selectedItems.includes(item.id || item._id)).map(item => ({
+                      title: item.title,
+                      price: item.price,
+                      image: item.image,
+                      quantity: item.quantity
+                    }))}
                   />
                 </div>
               </div>

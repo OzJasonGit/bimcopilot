@@ -65,7 +65,7 @@
 'use client';
 import { PayPalButtons } from '@paypal/react-paypal-js';
 
-const PayPalButton = ({ amount }) => {
+const PayPalButton = ({ amount, products = [], currency = 'USD', onSuccess, onError }) => {
   return (
     <PayPalButtons
       style={{ layout: 'vertical' }}
@@ -76,25 +76,60 @@ const PayPalButton = ({ amount }) => {
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ amount: '49.99' }), // pass valid amount
+            body: JSON.stringify({ amount }),
           });
-      
           const data = await res.json();
           console.log('PayPal Order Created:', data);
-      
-          return data.id; // <--- this is required
+          return data.id;
         } catch (error) {
           console.error('Create order error:', error);
         }
       }}
-      
       onApprove={async (data, actions) => {
-        const details = await actions.order.capture();
-        console.log('Payment Approved: ', details);
-        // You can redirect or call your API here
+        try {
+          const details = await actions.order.capture();
+          console.log('Payment Approved: ', details);
+          // Ensure products array is populated
+          let orderProducts = products;
+          if ((!orderProducts || orderProducts.length === 0) && details && details.purchase_units) {
+            // Try to extract product info from PayPal details
+            const items = details.purchase_units[0]?.items;
+            if (items && items.length > 0) {
+              orderProducts = items.map(item => ({
+                title: item.name,
+                price: Number(item.unit_amount?.value) || 0,
+                quantity: Number(item.quantity) || 1
+              }));
+            }
+          }
+          // Save order to database
+          const orderRes = await fetch('/api/orders', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              amount: Number(amount),
+              products: orderProducts,
+              paymentMethod: 'paypal',
+              paypalOrderId: data.orderID,
+              status: 'paid',
+              currency,
+              paypalDetails: details,
+            }),
+          });
+          const orderData = await orderRes.json();
+          if (orderRes.ok) {
+            if (onSuccess) onSuccess(details);
+          } else {
+            if (onError) onError(orderData.error || 'Failed to save PayPal order');
+          }
+        } catch (error) {
+          console.error('PayPal order save error:', error);
+          if (onError) onError(error.message);
+        }
       }}
       onError={(err) => {
         console.error('PayPal Checkout Error: ', err);
+        if (onError) onError(err.message);
       }}
     />
   );

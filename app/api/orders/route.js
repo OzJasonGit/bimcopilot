@@ -18,12 +18,40 @@ export async function GET(req) {
     }
 
     const db = await connectToDatabase();
+    const { searchParams } = new URL(req.url);
+    const page = parseInt(searchParams.get('page') || '1', 10);
+    const limit = parseInt(searchParams.get('limit') || '50', 10);
+    const month = searchParams.get('month'); // format: YYYY-MM
+    const search = searchParams.get('search') || '';
+
+    const query = {};
+    if (month) {
+      // Filter by month (createdAt between first and last day of month)
+      const [year, monthNum] = month.split('-').map(Number);
+      const start = new Date(year, monthNum - 1, 1);
+      const end = new Date(year, monthNum, 1);
+      query.createdAt = { $gte: start, $lt: end };
+    }
+    if (search) {
+      const regex = new RegExp(search, 'i');
+      query.$or = [
+        { stripeSessionId: regex },
+        { _id: { $regex: regex } },
+        { userName: regex },
+        { userEmail: regex },
+        { 'products.title': regex },
+      ];
+    }
+
+    const total = await db.collection(ORDERS_COLLECTION).countDocuments(query);
     const orders = await db.collection(ORDERS_COLLECTION)
-      .find({})
+      .find(query)
       .sort({ createdAt: -1 })
+      .skip((page - 1) * limit)
+      .limit(limit)
       .toArray();
     
-    return NextResponse.json(orders);
+    return NextResponse.json({ orders, total, page, limit });
   } catch (error) {
     console.error('Error fetching orders:', error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
@@ -45,7 +73,7 @@ export async function POST(req) {
       userId: user.id.toString(),
       userEmail: user.email,
       userName: user.name,
-      status: 'pending',
+      status: orderData.status || 'pending',
       createdAt: new Date(),
       updatedAt: new Date()
     };

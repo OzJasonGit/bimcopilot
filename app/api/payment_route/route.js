@@ -42,7 +42,6 @@ export async function POST(req) {
       currency,
       status: 'pending',
       paymentStatus: 'pending',
-      paymentMethod, // Store payment method
       createdAt: new Date(),
       updatedAt: new Date()
     };

@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(req) {
   try {
-    const { amount } = await req.json();
+    const { amount, products = [] } = await req.json();
 
     // 1. Get access token
     const clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID;
@@ -45,6 +45,16 @@ export async function POST(req) {
               currency_code: 'USD',
               value: amount,
             },
+            items: products.map(p => ({
+              name: p.title,
+              unit_amount: {
+                currency_code: 'USD',
+                value: p.price,
+              },
+              quantity: p.quantity,
+              description: p.description || '',
+              category: 'PHYSICAL_GOODS',
+            })),
           },
         ],
       }),
@@ -60,8 +70,8 @@ export async function POST(req) {
       }, { status: 500 });
     }
 
-    // Return only the order ID as required by PayPal JS SDK
-    return NextResponse.json({ id: orderData.id });
+    // Return the order ID and products array
+    return NextResponse.json({ id: orderData.id, products });
   } catch (err) {
     return NextResponse.json({
       error: 'Unexpected server error',
