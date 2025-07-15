@@ -60,7 +60,7 @@ const Blog_page = (stories) => {
              style={{
                 position: "relative",
                 width: "100%",
-                height: "100%",
+                height: "auto",
                 zIndex:"0",          
                 background: "#171717"
              }}>
@@ -731,7 +731,7 @@ const Blog_page = (stories) => {
                             }}>
                          
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id={styles._H3_2}>
                                 {parse(story.body1_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor
@@ -762,7 +762,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",
                             }}>
                             <br /> <br />
-                            <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                            <p className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body1 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -818,7 +818,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TITLE",
                             }}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id={styles._H3_2}>
                                 {parse(story.body2_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor
@@ -835,7 +835,7 @@ const Blog_page = (stories) => {
                             }}>
 
                             <p
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body2 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -871,7 +871,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TITLE",
                             }}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body3_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor
@@ -911,7 +911,7 @@ const Blog_page = (stories) => {
                             }}>
                             <br /> <br />
                             <p
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body3 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -947,7 +947,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TITLE",
                             }}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body4_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor
@@ -964,7 +964,7 @@ const Blog_page = (stories) => {
                             }}>
 
                             <p
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body4 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -1001,7 +1001,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TITLE",
                             }}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body5_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor
@@ -1018,7 +1018,7 @@ const Blog_page = (stories) => {
                             }}>
 
                             <p
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body5 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -1053,7 +1053,7 @@ const Blog_page = (stories) => {
                                 width: "100%",                     
                                 gridArea: "TITLE",}}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body6_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor 
@@ -1069,7 +1069,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",}}> 
 
                             <p  
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body6 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
@@ -1104,7 +1104,7 @@ const Blog_page = (stories) => {
                                 width: "100%",                     
                                 gridArea: "TITLE",}}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body7_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor 
@@ -1120,7 +1120,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",}}> 
 
                             <p  
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body7 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
@@ -1155,7 +1155,7 @@ const Blog_page = (stories) => {
                             width: "100%",                     
                             gridArea: "TITLE",}}>
                         <h3
-                            className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                            className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                             id="_H3_2">
                             {parse(story.body8_title || "")}                         
                         </h3>
@@ -1169,7 +1169,7 @@ const Blog_page = (stories) => {
                             gridArea: "TEXT",}}> 
 
                         <p  
-                            className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                            className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                             {parse(story.body8 || "")}                        
                         </p>                  
                     </div>
@@ -1199,7 +1199,7 @@ const Blog_page = (stories) => {
                                 width: "100%",                     
                                 gridArea: "TITLE",}}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body9_title || "")}                        
                             </h3>
@@ -1213,7 +1213,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",}}> 
 
                             <p  
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body9 || "")}                    
                             </p>                  
                         </div>
@@ -1247,12 +1247,12 @@ const Blog_page = (stories) => {
 
                     <h1
                         id={styles._H1}
-                        className="text-3xl ... text-stone-700 ... font-avant_garde_bold">
+                        className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
                         Conclusion
                         <br /> <br />
                     </h1>
                     <p  
-                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                        className="text-lg ... text-neutral-400 ... font-avant_garde_medium">
                         {parse(story.Conclusion || "")}   
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
                         nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -1299,7 +1299,7 @@ const Blog_page = (stories) => {
                                 gridArea: "READ_1"
                                 }}>
                                     <h1 id={styles._H1}
-                                        className="text-3xl ... text-stone-700 ... font-avant_garde_bold"
+                                        className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                         >
                                             Read Next...
                                     </h1>
