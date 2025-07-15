@@ -240,17 +240,11 @@
 
 #CHECKOUT_GRID {
   position: relative;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: auto;
-  grid-row-gap: 15px;
-  grid-template-rows: 0px auto auto auto auto;
-  grid-template-areas:
-    "."
-    "ADD_TO_CART"
-    "PAYPAL"
-    "APPLE_PAY"
-    "MORE_OPTIONS";
+  gap: 12px;
 }
 
 #BOUGHT_TOGETHER_GRID {
@@ -270,15 +264,21 @@
 #PAYPAL {
   position: relative;
   width: 100%;
-  height: 60px;
+  /* Remove fixed height */
+  min-height: 60px;
+  height: auto;
   grid-area: PAYPAL;
+  margin-bottom: 12px;
 }
 
 #APPLE_PAY {
   position: relative;
   width: 100%;
-  height: 60px;
+  /* Remove fixed height */
+  min-height: 60px;
+  height: auto;
   grid-area: APPLE_PAY;
+  margin-bottom: 12px;
 }
 
 

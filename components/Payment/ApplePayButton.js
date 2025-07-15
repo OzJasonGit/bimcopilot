@@ -1,6 +1,7 @@
 // components/ApplePayButton.js
 import React, { useEffect, useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
+import './ApplePayButton.module.css';
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
@@ -11,54 +12,30 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
   useEffect(() => {
     const checkApplePayAvailability = async () => {
       try {
-        // Check if we're on a supported platform
-        const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-        const isChrome = /Chrome/.test(navigator.userAgent);
-        const isEdge = /Edg/.test(navigator.userAgent);
-        
-        console.log('Browser check - Safari:', isSafari, 'iOS:', isIOS, 'Chrome:', isChrome, 'Edge:', isEdge);
-        
-        // Check if Payment Request API is available
         if (!window.PaymentRequest) {
-          console.log('Payment Request API not available in this browser');
           setIsApplePayAvailable(false);
           return;
         }
-        
         const stripe = await stripePromise;
         if (stripe) {
-          try {
-            const paymentRequest = stripe.paymentRequest({
-              country: 'US',
-              currency: currency.toLowerCase(),
-              total: {
-                label: 'Total',
-                amount: Math.round(amount * 100), // Convert to cents
-              },
-              requestPayerName: true,
-              requestPayerEmail: true,
-            });
-
-            const canMakePaymentResult = await paymentRequest.canMakePayment();
-          const canMakePayment = canMakePaymentResult || false;
-            console.log('Apple Pay canMakePayment result:', canMakePayment);
-            
-            // Show button if on supported platform or if canMakePayment works
-            const shouldShow = (isSafari || isIOS || isChrome || isEdge) && !!canMakePayment;
-            console.log('Should show Apple Pay:', shouldShow);
-            setIsApplePayAvailable(shouldShow);
-          } catch (paymentRequestError) {
-            console.log('Payment Request creation failed:', paymentRequestError);
-            setIsApplePayAvailable(false);
-          }
+          const paymentRequest = stripe.paymentRequest({
+            country: 'US',
+            currency: currency.toLowerCase(),
+            total: {
+              label: 'Total',
+              amount: Math.round(amount * 100),
+            },
+            requestPayerName: true,
+            requestPayerEmail: true,
+          });
+          const canMakePaymentResult = await paymentRequest.canMakePayment();
+          // Only show if Apple Pay is available
+          setIsApplePayAvailable(!!canMakePaymentResult && canMakePaymentResult.applePay === true);
         }
       } catch (error) {
-        console.log('Apple Pay not available:', error);
         setIsApplePayAvailable(false);
       }
     };
-
     checkApplePayAvailability();
   }, [amount, currency]);
 
@@ -226,69 +203,25 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
 
   // Show informative message when Apple Pay is not available
   if (!isApplePayAvailable) {
-    console.log('Apple Pay button not showing - isApplePayAvailable:', isApplePayAvailable);
-    
-    // Check browser compatibility
-    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    const isChrome = /Chrome/.test(navigator.userAgent);
-    const isEdge = /Edg/.test(navigator.userAgent);
-    const hasPaymentRequest = !!window.PaymentRequest;
-    
-    let message = 'Apple Pay not available';
-    if (!hasPaymentRequest) {
-      message = 'Payment Request API not supported in this browser';
-    } else if (!isSafari && !isIOS && !isChrome && !isEdge) {
-      message = 'Apple Pay requires Safari, Chrome, or Edge';
-    } else {
-      message = 'Apple Pay not configured on this device';
-    }
-    
-    return (
-      <div
-        style={{
-          width: '100%',
-          height: '50px',
-          backgroundColor: '#f8f9fa',
-          color: '#6c757d',
-          border: '1px solid #dee2e6',
-          borderRadius: '8px',
-          fontSize: '14px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginBottom: '10px',
-          cursor: 'not-allowed',
-        }}
-        title={message}
-      >
-        {message}
-      </div>
-    );
+    return null;
   }
 
   return (
     <button
       onClick={handleApplePay}
       disabled={isLoading}
-      style={{
-        width: '100%',
-        height: '50px',
-        backgroundColor: '#000',
-        color: '#fff',
-        border: 'none',
-        borderRadius: '8px',
-        fontSize: '16px',
-        fontWeight: '600',
-        cursor: isLoading ? 'not-allowed' : 'pointer',
-        opacity: isLoading ? 0.7 : 1,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: '10px',
-      }}
+      className={`apple-pay-button${isLoading ? ' loading' : ''}`}
+      type="button"
     >
-      {isLoading ? 'Processing...' : 'Pay with Apple Pay'}
+      <span className="apple-pay-logo" aria-label="Apple Pay">
+        <svg width="40" height="24" viewBox="0 0 40 24" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" fillRule="evenodd">
+            <rect width="40" height="24" rx="12" fill="#000"/>
+            <text x="20" y="16" textAnchor="middle" fill="#fff" fontFamily="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" fontSize="13" fontWeight="bold"> Pay</text>
+          </g>
+        </svg>
+      </span>
+      {isLoading && <span className="apple-pay-loading">Processing...</span>}
     </button>
   );
 };

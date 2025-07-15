@@ -229,46 +229,28 @@ export default function CheckoutPage() {
                   >
                     {selectedItems.length === 0 ? 'Select Items to Checkout' : 'Pay with Stripe'}
                   </Button>
-                  <div className="flex flex-row gap-2 w-full">
-                    <div className="flex-1">
-                      <ApplePayButton
-                        amount={currentTotal}
-                        currency="USD"
-                        products={cartItems.filter((item) => selectedItems.includes(item.id || item._id)).map(item => ({
-                          title: item.title,
-                          price: item.price,
-                          image: item.image,
-                          quantity: item.quantity
-                        }))}
-                        onError={(error) => {
-                          if (error.includes('Authentication required')) {
-                            toast.error('Please login to complete your purchase');
-                            router.push('/signin');
-                          } else {
-                            toast.error(error || 'Apple Pay payment failed');
-                          }
-                        }}
-                      />
-                    </div>
-                    <div className="flex-1">
-                      <PayPalButton
-                        products={cartItems.filter((item) => selectedItems.includes(item.id || item._id)).map(item => ({
-                          title: item.title,
-                          price: item.price,
-                          quantity: item.quantity,
-                          description: item.description || '',
-                        }))}
-                        currency="USD"
-                        onSuccess={(details) => {
-                          toast.success('PayPal payment successful!');
-                          // Optionally clear cart or redirect
-                        }}
-                        onError={(err) => {
-                          toast.error('PayPal payment failed: ' + (err?.message || err));
-                        }}
-                      />
-                    </div>
-                  </div>
+                  {/* Stack payment buttons vertically */}
+                  <ApplePayButton
+                    amount={currentTotal}
+                    currency="USD"
+                    products={cartItems.filter((item) => selectedItems.includes(item.id || item._id)).map(item => ({
+                      title: item.title,
+                      price: item.price,
+                      image: item.image,
+                      quantity: item.quantity
+                    }))}
+                    onError={(error) => {
+                      if (error.includes('Authentication required')) {
+                        toast.error('Please login to complete your purchase');
+                        router.push('/signin');
+                      } else {
+                        toast.error(error || 'Apple Pay payment failed');
+                      }
+                    }}
+                  />
+                  <PayPalButton
+                    amount={currentTotal}
+                  />
                 </div>
               </div>
             )}
