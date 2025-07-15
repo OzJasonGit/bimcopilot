@@ -18,6 +18,7 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import handleCheckout from '@/components/Payment/payment';
 import ApplePayButton from '@/components/Payment/ApplePayButton';
+import PayPalButton from '@/components/Payment/PayPalButton';
 import { CartContext } from '@/components/Context/CartContext';
 import { useContext } from 'react';
 
@@ -303,6 +304,9 @@ const { addToCart } = useContext(CartContext);
                          onError={(error) => {
                            toast.error(error || 'Apple Pay payment failed');
                          }}
+                       />
+                       <PayPalButton
+                         amount={currentPrice}
                        />
                      </div>
 
