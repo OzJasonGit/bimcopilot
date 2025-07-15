@@ -285,7 +285,7 @@ const { addToCart } = useContext(CartContext);
      });
    }}
  >
-   Buy With Paypal
+   Buy with Stripe 
  </Button>
 
                      </div>
