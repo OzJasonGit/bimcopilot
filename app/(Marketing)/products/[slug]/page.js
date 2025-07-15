@@ -250,66 +250,62 @@ const { addToCart } = useContext(CartContext);
 
                 <div id={styles.C4}>
                   <div id={styles.CHECKOUT_GRID}>
-                  <div id={styles.ADD_TO_CART}>
-  <Button
-    onClick={() => {
-      addToCart({
-        _id: product._id,
-        title: product.title,
-        price: licenseType === 'commercial' ? product.commercial_price : product.student_price,
-        image: product.image,
-      });
-      toast.success(' Product added to cart!');
-    }}
-    style={{ position: 'absolute', width: '100%', height: '100%' }}
-  >
-    Add To Cart
-  </Button>
-</div>
-
-
-
-                                         <div id={styles.PAYPAL}>
-                     <Button
-   variant="secondary"
-   className="border border-solid rounded-md border-stone-800"
-   style={{ position: 'absolute', width: '100%', height: '100%' }}
-   onClick={() => {
-     handleCheckout({
-       products: [{
-         title: product.title,
-         price: currentPrice,
-         image: product.image,
-         quantity: 1
-       }],
-       currency: 'USD',
-     });
-   }}
- >
-   Buy with Stripe 
- </Button>
-
-                     </div>
-
-                     <div id={styles.APPLE_PAY}>
-                       <ApplePayButton
-                         amount={currentPrice}
-                         currency="USD"
-                         product={{
-                           title: product.title,
-                           price: currentPrice,
-                           image: product.image,
-                           quantity: 1
-                         }}
-                         onError={(error) => {
-                           toast.error(error || 'Apple Pay payment failed');
-                         }}
-                       />
-                       <PayPalButton
-                         amount={currentPrice}
-                       />
-                     </div>
-
+                    <div id={styles.ADD_TO_CART}>
+                      <Button
+                        onClick={() => {
+                          addToCart({
+                            _id: product._id,
+                            title: product.title,
+                            price: licenseType === 'commercial' ? product.commercial_price : product.student_price,
+                            image: product.image,
+                          });
+                          toast.success(' Product added to cart!');
+                        }}
+                        style={{ width: '100%', height: '100%' }}
+                      >
+                        Add To Cart
+                      </Button>
+                    </div>
+                    <div id={styles.STRIPE}>
+                      <Button
+                        variant="secondary"
+                        className="border border-solid rounded-md border-stone-800"
+                        style={{ width: '100%', height: '100%' }}
+                        onClick={() => {
+                          handleCheckout({
+                            products: [{
+                              title: product.title,
+                              price: currentPrice,
+                              image: product.image,
+                              quantity: 1
+                            }],
+                            currency: 'USD',
+                          });
+                        }}
+                      >
+                        Buy with Stripe
+                      </Button>
+                    </div>
+                    <div id={styles.APPLE_PAY}>
+                      <ApplePayButton
+                        amount={currentPrice}
+                        currency="USD"
+                        product={{
+                          title: product.title,
+                          price: currentPrice,
+                          image: product.image,
+                          quantity: 1
+                        }}
+                        onError={(error) => {
+                          toast.error(error || 'Apple Pay payment failed');
+                        }}
+                      />
+                    </div>
+                    <div id={styles.PAYPAL}>
+                      <PayPalButton
+                        amount={currentPrice}
+                      />
+                    </div>
                     <div id={styles.MORE_OPTIONS}>
                       <a></a>
                     </div>
