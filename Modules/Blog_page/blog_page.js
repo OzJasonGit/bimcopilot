@@ -330,7 +330,7 @@ const Blog_page = (stories) => {
                                                                                     <h1
                                                                                         id={styles._H1}
                                                                                         
-                                                                                        class=" text-neutral-700 ... font-avant_garde_bold">
+                                                                                        class=" text-stone-200 ... font-avant_garde_bold">
                                                                                         Sustainable, Richer Architects through AI, Analytics and
                                                                                         Automation
                                                                                     </h1>
