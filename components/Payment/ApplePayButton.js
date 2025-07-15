@@ -29,7 +29,7 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
             requestPayerEmail: true,
           });
           const canMakePaymentResult = await paymentRequest.canMakePayment();
-          // Only show if Apple Pay is available
+          console.log('canMakePaymentResult:', canMakePaymentResult);
           setIsApplePayAvailable(!!canMakePaymentResult && canMakePaymentResult.applePay === true);
         }
       } catch (error) {
@@ -203,12 +203,7 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
 
   // Show informative message when Apple Pay is not available
   if (!isApplePayAvailable) {
-    return (
-      <div style={{ color: 'red', padding: 8, background: '#fff', border: '1px solid #ccc', borderRadius: 6, marginBottom: 8 }}>
-        Apple Pay not available (debug: {String(isApplePayAvailable)})<br/>
-        Make sure you are using Safari on a Mac/iOS device with Apple Pay set up and site is served over HTTPS.
-      </div>
-    );
+    return null;
   }
 
   return (

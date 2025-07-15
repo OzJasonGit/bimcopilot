@@ -264,21 +264,15 @@
 #PAYPAL {
   position: relative;
   width: 100%;
-  /* Remove fixed height */
-  min-height: 60px;
   height: auto;
   grid-area: PAYPAL;
-  margin-bottom: 12px;
 }
 
 #APPLE_PAY {
   position: relative;
   width: 100%;
-  /* Remove fixed height */
-  min-height: 60px;
   height: auto;
   grid-area: APPLE_PAY;
-  margin-bottom: 12px;
 }
 
 

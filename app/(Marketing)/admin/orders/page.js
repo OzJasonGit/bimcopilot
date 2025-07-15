@@ -134,6 +134,9 @@ export default function AdminOrders() {
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Date
                 </th>
+                <th className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Payment Method
+                </th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -194,6 +197,15 @@ export default function AdminOrders() {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {formatDate(order.createdAt)}
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                    {order.paymentMethod
+                      ? order.paymentMethod.charAt(0).toUpperCase() + order.paymentMethod.slice(1)
+                      : order.stripeSessionId
+                        ? "Stripe"
+                        : order.paypalOrderId
+                          ? "PayPal"
+                          : "Unknown"}
                   </td>
                 </tr>
               ))}
