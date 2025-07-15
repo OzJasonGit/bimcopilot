@@ -1310,7 +1310,8 @@ const Blog_page = (stories) => {
 
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}
                 style={{
-                    background: "#171717"
+                    background: "#171717",
+                    overflowX: "hidden"
                 }}>
                 <div className={styles.grid_0_blog_end}>
 
