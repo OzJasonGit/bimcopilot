@@ -47,7 +47,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
                 <div id={styles.PRODUCT_ID_HOLDER}
                     style={{
-                        gridArea: "PRODUCT_ID",
+                        
                         position: "relative",
                         width: "100%",
                         height: "100%",

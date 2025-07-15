@@ -50,7 +50,7 @@ const BlogPost = () => {
     <>
       <Menu />
       <Header />
-            <Sides />
+      <Sides />
       
     <Blog_page/>
     {/* <Blog/> */}

@@ -350,6 +350,10 @@
     "IMAGES";
 }
 
+#PRODUCT_ID_HOLDER {
+  grid-area: PRODUCT_ID;
+}
+
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
@@ -652,6 +656,12 @@
       ". SUB ."
       ". . .";
   }
+
+
+
+  #PRODUCT_ID_HOLDER {
+    grid-area: PRODUCT_ID;
+  }
 }
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
@@ -800,9 +810,9 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0px auto auto 0px;
+    grid-template-rows: auto auto auto 0px;
     grid-template-areas:
-      " . "
+      " PRODUCT_ID "
       "IMAGE"
       "CHECKOUT"
       " . ";
@@ -958,6 +968,11 @@
     height: 500px;
     max-height: 100%;
   }
+
+
+    #PRODUCT_ID_HOLDER {
+      grid-area: PRODUCT_ID;
+    }
 }
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
@@ -1091,6 +1106,18 @@
     line-height: 1;
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
   /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -1142,9 +1169,9 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0px auto auto 0px;
+    grid-template-rows: auto auto auto 0px;
     grid-template-areas:
-      " . "
+      " PRODUCT_ID "
       "IMAGE"
       "CHECKOUT"
       " . ";
@@ -1540,6 +1567,13 @@
     grid-template-areas:
       "IMAGE"
       "TEXT ";
+  }
+
+
+
+
+  #PRODUCT_ID_HOLDER {
+    grid-area: PRODUCT_ID;
   }
 
   /*SECTION////PRODUCTS///////////////////////////////////////////////////////////////////////////////////*/

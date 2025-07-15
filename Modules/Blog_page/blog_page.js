@@ -55,9 +55,18 @@ const Blog_page = (stories) => {
     const router = useRouter();
     return (
 
-        <>
+        < >
+        <div id={styles.BACKGROUND}
+             style={{
+                position: "relative",
+                width: "100%",
+                height: "auto",
+                zIndex:"0",          
+                background: "#171717"
+             }}>
 
-            {storiesToMap?.map((story, index) => {
+                
+        {storiesToMap?.map((story, index) => {
                 return (
 
                     <Head>
@@ -82,7 +91,8 @@ const Blog_page = (stories) => {
                         width: "100%",
                         height: "100%",
                         zIndex:"3",
-                        left: "-100vw"
+                        left: "-100vw",
+                        background: "#171717"
                     }}>
                         <div
                             style={{
@@ -91,6 +101,7 @@ const Blog_page = (stories) => {
                             height: "100%",
                             display: "flex",
                             justifyContent: "center",
+                            background: "#171717"
                             }}>
                             <div id={styles.NAV_GRID}>  
                                 <div id={styles.GRID_NAV_ADVERT}
@@ -436,7 +447,10 @@ const Blog_page = (stories) => {
 
 
 
-            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
+            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_subscribe}>
                     <div className={styles.sub_head}
                         style={{
@@ -629,7 +643,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
+            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_blogimageholder}>
 
                     <div className="rounded-2xl ..."
@@ -658,7 +675,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
+            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_tag}>
                     <div className={styles.sub_head_2}>
                         <div id={styles.SUBSCRIBE} className={"border-emerald-200"}>
@@ -687,9 +707,8 @@ const Blog_page = (stories) => {
 
             <section id={styles.SHADOW_SECTION_TOP} className={styles.center_holder} class={styles.PARAGRAPH_1}
                 style={{
-                 
+                    background: "#171717"
                 }}>
-
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.FIRST_TEXT_HOLDER}
@@ -712,7 +731,7 @@ const Blog_page = (stories) => {
                             }}>
                          
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id={styles._H3_2}>
                                 {parse(story.body1_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor
@@ -743,7 +762,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",
                             }}>
                             <br /> <br />
-                            <p className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                            <p className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body1 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -777,7 +796,10 @@ const Blog_page = (stories) => {
 
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_2}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_2}
+            style={{
+                background: "#171717"
+            }}>
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.TEXT_HOLDER}
@@ -796,7 +818,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TITLE",
                             }}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id={styles._H3_2}>
                                 {parse(story.body2_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor
@@ -813,7 +835,7 @@ const Blog_page = (stories) => {
                             }}>
 
                             <p
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body2 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -828,7 +850,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_3}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_3}
+            style={{
+                background: "#171717"
+            }}>
                 <div class={styles.grid_0_blog}>
                     <div id={styles.IMAGE_TEXT_HOLDER}
                         style={{
@@ -846,7 +871,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TITLE",
                             }}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body3_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor
@@ -886,7 +911,7 @@ const Blog_page = (stories) => {
                             }}>
                             <br /> <br />
                             <p
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body3 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -900,7 +925,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_4}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_4}
+            style={{
+                background: "#171717"
+            }}>
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.TEXT_HOLDER}
@@ -919,7 +947,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TITLE",
                             }}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body4_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor
@@ -936,7 +964,7 @@ const Blog_page = (stories) => {
                             }}>
 
                             <p
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body4 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -951,7 +979,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_5}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_5}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.TEXT_HOLDER}
@@ -970,7 +1001,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TITLE",
                             }}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body5_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor
@@ -987,7 +1018,7 @@ const Blog_page = (stories) => {
                             }}>
 
                             <p
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body5 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -1002,7 +1033,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_6}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_6}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.TEXT_HOLDER}
@@ -1019,7 +1053,7 @@ const Blog_page = (stories) => {
                                 width: "100%",                     
                                 gridArea: "TITLE",}}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body6_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor 
@@ -1035,7 +1069,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",}}> 
 
                             <p  
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body6 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
@@ -1050,7 +1084,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_7}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_7}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.TEXT_HOLDER}
@@ -1067,7 +1104,7 @@ const Blog_page = (stories) => {
                                 width: "100%",                     
                                 gridArea: "TITLE",}}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body7_title || "")}
                                 consectetur adipiscing elit, sed do eiusmod tempor 
@@ -1083,7 +1120,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",}}> 
 
                             <p  
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body7 || "")}
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
                                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
@@ -1098,7 +1135,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_8}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_8}
+            style={{
+                background: "#171717"
+            }}>
             <div className={styles.grid_0_blog}>
 
                 <div id={styles.TEXT_HOLDER}
@@ -1115,7 +1155,7 @@ const Blog_page = (stories) => {
                             width: "100%",                     
                             gridArea: "TITLE",}}>
                         <h3
-                            className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                            className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                             id="_H3_2">
                             {parse(story.body8_title || "")}                         
                         </h3>
@@ -1129,7 +1169,7 @@ const Blog_page = (stories) => {
                             gridArea: "TEXT",}}> 
 
                         <p  
-                            className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                            className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                             {parse(story.body8 || "")}                        
                         </p>                  
                     </div>
@@ -1139,7 +1179,10 @@ const Blog_page = (stories) => {
             </div>
             </section>
  
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_9}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_9}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.TEXT_HOLDER}
@@ -1156,7 +1199,7 @@ const Blog_page = (stories) => {
                                 width: "100%",                     
                                 gridArea: "TITLE",}}>
                             <h3
-                                className="text-3xl ... text-neutral-700 ... font-avant_garde_bold"
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body9_title || "")}                        
                             </h3>
@@ -1170,7 +1213,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",}}> 
 
                             <p  
-                                className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body9 || "")}                    
                             </p>                  
                         </div>
@@ -1180,7 +1223,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}
+            style={{
+                background: "#171717"
+            }}>
             <div class={styles.grid_0_blog_end}>
 
             <div id={styles.TEXT_HOLDER}
@@ -1201,12 +1247,12 @@ const Blog_page = (stories) => {
 
                     <h1
                         id={styles._H1}
-                        className="text-3xl ... text-stone-700 ... font-avant_garde_bold">
+                        className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
                         Conclusion
                         <br /> <br />
                     </h1>
                     <p  
-                        className="text-lg ... text-neutral-700 ... font-avant_garde_medium">
+                        className="text-lg ... text-neutral-400 ... font-avant_garde_medium">
                         {parse(story.Conclusion || "")}   
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
                         nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -1253,7 +1299,7 @@ const Blog_page = (stories) => {
                                 gridArea: "READ_1"
                                 }}>
                                     <h1 id={styles._H1}
-                                        className="text-3xl ... text-stone-700 ... font-avant_garde_bold"
+                                        className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                         >
                                             Read Next...
                                     </h1>
@@ -1262,7 +1308,10 @@ const Blog_page = (stories) => {
                 </div>                           
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}
+                style={{
+                    background: "#171717"
+                }}>
                 <div className={styles.grid_0_blog_end}>
 
                     <div id={styles.READ_NEXT_HOLDER}
@@ -1383,7 +1432,8 @@ const Blog_page = (stories) => {
                                                                 position: "relative",
                                                                 gridArea: "TEXT"
                                                                 }}>
-                                                                {parse(story.title || "")}                                                                                                                       </div>                               
+                                                                {parse(story.title || "")}                                                                                                                       
+                                                            </div>                               
                                                 </div> 
 
                                             </div>
@@ -1395,6 +1445,17 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+
+                
+
+        </div>
+
+
+
+
+        
+
+            
 
 
 

@@ -2335,6 +2335,7 @@
   }
 
   #PORTFOLIO_IMAGES {
+    display: none;
     height: 650px;
     width: 100%;
     position: relative;
@@ -2526,9 +2527,23 @@
 
   #_H3 {
     margin-bottom: 0px;
-    font-size: 14px;
-    line-height: 19.5px;
+    font-size: 0.83rem;
+    line-height: 1.2rem;
     text-align: left;
+  }
+
+  #_H2_RIGHT {
+    margin-bottom: 0px;
+    font-size: 1.00rem;
+    line-height: 1.30rem;
+    text-align: left; 
+  }
+
+  #_H3_RIGHT {
+    margin-bottom: 0px;
+    font-size: 0.83rem;
+    line-height: 1.2rem;
+    text-align: left; 
   }
 
   #_H4 {
@@ -2650,6 +2665,7 @@
   }
 
   #PORTFOLIO_IMAGES {
+    display: none;
     height: 650px;
     width: 100%;
     position: relative;

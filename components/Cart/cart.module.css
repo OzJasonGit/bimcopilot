@@ -521,58 +521,6 @@
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .grid_0 {
-      position: relative;
-      width: 100%;
-      background-color: rgb(23 23 23);
-      display: grid;
-  
-      padding-left: 20px;
-      padding-right: 20px;
-      grid-row-gap: 20px;
-      grid-template-rows: 0px auto;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "  .  "
-        " MAIN-AREA ";
-      margin-bottom: 0px;
-    }
   
     #TESTIMONIALS {
       grid-area: TESTIMONIAL;

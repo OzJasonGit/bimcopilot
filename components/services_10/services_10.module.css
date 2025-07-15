@@ -39,8 +39,8 @@
 
 #_H2_CENTER {
   margin-bottom: 0px;
-  font-size: 1.15rem;
-  line-height: 1.35rem;
+  font-size: 1.00rem;
+  line-height: 1.30rem;
   text-align: center;
 }
 
@@ -60,8 +60,8 @@
 
 #_H3_CENTER {
   margin-bottom: 0px;
-  font-size: 0.85rem;
-  line-height: 1.3rem;
+  font-size: 0.83rem;
+  line-height: 1.2rem;
   text-align: center;
 }
 
@@ -309,8 +309,10 @@
   grid-area: FAQ;
 }
 
-
-
+#CONCLUSION {
+  padding-left: 30px;
+  padding-right: 30px;
+}
 
 
 
@@ -448,6 +450,11 @@
       ". WHO_WEVE_HELPED ."
       ". . .";
   }
+
+    #CONCLUSION {
+      padding-left: 30px;
+      padding-right: 30px; 
+    }
 }
 
 
@@ -582,6 +589,20 @@
   }
 
 
+  #WE_HELPED_GRID {
+    position: relative;
+    grid-area: PORTFOLIO;
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-template-rows: 100px auto auto auto;
+    grid-template-areas:
+      " ."
+      " TITLE "
+      " IMAGE "
+      " CONCLUSION "; 
+  }
+
+
   #FAQ {
     display: grid;
     width: 100%;
@@ -601,6 +622,19 @@
     grid-column-gap: 30px;
     grid-template-areas: "FAQ";
   }
+
+  #TITLE {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #CONCLUSION {
+    padding-left: 0px;
+    padding-right: 0px; 
+  }
+  
+
+
 }
 
 
@@ -646,6 +680,29 @@
 
 
 @media all and (min-width: 0px) and (max-width: 480px) {
+
+
+  #_H1_RIGHT {
+      margin-bottom: 0px;
+      font-size: 2rem;
+      line-height: 2rem;
+      text-align: left; 
+    }  
+
+  #_H2_RIGHT {
+      margin-bottom: 0px;
+      font-size: 1.00rem;
+      line-height: 1.30rem;
+      text-align: left;
+    }
+  
+  #_H3_RIGHT {
+    margin-bottom: 0px;
+    font-size: 0.83rem;
+    line-height: 1.2rem;
+    text-align: left;
+  }
+
   .grid_0_is_this_for_me {
     position: relative;
     width: 100%;
@@ -666,7 +723,7 @@
     width: 100%;
 
     background-color: transparent;
-    display: grid;
+    display: none;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-template-rows: auto;
@@ -713,6 +770,20 @@
       " WHO_WEVE_HELPED "
       ".";
   }
+
+
+  #WE_HELPED_GRID {
+    position: relative;
+    grid-area: PORTFOLIO;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto auto auto;
+    grid-template-areas:
+      " ."
+      "TITLE "
+      "IMAGE "
+      "CONCLUSION ";
+  }
  
   #FAQ {
     display: grid;
@@ -732,5 +803,16 @@
     grid-template-rows: 1fr;
     grid-column-gap: 30px;
     grid-template-areas: "FAQ";
+  }
+
+
+  #TITLE {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  #CONCLUSION {
+    padding-left: 0px;
+    padding-right: 0px; 
   }
 }
