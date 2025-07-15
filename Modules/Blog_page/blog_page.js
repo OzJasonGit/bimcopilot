@@ -55,7 +55,7 @@ const Blog_page = (stories) => {
     const router = useRouter();
     return (
 
-        <>
+        < >
 
             {storiesToMap?.map((story, index) => {
                 return (
@@ -82,7 +82,8 @@ const Blog_page = (stories) => {
                         width: "100%",
                         height: "100%",
                         zIndex:"3",
-                        left: "-100vw"
+                        left: "-100vw",
+                        background: "#171717"
                     }}>
                         <div
                             style={{
@@ -436,7 +437,10 @@ const Blog_page = (stories) => {
 
 
 
-            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
+            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_subscribe}>
                     <div className={styles.sub_head}
                         style={{
@@ -629,7 +633,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
+            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_blogimageholder}>
 
                     <div className="rounded-2xl ..."
@@ -658,7 +665,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
+            <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_tag}>
                     <div className={styles.sub_head_2}>
                         <div id={styles.SUBSCRIBE} className={"border-emerald-200"}>
@@ -687,9 +697,8 @@ const Blog_page = (stories) => {
 
             <section id={styles.SHADOW_SECTION_TOP} className={styles.center_holder} class={styles.PARAGRAPH_1}
                 style={{
-                 
+                    background: "#171717"
                 }}>
-
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.FIRST_TEXT_HOLDER}
@@ -777,7 +786,10 @@ const Blog_page = (stories) => {
 
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_2}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_2}
+            style={{
+                background: "#171717"
+            }}>
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.TEXT_HOLDER}
@@ -828,7 +840,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_3}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_3}
+            style={{
+                background: "#171717"
+            }}>
                 <div class={styles.grid_0_blog}>
                     <div id={styles.IMAGE_TEXT_HOLDER}
                         style={{
@@ -900,7 +915,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_4}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_4}
+            style={{
+                background: "#171717"
+            }}>
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.TEXT_HOLDER}
@@ -951,7 +969,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_5}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_5}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.TEXT_HOLDER}
@@ -1002,7 +1023,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_6}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_6}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.TEXT_HOLDER}
@@ -1050,7 +1074,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_7}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_7}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.TEXT_HOLDER}
@@ -1098,7 +1125,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_8}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_8}
+            style={{
+                background: "#171717"
+            }}>
             <div className={styles.grid_0_blog}>
 
                 <div id={styles.TEXT_HOLDER}
@@ -1139,7 +1169,10 @@ const Blog_page = (stories) => {
             </div>
             </section>
  
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_9}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_9}
+                style={{
+                    background: "#171717"
+                }}>
                 <div class={styles.grid_0_blog}>
 
                     <div id={styles.TEXT_HOLDER}
@@ -1180,7 +1213,10 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}
+            style={{
+                background: "#171717"
+            }}>
             <div class={styles.grid_0_blog_end}>
 
             <div id={styles.TEXT_HOLDER}
@@ -1262,7 +1298,10 @@ const Blog_page = (stories) => {
                 </div>                           
             </section>
 
-            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}>
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}
+                style={{
+                    background: "#171717"
+                }}>
                 <div className={styles.grid_0_blog_end}>
 
                     <div id={styles.READ_NEXT_HOLDER}
