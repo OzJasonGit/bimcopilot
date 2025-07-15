@@ -345,7 +345,7 @@ const Blog_page = (stories) => {
                                                                                         }}>
                                                                                     <h3
                                                                                         id={styles._H3}
-                                                                                        class="text-left ... text-neutral-700 ... font-avant_garde_medium"
+                                                                                        class="text-left ... text-stone-400 ... font-avant_garde_medium"
                                                                                     >
                                                                                         {" "}
                                                                                         <a class="text-stone-200 ... font-avant_garde_bold">
