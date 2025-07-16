@@ -22,7 +22,17 @@ export const CartProvider = ({ children }) => {
   const addToCart = async (item) => {
     setIsLoading(true);
     try {
-      // Save to backend MongoDB first
+      // Add to context state
+      const existingItem = cartItems.find((i) => i._id === item._id);
+      if (existingItem) {
+        setCartItems(cartItems.map(i => 
+          i._id === item._id ? { ...i, quantity: i.quantity + 1 } : i
+        ));
+      } else {
+        setCartItems([...cartItems, { ...item, quantity: 1 }]);
+      }
+    
+      // Save to backend MongoDB
       const response = await fetch('/api/cart', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -47,7 +57,6 @@ export const CartProvider = ({ children }) => {
         throw new Error('Failed to add item to cart');
       }
 
-      // Only update local state after successful API response
       const updatedCart = await response.json();
       setCartItems(updatedCart);
       toast.success('Item added to cart!');
