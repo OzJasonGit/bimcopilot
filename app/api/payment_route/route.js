@@ -18,6 +18,7 @@ export async function POST(req) {
     const { products, currency, paymentMethod } = await req.json();
     const origin = req.headers.get('origin') || 'http://localhost:3000';
 
+    // Prepare order items
     const lineItems = products.map(product => ({
       price_data: {
         currency,
@@ -32,6 +33,7 @@ export async function POST(req) {
 
     const totalAmount = products.reduce((sum, p) => sum + p.price * (p.quantity || 1), 0);
 
+    // Create order in DB
     const db = await connectToDatabase();
     const order = {
       userId: user.id.toString(),
@@ -43,18 +45,19 @@ export async function POST(req) {
       status: 'pending',
       paymentStatus: 'pending',
       createdAt: new Date(),
-      updatedAt: new Date()
+      updatedAt: new Date(),
     };
     const orderResult = await db.collection(ORDERS_COLLECTION).insertOne(order);
 
-    // 1. Apple Pay via PaymentIntent
-    if (paymentMethod === 'apple_pay') {
+    // --- 1. Wallets (Apple Pay / Google Pay) via PaymentIntent ---
+    if (paymentMethod === 'apple_pay' || paymentMethod === 'google_pay') {
       const paymentIntent = await stripe.paymentIntents.create({
         amount: Math.round(totalAmount * 100),
         currency,
-        payment_method_types: ['card'], // Apple Pay uses 'card' behind the scenes
+        payment_method_types: ['card'], // Apple Pay/Google Pay use 'card' under the hood
         metadata: {
           userId: user.id.toString(),
+          userEmail: user.email,
           orderId: orderResult.insertedId.toString(),
         },
         receipt_email: user.email,
@@ -68,7 +71,7 @@ export async function POST(req) {
       return NextResponse.json({ client_secret: paymentIntent.client_secret });
     }
 
-    // 2. Default: Stripe Checkout
+    // --- 2. Default (Redirect Flow) using Stripe Checkout ---
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: lineItems,
@@ -84,9 +87,9 @@ export async function POST(req) {
         products: JSON.stringify(products.map(p => ({
           title: p.title,
           price: p.price,
-          quantity: p.quantity
-        })))
-      }
+          quantity: p.quantity,
+        }))),
+      },
     });
 
     await db.collection(ORDERS_COLLECTION).updateOne(

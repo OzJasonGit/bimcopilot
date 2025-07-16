@@ -7,7 +7,6 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import handleCheckout from '@/components/Payment/payment';
-import ApplePayButton from '@/components/Payment/ApplePayButton';
 import { useCart } from '@/components/Context/CartContext';
 import { toast } from 'react-toastify';
 import PayPalButton from '@/components/Payment/PayPalButton';
@@ -229,25 +228,6 @@ export default function CheckoutPage() {
                   >
                     {selectedItems.length === 0 ? 'Select Items to Checkout' : 'Pay with Stripe'}
                   </Button>
-                  {/* Stack payment buttons vertically */}
-                  <ApplePayButton
-                    amount={currentTotal}
-                    currency="USD"
-                    products={cartItems.filter((item) => selectedItems.includes(item.id || item._id)).map(item => ({
-                      title: item.title,
-                      price: item.price,
-                      image: item.image,
-                      quantity: item.quantity
-                    }))}
-                    onError={(error) => {
-                      if (error.includes('Authentication required')) {
-                        toast.error('Please login to complete your purchase');
-                        router.push('/signin');
-                      } else {
-                        toast.error(error || 'Apple Pay payment failed');
-                      }
-                    }}
-                  />
                   <PayPalButton
                     amount={currentTotal}
                     products={cartItems.filter((item) => selectedItems.includes(item.id || item._id)).map(item => ({

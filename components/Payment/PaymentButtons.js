@@ -1,7 +1,6 @@
 // components/PaymentButtons.js
 import React, { useState } from 'react';
 import CheckoutButton from './checkoutButton';
-import ApplePayButton from './ApplePayButton';
 
 const PaymentButtons = ({ amount, currency = 'USD', product, products, onError }) => {
   const [error, setError] = useState('');
@@ -28,13 +27,6 @@ const PaymentButtons = ({ amount, currency = 'USD', product, products, onError }
         </div>
       )}
       
-      <ApplePayButton
-        amount={amount}
-        currency={currency}
-        product={product}
-        products={products}
-        onError={handleError}
-      />
       
       <CheckoutButton
         amount={amount}

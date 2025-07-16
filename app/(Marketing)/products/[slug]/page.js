@@ -17,7 +17,6 @@ import Services_1 from '@/components/services_1/services_1';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import handleCheckout from '@/components/Payment/payment';
-import ApplePayButton from '@/components/Payment/ApplePayButton';
 import PayPalButton from '@/components/Payment/PayPalButton';
 import { CartContext } from '@/components/Context/CartContext';
 import { useContext } from 'react';
@@ -285,21 +284,6 @@ const { addToCart } = useContext(CartContext);
                       >
                         Buy with Stripe
                       </Button>
-                    </div>
-                    <div id={styles.APPLE_PAY}>
-                      <ApplePayButton
-                        amount={currentPrice}
-                        currency="USD"
-                        product={{
-                          title: product.title,
-                          price: currentPrice,
-                          image: product.image,
-                          quantity: 1
-                        }}
-                        onError={(error) => {
-                          toast.error(error || 'Apple Pay payment failed');
-                        }}
-                      />
                     </div>
                     <div id={styles.PAYPAL}>
                       <PayPalButton

@@ -6,40 +6,12 @@ import './ApplePayButton.module.css';
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
 
 const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }) => {
-  const [isApplePayAvailable, setIsApplePayAvailable] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    const checkApplePayAvailability = async () => {
-      try {
-        if (!window.PaymentRequest) {
-          setIsApplePayAvailable(false);
-          return;
-        }
-        const stripe = await stripePromise;
-        if (stripe) {
-          const paymentRequest = stripe.paymentRequest({
-            country: 'US',
-            currency: currency.toLowerCase(),
-            total: {
-              label: 'Total',
-              amount: Math.round(amount * 100),
-            },
-            requestPayerName: true,
-            requestPayerEmail: true,
-          });
-          const canMakePaymentResult = await paymentRequest.canMakePayment();
-          setIsApplePayAvailable(!!canMakePaymentResult && canMakePaymentResult.applePay === true);
-        }
-      } catch (error) {
-        setIsApplePayAvailable(false);
-      }
-    };
-    checkApplePayAvailability();
-  }, [amount, currency]);
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleApplePay = async () => {
     setIsLoading(true);
+    setErrorMsg('');
     try {
       const stripe = await stripePromise;
       const paymentRequest = stripe.paymentRequest({
@@ -52,6 +24,12 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
         requestPayerName: true,
         requestPayerEmail: true,
       });
+      const canMakePaymentResult = await paymentRequest.canMakePayment();
+      if (!canMakePaymentResult || canMakePaymentResult.applePay !== true) {
+        setIsLoading(false);
+        setErrorMsg('Apple Pay is not available on this device or browser. Please use Safari on a supported device with Apple Pay set up.');
+        return;
+      }
       paymentRequest.on('paymentmethod', async (event) => {
         try {
           let requestBody;
@@ -97,6 +75,7 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
             throw new Error('Failed to create payment session');
           }
         } catch (error) {
+          setErrorMsg(error.message);
           if (onError) onError(error.message);
         } finally {
           setIsLoading(false);
@@ -106,18 +85,46 @@ const ApplePayButton = ({ amount, currency = 'USD', product, products, onError }
       paymentRequest.show();
     } catch (error) {
       setIsLoading(false);
+      setErrorMsg(error.message);
       if (onError) onError(error.message);
     }
   };
 
-  if (!isApplePayAvailable) {
-    return <button disabled style={{ background: '#ccc', color: '#666', borderRadius: 8, padding: '10px 20px', border: 'none', fontWeight: 600 }}>Apple Pay Not Available</button>;
-  }
-
   return (
-    <button onClick={handleApplePay} disabled={isLoading} style={{ background: 'black', color: 'white', borderRadius: 8, padding: '10px 20px', border: 'none', fontWeight: 600, cursor: 'pointer' }}>
-      {isLoading ? 'Processing...' : 'Pay with Apple Pay'}
-    </button>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <button
+        onClick={handleApplePay}
+        disabled={isLoading}
+        style={{
+          background: 'black',
+          color: 'white',
+          borderRadius: 8,
+          padding: '0 24px',
+          border: 'none',
+          fontWeight: 600,
+          cursor: isLoading ? 'not-allowed' : 'pointer',
+          height: 44,
+          minWidth: 180,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          fontSize: 18,
+          letterSpacing: 1,
+        }}
+      >
+        <svg width="28" height="28" viewBox="0 0 28 28" style={{ marginRight: 8 }}>
+          <g fill="white">
+            <path d="M19.7 7.2c-1.1.1-2.4.8-3.1 1.7-.7.8-1.3 2.1-1.1 3.3 1.2.1 2.5-.7 3.2-1.6.7-.8 1.3-2.1 1-3.4zm-3.2-2.1c.6-.7 1.1-1.7.9-2.7-1 .1-2.1.7-2.7 1.5-.6.7-1.2 1.7-.9 2.7 1.1.1 2.1-.6 2.7-1.5zm7.2 6.7c-1.7-1.6-4.2-1.3-5.3-1.3-1.2 0-2.6.1-4.1.7-1.7.6-3.2 1.7-4.1 3.2-1.5 2.3-1.2 5.7.6 8.1.8 1.1 1.8 2.3 3.1 2.3 1.2 0 1.6-.7 3.1-.7 1.5 0 1.8.7 3.1.7 1.3 0 2.2-1.1 3-2.2.6-.9.8-1.3 1.2-2.3-3.2-1.2-3.7-5.8.7-6.8-.2-.5-.5-1-.8-1.2zm-2.2-4.2c.5-.6.8-1.4.7-2.2-.7.1-1.5.5-2 .9-.5.5-.9 1.2-.7 2 .7.1 1.5-.4 2-.7z"/>
+          </g>
+        </svg>
+        {isLoading ? 'Processing...' : 'Pay with Apple Pay'}
+      </button>
+      {errorMsg && (
+        <div style={{ color: '#e53e3e', background: '#fff0f0', padding: '10px 16px', borderRadius: 6, marginTop: 12, fontSize: 15, maxWidth: 320, textAlign: 'center' }}>
+          {errorMsg}
+        </div>
+      )}
+    </div>
   );
 };
 

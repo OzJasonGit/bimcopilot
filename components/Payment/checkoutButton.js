@@ -22,13 +22,17 @@ const CheckoutButton = ({ amount, currency, product }) => {
     <button
       onClick={handleClick}
       style={{
-        padding: '10px 20px',
-        fontSize: '16px',
-        color: 'white',
+        width: '100%',
+        height: '100%',
+        padding: '15px 30px',
         backgroundColor: '#0070f3',
+        color: 'white',
         border: 'none',
-        borderRadius: '5px',
+        borderRadius: '8px',
+        fontSize: '1.1rem',
+        fontWeight: 600,
         cursor: 'pointer',
+        transition: 'background-color 0.2s ease',
       }}
     >
       Pay Now
