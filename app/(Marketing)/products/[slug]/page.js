@@ -282,7 +282,7 @@ const { addToCart } = useContext(CartContext);
                           });
                         }}
                       >
-                        Buy with Stripe
+                        Checkout
                       </Button>
                     </div>
                     <div id={styles.PAYPAL}>

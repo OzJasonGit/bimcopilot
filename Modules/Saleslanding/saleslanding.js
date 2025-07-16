@@ -252,7 +252,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     <Button variant="secondary" class="border border-solid ... rounded-md ... border-stone-800 ..." style={{
                                         position: "absolute",
                                         width: "100%",
-                                        height: "100%",}}>Buy with Stripe 
+                                        height: "60px",}}>Checkout
                                     </Button>     
                                 </Link>                                                           
                             </div>
