@@ -35,7 +35,7 @@ const CheckoutButton = ({ amount, currency, product }) => {
         transition: 'background-color 0.2s ease',
       }}
     >
-      Pay Now
+      Checkout
     </button>
   );
 };
