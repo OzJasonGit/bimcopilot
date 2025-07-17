@@ -269,7 +269,7 @@ const { addToCart } = useContext(CartContext);
                       <Button
                         variant="secondary"
                         className="border border-solid rounded-md border-stone-800"
-                        style={{ width: '100%', height: '100%' }}
+                        style={{ width: '100%', height: '56px' }}
                         onClick={() => {
                           handleCheckout({
                             products: [{

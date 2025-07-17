@@ -224,7 +224,7 @@ export default function CheckoutPage() {
                   <Button
                     onClick={handleStripeCheckout}
                     disabled={selectedItems.length === 0}
-                    className="w-full bg-green-600 hover:bg-green-700 text-white disabled:bg-gray-600"
+                    className="w-full bg-green-600 h-14 hover:bg-green-700 text-white disabled:bg-gray-600"
                   >
                     {selectedItems.length === 0 ? 'Select Items to Checkout' : 'Checkout'}
                   </Button>
