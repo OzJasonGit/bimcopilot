@@ -163,6 +163,23 @@ const { addToCart } = useContext(CartContext);
                   </span>{' '}
                   {parse(product.product_id)}
                 </h1>
+
+
+
+
+                <h2 id={styles._H2} 
+                    className="text-stone-700 font-avant_garde_bold" style={{ marginBottom: '0px' }}>
+                    <span id={styles._H3} 
+                          className="text-stone-700 font-avant_garde_medium">Product_id
+                    </span>
+                    ${currentPrice?.toFixed(2)}{' '}                  
+                </h2>
+              
+
+
+
+
+                
               </div>
 
               <div id={styles.SALES_IMAGE_HOLDER}>
