@@ -214,7 +214,8 @@ const { addToCart } = useContext(CartContext);
                 </div>
 
                 <div id={styles.SLUG} style={{ position: 'relative', gridArea: 'SLUG' }}>
-                  <h3 className="text-md text-stone-700 font-geist_regular" style={{ marginBottom: '0px' }}>
+                  <h3 id={styles._H3} 
+                      className=" text-stone-700 font-avant_garde_medium" style={{ marginBottom: '0px' }}>
                     {parse(product.subtitle)}
                   </h3>
                 </div>
