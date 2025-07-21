@@ -360,9 +360,27 @@ const { addToCart } = useContext(CartContext);
                     </h2>
                   </div>
                   <div id={styles.BOUGHT_IMAGE_HOLDER}>
+
+                    <div>
+
+                    </div>
+
+
+
+
+
+
+
                     {relatedProducts.map((relatedProduct, index) => (
                       <Link key={relatedProduct._id} href={`/products/${relatedProduct.slug}`}>
-                        <div className="rounded-lg" id={styles[`SALES_IMAGE_${String.fromCharCode(65 + index)}`]}>
+                        <div className="rounded-lg" id={styles[`SALES_IMAGE_${String.fromCharCode(65 + index)}`]}
+                             style={{
+                                display:'grid',
+                                gridTemplateRows:"auto auto auto",
+                                gridTemplateColumns:"1fr",
+                                gridTemplateAreas:"IMAGE TITLE PRICE",                             
+                                height: 'auto',
+                             }}>
                           <Image
                             alt={relatedProduct.title || 'Related product'}
                             width={500}
@@ -373,6 +391,7 @@ const { addToCart } = useContext(CartContext);
                               width: '100%',
                               height: '100%',
                               objectFit: 'cover',
+                              gridArea: 'IMAGE',
                             }}
                             onError={() => console.log(`Related image failed to load: ${relatedProduct.image}`)}
                           />
