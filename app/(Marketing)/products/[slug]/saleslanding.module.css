@@ -1292,9 +1292,9 @@
     grid-template-rows: 0 auto 0;
     grid-template-columns:  1fr ;
     grid-template-areas:
-      "."
-      " SUB "
-      ".";
+      ". . ."
+      " . SUB ."
+      ". . .";
   }
 
   .grid_0_main {
