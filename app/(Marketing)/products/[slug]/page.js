@@ -297,7 +297,7 @@ const { addToCart } = useContext(CartContext);
 
                         <div id={styles.PAYPAL}>
                           <br/>
-                          <br/>
+                         
 
                           <PayPalButton
                             amount={currentPrice}
