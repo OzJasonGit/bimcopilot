@@ -378,7 +378,8 @@ const { addToCart } = useContext(CartContext);
                                 display:'grid',
                                 gridTemplateRows:"auto auto auto",
                                 gridTemplateColumns:"1fr",
-                                gridTemplateAreas:"IMAGE TITLE PRICE",                             
+                                gridTemplateAreas:"IMAGE TITLE PRICE",  
+                                gridRowGap:'20px',                           
                                 height: 'auto',
                              }}>
                           <Image
