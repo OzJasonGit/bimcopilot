@@ -389,7 +389,7 @@ const { addToCart } = useContext(CartContext);
               {relatedProducts.length > 0 && (
                 <div id={styles.BOUGHT_TOGETHER_BLOCK}>
                   <div id={styles.BOUGHT_TITLE_HOLDER}>
-                    <h2 id={styles._H2} className="text-4xl text-stone-700 font-avant_garde_bold">
+                    <h2 id={styles._H2} className=" text-stone-700 font-avant_garde_bold">
                       Frequently Bought Together
                     </h2>
                   </div>
@@ -419,7 +419,7 @@ const { addToCart } = useContext(CartContext);
 
               <div id={styles.PRODUCT_DESCRIPTION}>
                 <div id={styles.P_TITLE}>
-                  <h2 id={styles._H2} className="text-4xl text-stone-700 font-avant_garde_bold">
+                  <h2 id={styles._H2} className=" text-stone-700 font-avant_garde_bold">
                     Product Description
                   </h2>
                 </div>
@@ -427,16 +427,11 @@ const { addToCart } = useContext(CartContext);
                   <h3 id={styles._H3} className="text-stone-700 font-avant_garde_bold">
                     {parse(product.subtitle)}
                     <br />
-                    <span className="text-stone-700 font-avant_garde_bold">
-                      Automated systems for Architects, Designers and Manufacturers.
-                    </span>{' '}
-                    Gain valuable insights, streamline your business, be more{' '}
-                    <span className="text-stone-700 font-avant_garde_bold">profitable</span>, be more{' '}
-                    <span className="text-stone-700 font-avant_garde_bold">sustainable</span>
+                    
                   </h3>
                 </div>
                 <div id={styles.P_DESCRIPTION}>
-                  <p id={styles._H3} className="text-base text-stone-700 font-geist_regular">
+                  <p id={styles._H3} className="text-base text-stone-700 font-avant_garde_medium">
                     {parse(product.description)}
                   </p>
                 </div>
