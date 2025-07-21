@@ -234,7 +234,7 @@ const { addToCart } = useContext(CartContext);
                   <Tabs
                     value={licenseType}
                     onValueChange={handleLicenseChange}
-                    className="w-[400px]"
+                    id={styles.LICENSE_TYPE}
                   >
                     <TabsList>
                       <TabsTrigger value="educational">Educational</TabsTrigger>
@@ -249,6 +249,29 @@ const { addToCart } = useContext(CartContext);
 
                 <div id={styles.C4}>
                   <div id={styles.CHECKOUT_GRID}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <div id={styles.ADD_TO_CART}>
                       <Button
                         onClick={() => {
@@ -264,7 +287,8 @@ const { addToCart } = useContext(CartContext);
                       >
                         Add To Cart
                       </Button>
-                    </div>
+                    </div>                 
+
                     <div id={styles.STRIPE}>
                       <Button
                         variant="secondary"
@@ -285,6 +309,7 @@ const { addToCart } = useContext(CartContext);
                         Checkout
                       </Button>
                     </div>
+
                     <div id={styles.PAYPAL}>
                       <PayPalButton
                         amount={currentPrice}
@@ -297,6 +322,31 @@ const { addToCart } = useContext(CartContext);
                         currency="USD"
                       />
                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <div id={styles.MORE_OPTIONS}>
                       <a></a>
                     </div>

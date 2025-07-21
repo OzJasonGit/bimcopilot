@@ -283,6 +283,10 @@
   grid-area: C3;
 }
 
+#LICENSE_TYPE {
+  width: 400px;
+}
+
 #C4 {
   grid-area: C4;
 }
@@ -700,6 +704,11 @@
   margin-bottom: -2.5px;
 }
 
+
+#LICENSE_TYPE {
+  width: 400px;
+}
+
 /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -976,6 +985,11 @@
     height: 500px;
     max-height: 100%;
   }
+
+
+  #LICENSE_TYPE {
+    width: 100%; 
+  }
 }
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
@@ -1164,7 +1178,7 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 600px 170px;
+    grid-template-rows: 300px 170px;
     grid-template-areas:
       "IMAGE_1"
       "IMAGE_2";
@@ -1304,6 +1318,10 @@
     width: 100%;
     height: 500px;
     max-height: 100%;
+  }
+
+  #LICENSE_TYPE {
+    width: 100%;
   }
 }
 
