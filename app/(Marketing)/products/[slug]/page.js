@@ -316,7 +316,7 @@ const { addToCart } = useContext(CartContext);
 
                 <div id={styles.C5}>
                   <h3 id={styles._H3} 
-                      className=" text-stone-700 font-avant_garde_bold" style={{ marginBottom: '0px' }}>
+                      className=" text-stone-700 font-avant_garde_medium" style={{ marginBottom: '0px' }}>
                       For Educational Use (Reduced price) please send us an email with your student card and info to{' '}
                     <a href="mailto:info@bimcopilot.com">info@bimcopilot.com</a>
                   </h3>
