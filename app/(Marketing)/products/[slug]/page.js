@@ -242,120 +242,76 @@ const { addToCart } = useContext(CartContext);
                     </TabsList>
                   </Tabs>
                   <br />
-                  <h3 className="text-md text-stone-700 font-geist_regular" style={{ marginBottom: '0px' }}>
-                    Are you a student? Select Educational Use.
+                  <h3 id={styles._H3} 
+                      className=" text-stone-700 font-avant_garde_medium" style={{ marginBottom: '0px' }}>
+                      Are you a student? Select Educational Use.
                   </h3>
                 </div>
 
                 <div id={styles.C4}>
                   <div id={styles.CHECKOUT_GRID}>
 
+                        <div id={styles.ADD_TO_CART}>
+                          <Button
+                            onClick={() => {
+                              addToCart({
+                                _id: product._id,
+                                title: product.title,
+                                price: licenseType === 'commercial' ? product.commercial_price : product.student_price,
+                                image: product.image,
+                              });
+                              toast.success(' Product added to cart!');
+                            }}
+                            style={{ width: '100%', height: '100%' }}
+                          >
+                            Add To Cart
+                          </Button>
+                        </div>                 
 
+                        <div id={styles.STRIPE}>
+                          <Button
+                            variant="secondary"
+                            className="border border-solid rounded-md border-stone-800"
+                            style={{ width: '100%', height: '56px' }}
+                            onClick={() => {
+                              handleCheckout({
+                                products: [{
+                                  title: product.title,
+                                  price: currentPrice,
+                                  image: product.image,
+                                  quantity: 1
+                                }],
+                                currency: 'USD',
+                              });
+                            }}
+                          >
+                            Checkout
+                          </Button>
+                        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <div id={styles.ADD_TO_CART}>
-                      <Button
-                        onClick={() => {
-                          addToCart({
-                            _id: product._id,
-                            title: product.title,
-                            price: licenseType === 'commercial' ? product.commercial_price : product.student_price,
-                            image: product.image,
-                          });
-                          toast.success(' Product added to cart!');
-                        }}
-                        style={{ width: '100%', height: '100%' }}
-                      >
-                        Add To Cart
-                      </Button>
-                    </div>                 
-
-                    <div id={styles.STRIPE}>
-                      <Button
-                        variant="secondary"
-                        className="border border-solid rounded-md border-stone-800"
-                        style={{ width: '100%', height: '56px' }}
-                        onClick={() => {
-                          handleCheckout({
-                            products: [{
+                        <div id={styles.PAYPAL}>
+                          <PayPalButton
+                            amount={currentPrice}
+                            products={[{
                               title: product.title,
                               price: currentPrice,
                               image: product.image,
                               quantity: 1
-                            }],
-                            currency: 'USD',
-                          });
-                        }}
-                      >
-                        Checkout
-                      </Button>
-                    </div>
+                            }]}
+                            currency="USD"
+                          />
+                        </div>
 
-                    <div id={styles.PAYPAL}>
-                      <PayPalButton
-                        amount={currentPrice}
-                        products={[{
-                          title: product.title,
-                          price: currentPrice,
-                          image: product.image,
-                          quantity: 1
-                        }]}
-                        currency="USD"
-                      />
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <div id={styles.MORE_OPTIONS}>
+                        <div id={styles.MORE_OPTIONS}>
                       <a></a>
                     </div>
                   </div>
                 </div>
 
                 <div id={styles.C5}>
-                  <h3 className="text-md text-stone-700 font-geist_regular" style={{ marginBottom: '0px' }}>
-                    For Educational Use (Reduced price) please send us an email with your student card and info to{' '}
+                  <h3 id={styles._H3} 
+                      className=" text-stone-700 font-avant_garde_medium" style={{ marginBottom: '0px' }}>
+                      For Educational Use (Reduced price) please send us an email with your student card and info to{' '}
                     <a href="mailto:info@bimcopilot.com">info@bimcopilot.com</a>
                   </h3>
                 </div>
