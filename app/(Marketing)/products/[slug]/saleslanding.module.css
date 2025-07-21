@@ -162,7 +162,6 @@
   position: relative;
   width: 100%;
   height: auto;
-  max-height: 0;
   display: grid;
   grid-area: CHECKOUT;
   grid-row-gap: 20px;
