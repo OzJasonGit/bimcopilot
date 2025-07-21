@@ -220,15 +220,18 @@ const { addToCart } = useContext(CartContext);
                 </div>
 
                 <div style={{ position: 'relative', gridArea: 'C2' }}>
-                  <h3 className="text-md text-stone-700 font-geist_semibold" style={{ marginBottom: '0px' }}>
+                  <h3 id={styles._H3} 
+                      className="text-stone-700 font-avant_garde_bold" style={{ marginBottom: '0px' }}>
                     ${currentPrice?.toFixed(2)}{' '}
-                    <span className="text-md text-stone-700 font-geist_regular">Tax included.</span>
+                    <span id={styles._H3} 
+                          className="text-stone-700 font-avant_garde_medium">Tax included.</span>
                   </h3>
                 </div>
 
                 <div id={styles.C3}>
-                  <h3 className="text-md text-stone-700 font-geist_semibold" style={{ marginBottom: '0px' }}>
-                    License Type
+                  <h3 id={styles._H3} 
+                      className=" text-stone-700 font-avant_garde_bold" style={{ marginBottom: '0px' }}>
+                        License Type
                   </h3>
                   <br />
                   <Tabs
@@ -336,7 +339,7 @@ const { addToCart } = useContext(CartContext);
                 </div>
 
                 <div id={styles.C7}>
-                  <Collapsed_Sales />
+                  {/*<Collapsed_Sales />*/}
                 </div>
               </div>
             </div>
