@@ -1112,43 +1112,30 @@
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
   /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
-  .grid_0_main {
+ .center_holder {
     width: 100%;
-    max-width: 1640px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 40px;
-    grid-template-rows: 0px auto 0px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ". . ."
-      "BANNER-1 MAIN-AREA BANNER-2"
-      ". . .";
-  }
-
-  #BOUGHT_IMAGE_HOLDER {
-    display: none;
-  }
-
-  #BOUGHT_IMAGE_HOLDER_MOBILE {
     display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: aliceblue;
+    margin: 0;
+  }
+
+  .grid_0 {
     position: relative;
     width: 100%;
-    height: 100%;
-    grid-area: IMAGES;
-    overflow: hidden;
-  }
-
-  #BOUGHT_IMAGE_HOLDER_MOBILE {
+    background-color: rgb(23 23 23);
     display: grid;
-    position: absolute;
-    width: auto;
-    height: 320px;
-    grid-column-gap: 30px;
-    grid-template-columns: 280px 280px 280px;
-    overflow-x: scroll;
-    grid-template-areas: "SALES_IMAGE_A SALES_IMAGE_B SALES_IMAGE_C";
+
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-row-gap: 40px;
+    grid-template-rows: 0px auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "  .  "
+      " MAIN-AREA ";
+    margin-bottom: 0px;
   }
 
   #SALES_GRID_HOLDER {
@@ -1177,7 +1164,7 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 400px 170px;
+    grid-template-rows: 600px 170px;
     grid-template-areas:
       "IMAGE_1"
       "IMAGE_2";
@@ -1200,188 +1187,78 @@
       " .";
   }
 
-  .grid_0_blog {
-    width: 100%;
-    max-width: 1640px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 40px;
-    grid-template-rows: 0px auto 0px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ". . ."
-      "BANNER-1 MAIN-AREA BANNER-2"
-      ". . .";
-  }
-
-  .grid_0_scroll {
-    position: relative;
-    width: 100%;
-    max-width: 1520px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-rows: 0 auto 0;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ".  .  ."
-      ". SUB ."
-      ".  .  .";
-  }
-
-  .grid_0_client_showcase {
-    position: relative;
-    width: 100%;
-    max-width: 1520px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ". .         ."
-      ". SUB       ."
-      ". PORTFOLIO .";
-  }
-
-  .grid_0_how_we_work {
-    position: relative;
-    width: 100%;
-    max-width: 1520px;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ". .         ."
-      ". SUB       ."
-      ". PORTFOLIO .";
-  }
-
-  #COPY_TAG_HOLDER {
-    grid-area: TITLE;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "TITLE";
-  }
-
-  #SUBCOPY_TAG_HOLDER {
-    grid-area: SUBTITLE;
-    display: grid;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "FIRST "
-      "SECOND";
-  }
-
-  #PORTFOLIO_IMAGES {
-    height: 600px;
-    width: 100%;
-    position: relative;
-    grid-area: PORTFOLIO;
-  }
-
-  /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_1/////////////////////////////////////////////////////////////////////////////////////////////*/
-  .grid_0_subscribe {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 20px;
-    grid-template-rows: 170px auto 0px;
-    grid-template-columns: 20px 1fr 20px;
-    grid-template-areas:
-      ". . ."
-      ". SUB ."
-      ". . .";
-  }
-
-  #SUBSCRIBE {
-    position: relative;
-    grid-area: BC;
-    width: 100%;
-    display: grid;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "ICON "
-      "TAG_MAIN"
-      "SUB_MAIN";
-  }
-
-  #IMAGE_POST_NUMBER {
-    grid-area: CONTENT;
-    background: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 40px 1fr 80px 10px;
-    grid-template-rows: 60px 80px auto;
-    grid-template-areas:
-      ". . . ."
-      ". . NUMBER  ."
-      ". . . .";
-    left: 0px;
-    z-index: 100000;
-  }
-
-  .head {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-column-gap: 40px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 350px 280px 600px;
-    grid-template-areas:
-      "CONTENT"
-      "TITLE"
-      "NEWS";
-    padding-bottom: 0px;
-  }
-
-  .sub_head {
-    position: relative;
-    grid-area: SUB;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-column-gap: 40px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "BC";
-    left: 0;
-  }
-
-  #BC {
+  #BOUGHT_IMAGE_HOLDER {
     display: none;
   }
 
-  /*SECTION_1/////////////////////////////////////////////////////////////////////////////////////////////*/
+  #BOUGHT_IMAGE_HOLDER_MOBILE {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: IMAGE;
+    overflow: hidden;
+  }
 
-  /*SECTION_2////BLOG/////////////////////////////////////////////////////////////////////////////////////*/
-  .grid_0 {
+  #BOUGHT_TOGETHER_GRID_MOBILE {
+    width: 100%;
+    height: auto;
+    grid-area: IMAGE;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "TITLE"
+      "IMAGES"
+      "DESCRIPTION";
+  }
+
+  #BOUGHT_IMAGE_MOBILE {
+    display: grid;
+    position: absolute;
+    width: auto;
+    height: 320px;
+    grid-area: IMAGES;
+    grid-column-gap: 30px;
+    grid-template-columns: 280px 280px 280px;
+    overflow-x: scroll;
+    grid-template-areas: "SALES_IMAGE_A SALES_IMAGE_B SALES_IMAGE_C";
+  }
+
+  #SALES_IMAGE_A {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: SALES_IMAGE_A;
+    overflow: hidden;
+  }
+
+  #SALES_IMAGE_B {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: SALES_IMAGE_B;
+    overflow: hidden;
+  }
+
+  #SALES_IMAGE_C {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    grid-area: SALES_IMAGE_C;
+    overflow: hidden;
+  }
+
+  .grid_0_blog {
     position: relative;
     width: 100%;
     background-color: rgb(23 23 23);
     display: grid;
 
-    padding-left: 20px;
-    padding-right: 20px;
-    grid-row-gap: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-row-gap: 40px;
     grid-template-rows: 0px auto;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -1390,451 +1267,43 @@
     margin-bottom: 0px;
   }
 
-  #LINK_HOLDER {
+  .grid_0_scroll {
     position: relative;
-    grid-area: CONTENT;
-    background-color: #efefef;
     width: 100%;
-    left: 0px;
-  }
-
-  #PACKAGES_IMAGES {
-    height: 400px;
-    width: 100%;
-    position: relative;
-    grid-area: PACKAGES;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-      "PACKAGE_1"
-      "PACKAGE_2"
-      "PACKAGE_3";
-  }
-
-  #BLOG_SMALL_1 {
-    grid-area: 1;
-    width: 100%;
-    height: 100%;
-    max-height: 0;
-    display: grid;
-    grid-row-gap: 2.5px;
-    grid-column-gap: 16.5px;
-    grid-template-columns: 30px 1fR 90px;
-    grid-template-rows: 30px 30px 5px auto auto 5px auto 5px auto;
-    grid-template-areas:
-      "NUMBER TITLE IMAGE"
-      ". TITLE IMAGE"
-      ". TITLE ."
-      ". TITLE AUTHOR"
-      ". TITLE AUTHOR"
-      ". . ."
-      ". TIMESTAMP TIMESTAMP"
-      ". . ."
-      ". . BORDER";
-  }
-
-  #IMAGE_POST_TITLE {
-    display: grid;
-    position: relative;
-    grid-area: TITLE;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-      "TITLE TITLE"
-      "SUBTITLE SUBTITLE"
-      "AUTHOR ."
-      "TIMESTAMP .";
-    grid-row-gap: 10px;
-    grid-column-gap: 5px;
-    width: 100%;
-    top: 30px;
-    left: 0px;
-    max-height: 0;
-  }
-
-  #ARTICLES {
-    grid-area: ARTICLES;
-    display: grid;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    width: 100%;
-    grid-template-areas:
-      "1"
-      "2"
-      "3";
-  }
-
-  #NEWS {
-    grid-area: NEWS;
-    display: grid;
-    position: relative;
-    grid-row-gap: 30px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 30px auto;
-    background-color: rgb(23 23 23);
-    width: 100%;
-    height: 100%;
-    grid-template-areas:
-      "TOP_STORIES"
-      "ARTICLES";
-    top: 0px;
-  }
-
-  /*SECTION_2////BLOG/////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_3////TIKTOK///////////////////////////////////////////////////////////////////////////////////*/
-  #SHADOW_SECTION_TIKTOK {
-    display: none;
-  }
-
-  /*SECTION_3////TIKTOK///////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_4////TITLE////////////////////////////////////////////////////////////////////////////////////*/
-  #MAIN_TEXT_HOLDER {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0px auto 0px;
-    grid-template-areas:
-      "."
-      "TEXT"
-      ".";
-  }
-
-  #SUB_TEXT_HOLDER {
-    display: none;
-  }
-
-  #SUB_TEXT_HOLDER_MOBILE {
-    display: flex;
-    position: relative;
-    grid-area: TEXT;
-    top: 0px;
-  }
-
-  /*SECTION_4////TITLE////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION////PRODUCTS////////////////////////////////////////////////////////////////////////////////////*/
-  #PRODUCTS_HOLDER {
-    display: none;
-  }
-
-  #PRODUCTS_HOLDER_MOBILE {
-    display: block;
-    grid-area: MAIN-AREA;
-    width: 100%;
-    height: 470px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scrollbar-color: rgb(64 64 64) rgb(228 228 231);
-    padding-bottom: 0px;
-  }
-
-  #PRODUCTS_HORIZONTAL_MOBILE {
-    display: grid;
-    position: relative;
-    grid-column-gap: 40px;
-    grid-template-columns: 280px 280px 280px 1fr;
-    grid-template-rows: 100%;
-    grid-template-areas: "1 2 3 .";
-    height: 100%;
-    width: 800px;
-  }
-
-  #PRODUCT_CARD {
-    display: grid;
-    position: relative;
-    height: auto;
-    grid-template-columns: 1fr;
-    grid-row-gap: 30px;
-    grid-template-rows: 300px auto;
-    grid-template-areas:
-      "IMAGE"
-      "TEXT ";
-  }
-
-  /*SECTION////PRODUCTS///////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_5////ASTRONAUT_1//////////////////////////////////////////////////////////////////////////////*/
-  .grid_0_image_left {
-    width: 100%;
-    max-width: 100%;
+    max-width: 1520px;
     background-color: transparent;
     display: grid;
-    grid-column-gap: 20px;
+    grid-column-gap: 40px;
     grid-row-gap: 20px;
-    grid-template-rows: auto auto 20px;
+    grid-template-rows: 0 auto 0;
     grid-template-columns: 0px 1fr 0px;
     grid-template-areas:
       ". . ."
-      ". IMAGE ."
-      ". IMAGE .";
-  }
-
-  #ASTRONAUT_IMAGE_1 {
-    grid-area: IMAGE;
-    width: 100%;
-    height: 350px;
-  }
-
-  /*SECTION_5////ASTRONAUT_1//////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_6////WORLD??//////////////////////////////////////////////////////////////////////////////////*/
-  #BACKGROUND_GRID {
-    display: none;
-  }
-
-  #PLANET_HOLDER_GRID {
-    display: none;
-  }
-
-  /*SECTION_6////WORLD??//////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_7////ABOUT////////////////////////////////////////////////////////////////////////////////////*/
-  .main {
-    position: relative;
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    top: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-row-gap: 40px;
-    grid-template-areas:
-      "ABOUT"
-      "INTRO"
-      "WHO_WE_WORK_WITH"
-      "TESTIMONIAL";
-  }
-
-  #ABOUT_CONTAINER {
-    position: sticky;
-    display: grid;
-    width: 100%;
-    height: 450px;
-    top: 160px;
-    grid-template-columns: 30px 1fr 30px;
-    grid-template-rows: 30px auto 30px;
-    grid-template-areas:
-      ". . ."
-      ". MAIN ."
+      ". SUB ."
       ". . .";
   }
 
-  #ABOUT_HOLDER {
+  .grid_0_main {
     position: relative;
-    grid-area: ABOUT;
+    width: 100%;
     background-color: transparent;
-    width: 100%;
-    height: auto;
-    padding-bottom: 0px;
-    margin-top: 0px;
-  }
+    display: grid;
 
-  #ABOUT {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+    grid-row-gap: 40px;
+    grid-template-rows: 0px auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "  .  "
+      " MAIN-AREA ";
   }
 
   #IMAGE {
-    overflow: hidden;
-    position: relative;
     grid-area: IMAGE;
     width: 100%;
-    height: 350px;
-    box-shadow: -125px -160px 200px rgba(236, 236, 238, 0.228);
-  }
-
-  /*SECTION_7////ABOUT////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
-  .grid_0_main_process {
-    width: 100%;
-    max-width: 1640px;
-    background-color: rgb(241 245 249);
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 40px;
-    grid-template-rows: 0px auto 20px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ". . ."
-      "BANNER-1 MAIN-AREA BANNER-2"
-      ". . .";
-  }
-
-  .process_section {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-column-gap: 40px;
-    grid-row-gap: 10px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto 0px;
-    grid-template-areas:
-      "TITLE"
-      "STEPS"
-      "PROCESS"
-      ".";
-  }
-
-  #PROCESS_TITLE {
-    grid-area: TITLE;
-  }
-
-  #PROCESS_STEPS {
-    grid-area: STEPS;
-    width: 100%;
-    height: 0px;
-  }
-
-  #PROCESS {
-    grid-area: PROCESS;
-    width: 100%;
-    height: 460px;
-  }
-
-  #PROCESS_HORIZONTAL {
-    display: grid;
-    position: relative;
-    grid-column-gap: 20px;
-    grid-template-columns: 270px 270px 270px 270px 270px 270px 1fr;
-    grid-template-rows: 100%;
-    grid-template-areas: "1 2 3 4 5 6 .";
-    height: 100%;
-    width: 1500px;
-  }
-
-  /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_9////VIDEO////////////////////////////////////////////////////////////////////////////////////*/
-  .video_section {
-    position: relative;
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    height: auto;
-    top: 0px;
-    grid-column-gap: 40px;
-    grid-row-gap: 40px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 450px 500px;
-    grid-template-areas:
-      "VIDEO"
-      "GRAPHIC"
-      "SERVICES";
-    margin-top: 0px;
-  }
-
-  #VIDEO_LATEST_HOLDER {
-    position: relative;
-    grid-area: VIDEO;
-    display: grid;
-    width: 100%;
-    height: auto;
-    grid-row-gap: 40px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 350px auto;
-    grid-template-areas:
-      "VIDEO"
-      "TITLE";
-  }
-
-  #VIDEO_LATEST {
-    grid-area: VIDEO;
-    width: 100%;
-    height: 100%;
-  }
-
-  #VIDEO_HOLDER {
-    grid-area: SUB;
-    position: relative;
-    width: 100%;
-    display: grid;
-    grid-row-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:
-      "TITLE"
-      "VIDEO"
-      "SUBTITLE";
-  }
-
-  /*SECTION_9////VIDEO////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_10////TAG/////////////////////////////////////////////////////////////////////////////////////*/
-  #SHADOW_SECTION_TAG {
-    display: none;
-  }
-
-  #SHADOW_SECTION_TAG {
-    position: relative;
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: rgb(23, 23, 23);
-    z-index: -30000;
-    top: 0px;
-  }
-
-  #TAG_HOLDER {
-    grid-area: MAIN-AREA;
-    display: grid;
-    width: 100%;
-    grid-column-gap: 40px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "TAG";
-  }
-
-  #SERVICES_HOLDER {
-    position: relative;
-    grid-area: SERVICES;
-    width: 100%;
-    top: 0px;
-  }
-
-  /*SECTION_10////TAG/////////////////////////////////////////////////////////////////////////////////////*/
-
-  /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
-  #SHADOW_SECTION_ASTRONAUT {
-    display: none;
-  }
-
-  #ASTRONAUT_IMAGE_2 {
-    position: sticky;
-    grid-area: IMAGE_2;
-    width: 100%;
-    height: 600px;
-    margin-top: -680px;
-  }
-
-  .grid_0_image_right {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    background-color: transparent;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-    grid-template-rows: 20px auto 20px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas:
-      ". . ."
-      ". IMAGE_2 ."
-      ". . .";
-    margin-top: 0px;
+    height: 500px;
+    max-height: 100%;
   }
 }
 
