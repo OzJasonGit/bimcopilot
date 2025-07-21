@@ -310,7 +310,7 @@ const { addToCart } = useContext(CartContext);
 
                 <div id={styles.C5}>
                   <h3 id={styles._H3} 
-                      className=" text-stone-700 font-avant_garde_medium" style={{ marginBottom: '0px' }}>
+                      className=" text-stone-700 font-avant_garde_bold" style={{ marginBottom: '0px' }}>
                       For Educational Use (Reduced price) please send us an email with your student card and info to{' '}
                     <a href="mailto:info@bimcopilot.com">info@bimcopilot.com</a>
                   </h3>
@@ -318,20 +318,20 @@ const { addToCart } = useContext(CartContext);
 
                 <div id={styles.C6}>
                   <h3 id={styles._H3} 
-                      className="  text-stone-700 font-avant_garde_medium">
+                      className="  text-stone-700 font-avant_garde_bold">
                     Digital Download
                   </h3>
                   <h3 id={styles._H3} 
-                      className=" text-stone-700 font-avant_garde_medium">
-                    Revit Version 2020
+                      className=" text-stone-700 font-avant_garde_bold">
+                    Revit Version: <a className="text-stone-700 font-avant_garde_medium">2020</a>
                   </h3>
                   <h3 id={styles._H3} 
-                      className=" text-stone-700 font-avant_garde_medium">
-                    Created By: Bimcopilot.com
+                      className=" text-stone-700 font-avant_garde_bold">
+                    Created By: <a className="text-stone-700 font-avant_garde_medium">Bimcopilot.com</a>
                   </h3>
                   <h3 id={styles._H3} 
-                      className=" text-stone-700 font-avant_garde_medium">
-                    Pack Category: {product.category}
+                      className=" text-stone-700 font-avant_garde_bold">
+                    Pack Category: <a className="text-stone-700 font-avant_garde_medium">{product.category}</a> 
                   </h3>
                 </div>
 
