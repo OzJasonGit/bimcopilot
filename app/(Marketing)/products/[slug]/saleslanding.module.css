@@ -336,6 +336,8 @@
 
 #LICENSE_TYPE {
   width: 400px;
+  position: relative;
+  left: -5.5px;
 }
 
 #C4 {
@@ -758,6 +760,8 @@
 
 #LICENSE_TYPE {
   width: 400px;
+  position: relative;
+  left: -5.5px;
 }
 
 /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -1040,6 +1044,8 @@
 
   #LICENSE_TYPE {
     width: 100%; 
+    position: relative;
+    left: -5.5px;
   }
 }
 
@@ -1340,6 +1346,8 @@
 
   #LICENSE_TYPE {
     width: 100%;
+    position: relative;
+    left: -5.5px;
   }
 }
 
