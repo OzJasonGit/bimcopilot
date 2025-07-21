@@ -224,7 +224,7 @@ const { addToCart } = useContext(CartContext);
                   <h2 id={styles._H2} 
                       className="text-stone-700 font-avant_garde_bold" style={{ marginBottom: '0px' }}>
                     ${currentPrice?.toFixed(2)}{' '}
-                    <span id={styles._H2} 
+                    <span id={styles._H3} 
                           className="text-stone-700 font-avant_garde_medium">Tax included.</span>
                   </h2>
                 </div>
