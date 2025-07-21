@@ -480,6 +480,22 @@
       ". . .";
   }
 
+  #SALES_GRID_HOLDER {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-area: SUB;
+  grid-column-gap: 60px;
+  grid-row-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto 0px;
+  grid-template-areas:
+    "PRODUCT_ID PRODUCT_ID  .  .  ."
+    "IMAGE IMAGE IMAGE CHECKOUT CHECKOUT"
+    ".  .  .  .  .";
+}
+
   .grid_0_how_we_work {
     position: relative;
     width: 100%;
@@ -802,9 +818,9 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0px auto auto 0px;
+    grid-template-rows: auto auto auto 0px;
     grid-template-areas:
-      " . "
+      " PRODUCT_ID "
       "IMAGE"
       "CHECKOUT"
       " . ";
@@ -1144,9 +1160,9 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0px auto auto 0px;
+    grid-template-rows: auto auto auto 0px;
     grid-template-areas:
-      " . "
+      " PRODUCT_ID "
       "IMAGE"
       "CHECKOUT"
       " . ";
