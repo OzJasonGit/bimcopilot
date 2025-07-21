@@ -296,6 +296,9 @@ const { addToCart } = useContext(CartContext);
                         </div>
 
                         <div id={styles.PAYPAL}>
+                          <br/>
+                          <br/>
+
                           <PayPalButton
                             amount={currentPrice}
                             products={[{
