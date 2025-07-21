@@ -1135,44 +1135,7 @@
 
 @media all and (min-width: 0px) and (max-width: 480px) {
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
-  #_H1 {
-    margin-bottom: 0px;
-    font-size: 40px;
-    text-align: left;
-  }
-
-  #_H2 {
-    margin-bottom: 0px;
-    font-size: 30px;
-  }
-
-  #_H3 {
-    margin-bottom: 0px;
-    font-size: 14px;
-    line-height: 19.5px;
-    text-align: left;
-  }
-
-  #_H4 {
-    margin-bottom: 0px;
-  }
-
-  #_H5 {
-    margin-bottom: -2.5px;
-  }
-
-  #H2_7XL {
-    margin-bottom: 0px;
-    font-size: 55px;
-    line-height: 1;
-  }
-
-  #TEXT_OUTLINE {
-    -webkit-text-stroke: 0.75px rgb(120, 120, 120);
-    margin-bottom: 0px;
-    font-size: 55px;
-    line-height: 1;
-  }
+ 
 
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
