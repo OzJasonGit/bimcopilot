@@ -361,16 +361,20 @@ const { addToCart } = useContext(CartContext);
                 </div>
 
                 <div id={styles.C6}>
-                  <h3 className="text-md text-stone-700 font-geist_regular">
+                  <h3 id={styles._H3} 
+                      className="  text-stone-700 font-avant_garde_medium">
                     Digital Download
                   </h3>
-                  <h3 className="text-md text-stone-700 font-geist_regular">
+                  <h3 id={styles._H3} 
+                      className=" text-stone-700 font-avant_garde_medium">
                     Revit Version 2020
                   </h3>
-                  <h3 className="text-md text-stone-700 font-geist_regular">
+                  <h3 id={styles._H3} 
+                      className=" text-stone-700 font-avant_garde_medium">
                     Created By: Bimcopilot.com
                   </h3>
-                  <h3 className="text-md text-stone-700 font-geist_regular">
+                  <h3 id={styles._H3} 
+                      className=" text-stone-700 font-avant_garde_medium">
                     Pack Category: {product.category}
                   </h3>
                 </div>
@@ -431,7 +435,7 @@ const { addToCart } = useContext(CartContext);
                   </h3>
                 </div>
                 <div id={styles.P_DESCRIPTION}>
-                  <p id={styles._H3} className="text-base text-stone-700 font-avant_garde_medium">
+                  <p id={styles._H3} className=" text-stone-700 font-avant_garde_medium">
                     {parse(product.description)}
                   </p>
                 </div>
