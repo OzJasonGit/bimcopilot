@@ -148,6 +148,7 @@ const { addToCart } = useContext(CartContext);
         <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
           <div className={styles.grid_0_scroll}>
             <div id={styles.SALES_GRID_HOLDER}>
+
               <div
                 id={styles.PRODUCT_ID_HOLDER}
                 style={{
@@ -155,31 +156,15 @@ const { addToCart } = useContext(CartContext);
                   position: 'relative',
                   width: '100%',
                   height: '100%',
-                }}
-              >
-                <h1 id={styles._H1} className="text-stone-700 font-avant_garde_bold">
-                  <span className="text-md text-stone-700 font-geist_regular" style={{ marginBottom: '0px' }}>
-                    Product_ID
-                  </span>{' '}
-                  {parse(product.product_id)}
-                </h1>
-
-
-
-
+                }}>
+                
                 <h2 id={styles._H2} 
                     className="text-stone-700 font-avant_garde_bold" style={{ marginBottom: '0px' }}>
                     <span id={styles._H3} 
                           className="text-stone-700 font-avant_garde_medium">Product_id
                     </span>
-                    ${currentPrice?.toFixed(2)}{' '}                  
-                </h2>
-              
-
-
-
-
-                
+                    {parse(product.product_id)}             
+                </h2>                        
               </div>
 
               <div id={styles.SALES_IMAGE_HOLDER}>
