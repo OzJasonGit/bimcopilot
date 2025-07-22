@@ -255,9 +255,26 @@ const Menu = () => {
                             <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
                               <div id={styles.HEADER_MENU_2}>   
                                 <div id={styles.BURGER_HOLDER} class={styles.container_right}>
+
+
+
+
+
+                                  <a id={styles.FAVOURITES} onClick={showDrawer}>
+                                    <Hamburger/> 
+                                  </a>
+
                                   <a id={styles.BURGER} onClick={showDrawer}>
                                     <Hamburger/> 
                                   </a>
+
+                                  <a id={styles.BURGER} onClick={showDrawer}>
+                                    <Hamburger/> 
+                                  </a>
+
+
+
+
                                 </div>   
                               </div>
                             </div> 
