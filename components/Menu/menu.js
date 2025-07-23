@@ -266,7 +266,9 @@ const Menu = () => {
                                   </a>
 
                                   <Link id={styles.BURGER} className="content-center ... align-middle ..." href="/cart">
-                                    <FontAwesomeIcon icon={faCartShopping} size="3xs" className="text-slate-50" />
+                                    <div className="content-center ... align-middle ...">
+                                      <FontAwesomeIcon icon={faCartShopping} size="3xs" className="text-slate-50" />
+                                    </div>
                                   </Link>
 
                                   <a id={styles.BURGER} onClick={showDrawer}
