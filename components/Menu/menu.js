@@ -264,11 +264,16 @@ const Menu = () => {
                                     <Hamburger/> 
                                   </a>
 
-                                  <a id={styles.BURGER} onClick={showDrawer}>{'     '}
+                                  <a id={styles.BURGER} onClick={showDrawer}>
                                     <Hamburger/> 
                                   </a>
 
-                                  <a id={styles.BURGER} onClick={showDrawer}>
+                                  <a id={styles.BURGER} onClick={showDrawer}
+                                     style={{
+                                        paddingLeft: "20px",
+                                       
+                                      }}
+                                  >
                                     <Hamburger/> 
                                   </a>
 
