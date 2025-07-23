@@ -20,8 +20,9 @@ import logoRIBA from './logoRIBA_Dark.png';
 import logoBC from './Tesseract_Simple_Black_2.png';
 
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faYoutube, faDribbble, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons'
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping, faSignOutAlt, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
 
 
 const Menu = () => {
@@ -264,14 +265,13 @@ const Menu = () => {
                                     <Hamburger/> 
                                   </a>
 
-                                  <a id={styles.BURGER} onClick={showDrawer}>
-                                    <Hamburger/> 
-                                  </a>
+                                  <Link id={styles.BURGER} className="content-center ... align-middle ..." href="/cart">
+                                    <FontAwesomeIcon icon={faCartShopping} size="3xs" className="text-slate-50" />
+                                  </Link>
 
                                   <a id={styles.BURGER} onClick={showDrawer}
                                      style={{
-                                        paddingLeft: "20px",
-                                       
+                                        paddingLeft: "20px",                                      
                                       }}
                                   >
                                     <Hamburger/> 
