@@ -21,7 +21,8 @@ import logoBC from './Tesseract_Simple_Black_2.png';
 
 
 
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping, faSignOutAlt, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
 
 
 const Menu = () => {
@@ -260,7 +261,15 @@ const Menu = () => {
 
 
 
-                                  
+                                  <a id={styles.FAVOURITES} onClick={showDrawer}>
+                                    <Hamburger/> 
+                                  </a>
+
+                                  <a id={styles.BURGER} className="content-center ... align-middle ..." href="/cart">
+                                    <div className="content-center ... align-middle ...">
+                                      <FontAwesomeIcon icon={faCartShopping} size="3xs" className="text-slate-50" />
+                                    </div>
+                                  </a>
 
                                   <a id={styles.BURGER} onClick={showDrawer}
                                      style={{
