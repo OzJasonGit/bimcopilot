@@ -2569,8 +2569,9 @@
 
   #H2_7XL {
     margin-bottom: 0px;
-    font-size: 55px;
-    line-height: 1;
+    font-size: 1.00rem;
+    line-height: 1.30rem;
+    text-align: right;
   }
 
   #TEXT_OUTLINE {
