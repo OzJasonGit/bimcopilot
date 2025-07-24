@@ -18,6 +18,9 @@ import dlpfbdImage from './_dlpfbd_.svg';
 import logoARB from './logoARB_DARK.png';
 import logoRIBA from './logoRIBA_Dark.png';
 import logoBC from './Tesseract_Simple_Black_2.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMedium, faLinkedin, faYoutube, faDribbble, faGithub, } from "@fortawesome/free-brands-svg-icons";
+
 
 
 
@@ -25,6 +28,7 @@ import logoBC from './Tesseract_Simple_Black_2.png';
 
 
 const Menu = () => {
+
 
 
   const [open, setOpen] = useState(false);
