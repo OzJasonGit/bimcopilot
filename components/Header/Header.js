@@ -147,19 +147,7 @@ export default function Header() {
               </div>
 
               {/* Basket and Favorites */}
-              <div className="content-right ..." id={styles.BASKET_CONTAINER}>
-                <Link className="content-center ... align-middle ..." href="/cart" style={{ gridArea: "BASKET", position: "relative", top: "0.75px", left: "-30px" }}>
-                  <div className="content-center ... align-middle ...">
-                    <FontAwesomeIcon icon={faCartShopping} size="3xs" className="text-slate-50" />
-                  </div>
-                </Link>
-
-                <Link className="content-center ... align-middle ..." href="/bloghome" style={{ gridArea: "FAVOURITE", position: "relative", top: "0.5px", left: "-30px" }}>
-                  <div className="content-center ... align-middle ...">
-                    <FontAwesomeIcon icon={faHeart} size="3xs" className="text-slate-50" />
-                  </div>
-                </Link>
-              </div>
+              
 
               {/* Sign In/Sign Up or User Dropdown */}
               <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "100%" }}>
