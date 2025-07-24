@@ -138,6 +138,14 @@
 }
 
 @media all and (min-width: 0px) and (max-width: 480px) {
+
+
+  #_H2_7XL {
+      margin-bottom: 0px;     
+      font-size: 1.75rem;
+      line-height: 1.8rem;   
+    }
+
   .grid_0_how_we_work {
     position: relative;
     width: 100%;

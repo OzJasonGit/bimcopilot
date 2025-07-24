@@ -37,7 +37,7 @@ export default class Services_6 extends Component {
               <div id={styles.HOW_WE_WORK_TAG}>
                   <h2                
                     id={styles._H2_7XL}
-                    class="text-left ... text-4xl ... text-stone-700 ... font-avant_garde_bold"
+                    class="text-left ... text-stone-700 ... font-avant_garde_bold"
                   >         
                     How we Work
                   </h2>
