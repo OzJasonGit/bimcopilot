@@ -2538,6 +2538,13 @@
     text-align: left;
   }
 
+  #_H2 {
+    margin-bottom: 0px;
+    font-size: 1.00rem;
+    line-height: 1.30rem; 
+    text-align: right;
+  }
+
   #_H2_RIGHT {
     margin-bottom: 0px;
     font-size: 1.00rem;
