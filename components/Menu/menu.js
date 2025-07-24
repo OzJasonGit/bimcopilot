@@ -22,9 +22,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMedium, faLinkedin, faYoutube, faDribbble, faGithub, } from "@fortawesome/free-brands-svg-icons";
 
 
-
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faSignOutAlt, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
 
 
