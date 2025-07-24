@@ -2568,9 +2568,9 @@
 
   #TEXT_OUTLINE {
     -webkit-text-stroke: 0.75px rgb(120, 120, 120);
-    margin-bottom: 0px;
-    font-size: 55px;
-    line-height: 1;
+    margin-bottom: 0;
+    font-size: 1.75rem;
+    line-height: 1.8rem;
   }
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
