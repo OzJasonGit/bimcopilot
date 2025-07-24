@@ -262,13 +262,13 @@ const Menu = () => {
 
 
 
-                                  <a id={styles.FAVOURITES} onClick={showDrawer}>
-                                  <div className="content-center ... align-middle ..." href="/cart">
+                                  <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart">
+                                  <div className="content-center ... align-middle ..." >
                                       <FontAwesomeIcon icon={faHeart} size="3xs" className="text-slate-50" />
                                     </div>
                                   </a>
 
-                                  <a id={styles.BURGER} className="content-center ... align-middle ..." href="/cart">
+                                  <a id={styles.CART} className="content-center ... align-middle ..." href="/cart">
                                     <div className="content-center ... align-middle ..."
                                       style={{
                                         paddingLeft: "20px",                                      
@@ -279,7 +279,7 @@ const Menu = () => {
 
                                   <a id={styles.BURGER} onClick={showDrawer}
                                      style={{
-                                        paddingLeft: "50px",                                      
+                                        paddingLeft: "60px",                                      
                                       }}
                                   >
                                     <Hamburger/> 
