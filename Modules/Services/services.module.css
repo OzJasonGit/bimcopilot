@@ -2525,6 +2525,12 @@
     text-align: left;
   }
 
+  #H1_2 {
+    margin-bottom: 0;
+    font-size: 1.75rem;
+    line-height: 1.8rem;
+  }
+
   #_H3 {
     margin-bottom: 0px;
     font-size: 0.83rem;
