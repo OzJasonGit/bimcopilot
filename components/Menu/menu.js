@@ -271,7 +271,7 @@ const Menu = () => {
                                   <a id={styles.CART} className="content-center ... align-middle ..." href="/cart">
                                     <div className="content-center ... align-middle ..."
                                       style={{
-                                        paddingLeft: "20px",                                      
+                                        paddingLeft: "30px",                                      
                                       }}>
                                       <FontAwesomeIcon icon={faCartShopping} size="3xs" className="text-slate-50" />
                                     </div>
