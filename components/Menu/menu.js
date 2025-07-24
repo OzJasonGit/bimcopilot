@@ -262,7 +262,9 @@ const Menu = () => {
 
 
                                   <a id={styles.FAVOURITES} onClick={showDrawer}>
-                                    <Hamburger/> 
+                                  <div className="content-center ... align-middle ...">
+                                      <FontAwesomeIcon icon={faHeart} size="3xs" className="text-slate-50" />
+                                    </div>
                                   </a>
 
                                   <a id={styles.BURGER} className="content-center ... align-middle ..." href="/cart">
