@@ -263,13 +263,16 @@ const Menu = () => {
 
 
                                   <a id={styles.FAVOURITES} onClick={showDrawer}>
-                                  <div className="content-center ... align-middle ...">
+                                  <div className="content-center ... align-middle ..." href="/cart">
                                       <FontAwesomeIcon icon={faHeart} size="3xs" className="text-slate-50" />
                                     </div>
                                   </a>
 
                                   <a id={styles.BURGER} className="content-center ... align-middle ..." href="/cart">
-                                    <div className="content-center ... align-middle ...">
+                                    <div className="content-center ... align-middle ..."
+                                      style={{
+                                        paddingLeft: "20px",                                      
+                                      }}>
                                       <FontAwesomeIcon icon={faCartShopping} size="3xs" className="text-slate-50" />
                                     </div>
                                   </a>
