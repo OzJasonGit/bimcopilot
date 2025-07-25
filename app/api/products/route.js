@@ -1,6 +1,13 @@
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 import { connectToDatabase } from "@/app/utils/mongodb";
+import { v2 as cloudinary } from "cloudinary";
+
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME || "dbj8h56jj",
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 const ProductSchema = new mongoose.Schema({
   product_id: { type: String, required: true },
@@ -85,9 +92,42 @@ export async function DELETE(req) {
     if (!id) {
       return NextResponse.json({ success: false, message: "Product ID is required" }, { status: 400 });
     }
+    // Find the product to get its images
+    const product = await Product.findOne({ product_id: id });
+    if (!product) {
+      return NextResponse.json({ success: false, message: "Product not found" }, { status: 404 });
+    }
+    // Delete images from Cloudinary
+    let cloudinaryErrors = [];
+    for (const imageUrl of product.images) {
+      try {
+        // Extract public_id from the URL
+        // Example: https://res.cloudinary.com/<cloud_name>/image/upload/v1234567890/Products_Main/slug/filename.jpg
+        const matches = imageUrl.match(/\/upload\/([^\.]+)\./);
+        let publicId = null;
+        if (matches && matches[1]) {
+          // Remove version if present
+          publicId = matches[1].replace(/^v\d+\//, "");
+        } else {
+          // Fallback: try to get everything after '/upload/' and before file extension
+          publicId = imageUrl.split("/upload/")[1]?.split(".")[0];
+        }
+        if (publicId) {
+          await cloudinary.uploader.destroy(publicId, { resource_type: "image" });
+        } else {
+          cloudinaryErrors.push(`Could not extract public_id from ${imageUrl}`);
+        }
+      } catch (err) {
+        cloudinaryErrors.push(`Failed to delete image ${imageUrl}: ${err.message}`);
+      }
+    }
+    // Delete the product from DB
     const deleted = await Product.deleteOne({ product_id: id });
     if (deleted.deletedCount === 0) {
-      return NextResponse.json({ success: false, message: "Product not found" }, { status: 404 });
+      return NextResponse.json({ success: false, message: "Product not found in DB after image deletion" }, { status: 404 });
+    }
+    if (cloudinaryErrors.length > 0) {
+      return NextResponse.json({ success: true, warning: "Product deleted but some images failed to delete", errors: cloudinaryErrors });
     }
     return NextResponse.json({ success: true });
   } catch (error) {

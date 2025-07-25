@@ -118,7 +118,7 @@ const PayPalButton = ({ amount, products = [], currency = 'USD', onSuccess, onEr
           });
           const orderData = await orderRes.json();
           if (orderRes.ok) {
-            if (onSuccess) onSuccess(details);
+            if (onSuccess) onSuccess(orderData.order?._id || orderData.order?.paypalOrderId || data.orderID);
           } else {
             if (onError) onError(orderData.error || 'Failed to save PayPal order');
           }

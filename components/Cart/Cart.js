@@ -236,6 +236,9 @@ export default function CheckoutPage() {
                       image: item.image,
                       quantity: item.quantity
                     }))}
+                    onSuccess={(orderId) => {
+                      if (orderId) router.push(`/success?orderId=${orderId}`);
+                    }}
                   />
                 </div>
               </div>
