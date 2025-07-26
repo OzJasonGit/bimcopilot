@@ -95,6 +95,12 @@
   }
 }
 
+
+
+
+
+
+
 @media all and (min-width: 0px) and (max-width: 480px) {
   #CAROUSEL_HOLDER {
     position: relative;
@@ -119,7 +125,7 @@
     background-color: transparent;
     display: grid;
     grid-column-gap: 0;
-    grid-row-gap: 20px;
+    grid-row-gap: 0px;
     grid-template-rows: 0px auto 0px;
     grid-template-columns: 1fr;
     grid-template-areas:

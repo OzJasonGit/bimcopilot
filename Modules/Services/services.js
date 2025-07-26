@@ -73,10 +73,8 @@ const Servicesmain = ({ stories}) => {
                       >
                       sustainable
                     </a>                  
-                    . <br /> <br />{" "}
-
-
-                  
+                    . {" "}
+                                     
                   </h3>
                 </div>
               </div>
