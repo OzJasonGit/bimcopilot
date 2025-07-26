@@ -387,6 +387,14 @@
     grid-template-areas: "SERVICES";
   }
 
+
+  #SERVICES_HOLDER_MOBILE {
+    width: 100%;
+    position: relative;
+    grid-area: SUB;
+    height: 350px;
+  }
+
   #COLLAPSE_MESSAGE {
     grid-area: MESSAGE;
     width: 100%;
