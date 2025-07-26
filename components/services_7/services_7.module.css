@@ -2,14 +2,20 @@
 /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
 #_H1 {
   margin-bottom: 0px;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 
 #_H2 {
   margin-bottom: 0px;
+  font-size: 1.00rem;
+  line-height: 1.30rem;
 }
 
 #_H2_7XL {
   margin-bottom: 0px;
+  font-size: 1.00rem;
+  line-height: 1.30rem;
 }
 
 #_H3 {
@@ -86,6 +92,39 @@
   height: 100%;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 960px) and (max-width: 1280px) {
   .grid_0_how_we_work {
     position: relative;
@@ -110,6 +149,31 @@
     grid-area: PORTFOLIO;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media all and (min-width: 480px) and (max-width: 960px) {
   .grid_0_how_we_work {
@@ -136,6 +200,33 @@
     grid-area: PORTFOLIO;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media all and (min-width: 0px) and (max-width: 480px) {
 
