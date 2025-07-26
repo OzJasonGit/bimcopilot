@@ -33,6 +33,7 @@ const ProductDetailpage = () => {
   const [licenseType, setLicenseType] = useState('commercial');
 const { addToCart } = useContext(CartContext);
   const router = useRouter();
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -174,20 +175,20 @@ const { addToCart } = useContext(CartContext);
                     key={`${product._id}-main`}
                     width={500}
                     height={500}
-                    src={product.image}
+                    src={selectedImage || product.image}
                     style={{
                       width: '100%',
                       height: '100%',
                       objectFit: 'cover',
                     }}
-                    onError={() => console.log(`Image failed to load for ${product.title}: ${product.image}`)}
+                    onError={() => console.log(`Image failed to load for ${product.title}: ${selectedImage || product.image}`)}
                   />
                 </div>
 
                 <div id={styles.SALES_IMAGE_2}>
                   <div id={styles.SALES_IMAGE_3}>
                     {product.images.slice(0, 5).map((image, index) => (
-                      <div key={`image-${index}`} className="rounded-lg" id={styles[`SALES_IMAGE_${String.fromCharCode(86 + index)}`]}>
+                      <div key={`image-${index}`} className="rounded-lg" id={styles[`SALES_IMAGE_${String.fromCharCode(86 + index)}`]} onClick={() => setSelectedImage(image)} style={{ cursor: 'pointer', border: selectedImage === image ? '2px solid #0070f3' : 'none' }}>
                         <Image
                           alt={`${product.title} image ${index + 1}`}
                           key={`${product._id}-image-${index}`}
@@ -308,6 +309,9 @@ const { addToCart } = useContext(CartContext);
                               quantity: 1
                             }]}
                             currency="USD"
+                            onSuccess={(orderId) => {
+                              if (orderId) router.push(`/success?orderId=${orderId}`);
+                            }}
                           />
                         </div>
 

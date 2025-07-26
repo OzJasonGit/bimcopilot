@@ -12,6 +12,10 @@ import Subfooter from '../Subfooter2/subfooter2';
 import Footer from '../Footer/Footer';
 import Subscribetop from '../Subscribetop/subscribetop';
 import CheckoutButton from '../Payment/checkoutButton';
+import ApplePayButton from '../Payment/ApplePayButton';
+import PayPalButton from '../Payment/PayPalButton';
+import GooglePayButton from '../Payment/GooglePayButton';
+import Invoice from '../Invoice/Invoice';
 import styles from './ProductDetail.module.css';
 
 const ProductDetail = ({ slug }) => {
@@ -19,6 +23,8 @@ const ProductDetail = ({ slug }) => {
   const [loading, setLoading] = useState(true);
   const [selectedLicense, setSelectedLicense] = useState('student');
   const [quantity, setQuantity] = useState(1);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [invoiceData, setInvoiceData] = useState(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -35,6 +41,7 @@ const ProductDetail = ({ slug }) => {
         const data = await res.json();
         if (data.success) {
           setProduct(data.product);
+          setSelectedImage(data.product.images[0]);
         } else {
           throw new Error(data.message || 'Failed to fetch product');
         }
@@ -114,12 +121,23 @@ const ProductDetail = ({ slug }) => {
       }
 
       if (response.ok) {
-        const session = await response.json();
-        const stripe = await import('@stripe/stripe-js').then(m => m.loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY));
-        const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
-        if (error) {
-          toast.error('Payment redirect failed');
-        }
+        // Simulate invoice data after successful payment
+        const now = new Date();
+        setInvoiceData({
+          orderNumber: Math.floor(Math.random() * 1000000),
+          date: now.toLocaleString(),
+          buyer: { name: 'Customer' }, // Replace with real user info if available
+          products: [productForPayment],
+          total: productForPayment.price * productForPayment.quantity,
+        });
+        toast.success('Purchase successful! Invoice generated.');
+        // Optionally: skip Stripe redirect for demo, or keep as is for real payment
+        // const session = await response.json();
+        // const stripe = await import('@stripe/stripe-js').then(m => m.loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY));
+        // const { error } = await stripe.redirectToCheckout({ sessionId: session.id });
+        // if (error) {
+        //   toast.error('Payment redirect failed');
+        // }
       } else {
         const error = await response.json();
         toast.error(error.message || 'Failed to create payment session');
@@ -149,6 +167,10 @@ const ProductDetail = ({ slug }) => {
     return null;
   }
 
+  if (invoiceData) {
+    return <Invoice {...invoiceData} onClose={() => setInvoiceData(null)} />;
+  }
+
   const currentPrice = selectedLicense === 'student' ? product.student_price : product.commercial_price;
   const totalAmount = currentPrice * quantity;
 
@@ -165,7 +187,8 @@ const ProductDetail = ({ slug }) => {
             <div className={styles.product_images}>
               <div className={styles.main_image}>
                 <Image
-                  src={product.images[0]}
+                  key={selectedImage || product.images[0]}
+                  src={selectedImage || product.images[0]}
                   alt={product.title}
                   fill
                   className={styles.image}
@@ -173,11 +196,19 @@ const ProductDetail = ({ slug }) => {
               </div>
               {product.images.length > 1 && (
                 <div className={styles.thumbnail_images}>
-                  {product.images.slice(1, 4).map((image, index) => (
-                    <div key={index} className={styles.thumbnail}>
+                  {product.images.slice(0, 5).map((image, index) => (
+                    <div
+                      key={index}
+                      className={styles.thumbnail}
+                      onClick={() => {
+                        console.log('Thumbnail clicked:', image);
+                        setSelectedImage(image);
+                      }}
+                      style={{ cursor: 'pointer', border: selectedImage === image ? '2px solid #0070f3' : 'none' }}
+                    >
                       <Image
                         src={image}
-                        alt={`${product.title} ${index + 2}`}
+                        alt={`${product.title} ${index + 1}`}
                         fill
                         className={styles.thumbnail_image}
                       />
@@ -247,7 +278,7 @@ const ProductDetail = ({ slug }) => {
                 >
                   Add to Cart
                 </button>
-                
+                {/* Stripe Checkout */}
                 <CheckoutButton
                   amount={totalAmount}
                   currency="USD"
@@ -258,6 +289,116 @@ const ProductDetail = ({ slug }) => {
                     image: product.images[0],
                     quantity: quantity,
                     license_type: selectedLicense
+                  }}
+                  onSuccess={() => {
+                    const now = new Date();
+                    setInvoiceData({
+                      orderNumber: Math.floor(Math.random() * 1000000),
+                      date: now.toLocaleString(),
+                      buyer: { name: 'Customer' },
+                      products: [{
+                        id: product._id,
+                        title: product.title,
+                        price: currentPrice,
+                        image: product.images[0],
+                        quantity: quantity,
+                        license_type: selectedLicense
+                      }],
+                      total: currentPrice * quantity,
+                    });
+                  }}
+                />
+                {/* Apple Pay */}
+                <ApplePayButton
+                  amount={totalAmount}
+                  currency="USD"
+                  product={{
+                    id: product._id,
+                    title: product.title,
+                    price: currentPrice,
+                    image: product.images[0],
+                    quantity: quantity,
+                    license_type: selectedLicense
+                  }}
+                  onError={(msg) => toast.error(msg)}
+                  onSuccess={() => {
+                    const now = new Date();
+                    setInvoiceData({
+                      orderNumber: Math.floor(Math.random() * 1000000),
+                      date: now.toLocaleString(),
+                      buyer: { name: 'Customer' },
+                      products: [{
+                        id: product._id,
+                        title: product.title,
+                        price: currentPrice,
+                        image: product.images[0],
+                        quantity: quantity,
+                        license_type: selectedLicense
+                      }],
+                      total: currentPrice * quantity,
+                    });
+                  }}
+                />
+                {/* PayPal */}
+                <PayPalButton
+                  amount={totalAmount}
+                  products={[{
+                    id: product._id,
+                    title: product.title,
+                    price: currentPrice,
+                    image: product.images[0],
+                    quantity: quantity,
+                    license_type: selectedLicense
+                  }]}
+                  currency="USD"
+                  onSuccess={() => {
+                    const now = new Date();
+                    setInvoiceData({
+                      orderNumber: Math.floor(Math.random() * 1000000),
+                      date: now.toLocaleString(),
+                      buyer: { name: 'Customer' },
+                      products: [{
+                        id: product._id,
+                        title: product.title,
+                        price: currentPrice,
+                        image: product.images[0],
+                        quantity: quantity,
+                        license_type: selectedLicense
+                      }],
+                      total: currentPrice * quantity,
+                    });
+                  }}
+                  onError={(msg) => toast.error(msg)}
+                />
+                {/* Google Pay */}
+                <GooglePayButton
+                  amount={totalAmount}
+                  currency="USD"
+                  product={{
+                    id: product._id,
+                    title: product.title,
+                    price: currentPrice,
+                    image: product.images[0],
+                    quantity: quantity,
+                    license_type: selectedLicense
+                  }}
+                  onError={(msg) => toast.error(msg)}
+                  onSuccess={() => {
+                    const now = new Date();
+                    setInvoiceData({
+                      orderNumber: Math.floor(Math.random() * 1000000),
+                      date: now.toLocaleString(),
+                      buyer: { name: 'Customer' },
+                      products: [{
+                        id: product._id,
+                        title: product.title,
+                        price: currentPrice,
+                        image: product.images[0],
+                        quantity: quantity,
+                        license_type: selectedLicense
+                      }],
+                      total: currentPrice * quantity,
+                    });
                   }}
                 />
               </div>

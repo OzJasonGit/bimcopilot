@@ -76,7 +76,7 @@ export async function POST(req) {
       payment_method_types: ['card'],
       line_items: lineItems,
       mode: 'payment',
-      success_url: `${origin}/cart`,
+      success_url: `${origin}/success?orderId=${orderResult.insertedId.toString()}`,
       cancel_url: `${origin}/cart`,
       customer_email: user.email,
       metadata: {

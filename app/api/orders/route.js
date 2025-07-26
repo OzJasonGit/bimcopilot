@@ -9,20 +9,22 @@ export async function GET(req) {
   try {
     const user = await getCurrentUser();
     if (!user) {
+      console.log('No user found');
       return NextResponse.json({ error: 'Authentication required' }, { status: 401 });
     }
-
-    // Only admins can view all orders
-    if (user.role !== 1) {
-      return NextResponse.json({ error: 'Admin access required' }, { status: 403 });
-    }
-
+    
     const db = await connectToDatabase();
     const { searchParams } = new URL(req.url);
     const page = parseInt(searchParams.get('page') || '1', 10);
     const limit = parseInt(searchParams.get('limit') || '50', 10);
     const month = searchParams.get('month'); // format: YYYY-MM
     const search = searchParams.get('search') || '';
+
+    // If no search param, only admins can view all orders
+    if (!search && user.role !== 1) {
+      console.log('Non-admin tried to fetch all orders:', user);
+      return NextResponse.json({ error: 'Admin access required' }, { status: 403 });
+    }
 
     const query = {};
     if (month) {
@@ -33,15 +35,36 @@ export async function GET(req) {
       query.createdAt = { $gte: start, $lt: end };
     }
     if (search) {
+      let isObjectId = false;
+      let objectId = null;
+      if (/^[a-fA-F0-9]{24}$/.test(search)) {
+        try {
+          objectId = new ObjectId(search);
+          isObjectId = true;
+        } catch (e) {
+          isObjectId = false;
+        }
+      }
       const regex = new RegExp(search, 'i');
       query.$or = [
         { stripeSessionId: regex },
-        { _id: { $regex: regex } },
+        { paypalOrderId: regex },
         { userName: regex },
         { userEmail: regex },
         { 'products.title': regex },
       ];
+      if (isObjectId) {
+        query.$or.unshift({ _id: objectId });
+      }
+      // For non-admins, restrict to their own orders
+      if (user.role !== 1) {
+        query.userId = user.id.toString();
+      }
     }
+
+    console.log('User:', user);
+    console.log('Search param:', search);
+    console.log('Query object:', JSON.stringify(query));
 
     const total = await db.collection(ORDERS_COLLECTION).countDocuments(query);
     const orders = await db.collection(ORDERS_COLLECTION)
@@ -51,6 +74,7 @@ export async function GET(req) {
       .limit(limit)
       .toArray();
     
+    console.log('Orders returned:', orders);
     return NextResponse.json({ orders, total, page, limit });
   } catch (error) {
     console.error('Error fetching orders:', error);
