@@ -72,14 +72,11 @@ return (
                         </div>
                       </div>
                     </div>
+              </div>
+
             </div>
 
-
-
-
-              
-
-
+            <div id={styles.SERVICES_HOLDER_MOBILE}>           
             </div>
           </div>
       </section>

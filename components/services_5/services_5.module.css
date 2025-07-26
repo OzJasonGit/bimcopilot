@@ -494,12 +494,22 @@
     position: relative;
     grid-area: SUB;
     height: auto;
-    display: grid;
+    display: none;
     grid-column-gap: 30px;
     grid-row-gap: 0;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas: "SERVICES";
+  }
+
+
+  #SERVICES_HOLDER_MOBILE {
+    width: 100%;
+    position: relative;
+    grid-area: SUB;
+    height: 350px;
+    
+
   }
 
   #SERVICES_GRID {

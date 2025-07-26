@@ -95,8 +95,7 @@ export default class Aboutpage extends Component {
             <div id={styles.ABOUT_HOLDER}>
               <div
                 className="rounded-2xl bg-neutral-900 shadow-2xl shadow-black"
-                id={styles.ABOUT_CONTAINER}
-              >
+                id={styles.ABOUT_CONTAINER}>
                 <div id={styles.ABOUT_OVERFLOW}>
                   <div className="rounded-2xl" id={styles.ABOUT}>
                     <div id={styles.ABOUT_TEXT_HOLDER}>
