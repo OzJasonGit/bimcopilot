@@ -17,7 +17,7 @@ return (
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
           <div class={styles.grid_0_services_2}>
-            <div  class="rounded-2xl bg-neutral-900 shadow-2xl shadow-black" id={styles.SERVICES_HOLDER}>
+            <div   id={styles.SERVICES_HOLDER}>
 
               <div id={styles.SERVICES_PADDING}
                    className="bg-stone-800 ... rounded-xl ... " 
@@ -76,7 +76,7 @@ return (
 
             </div>
 
-            <div id={styles.SERVICES_HOLDER_MOBILE}>           
+            <div id={styles.SERVICES_HOLDER_MOBILE} classname="rounded-2xl bg-neutral-900 shadow-2xl shadow-black">           
             </div>
           </div>
       </section>
