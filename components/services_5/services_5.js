@@ -76,7 +76,8 @@ return (
 
             </div>
 
-            <div id={styles.SERVICES_HOLDER_MOBILE} classname="rounded-2xl bg-neutral-900 shadow-2xl shadow-black">           
+            <div id={styles.SERVICES_HOLDER_MOBILE} 
+                 className="bg-stone-800 ... rounded-xl ... " >           
             </div>
           </div>
       </section>
