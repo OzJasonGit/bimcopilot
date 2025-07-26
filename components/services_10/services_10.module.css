@@ -887,8 +887,9 @@
     grid-area: PORTFOLIO;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 40px auto auto auto;
     grid-template-areas:
+      "."
       "TITLE "
       "IMAGE "
       "CONCLUSION ";
