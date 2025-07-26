@@ -106,6 +106,10 @@
   grid-template-areas: "SERVICES SERVICES SERVICES . .";
 }
 
+#SERVICES_HOLDER_MOBILE {
+  display: none;
+}
+
 #SERVICES_GRID {
   width: 100%;
   position: relative;
@@ -289,7 +293,53 @@
     grid-template-rows: auto;
     grid-template-areas: "SERVICES SERVICES SERVICES SERVICES SERVICES";
   }
+
+
+  #SERVICES_HOLDER_MOBILE {
+    display: none;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media all and (min-width: 480px) and (max-width: 960px) {
   .grid_0_services {
@@ -329,7 +379,7 @@
     position: relative;
     grid-area: SUB;
     height: auto;
-    display: grid;
+    display: none;
     grid-column-gap: 30px;
     grid-row-gap: 0;
     grid-template-columns: 1fr;
@@ -508,9 +558,6 @@
     position: relative;
     grid-area: SUB;
     height: 350px;
-  
-    
-
   }
 
   #SERVICES_GRID {
