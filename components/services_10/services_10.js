@@ -32,7 +32,7 @@ return (
                   <h1
                     id={styles._H1_CENTER}
                     class="text-stone-700 ... font-avant_garde_bold ...">
-                    <a class="text-left ... text-4xl">Our background and <br/>who We've helped.</a>
+                    <a class="text-left ...">Our background and <br/>who We've helped.</a>
                   </h1>
                   <br/>            
                   <h2
