@@ -298,6 +298,8 @@
   grid-template-rows: 1fr;
   grid-column-gap: 30px;
   grid-template-areas: " . FAQ ";
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 
 #IS #IS_THIS_FOR_ME_TITLE {
@@ -313,29 +315,6 @@
   padding-left: 30px;
   padding-right: 30px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -621,6 +600,8 @@
     grid-template-rows: 1fr;
     grid-column-gap: 30px;
     grid-template-areas: "FAQ";
+    padding-top: 40px;
+    padding-bottom: 80px;
   }
 
   #TITLE {
@@ -913,6 +894,8 @@
     grid-template-rows: 1fr;
     grid-column-gap: 30px;
     grid-template-areas: "FAQ";
+    padding-top: 40px;
+    padding-bottom: 20px;
   }
 
 
