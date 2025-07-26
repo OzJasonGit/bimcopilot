@@ -2575,7 +2575,7 @@
   }
 
   #TEXT_OUTLINE {
-    -webkit-text-stroke: 0.35px rgb(120, 120, 120);
+    -webkit-text-stroke: 0.35px #171717;
     margin-bottom: 0;
     font-size: 1.75rem;
     line-height: 1.8rem;
