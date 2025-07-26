@@ -204,6 +204,46 @@
   grid-area: BC;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 960px) and (max-width: 1280px) {
   .grid_0_services {
     position: relative;
@@ -345,6 +385,38 @@
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 0px) and (max-width: 480px) {
   /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
   #_H1 {
@@ -408,12 +480,14 @@
     display: grid;
     grid-column-gap: 0;
     grid-row-gap: 20px;
+    grid-template-rows: 0px auto 60px;
     grid-template-columns: 20px 1fr 20px;
     grid-template-areas:
       ". . ."
       ". SUB ."
       ". . .";
   }
+
 
   #SERVICES_HOLDER {
     width: 100%;
