@@ -279,7 +279,7 @@ const Menu = () => {
 
                                   <a id={styles.BURGER} onClick={showDrawer}
                                      style={{
-                                        paddingLeft: "60px",                                      
+                                        paddingLeft: "130px",                                      
                                       }}
                                   >
                                     <Hamburger/> 
