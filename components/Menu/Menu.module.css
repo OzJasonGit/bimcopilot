@@ -1687,7 +1687,7 @@
         display: grid;
         grid-row-gap: 0px;
         grid-column-gap: 20px;
-        grid-template-columns: 45px 1fr 200px;
+        grid-template-columns: 45px 1fr 250px;
         grid-template-rows: 0px auto 0px;
         grid-template-areas:
             " . . ."
