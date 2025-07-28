@@ -60,7 +60,7 @@ export default class Products extends Component {
                       <div class="rounded-lg ..."
                         style={{
                           width: '100%',
-                          height: 'auto',
+                          height: '200px',
                           position: 'relative',
                           background: '#eee',
                           // minWidth: '220px', // ← Add this!
