@@ -431,10 +431,10 @@
 
 
   #PRODUCT_CARD {
-
     display: flex;
     flex-direction: column;
-    align-items: left;
+    height: auto;
+
   }
 
 

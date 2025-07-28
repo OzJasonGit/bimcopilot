@@ -43,7 +43,18 @@ export default class Products extends Component {
           <div id={styles.PRODUCTS_HOLDER_MOBILE}>
             <div id={styles.PRODUCTS_HORIZONTAL_MOBILE}>
              {products.map((product, index) => (
-              <div id={styles.PRODUCT_CARD} key={index}>
+              <div id={styles.PRODUCT_CARD} key={index}
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'left'
+                  }}>
+
+
+
+
+
+
                     <Link href={`/products/${product.slug}`}>
 
                       <div class="rounded-lg ..."
@@ -57,6 +68,7 @@ export default class Products extends Component {
                           overflow: 'hidden',
                         }}
                       >
+                      
                         <Image
                           src={
                             product.images?.[0] && product.images[0].startsWith('/')
@@ -70,10 +82,12 @@ export default class Products extends Component {
                           priority
                         />
 
-
-
                       </div>
                     </Link>
+
+
+
+
 
                     <div style={{ textAlign: 'left', marginTop: '10px' }}>
                       <Link href={`/products/${product.slug}`}>
