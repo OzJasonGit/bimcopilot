@@ -416,6 +416,31 @@
     white-space: nowrap;
     padding: 1rem 0;
   }
+
+
+
+
+
+  #PRODUCTS_HORIZONTAL_MOBILE {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+
+  #PRODUCT_CARD {
+
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+
+
+
+
 }
 
 

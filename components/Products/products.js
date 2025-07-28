@@ -45,14 +45,15 @@ export default class Products extends Component {
              {products.map((product, index) => (
               <div id={styles.PRODUCT_CARD} key={index}>
                     <Link href={`/products/${product.slug}`}>
-                      <div
+
+                      <div class="rounded-lg ..."
                         style={{
                           width: '100%',
                           height: 'auto',
                           position: 'relative',
                           background: '#eee',
                           // minWidth: '220px', // ← Add this!
-                          borderRadius: '12px',
+                          // borderRadius: '4px',
                           overflow: 'hidden',
                         }}
                       >
@@ -65,13 +66,16 @@ export default class Products extends Component {
                           alt={product.title}
                           fill
                           style={{ objectFit: 'cover' }}
-                          className="rounded-2xl"
+                          className="rounded-lg"
                           priority
                         />
+
+
+
                       </div>
                     </Link>
 
-                    <div style={{ textAlign: 'center', marginTop: '10px' }}>
+                    <div style={{ textAlign: 'left', marginTop: '10px' }}>
                       <Link href={`/products/${product.slug}`}>
                         <h3 id={styles._H3} style={{ marginBottom: '4px' }}>
                           {product.short_description}
