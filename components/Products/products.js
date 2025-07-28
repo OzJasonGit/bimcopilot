@@ -48,10 +48,10 @@ export default class Products extends Component {
                       <div
                         style={{
                           width: '100%',
-                          height: '220px',
+                          height: 'auto',
                           position: 'relative',
                           background: '#eee',
-                          minWidth: '220px', // ← Add this!
+                          // minWidth: '220px', // ← Add this!
                           borderRadius: '12px',
                           overflow: 'hidden',
                         }}
