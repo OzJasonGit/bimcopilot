@@ -430,15 +430,16 @@
   }
 
 
+
   #PRODUCT_CARD {
-    display: flex;
-    flex-direction: column;
+    display: grid; 
     height: auto;
-
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px auto;
+    grid-template-areas:
+      'IMAGE'
+      'TEXT';
   }
-
-
-
 
 
 }
