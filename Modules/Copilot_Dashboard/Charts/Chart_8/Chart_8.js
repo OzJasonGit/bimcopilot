@@ -1,6 +1,6 @@
 "use client";
 
-import * as d3 from "d3";
+import { select, scaleLinear, axisBottom, axisLeft, line, curveMonotoneX } from "d3";
 import { useEffect, useRef } from "react";
 
 const Chart_8 = ({ width = 400, height = 400 }) => {
@@ -13,8 +13,7 @@ const Chart_8 = ({ width = 400, height = 400 }) => {
     containerRef.current.innerHTML = "";
 
     // Create SVG
-    const svg = d3
-      .select(containerRef.current)
+    const svg = select(containerRef.current)
       .append("svg")
       .attr("width", width)
       .attr("height", height);
