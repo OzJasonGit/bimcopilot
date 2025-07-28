@@ -13,7 +13,8 @@ const Chart_8 = ({ width = 400, height = 400 }) => {
     containerRef.current.innerHTML = "";
 
     // Create SVG
-    const svg = select(containerRef.current)
+    const svg = d3
+      .select(containerRef.current)
       .append("svg")
       .attr("width", width)
       .attr("height", height);

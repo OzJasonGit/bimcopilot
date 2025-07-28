@@ -1,8 +1,6 @@
 'use client'
 
 import styles from './copilot_dashboard.module.css';
-import React, { Component, Suspense } from 'react';
-import dynamic from 'next/dynamic';
 
 import { useRouter } from "next/navigation";
 
@@ -10,55 +8,22 @@ import Menu_White from "../../components/Menu_White/menu_white";
 //import Menu_Dashboard from "../../components/Menu_Dashboard/menu_dashboard";//
 import Dashboard_Right from "../../components/Dashboard_Right/dashboard_right";
 
-// Dynamic imports for heavy chart components
-const Chart_8 = dynamic(() => import('./Charts/Chart_8/Chart_8'), { 
-  loading: () => <div>Loading chart...</div>,
-  ssr: false 
-});
+import Chart_8 from './Charts/Chart_8/Chart_8';
 
 import Subscribe_Dashboard from "../../components/Subscribetop/subscribe_dashboard";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
 import Header_White from "../../components/Header_White/Header_White";
 import Footer from "../../components/Footer/Footer_White";
-
-// Dynamic imports for heavy chart components
-const Chart_1 = dynamic(() => import("./Charts/Chart_1/Chart_1"), { 
-  loading: () => <div>Loading chart...</div>,
-  ssr: false 
-});
-const Chart_2 = dynamic(() => import("./Charts/Chart_2/Chart_2"), { 
-  loading: () => <div>Loading chart...</div>,
-  ssr: false 
-});
-const Chart_3 = dynamic(() => import('./Charts/Chart_3/Chart_3'), { 
-  loading: () => <div>Loading chart...</div>,
-  ssr: false 
-});
-const Chart_4 = dynamic(() => import('./Charts/Chart_4/Chart_4'), { 
-  loading: () => <div>Loading chart...</div>,
-  ssr: false 
-});
-const Chart_5 = dynamic(() => import('./Charts/Chart_5/Chart_5'), { 
-  loading: () => <div>Loading chart...</div>,
-  ssr: false 
-});
-const Chart_6 = dynamic(() => import('./Charts/Chart_6/Chart_6'), { 
-  loading: () => <div>Loading chart...</div>,
-  ssr: false 
-});
-const Chart_7 = dynamic(() => import('./Charts/Chart_7/Chart_7'), { 
-  loading: () => <div>Loading chart...</div>,
-  ssr: false 
-});
-const Chart_9 = dynamic(() => import('./Charts/Chart_9/Chart_9'), { 
-  loading: () => <div>Loading chart...</div>,
-  ssr: false 
-});
-const Chart_10 = dynamic(() => import('./Charts/Chart_10/Chart_10'), { 
-  loading: () => <div>Loading chart...</div>,
-  ssr: false 
-});
+import Chart_1 from "./Charts/Chart_1/Chart_1";
+import Chart_2 from "./Charts/Chart_2/Chart_2";
+import Chart_3 from './Charts/Chart_3/Chart_3';
+import Chart_4 from './Charts/Chart_4/Chart_4';
+import Chart_5 from './Charts/Chart_5/Chart_5';
+import Chart_6 from './Charts/Chart_6/Chart_6';
+import Chart_7 from './Charts/Chart_7/Chart_7';
+import Chart_9 from './Charts/Chart_9/Chart_9';
+import Chart_10 from './Charts/Chart_10/Chart_10';
 
 import Services_1 from "../../components/services_1/services_black";
 import { treemap } from 'd3';
@@ -163,9 +128,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             height: "100%",
                             background: "#f5f5f4"
                         }}>
-                            <Suspense fallback={<div>Loading chart...</div>}>
-                                <Chart_8 data={data} />
-                            </Suspense>
+                            <Chart_8 data={data} />
                         </div>
 
 
@@ -176,9 +139,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             height: "auto",
                             background: "#f5f5f4"
                         }}>
-                            <Suspense fallback={<div>Loading chart...</div>}>
-                                <Chart_9 />
-                            </Suspense>
+                            <Chart_9 />
                         </div>
 
 
@@ -197,9 +158,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                 height: "100%",
                                 background: "#f5f5f4"
                             }}>
-                                <Suspense fallback={<div>Loading chart...</div>}>
-                                    <Chart_10 data={treeMapData}/>
-                                </Suspense>
+                                <Chart_10 data={treeMapData}/>
                             </div>
 
                             <div id={styles.DOUGHNUT_2} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
@@ -365,7 +324,6 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 };
 
 export default Copilot_Dashboard;
-
 
 
 

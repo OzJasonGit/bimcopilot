@@ -16,12 +16,14 @@ const Chart_10 = ({ data, width = 954, height = 954 }) => {
     const color = d3.scaleOrdinal(data.children.map((d) => d.name), d3.schemeTableau10);
 
     // Compute treemap layout
-    const root = d3.treemap()
+    const root = d3
+      .treemap()
       .tile(d3.treemapSquarify) // Alternative: d3.treemapBinary, d3.treemapDice
       .size([width, height])
       .padding(1)
       .round(true)(
-        d3.hierarchy(data)
+        d3
+          .hierarchy(data)
           .sum((d) => d.value)
           .sort((a, b) => b.value - a.value)
       );
