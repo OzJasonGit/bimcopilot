@@ -52,7 +52,7 @@ export default class Products extends Component {
                     <Link href={`/products/${product.slug}`}
                           style={{
                                 width: '100%',
-                                height: '100%',                               
+                                height: '265px',                               
                               }}>
 
                       <div 
