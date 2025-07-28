@@ -3,11 +3,13 @@ import React, { Component } from 'react';
 
 
 import Image from "next/image";
-import astronaut_1 from "./ASTRONAUT_1_(6).png";
+
+
 
 export default class About extends Component {
-
+  
   render() {
+    const astronaut_1 = "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"
     return (
 
       <section id={styles.SHADOW_SECTION_TITLE} class={styles.center_holder}>
@@ -20,8 +22,9 @@ export default class About extends Component {
                 <Image
                   
                   src={astronaut_1}
-                  alt="Picture of the author"
+                  alt="Astronaut Image"
                   width={500}
+                  height={500}
                   
                   style={{
                     position: "relative",

@@ -11,8 +11,7 @@ const portfolioImages = [
   "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718465/Portfolio/pexels-sidesimagery-3102320_pdzkzr.jpg",
   "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718465/Portfolio/pexels-cax0000-1786758_wcae28.jpg",
   "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718465/Portfolio/pexels-cottonbro-8679906_azwqvt.jpg",
-  "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718465/Portfolio/pexels-mikhail-nilov-6835973_y6hkic.jpg",
-  "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718464/Portfolio/pexels-mikhail-nilov-8107943_largis.jpg"
+  "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718465/Portfolio/pexels-mikhail-nilov-6835973_y6hkic.jpg"
 ];
 
 const COLORS = ['#bbf7d0', '#99f6e4', '#bfdbfe', '#ddd6fe', '#f5d0fe', '#fed7aa', '#fee2e2'];
