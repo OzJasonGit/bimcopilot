@@ -3,7 +3,6 @@
 import styles from './services_2.module.css';
 import React, { Component } from 'react';
 import Image from "next/image";
-import Placeholder_1 from './placeholder_1.jpeg';
 import { TrendingUp } from "lucide-react"
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts"
 import {
@@ -124,8 +123,8 @@ return (
               <div class="rounded-xl ... " id={styles.P_IMAGE_2}> 
                 <div id={styles.IMAGE_POST_2}>
                     <Image
-                      src={Placeholder_1}   
-                      alt="Picture of the author"
+                      src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"
+                      alt="Services Portfolio Image"
                       width={500}
                       height={500}
                       style={{
@@ -133,6 +132,11 @@ return (
                         width: "100%",
                         height: "100%",
                         objectFit: "cover",
+                      }}
+                      onError={(e) => {
+                        // Fallback to a default image if the Portfolio image doesn't exist
+                        console.log("Services portfolio image not found, using fallback");
+                        e.target.src = "https://res.cloudinary.com/dbj8h56jj/image/upload/v1/Portfolio/default";
                       }}
                     />
                 </div>   

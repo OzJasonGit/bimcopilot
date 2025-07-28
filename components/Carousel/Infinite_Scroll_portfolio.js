@@ -1,7 +1,6 @@
 
 import styles from "./infinite_scroll_portfolio.module.css";
 import Image from "next/image";
-import Placeholder_1 from './placeholder_1.jpeg';
 
 
 
@@ -37,8 +36,8 @@ const TAGS = [
                                 height: "100%"
                                 }}>
                                   <Image
-                                    src={Placeholder_1}   
-                                    alt="Picture of the author"
+                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
+                                    alt="Portfolio Image"
                                     width={500}
                                     height={500}
                                     style={{    
@@ -69,8 +68,8 @@ const TAGS = [
                                         height: "100%"
                                         }}>
                                           <Image
-                                            src={Placeholder_1}   
-                                            alt="Picture of the author"
+                                            src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
+                                            alt="Portfolio Image"
                                             width={500}
                                             height={500}
                                             style={{    
@@ -91,8 +90,8 @@ const TAGS = [
                                         height: "100%"
                                         }}>
                                           <Image
-                                            src={Placeholder_1}   
-                                            alt="Picture of the author"
+                                            src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
+                                            alt="Portfolio Image"
                                             width={500}
                                             height={500}
                                             style={{    
@@ -115,8 +114,8 @@ const TAGS = [
                                 height: "100%"
                                 }}>
                                   <Image
-                                    src={Placeholder_1}   
-                                    alt="Picture of the author"
+                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
+                                    alt="Portfolio Image"
                                     width={500}
                                     height={500}
                                     style={{
@@ -152,8 +151,8 @@ const TAGS = [
                               height: "100%"
                               }}>
                                 <Image
-                                    src={Placeholder_1}   
-                                    alt="Picture of the author"
+                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
+                                    alt="Portfolio Image"
                                     width={500}
                                     height={500}
                                     style={{   
@@ -173,8 +172,8 @@ const TAGS = [
                                 height: "100%"
                                 }}>
                                   <Image
-                                    src={Placeholder_1}   
-                                    alt="Picture of the author"
+                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
+                                    alt="Portfolio Image"
                                     width={500}
                                     height={500}
                                     style={{  
@@ -194,8 +193,8 @@ const TAGS = [
                                 height: "100%"
                                 }}>
                                   <Image
-                                    src={Placeholder_1}   
-                                    alt="Picture of the author"
+                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
+                                    alt="Portfolio Image"
                                     width={500}
                                     height={500}
                                     style={{  
@@ -230,8 +229,8 @@ const TAGS = [
                               height: "100%"
                               }}>
                                 <Image
-                                    src={Placeholder_1}   
-                                    alt="Picture of the author"
+                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
+                                    alt="Portfolio Image"
                                     width={500}
                                     height={500}
                                     style={{  
@@ -251,8 +250,8 @@ const TAGS = [
                                 height: "100%"
                                 }}>
                                   <Image
-                                    src={Placeholder_1}   
-                                    alt="Picture of the author"
+                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
+                                    alt="Portfolio Image"
                                     width={500}
                                     height={500}
                                     style={{  
