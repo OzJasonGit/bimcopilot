@@ -2,14 +2,18 @@
 import styles from "./infinite_scroll_portfolio.module.css";
 import Image from "next/image";
 
-
-
-
-
-
-
-
-
+// Array of Portfolio images from Cloudinary
+const portfolioImages = [
+  "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg",
+  "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718464/Portfolio/pexels-mikhail-nilov-8107943_largis.jpg",
+  "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718779/Portfolio/pexels-roman-odintsov-4553618_hce2eh.jpg",
+  "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718466/Portfolio/pexels-thisisengineering-3861969_ks4ail.jpg",
+  "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718465/Portfolio/pexels-sidesimagery-3102320_pdzkzr.jpg",
+  "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718465/Portfolio/pexels-cax0000-1786758_wcae28.jpg",
+  "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718465/Portfolio/pexels-cottonbro-8679906_azwqvt.jpg",
+  "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718465/Portfolio/pexels-mikhail-nilov-6835973_y6hkic.jpg",
+  "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753718464/Portfolio/pexels-mikhail-nilov-8107943_largis.jpg"
+];
 
 const COLORS = ['#bbf7d0', '#99f6e4', '#bfdbfe', '#ddd6fe', '#f5d0fe', '#fed7aa', '#fee2e2'];
 const TAGS = [ 
@@ -36,8 +40,8 @@ const TAGS = [
                                 height: "100%"
                                 }}>
                                   <Image
-                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
-                                    alt="Portfolio Image"
+                                    src={portfolioImages[0]}   
+                                    alt="Portfolio Image 1"
                                     width={500}
                                     height={500}
                                     style={{    
@@ -68,8 +72,8 @@ const TAGS = [
                                         height: "100%"
                                         }}>
                                           <Image
-                                            src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
-                                            alt="Portfolio Image"
+                                            src={portfolioImages[1]}   
+                                            alt="Portfolio Image 2"
                                             width={500}
                                             height={500}
                                             style={{    
@@ -90,8 +94,8 @@ const TAGS = [
                                         height: "100%"
                                         }}>
                                           <Image
-                                            src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
-                                            alt="Portfolio Image"
+                                            src={portfolioImages[2]}   
+                                            alt="Portfolio Image 3"
                                             width={500}
                                             height={500}
                                             style={{    
@@ -114,8 +118,8 @@ const TAGS = [
                                 height: "100%"
                                 }}>
                                   <Image
-                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
-                                    alt="Portfolio Image"
+                                    src={portfolioImages[3]}   
+                                    alt="Portfolio Image 4"
                                     width={500}
                                     height={500}
                                     style={{
@@ -151,8 +155,8 @@ const TAGS = [
                               height: "100%"
                               }}>
                                 <Image
-                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
-                                    alt="Portfolio Image"
+                                    src={portfolioImages[4]}   
+                                    alt="Portfolio Image 5"
                                     width={500}
                                     height={500}
                                     style={{   
@@ -172,8 +176,8 @@ const TAGS = [
                                 height: "100%"
                                 }}>
                                   <Image
-                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
-                                    alt="Portfolio Image"
+                                    src={portfolioImages[5]}   
+                                    alt="Portfolio Image 6"
                                     width={500}
                                     height={500}
                                     style={{  
@@ -193,8 +197,8 @@ const TAGS = [
                                 height: "100%"
                                 }}>
                                   <Image
-                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
-                                    alt="Portfolio Image"
+                                    src={portfolioImages[6]}   
+                                    alt="Portfolio Image 7"
                                     width={500}
                                     height={500}
                                     style={{  
@@ -229,8 +233,8 @@ const TAGS = [
                               height: "100%"
                               }}>
                                 <Image
-                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
-                                    alt="Portfolio Image"
+                                    src={portfolioImages[7]}   
+                                    alt="Portfolio Image 8"
                                     width={500}
                                     height={500}
                                     style={{  
@@ -250,8 +254,8 @@ const TAGS = [
                                 height: "100%"
                                 }}>
                                   <Image
-                                    src="https://res.cloudinary.com/dbj8h56jj/image/upload/v1753610789/Portfolio/pexels-arantxa-treva-351075-959323_prenop.jpg"   
-                                    alt="Portfolio Image"
+                                    src={portfolioImages[0]}   
+                                    alt="Portfolio Image 1"
                                     width={500}
                                     height={500}
                                     style={{  
