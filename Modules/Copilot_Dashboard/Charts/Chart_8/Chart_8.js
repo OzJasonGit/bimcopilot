@@ -1,6 +1,6 @@
 "use client";
 
-import { select, scaleLinear, axisBottom, axisLeft, line, curveMonotoneX } from "d3";
+import * as d3 from "d3";
 import { useEffect, useRef } from "react";
 
 const Chart_8 = ({ width = 400, height = 400 }) => {

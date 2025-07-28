@@ -1,6 +1,6 @@
 "use client";
 
-import { select, scaleOrdinal, treemap, treemapSquarify, hierarchy, schemeTableau10 } from "d3";
+import * as d3 from "d3";
 import { useEffect, useRef } from "react";
 
 const Chart_10 = ({ data, width = 954, height = 954 }) => {
@@ -9,19 +9,19 @@ const Chart_10 = ({ data, width = 954, height = 954 }) => {
   useEffect(() => {
     if (!data || !svgRef.current) return;
 
-    const svg = select(svgRef.current);
+    const svg = d3.select(svgRef.current);
     svg.selectAll("*").remove(); // Clear previous content
 
     // Define color scale
-    const color = scaleOrdinal(data.children.map((d) => d.name), schemeTableau10);
+    const color = d3.scaleOrdinal(data.children.map((d) => d.name), d3.schemeTableau10);
 
     // Compute treemap layout
-    const root = treemap()
-      .tile(treemapSquarify) // Alternative: d3.treemapBinary, d3.treemapDice
+    const root = d3.treemap()
+      .tile(d3.treemapSquarify) // Alternative: d3.treemapBinary, d3.treemapDice
       .size([width, height])
       .padding(1)
       .round(true)(
-        hierarchy(data)
+        d3.hierarchy(data)
           .sum((d) => d.value)
           .sort((a, b) => b.value - a.value)
       );
