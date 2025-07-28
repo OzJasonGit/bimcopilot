@@ -49,9 +49,14 @@ export default class Products extends Component {
                     alignItems: 'left',
                   }}>
 
-                    <Link href={`/products/${product.slug}`}>
+                    <Link href={`/products/${product.slug}`}
+                          style={{
+                                width: '100%',
+                                height: '265px',                               
+                              }}>
 
-                      <div class="rounded-lg ..."
+                      <div 
+                        class="rounded-lg ..."
                         style={{
                           gridArea: 'IMAGE',
                           width: '100%',
@@ -93,7 +98,7 @@ export default class Products extends Component {
                     </div>
 
 
-                    
+
 
                   </div>
                   ))}
