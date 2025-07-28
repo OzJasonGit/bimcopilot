@@ -45,30 +45,21 @@ export default class Products extends Component {
              {products.map((product, index) => (
               <div id={styles.PRODUCT_CARD} key={index}
                 style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'left'
+                    width: '100%',                 
+                    alignItems: 'left',
                   }}>
-
-
-
-
-
 
                     <Link href={`/products/${product.slug}`}>
 
                       <div class="rounded-lg ..."
                         style={{
+                          gridArea: 'IMAGE',
                           width: '100%',
-                          height: 'auto',
-                          position: 'relative',
-                          background: '#eee',
-                          // minWidth: '220px', // ← Add this!
-                          // borderRadius: '4px',
+                          height: '100%',
+                          position: 'relative',                      
                           overflow: 'hidden',
                         }}
-                      >
-                      
+                      >                     
                         <Image
                           src={
                             product.images?.[0] && product.images[0].startsWith('/')
@@ -86,19 +77,23 @@ export default class Products extends Component {
                     </Link>
 
 
-
-
-
-                    <div style={{ textAlign: 'left', marginTop: '10px' }}>
-                      <Link href={`/products/${product.slug}`}>
-                        <h3 id={styles._H3} style={{ marginBottom: '4px' }}>
-                          {product.short_description}
-                        </h3>
-                        <h3 id={styles._H3} style={{ marginTop: '4px' }}>
-                          From ${product.commercial_price}
-                        </h3>
-                      </Link>
+                    <div 
+                      style={{ 
+                          textAlign: 'left', 
+                          marginTop: '10px' }}>
+                          <Link href={`/products/${product.slug}`}>
+                            <h3 id={styles._H3} style={{ marginBottom: '4px' }}>
+                              {product.short_description}
+                            </h3>
+                            <h3 id={styles._H3} style={{ marginTop: '4px' }}>
+                              From ${product.commercial_price}
+                            </h3>
+                          </Link>
                     </div>
+
+
+                    
+
                   </div>
                   ))}
 
