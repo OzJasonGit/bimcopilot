@@ -45,8 +45,7 @@ export default class Products extends Component {
              {products.map((product, index) => (
               <div id={styles.PRODUCT_CARD} key={index}
                 style={{
-                    display: 'flex',
-                    flexDirection: 'column',
+                    width: '100%',                 
                     alignItems: 'left'
                   }}>
 
