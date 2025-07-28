@@ -81,6 +81,8 @@ const { addToCart } = useContext(CartContext);
             image: Array.isArray(p.images) && p.images.length > 0 ? p.images[0] : '/images/placeholder.jpg',
             title: p.title || 'Untitled Product',
             slug: p.slug || p._id || '',
+            commercial_price: p.commercial_price || 0,
+            student_price: p.student_price || 0,
           }));
 
         setRelatedProducts(related);
@@ -372,49 +374,50 @@ const { addToCart } = useContext(CartContext);
                       Frequently Bought Together
                     </h2>
                   </div>
-                  <div id={styles.BOUGHT_IMAGE_HOLDER}>
-
-                    <div>
-
-                    </div>
-
-
-
-
-
-
+                  <div id={styles.BOUGHT_IMAGE_HOLDER} style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+                    gap: '20px',
+                    padding: '20px 0'
+                  }}>
 
                     {relatedProducts.map((relatedProduct, index) => (
                       <Link key={relatedProduct._id} href={`/products/${relatedProduct.slug}`}>
                         <div className="rounded-lg" id={styles[`SALES_IMAGE_${String.fromCharCode(65 + index)}`]}
-                             >
+                             style={{
+                               position: 'relative',
+                               width: '100%',
+                               height: '200px',
+                               overflow: 'hidden',
+                               borderRadius: '8px',
+                               marginBottom: '10px'
+                             }}>
                           <Image
                             alt={relatedProduct.title || 'Related product'}
                             width={500}
                             height={500}
                             src={relatedProduct.image}
+                            loading="lazy"
+                            placeholder="blur"
+                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                             style={{
-                              position: 'absolute',
                               width: '100%',
                               height: '100%',
                               objectFit: 'cover',
-                              gridArea: 'IMAGE',
                             }}
                             onError={() => console.log(`Related image failed to load: ${relatedProduct.image}`)}
                           />
                         </div>
-                        <br/>
 
                         <div>
-                          <h3>
-                            {parse(product.title)}    
+                          <h3 className="text-stone-700 font-avant_garde_bold text-sm">
+                            {parse(relatedProduct.title)}    
                           </h3>
                         </div>
-                        <br/>
 
                         <div>
-                          <h3>
-                            ${currentPrice?.toFixed(2)}{' '} 
+                          <h3 className="text-stone-600 font-avant_garde_medium text-sm">
+                            View Product
                           </h3>
                         </div>
 
