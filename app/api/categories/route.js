@@ -6,8 +6,6 @@ const CategorySchema = new mongoose.Schema({
   name: { type: String, required: true },
   slug: { type: String, required: true, unique: true },
 }, { timestamps: true });
-
-CategorySchema.index({ slug: 1 });
 const Category = mongoose.models.Category || mongoose.model("Category", CategorySchema);
 
 export async function GET() {
