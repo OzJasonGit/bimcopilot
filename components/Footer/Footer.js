@@ -105,6 +105,8 @@ export default class Footer extends Component {
                                     alt="Picture of the author"
                                     width={500}
                                     height={500}
+                                    loading="lazy"
+                                    unoptimized
                                     style={{
                                         position: "absolute",
                                         width: "100%",

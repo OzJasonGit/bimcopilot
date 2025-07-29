@@ -22,8 +22,6 @@ const ProductSchema = new mongoose.Schema({
   tags: { type: String },
   images: { type: [String], required: true },
 }, { timestamps: true });
-
-ProductSchema.index({ slug: 1 });
 const Product = mongoose.models.Product || mongoose.model("Product", ProductSchema);
 
 export async function GET() {
