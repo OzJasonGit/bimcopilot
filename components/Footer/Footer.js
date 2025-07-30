@@ -12,9 +12,12 @@ import Image from 'next/image';
 import Subform from "../Subscribetop/Client/subform";
 
 import logoMobile from './bimcopilot_logo_text_horizontal_white.svg';    
-import rocketShip from './giphy.gif';
+// import rocketShip from './giphy.gif';
+
 import logoARB from './logo_ARB.png';
 import logoRIBA from './logo_RIBA.png';
+
+const rocketShip = "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753899871/Portfolio/giphy_p528dq.gif";
 
 
 export default class Footer extends Component {
