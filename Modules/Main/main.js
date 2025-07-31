@@ -53,7 +53,7 @@ const Main = ({ }) => {
           <About />
           <Mainvideo />
           <Subfooter /> 
-          {/* <Subfooter2 /> */}
+          <Subfooter2 />
           <Footer />
 
         </>
