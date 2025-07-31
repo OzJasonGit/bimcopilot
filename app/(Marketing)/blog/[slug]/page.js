@@ -1,6 +1,6 @@
 "use client";
 
-import Blog from "@/Modules/Blog/blog";git 
+import Blog from "@/Modules/Blog/blog";
 import Blog_page from "@/Modules/Blog_page/blog_page"
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
