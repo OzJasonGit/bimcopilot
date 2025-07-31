@@ -497,8 +497,8 @@ const Blog_page = (stories) => {
                             <div className="bg-stone-100 rounded-full overflow-hidden"
                                 style={{
                                     gridArea: "AUTHOR",
-                                    height: "100%",
-                                    width: "100%",
+                                    height: "110px",
+                                    width: "110px",
                                     position: "relative",
                                     right: "-15px"
                                 }}>
@@ -506,15 +506,43 @@ const Blog_page = (stories) => {
                                     <Image
                                         src={getAuthorImage(story.author)}
                                         alt={`${story.author} - Author`}
-                                        width={100}
-                                        height={100}
+                                        width={110}
+                                        height={110}
                                         className="w-full h-full object-cover"
                                         style={{
                                             width: "100%",
                                             height: "100%",
                                             objectFit: "cover"
                                         }}
+                                        onLoad={() => console.log("Author image loaded successfully")}
+                                        onError={(e) => console.error("Author image failed to load:", e)}
                                     />
+                                )}
+                                {!story.author && (
+                                    <div style={{ 
+                                        width: "100%", 
+                                        height: "100%", 
+                                        display: "flex", 
+                                        alignItems: "center", 
+                                        justifyContent: "center",
+                                        color: "#666",
+                                        fontSize: "12px"
+                                    }}>
+                                        No Author
+                                    </div>
+                                )}
+                                {story.author && !getAuthorImage(story.author) && (
+                                    <div style={{ 
+                                        width: "100%", 
+                                        height: "100%", 
+                                        display: "flex", 
+                                        alignItems: "center", 
+                                        justifyContent: "center",
+                                        color: "#666",
+                                        fontSize: "12px"
+                                    }}>
+                                        No Image
+                                    </div>
                                 )}
                             </div>
 

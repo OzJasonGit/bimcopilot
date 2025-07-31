@@ -26,20 +26,26 @@ const AUTHOR_IMAGES = {
  * @returns {string} - The Cloudinary URL for the author's image
  */
 export const getAuthorImage = (authorName) => {
-  if (!authorName) return AUTHOR_IMAGES.default;
+  if (!authorName) {
+    console.log("No author name provided, returning default");
+    return AUTHOR_IMAGES.default;
+  }
   
   // Clean the author name and convert to lowercase for matching
   const cleanAuthorName = authorName.toLowerCase().trim();
+  console.log("Looking for author:", cleanAuthorName);
   
   // Try to find a match in the author images mapping
   for (const [key, imageUrl] of Object.entries(AUTHOR_IMAGES)) {
     if (key === 'default') continue; // Skip default in the loop
     
     if (cleanAuthorName.includes(key)) {
+      console.log("Found match for key:", key, "URL:", imageUrl);
       return imageUrl;
     }
   }
   
+  console.log("No match found, returning default image");
   // Return default image if no match found
   return AUTHOR_IMAGES.default;
 };
