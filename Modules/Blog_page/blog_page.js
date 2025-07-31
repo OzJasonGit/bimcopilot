@@ -18,29 +18,22 @@ import { display } from '@mui/system';
 
 import Subform from "./Client/subform";
 import AuthorImageTest from "@/components/AuthorImageTest";
-// Fallback author image function in case the helper import fails
-const getAuthorImageFallback = (authorName) => {
+// Simple author image function embedded directly in the component
+const getAuthorImage = (authorName) => {
   if (!authorName) return 'https://res.cloudinary.com/dbj8h56jj/image/upload/v1753899322/Authors/Oz%20Jason/Oz_Jason_Trimmed_ftxf1x.png';
   
   const cleanAuthorName = authorName.toLowerCase().trim();
+  console.log("Looking for author:", cleanAuthorName);
   
   // Direct mapping for Oz Jason
   if (cleanAuthorName.includes('oz') || cleanAuthorName.includes('jason')) {
+    console.log("Found match for Oz Jason");
     return 'https://res.cloudinary.com/dbj8h56jj/image/upload/v1753899322/Authors/Oz%20Jason/Oz_Jason_Trimmed_ftxf1x.png';
   }
   
+  console.log("No match found, returning default");
   return 'https://res.cloudinary.com/dbj8h56jj/image/upload/v1753899322/Authors/Oz%20Jason/Oz_Jason_Trimmed_ftxf1x.png';
 };
-
-// Try to import the helper, fallback to local function if it fails
-let getAuthorImage;
-try {
-  const helper = require("@/app/helpers/authorImages");
-  getAuthorImage = helper.getAuthorImage;
-} catch (error) {
-  console.log("Helper import failed, using fallback:", error);
-  getAuthorImage = getAuthorImageFallback;
-}
 
 const Blog_page = (stories) => {
     const params = useParams();
@@ -528,35 +521,25 @@ const Blog_page = (stories) => {
                                 {/* Test component to verify image loading */}
                                 <AuthorImageTest authorName={story.author} />
                                 
-                                {/* Original author image code */}
-                                {(() => {
-                                    const authorImageUrl = story.author ? getAuthorImage(story.author) : null;
-                                    console.log("Author:", story.author, "Image URL:", authorImageUrl);
-                                    
-                                    if (authorImageUrl) {
-                                        return (
-                                            <Image
-                                                src={authorImageUrl}
-                                                alt={`${story.author} - Author`}
-                                                width={110}
-                                                height={110}
-                                                className="w-full h-full object-cover"
-                                                style={{
-                                                    width: "100%",
-                                                    height: "100%",
-                                                    objectFit: "cover"
-                                                }}
-                                                onLoad={() => console.log("✅ Author image loaded successfully for:", story.author)}
-                                                onError={(e) => {
-                                                    console.error("❌ Author image failed to load for:", story.author, e);
-                                                    // Fallback to a default image if the main one fails
-                                                    e.target.src = 'https://res.cloudinary.com/dbj8h56jj/image/upload/v1753899322/Authors/Oz%20Jason/Oz_Jason_Trimmed_ftxf1x.png';
-                                                }}
-                                            />
-                                        );
-                                    }
-                                    return null;
-                                })()}
+                                {/* Author Image Display */}
+                                <Image
+                                    src={getAuthorImage(story.author)}
+                                    alt={`${story.author || 'Author'} - Author`}
+                                    width={110}
+                                    height={110}
+                                    className="w-full h-full object-cover"
+                                    style={{
+                                        width: "100%",
+                                        height: "100%",
+                                        objectFit: "cover"
+                                    }}
+                                    onLoad={() => console.log("✅ Author image loaded successfully for:", story.author)}
+                                    onError={(e) => {
+                                        console.error("❌ Author image failed to load for:", story.author, e);
+                                        // Fallback to a default image if the main one fails
+                                        e.target.src = 'https://res.cloudinary.com/dbj8h56jj/image/upload/v1753899322/Authors/Oz%20Jason/Oz_Jason_Trimmed_ftxf1x.png';
+                                    }}
+                                />
                                 {!story.author && (
                                     <div style={{ 
                                         width: "100%", 
