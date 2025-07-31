@@ -17,6 +17,7 @@ import SkeletonLoader from "@/components/Loader/loader";
 import { display } from '@mui/system';
 
 import Subform from "./Client/subform";
+import { getAuthorImage } from "@/app/helpers/authorImages";
 
 const Blog_page = (stories) => {
     const params = useParams();
@@ -32,6 +33,9 @@ const Blog_page = (stories) => {
                 const res = await axios.get(`/api/blog/${slug}`);
                 if (res.data?.story) {
                     setStory(res.data.story);
+                    // Debug: Log the story data to see what fields are available
+                    console.log("Story data:", res.data.story);
+                    console.log("Author field:", res.data.story.author);
                 } else {
                     setError("Story data format is invalid");
                 }
@@ -490,7 +494,7 @@ const Blog_page = (stories) => {
                                 position: "relative",
                             }}>
 
-                            <div className="bg-stone-100 rounded-full"
+                            <div className="bg-stone-100 rounded-full overflow-hidden"
                                 style={{
                                     gridArea: "AUTHOR",
                                     height: "100%",
@@ -498,6 +502,20 @@ const Blog_page = (stories) => {
                                     position: "relative",
                                     right: "-15px"
                                 }}>
+                                {story.author && getAuthorImage(story.author) && (
+                                    <Image
+                                        src={getAuthorImage(story.author)}
+                                        alt={`${story.author} - Author`}
+                                        width={100}
+                                        height={100}
+                                        className="w-full h-full object-cover"
+                                        style={{
+                                            width: "100%",
+                                            height: "100%",
+                                            objectFit: "cover"
+                                        }}
+                                    />
+                                )}
                             </div>
 
                             <div id={styles.NUMBER_GRID}
@@ -626,15 +644,17 @@ const Blog_page = (stories) => {
                                     <h3 
                                         id={styles._H3}
                                         className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
-                                        {parse(story.Author || "")}
-                                        Oz Jason
+                                        {parse(story.author || "Unknown Author")}
                                     </h3>    
                                     <br/>
                                     <h3 
                                         id={styles._H3}
                                         className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
-                                        {parse(story.Author || "")}
-                                        23rd January 2025
+                                        {story.publishDate ? new Date(story.publishDate).toLocaleDateString('en-US', {
+                                            day: 'numeric',
+                                            month: 'long',
+                                            year: 'numeric'
+                                        }) : "23rd January 2025"}
                                     </h3>   
 
                                                  

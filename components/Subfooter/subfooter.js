@@ -6,7 +6,8 @@ import React, { Component } from 'react';
 
 
 import Image from "next/image";
-import astronaut from "./ASTRONAUT_6.png";
+// import astronaut from "./ASTRONAUT_6.png";
+const astronaut = "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753971297/Portfolio/ASTRONAUT_6_sjyur9.png"
 
 
 export default class Subfooter extends Component {

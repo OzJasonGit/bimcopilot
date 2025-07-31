@@ -52,8 +52,8 @@ const Main = ({ }) => {
           <Astronaut />
           <About />
           <Mainvideo />
-          <Subfooter />
-          <Subfooter2 />
+          <Subfooter /> 
+          {/* <Subfooter2 /> */}
           <Footer />
 
         </>
