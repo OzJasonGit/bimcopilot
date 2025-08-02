@@ -263,17 +263,24 @@ const Menu = () => {
 
 
                                   <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart">
-                                  <div className="content-center ... align-middle ..." >
-                                      <FontAwesomeIcon icon={faHeart} size="3xs" className="text-slate-50" />
+                                  <div className="content-center ... align-middle ..."
+                                        style={{position:'relative',
+                                                left:'-70px',
+                                                top:'0.5px',
+                                               }}>
+                                      <FontAwesomeIcon icon={faHeart} size="xl" className="text-stone-50" />
                                     </div>
                                   </a>
 
                                   <a id={styles.CART} className="content-center ... align-middle ..." href="/cart">
                                     <div className="content-center ... align-middle ..."
                                       style={{
-                                        paddingLeft: "30px",                                      
+                                        paddingLeft: "32px", 
+                                        position:'relative',
+                                                left:'-70px',
+                                                top:'0.5px',                                     
                                       }}>
-                                      <FontAwesomeIcon icon={faCartShopping} size="3xs" className="text-slate-50" />
+                                      <FontAwesomeIcon icon={faCartShopping} size="xl" className="text-stone-50" />
                                     </div>
                                   </a>
 
