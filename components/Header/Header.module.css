@@ -538,16 +538,17 @@
     top: 2px;
   }
 
+
   #FIXED_HEADER {
     grid-area: MAIN-AREA;
     display: grid;
-    grid-row-gap: 0px;
+    grid-row-gap: 0;
     grid-column-gap: 40px;
     grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0px auto 0px;
+    grid-template-rows: 0 auto 0;
     grid-template-areas:
       ". . . . . . . . . . . . ."
-      "LOGO_HOLDER MENU TIME TIME TIME TIME . SIGN SIGN SIGN . MENU_BUTTON MENU_BUTTON"
+      "LOGO_HOLDER MENU TIME TIME SIGN SIGN SIGN SIGN . . . MENU_BUTTON MENU_BUTTON"
       ". . . . . . . . . . . . .";
   }
 
