@@ -91,8 +91,8 @@ const Products = () => {
                           </div>
                         </Link>
                         <div className={styles.text}>
-                          <h2 className={styles.title}>{parse(product.title)}</h2>
-                          <p className={styles.subtitle}>{parse(product.subtitle)}</p>
+                          <h2 id={styles._H2} className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(product.title)} </h2>
+                          <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(product.subtitle)}</p>
                         </div>
                       </div>
                     ))}
@@ -114,8 +114,8 @@ const Products = () => {
                                 </div>
                               </Link>
                               <div className={styles.text}>
-                                <h2 className={styles.title}>{parse(group[3].title)}</h2>
-                                <p className={styles.subtitle}>{parse(group[3].subtitle)}</p>
+                                <h2 id={styles._H2} className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(group[3].title)}</h2>
+                                <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[3].subtitle)}</p>
                               </div>
                             </div>
                             <div key={group[4].id} className={`${styles.card} ${styles.cardLarge} ${styles.cardRight}`}>
@@ -130,8 +130,8 @@ const Products = () => {
                                 </div>
                               </Link>
                               <div className={styles.text}>
-                                <h2 className={styles.title}>{parse(group[4].title)}</h2>
-                                <p className={styles.subtitle}>{parse(group[4].subtitle)}</p>
+                                <h2 id={styles._H2} className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(group[4].title)}</h2>
+                                <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[4].subtitle)}</p>
                               </div>
                             </div>
                           </>
@@ -149,8 +149,8 @@ const Products = () => {
                                 </div>
                               </Link>
                               <div className={styles.text}>
-                                <h2 className={styles.title}>{parse(group[4].title)}</h2>
-                                <p className={styles.subtitle}>{parse(group[4].subtitle)}</p>
+                                <h2 id={styles._H2} className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(group[4].title)}</h2>
+                                <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[4].subtitle)}</p>
                               </div>
                             </div>
                             <div key={group[3].id} className={styles.card}>
@@ -165,8 +165,8 @@ const Products = () => {
                                 </div>
                               </Link>
                               <div className={styles.text}>
-                                <h2 className={styles.title}>{parse(group[3].title)}</h2>
-                                <p className={styles.subtitle}>{parse(group[3].subtitle)}</p>
+                                <h2 className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(group[3].title)}</h2>
+                                <p className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[3].subtitle)}</p>
                               </div>
                             </div>
                           </>
