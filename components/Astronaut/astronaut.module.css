@@ -59,12 +59,14 @@
         ". . . "
         ". AREA AREA "
         ". AREA AREA ";
+    
 }
 
 
 #IMAGE {
     position: relative;
     grid-area: AREA;
+    overflow: hidden;
 }
 
 #IMAGE_MOB {
@@ -160,6 +162,7 @@
     #IMAGE {
         position: relative;
         grid-area: AREA;
+        overflow: hidden;
     }
 
     #IMAGE_MOB {
@@ -230,6 +233,7 @@
     #IMAGE {
         grid-area: AREA;
         position: relative;
+        overflow: hidden;
     }
 
     #IMAGE_MOB {
@@ -311,6 +315,7 @@
     #IMAGE {
         grid-area: AREA;
         position: relative;
+        overflow: hidden;
         
     }
 

@@ -18,7 +18,7 @@ export default class About extends Component {
             class=""
             id={styles.ASTRONAUT_IMAGE_1}>
 
-              <div id={styles.IMAGE}>
+              <div id={styles.IMAGE} class="rounded-xl ...">
                 <Image
                   id={styles.IMAGE_MOB}
                   src={astronaut_1}
