@@ -6,7 +6,8 @@ import SkeletonLoader from '../Loader/loader';
 import Infinite_Scroll from '../Carousel/Infinite_Scroll';
 import Tab from '../Tabs/tabs';
 
-import Oz_Jason from "./Oz_Jason_Trimmed.png";
+
+const Oz_Jason = "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753899322/Authors/Oz%20Jason/Oz_Jason_Trimmed_ftxf1x.png";
     
 
 export default class Aboutpage extends Component {

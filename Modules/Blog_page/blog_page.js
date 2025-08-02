@@ -17,6 +17,23 @@ import SkeletonLoader from "@/components/Loader/loader";
 import { display } from '@mui/system';
 
 import Subform from "./Client/subform";
+import AuthorImageTest from "@/components/AuthorImageTest";
+// Simple author image function embedded directly in the component
+const getAuthorImage = (authorName) => {
+  if (!authorName) return 'https://res.cloudinary.com/dbj8h56jj/image/upload/v1753899322/Authors/Oz%20Jason/Oz_Jason_Trimmed_ftxf1x.png';
+  
+  const cleanAuthorName = authorName.toLowerCase().trim();
+  console.log("Looking for author:", cleanAuthorName);
+  
+  // Direct mapping for Oz Jason
+  if (cleanAuthorName.includes('oz') || cleanAuthorName.includes('jason')) {
+    console.log("Found match for Oz Jason");
+    return 'https://res.cloudinary.com/dbj8h56jj/image/upload/v1753899322/Authors/Oz%20Jason/Oz_Jason_Trimmed_ftxf1x.png';
+  }
+  
+  console.log("No match found, returning default");
+  return 'https://res.cloudinary.com/dbj8h56jj/image/upload/v1753899322/Authors/Oz%20Jason/Oz_Jason_Trimmed_ftxf1x.png';
+};
 
 const Blog_page = (stories) => {
     const params = useParams();
@@ -32,6 +49,9 @@ const Blog_page = (stories) => {
                 const res = await axios.get(`/api/blog/${slug}`);
                 if (res.data?.story) {
                     setStory(res.data.story);
+                    // Debug: Log the story data to see what fields are available
+                    console.log("Story data:", res.data.story);
+                    console.log("Author field:", res.data.story.author);
                 } else {
                     setError("Story data format is invalid");
                 }
@@ -490,14 +510,62 @@ const Blog_page = (stories) => {
                                 position: "relative",
                             }}>
 
-                            <div className="bg-stone-100 rounded-full"
+                            <div className="bg-stone-100 rounded-full overflow-hidden"
                                 style={{
                                     gridArea: "AUTHOR",
-                                    height: "100%",
-                                    width: "100%",
+                                    height: "110px",
+                                    width: "110px",
                                     position: "relative",
                                     right: "-15px"
                                 }}>
+                                {/* Test component to verify image loading */}
+                                <AuthorImageTest authorName={story.author} />
+                                
+                                {/* Author Image Display */}
+                                <Image
+                                    src={getAuthorImage(story.author)}
+                                    alt={`${story.author || 'Author'} - Author`}
+                                    width={110}
+                                    height={110}
+                                    className="w-full h-full object-cover"
+                                    style={{
+                                        width: "100%",
+                                        height: "100%",
+                                        objectFit: "cover"
+                                    }}
+                                    onLoad={() => console.log("✅ Author image loaded successfully for:", story.author)}
+                                    onError={(e) => {
+                                        console.error("❌ Author image failed to load for:", story.author, e);
+                                        // Fallback to a default image if the main one fails
+                                        e.target.src = 'https://res.cloudinary.com/dbj8h56jj/image/upload/v1753899322/Authors/Oz%20Jason/Oz_Jason_Trimmed_ftxf1x.png';
+                                    }}
+                                />
+                                {!story.author && (
+                                    <div style={{ 
+                                        width: "100%", 
+                                        height: "100%", 
+                                        display: "flex", 
+                                        alignItems: "center", 
+                                        justifyContent: "center",
+                                        color: "#666",
+                                        fontSize: "12px"
+                                    }}>
+                                        No Author
+                                    </div>
+                                )}
+                                {story.author && !getAuthorImage(story.author) && (
+                                    <div style={{ 
+                                        width: "100%", 
+                                        height: "100%", 
+                                        display: "flex", 
+                                        alignItems: "center", 
+                                        justifyContent: "center",
+                                        color: "#666",
+                                        fontSize: "12px"
+                                    }}>
+                                        No Image
+                                    </div>
+                                )}
                             </div>
 
                             <div id={styles.NUMBER_GRID}
@@ -626,15 +694,17 @@ const Blog_page = (stories) => {
                                     <h3 
                                         id={styles._H3}
                                         className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
-                                        {parse(story.Author || "")}
-                                        Oz Jason
+                                        {parse(story.author || "Unknown Author")}
                                     </h3>    
                                     <br/>
                                     <h3 
                                         id={styles._H3}
                                         className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
-                                        {parse(story.Author || "")}
-                                        23rd January 2025
+                                        {story.publishDate ? new Date(story.publishDate).toLocaleDateString('en-US', {
+                                            day: 'numeric',
+                                            month: 'long',
+                                            year: 'numeric'
+                                        }) : "23rd January 2025"}
                                     </h3>   
 
                                                  

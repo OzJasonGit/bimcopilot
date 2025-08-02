@@ -4,12 +4,12 @@ import styles from './services_10.module.css';
 
 import React, { Component } from 'react';
 import Image from "next/image";
-import Placeholder_2 from './burj.jpeg';
+// import Placeholder_2 from './burj.jpeg';
 import Collapsed_FAQ from "../../components/Collapse_FAQ/collapse_FAQ";
 
 
 
-
+const Placeholder_2 = "https://res.cloudinary.com/dbj8h56jj/image/upload/v1753971411/Portfolio/burj_bfcncx.jpg"
 
 
 export default class Services_10 extends Component {

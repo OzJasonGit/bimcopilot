@@ -35,7 +35,7 @@ const Home = () => {
         return 
        }
   return (
-    <>
+    <> 
     <CartProvider>
       <Main stories={data.data} firstStory={firstStory} />
     </CartProvider>
