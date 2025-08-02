@@ -279,6 +279,23 @@
     }
 
 
+
+    #ASTRONAUT_IMAGE_1 {
+        position: relative;
+        display: grid;
+        grid-area: IMAGE;
+        width: 100%;
+        height: auto;
+        grid-template-columns: 0 1fr 0;
+        grid-template-rows: 100px 340px 100px;
+        grid-template-areas:
+            ". . . "
+            ". AREA . "
+            ". . . ";
+        top: -50px;
+    }
+
+
     #IMAGE {
         grid-area: AREA;
         position: relative;
