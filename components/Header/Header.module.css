@@ -324,7 +324,6 @@
   position: relative;
   display: grid;
   width: 100%;
-
   min-width: 200px;
   justify-self: right;
   grid-template-columns: 1fr 1.5px 1.5fr;
@@ -411,6 +410,8 @@
     " ."
     "LOGO "
     " .";
+  position: relative;
+  top: -4px;
 }
 
 #HOME_ICON {
@@ -533,7 +534,8 @@
       " CLOCK B1 HOME"
       " . . .";
     background: transparent;
-    top: 2.5px;
+    left: -70px;
+    top: 2px;
   }
 
   #FIXED_HEADER {
@@ -625,6 +627,8 @@
       ". ."
       "LOGO ."
       ". .";
+    position: relative;
+    top: -4px;
   }
 }
 
