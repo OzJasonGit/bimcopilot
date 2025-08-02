@@ -139,12 +139,12 @@ export default class Products extends Component {
                   </Link>
                   <div>
                     <Link href={`/products/${product.slug}`}>
-                      <h3 id={styles._H3} className="text-neutral-700 font-avant_garde_medium" style={{ marginBottom: "7.5px" }}>
+                      <h4 id={styles._H4} className="text-neutral-700 font-avant_garde_medium" style={{ marginBottom: "7.5px" }}>
                         {product.description}
-                      </h3>
-                      <h3 id={styles._H3} className="text-neutral-700 font-avant_garde_bold">
+                      </h4>
+                      <h4 id={styles._H4} className="text-neutral-700 font-avant_garde_bold">
                         From ${product.commercial_price}
-                      </h3>
+                      </h4>
                     </Link>
                   </div>
                 </div>
