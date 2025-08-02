@@ -14,19 +14,23 @@
 }
 
 
+
+
+
 #SHADOW_SECTION_TITLE {
     position: relative;
     width: 100%;
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
     background-color: transparent;
-    z-index: -20000;
-    overflow-x: hidden;
+    z-index: -30000;
 }
 
 
-.grid_0_image_left {
+
+
+
+#grid_0_image_left{
     width: 100%;
     max-width: 1960px;
     background-color: transparent;
@@ -36,13 +40,11 @@
     grid-template-rows: 60px auto 20px;
     grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 20px;
     grid-template-areas:
-
         ". . . . . . . . . . ."
-        ". IMAGE IMAGE IMAGE IMAGE . . . . . ."
+        ". IMAGE IMAGE IMAGE IMAGE IMAGE IMAGE . . . ."
         ". . . . . . . . . . .";
     z-index: 200;
 }
-
 
 
 
@@ -50,13 +52,13 @@
     display: grid;
     grid-area: IMAGE;
     width: 100%;
-    height: 600px;
+    height: 100%;
     grid-template-columns: 80px 1fr 80px;
-    grid-template-rows: 0px auto 100px;
-    grid-template-areas:   
-            ". . . "
-            ". AREA . "      
-            ". . . ";
+    grid-template-rows: 0 auto 100px;
+    grid-template-areas:
+        ". . . "
+        ". AREA AREA "
+        ". AREA AREA ";
 }
 
 
