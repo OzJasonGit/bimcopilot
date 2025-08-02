@@ -548,7 +548,7 @@
     grid-template-rows: 0 auto 0;
     grid-template-areas:
       ". . . . . . . . . . . . ."
-      "LOGO_HOLDER MENU TIME TIME SIGN SIGN SIGN SIGN . . . MENU_BUTTON MENU_BUTTON"
+      "LOGO_HOLDER MENU TIME TIME SIGN SIGN SIGN . . . . MENU_BUTTON MENU_BUTTON"
       ". . . . . . . . . . . . .";
   }
 
