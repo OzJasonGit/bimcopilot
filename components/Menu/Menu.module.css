@@ -1122,7 +1122,7 @@
 
     #CART_HOLDER {
         position: relative;
-        left: -170px;
+        left: -160px;
         top: 0.5px;
     }
 }
@@ -1515,6 +1515,10 @@
 
     #TIME {
         display: none;
+    }
+
+    #SIGNUP_CONTAINER {
+        left: -160px;
     }
 }
 
