@@ -334,6 +334,8 @@
     " CLOCK B1 HOME"
     " . . .";
   background: transparent;
+  left: -70px;
+  top: 2px;
 }
 
 #CLOCK_HOLDER {
