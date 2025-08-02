@@ -1958,6 +1958,13 @@
     #TIME {
         display: none;
     }
+    
+
+    #CART_HOLDER {
+        position: relative;
+        left: -60px;
+        top: 0.5px;
+    }
 
 }
 
