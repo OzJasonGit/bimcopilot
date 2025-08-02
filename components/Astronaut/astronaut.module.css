@@ -187,6 +187,7 @@
     }
 
 
+
     .grid_0_image_left {
         width: 100%;
         max-width: 960px;
@@ -195,9 +196,9 @@
         grid-column-gap: 30px;
         grid-row-gap: 20px;
         grid-template-rows: 40px auto 120px;
-        grid-template-columns: 100px 1fr 100px;
-        grid-template-areas: 
-            ". . ."       
+        grid-template-columns: 0px 1fr 0px;
+        grid-template-areas:
+            ". . ."
             ". IMAGE ."
             ". . .";
     }
