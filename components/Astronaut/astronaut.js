@@ -20,7 +20,7 @@ export default class About extends Component {
 
               <div id={styles.IMAGE}>
                 <Image
-                  
+                  id={styles.IMAGE_MOB}
                   src={astronaut_1}
                   alt="Astronaut Image"
                   width={500}
@@ -33,7 +33,7 @@ export default class About extends Component {
                     position: "relative",
                     width: "100%",
                     height: "100%",
-                    objectFit: "contain",
+                    //objectFit: "contain",
                   }}
               />
 

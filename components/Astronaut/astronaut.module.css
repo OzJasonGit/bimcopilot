@@ -67,6 +67,10 @@
     grid-area: AREA;
 }
 
+#IMAGE_MOB {
+    object-fit: contain;
+}
+
 
 
 
@@ -158,6 +162,10 @@
         grid-area: AREA;
     }
 
+    #IMAGE_MOB {
+        object-fit: contain;
+    }
+
 }
 
 
@@ -222,6 +230,10 @@
     #IMAGE {
         grid-area: AREA;
         position: relative;
+    }
+
+    #IMAGE_MOB {
+        object-fit: fill;
     }
 }
 
@@ -300,6 +312,10 @@
         grid-area: AREA;
         position: relative;
         
+    }
+
+    #IMAGE_MOB {
+        object-fit: fill;
     }
 
 }
