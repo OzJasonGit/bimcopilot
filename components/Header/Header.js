@@ -115,25 +115,25 @@ export default function Header() {
               {/* Navigation Menu */}
               <div className="content-center ..." id={styles.NAV_MENU}>
                 <Link className="content-center ..." id={styles.SERVICES} href="/services">
-                  <h3 id={styles.H_3_SERVICES} className="text-center ...  text-slate-50 font-avant_garde_bold" data-content="Services">
+                  <h3 id={styles.H_3_SERVICES} className="text-center ...  text-stone-50 font-avant_garde_bold" data-content="Services">
                     Services
                   </h3>
                 </Link>
 
                 <Link id={styles.PRODUCTS} href="/products">
-                  <h3 id={styles.H_3_PRODUCTS} className="text-center ...  text-slate-50  font-avant_garde_bold" data-content="Shop">
+                  <h3 id={styles.H_3_PRODUCTS} className="text-center ...  text-stone-50  font-avant_garde_bold" data-content="Shop">
                     Shop
                   </h3>
                 </Link>
 
                 <Link id={styles.PROJECTS} href="/copilot_dashboard">
-                  <h3 id={styles.H_3_PROJECTS} className="text-center ...  text-slate-50  font-avant_garde_bold" data-content="Copilot_Dashboard">
+                  <h3 id={styles.H_3_PROJECTS} className="text-center ...  text-stone-50  font-avant_garde_bold" data-content="Copilot_Dashboard">
                     Copilot_Dashboard
                   </h3>
                 </Link>
 
                 <Link id={styles.STORIES} href="/bloghome">
-                  <h3 id={styles.H_3_STORIES} className="text-center ...  text-slate-50 font-avant_garde_bold" data-content="Stories">
+                  <h3 id={styles.H_3_STORIES} className="text-center ...  text-stone-50 font-avant_garde_bold" data-content="Stories">
                     Stories
                   </h3>
                 </Link>
