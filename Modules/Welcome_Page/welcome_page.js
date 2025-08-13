@@ -18,7 +18,7 @@ import Services_1 from "../../components/services_1/services_black";
 import Image from "next/image";
 
 
-const Saleslanding = ({ stories, firstStory }) => {
+const Welcome_Page_Main = ({ stories, firstStory }) => {
   const storiesSolo_1 = stories.filter((story, i) => i == 3)
   const storiesToMap = stories.filter((story, i) => i != 0);
   const router = useRouter();
