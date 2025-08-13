@@ -303,7 +303,7 @@ const Saleslanding = ({ stories, firstStory }) => {
  );
 };
 
-export default Saleslanding;
+export default Welcome_Page_Main;
 
 
 
