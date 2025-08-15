@@ -73,44 +73,7 @@ const Welcome_Page_Main = ({ stories, firstStory }) => {
                                      
                 </div>
 
-                <div id={styles.SALES_CHECKOUT_HOLDER}>
-
-                    <div  id={styles.C1} class="justify-items-end">
-                        <h3 class="text-md ... text-stone-200 ... font-geist_semibold text-right">
-                            License Type.
-                        </h3>
-
-                        <br/> 
-
-                        
-                                              
-                        <h3  class="text-md ... text-stone-200 ...font-geist_regular text-right">
-                            Are you a student? Select Educational Use.
-                        </h3>
-                    </div>
-
-
-                    <br/> 
-
-                    <div id={styles.C2}>
-                        <div id={styles.PHONE_CONTAINER} class="bg-stone-200 ... rounded-xl ..."
-                             style={{
-                                    position: "relative",
-                                    width: "100%",
-                                    height: "440px", 
-                                    gridArea: "PHONE",                                 
-                                    }}>
-                        </div>
-                    </div>
-
-                    <br/> 
-
-
-                    <div  id={styles.C7}> 
-                        <Collapsed_Sales/>
-                    </div>
-                    
-                </div>
+           
 
             </div>
         </div>
