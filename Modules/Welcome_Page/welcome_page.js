@@ -30,8 +30,6 @@ const Welcome_Page_Main = ({ stories, firstStory }) => {
       <Header/>
       <Sides/>
 
-      <Services_1/>
-
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_scroll}>
@@ -276,17 +274,6 @@ const Welcome_Page_Main = ({ stories, firstStory }) => {
                             Automated systems for Architects, Designers and Manufacturers.
                             </a>{" "}                                               
                         </h3>
-                    </div>
-
-                    <div  id={styles.P_DESCRIPTION}>  
-                         <h3 id={styles._H3} class="text-md ... text-stone-200 ... font-geist_regular">
-                            Delta compression using up to 12 threads
-                            Compressing objects: 100% (5/5), done.
-                            Writing objects: 100% (5/5), 440 bytes | 440.00 KiB/s, done.
-                            Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
-                            remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
-                            Compressing objects: 100% (5/5), done.
-                        </h3>                       
                     </div>
 
                 </div>
