@@ -30,42 +30,35 @@ const Welcome_Page_Main = ({ stories, firstStory }) => {
       <Header/>
       <Sides/>
 
+      <Services_1/>
+
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_scroll}>
             <div id={styles.SALES_GRID_HOLDER}>
-
-                <div  id={styles.SALES_IMAGE_HOLDER}>
-
-                        
-
-                       
+                <div  id={styles.SALES_IMAGE_HOLDER}>                 
                     
                         <div class="rounded-xl ..." id={styles.SALES_IMAGE_2}>
                             <div>
-                                    {storiesSolo_1.map((story, index) => {
-                                    return (          
-                                    <Image
-                                    alt="Picture of the author"
-                                    key={story._id}
-                                    width={500}
-                                    height={500}
-                                    src={story.image}
-                                    style={{
-                                    position: "absolute",
-                                    width: "100%",
-                                    height: "100%",
-                                    objectFit: "cover",
-                                    
-                                    }}/>                        
-                                )})} 
+                                {storiesSolo_1.map((story, index) => {
+                                return (          
+                                <Image
+                                alt="Picture of the author"
+                                key={story._id}
+                                width={500}
+                                height={500}
+                                src={story.image}
+                                style={{
+                                position: "absolute",
+                                width: "100%",
+                                height: "100%",
+                                objectFit: "cover",                                   
+                                }}/>                        
+                            )})} 
                             </div>
                         </div>                                             
                                      
                 </div>
-
-           
-
             </div>
         </div>
       </section>
