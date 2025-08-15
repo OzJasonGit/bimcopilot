@@ -37,18 +37,9 @@ const Welcome_Page_Main = ({ stories, firstStory }) => {
 
                 <div  id={styles.SALES_IMAGE_HOLDER}>
 
-                        <div id={styles.SALES_IMAGE_1}>
-                            <h2  class="text-7xl ... text-stone-400 ... font-avant_garde_bold" 
-                                style={{
-                                paddingBottom: "0",
-                                }}>
-                                Newsletter
-                            </h2>                                                
-                        </div>  
+                        
 
-                        <div id={styles.SALES_SUBSCRIBE}>
-                            <Subscribe_2/>
-                        </div>  
+                       
                     
                         <div class="rounded-xl ..." id={styles.SALES_IMAGE_2}>
                             <div>
