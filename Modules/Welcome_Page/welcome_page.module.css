@@ -105,11 +105,9 @@
   grid-column-gap: 60px;
   grid-row-gap: 20px;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 300px;
-  padding-right: 120px;
+  grid-template-rows:  300px;
+
   grid-template-areas:
-    "IMAGE_1"
-    "SUBSCRIBE"
     "IMAGE_2";
 }
 
