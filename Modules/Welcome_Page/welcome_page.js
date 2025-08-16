@@ -1,5 +1,6 @@
 'use client'
 
+import Video from "./client/Video/video";
 import styles from './welcome_page.module.css';
 
 import { useRouter } from "next/navigation";
@@ -40,21 +41,22 @@ const Welcome_Page_Main = ({ stories, firstStory }) => {
                     
                         <div class="rounded-xl ..." id={styles.SALES_IMAGE_2}>
                             <div>
-                                {storiesSolo_1.map((story, index) => {
-                                return (          
-                                <Image
-                                alt="Picture of the author"
-                                key={story._id}
-                                width={500}
-                                height={500}
-                                src={story.image}
-                                style={{
-                                position: "absolute",
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",                                   
-                                }}/>                        
-                            )})} 
+                            <Video />
+                               {/* {storiesSolo_1.map((story, index) => {
+                                    return (          
+                                    <Image
+                                    alt="Picture of the author"
+                                    key={story._id}
+                                    width={500}
+                                    height={500}
+                                    src={story.image}
+                                    style={{
+                                    position: "absolute",
+                                    width: "100%",
+                                    height: "100%",
+                                    objectFit: "cover",                                   
+                                    }}/>                        
+                                )})} */}
                             </div>
                         </div>                                             
                                      
