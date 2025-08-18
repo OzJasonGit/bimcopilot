@@ -41,533 +41,564 @@
     writing-mode: vertical-rl;
     text-orientation: mixed;
     padding-left: 0px;
+    color: rgb(231 229 228);
 }
 
 
 
 .wrapper {
-    width: 100vw;
-    height: auto;
-}
+     width: 100vw;
+     height: auto;
+ }
 
-.wrapper_2 {
+ .wrapper_2 {
+     
+     top: -100vh;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     z-index: 2;
+     
+ }
 
-    top: -100vh;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
+ .fixed_center {
+     position: absolute;
+     height: 100vh;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     background-color: aliceblue;
+     top: 0;
+     left: 0;
+     margin: 0;
+ }
 
-}
-
-.fixed_center {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: aliceblue;
-    top: 0;
-    left: 0;
-    margin: 0;
-}
-
-#FIXED_GRADIENT {
+ #FIXED_GRADIENT {
     position: fixed;
     height: 70%;
     width: 100%;
     z-index: 10000000000000000000000000000000000000000000000000000000000000;
     bottom: -58.5vh;
-}
-
-
-.grid_0_fixed {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    max-width: 2160px;
-    background-color: aliceblue;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 40px;
-    grid-template-rows: 100px auto 20px;
-    grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
-    grid-template-areas: ". . . . . . ."
-        ". BANNER-1 . MAIN-AREA . BANNER-2 .";
-}
-
-.center_holder {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: aliceblue;
-    margin: 0;
-}
-
-.grid_0 {
-    width: 100%;
-    max-width: 2160px;
-    background-color: aliceblue;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 40px;
-    grid-template-rows: 60px auto;
-    grid-template-columns: 20px 80px 20px 1fr 20px 80px 20px;
-    grid-template-areas: ". . . . . . ."
-        ". BANNER-1 . MAIN-AREA . BANNER-2 .";
-}
-
-.grid_0_2_header {
-    position: fixed;
-    width: 100%;
-    height: 200px;
-    max-width: 2160px;
-    background-color: aliceblue;
-    display: grid;
-    grid-row-gap: 40px;
-    grid-template-rows: auto;
-    grid-template-columns: 40px 110px 40px 1fr 40px 110px 40px;
-    grid-template-areas:
-        ". BANNER-1  . MAIN-AREA . BANNER-2 .";
-    z-index: 1;
-}
-
-.scroller {
-    scrollbar-width: none;
-    position: absolute;
-    overflow-y: scroll;
-    height: 100vh;
-    width: 100%;
-}
-
-.container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    border-radius: 3.5px;
-}
-
-
-.container_absolute {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 3.5px;
-}
-
-.container_2 {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    justify-content: left;
-    border-radius: 3.5px;
-}
-
-.fixed {
-    width: 100%;
-    height: 90vh;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    bottom: 0;
-    z-index: -1000;
-    background-color: #B3B7A5;
-}
-
-.fixed_holder {
-    position: fixed;
-    top: 0px;
-    right: 10px;
-    width: 100%;
-    height: 100px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    justify-content: center;
-}
-
-.grid_0_2_top {
-    position: relative;
-    width: 100%;
-    max-width: 2160px;
-    background-color: aliceblue;
-    display: grid;
-    grid-column-gap: 0px;
-    grid-row-gap: 40px;
-    grid-template-rows: 80px auto;
-    grid-template-columns: 20px 80px 20px 1fr 20px 80px 20px;
-    grid-template-areas: ". . . . . . ."
-        ". BANNER-1 . MAIN-AREA . BANNER-2 .";
-}
-
-
-
-
-#RIGHT_FIXED {
-    top: 100vh;
-    display: grid;
-    position: relative;
-    grid-area: BANNER-2;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 1fr 20px;
-    grid-template-areas: "AREA PADDING"
-}
-
-#LEFT_FIXED {
-    top: 100vh;
-    display: grid;
-    position: relative;
-    grid-area: BANNER-1;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 1fr;
-    grid-template-areas: "AREA";
-}
-
-#LEFT_FIXED_STICKY {
-    position: relative;
-    grid-area: AREA;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 1fr;
-    grid-row-gap: 40px;
-    grid-template-rows: 300px 1fr 300px;
-    grid-template-areas: "SIDE-1"
-        "SIDE-2"
-        "SIDE-3";
-    top: -150px;
-}
-
-#RIGHT_FIXED_STICKY {
-    position: relative;
-    display: grid;
-    width: 100%;
-    right: -15px;
-    height: 100%;
-    grid-template-columns: 1fr 1000px;
-    grid-row-gap: 40px;
-    grid-template-rows: 400px 1fr 1fr;
-    grid-template-areas: "SIDE-1 ."
-        "NAVIGATION ."
-        "SIDE-3 .";
-}
-
-#PFBD_LINKS {
-
-    position: relative;
-    grid-area: SIDE-1;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 1fr;
-    grid-row-gap: 20px;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "AREA"
-        "AREA"
-        "AREA"
-        "PFBD";
-}
-
-#PAGE_NAVIGATION {
-    position: relative;
-    grid-area: NAVIGATION;
-    top: 41px;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-rows: 200px 20px 1fr 20px;
-    grid-template-columns: 40px 1fr 11.5px 1px 11.5px 1fr 40px;
-    grid-template-areas: ". . . LINE_1 . . ."
-        ". . . . . . ."
-        ". . NAV NAV NAV . ."
-        ". . . . . . ."
-        ". . . LINE_2 . . .";
-}
-
-
-#LINE_1 {
-    grid-area: LINE_1;
-}
-
-#NAV_LINK {
-    grid-area: NAV;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: 23px 15px 23px 15px 23px 15px 23px;
-    grid-template-areas:
-
-        "ONE"
-        "."
-        "TWO"
-        "."
-        "THREE"
-        "."
-        "FOUR";
-}
-
-
-#ANCHOR_1 {
-    grid-area: ONE;
-
-}
-
-
-#ANCHOR_2 {
-    grid-area: TWO;
-
-}
-
-#ANCHOR_3 {
-    grid-area: THREE;
-
-}
-
-#ANCHOR_4 {
-    grid-area: FOUR;
-
-}
-
-#ANCHOR_5 {
-    grid-area: FIVE;
-
-}
-
-
-#LINE_2 {
-    grid-area: LINE_2;
-}
-
-#ICON_SIDE_1 {
-    position: relative;
-    grid-area: SIDE-2;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 25px 1fr 25px;
-    grid-template-rows: 0px 1fr 0px;
-    grid-template-areas: ". . ."
-        ". AREA ."
-        ". . .";
-}
-
-#ICON_SIDE_2 {
-    position: relative;
-    top: 10px;
-    grid-area: AREA;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-rows: 1fr 360px 1fr;
-    grid-template-areas: ". . ."
-        ". AREA ."
-        ". . .";
-}
-
-
-
-
-
-#ICON_PLACEHOLDER {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    grid-area: AREA;
-}
-
-
-#ICON_GRID {
-    position: absolute;
-    left: 0px;
-    grid-area: AREA;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-row-gap: 0px;
-    grid-template-rows: 66.5px 66.5px 66.5px 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "PFBD"
-        "DESIGN-LAB"
-        "BIM-COPILOT"
-        ".";
-}
-
-
-.icon {
-    display: grid;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    grid-row-gap: 0px;
-    grid-template-rows: 0px 1fr 0px;
-    grid-template-columns: 0px 1fr 0px;
-    grid-template-areas: ". . ."
-        ". ICON ."
-        ". . .";
-}
-
-#PFBD_ICON {
-    display: grid;
-    grid-area: PFBD;
-    align-items: center;
-    justify-content: center;
-}
-
-#DESIGN_LAB_ICON {
-    grid-area: DESIGN-LAB;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    left: -7px;
-}
-
-#OZ_JASON_ICON {
-    grid-area: BIM-COPILOT;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-#PFBD_LINK {
-    grid-area: ICON;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 20.5px 1fr 2.5px;
-    grid-template-rows: 11.5px 1fr 11.5px;
-    grid-template-areas: ". . ."
-        ". CENTER ."
-        ". . .";
-}
-
-
-#BIMCOPILOT_LINK {
-    grid-area: ICON;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 20.5px 1fr 2.5px;
-    grid-template-rows: 11.5px 1fr 11.5px;
-    grid-template-areas: ". . ."
-        ". CENTER ."
-        ". . .";
-}
-
-
-#OZ_JASON_LINK {
-    grid-area: ICON;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 20.5px 1fr 2.5px;
-    grid-template-rows: 11.5px 1fr 11.5px;
-    grid-template-areas: ". . ."
-        ". CENTER ."
-        ". . .";
-}
-
-
-#_PFBD_ {
-    grid-area: CENTER;
-}
-
-
-#DESIGN_LAB_LINK {
-    grid-area: ICON;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 7.5px 1fr 7.5px;
-    grid-template-rows: 7.5px 1fr 7.5px;
-    grid-template-areas: ". . ."
-        ". CENTER ."
-        ". . .";
-}
-
-#CENTER {
-    grid-area: CENTER;
-    width: 100%;
-    height: 100%;
-}
-
-
-#BIM_COPILOT_LINK {
-    grid-area: ICON;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 7.5px 1fr 7.5px;
-    grid-template-rows: 7.5px 1fr 7.5px;
-    grid-template-areas: ". . ."
-        ". CENTER ."
-        ". . .";
-}
-
-
-#VERTICAL_NAVIGATION {
-    position: relative;
-    grid-area: AREA;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 1fr;
-    grid-row-gap: 10px;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "1"
-        "2"
-        "3"
-        "4";
-}
-
-#NAV_1 {
-    grid-area: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-#NAV_2 {
-    grid-area: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-#NAV_3 {
-    grid-area: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-#NAV_4 {
-    grid-area: 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
+ }
+
+
+ .grid_0_fixed {
+     position: fixed;
+     width: 100vw;
+     height: 100vh;
+     max-width: 2160px;
+     background-color: aliceblue;
+     display: grid;
+     grid-column-gap: 0px;
+     grid-row-gap: 40px;
+     grid-template-rows: 100px auto 20px;
+     grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+     grid-template-areas: ". . . . . . ."
+         ". BANNER-1 . MAIN-AREA . BANNER-2 .";
+ }
+
+ .center_holder {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     background-color: aliceblue;
+     margin: 0;
+ }
+
+ .grid_0 {
+     width: 100%;
+     max-width: 2160px;
+     background-color: aliceblue;
+     display: grid;
+     grid-column-gap: 0px;
+     grid-row-gap: 40px;
+     grid-template-rows: 60px auto;
+     grid-template-columns: 20px 80px 20px 1fr 20px 80px 20px;
+     grid-template-areas: ". . . . . . ."
+         ". BANNER-1 . MAIN-AREA . BANNER-2 .";
+ }
+
+ .grid_0_2_header {
+     position: fixed;
+     width: 100%;
+     height: 200px;
+     max-width: 2160px;
+     background-color: aliceblue;
+     display: grid;
+     grid-row-gap: 40px;
+     grid-template-rows: auto;
+     grid-template-columns: 40px 110px 40px 1fr 40px 110px 40px;
+     grid-template-areas:
+         ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+     z-index: 1;
+ }
+
+ .scroller {
+     scrollbar-width: none;
+     position: absolute;
+     overflow-y: scroll;
+     height: 100vh;
+     width: 100%;
+ }
+
+ .container {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     border-radius: 3.5px;
+ }
+
+
+ .container_absolute {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     overflow: hidden;
+     border-radius: 3.5px;
+ }
+
+ .container_2 {
+     width: 100%;
+     height: 100%;
+     position: relative;
+     display: flex;
+     justify-content: left;
+     border-radius: 3.5px;
+ }
+
+ .fixed {
+     width: 100%;
+     height: 90vh;
+     position: fixed;
+     display: flex;
+     justify-content: center;
+     bottom: 0;
+     z-index: -1000;
+     background-color: #B3B7A5;
+ }
+
+ .fixed_holder {
+     position: fixed;
+     top: 0px;
+     right: 10px;
+     width: 100%;
+     height: 100px;
+     padding-left: 10px;
+     padding-right: 10px;
+     display: flex;
+     justify-content: center;
+ }
+
+ .grid_0_2_top {
+     position: relative;
+     width: 100%;
+     max-width: 2160px;
+     background-color: aliceblue;
+     display: grid;
+     grid-column-gap: 0px;
+     grid-row-gap: 40px;
+     grid-template-rows: 80px auto;
+     grid-template-columns: 20px 80px 20px 1fr 20px 80px 20px;
+     grid-template-areas: ". . . . . . ."
+         ". BANNER-1 . MAIN-AREA . BANNER-2 .";
+ }
+
+
+ 
+
+ #RIGHT_FIXED {
+     top: 100vh;
+     display: grid;
+     position: relative;
+     grid-area: BANNER-2;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 1fr 20px;
+     grid-template-areas: "AREA PADDING"
+ }
+
+ #LEFT_FIXED {
+     top: 100vh;
+     display: grid;
+     position: relative;
+     grid-area: BANNER-1;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 1fr;
+     grid-template-areas: "AREA";
+ }
+
+ #LEFT_FIXED_STICKY {
+     position: relative;
+     grid-area: AREA;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 1fr;
+     grid-row-gap: 40px;
+     grid-template-rows: 300px 1fr 300px;
+     grid-template-areas: "SIDE-1"
+         "SIDE-2"
+         "SIDE-3";
+     top: -150px;
+ }
+
+ #RIGHT_FIXED_STICKY {
+     position: relative;
+     display: grid;
+     width: 100%;
+     right: -15px;
+     height: 100%;
+     grid-template-columns: 1fr 1000px;
+     grid-row-gap: 40px;
+     grid-template-rows: 400px 1fr 1fr;
+     grid-template-areas: "SIDE-1 ."
+         "NAVIGATION ."
+         "SIDE-3 .";
+ }
+
+ #PFBD_LINKS {
+
+     position: relative;
+     grid-area: SIDE-1;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 1fr;
+     grid-row-gap: 20px;
+     grid-template-rows: 1fr 1fr 1fr 1fr;
+     grid-template-areas: "AREA"
+         "AREA"
+         "AREA"
+         "PFBD";
+ }
+
+ #PAGE_NAVIGATION {
+     position: relative;
+     grid-area: NAVIGATION;
+     top: 41px;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-rows: 200px 20px 1fr 20px;
+     grid-template-columns: 40px 1fr 11.5px 1px 11.5px 1fr 40px;
+     grid-template-areas: ". . . LINE_1 . . ."
+         ". . . . . . ."
+         ". . NAV NAV NAV . ."
+         ". . . . . . ."
+         ". . . LINE_2 . . .";
+ }
+
+
+ #LINE_1 {
+     grid-area: LINE_1;
+ }
+
+ #NAV_LINK {
+     grid-area: NAV;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 1fr;
+     grid-template-rows: 23px 15px 23px 15px 23px 15px 23px;
+     grid-template-areas: 
+
+         "ONE"
+         "."
+         "TWO"
+         "."
+         "THREE"
+         "."
+         "FOUR";
+ }
+
+
+ #ANCHOR_1 {
+     grid-area: ONE;
+
+ }
+
+
+ #ANCHOR_2 {
+     grid-area: TWO;
+
+ }
+
+ #ANCHOR_3 {
+     grid-area: THREE;
+
+ }
+
+ #ANCHOR_4 {
+     grid-area: FOUR;
+
+ }
+
+ #ANCHOR_5 {
+     grid-area: FIVE;
+
+ }
+
+
+ #LINE_2 {
+     grid-area: LINE_2;
+ }
+
+ #ICON_SIDE_1 {
+     position: relative;
+     grid-area: SIDE-2;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 25px 1fr 25px;
+     grid-template-rows: 0px 1fr 0px;
+     grid-template-areas: ". . ."
+         ". AREA ."
+         ". . .";
+ }
+
+ #ICON_SIDE_2 {
+     position: relative;
+     top: 10px;
+     grid-area: AREA;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 0px 1fr 0px;
+     grid-template-rows: 1fr 360px 1fr;
+     grid-template-areas: ". . ."
+         ". AREA ."
+         ". . .";
+ }
+
+
+
+
+
+ #ICON_PLACEHOLDER {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     grid-area: AREA;
+ }
+
+
+ #ICON_GRID {
+     position: absolute;
+     left: 0px;
+     grid-area: AREA;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-row-gap: 0px;
+     grid-template-rows: 66.5px 66.5px 66.5px 1fr;
+     grid-template-columns: 1fr;
+     grid-template-areas:
+         "PFBD"
+         "BIM_COPILOT"
+         "OZ_JASON"
+         ".";
+ }
+
+
+ .icon {
+     display: grid;
+     position: relative;
+     width: 100%;
+     height: 100%;
+     grid-row-gap: 0px;
+     grid-template-rows: 0px 1fr 0px;
+     grid-template-columns: 0px 1fr 0px;
+     grid-template-areas: ". . ."
+         ". ICON ."
+         ". . .";
+ }
+
+
+ .icon_bimcopilot {
+     display: grid;
+     position: relative;
+     width: 100%;
+     height: 100%;
+     grid-row-gap: 0px;
+     grid-template-rows: 0px 1fr 0px;
+     grid-template-columns: 0px 1fr 0px;
+     grid-template-areas: ". . ."
+         ". ICON ."
+         ". . .";
+ }
+
+ #PFBD_ICON {
+     display: grid;
+     grid-area: PFBD;
+     align-items: center;
+     justify-content: center;
+ }
+
+ #DESIGN_LAB_ICON {
+     grid-area: DESIGN-LAB;
+     display: grid;
+     align-items: center;
+     justify-content: center;
+ }
+
+
+ #DESIGN_LAB_ICON {
+     grid-area: DESIGN-LAB;
+     display: grid;
+     align-items: center;
+     justify-content: center;
+ }
+
+ #OZ_JASON_ICON {
+     grid-area: BIM-COPILOT;
+     display: grid;
+     align-items: center;
+     justify-content: center;
+ }
+
+
+
+ #PFBD_LINK {
+     grid-area: ICON;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 20.5px 1fr 2.5px;
+     grid-template-rows: 11.5px 1fr 11.5px;
+     grid-template-areas: ". . ."
+                          ". CENTER ."
+                          ". . .";
+ }
+
+
+ #BIMCOPILOT_LINK {
+     grid-area: ICON;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 20.5px 1fr 2.5px;
+     grid-template-rows: 11.5px 1fr 11.5px;
+     grid-template-areas: ". . ."
+         ". CENTER ."
+         ". . .";
+ }
+
+
+ #OZ_JASON_LINK {
+     grid-area: ICON;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 20.5px 1fr 2.5px;
+     grid-template-rows: 11.5px 1fr 11.5px;
+     grid-template-areas: ". . ."
+         ". CENTER ."
+         ". . .";
+ }
+
+
+ #_PFBD_ {
+     grid-area: CENTER;
+ }
+
+
+ #DESIGN_LAB_LINK {
+     grid-area: ICON;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 7.5px 1fr 7.5px;
+     grid-template-rows: 7.5px 1fr 7.5px;
+     grid-template-areas: ". . ."
+         ". CENTER ."
+         ". . .";
+ }
+
+ #CENTER {
+     grid-area: CENTER;
+     width: 100%;
+     height: 100%;
+ }
+
+
+ #BIM_COPILOT_LINK {
+     grid-area: ICON;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 7.5px 1fr 7.5px;
+     grid-template-rows: 7.5px 1fr 7.5px;
+     grid-template-areas: ". . ."
+         ". CENTER ."
+         ". . .";
+ }
+
+
+ #VERTICAL_NAVIGATION {
+     position: relative;
+     grid-area: AREA;
+     display: grid;
+     width: 100%;
+     height: 100%;
+     grid-template-columns: 1fr;
+     grid-row-gap: 10px;
+     grid-template-rows: 1fr 1fr 1fr 1fr;
+     grid-template-areas: "1"
+         "2"
+         "3"
+         "4";
+ }
+
+ #NAV_1 {
+     grid-area: 1;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+ }
+
+ #NAV_2 {
+     grid-area: 2;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+ }
+
+ #NAV_3 {
+     grid-area: 3;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+ }
+
+ #NAV_4 {
+     grid-area: 4;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+ }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -584,63 +615,102 @@
 
 
 .github {
-    color: rgb(68 64 60);
+    color: rgb(231 229 228);
 }
 
 
 .medium {
-    color: rgb(68 64 60);
+    color: rgb(231 229 228);
 }
 
 .instagram {
-    color: rgb(68 64 60);
+    color: rgb(231 229 228);
 }
 
 .linkedin {
-    color: rgb(68 64 60);
+    color: rgb(231 229 228);
 }
 
 .youtube {
-    color: rgb(68 64 60);
+    color: rgb(231 229 228);
 }
 
 .dribbble {
-    color: rgb(68 64 60);
+    color: rgb(231 229 228);
 }
 
 .xtwitter {
-    color: rgb(68 64 60);
+    color: rgb(231 229 228);
 }
 
 
 
 
 
-@media all and (min-width: 960px) and (max-width: 1280px) {
-    .grid_0_fixed {
-        display: none;
-    }
-}
 
 
-@media all and (min-width: 480px) and (max-width: 960px) {
-    .grid_0_fixed {
-        display: none;
-    }
-}
 
 
-@media all and (min-width: 0px) and (max-width: 480px) {
-    .grid_0_fixed {
-        display: none;
-    }
 
 
-    #FIXED_GRADIENT {
-        position: fixed;
-        height: 37.5%;
-        width: 100%;
-        z-index: 10000000000000000000000000000000000000000000000000000000000000;
-        bottom: -60vh;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media all and (min-width: 960px) and (max-width: 1280px) {
+     .grid_0_fixed {
+         display: none;
+     }
+ }
+
+
+ @media all and (min-width: 480px) and (max-width: 960px) {
+     .grid_0_fixed {
+         display: none;
+     }
+ }
+
+
+ @media all and (min-width: 0px) and (max-width: 480px) {
+     .grid_0_fixed {
+         display: none;
+     }
+
+
+         #FIXED_GRADIENT {
+             position: fixed;
+             height: 37.5%;
+             width: 100%;
+             z-index: 10000000000000000000000000000000000000000000000000000000000000;
+             bottom: -60vh;
+         }
+ }
