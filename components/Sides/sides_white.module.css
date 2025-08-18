@@ -296,6 +296,7 @@
 
 #LINE_1 {
     grid-area: LINE_1;
+    background: rgb(68 64 60);
 }
 
 #NAV_LINK {
