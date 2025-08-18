@@ -13,7 +13,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Collapsed_Sales from "../../components/Collapse_Sales/collapse_sales";
 
-import Services_1 from "../../components/services_1/services_black";
+import Bimcopilot_logo from "../../components/services_bimcopilot/services_black";
 
 
 import Image from "next/image";
@@ -31,7 +31,7 @@ const Welcome_Page_Main = ({ stories, firstStory }) => {
       <Header/>
       <Sides/>
 
-      <Services_1/>
+      <Bimcopilot_logo/>
 
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
