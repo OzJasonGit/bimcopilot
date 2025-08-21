@@ -116,74 +116,59 @@ const Saleslanding = ({ stories, firstStory }) => {
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_scroll}>
+
+            <div id={styles.BOUGHT_IMAGE_HOLDER}>
+
+                <div class="rounded-lg ..." id={styles.SALES_IMAGE_A}>
+                    {storiesSolo_1.map((story, index) => {
+                            return (                      
+                        <Image
+                        alt="Picture of the author"
+                        key={story._id}
+                        width={500}
+                        height={500}
+                        src={story.image}
+                        style={{
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        }}/>                         
+                    )})} 
+                </div>  
+
+
+                <div class="rounded-lg ..." id={styles.SALES_IMAGE_B}>
+                    {storiesSolo_1.map((story, index) => {
+                        return (                 
+                        <Image
+                        alt="Picture of the author"
+                        key={story._id}
+                        width={500}
+                        height={500}
+                        src={story.image}
+                        style={{
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        }}/>                 
+                    )})} 
+                </div>   
+
+            </div>
+
+
+
             <div id={styles.BOUGHT_TOGETHER_GRID}> 
 
                 <div id={styles.BOUGHT_TOGETHER_BLOCK}>
-                    <div id={styles.BOUGHT_TITLE_HOLDER}>
-                        <h3 id={styles._H3} class="text-4xl ... text-stone-400 ... font-avant_garde_bold">
-                            Useful Tools for Designers <br/>
-                            Architects and Enthusiasts  
-                        </h3>
-                    </div>
-
-                    <div id={styles.BOUGHT_IMAGE_HOLDER}>
-
-                    <div class="rounded-lg ..." id={styles.SALES_IMAGE_A}>
-                            {storiesSolo_1.map((story, index) => {
-                                  return (                      
-                                <Image
-                                alt="Picture of the author"
-                                key={story._id}
-                                width={500}
-                                height={500}
-                                src={story.image}
-                                style={{
-                                position: "absolute",
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                                }}/>                         
-                            )})} 
-                        </div>  
 
 
-                    <div class="rounded-lg ..." id={styles.SALES_IMAGE_B}>
-                            {storiesSolo_1.map((story, index) => {
-                                  return (                 
-                                <Image
-                                alt="Picture of the author"
-                                key={story._id}
-                                width={500}
-                                height={500}
-                                src={story.image}
-                                style={{
-                                position: "absolute",
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                                }}/>                 
-                            )})} 
-                        </div>  
+                      
 
-                    <div class="rounded-lg ..." id={styles.SALES_IMAGE_C}>
-                            {storiesSolo_1.map((story, index) => {
-                                  return (                
-                                <Image
-                                alt="Picture of the author"
-                                key={story._id}
-                                width={500}
-                                height={500}
-                                src={story.image}
-                                style={{
-                                position: "absolute",
-                                width: "100%",
-                                height: "100%",
-                                objectFit: "cover",
-                                }}/>              
-                            )})} 
-                        </div>  
 
-                    </div>  
+
                 </div>
 
 
@@ -226,24 +211,6 @@ const Saleslanding = ({ stories, firstStory }) => {
                                         height: "100%",
                                         objectFit: "cover",
                                         }}/>                 
-                                    )})} 
-                                </div>  
-
-                            <div class="rounded-lg ..." id={styles.SALES_IMAGE_C}>
-                                    {storiesSolo_1.map((story, index) => {
-                                        return (                
-                                        <Image
-                                        alt="Picture of the author"
-                                        key={story._id}
-                                        width={500}
-                                        height={500}
-                                        src={story.image}
-                                        style={{
-                                        position: "absolute",
-                                        width: "100%",
-                                        height: "100%",
-                                        objectFit: "cover",
-                                        }}/>              
                                     )})} 
                                 </div>  
 

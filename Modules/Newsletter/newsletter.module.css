@@ -347,6 +347,18 @@
 }
 
 
+#BOUGHT_TOGETHER_BLOCK {
+  width: 100%;
+  height: auto;
+  grid-area: IMAGE;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: ;
+  grid-template-rows: auto auto;
+  grid-template-areas: "IMAGES";
+}
+
+
 
 
 #BOUGHT_TITLE_HOLDER {
