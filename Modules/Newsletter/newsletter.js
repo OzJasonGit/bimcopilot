@@ -12,7 +12,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Collapsed_Sales from "../../components/Collapse_Sales/collapse_sales";
 
-import Services_1 from "../../components/services_1/services_black";
+import Services_1 from "../../components/services_bimcopilot/services_1";
 
 
 import Image from "next/image";
