@@ -88,16 +88,16 @@ const Saleslanding = ({ stories, firstStory }) => {
                                 style={{
                                     gridArea: 'TITLE'                                  
                                 }}>
-                                    <h1>
+                                    <h3 class="text-3xl ... text-stone-200 ... font-avant_garde_bold">
                                         What the hell does this mean 
 
-                                    </h1>
+                                    </h3>
                             </div>
                             <div 
                                 style={{
                                     gridArea: 'BODY'                                  
                                 }}>
-                                    <p>
+                                    <p class="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                         This is the paragraph who are you? 
                                         
                                     </p>
