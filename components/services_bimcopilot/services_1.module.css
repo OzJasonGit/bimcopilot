@@ -107,7 +107,7 @@
     grid-area: SUB;
     display: grid;
     grid-column-gap: 40px;
-    grid-template-columns: 1fr 800px;
+    grid-template-columns: 1fr 400px;
     grid-template-rows: auto;
     grid-template-areas: ". BC";
   }
