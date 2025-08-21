@@ -34,9 +34,7 @@ const Saleslanding = ({ stories, firstStory }) => {
 
 
 
-      <div id={styles.SALES_SUBSCRIBE}>
-                            
-                        </div>  
+      
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <Subscribe_2/>     
