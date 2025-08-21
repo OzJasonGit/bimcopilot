@@ -40,7 +40,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                 <div  id={styles.SALES_IMAGE_HOLDER}>
 
                         <div id={styles.SALES_IMAGE_1}>
-                            <h2  class="text-7xl ... text-stone-400 ... font-avant_garde_bold" 
+                            <h2  class="text-6xl ... text-stone-400 ... font-avant_garde_bold" 
                                 style={{
                                 paddingBottom: "0",
                                 }}>
