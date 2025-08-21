@@ -315,6 +315,8 @@
   grid-area: PAYPAL;
 }
 
+
+
 #BOUGHT_TOGETHER_GRID {
   position: relative;
   width: 100%;
@@ -324,12 +326,10 @@
   grid-column-gap: 40px;
   grid-row-gap: 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 180px auto auto 0px;
+  grid-template-rows: auto auto;
   grid-template-areas:
-    ".  .  .  .  ."
     "IMAGE IMAGE IMAGE IMAGE ."
-    "DESCRIPTION DESCRIPTION DESCRIPTION . ."
-    ".  .  .  .  .";
+    "DESCRIPTION DESCRIPTION DESCRIPTION . .";
 }
 
 #BOUGHT_TOGETHER_BLOCK {
@@ -345,6 +345,9 @@
     "IMAGES"
     "DESCRIPTION";
 }
+
+
+
 
 #BOUGHT_TITLE_HOLDER {
   width: 100%;
