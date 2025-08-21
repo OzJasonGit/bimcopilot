@@ -33,11 +33,24 @@ const Saleslanding = ({ stories, firstStory }) => {
       <Services_1/>
 
 
+
+      <div id={styles.SALES_SUBSCRIBE}>
+                            
+                        </div>  
+
+      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+        <Subscribe_2/>     
+      </section>
+
+
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_scroll}>
             <div id={styles.SALES_GRID_HOLDER}>
 
                 <div  id={styles.SALES_IMAGE_HOLDER}>
+
+
+                        
 
                         <div id={styles.SALES_IMAGE_1}>
                             <h2  class="text-6xl ... text-stone-400 ... font-avant_garde_bold" 
@@ -48,9 +61,7 @@ const Saleslanding = ({ stories, firstStory }) => {
                             </h2>                                                
                         </div>  
 
-                        <div id={styles.SALES_SUBSCRIBE}>
-                            <Subscribe_2/>
-                        </div>  
+                        
                     
                         <div class="rounded-xl ..." id={styles.SALES_IMAGE_2}>
                             <div>
