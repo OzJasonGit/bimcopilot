@@ -84,9 +84,23 @@ const Saleslanding = ({ stories, firstStory }) => {
 
 
                         <div id={styles.BODY_HOLDER}>
-                            <div>
+                            <div 
+                                style={{
+                                    gridArea: 'TITLE'                                  
+                                }}>
+                                    <h1>
+                                        What the hell does this mean 
+
+                                    </h1>
                             </div>
-                            <div>
+                            <div 
+                                style={{
+                                    gridArea: 'BODY'                                  
+                                }}>
+                                    <p>
+                                        This is the paragraph who are you? 
+                                        
+                                    </p>
                             </div>
                         </div>                                          
                                      
