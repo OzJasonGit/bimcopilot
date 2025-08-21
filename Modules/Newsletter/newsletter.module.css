@@ -248,7 +248,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  grid-area: IMAGES;
+  grid-area: SUB;
   display: grid;
   grid-column-gap: 30px;
   grid-template-rows: 260px;
