@@ -80,7 +80,15 @@ const Saleslanding = ({ stories, firstStory }) => {
                                     }}/>                        
                                 )})} 
                             </div>
-                        </div>                                             
+                        </div>   
+
+
+                        <div id={styles.BODY_HOLDER}>
+                            <div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>                                          
                                      
                 </div>
 

@@ -408,8 +408,35 @@
 
 #SUB_TAG {
   grid-area: SUB_MAIN;
+  position: relative;
+  grid-area: ;
+  width: 100%;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+      "TITLE "
+      "BODY";
+
 }
 
+
+
+#BODY_HOLDER {
+  grid-area: BODY;
+  position: relative;
+  grid-area: ;
+  width: 100%;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "TITLE "
+    "BODY";
+
+}
 /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
