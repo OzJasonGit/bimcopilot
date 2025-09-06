@@ -136,7 +136,7 @@
   padding-top: 70px;
   position: relative;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   width: 100%;
   grid-area: MAIN-AREA;
   height: auto;
