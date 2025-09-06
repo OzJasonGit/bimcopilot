@@ -139,19 +139,19 @@ export default class Sides extends Component {
                                     <div id={styles.NAV_LINK}>
 
                                         <Link class="" id={styles.ANCHOR_1} href="/">                                            
-                                            <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300 "     />                                       
+                                            <FontAwesomeIcon  id={styles.CENTER} icon={faLinkedin} size="2xs" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300 "     />                                       
                                         </Link>
 
                                         <Link class="" id={styles.ANCHOR_2} href="/">
-                                            <FontAwesomeIcon class={styles.instagram} id={styles.CENTER} icon={faInstagram} size="2xs" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300"/>  
+                                            <FontAwesomeIcon  id={styles.CENTER} icon={faInstagram} size="2xs" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300"/>  
                                         </Link>
 
                                         <Link class="" id={styles.ANCHOR_3} href="/">
-                                            <FontAwesomeIcon class={styles.youtube} id={styles.CENTER} icon={faYoutube} size="2xs" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300"/>  
+                                            <FontAwesomeIcon  id={styles.CENTER} icon={faYoutube} size="2xs" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300"/>  
                                         </Link>
 
                                         <Link class="" id={styles.ANCHOR_4} href="/">
-                                            <FontAwesomeIcon class={styles.xtwitter} id={styles.CENTER} icon={faSquareXTwitter} size="2xs" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300"/>  
+                                            <FontAwesomeIcon  id={styles.CENTER} icon={faSquareXTwitter} size="2xs" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300"/>  
                                         </Link>
                                       
                                     </div>
