@@ -273,7 +273,7 @@ const Menu = () => {
                                          style={{
                                           paddingLeft: "35px",                                  
                                                 }}>
-                                      <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-red-500" />
+                                      <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-200" />
                                     </div>
                                   </a>
 
