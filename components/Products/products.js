@@ -116,10 +116,7 @@ export default class Products extends Component {
               {products.map((product, index) => (
                 <div key={index} id={styles.PRODUCT} style={{ gridArea: `AREA_${index + 1}` }}>
 
-                  <Link href={`/products/${product.slug}`} className="rounded-xl     p-6 
-                                                                                          transition-all duration-300 
-                                                                                          shadow-none hover:shadow-xl 
-                                                                                          cursor-pointer" 
+                  <Link href={`/products/${product.slug}`} className="rounded-xl     p-6 transition-all duration-300 shadow-none hover:shadow-xl cursor-pointer" 
                     style={{ position: "relative", width: "100%", height: "100%" }}>
                     <div id={styles.PRODUCT_OVERLAY_GRID} style={{ position: "absolute", width: "100%", height: "100%", zIndex: 100, left: "0px", top:"0px"}}>
                       <div style={{ gridArea: "LOGO", position: "relative" }}>
