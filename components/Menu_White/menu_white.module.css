@@ -2,18 +2,22 @@
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
+
+
 #_H2 {
   margin-bottom: 0;
   font-size: 1.15rem;
   line-height: 1.35rem;
 }
 
-
-
 #H_3 {
   margin-bottom: 0%;
   font-size: smaller;
 }
+
+
+
+
 
 .center_holder {
   position: relative;
@@ -24,9 +28,12 @@
   justify-content: center;
   background-color: aliceblue;
   margin: 0;
-  z-index: 10000;
+  z-index: -10;
   margin-top: -65px;
 }
+
+
+
 
 #SHADOW_SECTION_DRAWER {
   position: relative;
@@ -39,6 +46,10 @@
   margin-top: -65px;
 }
 
+
+
+
+
 .container_right {
   width: 100%;
   height: 100%;
@@ -47,6 +58,10 @@
   justify-content: right;
   align-items: center;
 }
+
+
+
+
 
 .HEADER_HOLDER {
   grid-area: MAIN-AREA;
@@ -59,6 +74,7 @@
   background-color: transparent;
   z-index: 100000;
   margin-top: -70px;
+
 }
 
 #header {
@@ -72,15 +88,19 @@
   grid-row-gap: 40px;
   grid-template-rows: auto;
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
-  grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+  grid-template-areas:
+    ". BANNER-1  . MAIN-AREA . BANNER-2 .";
   z-index: 80;
   margin-top: -65px;
 }
 
+
 .burger_dot {
   border-radius: 100%;
   background-color: transparent;
+
 }
+
 
 #FIXED_HEADER {
   grid-area: MAIN-AREA;
@@ -96,18 +116,25 @@
   margin-top: -190px;
 }
 
+
 #LOGO_MOB {
   grid-area: LOGO_HOLDER;
   width: 100%;
   height: 100px;
 }
 
+
+
+
 #DRAWER_LEFT {
   position: relative;
   height: 100%;
   width: 100%;
   z-index: 800000000000000000000000000000000000000000000000;
+
+
 }
+
 
 #DRAWER_MENU {
   position: relative;
@@ -128,6 +155,15 @@
     "TEXT";
 }
 
+
+
+
+
+
+
+
+
+
 #OTHER {
   grid-area: OTHER;
   display: grid;
@@ -137,10 +173,17 @@
   grid-template-rows: 350px auto 0px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-areas:
+
     "GIF GIF GIF ."
     "SOCIAL SOCIAL SOCIAL SOCIAL"
     ". . . .";
 }
+
+
+
+
+
+
 
 #SOCIAL {
   grid-area: SOCIAL;
@@ -156,13 +199,29 @@
     "GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN .";
 }
 
+
+
+
+
+
 #ARB_ICONS {
+
   grid-area: ARB;
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr 20px 1fr;
-  grid-template-areas: "ARB . RIBA";
+  grid-template-areas:
+    "ARB . RIBA";
+
+
 }
+
+
+
+
+
+
+
 
 #ARB {
   position: relative;
@@ -176,9 +235,51 @@
   left: -45px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 #TEXT {
   grid-area: TEXT;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #MEDIUM_ICON {
   display: grid;
@@ -215,6 +316,8 @@
   justify-content: left;
 }
 
+
+
 #PFBD_LINK {
   grid-area: ICON;
   display: grid;
@@ -228,15 +331,22 @@
     ". .    .";
 }
 
+
+
+
 #CENTER {
   grid-area: CENTER;
   width: 100%;
   height: 100%;
 }
 
+
+
+
 .github {
   color: rgb(68 64 60);
 }
+
 
 .medium {
   color: rgb(68 64 60);
@@ -254,6 +364,26 @@
   color: rgb(68 64 60);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #DRAWER_ICONS {
   grid-area: ICONS;
   position: relative;
@@ -262,32 +392,48 @@
   display: grid;
   grid-column-gap: 20px;
   grid-template-columns: 40px 40px 40px 1fr;
-  grid-template-areas: "PFBD DLPFBD BIMCOPILOT";
+  grid-template-areas:
+    "PFBD DLPFBD BIMCOPILOT";
 }
+
+
 
 #PFBD_ICON {
   grid-area: PFBD;
 }
 
+
 #DESIGN_LAB_ICON {
   grid-area: DLPFBD;
 }
+
+
+
 
 #SERVICES {
   grid-area: SERVICES;
 }
 
+
 #COPILOT_DASHBOARD {
   grid-area: COPILOT_DASHBOARD;
 }
+
 
 #STORIES {
   grid-area: STORIES;
 }
 
+
 #SHOP {
   grid-area: SHOP;
 }
+
+
+
+
+
+
 
 #BUTTON_HOLDER_RIGHT {
   grid-area: MENU-BUTTON;
@@ -304,12 +450,14 @@
   top: 82.3px;
 }
 
+
 #HEADER_MENU_1 {
   grid-area: AREA;
-  background-color: #151515;
+  background-color: #e41414;
   width: 100%;
   height: 100%;
 }
+
 
 #HEADER_MENU_2 {
   grid-area: AREA;
@@ -321,6 +469,7 @@
     "  ."
     "BURGER"
     " .";
+
 }
 
 #B_H_2 {
@@ -337,15 +486,31 @@
   width: 100%;
   height: 100%;
   grid-area: AREA;
+
 }
+
+
 
 #BURGER_MENU {
   grid-area: AREA;
 }
 
+
 #BURGER_HOLDER {
   grid-area: BURGER;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 #DRAWER_CONTAINER {
   position: absolute;
@@ -356,7 +521,9 @@
   background-color: rgb(255, 102, 36);
 }
 
+
 #DRAWER_GRID {
+
   max-height: 0;
   position: absolute;
   display: grid;
@@ -399,9 +566,13 @@
   grid-area: TECH;
 }
 
+
 #RESUME_NAV {
   grid-area: RESUME;
 }
+
+
+
 
 #HOME_ICON {
   grid-area: HOME;
@@ -419,6 +590,8 @@
   grid-area: CONTACT;
 }
 
+
+
 #DATE_ICON {
   grid-area: DATE;
 }
@@ -427,9 +600,12 @@
   grid-area: CLOCK;
 }
 
-/* ---------------------------------------------------------------------------------------*/
-/* ---------------------------------------------------------------------------------------*/
-/* ---------------------------------------------------------------------------------------*/
+
+#CART_HOLDER {
+  position: relative;
+  left: -70px;
+  top: 0.5px;
+}
 
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
@@ -519,11 +695,57 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------------------------*/
 @media all and (min-width: 960px) and (max-width: 1280px) {
+
+
+
+
   #DRAWER_LEFT {
     height: 100%;
     z-index: 800000000000000000000000000000000000000000000000;
   }
+
+
 
   .center_holder {
     width: 100%;
@@ -535,6 +757,7 @@
     margin: 0;
   }
 
+
   .container {
     width: 100%;
     height: 100%;
@@ -545,6 +768,7 @@
     border-radius: 1.5px;
   }
 
+
   .container_2 {
     width: 100%;
     height: 100%;
@@ -552,6 +776,7 @@
     display: flex;
     justify-content: left;
   }
+
 
   .container_right {
     width: 100%;
@@ -562,6 +787,8 @@
     align-items: center;
   }
 
+
+
   .hidebar {
     position: fixed;
     width: 100%;
@@ -570,6 +797,7 @@
     background-color: aliceblue;
     z-index: 100;
   }
+
 
   #header {
     position: fixed;
@@ -582,14 +810,22 @@
     grid-row-gap: 40px;
     grid-template-rows: auto;
     grid-template-columns: 40px 0px 0px 1fr 0px 0px 40px;
-    grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+    grid-template-areas:
+      ". BANNER-1  . MAIN-AREA . BANNER-2 .";
     z-index: 80;
   }
+
+
 
   .burger_dot {
     border-radius: 100%;
     background-color: #151515;
+
   }
+
+
+
+
 
   #FIXED_HEADER {
     grid-area: MAIN-AREA;
@@ -620,6 +856,8 @@
     background: transparent;
   }
 
+
+
   #SIGNUP {
     grid-area: SIGN_IN;
     display: grid;
@@ -635,6 +873,11 @@
     background: transparent;
   }
 
+
+
+
+
+
   #LOGO_ICON {
     grid-area: LOGO_HOLDER;
     display: grid;
@@ -646,6 +889,10 @@
       "LOGO ."
       ". .";
   }
+
+
+
+
 
   #BUTTON_HOLDER_LEFT {
     grid-area: DATE-HOLDER;
@@ -660,6 +907,8 @@
       "AREA"
       ".";
   }
+
+
 
   #BUTTON_HOLDER_RIGHT {
     grid-area: MENU-BUTTON;
@@ -676,10 +925,19 @@
     top: 82.3px;
   }
 
+
+
+
+
+
+
+
+
   #HEADER_MENU_1 {
     grid-area: AREA;
     background-color: #151515;
   }
+
 
   #HEADER_MENU_2 {
     grid-area: AREA;
@@ -705,15 +963,22 @@
     width: 100%;
     height: 100%;
     grid-area: AREA;
+
   }
+
+
 
   #BURGER_MENU {
     grid-area: AREA;
   }
 
+
   #BURGER {
     grid-area: BURGER;
   }
+
+
+
 
   #CLOCK_HOLDER {
     grid-area: CLOCK-HOLDER;
@@ -725,6 +990,9 @@
       "AREA AREA ."
       ". . .";
   }
+
+
+
 
   #EMPTY {
     grid-area: EMPTY;
@@ -738,13 +1006,16 @@
       ". . .";
   }
 
+
   #PFBD_RIGHT_DATE {
     grid-area: DATE;
   }
 
+
   #PFBD_RIGHT_CLOCK {
     grid-area: CLOCK;
   }
+
 
   #TIME {
     display: grid;
@@ -753,13 +1024,16 @@
     grid-template-columns: 1fr 1.5px 1fr;
     grid-template-rows: 0px auto 0px;
     grid-column-gap: 0px;
-    grid-template-areas:
-      ". . ."
+    grid-template-areas: ". . ."
       "DATE B4 CLOCK"
       ". . .";
   }
 
+
+
+
   #CLOCK {
+
     padding-top: 0px;
     font-weight: 500;
     font-style: normal;
@@ -769,7 +1043,9 @@
     margin-bottom: 0%;
   }
 
+
   #DATE {
+
     padding-top: 0px;
     padding-bottom: 0px;
     font-weight: 700;
@@ -779,6 +1055,7 @@
     text-align: left;
     margin: 0%;
   }
+
 
   #LOGO_HOLDER {
     grid-area: LOGO-HOLDER;
@@ -791,6 +1068,9 @@
       "LOGO ."
       ". .";
   }
+
+
+
 
   /*BURGER------------------------------------------------------------------------------*/
   #burger_test_1 #burger_test_2::before {
@@ -831,11 +1111,19 @@
     transform: rotateZ(-45deg);
   }
 
+
+
   /* Button placement */
   #burger_test_1 {
     position: absolute;
     left: 100%;
     margin-left: -18px;
+  }
+
+  #CART_HOLDER {
+    position: relative;
+    left: -160px;
+    top: 0.5px;
   }
 }
 
@@ -843,105 +1131,86 @@
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media all and (min-width: 480px) and (max-width: 960px) {
+
+
+
   #DRAWER_LEFT {
     height: 100%;
     z-index: 800000000000000000000000000000000000000000000000;
   }
+
 
   .center_holder {
     width: 100%;
@@ -953,6 +1222,7 @@
     margin: 0;
   }
 
+
   .container {
     width: 100%;
     height: 100%;
@@ -963,6 +1233,7 @@
     border-radius: 1.5px;
   }
 
+
   .container_2 {
     width: 100%;
     height: 100%;
@@ -970,6 +1241,7 @@
     display: flex;
     justify-content: left;
   }
+
 
   .container_right {
     width: 100%;
@@ -980,6 +1252,8 @@
     align-items: center;
   }
 
+
+
   .hidebar {
     position: fixed;
     width: 100%;
@@ -988,6 +1262,7 @@
     background-color: aliceblue;
     z-index: 100;
   }
+
 
   #header {
     position: fixed;
@@ -1000,14 +1275,20 @@
     grid-row-gap: 40px;
     grid-template-rows: auto;
     grid-template-columns: 30px 0px 0px 1fr 0px 0px 30px;
-    grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+    grid-template-areas:
+      ". BANNER-1  . MAIN-AREA . BANNER-2 .";
     z-index: 80;
   }
+
+
+
 
   .burger_dot {
     border-radius: 100%;
     background-color: #151515;
+
   }
+
 
   #FIXED_HEADER {
     grid-area: MAIN-AREA;
@@ -1023,6 +1304,9 @@
     margin-top: -204.5px;
   }
 
+
+
+
   #BUTTON_HOLDER_LEFT {
     grid-area: DATE-HOLDER;
     display: grid;
@@ -1036,6 +1320,10 @@
       "AREA"
       ".";
   }
+
+
+
+
 
   #BUTTON_HOLDER_RIGHT {
     grid-area: MENU-BUTTON;
@@ -1051,11 +1339,13 @@
     top: 47px;
   }
 
+
   #HEADER_MENU_1 {
     height: 100%;
     grid-area: AREA;
     background-color: #151515;
   }
+
 
   #HEADER_MENU_2 {
     grid-area: AREA;
@@ -1081,15 +1371,22 @@
     width: 100%;
     height: 100%;
     grid-area: AREA;
+
   }
+
+
 
   #BURGER_MENU {
     grid-area: AREA;
   }
 
+
   #BURGER {
     grid-area: BURGER;
   }
+
+
+
 
   #CLOCK_HOLDER {
     grid-area: CLOCK-HOLDER;
@@ -1102,6 +1399,9 @@
       ". . .";
   }
 
+
+
+
   #EMPTY {
     grid-area: EMPTY;
     display: grid;
@@ -1113,6 +1413,7 @@
       ". AREA ."
       ". . .";
   }
+
 
   #DATE_CLOCK {
     grid-area: DATE-HOLDER;
@@ -1130,11 +1431,16 @@
     grid-area: DATE;
   }
 
+
   #PFBD_RIGHT_CLOCK {
     grid-area: CLOCK;
   }
 
+
+
+
   #CLOCK {
+
     padding-top: 0px;
     font-weight: 400;
     font-style: normal;
@@ -1143,7 +1449,9 @@
     text-align: left;
   }
 
+
   #DATE {
+
     padding-top: 0px;
     padding-bottom: 0px;
     font-weight: 700;
@@ -1152,6 +1460,9 @@
     color: #151515;
     text-align: left;
   }
+
+
+
 
   /*BURGER------------------------------------------------------------------------------*/
   #burger_test_1 #burger_test_2::before {
@@ -1192,6 +1503,8 @@
     transform: rotateZ(-45deg);
   }
 
+
+
   /* Button placement */
   #burger_test_1 {
     position: absolute;
@@ -1199,120 +1512,111 @@
     margin-left: -18px;
   }
 
+
   #TIME {
     display: none;
   }
+
+
 }
 
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media all and (min-width: 0px) and (max-width: 480px) {
+
   #DRAWER_LEFT {
+
     height: 100%;
     z-index: 800000000000000000000000000000000000000000000000;
     width: 70vw;
   }
+
+
 
   .center_holder {
     width: 100%;
@@ -1324,6 +1628,7 @@
     margin: 0;
   }
 
+
   .container {
     width: 100%;
     height: 100%;
@@ -1334,6 +1639,7 @@
     border-radius: 1.5px;
   }
 
+
   .container_2 {
     width: 100%;
     height: 100%;
@@ -1341,6 +1647,7 @@
     display: flex;
     justify-content: left;
   }
+
 
   .container_right {
     width: 100%;
@@ -1351,6 +1658,8 @@
     align-items: center;
   }
 
+
+
   .hidebar {
     position: fixed;
     width: 100%;
@@ -1359,6 +1668,7 @@
     background-color: aliceblue;
     z-index: 100;
   }
+
 
   #header {
     position: fixed;
@@ -1371,21 +1681,28 @@
     grid-row-gap: 40px;
     grid-template-rows: auto;
     grid-template-columns: 20px 0px 0px 1fr 0px 0px 20px;
-    grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+    grid-template-areas:
+      ". MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA .";
     z-index: 80;
   }
+
+
+
 
   .burger_dot {
     border-radius: 100%;
     background-color: #151515;
+
   }
+
+
 
   #FIXED_HEADER {
     grid-area: MAIN-AREA;
     display: grid;
     grid-row-gap: 0px;
     grid-column-gap: 20px;
-    grid-template-columns: 60px 1fr 100px;
+    grid-template-columns: 45px 1fr 250px;
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
       " . . ."
@@ -1393,9 +1710,16 @@
       " . . .";
   }
 
+
   #NAV_MENU {
     display: none;
   }
+
+
+
+
+
+
 
   #LOGO_LINK {
     grid-area: LOGO;
@@ -1404,24 +1728,32 @@
     grid-template-columns: 1fr 5px 5px;
     width: 100%;
     height: 100%;
-    grid-template-areas:
-      ". . ."
+    grid-template-areas: ". . ."
       "LOGO . ."
       ". . .";
   }
+
 
   #LOGO_MOB {
     grid-area: LOGO_HOLDER;
     width: 100%;
     height: 100%;
-    top: 180px;
+    top: 175px;
   }
+
+
+
+
+
+
+
 
   #LOGO {
     grid-area: LOGO;
     width: 100%;
     height: 100%;
   }
+
 
   #BUTTON_HOLDER_LEFT {
     grid-area: DATE-HOLDER;
@@ -1437,6 +1769,10 @@
       ".";
   }
 
+
+
+
+
   #BUTTON_HOLDER_RIGHT {
     grid-area: MENU-BUTTON;
     display: grid;
@@ -1451,6 +1787,12 @@
     margin-top: 5px;
   }
 
+
+
+
+
+
+
   #B_H_2 {
     grid-area: BURGER;
     width: 100%;
@@ -1464,15 +1806,22 @@
     width: 100%;
     height: 100%;
     grid-area: AREA;
+
   }
+
+
 
   #BURGER_MENU {
     grid-area: AREA;
   }
 
+
   #BURGER {
     grid-area: BURGER;
   }
+
+
+
 
   #CLOCK_HOLDER {
     grid-area: CLOCK-HOLDER;
@@ -1485,6 +1834,9 @@
       ". . .";
   }
 
+
+
+
   #EMPTY {
     grid-area: EMPTY;
     display: grid;
@@ -1496,6 +1848,7 @@
       ". AREA ."
       ". . .";
   }
+
 
   #DATE_CLOCK {
     grid-area: DATE-HOLDER;
@@ -1513,11 +1866,16 @@
     grid-area: DATE;
   }
 
+
   #PFBD_RIGHT_CLOCK {
     grid-area: CLOCK;
   }
 
+
+
+
   #CLOCK {
+
     padding-top: 0px;
     font-weight: 400;
     font-style: normal;
@@ -1526,7 +1884,9 @@
     text-align: left;
   }
 
+
   #DATE {
+
     padding-top: 0px;
     padding-bottom: 0px;
     font-weight: 700;
@@ -1535,6 +1895,9 @@
     color: #151515;
     text-align: left;
   }
+
+
+
 
   /*BURGER------------------------------------------------------------------------------*/
   #burger_test_1 #burger_test_2::before {
@@ -1575,6 +1938,8 @@
     transform: rotateZ(-45deg);
   }
 
+
+
   /* Button placement */
   #burger_test_1 {
     position: absolute;
@@ -1582,13 +1947,25 @@
     margin-left: -18px;
   }
 
+
   .DRAWER_CSS {
-    width: 250px;
+    width: 250PX;
+
   }
+
+
 
   #TIME {
     display: none;
   }
+
+
+  #CART_HOLDER {
+    position: relative;
+    left: -120px;
+    top: 0.5px;
+  }
+
 }
 
 /* ---------------------------------------------------------------------------------------*/
