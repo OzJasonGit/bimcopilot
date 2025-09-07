@@ -193,7 +193,7 @@ export default function CheckoutPage() {
                       >
                         +
                       </button>
-                      <p className="w-20 text-right font-medium">
+                      <p className="w-20 text-right font-medium text-stone-50">
                         ${(item.quantity * item.price).toFixed(2)}
                       </p>
                       <button
@@ -208,7 +208,7 @@ export default function CheckoutPage() {
               )}
 
               {cartItems.length > 0 && (
-                <div className="text-right text-xl font-semibold mt-6">
+                <div className="text-right text-xl font-semibold mt-6 text-stone-50">
                   Subtotal: ${currentTotal.toFixed(2)}
                 </div>
               )}
@@ -216,20 +216,20 @@ export default function CheckoutPage() {
 
             {/* Checkout Summary */}
             {cartItems.length > 0 && (
-              <div className="bg-zinc-900 p-6 rounded-xl shadow-md space-y-4 h-fit">
-                <h3 className="text-xl font-bold">Checkout Summary</h3>
+              <div className="text-stone-50 p-6 rounded-xl shadow-md space-y-4 h-fit">
+                <h3 className="text-xl font-bold text-stone-50">Checkout Summary</h3>
                 <div className="border-t border-zinc-700 pt-4 space-y-2 text-sm">
                   <div className="flex justify-between">
-                    <span>Subtotal</span>
-                    <span>${currentTotal.toFixed(2)}</span>
+                    <span className="text-stone-50">Subtotal</span>
+                    <span className="text-stone-50">${currentTotal.toFixed(2)}</span>
                   </div>
                   <div className="flex justify-between text-gray-400">
-                    <span>Sales Tax</span>
-                    <span>$0.00</span>
+                    <span className="text-stone-50">Sales Tax</span>
+                    <span className="text-stone-50">$0.00</span>
                   </div>
                   <div className="flex justify-between font-semibold text-white border-t border-zinc-700 pt-2">
-                    <span>Grand Total</span>
-                    <span>${currentTotal.toFixed(2)}</span>
+                    <span className="text-stone-50">Grand Total</span>
+                    <span className="text-stone-50">${currentTotal.toFixed(2)}</span>
                   </div>
                 </div>
                 <div className="space-y-3">
