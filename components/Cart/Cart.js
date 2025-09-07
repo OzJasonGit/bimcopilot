@@ -4,6 +4,7 @@ import styles from './cart.module.css';
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Sides from "../../components/Sides/sides";
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import handleCheckout from '@/components/Payment/payment';
@@ -12,6 +13,7 @@ import { toast } from 'react-toastify';
 import PayPalButton from '@/components/Payment/PayPalButton';
 
 export default function CheckoutPage() {
+  <Sides />
   const { cartItems, removeFromCart, updateQuantity, loadCart, totalPrice, isLoading } = useCart();
   const [selectedItems, setSelectedItems] = useState([]);
   const router = useRouter();
@@ -104,6 +106,7 @@ export default function CheckoutPage() {
 
   if (isLoading) {
     return (
+      
       <div className="min-h-screen bg-[#171717] text-white p-8 pt-[110px] flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
@@ -114,6 +117,7 @@ export default function CheckoutPage() {
   }
 
   return (
+    
     <section id={styles.SHADOW_SECTION_BLACK} className={styles.center_holder}>
       <div className={styles.grid_0}>
         <div         
