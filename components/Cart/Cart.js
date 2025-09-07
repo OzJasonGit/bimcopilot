@@ -116,7 +116,7 @@ export default function CheckoutPage() {
   return (
     <section id={styles.SHADOW_SECTION_BLACK} className={styles.center_holder}>
       <div className={styles.grid_0}>
-        <div className="min-h-screen bg-[#171717] text-white p-8 pt-[110px] md:pt-[110px] sm:pt-[65px]"           
+        <div         
           style={{
             gridArea: "MAIN-AREA",
             position: 'relative',      
