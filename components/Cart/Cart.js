@@ -124,7 +124,7 @@ export default function CheckoutPage() {
             alignItems: 'left',            
             zIndex: 1,
           }}>
-          <h2 className="text-3xl font-bold mb-6">Your Cart ({cartItems.length} items)</h2>
+          <h2 id={styles._H2} className="text-left ...  text-stone-50 font-avant_garde_bold">Your Cart ({cartItems.length} items)</h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-8">
             {/* Cart Items List */}
