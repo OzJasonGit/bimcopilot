@@ -270,7 +270,7 @@ const Menu_White = () => {
 
                               <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart">
                                 <div  id={styles.CART_HOLDER} className="content-center ... align-middle ...">
-                                  <FontAwesomeIcon icon={faHeart} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-red-500" />
+                                  <FontAwesomeIcon icon={faHeart} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-700 hover:text-red-500" />
                                 </div>
                               </a>
 
@@ -279,7 +279,7 @@ const Menu_White = () => {
                                     style={{
                                       paddingLeft: "35px",                                  
                                             }}>
-                                  <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300" />
+                                  <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-700 hover:text-emerald-300" />
                                 </div>
                               </a>
 
