@@ -2,7 +2,7 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faSignOutAlt, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
-import styles from "./Header.module.css";
+import styles from "./Header_White.module.css";
 import React, { useEffect, useState, useRef } from "react";
 import bimcopilot_icon from "./bimcopilot_logo.svg";
 import Image from "next/image";
