@@ -120,8 +120,8 @@ export default function CheckoutPage() {
           style={{
             gridArea: "MAIN-AREA",
             position: 'relative',      
-            justifyContent: 'center',
-            alignItems: 'center',            
+            justifyContent: 'left',
+            alignItems: 'left',            
             zIndex: 1,
           }}>
           <h2 className="text-3xl font-bold mb-6">Your Cart ({cartItems.length} items)</h2>
