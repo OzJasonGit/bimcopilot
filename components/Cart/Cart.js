@@ -13,7 +13,7 @@ import { toast } from 'react-toastify';
 import PayPalButton from '@/components/Payment/PayPalButton';
 
 export default function CheckoutPage() {
-  <Sides />
+  
   const { cartItems, removeFromCart, updateQuantity, loadCart, totalPrice, isLoading } = useCart();
   const [selectedItems, setSelectedItems] = useState([]);
   const router = useRouter();
@@ -117,7 +117,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    
+    <Sides />
     <section id={styles.SHADOW_SECTION_BLACK} className={styles.center_holder}>
       <div className={styles.grid_0}>
         <div         
@@ -138,7 +138,7 @@ export default function CheckoutPage() {
             {/* Cart Items List */}
             <div className="space-y-6">
               {cartItems.length === 0 ? (
-                <div className="text-center py-8">
+                <div className="text-left py-8">
                   <p className="text-gray-400 mb-4">Your cart is empty.</p>
                   <Button 
                     onClick={() => router.push('/products')}
