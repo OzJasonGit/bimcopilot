@@ -117,7 +117,7 @@ export default function CheckoutPage() {
   }
 
   return (
-    <Sides />
+    
     <section id={styles.SHADOW_SECTION_BLACK} className={styles.center_holder}>
       <div className={styles.grid_0}>
         <div         
@@ -253,6 +253,15 @@ export default function CheckoutPage() {
             )}
           </div>
         </div>
+      </div>
+
+      <div 
+        style={{
+            gridArea: "VIDEO_B",
+            position: 'relative',      
+            width: "100%",
+            height: "200px"
+        }}>       
       </div>
     </section>
   );
