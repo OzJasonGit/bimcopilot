@@ -19,6 +19,8 @@ import logoRIBA from './logoRIBA_Dark.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faYoutube, faDribbble, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons'
 
+import { faCartShopping, faSignOutAlt, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
+
 
 const Menu_White = () => {
 
