@@ -11,9 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { Button } from "@/components/ui/button"
 
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
-import Menu from "../Menu/menu";
+
 
 
 
@@ -81,8 +79,7 @@ const Basket = () => {
 
   return (
     <>
-      <Menu/>
-      <Header/>
+      
       
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
@@ -236,7 +233,7 @@ const Basket = () => {
       </section>
 
 
-      <Footer/>
+      
     </>
   );
 };
