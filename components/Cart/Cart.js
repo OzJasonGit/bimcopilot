@@ -4,7 +4,7 @@ import styles from './cart.module.css';
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import Sides from "../../components/Sides/sides";
+
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import handleCheckout from '@/components/Payment/payment';
