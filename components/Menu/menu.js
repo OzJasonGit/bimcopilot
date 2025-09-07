@@ -242,14 +242,56 @@ const Menu = () => {
         
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <div class={styles.HEADER_HOLDER}>
-
-
              <div id={styles.header}>   
                 
                 <header id={styles.FIXED_HEADER}> 
-
-
                     <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
                         <div id={styles.HEADER_MENU_2}>   
                             <div id={styles.BURGER_HOLDER} class={styles.container_right}>
@@ -257,10 +299,6 @@ const Menu = () => {
                             <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
                               <div id={styles.HEADER_MENU_2}>   
                                 <div id={styles.BURGER_HOLDER} class={styles.container_right}>
-
-
-
-
 
                                   <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart">
                                     <div  id={styles.CART_HOLDER} className="content-center ... align-middle ...">
@@ -284,9 +322,6 @@ const Menu = () => {
                                   >
                                     <Hamburger/> 
                                   </a>
-
-
-
 
                                 </div>   
                               </div>
@@ -315,7 +350,12 @@ const Menu = () => {
                 </header>
               
               </div>           
-            </div>        
+          </div>  
+
+
+
+
+
       </section> 
       
     </>

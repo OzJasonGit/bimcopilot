@@ -192,29 +192,6 @@ const Menu_White = () => {
 
 
 
-
-
-
-
-                
-              
-             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 <div id={styles.TEXT}>
                   <div id={styles.COMPANY}>
                       <h4 id={styles._H4}  class=" text-xs ... text-stone-700 ... font-avant_garde_bold text-left">Website by <a class="text-stone-400 font-avant_garde_bold">
@@ -245,48 +222,113 @@ const Menu_White = () => {
         
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <div class={styles.HEADER_HOLDER}>
 
 
-             <div id={styles.header}>   
-                
-                <header id={styles.FIXED_HEADER}> 
+             <div id={styles.header}> 
 
+              <header id={styles.FIXED_HEADER}> 
+                <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
+                    <div id={styles.HEADER_MENU_2}>   
+                        <div id={styles.BURGER_HOLDER} class={styles.container_right}>
 
-                    <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
-                        <div id={styles.HEADER_MENU_2}>   
+                        <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
+                          <div id={styles.HEADER_MENU_2}>   
                             <div id={styles.BURGER_HOLDER} class={styles.container_right}>
 
-                            <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
-                              <div id={styles.HEADER_MENU_2}>   
-                                <div id={styles.BURGER_HOLDER} class={styles.container_right}>
-                                  <a id={styles.BURGER} onClick={showDrawer}>
-                                    <Hamburger/> 
-                                  </a>
-                                </div>   
-                              </div>
-                            </div> 
+                              <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart">
+                                <div  id={styles.CART_HOLDER} className="content-center ... align-middle ...">
+                                  <FontAwesomeIcon icon={faHeart} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-red-500" />
+                                </div>
+                              </a>
 
-                          </div>   
-                        </div>
-                    </div> 
+                              <a id={styles.CART} className="content-center ... align-middle ..." href="/cart">
+                                <div id={styles.CART_HOLDER} className="content-center ... align-middle ..."
+                                    style={{
+                                      paddingLeft: "35px",                                  
+                                            }}>
+                                  <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300" />
+                                </div>
+                              </a>
 
+                              <a id={styles.BURGER} onClick={showDrawer}
+                                style={{
+                                                                        
+                                  }}
+                              >
+                                <Hamburger/> 
+                              </a>
 
-                    <div id={styles.LOGO_MOB} class={styles.container}>
-                      <Image
-                          src={bimcopilot_icon}   
-                          alt="Picture of the author"
-                          width={500}
-                          height={500}
-                          style={{
-                            position: "absolute",
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "contain",
-                          }}
-                        />
+                            </div>   
+                          </div>
+                        </div> 
+
+                      </div>   
                     </div>
-                </header>
+                </div> 
+
+
+                <div id={styles.LOGO_MOB} class={styles.container}>
+                  <Image
+                      src={bimcopilot_icon}   
+                      alt="Picture of the author"
+                      loading="lazy"
+                      width={500}
+                      height={500}
+                      style={{
+                        position: "absolute",
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "contain",
+                      }}
+                    />
+                </div>
+            </header>  
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
               
               </div>           
             </div>        
