@@ -138,21 +138,11 @@ export default function HeaderWhite() {
               <DateComponent />
             </div>
 
+
+            
+
             {/* Basket and Favorites */}
-            <div className="content-center ..." id={styles.BASKET_CONTAINER}>
-              <Link
-                className="content-center ... align-middle ..."
-                href="/cart"
-                style={{ gridArea: "BASKET", position: "relative", top: "0.75px", left: "-30px" }}>
-                <FontAwesomeIcon icon={faCartShopping} className="text-[#44403c] w-6 h-6 hover:text-gray-500 transition-colors duration-200" />
-              </Link>
-              <Link
-                className="content-center ... align-middle ..."
-                href="/favourites"
-                style={{ gridArea: "FAVOURITE", position: "relative", top: "0.5px", left: "-30px" }}>
-                <FontAwesomeIcon icon={faHeart} className="text-[#44403c] w-6 h-6 hover:text-gray-500 transition-colors duration-200" />
-              </Link>
-            </div>
+            
 
             {/* Sign In/Sign Up or User Dropdown */}
             <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "100%" }}>
