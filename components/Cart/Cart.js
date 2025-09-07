@@ -186,7 +186,7 @@ export default function CheckoutPage() {
                       >
                         −
                       </button>
-                      <span>{item.quantity}</span>
+                      <span className="text-stone-50">{item.quantity}</span>
                       <button
                         className="px-2 text-xl bg-zinc-800 rounded"
                         onClick={() => handleQuantityChange(item.id || item._id, 1)}
