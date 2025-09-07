@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button"
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Menu from "../Menu/menu";
-import Sides from "../../components/Sides/sides";
+
 
 
 
@@ -83,7 +83,7 @@ const Basket = () => {
     <>
       <Menu/>
       <Header/>
-      <Sides/>
+      
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_blogimageholder}>
