@@ -8,9 +8,8 @@ import Sides from "../../components/Sides/sides";
 const CartModule = () => {
     return (
       <>
-      <Sides/>
+        <Sides/>
         <Cart/>
-
       </>
     );
   };

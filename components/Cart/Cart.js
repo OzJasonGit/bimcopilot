@@ -171,7 +171,9 @@ export default function CheckoutPage() {
                         className="rounded-md object-cover"
                       />
                       <div>
-                        <p className="font-semibold">{item.title}</p>
+                        <p className="font-semibold text-stone-50"
+                            style={{
+                            paddingBottom: "5px",}}>{item.title}</p>
                         <p className="text-sm text-gray-400">${item.price.toFixed(2)} each</p>
                       </div>
                     </div>
