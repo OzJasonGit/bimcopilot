@@ -119,6 +119,7 @@ export default function CheckoutPage() {
   return (
     
     <section id={styles.SHADOW_SECTION_BLACK} className={styles.center_holder}>
+
       <div className={styles.grid_0}>
         <div         
           style={{
@@ -132,7 +133,8 @@ export default function CheckoutPage() {
                               style={{
                                       paddingTop: "100px",
                                       paddingBottom: "60px"
-                                    }}> Your Cart ({cartItems.length} items)</h2>
+                                    }}> Your Cart ({cartItems.length} items)
+          </h2>
 
           <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-8">
             {/* Cart Items List */}
@@ -253,16 +255,17 @@ export default function CheckoutPage() {
             )}
           </div>
         </div>
-      </div>
 
-      <div 
-        style={{
-            gridArea: "VIDEO_B",
-            position: 'relative',      
-            width: "100%",
-            height: "200px"
-        }}>       
+        <div 
+          style={{
+              gridArea: "VIDEO_B",
+              position: 'relative',      
+              width: "100%",
+              height: "200px"
+          }}>       
+        </div>
       </div>
+     
     </section>
   );
 }
