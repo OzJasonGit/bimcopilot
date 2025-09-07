@@ -216,7 +216,7 @@ export default function CheckoutPage() {
 
             {/* Checkout Summary */}
             {cartItems.length > 0 && (
-              <div className="bg-stone-700 p-6 rounded-xl shadow-md space-y-4 h-fit">
+              <div className="bg-stone-800 p-6 rounded-xl shadow-md space-y-4 h-fit">
                 <h3 className="text-xl font-bold text-stone-50">Checkout Summary</h3>
                 <div className="border-t border-zinc-700 pt-4 space-y-2 text-sm">
                   <div className="flex justify-between">
