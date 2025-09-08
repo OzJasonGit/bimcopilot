@@ -206,7 +206,7 @@ const SignIn = () => {
                         </Button>
                         <br/>
                         <br/>
-                        <div className=" w-full flex justify-left" id={styles.GOOGLE_BUTTON}>
+                        <div className=" w-full flex justify-center" id={styles.GOOGLE_BUTTON}>
                           <GoogleLogin
                             onSuccess={googleSuccess}
                             onError={() => {
