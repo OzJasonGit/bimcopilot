@@ -106,6 +106,9 @@ const SignIn = () => {
 
       <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
         <div className={styles.grid_0_blogimageholder}>
+          
+          
+          
           <div id={styles.SIGN_IN}>
             <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
               <div style={{ gridArea: "SIGN_IN" }}>
@@ -201,7 +204,7 @@ const SignIn = () => {
                         </Button>
                         <br/>
                         <br/>
-                        <div className="mt-4 w-full flex justify-left" id={styles.GOOGLE_BUTTON}>
+                        <div className=" w-full flex justify-left" id={styles.GOOGLE_BUTTON}>
                           <GoogleLogin
                             onSuccess={googleSuccess}
                             onError={() => {
