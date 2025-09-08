@@ -158,8 +158,8 @@ const Signup = () => {
                         </div>
                       </div>
                     <br/>
-                    
-                      {["email", "password", "confirmPassword", "userName" , ].map((field) => (
+
+                      {["email", "userName", "password", "confirmPassword" ].map((field) => (
                         <div key={field} className="mb-4">
                           <label htmlFor={field} className="text-left text-stone-400 font-avant_garde_bold" id={styles._H3}>
                             {field.replace(/([A-Z])/g, " $1").replace(/^./, (str) => str.toUpperCase())}
