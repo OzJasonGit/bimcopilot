@@ -130,14 +130,14 @@ const Signup = () => {
                   </div>
                 ) : (
                   <>
-                    <h2 id={styles._H2} className="text-left text-stone-400 font-avant_garde_bold">Sign Up</h2>
+                    <h2 id={styles._H2} className="text-left text-stone-400 font-avant_garde_bold">Sign Up to Bimcopilot</h2>
 
 
                     
                     <div className="mt-4 w-full flex justify-center" id={styles.GOOGLE_BUTTON}>
                       <GoogleLogin onSuccess={googleSuccess} onError={() => toast.error("Google Login Failed!")} />
                     </div>
-                    
+
                     <form onSubmit={handleSubmit}>
 
                       <br/>
@@ -183,7 +183,7 @@ const Signup = () => {
 
                       <Button  variant="outline"
                                id={styles.FORM_BUTTON} type="submit" disabled={isLoading}>
-                        Sign Up to Bimcopilot
+                        Create an Account 
                       </Button>
                     </form>
 
