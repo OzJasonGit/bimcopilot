@@ -199,6 +199,8 @@ const SignIn = () => {
                         >
                           Sign In!
                         </Button>
+                        <br/>
+                        <br/>
                         <div className="mt-4 w-full flex justify-left" id={styles.GOOGLE_BUTTON}>
                           <GoogleLogin
                             onSuccess={googleSuccess}
