@@ -132,9 +132,10 @@ const SignIn = () => {
                     </div>
                   ) : (
                     <>
-                      <h2 id={styles._H2} className="text-left ... text-stone-400 ... font-avant_garde_bold">
-                        Sign In
+                      <h2 id={styles._H2} className="text-center ... text-stone-400 ... font-avant_garde_bold">
+                        Sign In to Bimcopilot
                       </h2>
+                      <br/> <br/>
                       <form onSubmit={handleSubmit}>
                         <div className="mb-4">
                           <label
