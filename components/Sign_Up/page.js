@@ -133,7 +133,11 @@ const Signup = () => {
                     <h2 id={styles._H2} className="text-left text-stone-400 font-avant_garde_bold">Sign Up</h2>
 
 
-                    <br/>
+                    
+
+                    <form onSubmit={handleSubmit}>
+
+                      <br/>
                       <div id={styles.BREAKLINE}>
                         <div id={styles.LINE_1}
                             style={{
@@ -154,8 +158,7 @@ const Signup = () => {
                         </div>
                       </div>
                     <br/>
-
-                    <form onSubmit={handleSubmit}>
+                    
                       {["email", "password", "confirmPassword", "userName" , ].map((field) => (
                         <div key={field} className="mb-4">
                           <label htmlFor={field} className="text-left text-stone-400 font-avant_garde_bold" id={styles._H3}>
