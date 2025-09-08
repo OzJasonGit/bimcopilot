@@ -145,7 +145,7 @@ const Signup = () => {
                             onChange={handleChange}
                             className="mt-1 border rounded-md"
                             required
-                            style={{ width: "100%", height: "65px", padding: "20px" }}
+                            style={{ width: "100%", height: "40px", padding: "15px" }}
                           />
                         </div>
                       ))}
