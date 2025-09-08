@@ -94,6 +94,7 @@ export default function Header() {
                 <Link id={styles.LOGO_LINK} href="/.">
                   <div className="" id={styles.LOGO}>
                     <Image
+                      className="w-16 h-16 fill-current text-stone-50 hover:text-emerald-400 transition-colors duration-300"
                       src={bimcopilot_icon}
                       alt="Picture of the author"
                       width={100}
