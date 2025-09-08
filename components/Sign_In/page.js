@@ -217,7 +217,7 @@ const SignIn = () => {
                             </div>
 
                             <div id={styles.TEXT}>
-                              <h5>or</h5>
+                              <h5 className=" text-stone-400 ... ">or</h5>
                             </div>
 
                             <div id={styles.LINE_2}
@@ -226,10 +226,7 @@ const SignIn = () => {
                                   height: "1px",
                                 }}>
                             </div>
-
-
                           </div>
-
                         <br/>
 
                         <div className=" flex justify-center" id={styles.GOOGLE_BUTTON}>
