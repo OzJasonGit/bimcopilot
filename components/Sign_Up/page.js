@@ -131,7 +131,7 @@ const Signup = () => {
                     <h2 id={styles._H2} className="text-left text-stone-400 font-avant_garde_bold">Sign Up</h2>
 
                     <form onSubmit={handleSubmit}>
-                      {["firstName", "lastName", "email", "password", "confirmPassword"].map((field) => (
+                      {["email", "password", "confirmPassword", "userName" , ].map((field) => (
                         <div key={field} className="mb-4">
                           <label htmlFor={field} className="text-left text-stone-400 font-avant_garde_bold" id={styles._H3}>
                             {field.replace(/([A-Z])/g, " $1").replace(/^./, (str) => str.toUpperCase())}
