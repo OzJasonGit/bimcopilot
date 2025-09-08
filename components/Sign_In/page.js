@@ -155,7 +155,7 @@ const SignIn = () => {
                             required
                             style={{
                               width: "100%",
-                              height: "65px",
+                              height: "45px",
                               padding: "20px",
                             }}
                           />
@@ -179,7 +179,7 @@ const SignIn = () => {
                             required
                             style={{
                               width: "100%",
-                              height: "65px",
+                              height: "45px",
                               padding: "20px",
                             }}
                           />
@@ -191,8 +191,8 @@ const SignIn = () => {
                           htmlType="submit"
                           loading={isLoading}
                           style={{
-                            width: "170px",
-                            height: "65px",
+                            width: "100%",
+                            height: "45px",
                             marginTop: "20px",
                           }}
                         >
