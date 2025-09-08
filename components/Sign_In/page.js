@@ -157,7 +157,7 @@ const SignIn = () => {
                             style={{
                               width: "100%",
                               height: "45px",
-                              padding: "20px",
+                              padding: "25px",
                             }}
                           />
                         </div>
@@ -181,7 +181,7 @@ const SignIn = () => {
                             style={{
                               width: "100%",
                               height: "45px",
-                              padding: "20px",
+                              padding: "25px",
                             }}
                           />
                         </div>
@@ -194,7 +194,7 @@ const SignIn = () => {
                           style={{
                             width: "100%",
                             height: "45px",
-                            marginTop: "20px",
+                            marginTop: "25px",
                           }}
                         >
                           Sign In!
