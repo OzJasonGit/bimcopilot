@@ -161,7 +161,7 @@ const SignIn = () => {
                             required
                             style={{
                               width: "100%",
-                              height: "45px",
+                              height: "40px",
                               padding: "25px",
                             }}
                           />
@@ -185,7 +185,7 @@ const SignIn = () => {
                             required
                             style={{
                               width: "100%",
-                              height: "45px",
+                              height: "40px",
                               padding: "25px",
                             }}
                           />
@@ -198,7 +198,7 @@ const SignIn = () => {
                           loading={isLoading}
                           style={{
                             width: "100%",
-                            height: "45px",
+                            height: "40px",
                             marginTop: "25px",
                           }}
                         >
@@ -206,7 +206,7 @@ const SignIn = () => {
                         </Button>
                         <br/>
                         <br/>
-                        <div className=" w-full flex justify-center" id={styles.GOOGLE_BUTTON}>
+                        <div className=" flex justify-center" id={styles.GOOGLE_BUTTON}>
                           <GoogleLogin
                             onSuccess={googleSuccess}
                             onError={() => {
