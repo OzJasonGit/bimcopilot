@@ -15,6 +15,8 @@ import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides";
 import Cookies from "js-cookie"; // Import js-cookie for handling cookies
 
+
+
 const Signup = () => {
   const router = useRouter(); 
   const [isLoading, setIsLoading] = useState(false);
@@ -130,6 +132,29 @@ const Signup = () => {
                   <>
                     <h2 id={styles._H2} className="text-left text-stone-400 font-avant_garde_bold">Sign Up</h2>
 
+
+                    <br/>
+                      <div id={styles.BREAKLINE}>
+                        <div id={styles.LINE_1}
+                            style={{
+                              width: "100%",
+                              height: "1px",
+                            }}>
+                        </div>
+
+                        <div id={styles.TEXT}>
+                          <h5 className=" text-stone-400 ... ">or</h5>
+                        </div>
+
+                        <div id={styles.LINE_2}
+                            style={{
+                              width: "100%",
+                              height: "1px",
+                            }}>
+                        </div>
+                      </div>
+                    <br/>
+
                     <form onSubmit={handleSubmit}>
                       {["email", "password", "confirmPassword", "userName" , ].map((field) => (
                         <div key={field} className="mb-4">
@@ -150,7 +175,8 @@ const Signup = () => {
                         </div>
                       ))}
 
-                      <Button id={styles.FORM_BUTTON} type="submit" disabled={isLoading}>
+                      <Button  variant="outline"
+                               id={styles.FORM_BUTTON} type="submit" disabled={isLoading}>
                         Sign Up!
                       </Button>
                     </form>
