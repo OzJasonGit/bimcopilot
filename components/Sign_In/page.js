@@ -111,7 +111,9 @@ const SignIn = () => {
           
           <div id={styles.SIGN_IN}>
             <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}>
-              <div style={{ gridArea: "SIGN_IN" }}>
+              <div style={{ gridArea: "SIGN_IN", 
+                            width: "400px"
+                          }}>
                 <div className={`${isLoading && "flex justify-left items-center"}`}>
                   {isLoading ? (
                     <div role="status">
