@@ -134,7 +134,10 @@ const Signup = () => {
 
 
                     
-
+                    <div className="mt-4 w-full flex justify-center" id={styles.GOOGLE_BUTTON}>
+                      <GoogleLogin onSuccess={googleSuccess} onError={() => toast.error("Google Login Failed!")} />
+                    </div>
+                    
                     <form onSubmit={handleSubmit}>
 
                       <br/>
@@ -180,13 +183,11 @@ const Signup = () => {
 
                       <Button  variant="outline"
                                id={styles.FORM_BUTTON} type="submit" disabled={isLoading}>
-                        Sign Up!
+                        Sign Up to Bimcopilot
                       </Button>
                     </form>
 
-                    <div className="mt-4 w-full flex justify-center" id={styles.GOOGLE_BUTTON}>
-                      <GoogleLogin onSuccess={googleSuccess} onError={() => toast.error("Google Login Failed!")} />
-                    </div>
+                    
                   </>
                 )}
               </div>
