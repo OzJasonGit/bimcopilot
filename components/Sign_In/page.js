@@ -206,9 +206,32 @@ const SignIn = () => {
                         </Button>
 
 
-                        
+
                         <br/>
+                          <div id={styles.BREAKLINE}>
+                            <div id={styles.LINE_1}
+                                style={{
+                                  width: "100%",
+                                  height: "1px",
+                                }}>
+                            </div>
+
+                            <div id={styles.TEXT}>
+                              <h5>or</h5>
+                            </div>
+
+                            <div id={styles.LINE_2}
+                                style={{
+                                  width: "100%",
+                                  height: "1px",
+                                }}>
+                            </div>
+
+
+                          </div>
+
                         <br/>
+
                         <div className=" flex justify-center" id={styles.GOOGLE_BUTTON}>
                           <GoogleLogin
                             onSuccess={googleSuccess}
