@@ -131,21 +131,24 @@ export default class Products extends Component {
 
                     </div>
 
-                    <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center group-hover:scale-95"
-                         >
-                      <Image
-                      id={styles.PRODUCT_IMAGE}
-                      src={product.images?.[0] || "/fallback.jpg"}
-                      alt={product.title}
-                      style={{ objectFit: "cover", position: "absolute", width: "100%", height: "100%" }}
-                      fill
-                      className="rounded-xl"
-                      quality={100}
-                      loading="lazy"
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                      />
+                    <div className="group w-full h-full overflow-hidden rounded-2xl shadow-lg cursor-pointer">
+                      <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center group-hover:scale-95">
+                        <Image
+                        id={styles.PRODUCT_IMAGE}
+                        src={product.images?.[0] || "/fallback.jpg"}
+                        alt={product.title}
+                        
+                        fill
+                        className="object-cover"
+                        quality={100}
+                        loading="lazy"
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                        />
+                      </div>
                     </div>
+
+                    
                     
                   </Link>
 
