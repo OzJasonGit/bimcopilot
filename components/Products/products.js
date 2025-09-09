@@ -56,6 +56,7 @@ export default class Products extends Component {
                               }}>
 
                       <div 
+                        className=" transition-transform duration-500 ease-in-out group-hover:scale-95"
                         class="rounded-lg ..."
                         style={{
                           gridArea: 'IMAGE',
@@ -63,6 +64,7 @@ export default class Products extends Component {
                           height: '100%',
                           position: 'relative',                      
                           overflow: 'hidden',
+                        
                         }}
                       >                     
                         <Image
