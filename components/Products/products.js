@@ -7,9 +7,13 @@ import Link from "next/link";
 import logo from './bimcopilot_logo_white.svg';
 import text_logo from './bimcopilot_logo_text_horizontal_white.svg';
 
+import { useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
+
+const [hovered, setHovered] = useState(false);
 
 export default class Products extends Component {
   constructor(props) {
@@ -128,7 +132,12 @@ export default class Products extends Component {
 
                     
                     {/* Image wrapper */}
-                    <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center scale-115 group-hover:scale-100">
+                    <div 
+                    
+                    
+                    
+                    className={`w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center ${ hovered ? "scale-115" : "scale-100"        }`}
+                    >
                       <Image
                         src={product.images?.[0] || "/fallback.jpg"}
                         alt={product.title}
@@ -141,7 +150,9 @@ export default class Products extends Component {
 
 
                     {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 z-20" />
+                    <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 z-20" 
+                         onMouseEnter={() => setHovered(true)}
+                         onMouseLeave={() => setHovered(false)}/>
 
 
                     {/* Icons */}
