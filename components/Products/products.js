@@ -121,9 +121,14 @@ export default class Products extends Component {
                   
 
                   <Link
+
+                    
                     href={`/products/${product.slug}`}
                     className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 shadow-none hover:shadow-xl"
                     style={{ position: "relative", width: "100%", height: "100%" }}>
+
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-black/97.5 opacity-0 transition-opacity duration-500 group-hover:opacity-100"/>
 
 
                     <div id={styles.PRODUCT_OVERLAY_GRID} style={{ position: "absolute", width: "100%", height: "100%", zIndex: 100, left: "0px", top:"0px"}}>
@@ -149,8 +154,7 @@ export default class Products extends Component {
                       />
                     </div>
 
-                    {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-black/97.5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    
                   </Link>
 
                   
