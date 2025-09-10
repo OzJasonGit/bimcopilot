@@ -4,8 +4,8 @@ import styles from './products.module.css';
 import React, { Component } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import logo from './bimcopilot_logo_black.svg';
-import text_logo from './bimcopilot_logo_text_horizontal_black.svg';
+import logo from './bimcopilot_logo_white.svg';
+import text_logo from './bimcopilot_logo_text_horizontal_white.svg';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
