@@ -150,7 +150,7 @@ export default class Products extends Component {
                     </div>
 
                     {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   </Link>
 
                   
