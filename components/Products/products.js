@@ -118,31 +118,21 @@ export default class Products extends Component {
               {products.map((product, index) => (
                 <div key={index} id={styles.PRODUCT} style={{ gridArea: `AREA_${index + 1}` }}>
 
-                  <Link href={`/products/${product.slug}`}  className="overflow-hidden rounded-2xl shadow-lg cursor-pointer"
-                    style={{ position: "relative", width: "100%", height: "100%" }}>
-                    
-                    
-
-             
-                      <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center group-hover:scale-95">
-                        
-                        <Image
-                          src={product.images?.[0] || "/fallback.jpg"}
-                          alt={product.title}
-                          fill // Image will absolutely fill the nearest positioned ancestor (this div)
-                          sizes="(max-width: 640px) 100vw, 256px"
-                          className="object-cover"
-                          priority={false}
-                        />
-                        
-                        
-                        
-                        
-                      </div>
-                  
-
-                    
-                    
+                 <Link
+                    href={`/products/${product.slug}`}
+                    className="group overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+                    style={{ position: "relative", width: "100%", height: "100%" }}
+                  >
+                    <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center group-hover:scale-95">
+                      <Image
+                        src={product.images?.[0] || "/fallback.jpg"}
+                        alt={product.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 256px"
+                        className="object-cover"
+                        priority={false}
+                      />
+                    </div>
                   </Link>
 
 
