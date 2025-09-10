@@ -125,18 +125,19 @@ export default class Products extends Component {
 
              
                       <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center group-hover:scale-95">
-                        <Image
-                        id={styles.PRODUCT_IMAGE}
-                        src={product.images?.[0] || "/fallback.jpg"}
-                        alt={product.title}
                         
-                        fill
-                        className="object-cover"
-                        quality={100}
-                        loading="lazy"
-                        placeholder="blur"
-                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                        <Image
+                          src={product.images?.[0] || "/fallback.jpg"}
+                          alt={product.title}
+                          fill // Image will absolutely fill the nearest positioned ancestor (this div)
+                          sizes="(max-width: 640px) 100vw, 256px"
+                          className="object-cover"
+                          priority={false}
                         />
+                        
+                        
+                        
+                        
                       </div>
                   
 
