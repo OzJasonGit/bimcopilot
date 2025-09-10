@@ -7,7 +7,7 @@ import Link from "next/link";
 import logo from './bimcopilot_logo_white.svg';
 import text_logo from './bimcopilot_logo_text_horizontal_white.svg';
 
-import { useState } from "react";
+import React, { useState } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
