@@ -190,12 +190,12 @@
 #PRODUCT_OVERLAY_GRID {
   display: grid;
   grid-template-columns: 20px 30px 80px 1fr 80px 30px 20px;
-  grid-template-rows: 20px 30px 80px 1fr 80px 30px 20px;
+  grid-template-rows: 20px 30px 80px auto 80px 30px 20px;
   grid-template-areas:
       ". . . . . . ."
       ". TEXT TEXT . . . ."
       ". . . . . . ."
-      ". . . . . . ."
+      ". TITLE TITLE TITLE TITLE TITLE ."
       ". . . . . . ."
       ". . . . . LOGO ."
       ". . . . . . .";

@@ -141,7 +141,7 @@ export default class Products extends Component {
 
 
                     {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-black/92.5 opacity-0 transition-opacity duration-500 group-hover:opacity-100 z-20" />
+                    <div className="absolute inset-0 bg-black/90 opacity-0 transition-opacity duration-500 group-hover:opacity-100 z-20" />
 
 
                     {/* Icons */}
@@ -151,7 +151,9 @@ export default class Products extends Component {
                       </div>
                       <div style={{ gridArea: "TEXT", position: "relative", zIndex: 100}} className=" opacity-0  translate-x-10 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100" >
                         <Image src={text_logo} alt="Logo Text" fill style={{ objectFit: "cover" }} quality={100} loading="lazy" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==" />
-                      </div>    
+                      </div> 
+                      <div style={{ gridArea: "TITLE", position: "relative", zIndex: 100}}>
+                      </div>   
                     </div>
                   
                   </Link>
