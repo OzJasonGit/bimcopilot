@@ -133,11 +133,7 @@ export default class Products extends Component {
                     
                     {/* Image wrapper */}
                     <div 
-                    
-                    
-                    
-                    className={`w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center ${ hovered ? "scale-115" : "scale-100"        }`}
-                    >
+                    className={`relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center ${hovered? "scale-115" : "scale-100"}`}>
                       <Image
                         src={product.images?.[0] || "/fallback.jpg"}
                         alt={product.title}
@@ -151,12 +147,13 @@ export default class Products extends Component {
 
                     {/* Dark overlay */}
                     <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 z-20" 
-                         onMouseEnter={() => setHovered(true)}
-                         onMouseLeave={() => setHovered(false)}/>
+                         />
 
 
                     {/* Icons */}
-                    <div id={styles.PRODUCT_OVERLAY_GRID} style={{ position: "absolute", width: "100%", height: "100%",  left: "0px", top:"0px", zIndex:"30"}}>
+                    <div id={styles.PRODUCT_OVERLAY_GRID} style={{ position: "absolute", width: "100%", height: "100%",  left: "0px", top:"0px", zIndex:"30"}}
+                         onMouseEnter={() => setHovered(true)}
+                         onMouseLeave={() => setHovered(false)}>
                       <div style={{ gridArea: "LOGO", position: "relative", zIndex: 100}} className=" opacity-0 -translate-x-10 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100">
                         <Image src={logo} alt="Logo" fill style={{ objectFit: "cover" }} quality={100} loading="lazy" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==" />
                       </div>
