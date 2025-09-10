@@ -149,6 +149,9 @@ export default class Products extends Component {
                       />
                     </div>
 
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
                   </Link>
 
                   
@@ -162,6 +165,8 @@ export default class Products extends Component {
                       </h4>
                     </Link>
                   </div>
+
+
                 </div>
               ))}
 
