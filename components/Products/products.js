@@ -138,6 +138,7 @@ export default class Products extends Component {
 
                     </div>
 
+                    {/* Image wrapper */}
                     <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center group-hover:scale-95">
                       <Image
                         src={product.images?.[0] || "/fallback.jpg"}
