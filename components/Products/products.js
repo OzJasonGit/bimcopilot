@@ -123,7 +123,7 @@ export default class Products extends Component {
                   <Link
 
                     href={`/products/${product.slug}`}
-                    className="group overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+                    className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-300 shadow-none hover:shadow-xl"
                     style={{ position: "relative", width: "100%", height: "100%" }}>
 
 
