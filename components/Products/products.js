@@ -83,8 +83,8 @@ export default class Products extends Component {
                           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
                         />
 
-                      </div>
-                    </Link>
+                          </div>
+                        </Link>
 
 
                     <div 
@@ -130,7 +130,7 @@ export default class Products extends Component {
 
                     
                     {/* Image wrapper */}
-                    <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center scale-115 group-hover:scale-100">
+                    <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center scale-115 group-hover:scale-100 z-20">
                       <Image
                         src={product.images?.[0] || "/fallback.jpg"}
                         alt={product.title}
