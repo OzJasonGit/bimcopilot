@@ -88,7 +88,8 @@ const Products = () => {
                         <Link href={`/products/${product.slug}`}
                               className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                               style={{ position: "relative", width: "100%", height: "100%" }}>
-                          <div className={styles.imageWrapper}>
+
+                          <div id={styles.imageWrapper}>
                             <Image
                               src={product.image}
                               alt={product.title}
@@ -142,7 +143,7 @@ const Products = () => {
                                     className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                                     style={{ position: "relative", width: "100%", height: "100%" }}>
 
-                                <div className={styles.imageWrapper}>
+                                <div id={styles.imageWrapper}>
                                   <Image
                                     src={group[3].image}
                                     alt={group[3].title}
@@ -192,7 +193,7 @@ const Products = () => {
                                     className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                                     style={{ position: "relative", width: "100%", height: "100%" }}>
 
-                                <div className={styles.imageWrapper}>
+                                <div id={styles.imageWrapper}>
                                   <Image
                                     src={group[4].image}
                                     alt={group[4].title}
@@ -236,7 +237,7 @@ const Products = () => {
                           <>
                             <div key={group[4].id} className={`${styles.card} ${styles.cardLarge} ${styles.cardLeft}`}>
                               <Link href={`/products/${group[4].slug}`}>
-                                <div className={styles.imageWrapper}>
+                                <div id={styles.imageWrapper}>
                                   <Image
                                     src={group[4].image}
                                     alt={group[4].title}
@@ -273,7 +274,7 @@ const Products = () => {
 
                             <div key={group[3].id} className={styles.card}>
                               <Link href={`/products/${group[3].slug}`}>
-                                <div className={styles.imageWrapper}>
+                                <div id={styles.imageWrapper}>
                                   <Image
                                     src={group[3].image}
                                     alt={group[3].title}
