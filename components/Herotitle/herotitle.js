@@ -15,6 +15,9 @@ export default class Herotitle extends Component {
               <h1
                 class="text-6xl ... text-neutral-700 ... font-avant_garde_bold"
                 id={styles._H1_2}
+                style={{
+                          paddingBottom:"15px"                        
+                        }}
               >
                 <a
                   id={styles.TEXT_OUTLINE}
