@@ -8,10 +8,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import styles from './subform.module.css';
 
 
-import { Button } from "@/components/ui/button"
-import { Form,  } from "antd";
-
 import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { Form  } from "antd";
+
+
 
 
 
@@ -69,7 +70,7 @@ const Subform = () => {
         form={form}
         onFinish={handleSubmit}
         id={styles.FORM}
-        style={{ marginBottom: "0", height: "auto", width: "100%" }}
+        style={{ marginBottom: "0", height: "100%", width: "100%" }}
       >
 
 
@@ -89,8 +90,8 @@ const Subform = () => {
               type: "email",
               message: "The input is not a valid email!",
             },
-          ]}
-        >
+              ]}
+            >
 
           <Input type="email" placeholder="Enter your email" />
           
@@ -101,10 +102,8 @@ const Subform = () => {
 
         <Form.Item 
            style={{ marginBottom: "0", paddingBottom: "0", height: "auto", width: "auto" }}>
-          <Button variant="outline"
-                  style={{ marginLeft: "0", height: "100%", width: "100%" }}
-                  
-                 
+          <Button 
+                  variant="outline"                                 
                   type="primary"
                   htmlType="submit"
                   loading={isLoading}
