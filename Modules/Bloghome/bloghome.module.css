@@ -1745,7 +1745,7 @@
         grid-column-gap: 0px;
         grid-row-gap: 20px;
         grid-template-rows: 0px auto 0px;
-        grid-template-columns: 30px 1fr 30px;
+        grid-template-columns: 40px 1fr 40px;
         grid-template-areas: ". . ."
             ".  SUB  ."
             ". . .";

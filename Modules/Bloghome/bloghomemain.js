@@ -51,7 +51,9 @@ const Bloghomemain = ({ stories, firstStory }) => {
 
                     <div class="rounded-2xl ..." id={styles.B_IMAGE}>
                       <Link
-                       href={`/blog/${story.slug}`}>
+                       href={`/blog/${story.slug}`}
+                       className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
+                       style={{ position: "relative", width: "100%", height: "auto" }}>
 
                         <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
                           <Image 
