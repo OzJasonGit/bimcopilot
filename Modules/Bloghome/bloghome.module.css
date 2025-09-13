@@ -172,8 +172,8 @@
     position: relative;
     display: grid;
     grid-row-gap: 20px;
-    grid-template-columns: 1fr 1;
-    grid-template-rows: 320px auto auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 340px auto auto;
     grid-template-areas: "IMAGE IMAGE"
         "TEXT TEXT"
         "SHARE .";
@@ -1609,6 +1609,37 @@
     height: 900px;
     margin-top: -980px;
 }
+
+
+
+
+#PRODUCT_OVERLAY_GRID {
+    display: grid;
+    grid-template-columns: 20px 30px 80px 1fr 80px 30px 20px;
+    grid-template-rows: 20px 30px 80px auto 80px 30px 20px;
+    grid-template-areas:
+        ". . . . . . ."
+        ". TEXT TEXT . . . ."
+        ". . . . . . ."
+        ". TITLE TITLE TITLE TITLE TITLE ."
+        ". . . . . . ."
+        ". . . . . LOGO ."
+        ". . . . . . .";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////////*/
 /*SECTION_2////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
