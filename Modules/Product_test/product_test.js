@@ -93,7 +93,7 @@ const Products = () => {
                               className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                               style={{ position: "relative", width: "100%", height: "100%" }}>
 
-                          <div id={styles.imageWrapper}>
+                          <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
                             <Image
                               src={product.image}
                               alt={product.title}
