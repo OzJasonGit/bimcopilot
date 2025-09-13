@@ -80,6 +80,9 @@ const Products = () => {
 
                 return (
                   <React.Fragment key={groupIndex}>
+
+
+
                     {/* Row 1: First 3 small cards */}
                     {group.slice(0, 3).map((product) => (
                       
@@ -128,12 +131,6 @@ const Products = () => {
 
 
 
-
-
-
-
-
-
                     {/* Row 2: Small + Large (aligned left or right) */}
                     {group.length >= 5 && (
                       <>
@@ -176,18 +173,6 @@ const Products = () => {
                                 <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[3].subtitle)}</p>
                               </div>
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
 
                             <div key={group[4].id} className={`${styles.card} ${styles.cardLarge} ${styles.cardRight}`}>
                               <Link href={`/products/${group[4].slug}`}
@@ -293,19 +278,6 @@ const Products = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
                             <div key={group[3].id} className={styles.card}>
                               <Link href={`/products/${group[3].slug}`}
                                   className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
@@ -333,7 +305,7 @@ const Products = () => {
                                       <Image src={text_logo} alt="Logo Text" fill style={{ objectFit: "cover" }} quality={100} loading="lazy" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==" />
                                     </div> 
                                     <div style={{ gridArea: "TITLE", position: "relative", zIndex: 100}}>
-                                      <h3  id={styles._H2}  className="text-center text-stone-50 font-avant_garde_bold opacity-0 translate-y-10 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">{product.description} </h3>
+                                      <h3  id={styles._H2}  className="text-center text-stone-50 font-avant_garde_bold opacity-0 translate-y-10 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"> </h3>
                                     </div>   
                                   </div>
 
@@ -343,30 +315,14 @@ const Products = () => {
                                 <p className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[3].subtitle)}</p>
                               </div>
                             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                           </>
                         )}
                       </>
                     )}
+
+
+
+
                   </React.Fragment>
                 );
               })}
