@@ -83,7 +83,7 @@ const Products = () => {
                     {/* Row 1: First 3 small cards */}
                     {group.slice(0, 3).map((product) => (
                       
-                      <div id={ROW_1} key={product.id} className={styles.card}>
+                      <div id={styles.ROW_1} key={product.id} className={styles.card}>
 
 
                         <Link href={`/products/${product.slug}`}
@@ -139,7 +139,7 @@ const Products = () => {
                       <>
                         {isEvenGroup ? (
                           <>
-                            <div id={ROW_2}  key={group[3].id} className={styles.card}>
+                            <div id={styles.ROW_2}  key={group[3].id} className={styles.card}>
                               <Link href={`/products/${group[3].slug}`}
                                     className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                                     style={{ position: "relative", width: "100%", height: "100%" }}>
