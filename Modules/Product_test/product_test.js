@@ -284,7 +284,7 @@ const Products = () => {
                                   style={{ position: "relative", width: "100%", height: "auto" }}>
 
                                   {/* Image wrapper */}
-                                  <div id={styles.imageWrapper} className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                                  <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
                                     <Image
                                       src={group[3].image}
                                       alt={group[3].title}
