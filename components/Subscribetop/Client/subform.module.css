@@ -37,12 +37,11 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
     column-gap: 15px;
     grid-template-areas:
-        "FORM"
-        "BUTTON";
+        "FORM" "BUTTON";
 }
 
 #FORM {
@@ -55,18 +54,21 @@
 #FORM_ITEM {
     width: 100%;
     height: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 #FORM_INPUT {
     width: 100%;
-    height: 62.5px;
+    height: 52.5px;
     margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 #FORM_BUTTON {
     grid-area: BUTTON;
     width: 100%;
-    height: 62.5px;
+    height: 54.5px;
     margin-left: 0%;
 }
 
