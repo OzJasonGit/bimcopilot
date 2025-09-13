@@ -60,7 +60,7 @@
 
 #FORM_INPUT {
     width: 100%;
-    height: 52.5px;
+    height: auto;
     margin-bottom: 0;
     padding-bottom: 0;
 }
@@ -68,8 +68,8 @@
 #FORM_BUTTON {
     grid-area: BUTTON;
     width: 100%;
-    height: 54.5px;
-    margin-left: 0%;
+    height: auto;
+    margin-left: 0;
 }
 
 @media all and (min-width: 480px) {
