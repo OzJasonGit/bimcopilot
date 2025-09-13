@@ -173,7 +173,7 @@
     display: grid;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 340px auto auto;
+    grid-template-rows: 360px auto auto;
     grid-template-areas: "IMAGE IMAGE"
         "TEXT TEXT"
         "SHARE .";
