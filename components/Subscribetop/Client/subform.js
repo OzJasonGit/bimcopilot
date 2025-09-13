@@ -48,7 +48,7 @@ const Subform = () => {
         style={{ marginBottom: "0", height: "100%", width: "100%" }}
       >
         <Form.Item
-          id={styles.FORM_ITEM}
+          style={{ marginBottom: "0", paddingBottom: "0", height: "100%", width: "100%" }}
           name="email"
           rules={[
             {
