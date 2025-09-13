@@ -113,9 +113,15 @@
     ". . . . . . .";
 }
 
-#ROW_1{}
+#ROW_1{
+  width: 100%;
+  height: auto;
+}
 
-#ROW_2{}
+#ROW_2{
+  width: 100%;
+  height: auto;
+}
 
 
 
