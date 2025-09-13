@@ -68,7 +68,8 @@ const Subform = () => {
           />
         </Form.Item>
 
-        <Form.Item>
+        <Form.Item 
+           style={{ marginBottom: "0", paddingBottom: "0", height: "100%", width: "100%" }}>
           <Button variant="outline"
                   style={{ marginLeft: "0" }}
                   
