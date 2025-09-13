@@ -80,13 +80,11 @@ const Products = () => {
 
                 return (
                   <React.Fragment key={groupIndex}>
-
-
-
-
                     {/* Row 1: First 3 small cards */}
                     {group.slice(0, 3).map((product) => (
-                      <div id={ROW_1} key={product.id} className={styles.card}>
+                      
+                      <div key={product.id} className={styles.card}>
+
 
                         <Link href={`/products/${product.slug}`}
                               className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
@@ -141,7 +139,7 @@ const Products = () => {
                       <>
                         {isEvenGroup ? (
                           <>
-                            <div id={ROW_2} key={group[3].id} className={styles.card}>
+                            <div key={group[3].id} className={styles.card}>
                               <Link href={`/products/${group[3].slug}`}
                                     className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                                     style={{ position: "relative", width: "100%", height: "100%" }}>
@@ -155,7 +153,8 @@ const Products = () => {
                                   />
                                 </div>
 
-                                
+                                {/* Dark overlay */}
+                                <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 " /> 
 
 
                                 {/* Icons */}
@@ -177,6 +176,16 @@ const Products = () => {
                                 <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[3].subtitle)}</p>
                               </div>
                             </div>
+
+
+
+
+
+
+
+
+
+
 
 
 
