@@ -9,7 +9,11 @@ import styles from './subform.module.css';
 
 
 import { Button } from "@/components/ui/button"
-import { Form, Input } from "antd";
+import { Form,  } from "antd";
+
+import { Input } from "@/components/ui/input"
+
+
 
 const Subform = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -41,6 +45,26 @@ const Subform = () => {
 
   return (
     <div id={styles.SUBSCRIBE}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <Form
         form={form}
         onFinish={handleSubmit}
@@ -67,11 +91,9 @@ const Subform = () => {
             },
           ]}
         >
-          <Input
-            style={{ marginBottom: "0", paddingBottom: "0", height: "100%", width: "100%" }}
+
+          <Input type="email" placeholder="Enter your email" />
           
-            placeholder="Enter your email"
-          />
         </Form.Item>
 
 
