@@ -82,8 +82,12 @@ const Products = () => {
                   <React.Fragment key={groupIndex}>
                     {/* Row 1: First 3 small cards */}
                     {group.slice(0, 3).map((product) => (
-                      <div key={product.id} className={styles.card}>
 
+
+
+
+
+                      <div id={ROW_1} key={product.id} className={styles.card}>
 
                         <Link href={`/products/${product.slug}`}
                               className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
