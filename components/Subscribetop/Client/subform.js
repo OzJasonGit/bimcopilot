@@ -45,10 +45,15 @@ const Subform = () => {
         form={form}
         onFinish={handleSubmit}
         id={styles.FORM}
-        style={{ marginBottom: "0", height: "100%", width: "100%" }}
+        style={{ marginBottom: "0", height: "auto", width: "100%" }}
       >
+
+
+
+
+        
         <Form.Item
-          style={{ marginBottom: "0", paddingBottom: "0", height: "100%", width: "100%" }}
+          style={{ marginBottom: "0", paddingBottom: "0", height: "auto", width: "auto" }}
           name="email"
           rules={[
             {
@@ -63,23 +68,30 @@ const Subform = () => {
           ]}
         >
           <Input
-            id={styles.FORM_INPUT}
+            style={{ marginBottom: "0", paddingBottom: "0", height: "100%", width: "100%" }}
+          
             placeholder="Enter your email"
           />
         </Form.Item>
 
+
+
+
         <Form.Item 
-           style={{ marginBottom: "0", paddingBottom: "0", height: "100%", width: "100%" }}>
+           style={{ marginBottom: "0", paddingBottom: "0", height: "auto", width: "auto" }}>
           <Button variant="outline"
-                  style={{ marginLeft: "0" }}
+                  style={{ marginLeft: "0", height: "100%", width: "100%" }}
                   
-                  id={styles.FORM_BUTTON}
+                 
                   type="primary"
                   htmlType="submit"
                   loading={isLoading}
                   >Click Here!
           </Button>
         </Form.Item>
+
+
+
       </Form>
       {error && <div style={{ color: 'red', marginTop: '5px' }}>{error}</div>}
     </div>
