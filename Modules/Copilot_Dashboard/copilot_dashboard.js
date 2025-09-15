@@ -243,14 +243,19 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                         background: "#f5f5f4"
                                         }}>
 
-                                             <div>
-                                                <h2 className="text-lg font-bold mb-2">Project Location</h2>
+                                             <div 
+                                                style={{                    
+                                                    position: "relative",                 
+                                                    width: "100%",
+                                                    height: "100%",                                                
+                                                    }}>
+                                                {/*<h2 className="text-lg font-bold mb-2">Project Location</h2>*/}
                                                 <MapboxLocation lat={25.2048} lng={55.2708} /> {/* Example: Dubai */}
                                             </div>
-                                            <div>
+                                            {/*<div>
                                                 <h2 className="text-lg font-bold mb-2">Orientation</h2>
-                                                <OrientationCompass azimuth={135} /> {/* Example: facing SE */}
-                                            </div>
+                                                <OrientationCompass azimuth={135} /> {/* Example: facing SE 
+                                            </div>*/}
                             </div>
 
                             <div id={styles.LINE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{

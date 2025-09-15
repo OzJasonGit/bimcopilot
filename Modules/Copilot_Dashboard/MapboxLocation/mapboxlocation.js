@@ -27,7 +27,7 @@ export default function MapboxLocation({ lat, lng }) {
   return (
     <div
       ref={mapContainer}
-      className="w-full h-64 rounded-2xl shadow-md"
+      className="w-full h-full"
     />
   );
 }
