@@ -251,7 +251,7 @@
   grid-area: COST;
   grid-row-gap: 30px;
   grid-template-columns: 1fr;
-  grid-template-rows: 300px 300px 300px;
+  grid-template-rows: 280px 280px 280px;
   grid-template-areas:
     "TOTAL"
     "MATERIAL"
