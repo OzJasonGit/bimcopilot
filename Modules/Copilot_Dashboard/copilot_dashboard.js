@@ -134,7 +134,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                         </div>
 
                         <div id={styles.MAP_GRID_CONTAINER}> 
-                            
+
                             <div className="rounded-2xl ..."
                                      style={{
                                         gridArea: "SPECKLE",
@@ -202,6 +202,18 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                             <h2 className="text-lg font-bold mb-2">Orientation</h2>
                                             <OrientationCompass azimuth={135} /> {/* Example: facing SE 
                                         </div>*/}
+                                </div>
+
+                                <div className="rounded-2xl ... border-stone-800 ... border-solid ... border-2 ... shadow-md" 
+                                     style={{
+                                        gridArea: "BAR",
+                                        position: "relative",
+                                        overflow: "hidden",
+                                        width: "100%",
+                                        height: "100%",
+                                        background: "#1f1f1f"
+                                        }}>
+
                                 </div>
 
                                 
