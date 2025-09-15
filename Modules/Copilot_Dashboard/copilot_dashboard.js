@@ -133,7 +133,49 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             </div>
                         </div>
 
-                        <div id={styles.MAP_GRID_CONTAINER}>
+                        <div id={styles.MAP_GRID_CONTAINER}> 
+                            
+                            <div className="rounded-2xl ..."
+                                     style={{
+                                        gridArea: "SPECKLE",
+                                        position: "relative",                                      
+                                        width: "100%",
+                                        height: "100%",
+                                        }}>
+
+                                    <div id={styles.SPECKLE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
+                                      
+                                        position: "relative",
+                                        overflow: "hidden",
+                                        height: "100%",
+                                        width:"100%",
+                                        background: "#f5f5f4"
+                                    }}>
+                                    <div class="rounded-xl ..." 
+                                        style={{
+                                        position: "relative",
+                                        overflow: "hidden",
+                                        height: "100%",
+                                            }}>
+                                        <iframe
+                                            title='iframe'
+                                            loading='lazy'
+                                            style={{
+                                                position: "relative",
+                                                gridArea: "IMAGE",
+                                                overflow: "hidden",
+                                                height: "110%",
+                                            }}
+                                            src="https://app.speckle.systems/projects/d719234282/models/7eb698fe88#embed=%7B%22isEnabled%22%3Atrue%2C%22isTransparent%22%3Atrue%2C%22hideControls%22%3Atrue%2C%22hideSelectionInfo%22%3Atrue%7D" 
+                                            width="100%" 
+                                            height="100%"
+                                            frameborder="0">
+                                        </iframe>
+                                    </div>
+                                </div>
+
+                            </div>
+
                             <div id={styles.MAP_GRID}>                    
                                 <div 
                                  id={styles.FORCE} 
@@ -164,42 +206,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                                 
 
-                                <div className="rounded-2xl ..."
-                                     style={{
-                                        gridArea: "SPECKLE",
-                                        position: "relative",                                      
-                                        width: "100%",
-                                        height: "100%",
-                                        }}>
-
-                                    <div id={styles.SPECKLE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
-                                        gridArea: "SPECKLE",
-                                        position: "relative",
-                                        overflow: "hidden",
-                                        height: "450px",
-                                        background: "#f5f5f4"
-                                    }}>
-                                    <div class="rounded-xl ..." 
-                                        style={{
-                                        position: "relative",
-                                        overflow: "hidden",
-                                        height: "100%",
-                                            }}>
-                                        <iframe
-                                            title='iframe'
-                                            loading='lazy'
-                                            style={{
-                                                position: "relative",
-                                                gridArea: "IMAGE",
-                                                overflow: "hidden",
-                                                height: "110%",
-                                            }}
-                                            src="https://app.speckle.systems/projects/d719234282/models/7eb698fe88#embed=%7B%22isEnabled%22%3Atrue%2C%22isTransparent%22%3Atrue%2C%22hideControls%22%3Atrue%2C%22hideSelectionInfo%22%3Atrue%7D" width="100%" frameborder="0">
-                                        </iframe>
-                                    </div>
-                                </div>
-
-                                </div>
+                               
 
                             </div>
                         </div>
