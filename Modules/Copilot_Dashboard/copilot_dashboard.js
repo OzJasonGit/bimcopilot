@@ -79,7 +79,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
             {/*<Sides/>*/}
 
             {/*<Services_1/>*/}
-            <Subscribe_Dashboard />
+            {/*<Subscribe_Dashboard />*/}
 
             {/*<section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}> 
                 <div class={styles.grid_0_dashboard}>
