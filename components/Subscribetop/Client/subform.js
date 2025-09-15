@@ -48,6 +48,31 @@ const Subform = () => {
     <div id={styles.SUBSCRIBE}>
 
 
+      <Form
+        
+        form={form}
+        onFinish={handleSubmit}
+        id={styles.FORM}
+        style={{ marginBottom: "0", height: "100%", width: "100%" }}>
+
+      </Form>
+
+
+
+          <Input type="email" placeholder="Enter your email"> 
+          </Input>
+
+
+          <Button 
+                  style={{ marginBottom: "0", paddingBottom: "0", height: "100%", width: "100%", gridArea:"BUTTON" }}
+                  variant="outline"                                 
+                  type="primary"
+                  htmlType="submit"
+                  loading={isLoading}
+                  >Click Here!
+          </Button>
+
+
 
 
 
@@ -90,25 +115,15 @@ const Subform = () => {
               type: "email",
               message: "The input is not a valid email!",
             },
-              ]}
-            >
-
-          <Input type="email" placeholder="Enter your email" />
-          
+              ]}>         
         </Form.Item>
 
 
 
 
         <Form.Item 
-           style={{ marginBottom: "0", paddingBottom: "0", height: "auto", width: "auto" }}>
-          <Button 
-                  variant="outline"                                 
-                  type="primary"
-                  htmlType="submit"
-                  loading={isLoading}
-                  >Click Here!
-          </Button>
+           >
+          
         </Form.Item>
 
 
