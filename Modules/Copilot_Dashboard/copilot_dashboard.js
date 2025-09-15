@@ -100,26 +100,31 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     <div id={styles.DASHBOARD_GRID}>
 
                         <div id={styles.COST_GRID}>
-                            <div style={{
+
+
+                            <div className="rounded-2xl ..."
+                                 style={{
                                         gridArea: "TOTAL",
                                         position: "relative",                                      
                                         width: "100%",
                                         height: "100%",
-                                        background: "#f5f5f4"
+                                        background: "#1f1f1f"
                                         }}>
 
                             </div >
 
-                            <div style={{
+                            <div className="rounded-2xl ..."
+                                 style={{
                                         gridArea: "MATERIAL",
                                         position: "relative",                                      
                                         width: "100%",
                                         height: "100%",
-                                        background: "#f5f5f4"
+                                        background: "#1f1f1f"
                                         }}>
                             </div>
 
-                            <div style={{
+                            <div className="rounded-2xl ..."
+                                 style={{
                                         gridArea: "GFA",
                                         position: "relative",                                      
                                         width: "100%",
