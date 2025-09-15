@@ -234,12 +234,11 @@
   grid-area: SUB;
   grid-column-gap: 30px;
   grid-row-gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows:  auto;
   grid-template-areas:
-    "SPECKLE SPECKLE SPECKLE MAP MAP MAP HOLDER HOLDER HOLDER"
-    "TITLE TITLE TITLE DOUGHNUT DOUGHNUT DOUGHNUT HOLDER HOLDER HOLDER"
-    "TREE TREE TREE TREE BAR BAR HOLDER HOLDER HOLDER" ;
+    " COST COST COST BAR BAR BAR MAP MAP MAP MAP "
+   ;
       
 }
 
