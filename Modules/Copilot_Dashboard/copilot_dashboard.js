@@ -100,8 +100,6 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                     <div id={styles.DASHBOARD_GRID}>
 
                         <div id={styles.COST_GRID}>
-
-
                             <div className="rounded-2xl ..."
                                  style={{
                                         gridArea: "TOTAL",
@@ -162,6 +160,17 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                             <h2 className="text-lg font-bold mb-2">Orientation</h2>
                                             <OrientationCompass azimuth={135} /> {/* Example: facing SE 
                                         </div>*/}
+                                </div>
+
+                                <div className="rounded-2xl ..."
+                                     style={{
+                                        gridArea: "BAR",
+                                        position: "relative",                                      
+                                        width: "100%",
+                                        height: "100%",
+                                        background: "#1f1f1f"
+                                        }}>
+
                                 </div>
 
                             </div>
