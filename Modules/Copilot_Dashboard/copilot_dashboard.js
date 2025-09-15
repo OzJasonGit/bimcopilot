@@ -295,7 +295,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
 
 
-            <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+            {/*<section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
                 <div class={styles.grid_0_dashboard}>
                     <div id={styles.BOUGHT_TOGETHER_GRID}>
 
@@ -334,7 +334,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                     </div>
                 </div>
-            </section>
+            </section>*/}
 
             <Footer />
 
