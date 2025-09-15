@@ -17,7 +17,7 @@ export default function MapboxLocation({ lat, lng }) {
       zoom: 15,
     });
 
-    new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
+    {/*new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);*/}
 
     return () => map.remove();
   }, [lat, lng]);
