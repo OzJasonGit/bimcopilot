@@ -233,7 +233,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                             <div 
                                  id={styles.FORCE} 
-                                 className="rounded-2xl ... border-stone-800 ... border-solid ... border-2 ... grid grid-cols-2 gap-4 p-4 shadow-md" 
+                                 className="rounded-2xl ... border-stone-800 ... border-solid ... border-2 ... shadow-md" 
                                  style={{
                                         gridArea: "FORCE",
                                         position: "relative",
