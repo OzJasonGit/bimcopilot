@@ -8,13 +8,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import styles from './subform.module.css';
 
 
-import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Form  } from "antd";
-
-
-
-
+import { Form, Input } from "antd";
 
 const Subform = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -46,64 +41,14 @@ const Subform = () => {
 
   return (
     <div id={styles.SUBSCRIBE}>
-
-
-      <Form
-        
-        form={form}
-        onFinish={handleSubmit}
-        id={styles.FORM}
-        style={{ marginBottom: "0", height: "100%", width: "100%" }}>
-
-      </Form>
-
-
-
-          <Input type="email" placeholder="Enter your email"> 
-          </Input>
-
-
-          <Button 
-                  style={{ marginBottom: "0", paddingBottom: "0", height: "100%", width: "100%", gridArea:"BUTTON" }}
-                  variant="outline"                                 
-                  type="primary"
-                  htmlType="submit"
-                  loading={isLoading}
-                  >Click Here!
-          </Button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <Form
         form={form}
         onFinish={handleSubmit}
         id={styles.FORM}
         style={{ marginBottom: "0", height: "100%", width: "100%" }}
       >
-
-
-
-
-        
         <Form.Item
-          style={{ marginBottom: "0", paddingBottom: "0", height: "auto", width: "auto" }}
+          id={styles.FORM_ITEM}
           name="email"
           rules={[
             {
@@ -115,19 +60,23 @@ const Subform = () => {
               type: "email",
               message: "The input is not a valid email!",
             },
-              ]}>         
+          ]}
+        >
+          <Input
+            id={styles.FORM_INPUT}
+            placeholder="Enter your email"
+          />
         </Form.Item>
 
-
-
-
-        <Form.Item 
-           >
-          
+        <Form.Item>
+          <Button variant="outline"
+                  id={styles.FORM_BUTTON}
+                  type="primary"
+                  htmlType="submit"
+                  loading={isLoading}
+                  >Click Here!
+          </Button>
         </Form.Item>
-
-
-
       </Form>
       {error && <div style={{ color: 'red', marginTop: '5px' }}>{error}</div>}
     </div>
