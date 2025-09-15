@@ -101,7 +101,10 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                         <div id={styles.COST_GRID}>
                         </div>
-                        <div id={styles.MAP_GRID}>
+                        <div id={styles.MAP_GRID_CONTAINER}>
+                            <div id={styles.MAP_GRID}>
+
+                            </div>
                         </div>
 
                     </div>
