@@ -243,6 +243,20 @@
 }
 
 
+#COST_GRID {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-area: COST;
+  grid-template-columns: 1fr;
+  grid-template-rows: 400px 400px 400px;
+  grid-template-areas:
+    "TOTAL"
+    "MATERIAL"
+    "GFA"
+}
+
 
 
 
