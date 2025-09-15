@@ -67,8 +67,7 @@
     grid-area: BUTTON;
     width: 100%;
     height: 62.5px;
-    position: relative;
-    left: 0;
+  
 }
 
 @media all and (min-width: 480px) {

@@ -69,7 +69,8 @@ const Subform = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button variant="outline"
+          <Button style={{ position:"relative", left:"0%"}}
+                  variant="outline"
                   id={styles.FORM_BUTTON}
                   type="primary"
                   htmlType="submit"
