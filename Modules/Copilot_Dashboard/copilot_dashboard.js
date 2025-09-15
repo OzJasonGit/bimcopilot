@@ -28,6 +28,10 @@ import Chart_10 from './Charts/Chart_10/Chart_10';
 import Services_1 from "../../components/services_1/services_black";
 import { treemap } from 'd3';
 
+
+import MapboxLocation from "./MapboxLocation/mapboxlocation";
+import OrientationCompass from "./OrientationCompass/orientationcompass";
+
 // import Link from "next/link";
 // import Image from "next/image";
 
@@ -227,14 +231,26 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             background: "#f5f5f4"
                         }}>
 
-                            <div id={styles.FORCE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
-                                gridArea: "FORCE",
-                                position: "relative",
-                                overflow: "hidden",
-                                width: "100%",
-                                height: "100%",
-                                background: "#f5f5f4"
-                            }}>
+                            <div 
+                                 id={styles.FORCE} 
+                                 className="rounded-2xl ... border-stone-800 ... border-solid ... border-2 ... grid grid-cols-2 gap-4 p-4 shadow-md" 
+                                 style={{
+                                        gridArea: "FORCE",
+                                        position: "relative",
+                                        overflow: "hidden",
+                                        width: "100%",
+                                        height: "100%",
+                                        background: "#f5f5f4"
+                                        }}>
+
+                                             <div>
+                                                <h2 className="text-lg font-bold mb-2">Project Location</h2>
+                                                <MapboxLocation lat={25.2048} lng={55.2708} /> {/* Example: Dubai */}
+                                            </div>
+                                            <div>
+                                                <h2 className="text-lg font-bold mb-2">Orientation</h2>
+                                                <OrientationCompass azimuth={135} /> {/* Example: facing SE */}
+                                            </div>
                             </div>
 
                             <div id={styles.LINE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
