@@ -303,10 +303,10 @@
   grid-area: CHART;
   grid-row-gap: 30px;
   grid-template-columns: 1fr;
-  grid-template-rows: 430px auto;
+  grid-template-rows: 180px auto;
   grid-template-areas:
-    "CHART"
-    "CHART_3"
+    "BREAK"
+    "CHART_4"
 }
 
 

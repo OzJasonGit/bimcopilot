@@ -216,8 +216,33 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                         overflow: "hidden",
                                         width: "100%",
                                         height: "100%",
-                                        background: "#1f1f1f"
-                                        }}>                                  
+                                        }}>   
+
+                                        <div id={styles.BREAK} 
+                                                className="rounded-2xl ..."
+                                                style={{  
+                                                gridArea: "BREAK",                           
+                                                position: "relative",                                      
+                                                width: "100%",
+                                                height: "100%",
+                                                background: "#1f1f1f",
+                                                
+                                                }}> 
+                                        </div>
+
+                                        <div id={styles.CHART_4} 
+                                                className="rounded-2xl ..."
+                                                style={{  
+                                                gridArea: "CHART_4",                           
+                                                position: "relative",                                      
+                                                width: "100%",
+                                                height: "100%",
+                                                background: "#1f1f1f",
+                                                
+                                                }}> 
+                                        </div>
+
+
                             </div>
                         </div>
 
