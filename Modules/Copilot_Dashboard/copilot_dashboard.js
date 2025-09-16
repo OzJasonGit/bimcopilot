@@ -97,7 +97,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
             <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
                 <div class={styles.grid_0_dashboard}>
-                    <div id={styles.DASHBOARD_GRID}>
+                    <div id={styles.DASHBOARD_GRID_TEST}>
 
                         <div id={styles.COST_GRID}>
                             <div className="rounded-2xl ..."
@@ -203,23 +203,6 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                             <OrientationCompass azimuth={135} /> {/* Example: facing SE 
                                         </div>*/}
                                 </div>
-
-                                <div className="rounded-2xl ... border-stone-800 ... border-solid ... border-2 ... shadow-md" 
-                                     style={{
-                                        gridArea: "BAR",
-                                        position: "relative",
-                                        overflow: "hidden",
-                                        width: "100%",
-                                        height: "100%",
-                                        background: "#1f1f1f"
-                                        }}>
-
-                                </div>
-
-                                
-
-                               
-
                             </div>
                         </div>
 
