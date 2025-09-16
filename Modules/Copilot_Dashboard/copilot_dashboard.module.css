@@ -242,7 +242,7 @@
   grid-template-rows: 200px auto;
   grid-template-areas:
     "MENU MENU MENU MENU MENU MAP MAP MAP MAP MAP"
-    " COST COST . . . MAP MAP MAP MAP MAP "
+    " COST COST CHART CHART CHART MAP MAP MAP MAP MAP "
   ;
 }
 
@@ -280,15 +280,15 @@
 
 
 
-#MAP_GRID_CONTAINER {
+#CHART_GRID_1_CONTAINER {
   position: relative;
   width: 100%;
   height: auto;
   display: grid;
-  grid-area: MAP;
+  grid-area: CHART;
   grid-row-gap: 30px;
   grid-template-columns: 1fr;
-  grid-template-rows: auto ;
+  grid-template-rows: 350px auto;
   grid-template-areas:
     "TOTAL"
     "3D"

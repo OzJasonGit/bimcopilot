@@ -210,6 +210,10 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                             </div>
                         </div>
 
+                        <div id={styles.CHART_GRID_1_CONTAINER}>
+
+                        </div>
+
                     </div>
 
                 </div>
