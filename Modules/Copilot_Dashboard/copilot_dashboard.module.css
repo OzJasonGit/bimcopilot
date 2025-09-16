@@ -294,6 +294,25 @@
     "CHART_3"
 }
 
+
+
+#CHART_GRID_2_CONTAINER {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-area: CHART;
+  grid-row-gap: 30px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 430px auto;
+  grid-template-areas:
+    "CHART"
+    "CHART_3"
+}
+
+
+
+
+
 #MAP_GRID_CONTAINER {
   position: relative;
   width: 100%;
@@ -306,7 +325,7 @@
   grid-template-rows: 420px auto auto;
   grid-template-areas: "TOTAL TOTAL TOTAL TOTAL TOTAL"
                        "CHART_2 CHART_2 SPECKLE SPECKLE SPECKLE"
-                       ". . SPECKLE SPECKLE SPECKLE";
+                       "CHART_2 CHART_2 SPECKLE SPECKLE SPECKLE";
 }
 
 
