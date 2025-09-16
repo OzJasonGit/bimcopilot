@@ -226,25 +226,11 @@
 
 
 
+
+
+
+
 #DASHBOARD_GRID {
-  position: relative;
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-area: SUB;
-  grid-column-gap: 30px;
-  grid-row-gap: 30px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows:  200px auto;
-  grid-template-areas:
-    ". . . . . . . . . ."
-    " COST COST MAP MAP MAP MAP MAP MAP MAP MAP "  
-   ;     
-}
-
-
-
-#DASHBOARD_GRID_TEST {
   position: relative;
   width: 100%;
   height: auto;
@@ -319,8 +305,8 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 420px auto auto;
   grid-template-areas: "TOTAL TOTAL TOTAL TOTAL TOTAL"
-                       ". . . SPECKLE SPECKLE"
-                       ". . . SPECKLE SPECKLE";
+                       ". . SPECKLE SPECKLE SPECKLE"
+                       ". . . . .";
 }
 
 
