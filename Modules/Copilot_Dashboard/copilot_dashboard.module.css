@@ -291,7 +291,7 @@
   grid-template-rows: 430px auto;
   grid-template-areas:
     "CHART"
-    "3D"
+    "CHART_3"
 }
 
 #MAP_GRID_CONTAINER {
