@@ -147,7 +147,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                         height: "100%",
                                         }}>
 
-                                    <div id={styles.SPECKLE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
+                                <div id={styles.SPECKLE} class="rounded-xl ... border-stone-800 ... border-solid ... border-2 ..." style={{
                                       
                                         position: "relative",
                                         overflow: "hidden",
@@ -176,6 +176,17 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                             frameborder="0">
                                         </iframe>
                                     </div>
+                                </div>
+
+                                <div id={styles.CHART_2} className="rounded-xl ..."
+                                     style={{
+                                        gridArea: "CHART_2",
+                                        position: "relative",
+                                        overflow: "hidden",
+                                        width: "100%",
+                                        height: "100%",
+                                        background: "#1f1f1f"
+                                        }}>                                  
                                 </div>
 
                             </div>

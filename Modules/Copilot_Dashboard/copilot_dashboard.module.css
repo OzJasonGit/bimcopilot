@@ -305,7 +305,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 420px auto auto;
   grid-template-areas: "TOTAL TOTAL TOTAL TOTAL TOTAL"
-                       ". . SPECKLE SPECKLE SPECKLE"
+                       "CHART_2 CHART_2 SPECKLE SPECKLE SPECKLE"
                        ". . . . .";
 }
 
