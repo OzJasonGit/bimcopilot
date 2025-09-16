@@ -256,7 +256,7 @@
   grid-template-rows: 200px auto;
   grid-template-areas:
     ". . . . . MAP MAP MAP MAP MAP"
-    " MENU MENU MENU MENU MENU MAP MAP MAP MAP MAP "
+    " MENU MENU . . . MAP MAP MAP MAP MAP "
   ;
 }
 
