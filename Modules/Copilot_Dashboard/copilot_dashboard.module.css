@@ -283,7 +283,7 @@
 #CHART_GRID_1_CONTAINER {
   position: relative;
   width: 100%;
-  height: auto;
+
   display: grid;
   grid-area: CHART;
   grid-row-gap: 30px;
