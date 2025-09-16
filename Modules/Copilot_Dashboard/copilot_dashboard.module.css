@@ -239,7 +239,7 @@
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 200px auto;
+  grid-template-rows: 170px auto;
   grid-template-areas:
     "MENU MENU MENU MENU MENU MAP MAP MAP MAP MAP"
     " COST COST CHART CHART CHART MAP MAP MAP MAP MAP "
@@ -288,7 +288,7 @@
   grid-area: CHART;
   grid-row-gap: 30px;
   grid-template-columns: 1fr;
-  grid-template-rows: 400px auto;
+  grid-template-rows: 430px auto;
   grid-template-areas:
     "CHART"
     "3D"
