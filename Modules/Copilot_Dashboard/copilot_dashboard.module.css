@@ -235,8 +235,9 @@
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows:  auto;
+  grid-template-rows:  200px auto;
   grid-template-areas:
+    ". . . . . . . . . ."
     " COST COST MAP MAP MAP MAP MAP MAP MAP MAP "
    
    ;     
