@@ -215,7 +215,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                         position: "relative",
                                         overflow: "hidden",
                                         width: "100%",
-                                        height: "100%",
+                                        height: "180px",
                                         background: "#1f1f1f"
                                         }}>                                  
                             </div>
