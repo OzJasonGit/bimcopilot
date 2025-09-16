@@ -216,9 +216,19 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                        
                                         position: "relative",                                      
                                         width: "100%",
-                                        height: "100%",
-                                        background: "#1f1f1f"
+                                        height: "100%",                                       
                                         }}>
+
+                                            <div id={styles.CHART_1} 
+                                                 className="rounded-2xl ..."
+                                                 style={{                             
+                                                    position: "relative",                                      
+                                                    width: "100%",
+                                                    height: "100%",
+                                                    background: "#1f1f1f",
+                                                    gridArea: "CHART"
+                                                    }}> 
+                                            </div>
 
                         </div>
 
