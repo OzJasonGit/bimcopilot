@@ -99,6 +99,10 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                 <div class={styles.grid_0_dashboard}>
                     <div id={styles.DASHBOARD_GRID_TEST}>
 
+                        <div id={styles.MENU_GRID}
+                             className="rounded-2xl ... border-stone-800 ... border-solid ... border-2 ... shadow-md" >
+                        </div>
+
                         <div id={styles.COST_GRID}>
                             <div className="rounded-2xl ..."
                                  style={{
