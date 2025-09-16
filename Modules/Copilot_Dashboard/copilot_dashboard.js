@@ -79,7 +79,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
             <Menu_White />
             {/*<Menu_Dashboard/>*/}
             {/*<Dashboard_Right />*/}
-            <Header_White />
+            {/*<Header_White />*/}
             {/*<Sides/>*/}
 
             {/*<Services_1/>*/}
@@ -292,7 +292,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                 </div>
             </section>*/}
 
-            <Footer />
+            {/*<Footer />*/}
 
 
         </>
