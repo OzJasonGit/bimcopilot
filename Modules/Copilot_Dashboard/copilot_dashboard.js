@@ -76,7 +76,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
     return (
 
         <>
-            <Menu_White />
+            {/*<Menu_White />*/}
             {/*<Menu_Dashboard/>*/}
             {/*<Dashboard_Right />*/}
             {/*<Header_White />*/}
