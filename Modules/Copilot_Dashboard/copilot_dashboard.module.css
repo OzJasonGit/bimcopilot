@@ -266,7 +266,7 @@
   width: 100%;
   height: auto;
   display: grid;
-  grid-area: COST;
+  grid-area: MENU;
   grid-row-gap: 30px;
   grid-template-columns: 1fr;
   grid-template-rows: 280px 280px 280px;
