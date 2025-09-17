@@ -269,9 +269,9 @@
   height: auto;
   display: grid;
   grid-area: MENU;
-  grid-row-gap: 30px;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;  
+  grid-row-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;  
 }
 
 
