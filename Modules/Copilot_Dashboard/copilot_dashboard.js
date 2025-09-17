@@ -32,6 +32,7 @@ import bimcopilot_icon from "./bimcopilot_logo_black.svg";
 import Image from "next/image";
 import Link from "next/link";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit } from '@fortawesome/free-brands-svg-icons' 
 
 
