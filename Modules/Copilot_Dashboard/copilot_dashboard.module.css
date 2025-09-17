@@ -308,7 +308,7 @@
   height: 100%;
   display: grid;
   grid-row-gap: 5px;
-  grid-template-columns: 1fr 30px 30px 30px 30px 30px;
+  grid-template-columns: 1fr 32.5px 32.5px 32.5px 32.5px 32.5px;
   grid-template-rows: auto;
   grid-template-areas: ". FACEBOOK TWITTER YOUTUBE INSTAGRAM LINKEDIN";
 }
