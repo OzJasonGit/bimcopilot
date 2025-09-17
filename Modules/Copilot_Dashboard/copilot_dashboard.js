@@ -28,6 +28,10 @@ import Chart_10 from './Charts/Chart_10/Chart_10';
 import Services_1 from "../../components/services_1/services_black";
 import { treemap } from 'd3';
 
+import bimcopilot_icon from "./bimcopilot_logo_black.svg";
+import Image from "next/image";
+import Link from "next/link";
+
 
 import MapboxLocation from "./MapboxLocation/mapboxlocation";
 import OrientationCompass from "./OrientationCompass/orientationcompass";
@@ -101,7 +105,46 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                         <div id={styles.MENU_GRID}
                              className="rounded-2xl ... border-stone-800 ... border-solid ... border-2 ... shadow-md" >
+                             <Link id={styles.LOGO} href="/."
+                                    style={{
+                                        gridArea: "MAIN_BUTTON",                        
+                                        }}>
+                                        <div className="" id={styles.LOGO}>
+                                        <Image
+                                            src={bimcopilot_icon}
+                                            alt="BIM Copilot Logo"
+                                            width={100}
+                                            height={100}
+                                            loading="lazy"
+                                            style={{
+                                            position: "relative",
+                                            width: "auto",
+                                            height: "100%",
+                                            justifyItems: "center",
+                                            alignItems: "center",
+                                            objectFit: "contain",
+                                            }}
+                                        />
+                                </div>
+                             </Link>
                         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                         <div id={styles.COST_GRID}>
                             <div className="rounded-2xl ..."
