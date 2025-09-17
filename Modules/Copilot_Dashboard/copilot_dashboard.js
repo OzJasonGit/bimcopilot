@@ -103,8 +103,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                 <div class={styles.grid_0_dashboard}>
                     <div id={styles.DASHBOARD_GRID}>
 
-                        <div id={styles.MENU_GRID}
-                             className="rounded-2xl ... border-stone-800 ... border-solid ... border-2 ... shadow-md" >
+                        <div id={styles.MENU_GRID}>
                              <Link id={styles.LOGO} href="/."
                                     style={{
                                         gridArea: "MAIN_BUTTON",                        
