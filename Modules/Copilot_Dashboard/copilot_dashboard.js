@@ -175,6 +175,19 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                              </Link>                                       
                                         </div>
 
+                                        <div id={styles.REDDIT_LINK}
+                                             style={{                                              
+                                                gridArea: "REDDIT",
+                                                height: "100%",
+                                                width: "100%",
+                                                position: "relative",
+                                                padding:"6px"
+                                             }}>     
+                                             <Link class="" id={styles.ANCHOR_4} href="/">                                            
+                                                <FontAwesomeIcon class={styles.reddit}  id={styles.CENTER} icon={faSquareReddit} size="2xs" />                                       
+                                             </Link>                                      
+                                        </div>
+
                                        
 
                              </div>
