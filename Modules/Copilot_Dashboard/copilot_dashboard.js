@@ -32,6 +32,8 @@ import bimcopilot_icon from "./bimcopilot_logo_black.svg";
 import Image from "next/image";
 import Link from "next/link";
 
+import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit } from '@fortawesome/free-brands-svg-icons' 
+
 
 import MapboxLocation from "./MapboxLocation/mapboxlocation";
 import OrientationCompass from "./OrientationCompass/orientationcompass";
@@ -131,6 +133,48 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                   style={{
                                     gridArea: "SOCIAL",                        
                                   }}>
+
+                                    <div id={styles.LINKEDIN_LINK}
+                                             style={{                                              
+                                                gridArea: "LINKEDIN",
+                                                height: "100%",
+                                                width: "100%",
+                                                position: "relative",
+                                                padding:"6px"
+                                             }}> 
+                                             <Link class="" id="ANCHOR_1" href="/">                                            
+                                                <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
+                                             </Link>    
+
+                                        </div>
+
+                                        <div id={styles.TWITTER_LINK}
+                                             style={{                                              
+                                                gridArea: "TWITTER",
+                                                height: "100%",
+                                                width: "100%",
+                                                position: "relative",
+                                                padding:"6px"
+                                             }}>   
+                                             <Link class="" id={styles.ANCHOR_2} href="/">                                            
+                                                <FontAwesomeIcon class={styles.twitter} id={styles.CENTER} icon={faSquareXTwitter} size="2xs" />                                       
+                                             </Link>                                        
+                                        </div>
+
+                                        <div id={styles.FACEBOOK_LINK}
+                                             style={{                                              
+                                                gridArea: "FACEBOOK",
+                                                height: "100%",
+                                                width: "100%",
+                                                position: "relative",
+                                                padding:"6px"
+                                             }}>    
+                                             <Link class="" id={styles.ANCHOR_3} href="/">                                            
+                                                <FontAwesomeIcon class={styles.facebook}  id={styles.CENTER} icon={faSquareFacebook} size="2xs" />                                       
+                                             </Link>                                       
+                                        </div>
+
+                                       
 
                              </div>
                         </div>

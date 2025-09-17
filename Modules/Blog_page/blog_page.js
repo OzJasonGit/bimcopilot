@@ -3,7 +3,7 @@
 // import styles from "../../../../Modules/Bloghome/bloghome.module.css";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit } from '@fortawesome/free-brands-svg-icons' 
+import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit  } from '@fortawesome/free-brands-svg-icons' 
 
 import styles from "./blog_page.module.css"
 import Link from "next/link";
