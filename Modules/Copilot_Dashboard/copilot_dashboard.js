@@ -155,7 +155,8 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
-                                                padding:"6px"
+                                                padding:"6px",
+                                                top:"3px"
                                              }}>   
                                              <Link class="" id={styles.ANCHOR_2} href="/">                                            
                                                 <FontAwesomeIcon class={styles.youtube} id={styles.CENTER} icon={faYoutube} size="2xs" />                                       
