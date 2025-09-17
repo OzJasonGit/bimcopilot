@@ -33,7 +33,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit, faSquareYoutube} from '@fortawesome/free-brands-svg-icons' 
+import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit, faSquareYoutube,  faSquareInstagram} from '@fortawesome/free-brands-svg-icons' 
 
 
 import MapboxLocation from "./MapboxLocation/mapboxlocation";
@@ -189,16 +189,16 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                              </Link>                                       
                                         </div>
 
-                                        <div id={styles.REDDIT_LINK}
+                                        <div id={styles.INSTAGRAM_LINK}
                                              style={{                                              
-                                                gridArea: "REDDIT",
+                                                gridArea: "INSTAGRAM",
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
                                                 padding:"6px"
                                              }}>     
                                              <Link class="" id={styles.ANCHOR_4} href="/">                                            
-                                                <FontAwesomeIcon class={styles.reddit}  id={styles.CENTER} icon={faSquareReddit} size="2xs" />                                       
+                                                <FontAwesomeIcon class={styles.reddit}  id={styles.CENTER} icon={faSquareInstagram} size="2xs" />                                       
                                              </Link>                                      
                                         </div>
 
