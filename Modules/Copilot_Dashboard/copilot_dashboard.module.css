@@ -271,14 +271,26 @@
   grid-area: MENU;
   grid-row-gap: 5px;
   grid-template-columns: 40px 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 40px auto auto auto auto auto auto;  
+  grid-template-rows: 40px auto auto auto auto auto 35px;  
   grid-template-areas: "MAIN_BUTTON . . . . . ."
                        ". . . . . . ."
                        ". . . . . . ."
                        ". . . . . . ."
                        ". . . . . . ."
                        ". . . . . . ."
-                       ". . . . . . .";
+                       ". . . . SOCIAL SOCIAL SOCIAL";
+}
+
+
+#MENU_GRID {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-row-gap: 5px;
+  grid-template-columns: 1fr 35px 35px 35px 35px 35px;
+  grid-template-rows: auto;
+  grid-template-areas: ".  INSTAGRAM FACEBOOK YOUTUBE LINKEDIN TWITTER";
 }
 
 

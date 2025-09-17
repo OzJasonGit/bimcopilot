@@ -126,6 +126,13 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                         />
                                 </div>
                              </Link>
+
+                             <div id={styles.SOCIAL}
+                                  style={{
+                                    gridArea: "SOCIAL",                        
+                                  }}>
+
+                             </div>
                         </div>
 
 
