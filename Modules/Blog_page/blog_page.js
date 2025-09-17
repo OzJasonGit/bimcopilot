@@ -633,7 +633,7 @@ const Blog_page = (stories) => {
                                                 padding:"6px"
                                              }}> 
                                              <Link class="" id="ANCHOR_1" href="/">                                            
-                                                <FontAwesomeIcon className="text-center" class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
+                                                <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
                                              </Link>    
 
                                         </div>
@@ -647,7 +647,7 @@ const Blog_page = (stories) => {
                                                 padding:"6px"
                                              }}>   
                                              <Link class="" id={styles.ANCHOR_2} href="/">                                            
-                                                <FontAwesomeIcon className="text-center" class={styles.twitter} id={styles.CENTER} icon={faSquareXTwitter} size="2xs" />                                       
+                                                <FontAwesomeIcon class={styles.twitter} id={styles.CENTER} icon={faSquareXTwitter} size="2xs" />                                       
                                              </Link>                                        
                                         </div>
 
@@ -660,7 +660,7 @@ const Blog_page = (stories) => {
                                                 padding:"6px"
                                              }}>    
                                              <Link class="" id={styles.ANCHOR_3} href="/">                                            
-                                                <FontAwesomeIcon className="text-center" class={styles.facebook}  id={styles.CENTER} icon={faSquareFacebook} size="2xs" />                                       
+                                                <FontAwesomeIcon class={styles.facebook}  id={styles.CENTER} icon={faSquareFacebook} size="2xs" />                                       
                                              </Link>                                       
                                         </div>
 
@@ -673,7 +673,7 @@ const Blog_page = (stories) => {
                                                 padding:"6px"
                                              }}>     
                                              <Link class="" id={styles.ANCHOR_4} href="/">                                            
-                                                <FontAwesomeIcon className="text-center" class={styles.reddit}  id={styles.CENTER} icon={faSquareReddit} size="2xs" />                                       
+                                                <FontAwesomeIcon class={styles.reddit}  id={styles.CENTER} icon={faSquareReddit} size="2xs" />                                       
                                              </Link>                                      
                                         </div>
 
