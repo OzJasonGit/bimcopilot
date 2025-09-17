@@ -270,8 +270,15 @@
   display: grid;
   grid-area: MENU;
   grid-row-gap: 5px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto auto;  
+  grid-template-columns: 40px 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 40px auto auto auto auto auto auto;  
+  grid-template-areas: "MAIN_BUTTON . . . . . ."
+                       ". . . . . . ."
+                       ". . . . . . ."
+                       ". . . . . . ."
+                       ". . . . . . ."
+                       ". . . . . . ."
+                       ". . . . . . .";
 }
 
 
