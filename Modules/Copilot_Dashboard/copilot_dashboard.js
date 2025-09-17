@@ -33,7 +33,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit, faSquareYoutube,  faSquareInstagram} from '@fortawesome/free-brands-svg-icons' 
+import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit, faYoutube,  faInstagram} from '@fortawesome/free-brands-svg-icons' 
 
 
 import MapboxLocation from "./MapboxLocation/mapboxlocation";
@@ -149,7 +149,6 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
 
                                         </div>
 
-
                                         <div id={styles.TWITTER_LINK}
                                              style={{                                              
                                                 gridArea: "YOUTUBE",
@@ -159,7 +158,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                                 padding:"6px"
                                              }}>   
                                              <Link class="" id={styles.ANCHOR_2} href="/">                                            
-                                                <FontAwesomeIcon class={styles.youtube} id={styles.CENTER} icon={faSquareYoutube} size="2xs" />                                       
+                                                <FontAwesomeIcon class={styles.youtube} id={styles.CENTER} icon={faYoutube} size="2xs" />                                       
                                              </Link>                                        
                                         </div>
 
@@ -198,7 +197,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                                 padding:"6px"
                                              }}>     
                                              <Link class="" id={styles.ANCHOR_4} href="/">                                            
-                                                <FontAwesomeIcon class={styles.reddit}  id={styles.CENTER} icon={faSquareInstagram} size="2xs" />                                       
+                                                <FontAwesomeIcon class={styles.reddit}  id={styles.CENTER} icon={faInstagram} size="2xs" />                                       
                                              </Link>                                      
                                         </div>
 
