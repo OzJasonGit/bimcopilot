@@ -141,7 +141,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
-                                                padding:"6px"
+                                                padding:"0px"
                                              }}> 
                                              <Link class="" id="ANCHOR_1" href="/">                                            
                                                 <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
@@ -155,7 +155,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
-                                                padding:"6px",
+                                                padding:"0px",
                                                 top:"3px"
                                              }}>   
                                              <Link class="" id={styles.ANCHOR_2} href="/">                                            
@@ -169,7 +169,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
-                                                padding:"6px"
+                                                padding:"0px"
                                              }}>   
                                              <Link class="" id={styles.ANCHOR_2} href="/">                                            
                                                 <FontAwesomeIcon class={styles.twitter} id={styles.CENTER} icon={faSquareXTwitter} size="2xs" />                                       
@@ -182,7 +182,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
-                                                padding:"6px"
+                                                padding:"0px"
                                              }}>    
                                              <Link class="" id={styles.ANCHOR_3} href="/">                                            
                                                 <FontAwesomeIcon class={styles.facebook}  id={styles.CENTER} icon={faSquareFacebook} size="2xs" />                                       
@@ -195,7 +195,7 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                                 height: "100%",
                                                 width: "100%",
                                                 position: "relative",
-                                                padding:"6px"
+                                                padding:"0px"
                                              }}>     
                                              <Link class="" id={styles.ANCHOR_4} href="/">                                            
                                                 <FontAwesomeIcon class={styles.reddit}  id={styles.CENTER} icon={faInstagram} size="2xs" />                                       
