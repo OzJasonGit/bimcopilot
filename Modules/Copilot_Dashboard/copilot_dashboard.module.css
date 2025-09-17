@@ -50,6 +50,10 @@
 .reddit {
   color: #1f1f1f;
 }
+
+.youtube {
+  color: #1f1f1f;
+}
 /*FONTS///////////////////////////////////////////////////////////////////////////////////////////*/
 
 
@@ -304,9 +308,9 @@
   height: 100%;
   display: grid;
   grid-row-gap: 5px;
-  grid-template-columns: 1fr 35px 35px 35px 35px 35px;
+  grid-template-columns: 1fr 35px 35px 35px 35px 35px 35px;
   grid-template-rows: auto;
-  grid-template-areas: ".  INSTAGRAM FACEBOOK REDDIT LINKEDIN TWITTER";
+  grid-template-areas: ".   YOUTUBE INSTAGRAM FACEBOOK REDDIT LINKEDIN TWITTER";
 }
 
 

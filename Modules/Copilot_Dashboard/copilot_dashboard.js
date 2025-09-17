@@ -33,7 +33,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit } from '@fortawesome/free-brands-svg-icons' 
+import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit, faSquareYoutube} from '@fortawesome/free-brands-svg-icons' 
 
 
 import MapboxLocation from "./MapboxLocation/mapboxlocation";
@@ -147,6 +147,20 @@ const Copilot_Dashboard = ({ stories, firstStory }) => {
                                                 <FontAwesomeIcon class={styles.linkedin} id={styles.CENTER} icon={faLinkedin} size="2xs" />                                       
                                              </Link>    
 
+                                        </div>
+
+
+                                        <div id={styles.TWITTER_LINK}
+                                             style={{                                              
+                                                gridArea: "YOUTUBE",
+                                                height: "100%",
+                                                width: "100%",
+                                                position: "relative",
+                                                padding:"6px"
+                                             }}>   
+                                             <Link class="" id={styles.ANCHOR_2} href="/">                                            
+                                                <FontAwesomeIcon class={styles.youtube} id={styles.CENTER} icon={faSquareYoutube} size="2xs" />                                       
+                                             </Link>                                        
                                         </div>
 
                                         <div id={styles.TWITTER_LINK}
