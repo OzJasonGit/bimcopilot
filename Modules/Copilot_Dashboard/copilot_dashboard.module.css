@@ -290,7 +290,7 @@
   grid-row-gap: 5px;
   grid-template-columns: 1fr 35px 35px 35px 35px 35px;
   grid-template-rows: auto;
-  grid-template-areas: ".  INSTAGRAM FACEBOOK YOUTUBE LINKEDIN TWITTER";
+  grid-template-areas: ".  INSTAGRAM FACEBOOK REDDIT LINKEDIN TWITTER";
 }
 
 
