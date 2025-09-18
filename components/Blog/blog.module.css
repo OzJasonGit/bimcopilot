@@ -678,262 +678,33 @@
     "IMAGE";
 }
 
-#INTRO {
-  grid-area: TITLE;
-  position: relative;
-  width: 100%;
-}
 
-#INTRO_SUBTITLE {
-  grid-area: SUBTITLE;
-  position: relative;
-  width: 100%;
-}
 
-#IMAGE {
-  overflow: hidden;
-  position: relative;
-  grid-area: IMAGE;
-  width: 100%;
-  height: 700px;
-}
 
-#ABOUT {
-  position: relative;
-  grid-area: MAIN;
-  display: grid;
-  height: 100%;
-  grid-row-gap: 20px;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "TEXT";
-  width: 100%;
-}
 
-#ABOUT_OVERFLOW {
-  position: absolute;
-  grid-area: MAIN;
-  width: 100%;
-  height: 100%;
-  overflow-y: hidden;
-}
 
-#ABOUT_HOLDER {
-  position: relative;
-  grid-area: ABOUT;
-  background-color: transparent;
-  width: 100%;
-  height: 1200px;
-  margin-top: -350px;
-}
 
-#ABOUT_CONTAINER {
-  position: sticky;
-  display: grid;
-  width: 100%;
-  height: 650px;
-  top: 160px;
-  grid-template-columns: 30px 1fr 30px;
-  grid-template-rows: 30px auto 30px;
-  grid-template-areas:
-    ". . ."
-    ". MAIN ."
-    ". . .";
-}
 
-#ABOUT_TITLE_HOLDER {
-  grid-area: TITLE;
-  padding-bottom: 20px;
-}
 
-#ABOUT_TEXT_HOLDER {
-  height: 560px;
-  grid-area: TEXT;
-}
 
-#ABOUT_TEXT {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  overflow: scroll;
-  overflow-x: hidden;
-  scrollbar-width: thin;
-  scrollbar-color: rgb(231 229 228) rgb(23 23 23);
-  padding-left: 8.5px;
-  padding-right: 8.5px;
-}
 
-#MY_FACE_HOLDER {
-  position: relative;
-  height: 220px;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 20px;
-}
 
-#MY_FACE {
-  position: relative;
-  height: 200px;
-  width: 200px;
-  align-items: center;
-  justify-content: center;
-}
 
-#WHO_WE_WORK_WITH_HOLDER {
-  display: grid;
-  grid-row-gap: 20px;
-  grid-area: WHO_WE_WORK_WITH;
-  grid-template-rows: auto auto;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "TITLE"
-    "CAROUSEL";
-}
 
-#CAROUSEL_HOLDER {
-  position: relative;
-  grid-area: CAROUSEL;
-  display: grid;
-  grid-template-columns: 0px 1fr 0px;
-  grid-template-rows: 0px auto 0px;
-  grid-template-areas:
-    ". . ."
-    ". MAIN ."
-    ". . .";
-  width: 100%;
-  height: 200px;
-  background-color: rgb(23 23 23);
-}
-
-#CAROUSEL {
-  grid-area: MAIN;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-#TESTIMONIALS {
-  grid-area: TESTIMONIAL;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 20px;
-  grid-template-rows: 50px auto;
-  width: 100%;
-  height: auto;
-  grid-template-areas:
-    "TITLE"
-    "TESTIMONIALS";
-}
-
-#TESTIMONIAL_AREA {
-  position: relative;
-  grid-area: TESTIMONIALS;
-  width: 100%;
-  height: 450px;
-}
-
-#T_CONTAINER {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
 
 /*SECTION_7////ABOUT///////////////////////////////////////////////////////////////////////////////////*/
 
 /*SECTION_8////PROCESS//////////////////////////////////////////////////////////////////////////////////*/
-#SHADOW_SECTION_PROCESS {
-  position: relative;
-  width: 100%;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  background-color: rgb(228 228 231);
-  z-index: -30000;
-}
 
-.process_section {
-  grid-area: MAIN-AREA;
-  display: grid;
-  width: 100%;
-  height: auto;
-  grid-column-gap: 40px;
-  grid-row-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 20px auto auto auto 60px;
-  grid-template-areas:
-    ". . . . . . . . . . . ."
-    "TITLE TITLE TITLE TITLE TITLE TITLE TITLE TITLE . . . ."
-    "STEPS STEPS STEPS STEPS STEPS STEPS STEPS STEPS . . . ."
-    "PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS PROCESS"
-    ". . . . . . . . . . . .";
-}
 
-#PROCESS_TITLE {
-  grid-area: TITLE;
-}
 
-#PROCESS_TEXT {
-  grid-area: STEPS;
-}
 
-#PROCESS_STEPS {
-  grid-area: STEPS;
-  width: 100%;
-  height: 20px;
-}
 
-#PROCESS {
-  grid-area: PROCESS;
-  width: 100%;
-  height: 700px;
-  overflow-y: hidden;
-  overflow-x: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: rgb(64 64 64) rgb(228 228 231);
-  padding-bottom: 60px;
-}
 
-#PROCESS_HORIZONTAL {
-  display: grid;
-  position: relative;
-  grid-column-gap: 40px;
-  grid-template-columns: 425px 425px 425px 425px 425px 425px 1fr;
-  grid-template-rows: 100%;
-  grid-template-areas: "1 2 3 4 5 6 .";
-  height: 100%;
-  width: 3000px;
-}
 
-#PROCESS_CARD {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  position: relative;
-  grid-template-columns: 30px 1fr 30px;
-  grid-template-rows: 30px auto 30px;
-  grid-template-areas:
-    ". . ."
-    ". AREA ."
-    ". . .";
-}
 
-#CARD_GRID {
-  height: 100%;
-  width: 100%;
-  grid-area: AREA;
-  grid-row-gap: 30px;
-  display: grid;
-  position: absolute;
-  grid-template-columns: 120px 1fr;
-  grid-template-rows: 120px auto auto auto;
-  grid-template-areas:
-    "NUMBER . "
-    "TITLE TITLE"
-    "SUBTITLE SUBTITLE"
-    "BULLETS BULLETS";
-  max-height: 0;
-}
+
+
 
 
 /*SECTION_8////PROCESS/////////////////////////////////////////////////////////////////////////////////*/
