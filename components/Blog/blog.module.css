@@ -43,37 +43,8 @@
   margin: 0;
 }
 
-.grid_0 {
-  position: relative;
-  width: 100%;
-  max-width: 1520px;
-  background-color: transparent;
-  display: grid;
-  grid-column-gap: 0px;
-  grid-row-gap: 20px;
-  grid-template-rows: 100px auto auto 20px;
-  grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
-  grid-template-areas:
-    ". . . . . . ."
-    ". BANNER-1 . MAIN-AREA . BANNER-2 ."
-    ". VIDEO_B VIDEO_B VIDEO_B VIDEO_B VIDEO_B ."
-    ". . . . . . .";
-}
 
-.grid_0_main {
-  width: 100%;
-  max-width: 1520px;
-  background-color: transparent;
-  display: grid;
-  grid-column-gap: 0px;
-  grid-row-gap: 40px;
-  grid-template-rows: 0px auto 0px;
-  grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
-  grid-template-areas:
-    ". . . . . . ."
-    ". BANNER-1 . MAIN-AREA . BANNER-2 ."
-    ". . . . . . .";
-}
+
 
 .grid_0_blog {
   position: relative;
@@ -92,16 +63,7 @@
     ". . . . . . .";
 }
 
-#SHADOW_SECTION {
-  position: relative;
-  width: 100%;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  background-color: rgb(23, 23, 23);
-  z-index: -30000;
-  top: 0px;
-}
+
 
 #SHADOW_SECTION_BLOG {
   position: relative;
@@ -116,73 +78,18 @@
   overflow-x: hidden;
 }
 
-#SHADOW_SECTION_TITLE {
-  position: relative;
-  width: 100%;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  background-color: transparent;
-  z-index: -20000;
-}
 
-.container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  border-radius: 1.5px;
-}
+
+
 
 /*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
-.grid_0_subscribe {
-  position: relative;
-  width: 100%;
-  max-width: 1520px;
-  background-color: transparent;
-  display: grid;
-  grid-column-gap: 0px;
-  grid-row-gap: 20px;
-  grid-template-rows: 170px auto 20px;
-  grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
-  grid-template-areas:
-    ". . . . . . ."
-    ". . . SUB . . ."
-    ". . . . . . .";
-}
 
-.sub_head {
-  position: relative;
-  grid-area: SUB;
-  display: grid;
-  width: 100%;
-  height: auto;
-  grid-column-gap: 40px;
-  grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "BC BC BC BC BC BC . . . . . . . .";
-  left: 0;
-}
 
-#SUBSCRIBE {
-  position: relative;
-  grid-area: BC;
-  width: 100%;
-  display: grid;
-  grid-row-gap: 20px;
-  grid-column-gap: 20px;
-  grid-template-columns: 1fr 180px;
-  grid-template-rows: auto auto auto 60px;
-  grid-template-areas:
-    "ICON . "
-    "TAG_MAIN TAG_MAIN"
-    "SUB_MAIN SUB_MAIN"
-    "FORM BUTTON";
-}
+
+
+
 
 #SUB_ICON {
   grid-area: ICON;
@@ -1253,6 +1160,130 @@
 
 /*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*ALL///////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 960px) and (max-width: 1280px) {
   .grid_0 {
     width: 100%;
@@ -1523,6 +1554,126 @@
 /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media all and (min-width: 480px) and (max-width: 960px) {
   .center_holder {
     width: 100%;
@@ -2080,6 +2231,149 @@
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
 /*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media all and (min-width: 0px) and (max-width: 480px) {
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
