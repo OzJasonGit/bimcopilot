@@ -24,8 +24,8 @@ const Blogpage = ({ stories, topStories }) => {
         <div className={styles.head}>
           {/* Post Number */}
           {mainStory.post_number && (
-            <div className="rounded-2xl" id={styles.IMAGE_POST_NUMBER}>
-              {/*<div
+            {/*<div className="rounded-2xl" id={styles.IMAGE_POST_NUMBER}>
+              <div
                 className="rounded-full border-8 border-emerald-200"
                 id={styles.POST_NUMBER_HOLDER}
               >
@@ -37,8 +37,8 @@ const Blogpage = ({ stories, topStories }) => {
                     {parse(mainStory.post_number.toString() || "")}
                   </h1>
                 </div>
-              </div>*/}
-            </div>
+              </div>
+            </div>*/}
           )}
 
 
