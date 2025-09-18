@@ -40,23 +40,21 @@ const Blogpage = ({ stories, topStories }) => {
           {/* Blog Main Image */}
           {mainStory.slug && (
             <Link className="rounded-2xl drop-shadow-4xl" id={styles.LINK_HOLDER} href={`/blog/${mainStory.slug}`}>
-              {mainStory.post_number && (
-              <div className="rounded-2xl" id={styles.IMAGE_POST_NUMBER}>
-                <div
-                  className="rounded-full border-8 border-emerald-200"
-                  id={styles.POST_NUMBER_HOLDER}
-                >
-                  <div id={styles.POST_NUMBER_HOLDER_2} className="content-center">
-                    <h1
-                      id={styles._H1}
-                      className="text-center text-5xl text-stone-200 font-avant_garde_bold"
-                    >
-                      {parse(mainStory.post_number.toString() || "")}
-                    </h1>
-                  </div>
-                </div>
-              </div>
-              )}
+                              {mainStory.post_number && (
+                              <div className="rounded-2xl" id={styles.IMAGE_POST_NUMBER}>
+                                <div
+                                  className="rounded-full border-8 border-emerald-200"
+                                  id={styles.POST_NUMBER_HOLDER}>
+                                  <div id={styles.POST_NUMBER_HOLDER_2} className="content-center">
+                                    <h1
+                                      id={styles._H1}
+                                      className="text-center text-5xl text-stone-200 font-avant_garde_bold">
+                                      {parse(mainStory.post_number.toString() || "")}
+                                    </h1>
+                                  </div>
+                                </div>
+                              </div>
+                              )}
               <div id={styles.IMAGE_POST}>
                 <Image
                   src={mainStory.image || "/default-image.jpg"} // Fallback image
