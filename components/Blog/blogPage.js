@@ -34,9 +34,13 @@ const Blogpage = ({ stories, topStories }) => {
 
 
 
+
+
+
           {/* Blog Main Image */}
           {mainStory.slug && (
-            <Link className="rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-teal-400xl" id={styles.LINK_HOLDER} href={`/blog/${mainStory.slug}`}>
+            <Link className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
+                  id={styles.LINK_HOLDER} href={`/blog/${mainStory.slug}`}>
                               {mainStory.post_number && (
                               <div className="rounded-2xl" id={styles.IMAGE_POST_NUMBER}>
                                 <div
