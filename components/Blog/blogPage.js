@@ -32,9 +32,6 @@ const Blogpage = ({ stories, topStories }) => {
 
 
 
-class="group overflow-hidden rounded-2xl "
-
-
 
 
           {/* Blog Main Image */}
