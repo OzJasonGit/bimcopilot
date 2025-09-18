@@ -93,7 +93,18 @@
 
 
 
+/*SECTION_1///////////////////////////////////////////////////////////////////////////////////////////*/
 
+/*SECTION_2///////////////////////////////////////////////////////////////////////////////////////////*/
+#VID_BACKGROUND {
+  position: relative;
+  grid-area: VIDEO_B;
+  width: 100%;
+  height: 920px;
+  background: radial-gradient(#2e2e2e, #151515);
+  margin-top: -960px;
+  left: 100vw;
+}
 
 .head {
   position: relative;
