@@ -88,7 +88,7 @@ const PFBD = () => {
                   blurDataURL={PFBD_icon}
                   style={{
                     width: '100%',
-                    height: '130px',
+                    height: 'auto',
                     objectFit: 'cover',
                   }}
               />
