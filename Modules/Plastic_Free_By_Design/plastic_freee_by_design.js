@@ -75,19 +75,22 @@ const PFBD = () => {
                 }}>
         <div className={styles.grid_0_product}>
           <div id={styles.PFBD_INTRO}>
-            <div className="rounded-xl" id={styles.SALES_IMAGE}>
-              <Image
-                width={500}
-                height={500}
-                src={PFBD_icon}
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL={PFBD_icon}
-                style={{
-                  width: '100%',
-                  height: '120px',
-                  objectFit: 'cover',
-                }}
+            <div className="rounded-xl" id={styles.LOGO}
+                  style={{
+                  gridArea: 'LOGO',
+                }}>
+                <Image
+                  width={500}
+                  height={500}
+                  src={PFBD_icon}
+                  loading="lazy"
+                  placeholder="blur"
+                  blurDataURL={PFBD_icon}
+                  style={{
+                    width: '100%',
+                    height: '130px',
+                    objectFit: 'cover',
+                  }}
               />
             </div>
 
