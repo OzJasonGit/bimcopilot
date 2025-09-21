@@ -5,17 +5,17 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import SkeletonLoader from "@/components/Loader/loader";
 
-const PFBDPage = () => {
+const PPage = () => {
 
 
 
     return (
 
 
-        <Products />
+        <PFBD />
 
     ) 
 }
 
 
-export default PFBDPage;
+export default ProductsPage;
