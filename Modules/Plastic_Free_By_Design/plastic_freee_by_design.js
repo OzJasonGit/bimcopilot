@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import Image from 'next/image';
+import Video from "./client/Video/video";
 import Link from 'next/link';
 import parse from 'html-react-parser';
 import React from 'react';
@@ -75,7 +76,7 @@ const PFBD = () => {
                 }}>
         <div className={styles.grid_0_product}>
           <div id={styles.PFBD_INTRO}>
-            <div className="rounded-xl" id={styles.LOGO}
+            <div  id={styles.LOGO}
                   style={{
                   gridArea: 'LOGO',
                 }}>
@@ -92,6 +93,30 @@ const PFBD = () => {
                     objectFit: 'cover',
                   }}
               />
+            </div>
+
+            <div  id={styles.TITLE}
+                  style={{
+                  gridArea: 'TITLE',
+                  height: 'auto'
+                }}>
+                  <h1 id={styles._H1}>This is Plastic Free_By Design</h1>
+            </div>
+
+            <div  id={styles.SUBTITLE}
+                  style={{
+                  gridArea: 'SUBTITLE',
+                  height:'auto'
+                }}>
+                  <h2 id={styles._H2}>The highest quality organic, sustainably sourced wholefoods </h2>
+            </div>
+
+            <div  id={styles.VIDEO}
+                  style={{
+                  gridArea: 'VIDEO',
+                  height: '100%'
+                }}>
+                   <Video />   
             </div>
 
           </div>
