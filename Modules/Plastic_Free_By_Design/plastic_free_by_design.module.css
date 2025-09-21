@@ -118,7 +118,7 @@
   display: grid;
   grid-area: MAIN-AREA;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 200px;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
   grid-row-gap: 30px;
   grid-template-areas:
     ". . . . . . ."
