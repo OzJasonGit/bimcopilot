@@ -83,8 +83,8 @@ const PFBD = () => {
 
 
 
-                    {/* Row 1: First 4 small cards */}
-                    {group.slice(0, 4).map((product) => (
+                    {/* Row 1: First 3 small cards */}
+                    {group.slice(0, 3).map((product) => (
                       
                       <div id={styles.ROW_1} key={product.id} className={styles.card}>
 
