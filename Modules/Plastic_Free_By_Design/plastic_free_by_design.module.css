@@ -113,6 +113,22 @@
     ". . . . . . .";
 }
 
+
+#PFBD_INTRO {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-row-gap: 30px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". . . . .  LOGO"
+    "TITLE TITLE TITLE TITLE . . . ."
+    "SUBTITLE SUBTITLE SUBTITLE SUBTITLE . . . ."
+    "VIDEO VIDEO VIDEO VIDEO . . ."
+    ". . . . . . .";
+}
+
+
 #ROW_1{
   width: auto;
   height: auto;

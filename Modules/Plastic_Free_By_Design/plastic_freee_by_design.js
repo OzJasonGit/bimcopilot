@@ -67,12 +67,17 @@ const PFBD = () => {
       <Sides />
       
 
-      <section  className={styles.center_holder}>
+      <section  className={styles.center_holder} 
+                style={{
+                  paddingTop: '240px',                
+                }}>
         <div className={styles.grid_0_product}>
+          <div id={styles.PFBD_INTRO}>
 
+          </div>
         </div>
       </section>
-      
+
       <Subscribetop />
 
       {loading ? (
