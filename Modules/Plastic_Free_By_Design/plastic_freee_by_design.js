@@ -19,7 +19,7 @@ import text_logo from './bimcopilot_logo_text_horizontal_white.svg';
 
 import styles from './plastic_free_by_design.module.css';
 
-const Products = () => {
+const PFBD = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
@@ -339,4 +339,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default PFBD;
