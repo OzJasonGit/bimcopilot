@@ -65,13 +65,15 @@ const PFBD = () => {
       <Menu />
       <Header />
       <Sides />
-      <Subscribetop />
+      
 
       <section  className={styles.center_holder}>
         <div className={styles.grid_0_product}>
 
         </div>
       </section>
+      
+      <Subscribetop />
 
       {loading ? (
         <div className={styles.loader}>
