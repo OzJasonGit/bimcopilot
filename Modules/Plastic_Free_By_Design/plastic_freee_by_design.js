@@ -84,7 +84,7 @@ const Products = () => {
 
 
                     {/* Row 1: First 3 small cards */}
-                    {group.slice(0, 3).map((product) => (
+                    {group.slice(0, 4).map((product) => (
                       
                       <div id={styles.ROW_1} key={product.id} className={styles.card}>
 
