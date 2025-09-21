@@ -67,11 +67,18 @@ const PFBD = () => {
       <Sides />
       <Subscribetop />
 
+      <section  className={styles.center_holder}>
+        <div className={styles.grid_0_product}>
+
+        </div>
+      </section>
+
       {loading ? (
         <div className={styles.loader}>
           <div className={styles.spinner}></div>
-        </div>
+        </div>      
       ) : (
+
         <section className={styles.center_holder}>
           <div className={styles.grid_0_product}>
             <div className={styles.grid}>
