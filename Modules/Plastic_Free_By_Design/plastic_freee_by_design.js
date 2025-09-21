@@ -14,6 +14,8 @@ import Subfooter from '../../components/Subfooter2/subfooter2';
 import Footer from '../../components/Footer/Footer';
 import Subscribetop from '../../components/Subscribetop/subscribetop';
 
+import PFBD_icon from "./bimcopilot_logo_white.svg";
+
 import logo from './bimcopilot_logo_white.svg';
 import text_logo from './bimcopilot_logo_text_horizontal_white.svg';
 
@@ -73,6 +75,21 @@ const PFBD = () => {
                 }}>
         <div className={styles.grid_0_product}>
           <div id={styles.PFBD_INTRO}>
+            <div className="rounded-xl" id={styles.SALES_IMAGE}>
+              <Image
+                width={500}
+                height={500}
+                src={PFBD_icon}
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL={PFBD_icon}
+                style={{
+                  width: '100%',
+                  height: '120px',
+                  objectFit: 'cover',
+                }}
+              />
+            </div>
 
           </div>
         </div>
