@@ -140,7 +140,7 @@
 
 /* Featured card positioning */
 .cardRight {
-  grid-column: 2 / span 2; /* starts at 2nd column, spans 2 */
+  grid-column: 1 / span 2; /* starts at 2nd column, spans 2 */
 }
 
 .cardLeft {
