@@ -100,7 +100,7 @@ const PFBD = () => {
                   gridArea: 'TITLE',
                   height: 'auto'
                 }}>
-                  <h1 id={styles._H1} className='text-stone-50 font-avant_garde_bold'>This is <br/> <br/> Plastic Free_By Design</h1>
+                  <h1 id={styles._H1_LARGE} className='text-stone-50 font-avant_garde_bold'>This is <br/> <br/> Plastic Free_By Design</h1>
             </div>
 
             <div  id={styles.SUBTITLE}
