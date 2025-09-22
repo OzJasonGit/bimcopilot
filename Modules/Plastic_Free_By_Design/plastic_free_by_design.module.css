@@ -124,15 +124,16 @@
 #PFBD_INTRO {
   display: grid;
   grid-area: MAIN-AREA;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 200px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 100px;
   grid-template-rows: auto auto auto auto auto auto;
   grid-row-gap: 30px;
+  grid-column-gap: 20px;
   grid-template-areas:
     ". . . . . . ."
-    ". . . . . LOGO LOGO"
+    ". . . . LOGO LOGO LOGO"
     "TITLE TITLE TITLE TITLE TITLE . ."
     "SUBTITLE SUBTITLE SUBTITLE SUBTITLE . . ."
-    "VIDEO VIDEO VIDEO VIDEO . . ."
+    ". . . VIDEO VIDEO VIDEO VIDEO"
     ". . . . . . .";
 }
 
