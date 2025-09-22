@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import Subform from "./Client/subform";
 
-export default class Subcribetop extends Component {
+export default class Subcribe_PFBD extends Component {
 
   render() {
     return (

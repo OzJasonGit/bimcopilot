@@ -13,7 +13,7 @@ import Sides from '../../components/Sides/sides';
 import Header from '../../components/Header/Header';
 import Subfooter from '../../components/Subfooter2/subfooter2';
 import Footer from '../../components/Footer/Footer';
-import Subscribetop from '../../components/SubscribePFBD/subscribetop';
+import SubscribePFBD from '../../components/Subscribe_PFBD/subscribePFBD';
 
 import PFBD_icon from "./pfbd_logo_white.svg";
 
@@ -123,7 +123,7 @@ const PFBD = () => {
         </div>
       </section>
 
-      <Subscribetop />
+      <SubscribePFBD />
 
       {loading ? (
         <div className={styles.loader}>
