@@ -98,7 +98,9 @@ const PFBD = () => {
             <div  id={styles.TITLE}
                   style={{
                   gridArea: 'TITLE',
-                  height: 'auto'
+                  height: 'auto',
+                  top: '-200px',
+                  zIndex: '1'
                 }}>
                   <h1 id={styles._H1_LARGE} className='text-stone-50 font-avant_garde_bold'>This is<br/>Plastic Free_<br/>By Design</h1>
             </div>
@@ -106,7 +108,9 @@ const PFBD = () => {
             <div  id={styles.SUBTITLE}
                   style={{
                   gridArea: 'SUBTITLE',
-                  height:'auto'
+                  height:'auto',
+                  top: '-200px',
+                  zIndex: '1'
                 }}>
                   <h2 id={styles._H2} className='text-stone-50 font-avant_garde_bold'>The highest quality organic, sustainably sourced, halal wholefoods </h2>
             </div>
@@ -114,7 +118,9 @@ const PFBD = () => {
             <div  id={styles.VIDEO}
                   style={{
                   gridArea: 'VIDEO',
-                  height: '100%'
+                  height: '100%',
+                  top: '-200px',
+                  zIndex: '0'
                 }}>
                    <Video />   
             </div>

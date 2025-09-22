@@ -70,7 +70,7 @@
   display: grid;
   grid-column-gap: 0px;
   grid-row-gap: 20px;
-  grid-template-rows: 230px auto 20px;
+  grid-template-rows: 20px auto 20px;
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
   grid-template-areas:
     ". . . . . . ."
@@ -87,7 +87,7 @@
   grid-column-gap: 40px;
   grid-template-columns: 180px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "BC BC BC BC BC . . . . . . . . .";
+  grid-template-areas: "BC BC BC BC . . . . . . . . . .";
   left: 0;
 }
 
