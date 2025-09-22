@@ -108,7 +108,7 @@ const PFBD = () => {
                   gridArea: 'SUBTITLE',
                   height:'auto'
                 }}>
-                  <h2 id={styles._H2} className='text-stone-50 font-avant_garde_bold'>The highest quality organic, sustainably sourced wholefoods </h2>
+                  <h2 id={styles._H2} className='text-stone-50 font-avant_garde_bold'>The highest quality organic, sustainably sourced, halal wholefoods </h2>
             </div>
 
             <div  id={styles.VIDEO}
