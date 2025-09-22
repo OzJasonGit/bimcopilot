@@ -12,7 +12,7 @@ const Video = () => {
 
   return (
     <>
-      <div className="rounded-3xl ..." id={styles.VIDEO_CONTAINER} style={{ position: "relative" }}>
+      <div  id={styles.VIDEO_CONTAINER} style={{ position: "relative" }}>
         {!videoLoaded && (
           <div
             style={{
