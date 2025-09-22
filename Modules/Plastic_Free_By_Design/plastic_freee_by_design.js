@@ -13,7 +13,7 @@ import Sides from '../../components/Sides/sides';
 import Header from '../../components/Header/Header';
 import Subfooter from '../../components/Subfooter2/subfooter2';
 import Footer from '../../components/Footer/Footer';
-import Subscribetop from '../../components/Subscribetop/subscribetop';
+import Subscribetop from '../../components/SubscribePFBD/subscribetop';
 
 import PFBD_icon from "./pfbd_logo_white.svg";
 
