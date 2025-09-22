@@ -15,7 +15,7 @@ import Subfooter from '../../components/Subfooter2/subfooter2';
 import Footer from '../../components/Footer/Footer';
 import Subscribetop from '../../components/Subscribetop/subscribetop';
 
-import PFBD_icon from "./pfbd_logo.svg";
+import PFBD_icon from "./pfbd_logo_white.svg";
 
 import logo from './bimcopilot_logo_white.svg';
 import text_logo from './bimcopilot_logo_text_horizontal_white.svg';
