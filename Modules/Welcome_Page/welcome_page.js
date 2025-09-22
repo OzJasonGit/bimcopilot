@@ -39,7 +39,7 @@ const Welcome_Page_Main = ({ stories, firstStory }) => {
             <div id={styles.SALES_GRID_HOLDER}>
                 <div  id={styles.SALES_IMAGE_HOLDER}>                 
                     
-                        <div class="rounded-xl ..." id={styles.SALES_IMAGE_2}>
+                        <div class="rounded-xl ... " id={styles.SALES_IMAGE_2}>
                             <div>
                             <Video />                              
                             </div>
