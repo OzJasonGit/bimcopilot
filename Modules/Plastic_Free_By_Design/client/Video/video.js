@@ -12,7 +12,8 @@ const Video = () => {
 
   return (
     <>
-      <div  id={styles.VIDEO_CONTAINER} style={{ position: "relative" }}>
+      <div  id={styles.VIDEO_CONTAINER} style={{ position: "relative", 
+                                                 paddingTop:"100px" }}>
         {!videoLoaded && (
           <div
             style={{
