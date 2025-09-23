@@ -18,9 +18,12 @@ import SubscribePFBD from '../../components/Subscribe_PFBD/subscribePFBD';
 import PFBD_icon from "./pfbd_logo_white.svg";
 
 import logo from './bimcopilot_logo_white.svg';
+
+import VHSGrain from './VHSgrain';
 import text_logo from './bimcopilot_logo_text_horizontal_white.svg';
 
 import styles from './plastic_free_by_design.module.css';
+
 
 const PFBD = () => {
   const [products, setProducts] = useState([]);
@@ -68,6 +71,8 @@ const PFBD = () => {
       <Menu />
       <Header />
       <Sides />
+      {/* Static background */}
+      <VHSGrain />
       
 
       <section  className={styles.center_holder} 
