@@ -206,14 +206,14 @@ export default function Header() {
                   ) : (
                     <div className="content-center ..." id={styles.SIGNUP_GRID}>
                       <Link id={styles.STORIES} href="/signup" style={{ gridArea: "SIGNUP", position: "relative", height: "100%", width: "100%", textAlign: "center", left: "-15.5px" }}>
-                        <h3 id={styles.H_3_STORIES} className="text-center ...  text-slate-50 font-avant_garde_bold" data-content="Signup">
-                          Signup
+                        <h3 id={styles.H_3_STORIES} className="text-center ...  text-slate-50 font-geistmono_regular" data-content="SIGNUP">
+                          SIGNUP
                         </h3>
                       </Link>
                       <div className="bg-zinc-500 ..." id={styles.B1}></div>
                       <Link id={styles.SIGNUP} href="/signin" style={{ gridArea: "LOGIN", position: "relative", height: "100%", width: "100%", textAlign: "center", left: "-15px" }}>
-                        <h3 id={styles.H_3_STORIES} className="text-center ...  text-slate-50 font-avant_garde_bold" data-content="Login">
-                          Login
+                        <h3 id={styles.H_3_STORIES} className="text-center ...  text-slate-50 font-geistmono_regular" data-content="LOGIN">
+                          LOGIN
                         </h3>
                       </Link>
                     </div>
