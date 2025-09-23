@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import styles from './Menu_PFBD.module.css'
 
 
-import bimcopilot_icon from "./bimcopilot_logo.svg";
+import PFBD_icon from "./pfbd_logo_white_(Type2).svg";
 import dynamic from "next/dynamic";
 
 const Hamburger = dynamic(() => import("./Burger/burger"), { ssr: false });
@@ -334,7 +334,7 @@ const Menu = () => {
 
                     <div id={styles.LOGO_MOB} class={styles.container}>
                       <Image
-                          src={bimcopilot_icon}   
+                          src={PFBD_icon}   
                           alt="Picture of the author"
                           loading="lazy"
                           width={500}

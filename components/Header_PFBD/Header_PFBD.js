@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faSignOutAlt, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header_PFBD.module.css";
 import React, { useEffect, useState, useRef } from "react";
-import bimcopilot_icon from "./bimcopilot_logo.svg";
+import PFBD_icon from "./pfbd_logo_white_(Type2).svg";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -95,7 +95,7 @@ export default function Header() {
                   <div className="" id={styles.LOGO}>
                     <Image
                       className="w-16 h-16 fill-current text-stone-50 hover:text-emerald-400 transition-colors duration-300"
-                      src={bimcopilot_icon}
+                      src={PFBD_icon}
                       alt="Picture of the author"
                       width={100}
                       height={100}
