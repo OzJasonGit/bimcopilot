@@ -6,7 +6,7 @@ class DateComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      date: new Date().toDateString(),
+      date: new Date().toDateString().toUpperCase()
     };
   }
 
