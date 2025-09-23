@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import styles from './Menu_PFBD.module.css'
 
 
-import PFBD_icon from "./pfbd_logo_white_(Type2).svg";
+import PFBD_icon from "./pfbd_logo_white_(Type3).svg";
 import dynamic from "next/dynamic";
 
 const Hamburger = dynamic(() => import("./Burger/burger"), { ssr: false });

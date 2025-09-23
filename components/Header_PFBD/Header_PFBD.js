@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping, faSignOutAlt, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header_PFBD.module.css";
 import React, { useEffect, useState, useRef } from "react";
-import PFBD_icon from "./pfbd_logo_white_(Type2).svg";
+import PFBD_icon from "./pfbd_logo_white_(Type3).svg";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
