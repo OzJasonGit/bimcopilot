@@ -155,18 +155,32 @@ body {
   }
 
   25% {
-    transform: translate(-5%, -5%);
+    transform: translate(-8%, -8%);
   }
 
   50% {
-    transform: translate(5%, 5%);
+    transform: translate(8%, 8%);
   }
 
   75% {
-    transform: translate(-5%, 5%);
+    transform: translate(-8%, 8%);
   }
 
   100% {
     transform: translate(0, 0);
+  }
+}
+
+@keyframes rgbShift {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(2px);
+  }
+
+  100% {
+    transform: translateX(-2px);
   }
 }
