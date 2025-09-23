@@ -116,8 +116,8 @@ export default function Header() {
               {/* Navigation Menu */}
               <div className="content-center ..." id={styles.NAV_MENU}>
                 <Link className="content-center ..." id={styles.SERVICES} href="/services">
-                  <h3 id={styles.H_3_SERVICES} className="text-center ...  text-stone-50 font-geistmono_regular" data-content="SERVICES">
-                    SERVICES
+                  <h3 id={styles.H_3_SERVICES} className="text-center ...  text-stone-50 font-geistmono_regular" data-content="HOME">
+                    HOME
                   </h3>
                 </Link>
 
@@ -128,14 +128,14 @@ export default function Header() {
                 </Link>
 
                 <Link id={styles.PROJECTS} href="/copilot_dashboard">
-                  <h3 id={styles.H_3_PROJECTS} className="text-center ...  text-stone-50  font-geistmono_regular" data-content="COPILOT_DASHBOARD">
-                    COPILOT_DASHBOARD
+                  <h3 id={styles.H_3_PROJECTS} className="text-center ...  text-stone-50  font-geistmono_regular" data-content="SUBSCRIBE & SAVE">
+                    SUBSCRIBE & SAVE
                   </h3>
                 </Link>
 
                 <Link id={styles.STORIES} href="/bloghome">
-                  <h3 id={styles.H_3_STORIES} className="text-center ...  text-stone-50 font-geistmono_regular" data-content="STORIES">
-                    STORIES
+                  <h3 id={styles.H_3_STORIES} className="text-center ...  text-stone-50 font-geistmono_regular" data-content="ABOUT">
+                    ABOUT
                   </h3>
                 </Link>
               </div>
