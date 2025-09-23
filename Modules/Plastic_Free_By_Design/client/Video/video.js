@@ -1,6 +1,8 @@
 "use client";
 import styles from "./video.module.css";
   import React, { useState } from "react";
+
+import VHSGrain from '../../components/VHSgrain/VHSgrain';
 import SkeletonLoader from "@/components/Loader/loader";
 import { color } from "@mui/system";
 const Video = () => {
@@ -12,6 +14,7 @@ const Video = () => {
 
   return (
     <>
+      <VHSGrain />
       <div  id={styles.VIDEO_CONTAINER} style={{ position: "relative", 
                                                  paddingTop:"100px" }}>
         {!videoLoaded && (
