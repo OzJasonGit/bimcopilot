@@ -68,7 +68,7 @@ const PFBD = () => {
 
   return (
     <>
-      <Menu />
+      <Menu_PFBD />
       <Header_PFBD />
       <Sides />
       {/* Static background */}
