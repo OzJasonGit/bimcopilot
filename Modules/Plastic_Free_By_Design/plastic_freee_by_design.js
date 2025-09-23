@@ -10,7 +10,7 @@ import parse from 'html-react-parser';
 import React from 'react';
 import Menu from '../../components/Menu/menu';
 import Sides from '../../components/Sides/sides';
-import Header from '../../components/Header/Header';
+import Header_PFBD from '../../components/Header_PFBD/Header_PFBD';
 import Subfooter from '../../components/Subfooter2/subfooter2';
 import Footer from '../../components/Footer/Footer';
 import SubscribePFBD from '../../components/Subscribe_PFBD/subscribePFBD';
@@ -69,7 +69,7 @@ const PFBD = () => {
   return (
     <>
       <Menu />
-      <Header />
+      <Header_PFBD />
       <Sides />
       {/* Static background */}
       <VHSGrain />
