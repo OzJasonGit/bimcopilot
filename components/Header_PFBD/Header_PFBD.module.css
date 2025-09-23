@@ -251,7 +251,7 @@
   position: fixed;
   width: 100%;
   top: 0px;
-  height: 65px;
+  height: 150px;
   max-width: 1920px;
   background-color: #171717;
   display: grid;
@@ -273,7 +273,7 @@
   grid-row-gap: 0px;
   grid-column-gap: 40px;
   grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0px 60px 0px 50px;
+  grid-template-rows: 0px 100px 0px 50px;
   grid-template-areas:
     ". . . . . . . . . . . . ."
     "LOGO_HOLDER LOGO_HOLDER MENU MENU MENU MENU . TIME TIME TIME TIME MENU_BUTTON MENU_BUTTON"
