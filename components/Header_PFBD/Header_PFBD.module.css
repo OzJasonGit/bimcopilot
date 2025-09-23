@@ -247,12 +247,12 @@
   top: 0px;
 }
 
-#header {
+#HEADER {
   position: fixed;
   width: 100%;
   top: 0px;
   height: 65px;
-  max-width: 1520px;
+  max-width: 1920px;
   background-color: #171717;
   display: grid;
   grid-row-gap: 40px;

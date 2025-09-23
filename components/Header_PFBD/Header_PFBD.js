@@ -87,7 +87,7 @@ export default function Header() {
     <>
       <section id={styles.SHADOW_SECTION} className={styles.center_holder}>
         <div className={styles.HEADER_HOLDER}>
-          <div id={styles.header}>
+          <div id={styles.HEADER}>
             <header id={styles.FIXED_HEADER}>
               {/* Logo */}
               <div id={styles.LOGO_ICON} className={styles.container}>
