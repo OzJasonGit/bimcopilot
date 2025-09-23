@@ -2,7 +2,7 @@
 import styles from "./video.module.css";
   import React, { useState } from "react";
 
-import VHSGrain from '../../components/VHSgrain/VHSgrain';
+import VHSGrain from '@VHSgrain/components/VHSgrain/VHSgrain';
 import SkeletonLoader from "@/components/Loader/loader";
 import { color } from "@mui/system";
 const Video = () => {
