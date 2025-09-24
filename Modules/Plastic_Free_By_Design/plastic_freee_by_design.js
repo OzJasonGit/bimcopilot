@@ -104,7 +104,7 @@ const PFBD = () => {
                   style={{
                   gridArea: 'TITLE',
                   height: 'auto',
-                  top: '-200px',
+              
                   zIndex: '1'
                 }}>
                   <h1 id={styles._H1_LARGE} className='text-stone-50 font-margin_demo'>This is...<br/>Plastic Free_<br/>By Design</h1>
@@ -114,8 +114,8 @@ const PFBD = () => {
                   style={{
                   gridArea: 'SUBTITLE',
                   height:'auto',
-                  top: '-200px',
-                  zIndex: '1'
+                  position:'relative',
+                  paddingTop:'20px'
                 }}>
                   <h2 id={styles._H2} className='text-stone-50 font-avant_garde_bold'>The highest quality organic, sustainably sourced, halal wholefoods </h2>
             </div>
