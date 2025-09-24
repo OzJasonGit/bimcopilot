@@ -9,7 +9,7 @@ import Link from 'next/link';
 import parse from 'html-react-parser';
 import React from 'react';
 import Menu_PFBD from '../../components/Menu_PFBD/menu_PFBD';
-import Sides from '../../components/Sides/sides';
+import Sides from '../../components/Sides_PFBD/sides_PFBD';
 import Header_PFBD from '../../components/Header_PFBD/Header_PFBD';
 import Subfooter from '../../components/Subfooter2/subfooter2';
 import Footer from '../../components/Footer/Footer';
