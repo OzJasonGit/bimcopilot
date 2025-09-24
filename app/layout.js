@@ -57,6 +57,13 @@ const geist_medium = localFont
   display: 'swap',
 });
 
+const marginDemo = localFont
+({ 
+  src: '../fonts/MarginDemo-7B6ZE',
+  variable: '--font-MarginDemo',
+  display: 'swap',
+});
+
 export const metadata = {
   title: "bimcopilot.com",
   description: "Sustainable, Richer Architects through AI, Analytics and Automation",
@@ -96,7 +103,7 @@ export default function RootLayout({ children }) {
           href="//res.cloudinary.com"
         />
       </head>
-      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable} ${geist_regular.variable} ${geist_semibold.variable} ${geist_medium.variable}`}
+      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable} ${geist_regular.variable} ${geist_semibold.variable} ${geist_medium.variable} ${marginDemo.variable}`}
             >
         <PerformanceMonitor />
         <>{children}</>
