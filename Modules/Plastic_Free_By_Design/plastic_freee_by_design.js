@@ -136,8 +136,15 @@ const PFBD = () => {
 
       <section className={styles.center_holder}>
          <div className={styles.grid_0_product}>
-          <div id={styles.PFBD_INTRO}>
-
+          <div id={styles.PFBD_VIDEO}>
+            <div id={styles.PFBD_VIDEO_CONTAINER}
+                  style={{
+                    gridArea: 'VIDEO',
+                    width:'100%',
+                    height:'450px',
+                    position:'relative',
+                  }}>
+            </div>
           </div>
          </div>
       </section>

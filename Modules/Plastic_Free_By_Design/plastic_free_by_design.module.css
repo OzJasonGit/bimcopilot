@@ -139,6 +139,20 @@
 }
 
 
+#PFBD_VIDEO {
+  display: grid;
+  grid-area: MAIN-AREA;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 100px;
+  grid-template-rows: 20px auto 20px ;
+  grid-row-gap: 30px;
+  grid-column-gap: 20px;
+  grid-template-areas:
+    ". . . . . . ."
+    ". . VIDEO VIDEO VIDEO VIDEO VIDEO"
+    ". . . . . . .";
+}
+
+
 #ROW_1{
   width: auto;
   height: auto;
