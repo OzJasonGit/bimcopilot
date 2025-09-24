@@ -119,16 +119,6 @@ const PFBD = () => {
                 }}>
                   <h2 id={styles._H2} className='text-stone-50 font-avant_garde_bold'>The highest quality organic, sustainably <br/> sourced, halal wholefoods </h2>
             </div>
-
-            <div  id={styles.VIDEO}
-                  style={{
-                  gridArea: 'VIDEO',
-                  height: '100%',
-                  top:'-20px',
-                  zIndex: '0'
-                }}>
-                   <Video />   
-            </div>
           </div>
         </div>
       </section>
@@ -137,12 +127,14 @@ const PFBD = () => {
       <section className={styles.center_holder}>
          <div className={styles.grid_0_product}>
           <div id={styles.PFBD_VIDEO}>
-            <div id={styles.PFBD_VIDEO_CONTAINER}
+            <div id={styles.PFBD_VIDEO_CONTAINER} className=''
                   style={{
                     gridArea: 'VIDEO',
                     width:'100%',
                     height:'450px',
                     position:'relative',
+                    overflow:'hidden',
+                    borderRadius:'4rem'
                   }}>
                     <video
                       className="absolute top-0 left-0 w-full h-full object-cover"
