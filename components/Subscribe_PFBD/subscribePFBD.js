@@ -16,7 +16,7 @@ export default class Subcribe_PFBD extends Component {
 
               <div id={styles.MAIN_TAG}>
                 <h1
-                  id={styles._H1}
+                  id={styles._H2}
                   
                   class=" text-stone-200 ... font-avant_garde_bold">
                   Sustainable, Richer Architects through AI, Analytics and
