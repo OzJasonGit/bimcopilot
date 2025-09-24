@@ -191,7 +191,7 @@ const PFBD = () => {
 
                         <div className={styles.text}>
                           <h2 id={styles._H2} className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(product.title)} </h2>
-                          <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(product.subtitle)}</p>
+                          <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-geistmono_regular ...">{parse(product.subtitle)}</p>
                         </div>
                       </div>
                     ))}
@@ -240,7 +240,7 @@ const PFBD = () => {
                               </Link>
                               <div className={styles.text}>
                                 <h2 id={styles._H2} className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(group[3].title)}</h2>
-                                <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[3].subtitle)}</p>
+                                <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-geistmono_regular ...">{parse(group[3].subtitle)}</p>
                               </div>
                             </div>
 
@@ -277,7 +277,7 @@ const PFBD = () => {
                               </Link>
                               <div className={styles.text}>
                                 <h2 id={styles._H2} className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(group[4].title)}</h2>
-                                <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[4].subtitle)}</p>
+                                <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-geistmono_regular ...">{parse(group[4].subtitle)}</p>
                               </div>
                             </div>
                           </>
@@ -337,7 +337,7 @@ const PFBD = () => {
                               </Link>
                               <div className={styles.text}>
                                 <h2 id={styles._H2} className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(group[4].title)}</h2>
-                                <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[4].subtitle)}</p>
+                                <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-geistmono_regular ...">{parse(group[4].subtitle)}</p>
                               </div>
                             </div>
 
@@ -382,7 +382,7 @@ const PFBD = () => {
                               </Link>
                               <div className={styles.text}>
                                 <h2 className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(group[3].title)}</h2>
-                                <p className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[3].subtitle)}</p>
+                                <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-geistmono_regular ...">{parse(group[3].subtitle)}</p>
                               </div>
                             </div>
 
