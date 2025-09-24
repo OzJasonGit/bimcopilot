@@ -15,8 +15,7 @@ const Video = () => {
   return (
     <>
       <VHSGrain />
-      <div  id={styles.VIDEO_CONTAINER} style={{ position: "relative", 
-                                                 paddingTop:"100px" }}>
+      <div  id={styles.VIDEO_CONTAINER} style={{ position: "relative",}}>
         {!videoLoaded && (
           <div
             style={{
