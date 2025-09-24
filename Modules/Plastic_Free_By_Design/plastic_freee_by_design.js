@@ -133,7 +133,8 @@ const PFBD = () => {
                     height:'500px',
                     position:'relative',
                     overflow:'hidden',
-                    borderRadius:'4rem'
+                    borderRadius:'4rem',
+                    top:'-50px'
                   }}>
                     <video
                       className="absolute top-0 left-0 w-full h-full object-cover"
