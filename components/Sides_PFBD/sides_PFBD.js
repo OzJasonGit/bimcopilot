@@ -128,7 +128,7 @@ export default class Sides extends Component {
                             <div id={styles.RIGHT_FIXED_STICKY}>
                                 <div id={styles.PFBD_LINKS}>
                                     <div id={styles.ICON_PLACEHOLDER} class={styles.container}>
-                                        <h3 class=" font-geistmono_regular" id={styles.SIDE_TEXT} >THIS IS<a><Link class="text-emerald-200" href="/">PLASTIC FREE_BY DESIGN</Link></a> </h3>
+                                        <h3 class=" font-geistmono_regular" id={styles.SIDE_TEXT} >THIS IS <a><Link class="text-emerald-200" href="/">PLASTIC FREE_BY DESIGN</Link></a> </h3>
                                     </div>
                                 </div>
 
