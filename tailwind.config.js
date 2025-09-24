@@ -25,7 +25,8 @@ module.exports = {
   			geist_regular: ["var(--font-geist_regular)"],
   			geist_semibold: ["var(--font-geist_semibold)"],
 			geist_medium: ["var(--font-geist_medium)"],
-			marginDemo: ["var(--font-MarginDemo)"],
+			margin_demo: ["var(--font-margin_demo)"],
+			calisga_regular: ["var(--font-calisga_regular)"],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

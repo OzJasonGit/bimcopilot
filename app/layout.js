@@ -57,10 +57,17 @@ const geist_medium = localFont
   display: 'swap',
 });
 
-const marginDemo = localFont
+const margin_demo = localFont
 ({ 
-  src: '../fonts/MarginDemo-7B6ZE',
-  variable: '--font-MarginDemo',
+  src: '../fonts/margin_demo.woff2',
+  variable: '--font-margin_demo',
+  display: 'swap',
+});
+
+const calisga_regular = localFont
+({ 
+  src: '../fonts/calisga_regular.woff2',
+  variable: '--font-calisga_regular',
   display: 'swap',
 });
 
@@ -96,7 +103,14 @@ export default function RootLayout({ children }) {
         />
         <link
           rel="preload" 
-          href='../fonts/MarginDemo-7B6ZE'
+          href='../fonts/margin_demo.woff2'
+          as="font" 
+          type="font/woff2" 
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload" 
+          href='../fonts/calisga_regular.woff2'
           as="font" 
           type="font/woff2" 
           crossOrigin="anonymous"
@@ -110,7 +124,7 @@ export default function RootLayout({ children }) {
           href="//res.cloudinary.com"
         />
       </head>
-      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable} ${geist_regular.variable} ${geist_semibold.variable} ${geist_medium.variable} ${marginDemo.variable}`}
+      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable} ${geist_regular.variable} ${geist_semibold.variable} ${geist_medium.variable} ${margin_demo.variable} ${calisga_regular.variable}`}
             >
         <PerformanceMonitor />
         <>{children}</>
