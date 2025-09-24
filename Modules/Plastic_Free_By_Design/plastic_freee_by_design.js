@@ -144,6 +144,18 @@ const PFBD = () => {
                     height:'450px',
                     position:'relative',
                   }}>
+                    <video
+                      className="absolute top-0 left-0 w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      src="https://res.cloudinary.com/dytsuek4h/video/upload/v1718789410/2836031_jb9p48.mp4"
+                      >
+                    </video>
+
+                    <div className="absolute inset-0 bg-black/40">
+                    </div>
             </div>
           </div>
          </div>
