@@ -117,14 +117,14 @@ const PFBD = () => {
                   position:'relative',
                   paddingTop:'20px'
                 }}>
-                  <h2 id={styles._H2} className='text-stone-50 font-avant_garde_bold'>The highest quality organic, sustainably sourced, halal wholefoods </h2>
+                  <h2 id={styles._H2} className='text-stone-50 font-avant_garde_bold'>The highest quality organic, sustainably <br/> sourced, halal wholefoods </h2>
             </div>
 
             <div  id={styles.VIDEO}
                   style={{
                   gridArea: 'VIDEO',
                   height: '100%',
-                  top: '-200px',
+                  
                   zIndex: '0'
                 }}>
                    <Video />   
