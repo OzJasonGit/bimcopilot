@@ -95,6 +95,13 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
         <link
+          rel="preload" 
+          href='../fonts/MarginDemo-7B6ZE'
+          as="font" 
+          type="font/woff2" 
+          crossOrigin="anonymous"
+        />
+        <link
           rel="dns-prefetch" 
           href="//res.cloudinary.com"
         />
