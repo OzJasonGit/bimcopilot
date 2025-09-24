@@ -55,7 +55,7 @@
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
-  background-color: rgb(23, 23, 23);
+  background-color: transparent;
   z-index: 1;
   top: 0px;
   left: 0;
