@@ -131,7 +131,7 @@ const PFBD = () => {
                   style={{
                     gridArea: 'VIDEO',
                     width:'100%',
-                    height:'450px',
+                    height:'500px',
                     position:'relative',
                     overflow:'hidden',
                     borderRadius:'4rem'
