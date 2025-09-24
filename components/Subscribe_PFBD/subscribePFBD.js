@@ -26,31 +26,31 @@ export default class Subcribe_PFBD extends Component {
               <div id={styles.SUB_TAG}>
                 <h3
                   id={styles._H3}
-                  class="text-left ... text-stone-400 ... font-avant_garde_medium"
+                  class="text-left ... text-stone-400 ... font-geistmono_regular"
                 >
                   {" "}
-                  <a class="text-stone-200 ... font-avant_garde_medium">
+                  <a class="text-stone-200 ... font-geistmono_regular">
                     The design revolution is here.
                   </a>{" "}
                   The world is changing and so is{" "}
-                  <a class="text-stone-200 ... font-avant_garde_medium">
+                  <a class="text-stone-200 ... font-geistmono_regular">
                     architecture
                   </a>
                   . Discover new narratives, build better{" "}
-                  <a class="text-stone-200 ... font-avant_garde_medium">
+                  <a class="text-stone-200 ... font-geistmono_regular">
                     systems
                   </a>
                   , make more{" "}
-                  <a class="text-stone-200 ... font-avant_garde_medium">money</a>,
+                  <a class="text-stone-200 ... font-geistmono_regular">money</a>,
                   be more{" "}
-                  <a class="text-stone-200 ... font-avant_garde_medium">
+                  <a class="text-stone-200 ... font-geistmono_regular">
                     sustainable
                   </a>
                   . <br /> <br />{" "}
                   <h1 
-                    id={styles._H1} 
+                    id={styles._H2} 
                     class="text-stone-200 ... font-avant_garde_bold">
-                    Join the Waiting List!
+                    Subscribe and Save! 
                   </h1>
                 </h3>
               </div>
