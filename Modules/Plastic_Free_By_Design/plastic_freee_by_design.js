@@ -124,14 +124,22 @@ const PFBD = () => {
                   style={{
                   gridArea: 'VIDEO',
                   height: '100%',
-                  
+                  top:'-20px',
                   zIndex: '0'
                 }}>
                    <Video />   
             </div>
-
           </div>
         </div>
+      </section>
+
+
+      <section className={styles.center_holder}>
+         <div className={styles.grid_0_product}>
+          <div id={styles.PFBD_INTRO}>
+
+          </div>
+         </div>
       </section>
 
       <SubscribePFBD />
