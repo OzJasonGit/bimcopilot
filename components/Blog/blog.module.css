@@ -127,18 +127,18 @@
 
 
 
-#IMAGE_POST_NUMBER{
+#IMAGE_POST_NUMBER {
   grid-area: CONTENT;
   background: transparent;
   position: absolute;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 80px 1fr 100px 50px;
+  grid-template-columns: 80px 100px 1fr 50px;
   grid-template-rows: 50px 100px auto;
   grid-template-areas:
     ". . . ."
-    ". . NUMBER ."
+    ". NUMBER . ."
     ". . . .";
   z-index: 100000;
 }
