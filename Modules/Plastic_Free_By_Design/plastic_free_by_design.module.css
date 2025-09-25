@@ -62,6 +62,19 @@
   padding: 60px 0;
 }
 
+
+.center_holder_2 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  background-color: rgb(23, 23, 23);
+  margin: 0;
+  padding: 100px 0;
+}
+
+
 #SHADOW_SECTION {
   position: relative;
   width: 100%;

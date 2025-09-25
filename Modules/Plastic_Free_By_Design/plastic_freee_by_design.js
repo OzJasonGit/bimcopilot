@@ -161,7 +161,7 @@ const PFBD = () => {
         </div>      
       ) : (
 
-        <section className={styles.center_holder}>
+        <section className={styles.center_holder_2}>
           <div className={styles.grid_0_product}>
             <div className={styles.grid}>
               {productGroups.map((group, groupIndex) => {
