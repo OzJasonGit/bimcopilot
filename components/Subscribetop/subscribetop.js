@@ -19,7 +19,7 @@ export default class Subcribetop extends Component {
                   id={styles._H1}
                   
                   class=" text-stone-200 ... font-avant_garde_bold">
-                  Sustainable, Richer Architects through AI, Analytics and
+                  Sustainable, Richer Architects through BIM, AI, Analytics and
                   Automation
                 </h1>
               </div>
