@@ -26,8 +26,6 @@ export default function MarketingLayout({ children }) {
         <Toaster richColors position="top-right" />
         {children}
 
-      
-
       </CartProvider>
     </PayPalScriptProvider>
   );
