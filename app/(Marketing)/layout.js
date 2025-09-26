@@ -29,20 +29,7 @@ export default function MarketingLayout({ children }) {
         <Toaster richColors position="top-right" />
         {children}
 
-      </CartProvider>
-    </PayPalScriptProvider>
-  );
-}
-
-
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-        {children}
-        <Analytics />
-
-        {/* Google Analytics base script */}
+         {/* Google Analytics base script */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           strategy="afterInteractive"
@@ -57,7 +44,12 @@ export default function RootLayout({ children }) {
             });
           `}
         </Script>
-      </body>
-    </html>
+
+        <Analytics />
+
+      </CartProvider>
+    </PayPalScriptProvider>
   );
 }
+
+
