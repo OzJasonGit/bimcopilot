@@ -9,6 +9,8 @@ import Analytics from "./analytics";
 import { GA_TRACKING_ID } from "../lib/gtag";
 
 
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 
 // Dynamic import for performance monitor
 const PerformanceMonitor = dynamic(() => import('../components/PerformanceMonitor'), {
@@ -135,26 +137,17 @@ export default function RootLayout({ children }) {
             >    
         <>{children}</>
 
-        <Analytics />
-
-        {/* Google Analytics base script */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            window.gtag = gtag;
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `}
-        </Script>
-
         <PerformanceMonitor />
+
+       
+
+
+
+        <GoogleAnalytics gaId="G-1L63LBBY65" />
+
+        
+
+        
 
       </body>
     </html>
