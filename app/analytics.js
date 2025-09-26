@@ -1,4 +1,5 @@
 // app/analytics.js
+
 "use client";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
@@ -9,12 +10,12 @@ export default function Analytics() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (pathname) {
-      const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : "");
-      gtag.pageview(url);
-    }
+    if (!pathname || !window.gtag) return;
+
+    const url =
+      pathname + (searchParams.toString() ? `?${searchParams.toString()}` : "");
+    gtag.pageview(url);
   }, [pathname, searchParams]);
 
   return null;
 }
-

@@ -5,8 +5,10 @@ import dynamic from 'next/dynamic';
 
 // app/layout.js
 import Script from "next/script";
-import Analytics from "./analytics"; // we’ll make this next
+import Analytics from "./analytics";
 import { GA_TRACKING_ID } from "../lib/gtag";
+
+
 
 // Dynamic import for performance monitor
 const PerformanceMonitor = dynamic(() => import('../components/PerformanceMonitor'), {
@@ -144,6 +146,7 @@ export default function RootLayout({ children }) {
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
             gtag('js', new Date());
             gtag('config', '${GA_TRACKING_ID}', {
               page_path: window.location.pathname,
@@ -151,7 +154,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        <PerformanceMonitor />
+  
 
       </body>
     </html>
