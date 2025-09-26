@@ -4,7 +4,7 @@
 // app/layout.js
 import Script from "next/script";
 import Analytics from "./analytics"; // we’ll make this next
-import { GA_TRACKING_ID } from "../lib/gtag";
+import { GA_TRACKING_ID } from "../../lib/gtag";
 
 import { CartProvider } from '../../components/Context/CartContext';
 import { PayPalScriptProvider } from '@paypal/react-paypal-js';
