@@ -369,19 +369,20 @@
          ". . .";
  }
 
- #ICON_SIDE_2 {
-     position: relative;
-     top: 10px;
-     grid-area: AREA;
-     display: grid;
-     width: 100%;
-     height: 100%;
-     grid-template-columns: 0px 1fr 0px;
-     grid-template-rows: 1fr 360px 1fr;
-     grid-template-areas: ". . ."
-         ". AREA ."
-         ". . .";
- }
+#PFBD_ICON_SIDE_2 {
+    position: relative;
+    top: 220px;
+    grid-area: AREA;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 0 1fr 0;
+    grid-template-rows: 1fr 360px 1fr;
+    grid-template-areas:
+        ". . ."
+        ". AREA ."
+        ". . .";
+}
 
 
 
