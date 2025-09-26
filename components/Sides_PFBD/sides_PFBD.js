@@ -11,7 +11,7 @@ import 'antd/dist/reset.css';
 
 
 import Image from "next/image";
-import pfbdImage from './pfbd_3.png';
+import pfbdImage from './pfbd_logo_white_(Type3).svg';
 import dlpfbdImage from './_dlpfbd_.svg';
 import bimcopilotLogo from './bimcopilot_logo.svg';
 import { height, width } from '@mui/system';
