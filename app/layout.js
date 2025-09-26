@@ -154,7 +154,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-  
+        <PerformanceMonitor />
 
       </body>
     </html>
