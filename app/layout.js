@@ -78,7 +78,7 @@ const calisga_regular = localFont
 
 export const metadata = {
   title: "bimcopilot.com",
-  description: "Sustainable, Richer Architects through AI, Analytics and Automation",
+  description: "Sustainable, Richer Architects through BIM, AI, Analytics and Automation",
 };
 
 export default function RootLayout({ children }) {
@@ -130,8 +130,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable} ${geist_regular.variable} ${geist_semibold.variable} ${geist_medium.variable} ${margin_demo.variable} ${calisga_regular.variable}`}
-            >
-        <PerformanceMonitor />
+            >    
         <>{children}</>
 
         <Analytics />
@@ -151,6 +150,8 @@ export default function RootLayout({ children }) {
             });
           `}
         </Script>
+
+        <PerformanceMonitor />
 
       </body>
     </html>
