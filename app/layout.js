@@ -4,9 +4,9 @@ import localFont from 'next/font/local';
 import dynamic from 'next/dynamic';
 
 // app/layout.js
-{/*import Script from "next/script";
+import Script from "next/script";
 import Analytics from "./analytics";
-import { GA_TRACKING_ID } from "../lib/gtag";*/}
+import { GA_TRACKING_ID } from "../lib/gtag";
 
 
 
@@ -137,7 +137,7 @@ export default function RootLayout({ children }) {
 
         <PerformanceMonitor />
 
-        {/*<Analytics />
+        <Analytics />
 
      
         <Script
@@ -154,7 +154,7 @@ export default function RootLayout({ children }) {
               page_path: window.location.pathname,
             });
           `}
-        </Script> */}
+        </Script> 
 
         
 
