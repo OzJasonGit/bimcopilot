@@ -9,10 +9,6 @@ import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import { Toaster } from 'sonner';
 
 
-export const metadata = {
-  title: "Bimcopilot",
-  description: "Sustainable, Richer Architects through BIM, AI, Analytics and Automation",
-};
 
 
 
