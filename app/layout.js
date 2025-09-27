@@ -135,6 +135,8 @@ export default function RootLayout({ children }) {
             >    
         <>{children}</>
 
+        <PerformanceMonitor />
+
         {/*<Analytics />
 
      
@@ -154,7 +156,7 @@ export default function RootLayout({ children }) {
           `}
         </Script> */}
 
-        <PerformanceMonitor />
+        
 
       </body>
     </html>
