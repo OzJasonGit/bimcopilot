@@ -60,7 +60,7 @@ return (
                         </div>                        
                       </div>
 
-                      <div id={styles.SERVICE_1_HOLDER}>
+                      {/*<div id={styles.SERVICE_1_HOLDER}>
                         <div id={styles.SERVICE_TITLE}>
                           <h3  class="text-left ... text-stone-200 ... font-avant_garde_bold" 
                           id={styles._H2}>Architecture, Design and Technology 
@@ -70,7 +70,7 @@ return (
                         <div id={styles.COLLAPSE_HOLDER}> 
                             <Collapsed_Services/>              
                         </div>
-                      </div>
+                      </div>*/}
                     </div>
               </div>
 
