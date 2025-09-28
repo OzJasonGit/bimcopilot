@@ -23,10 +23,7 @@ return (
                    className="bg-stone-800 ... rounded-xl ... " 
                    style={{
                       gridArea: "SERVICES",
-                      paddingLeft: "60px",
-                      paddingRight: "60px",
-                      paddingTop: "60px",
-                      paddingBottom: "60px"
+                      padding: "50px"
                    }}>
 
                     <div id={styles.SERVICES_GRID}>
