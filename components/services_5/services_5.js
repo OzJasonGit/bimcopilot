@@ -3,7 +3,7 @@
 import styles from './services_5.module.css';
 import Collapsed_Services from "../Collapse_Services/collapse_Services";
 import Collapsed_2 from "../../components/Collapse_2/collapse_2";
-import Collapsed_3 from "../../components/Collapse_3/collapse_3";
+import Collapsed_4 from "../../components/Collapse_4/collapse_4";
 import React, { Component } from 'react';
 import Link from "next/link";
 
@@ -79,7 +79,14 @@ return (
                   </div>
                   <br/>
                   <br/>
-                  <div>
+                  {/*collapse_container*/}
+                  <div id={styles.COLLAPSE_CONTAINER} 
+                       style={{
+                          height:"auto",
+                          width:"100%",
+                          paddingLeft: "50px",
+                       }}>
+                        <Collapsed_4/>
                   </div>
 
               </div>
