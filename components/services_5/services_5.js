@@ -19,12 +19,20 @@ return (
           <div class={styles.grid_0_services_2}>
             <div   id={styles.SERVICES_HOLDER}>
 
-              <div id={styles.SERVICES_PADDING}
-                   className="bg-stone-800 ... rounded-xl ... " 
-                   style={{
+              <div 
+                  
+                  style={{
                       gridArea: "SERVICES",
-                      padding: "50px"
-                   }}>
+                      }}>
+
+                  <div id={styles.SERVICES_PADDING}       
+                      className="bg-stone-800 ... rounded-xl ... "            
+                      style={{
+                        height:"auto",
+                        width:"100%",
+                        padding: "50px",
+                        overflow: "hidden"
+                      }}>
 
                     <div id={styles.SERVICES_GRID}>
 
@@ -68,13 +76,17 @@ return (
                         </div>
                       </div>*/}
                     </div>
-              </div>
-              <br/>
-              <br/>
-              <div>
-              </div>
+                  </div>
+                  <br/>
+                  <br/>
+                  <div>
+                  </div>
 
+              </div>
+            
             </div>
+             
+              
 
 
             <div id={styles.SERVICES_HOLDER_MOBILE} 
