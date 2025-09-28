@@ -86,7 +86,7 @@ return (
                           width:"100%",
                           paddingLeft: "50px",
                        }}>
-                        <Collapsed_4/>
+                        {/*<Collapsed_4/>*/}
                   </div>
 
               </div>
