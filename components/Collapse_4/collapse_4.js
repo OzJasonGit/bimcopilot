@@ -1,7 +1,5 @@
 "use client";
 
-import React, { Component, useState } from "react";
-import styles from "./collapse.module.css";
 
 
 import {Accordion, AccordionItem} from "@heroui/react";
