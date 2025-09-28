@@ -54,8 +54,7 @@ return (
                               <a class="text-stone-200 ..."> real-world 
                               experience </a>on projects from <a class="text-stone-200 ...">concept</a>, through to 
                               <a class="text-stone-200 ..."> completion</a>.                  
-                              <br/>
-                              <br/>                                                                    
+                                                                                               
                           </h3>
                         </div>                        
                       </div>
