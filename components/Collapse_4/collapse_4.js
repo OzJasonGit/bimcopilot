@@ -2,7 +2,7 @@
 
 
 
-import { Collapse } from 'antd';
+import {Accordion, AccordionItem} from "@heroui/react";
 
 
 const contentStyle = {
@@ -42,27 +42,23 @@ const defaultContent =
 
 
 const Collapsed_4 = () => {
-    const items = [
-        {
-            key: '1',
-            label: 'Accordion 1',
-            children: defaultContent,
-        },
-        {
-            key: '2',
-            label: 'Accordion 2',
-            children: defaultContent,
-        },
-        {
-            key: '3',
-            label: 'Accordion 3',
-            children: defaultContent,
-        },
-    ];
 
     return (
         <>
-        <Collapse items={items} />
+        <Accordion variant="light">
+            <AccordionItem key="1" aria-label="Accordion 1" title="Accordion 1">
+                {defaultContent}
+            </AccordionItem>
+            <AccordionItem key="2" aria-label="Accordion 2" title="Accordion 2">
+                {defaultContent}
+            </AccordionItem>
+            <AccordionItem key="3" aria-label="Accordion 3" title="Accordion 3">
+                {defaultContent}
+            </AccordionItem>
+        </Accordion>
+           
+
+
         </>
     )
 }
