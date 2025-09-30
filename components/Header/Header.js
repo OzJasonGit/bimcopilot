@@ -226,7 +226,7 @@ export default function Header() {
             <header id={styles.shadCN_HEADER}
                     style={{
                     gridArea:"SECOND_AREA",}}>   
-                    <shadCN_HEADER/>          
+                    <shadCN_HEADER></shadCN_HEADER>          
             </header>
           </div>
         </div>
