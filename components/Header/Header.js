@@ -8,6 +8,8 @@ import bimcopilot_icon from "./bimcopilot_logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import shadCN_HEADER from "../ShadCN_Header/shadCN_Header";
+
 
 const Clock = dynamic(() => import("./Clock/clock"), { ssr: false });
 const DateComponent = dynamic(() => import("./Clock/date"), { ssr: false });
@@ -220,6 +222,11 @@ export default function Header() {
                   )}
                 </div>
               </div>
+            </header>
+            <header id={styles.shadCN_HEADER}
+                    style={{
+                    gridArea:"SECOND_AREA",}}>   
+                    <shadCN_HEADER/>          
             </header>
           </div>
         </div>
