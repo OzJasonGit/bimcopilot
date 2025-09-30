@@ -3,10 +3,10 @@ import "./globals.css";
 import localFont from 'next/font/local';
 import dynamic from 'next/dynamic';
 
-{/*// app/layout.js
+// app/layout.js
 import Script from "next/script";
 import Analytics from "./analytics";
-import { GA_TRACKING_ID } from "../lib/gtag";*/}
+import { GA_TRACKING_ID } from "../lib/gtag";
 
 
 
@@ -17,63 +17,63 @@ const PerformanceMonitor = dynamic(() => import('../components/PerformanceMonito
 
 const avant_garde_bold = localFont
   ({
-    src: '../fonts/font.woff2',
+    src: '../public/fonts/font.woff2',
     variable: '--font-avant_garde_bold',
     display: 'swap',
   });
 
 const avant_garde_medium = localFont
   ({ 
-    src: '../fonts/avant_garde_medium.woff2',
+    src: '../public/fonts/avant_garde_medium.woff2',
     variable: '--font-avant_garde_medium',
     display: 'swap',
   });
 
 const geistmono_regular = localFont
   ({ 
-    src: '../fonts/geistmono_regular.woff2',
+    src: '../public/fonts/geistmono_regular.woff2',
     variable: '--font-geistmono_regular',
     display: 'swap',
   });
 
 const geistmono_semibold = localFont
 ({ 
-  src: '../fonts/geistmono_semibold.woff2',
+    src: '../public/fonts/geistmono_semibold.woff2',
   variable: '--font-geistmono_semibold',
   display: 'swap',
 });
 
 const geist_regular = localFont
 ({ 
-  src: '../fonts/geistmono_regular.woff2',
-  variable: '--font-geistmono_regular',
+    src: '../public/fonts/geist_regular.woff2',
+  variable: '--font-geist_regular',
   display: 'swap',
 });
 
 const geist_semibold = localFont
 ({ 
-  src: '../fonts/geist_semibold.woff2',
+    src: '../public/fonts/geist_semibold.woff2',
   variable: '--font-geist_semibold',
   display: 'swap',
 });
 
 const geist_medium = localFont
 ({ 
-  src: '../fonts/geist_medium.woff2',
+    src: '../public/fonts/geist_medium.woff2',
   variable: '--font-geist_medium',
   display: 'swap',
 });
 
 const margin_demo = localFont
 ({ 
-  src: '../fonts/margin_demo.woff2',
+    src: '../public/fonts/margin_demo.woff2',
   variable: '--font-margin_demo',
   display: 'swap',
 });
 
 const calisga_regular = localFont
 ({ 
-  src: '../fonts/calisga_regular.woff2',
+    src: '../public/fonts/calisga_regular.woff2',
   variable: '--font-calisga_regular',
   display: 'swap',
 });
@@ -137,7 +137,7 @@ export default function RootLayout({ children }) {
 
         <PerformanceMonitor />
 
-        {/*<Analytics />
+        <Analytics />
 
      
         <Script
@@ -150,11 +150,9 @@ export default function RootLayout({ children }) {
             function gtag(){dataLayer.push(arguments);}
             window.gtag = gtag;
             gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
+            gtag('config', '${GA_TRACKING_ID}');
           `}
-        </Script> */}
+        </Script>
 
         
 
