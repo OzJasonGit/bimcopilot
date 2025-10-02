@@ -1,7 +1,16 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
-import { CircleCheckIcon, CircleHelpIcon, CircleIcon } from "lucide-react";
+
+
+
+import {
+  CircleCheckIcon,
+  CircleHelpIcon,
+  CircleIcon,
+} from "lucide-react";
+
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,6 +20,18 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+
+
+
+
+
+
+
+
+
+
+
+
 
 const components = [
   {
@@ -22,7 +43,8 @@ const components = [
   {
     title: "Hover Card",
     href: "/docs/primitives/hover-card",
-    description: "For sighted users to preview content available behind a link.",
+    description:
+      "For sighted users to preview content available behind a link.",
   },
   {
     title: "Progress",
@@ -49,7 +71,31 @@ const components = [
   },
 ];
 
-export function NavigationMenuDemo() {
+
+
+
+
+
+
+function ListItem({ title, children, href, ...props }) {
+  return (
+    <li {...props}>
+      <NavigationMenuLink asChild>
+        <Link href={href}>
+          <div className="text-sm leading-none font-medium">{title}</div>
+          <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
+            {children}
+          </p>
+        </Link>
+      </NavigationMenuLink>
+    </li>
+  );
+}
+
+
+
+
+export function ShadCN_Header() {
   return (
     <NavigationMenu viewport={false}>
       <NavigationMenuList>
@@ -103,7 +149,10 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+          <NavigationMenuLink
+            asChild
+            className={navigationMenuTriggerStyle()}
+          >
             <Link href="/docs">Docs</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
@@ -192,3 +241,4 @@ export function NavigationMenuDemo() {
     </NavigationMenu>
   );
 }
+
