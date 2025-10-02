@@ -256,9 +256,10 @@
   background-color: #171717;
   display: grid;
   grid-row-gap: 40px;
-  grid-template-rows: auto;
+  grid-template-rows: auto auto;
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
-  grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+  grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 ." 
+                       ". BANNER-1  . SECOND-AREA . BANNER-2 .";;
   z-index: 80;
 }
 
