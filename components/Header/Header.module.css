@@ -251,7 +251,7 @@
   position: fixed;
   width: 100%;
   top: 0px;
-  height: 65px;
+  height: 85px;
   max-width: 1520px;
   background-color: #171717;
   display: grid;
@@ -261,6 +261,8 @@
   grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 ."
                        ". BANNER-1  . SECOND_AREA . BANNER-2 .";
   z-index: 80;
+  padding: 15px 0;
+  margin-top: 20px;
 }
 
 .burger_dot {
