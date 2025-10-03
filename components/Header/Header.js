@@ -8,7 +8,7 @@ import bimcopilot_icon from "./bimcopilot_logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import shadCN_HEADER from "../ShadCN_Header/shadCN_Header";
+import shadCN_HEADER from "../Header/ShadCN_Header/shadCN_Header";
 
 
 

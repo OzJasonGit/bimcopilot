@@ -130,16 +130,8 @@ export default function RootLayout({ children }) {
           rel="preconnect" 
           href="//res.cloudinary.com"
         />
-      </head>
-      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable} ${geist_regular.variable} ${geist_semibold.variable} ${geist_medium.variable} ${margin_demo.variable} ${calisga_regular.variable}`}
-            >    
-        <>{children}</>
-
-        <PerformanceMonitor />
-
-        <Analytics />
-
-     
+        
+        {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
           strategy="afterInteractive"
@@ -153,6 +145,14 @@ export default function RootLayout({ children }) {
             gtag('config', '${GA_TRACKING_ID}');
           `}
         </Script>
+      </head>
+      <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable} ${geist_regular.variable} ${geist_semibold.variable} ${geist_medium.variable} ${margin_demo.variable} ${calisga_regular.variable}`}
+            >    
+        <>{children}</>
+
+        <PerformanceMonitor />
+
+        <Analytics />
 
         
 
