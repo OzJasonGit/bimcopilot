@@ -8,7 +8,7 @@ import bimcopilot_icon from "./bimcopilot_logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import shadCN_HEADER from "../Header/ShadCN_Header/shadCN_Header";
+import { ShadCN_Header } from "./ShadCN_Header/shadCN_Header";
 
 
 
@@ -252,9 +252,21 @@ export default function Header() {
             </header>
             <header id={styles.shadCN_HEADER}
                     style={{
-                    gridArea:"SECOND_AREA",}}>  
+                    gridArea:"SECOND_AREA",
+                    backgroundColor: "#1a1a1a",
+                    padding: "20px",
+                    borderRadius: "10px",
+                    margin: "10px"
+                    }}>  
 
-                    <shadCN_HEADER/>
+                    <div style={{ 
+                      backgroundColor: "white", 
+                      padding: "15px", 
+                      borderRadius: "8px",
+                      color: "black"
+                    }}>
+                      <ShadCN_Header/>
+                    </div>
 
 
             </header>
