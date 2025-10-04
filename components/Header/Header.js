@@ -126,7 +126,6 @@ export default function Header() {
 
               {/* Logo */}
               <div 
-                   /*className={styles.container}*/
                    styles={{
                       height:'auto',
                       padding:'7.5px',
