@@ -125,12 +125,15 @@ export default function Header() {
             <header id={styles.FIXED_HEADER}>
 
               {/* Logo */}
-              <div /*id={styles.LOGO_ICON}*/
-                   className={styles.container}
+              <div 
+                   /*className={styles.container}*/
                    styles={{height:'60px',
                             padding:'7.5px',
-                            gridArea:'LOGO_HOLDER'}}>
-                            <Link /*id={styles.LOGO_LINK}*/ href="/.">
+                            gridArea:'LOGO_HOLDER',
+                            justifyItems:'center',
+                            }}>
+
+                            <Link href="/.">
                               <div className="" /*id={styles.LOGO}*/>
                                 <Image
                                   className="w-16 h-16 fill-current text-stone-50 hover:text-emerald-400 transition-colors duration-300"
@@ -158,11 +161,11 @@ export default function Header() {
               </div>*/}
 
               {/* Time and Date */}
-              <div className="content-center ..." id={styles.TIME}>
+              {/*<div className="content-center ..." id={styles.TIME}>
                 <Clock />
                 <div className="bg-zinc-500 ..." id={styles.B1}></div>
                 <DateComponent />
-              </div>
+              </div>*/}
 
               {/* Basket and Favorites */}
               

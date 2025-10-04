@@ -351,7 +351,7 @@
   max-width: 600px;
   justify-self: right;
   grid-template-columns: auto 1.5px auto 1.5px auto 1.5px auto;
-  grid-template-rows: 20px auto 0px;
+  grid-template-rows: 10px auto 10px;
   grid-template-areas:
     " . . . . . . ."
     " SERVICES . STORIES . PROJECTS . PRODUCTS"
