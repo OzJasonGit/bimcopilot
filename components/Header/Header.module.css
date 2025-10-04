@@ -247,19 +247,18 @@
   top: 0px;
 }
 
-#header {
+#HEADER {
   position: fixed;
   width: 100%;
   top: 0px;
-  height: 85px;
+  height: auto;
   max-width: 1520px;
   background-color: #171717;
   display: grid;
   grid-row-gap: 40px;
   grid-template-rows: auto;
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
-  grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 ."
-                       ". BANNER-1  . SECOND_AREA . BANNER-2 .";
+  grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
   z-index: 80;
   padding: 15px 0;
   margin-top: 20px;
