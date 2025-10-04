@@ -274,13 +274,12 @@
   display: grid;
   grid-row-gap: 0px;
   grid-column-gap: 40px;
-  grid-template-columns: 20px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0px 60px 0px 50px;
+  grid-template-columns: 60px 1fr auto 1fr auto 1fr auto ;
+  grid-template-rows: 30px auto 30px;
   grid-template-areas:
-    ". . . . . . . . . . . . ."
-    "LOGO_HOLDER LOGO_HOLDER MENU MENU MENU MENU . TIME TIME TIME TIME MENU_BUTTON MENU_BUTTON"
-    "LOGO_HOLDER LOGO_HOLDER . . . . . . . . . . ."
-    "LOGO_HOLDER LOGO_HOLDER . . . . . . SIGN SIGN SIGN SIGN SIGN";
+    ". . . . . . . "
+    "LOGO_HOLDER . MENU . TIME . MENU_BUTTON"
+    ". . . . . . . ";
 }
 
 

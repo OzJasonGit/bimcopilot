@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import { ShadCN_Header } from "./ShadCN_Header/shadCN_Header";
+import { padding } from "@mui/system";
 
 
 
@@ -124,33 +125,37 @@ export default function Header() {
             <header id={styles.FIXED_HEADER}>
 
               {/* Logo */}
-              <div id={styles.LOGO_ICON} className={styles.container}>
-                <Link id={styles.LOGO_LINK} href="/.">
-                  <div className="" id={styles.LOGO}>
-                    <Image
-                      className="w-16 h-16 fill-current text-stone-50 hover:text-emerald-400 transition-colors duration-300"
-                      src={bimcopilot_icon}
-                      alt="Picture of the author"
-                      width={100}
-                      height={100}
-                      loading="lazy"
-                      style={{
-                        position: "relative",
-                        width: "auto",
-                        height: "100%",
-                        justifyItems: "center",
-                        alignItems: "center",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </div>
-                </Link>
+              <div /*id={styles.LOGO_ICON}*/
+                   className={styles.container}
+                   styles={{height:'60px',
+                            padding:'7.5px',
+                            gridArea:'LOGO_HOLDER'}}>
+                            <Link id={styles.LOGO_LINK} href="/.">
+                              <div className="" id={styles.LOGO}>
+                                <Image
+                                  className="w-16 h-16 fill-current text-stone-50 hover:text-emerald-400 transition-colors duration-300"
+                                  src={bimcopilot_icon}
+                                  alt="Picture of the author"
+                                  width={100}
+                                  height={100}
+                                  loading="lazy"
+                                  style={{
+                                    position: "relative",
+                                    width: "auto",
+                                    height: "100%",
+                                    justifyItems: "center",
+                                    alignItems: "center",
+                                    objectFit: "contain",
+                                  }}
+                                />
+                              </div>
+                            </Link>
               </div>
 
               {/* shadCN Navigation Menu */}
-              <div className="content-center ..." id={styles.NAV_MENU} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              {/*<div className="content-center ..." id={styles.NAV_MENU} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <ShadCN_Header/>
-              </div>
+              </div>*/}
 
               {/* Time and Date */}
               <div className="content-center ..." id={styles.TIME}>
