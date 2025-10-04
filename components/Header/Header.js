@@ -135,7 +135,7 @@ export default function Header() {
                       }}>
 
                       <Link href="/."
-                            styles={{height:'60px',}}>
+                            styles={{height:'50px',}}>
                         <div>
                           <Image
                             className="w-16 h-16 fill-current text-stone-50 hover:text-emerald-400 transition-colors duration-300"
