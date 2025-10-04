@@ -169,11 +169,11 @@ export default function Header() {
               </div>
 
               {/* Time and Date */}
-              {/*<div className="content-center ..." id={styles.TIME}>
+              <div className="content-center ..." id={styles.TIME}>
                 <Clock />
                 <div className="bg-zinc-500 ..." id={styles.B1}></div>
                 <DateComponent />
-              </div>*/}
+              </div>
 
               {/* Basket and Favorites */}
               
