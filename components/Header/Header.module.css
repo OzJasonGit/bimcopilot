@@ -326,15 +326,14 @@
   min-width: 200px;
   justify-self: right;
   grid-template-columns: 1fr 1.5px 1.5fr;
-  grid-template-rows: 20px auto 0px;
-  grid-template-areas:
-    " . . ."
-    " CLOCK B1 HOME"
-    " . . .";
+  grid-template-rows: auto;
+  grid-template-areas: " CLOCK B1 HOME";
   background: transparent;
-  left: -70px;
-  top: 2px;
 }
+
+
+
+
 
 #CLOCK_HOLDER {
   grid-area: CLOCK;
