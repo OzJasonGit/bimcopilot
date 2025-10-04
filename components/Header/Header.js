@@ -158,9 +158,15 @@ export default function Header() {
               </div>
 
               {/* shadCN Navigation Menu */}
-              {/*<div className="content-center ..." id={styles.NAV_MENU} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <div className="content-center ..." 
+                   style={{ 
+                          gridArea:"MENU",
+                          display: "flex", 
+                          alignItems: "center", 
+                          justifyContent: "center" 
+                          }}>
                 <ShadCN_Header/>
-              </div>*/}
+              </div>
 
               {/* Time and Date */}
               {/*<div className="content-center ..." id={styles.TIME}>
