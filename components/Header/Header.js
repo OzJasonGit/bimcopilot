@@ -130,8 +130,8 @@ export default function Header() {
                    styles={{height:'60px',
                             padding:'7.5px',
                             gridArea:'LOGO_HOLDER'}}>
-                            <Link id={styles.LOGO_LINK} href="/.">
-                              <div className="" id={styles.LOGO}>
+                            <Link /*id={styles.LOGO_LINK}*/ href="/.">
+                              <div className="" /*id={styles.LOGO}*/>
                                 <Image
                                   className="w-16 h-16 fill-current text-stone-50 hover:text-emerald-400 transition-colors duration-300"
                                   src={bimcopilot_icon}
