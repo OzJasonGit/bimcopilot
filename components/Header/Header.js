@@ -128,7 +128,7 @@ export default function Header() {
               <div 
                    styles={{
                       height:'auto',
-                      padding:'7.5px',
+                      padding:'12px',
                       gridArea:'LOGO_HOLDER',
                       justifyItems:'center',
                       width:'100%',
