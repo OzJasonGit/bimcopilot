@@ -41,7 +41,11 @@ const Menu = () => {
     return (  
     <> 
 
-      <section id={styles.SHADOW_SECTION_DRAWER} class={styles.center_holder}>  
+      <section id={styles.SHADOW_SECTION_DRAWER} class={styles.center_holder}
+                styles={{
+                  position:'relative',
+                  top:'-110px'                         
+                }}>  
 
           <Drawer
               class="bg-indigo-600 bg-opacity-50 ..."
@@ -236,7 +240,11 @@ const Menu = () => {
           <div class={styles.HEADER_HOLDER}>
              <div id={styles.HEADER}>   
                 
-                <header id={styles.FIXED_HEADER}> 
+                <header id={styles.FIXED_HEADER}
+                          styles={{
+                          position:'relative',
+                          top:'110px'                         
+                        }}> 
 
 
                     <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
@@ -253,7 +261,7 @@ const Menu = () => {
                       <a id={styles.CART} className="content-center ... align-middle ..." href="/cart">
                         <div id={styles.CART_HOLDER} className="content-center ... align-middle ..."
                             style={{
-                            paddingLeft: "35px",
+                            paddingLeft: "25px",
                             gridArea:'BASKET'                                  
                                   }}>
                           <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300" />
@@ -267,36 +275,6 @@ const Menu = () => {
                           }}>
                         <Hamburger/> 
                       </a>
-
-                        {/*<div id={styles.HEADER_MENU_2}>   
-                            <div id={styles.BURGER_HOLDER} class={styles.container_right}>
-
-                            <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
-                              <div id={styles.HEADER_MENU_2}>   
-                                <div id={styles.BURGER_HOLDER} class={styles.container_right}>
-
-                                  <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart">
-                                    <div  id={styles.CART_HOLDER} className="content-center ... align-middle ...">
-                                      <FontAwesomeIcon icon={faHeart} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-red-500" />
-                                    </div>
-                                  </a>
-
-                                  
-
-                                  <a id={styles.BURGER} onClick={showDrawer}
-                                     style={{
-                                                                            
-                                      }}
-                                  >
-                                    <Hamburger/> 
-                                  </a>
-
-                                </div>   
-                              </div>
-                            </div> 
-
-                          </div>   
-                      </div>*/} 
                     </div>
 
 
