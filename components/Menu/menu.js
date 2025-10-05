@@ -258,6 +258,15 @@ const Menu = () => {
                         </div>
                       </a>
 
+
+                      <a id={styles.BURGER} onClick={showDrawer}
+                          style={{
+                                                                
+                          }}
+                      >
+                        <Hamburger/> 
+                      </a>
+
                         {/*<div id={styles.HEADER_MENU_2}>   
                             <div id={styles.BURGER_HOLDER} class={styles.container_right}>
 
