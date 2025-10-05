@@ -259,7 +259,7 @@ const Menu = () => {
                       </a>
 
 
-                      <a id={styles.BURGER} onClick={showDrawer}
+                      <a id={styles.BURGER} className="content-center ... align-middle ..." onClick={showDrawer}
                           style={{
                                                                 
                           }}
