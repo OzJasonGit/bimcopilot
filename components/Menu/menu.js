@@ -242,7 +242,9 @@ const Menu = () => {
                     <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
 
                       <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart"
-                          styles={{gridArea:'FAVOURITES'}}>
+                            styles={{
+                            gridArea:'FAVOURITES'
+                            }}>
                         <div  id={styles.CART_HOLDER} className="content-center ... align-middle ...">
                           <FontAwesomeIcon icon={faHeart} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-red-500" />
                         </div>
@@ -250,10 +252,10 @@ const Menu = () => {
 
                       <a id={styles.CART} className="content-center ... align-middle ..." href="/cart">
                         <div id={styles.CART_HOLDER} className="content-center ... align-middle ..."
-                              style={{
-                              paddingLeft: "35px",
-                              gridArea:'BASKET'                                  
-                                    }}>
+                            style={{
+                            paddingLeft: "35px",
+                            gridArea:'BASKET'                                  
+                                  }}>
                           <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300" />
                         </div>
                       </a>
@@ -261,9 +263,8 @@ const Menu = () => {
 
                       <a id={styles.BURGER} className="content-center ... align-middle ..." onClick={showDrawer}
                           style={{
-                                                                
-                          }}
-                      >
+                            gridArea:'BURGER'                                                        
+                          }}>
                         <Hamburger/> 
                       </a>
 
