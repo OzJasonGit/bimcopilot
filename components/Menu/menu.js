@@ -240,7 +240,8 @@ const Menu = () => {
           <div class={styles.HEADER_HOLDER}>
              <div id={styles.HEADER}>   
                 
-                <header id={styles.FIXED_HEADER}> 
+                <header id={styles.FIXED_HEADER}
+                         > 
 
 
                     <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
@@ -280,77 +281,7 @@ const Menu = () => {
 
 
 
-
-                    {/* Sign In/Sign Up or User Dropdown */}
-                    <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} style={{ gridArea: "SIGN_IN", position: "relative", height: "100%", width: "100%" }}>
-                      <div className="flex justify-end ..." id={styles.SIGNUP_RIGHT} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "200px", left: "4.5px" }}>
-                        {isAuthenticated ? (
-                          <div className="relative left-[8px]" ref={dropdownRef}>
-                            {/* User Icon Button */}
-                            <div className="flex items-center gap-5">
-
-                            <span className="text-slate-50 font-medium">Hi, {user.name}</span>
-
-                            <button
-                              onClick={toggleDropdown}
-                              className="flex items-center justify-center p-2 rounded-full hover:bg-gray-100/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-                              aria-haspopup="true"
-                              aria-expanded={isDropdownOpen}
-                              >
-                              <FontAwesomeIcon
-                                icon={faUser}
-                                className="text-slate-50 w-6 h-6 hover:text-gray-300 transition-colors duration-200"
-                                />
-                            </button>
-                                </div>
-
-                            {/* Dropdown Menu */}
-                            {isDropdownOpen && (
-                              <div
-                                className="absolute right-0 mt-2 w-56 origin-top-right bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
-                                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the dropdown
-                              >
-                                {/* Profile Link */}
-                                {/* <Link
-                                  href="/profile"
-                                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
-                                >
-                                  <span className="flex items-center">
-                                    <FontAwesomeIcon icon={faUser} className="mr-2 w-4 h-4" />
-                                    Profile
-                                  </span>
-                                </Link> */}
-
-                                {/* Logout Button */}
-                                <button
-                                  onClick={handleLogout}
-                                  className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
-                                >
-                                  <span className="flex items-center">
-                                    <FontAwesomeIcon icon={faSignOutAlt} className="mr-2 w-4 h-4" />
-                                    Logout
-                                  </span>
-                                </button>
-                              </div>
-                            )}
-                          </div>
-                        ) : (
-                          <div className="content-center ..." id={styles.SIGNUP_GRID}>
-                            <Link id={styles.STORIES} href="/signup" style={{ gridArea: "SIGNUP", position: "relative", height: "100%", width: "100%", textAlign: "center", left: "-15.5px" }}>
-                              <h3 id={styles.H_3_STORIES} className="text-center ...  text-slate-50 font-avant_garde_bold" data-content="Signup">
-                                Signup
-                              </h3>
-                            </Link>
-                            <div className="bg-zinc-500 ..." id={styles.B1}></div>
-                            <Link id={styles.SIGNUP} href="/signin" style={{ gridArea: "LOGIN", position: "relative", height: "100%", width: "100%", textAlign: "center", left: "-15px" }}>
-                              <h3 id={styles.H_3_STORIES} className="text-center ...  text-slate-50 font-avant_garde_bold" data-content="Login">
-                                Login
-                              </h3>
-                            </Link>
-                          </div>
-                        )}
-                      </div>
-                    </div>
+                    
 
 
                     {/*<div id={styles.LOGO_MOB} class={styles.container}>
