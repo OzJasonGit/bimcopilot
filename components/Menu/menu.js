@@ -247,7 +247,17 @@ const Menu = () => {
                           <FontAwesomeIcon icon={faHeart} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-red-500" />
                         </div>
                       </a>
-                      
+
+                      <a id={styles.CART} className="content-center ... align-middle ..." href="/cart">
+                        <div id={styles.CART_HOLDER} className="content-center ... align-middle ..."
+                              style={{
+                              paddingLeft: "35px",
+                              gridArea:'BASKET'                                  
+                                    }}>
+                          <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300" />
+                        </div>
+                      </a>
+
                         {/*<div id={styles.HEADER_MENU_2}>   
                             <div id={styles.BURGER_HOLDER} class={styles.container_right}>
 
@@ -261,14 +271,7 @@ const Menu = () => {
                                     </div>
                                   </a>
 
-                                  <a id={styles.CART} className="content-center ... align-middle ..." href="/cart">
-                                    <div id={styles.CART_HOLDER} className="content-center ... align-middle ..."
-                                         style={{
-                                          paddingLeft: "35px",                                  
-                                                }}>
-                                      <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300" />
-                                    </div>
-                                  </a>
+                                  
 
                                   <a id={styles.BURGER} onClick={showDrawer}
                                      style={{

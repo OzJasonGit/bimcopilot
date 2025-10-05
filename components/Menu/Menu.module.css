@@ -460,10 +460,10 @@
     grid-row-gap: 10px;
     grid-column-gap: 20px;
     grid-template-rows: auto ;
-    grid-template-columns: auto auto 30px 1fr;
+    grid-template-columns: auto auto auto 30px 1fr;
     grid-template-areas:
         
-        " FAVOURITES BASKET . BURGER";
+        " FAVOURITES . BASKET . BURGER";
     /*top: 82.3px;*/
 }
 
