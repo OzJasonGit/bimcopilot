@@ -247,15 +247,15 @@ const Menu = () => {
                         }}> 
 
 
-                    <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
+                    <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}
+                         styles={{
+                              position:'relative',                     
+                              top:'110px' 
+                              }}>
 
                       <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart">
                         <div  id={styles.CART_HOLDER} className="content-center ... align-middle ..."
-                              styles={{
-                              position:'relative',
-                              gridArea:'FAVOURITES',
-                              top:'110px' 
-                              }}>
+                              >
                           <FontAwesomeIcon icon={faHeart} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-red-500" />
                         </div>
                       </a>
@@ -263,10 +263,10 @@ const Menu = () => {
                       <a id={styles.CART} className="content-center ... align-middle ..." href="/cart">
                         <div id={styles.CART_HOLDER} className="content-center ... align-middle ..."
                             style={{
-                            position:'relative',
+               
                             paddingLeft: "25px",
                             gridArea:'BASKET',
-                            top:'110px'                                  
+                                                            
                                   }}>
                           <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300" />
                         </div>
@@ -275,9 +275,9 @@ const Menu = () => {
 
                       <a id={styles.BURGER} className="content-center ... align-middle ..." onClick={showDrawer}
                           style={{
-                            position:'relative',
+                        
                             gridArea:'BURGER',
-                            top:'110px'                                                        
+                                                                            
                           }}>
                         <Hamburger/> 
                       </a>

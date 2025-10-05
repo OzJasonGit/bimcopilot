@@ -36,7 +36,6 @@
 
 
 #SHADOW_SECTION_DRAWER {
-    position: relative;
     width: 100%;
     display: flex;
     -webkit-box-pack: center;
