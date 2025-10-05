@@ -242,8 +242,8 @@ const Menu = () => {
                 
                 <header id={styles.FIXED_HEADER}
                           styles={{
-                          position:'relative',
-                          top:'110px'                         
+                          
+                                                  
                         }}> 
 
 
@@ -251,7 +251,9 @@ const Menu = () => {
 
                       <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart"
                             styles={{
-                            gridArea:'FAVOURITES'
+                            position:'relative',
+                            gridArea:'FAVOURITES',
+                            top:'110px' 
                             }}>
                         <div  id={styles.CART_HOLDER} className="content-center ... align-middle ...">
                           <FontAwesomeIcon icon={faHeart} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-red-500" />
@@ -261,8 +263,10 @@ const Menu = () => {
                       <a id={styles.CART} className="content-center ... align-middle ..." href="/cart">
                         <div id={styles.CART_HOLDER} className="content-center ... align-middle ..."
                             style={{
+                            position:'relative',
                             paddingLeft: "25px",
-                            gridArea:'BASKET'                                  
+                            gridArea:'BASKET',
+                            top:'110px'                                  
                                   }}>
                           <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300" />
                         </div>
@@ -271,7 +275,9 @@ const Menu = () => {
 
                       <a id={styles.BURGER} className="content-center ... align-middle ..." onClick={showDrawer}
                           style={{
-                            gridArea:'BURGER'                                                        
+                            position:'relative',
+                            gridArea:'BURGER',
+                            top:'110px'                                                        
                           }}>
                         <Hamburger/> 
                       </a>
