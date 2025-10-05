@@ -237,6 +237,8 @@ const Menu = () => {
              <div id={styles.HEADER}>   
                 
                 <header id={styles.FIXED_HEADER}> 
+
+
                     <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
                         <div id={styles.HEADER_MENU_2}>   
                             <div id={styles.BURGER_HOLDER} class={styles.container_right}>
@@ -277,7 +279,7 @@ const Menu = () => {
                     </div> 
 
 
-                    <div id={styles.LOGO_MOB} class={styles.container}>
+                    {/*<div id={styles.LOGO_MOB} class={styles.container}>
                       <Image
                           src={bimcopilot_icon}   
                           alt="Picture of the author"
@@ -291,7 +293,7 @@ const Menu = () => {
                             objectFit: "contain",
                           }}
                         />
-                    </div>
+                    </div>*/}
                 </header>
               
               </div>           
