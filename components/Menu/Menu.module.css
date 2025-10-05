@@ -43,7 +43,7 @@
     justify-content: center;
     background-color: transparent;
     z-index: 500000000000000;
-    top: 110px;
+    /*top: 110px;*/
     /*margin-top: -65px;*/
 }
 
@@ -74,7 +74,7 @@
     width: 100%;
     background-color: transparent;
     z-index: 100000;
-    top: 0px;
+    top: -110px;
     /*margin-top: -70px;*/
 
 }
