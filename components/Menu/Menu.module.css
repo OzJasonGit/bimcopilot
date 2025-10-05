@@ -74,7 +74,7 @@
     width: 100%;
     background-color: transparent;
     z-index: 100000;
-    top: -110px;
+    /*top: -110px;*/
     /*margin-top: -70px;*/
 
 }
@@ -82,7 +82,7 @@
 #HEADER {
     position: fixed;
     width: 100%;
-    top: 0px;
+    top: -110px;
     height: 110px;
     max-width: 1520px;
     background-color: transparent;
