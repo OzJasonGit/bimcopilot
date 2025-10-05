@@ -161,46 +161,7 @@ export function ShadCN_Header() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-
-          {/* Projects Menu */}
-          <NavigationMenuItem>
-            <NavigationMenuTrigger 
-              className="text-stone-50 bg-transparent hover:bg-stone-700/30 font-avant_garde_bold border-none shadow-none data-[state=open]:bg-stone-700/30 data-[state=open]:text-stone-50 focus:bg-stone-700/30 focus:text-stone-50"
-              style={{ 
-                color: '#f5f5f4', 
-                fontSize: '14px', 
-                backgroundColor: 'transparent !important',
-                border: 'none !important',
-                boxShadow: 'none !important'
-              }}
-            >
-              Projects
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-stone-900 border-stone-700">
-              <ul className="grid w-[300px] gap-2 p-4">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/projects" className="flex flex-col items-start gap-1 p-2 rounded hover:bg-stone-800/50">
-                      <div className="font-avant_garde_bold text-stone-50 text-sm">Our Projects</div>
-                      <div className="text-stone-400 text-xs">
-                        See our portfolio of architectural projects
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/plastic_free_by_design" className="flex flex-col items-start gap-1 p-2 rounded hover:bg-stone-800/50">
-                      <div className="font-avant_garde_bold text-stone-50 text-sm">Plastic Free By Design</div>
-                      <div className="text-stone-400 text-xs">
-                        Sustainable design initiatives
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
+     
         </NavigationMenuList>
       </NavigationMenu>
     </div>
