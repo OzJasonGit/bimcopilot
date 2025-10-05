@@ -42,7 +42,7 @@ const Menu = () => {
     <> 
 
       <section id={styles.SHADOW_SECTION_DRAWER} class={styles.center_holder}
-                styles={{
+                style={{
                                         
                 }}>  
 
