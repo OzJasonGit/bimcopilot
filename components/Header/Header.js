@@ -132,6 +132,8 @@ export default function Header() {
                       gridArea:'LOGO_HOLDER',
                       justifyItems:'center',
                       width:'100%',
+                      position:'relative',
+                      left:'-3px'
                       }}>
 
                       <Link href="/."
