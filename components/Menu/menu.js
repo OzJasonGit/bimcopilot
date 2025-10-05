@@ -258,6 +258,7 @@ const Menu = () => {
                
                             paddingLeft: "25px",
                             gridArea:'BASKET',
+                            
                                                             
                                   }}>
                           <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300" />
@@ -269,6 +270,8 @@ const Menu = () => {
                           style={{
                         
                             gridArea:'BURGER',
+                            
+                            
                                                                             
                           }}>
                         <Hamburger/> 
