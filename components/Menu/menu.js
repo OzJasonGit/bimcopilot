@@ -248,7 +248,7 @@ const Menu = () => {
 
                     <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}
                          styles={{
-                              position:'relative',                     
+                                               
                               top:'110px' 
                               }}>
 
