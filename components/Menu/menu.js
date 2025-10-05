@@ -240,6 +240,14 @@ const Menu = () => {
 
 
                     <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
+
+                      <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart"
+                          styles={{gridArea:'FAVOURITES'}}>
+                        <div  id={styles.CART_HOLDER} className="content-center ... align-middle ...">
+                          <FontAwesomeIcon icon={faHeart} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-red-500" />
+                        </div>
+                      </a>
+                      
                         {/*<div id={styles.HEADER_MENU_2}>   
                             <div id={styles.BURGER_HOLDER} class={styles.container_right}>
 
