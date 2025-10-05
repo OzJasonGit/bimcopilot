@@ -107,7 +107,7 @@
 
 
 #FIXED_HEADER {
-    grid-area: MAIN-AREA;
+    grid-area: MAIN_AREA;
     display: grid;
     grid-row-gap: 0;
     grid-column-gap: 40px;
