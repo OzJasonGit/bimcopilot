@@ -249,13 +249,13 @@ const Menu = () => {
 
                     <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
 
-                      <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart"
-                            styles={{
-                            position:'relative',
-                            gridArea:'FAVOURITES',
-                            top:'110px' 
-                            }}>
-                        <div  id={styles.CART_HOLDER} className="content-center ... align-middle ...">
+                      <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart">
+                        <div  id={styles.CART_HOLDER} className="content-center ... align-middle ..."
+                              styles={{
+                              position:'relative',
+                              gridArea:'FAVOURITES',
+                              top:'110px' 
+                              }}>
                           <FontAwesomeIcon icon={faHeart} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-red-500" />
                         </div>
                       </a>
