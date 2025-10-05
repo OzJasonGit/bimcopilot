@@ -248,8 +248,8 @@ const Menu = () => {
 
                     <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}
                          styles={{
-                                               
-                              top:'110px' 
+                              position: 'relative',                                              
+                              top:'90px' 
                               }}>
 
                       <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart">

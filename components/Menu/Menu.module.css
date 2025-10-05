@@ -458,7 +458,7 @@
 
 #BUTTON_HOLDER_RIGHT {
     grid-area: MENU_BUTTON;
-    position: relative;
+    
     display: grid;
     grid-row-gap: 10px;
     grid-column-gap: 20px;
