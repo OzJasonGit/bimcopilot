@@ -262,7 +262,7 @@
   grid-template-areas: ". BANNER-1  . MAIN_AREA . BANNER-2 .";
   z-index: 80;
   padding: 15px 0;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
 }
 
 .burger_dot {
