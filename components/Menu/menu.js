@@ -240,18 +240,11 @@ const Menu = () => {
              <div id={styles.HEADER}>   
                 
                 <header id={styles.FIXED_HEADER}
-                          styles={{
-                          
-                                                  
-                        }}> 
+                         > 
 
 
-                    <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}
-                         styles={{
-                              position: 'relative',                                              
-                              top:'90px' 
-                              }}>
-
+                    <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
+                        
                       <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart">
                         <div  id={styles.CART_HOLDER} className="content-center ... align-middle ..."
                               >
