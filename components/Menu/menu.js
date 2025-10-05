@@ -239,7 +239,7 @@ const Menu = () => {
                 <header id={styles.FIXED_HEADER}> 
 
 
-                    <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
+                    {/*<div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
                         <div id={styles.HEADER_MENU_2}>   
                             <div id={styles.BURGER_HOLDER} class={styles.container_right}>
 
@@ -275,8 +275,8 @@ const Menu = () => {
                             </div> 
 
                           </div>   
-                        </div>
-                    </div> 
+                      </div>
+                    </div>*/} 
 
 
                     {/*<div id={styles.LOGO_MOB} class={styles.container}>
