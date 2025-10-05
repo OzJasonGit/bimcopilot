@@ -270,7 +270,8 @@ const Menu = () => {
                           style={{
                         
                             gridArea:'BURGER',
-                            top: '90px'
+                            top: '90px',
+                            position: 'relative'
                                                         
                           }}>
                         <Hamburger/> 
