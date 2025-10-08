@@ -7,7 +7,7 @@ import Collapsed_4 from "../../components/Collapse_4/collapse_4";
 import React, { Component } from 'react';
 import Link from "next/link";
 
-import { Separator } from "@/components/ui/separator"
+
 
 import {Divider} from "@heroui/react";
 
