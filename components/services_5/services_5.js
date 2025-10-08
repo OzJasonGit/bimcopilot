@@ -9,6 +9,8 @@ import Link from "next/link";
 
 import { Separator } from "@/components/ui/separator"
 
+import {Divider} from "@heroui/react";
+
 export default class Services_5 extends Component {
 
 render() {
@@ -89,10 +91,10 @@ return (
                           paddingLeft: "50px",
                        }}>
                         {/*<Collapsed_4/>*/}
-                        <Separator />
+                        <Divider />
                         <div> 
                           <br/>
-                          
+
                           <br/>
                         </div>
                   </div>
