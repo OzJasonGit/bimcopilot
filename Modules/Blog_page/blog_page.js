@@ -309,6 +309,26 @@ const Blog_page = (stories) => {
                                         </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                         <div 
                                             style={{
                                                 position: "relative",
@@ -481,7 +501,113 @@ const Blog_page = (stories) => {
                                         </div>
 
 
-                                    
+                                        <div 
+                                            style={{
+                                                position: "relative",
+                                                gridArea: "NAV",
+                                                width: "100%",
+                                                height: "100%",
+                                                display: "flex",}}>
+                                                <div
+                                                    style={{
+                                                        position: "relative",
+                                                        top: "0px",
+                                                        width: "100%",
+                                                        height: "100%",
+                                                        left:"100vw"}}>
+
+                                                            <div
+                                                                id={styles.AFFILIATE_HOLDER}
+                                                                style={{
+                                                                    position: "sticky",
+                                                                    top: "200px",
+                                                                    width: "100%",
+                                                                    height: "auto",
+                                                                     }}> 
+
+                                                                    
+                                                                    <div id={styles.NAVIGATION}
+                                                                            style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "100%",   
+                                                                                maxHeight: "0",                                                                  
+                                                                                }}>  
+                                                                        <div className={styles.PARAGRAPH_1}
+                                                                                style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "auto",
+                                                                                gridArea: "1"                                                                            
+                                                                                }}>
+                                                                            <p
+                                                                                id={styles._H4}
+                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                                {parse(story.body1_title || "")}
+                                                                                testing some text 1 
+                                                                            </p>
+                                                                        </div>  
+
+                                                                        <div className={styles.PARAGRAPH_2}
+                                                                                style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "auto",
+                                                                                gridArea: "2"                                                                            
+                                                                                }}>
+                                                                            <p
+                                                                                id={styles._H4}
+                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                                {parse(story.body1_title || "")}
+                                                                                testing some text 2
+                                                                            </p>
+                                                                        </div>   
+
+                                                                           
+
+                                                                       
+ 
+
+                                                                      
+
+                                                                        
+
+                                                                                               
+                                                                    </div>
+
+                                                                                                     
+                                                            </div>
+                                                </div>                                          
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                 </div>                     
                             </div>
                         </div>
