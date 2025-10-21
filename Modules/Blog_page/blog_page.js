@@ -525,79 +525,7 @@ const Blog_page = (stories) => {
                                                                     height: "auto",
                                                                      }}> 
 
-                                                                     <div id={styles.SUBSCRIBE_HOLDER}                                                                        
-                                                                        style={{
-                                                                            position: "relative",                                                  
-                                                                            width: "100%",
-                                                                            height: "auto",
-                                                                            gridArea: "SUBSCRIBE"
-                                                                            }}>
-
-                                                                                <div id={styles.MAIN_TAG}
-                                                                                    style={{
-                                                                                        position: "relative",                                                  
-                                                                                        width: "100%",
-                                                                                        height: "auto",
-                                                                                        gridArea: "TAG_MAIN"
-                                                                                        }}>
-                                                                                    <h1
-                                                                                        id={styles._H1}
-                                                                                        
-                                                                                        class=" text-stone-200 ... font-avant_garde_bold">
-                                                                                        Sustainable, Richer Architects through AI, Analytics and
-                                                                                        Automation
-                                                                                    </h1>
-                                                                                </div>
-                                                                                <br/>
-                                                                                <div id={styles.SUB_TAG}
-                                                                                     style={{
-                                                                                        position: "relative",                                                  
-                                                                                        width: "100%",
-                                                                                        height: "auto",
-                                                                                        gridArea: "SUB_MAIN"
-                                                                                        }}>
-                                                                                    <h3
-                                                                                        id={styles._H3}
-                                                                                        class="text-left ... text-stone-400 ... font-avant_garde_medium"
-                                                                                    >
-                                                                                        {" "}
-                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">
-                                                                                        The design revolution is here.
-                                                                                        </a>{" "}
-                                                                                        The world is changing and so is{" "}
-                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">
-                                                                                        architecture
-                                                                                        </a>
-                                                                                        . Discover new narratives, build better{" "}
-                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">
-                                                                                        systems
-                                                                                        </a>
-                                                                                        , make more{" "}
-                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">money</a>,
-                                                                                        be more{" "}
-                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">
-                                                                                        sustainable
-                                                                                        </a>
-                                                                                        . <br /> <br />{" "}
-                                                                                        <h1 
-                                                                                        id={styles._H1} 
-                                                                                        class="text-stone-200 ... font-avant_garde_bold">
-                                                                                        Join the Waiting List!
-                                                                                        </h1>
-                                                                                    </h3>
-                                                                                </div>
-                                                                                <br/>
-                                                                                <Subform/>
-                                                                     </div> 
-
-
-
-
-
-
-
-
-
+                                                                    
                                                                     <div id={styles.NAVIGATION}
                                                                             style={{
                                                                                 position: "relative",                                   
@@ -756,24 +684,7 @@ const Blog_page = (stories) => {
                                                                         </div>                        
                                                                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                       
-
-                                                                                                                
+                                                                                                     
                                                             </div>
                                                 </div>                                          
                                         </div>
