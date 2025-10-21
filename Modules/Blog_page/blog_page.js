@@ -504,7 +504,7 @@ const Blog_page = (stories) => {
                                         <div 
                                             style={{
                                                 position: "relative",
-                                                gridArea: "AFFILIATE",
+                                                gridArea: "NAV",
                                                 width: "100%",
                                                 height: "100%",
                                                 display: "flex",}}>
