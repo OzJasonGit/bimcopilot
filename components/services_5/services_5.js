@@ -7,6 +7,8 @@ import Collapsed_4 from "../../components/Collapse_4/collapse_4";
 import React, { Component } from 'react';
 import Link from "next/link";
 
+import {Accordion, AccordionItem} from "@heroui/react";
+
 
 
 import {Divider} from "@heroui/react";
@@ -94,6 +96,17 @@ return (
                         {/*<Divider />*/}
                         <div> 
                           <br/>
+                            <Accordion variant="light">
+                              <AccordionItem key="1" aria-label="Accordion 1" title="Accordion 1">
+                                {defaultContent}
+                              </AccordionItem>
+                              <AccordionItem key="2" aria-label="Accordion 2" title="Accordion 2">
+                                {defaultContent}
+                              </AccordionItem>
+                              <AccordionItem key="3" aria-label="Accordion 3" title="Accordion 3">
+                                {defaultContent}
+                              </AccordionItem>
+                            </Accordion>
 
                           <br/>
                         </div>
