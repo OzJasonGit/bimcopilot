@@ -308,6 +308,27 @@ const Blog_page = (stories) => {
                                                 </div>                                         
                                         </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                         <div 
                                             style={{
                                                 position: "relative",
@@ -397,6 +418,19 @@ const Blog_page = (stories) => {
                                                                                 <Subform/>
                                                                      </div>   
 
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                                      <div id={styles.AFFILIATE}                                     
                                                                             style={{
                                                                             position: "relative",                                                  
@@ -465,6 +499,207 @@ const Blog_page = (stories) => {
                                                             </div>
                                                 </div>                                          
                                         </div>
+
+
+                                        <div 
+                                            style={{
+                                                position: "relative",
+                                                gridArea: "AFFILIATE",
+                                                width: "100%",
+                                                height: "100%",
+                                                display: "flex",}}>
+                                                <div
+                                                    style={{
+                                                        position: "relative",
+                                                        top: "0px",
+                                                        width: "100%",
+                                                        height: "100%",
+                                                        left:"100vw"}}>
+
+                                                            <div
+                                                                id={styles.AFFILIATE_HOLDER}
+                                                                style={{
+                                                                    position: "sticky",
+                                                                    top: "200px",
+                                                                    width: "100%",
+                                                                    height: "auto",
+                                                                     }}> 
+
+                                                                     <div id={styles.SUBSCRIBE_HOLDER}                                                                        
+                                                                        style={{
+                                                                            position: "relative",                                                  
+                                                                            width: "100%",
+                                                                            height: "auto",
+                                                                            gridArea: "SUBSCRIBE"
+                                                                            }}>
+
+                                                                                <div id={styles.MAIN_TAG}
+                                                                                    style={{
+                                                                                        position: "relative",                                                  
+                                                                                        width: "100%",
+                                                                                        height: "auto",
+                                                                                        gridArea: "TAG_MAIN"
+                                                                                        }}>
+                                                                                    <h1
+                                                                                        id={styles._H1}
+                                                                                        
+                                                                                        class=" text-stone-200 ... font-avant_garde_bold">
+                                                                                        Sustainable, Richer Architects through AI, Analytics and
+                                                                                        Automation
+                                                                                    </h1>
+                                                                                </div>
+                                                                                <br/>
+                                                                                <div id={styles.SUB_TAG}
+                                                                                     style={{
+                                                                                        position: "relative",                                                  
+                                                                                        width: "100%",
+                                                                                        height: "auto",
+                                                                                        gridArea: "SUB_MAIN"
+                                                                                        }}>
+                                                                                    <h3
+                                                                                        id={styles._H3}
+                                                                                        class="text-left ... text-stone-400 ... font-avant_garde_medium"
+                                                                                    >
+                                                                                        {" "}
+                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">
+                                                                                        The design revolution is here.
+                                                                                        </a>{" "}
+                                                                                        The world is changing and so is{" "}
+                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">
+                                                                                        architecture
+                                                                                        </a>
+                                                                                        . Discover new narratives, build better{" "}
+                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">
+                                                                                        systems
+                                                                                        </a>
+                                                                                        , make more{" "}
+                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">money</a>,
+                                                                                        be more{" "}
+                                                                                        <a class="text-stone-200 ... font-avant_garde_bold">
+                                                                                        sustainable
+                                                                                        </a>
+                                                                                        . <br /> <br />{" "}
+                                                                                        <h1 
+                                                                                        id={styles._H1} 
+                                                                                        class="text-stone-200 ... font-avant_garde_bold">
+                                                                                        Join the Waiting List!
+                                                                                        </h1>
+                                                                                    </h3>
+                                                                                </div>
+                                                                                <br/>
+                                                                                <Subform/>
+                                                                     </div>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                     <div id={styles.AFFILIATE}                                     
+                                                                            style={{
+                                                                            position: "relative",                                                  
+                                                                            width: "100%",
+                                                                            height: "500px",
+                                                                            gridArea: "AFFILIATE"
+                                                                            }}>
+                                                                                <div class={styles.PARAGRAPH_10}
+                                                                                      style={{
+                                                                                        position: "relative",                                                  
+                                                                                        width: "100%",
+                                                                                        height: "100%",
+                                                                                        display: "block"
+                                                                                        }}>
+                                                                                        <Image
+                                                                                            className=" rounded-md ... justify-center ..."
+                                                                                            alt="Story Image"
+                                                                                            key={story._id}
+                                                                                            width={500}
+                                                                                            height={500}
+                                                                                            src={story.image}
+                                                                                            loading="lazy"
+                                                                                            placeholder="blur"
+                                                                                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                                                                                            style={{
+                                                                                                position: "absolute",
+                                                                                                width: "100%",
+                                                                                                height: "100%",
+                                                                                                objectFit: "cover",
+                                                                                        }}/>
+                                                                                </div>
+                                                                     </div>     
+
+                                                                     <div id={styles.PFBD}                                     
+                                                                            style={{
+                                                                            position: "relative",                                                  
+                                                                            width: "100%",
+                                                                            height: "400px",
+                                                                            gridArea: "PFBD"
+                                                                            }}>
+                                                                            <div class={styles.PARAGRAPH_10}
+                                                                                    style={{
+                                                                                    position: "relative",                                                  
+                                                                                    width: "100%",
+                                                                                    height: "100%",
+                                                                                    display: "block"
+                                                                                    }}>
+                                                                                    <Image
+                                                                                        className=" rounded-md ... justify-center ..."
+                                                                                        alt="Story Image"
+                                                                                        key={story._id}
+                                                                                        width={500}
+                                                                                        height={500}
+                                                                                        src={story.image}
+                                                                                        loading="lazy"
+                                                                                        placeholder="blur"
+                                                                                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                                                                                        style={{
+                                                                                            position: "absolute",
+                                                                                            width: "100%",
+                                                                                            height: "100%",
+                                                                                            objectFit: "cover",
+                                                                                    }}/>
+                                                                            </div>
+                                                                     </div>                                             
+                                                            </div>
+                                                </div>                                          
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                 </div>                     
                             </div>
                         </div>
