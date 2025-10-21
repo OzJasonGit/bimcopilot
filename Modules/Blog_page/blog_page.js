@@ -588,86 +588,11 @@ const Blog_page = (stories) => {
                                                                                 </div>
                                                                                 <br/>
                                                                                 <Subform/>
-                                                                     </div>   
+                                                                     </div> 
 
+                                                                       
 
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                     <div id={styles.AFFILIATE}                                     
-                                                                            style={{
-                                                                            position: "relative",                                                  
-                                                                            width: "100%",
-                                                                            height: "500px",
-                                                                            gridArea: "AFFILIATE"
-                                                                            }}>
-                                                                                <div class={styles.PARAGRAPH_10}
-                                                                                      style={{
-                                                                                        position: "relative",                                                  
-                                                                                        width: "100%",
-                                                                                        height: "100%",
-                                                                                        display: "block"
-                                                                                        }}>
-                                                                                        <Image
-                                                                                            className=" rounded-md ... justify-center ..."
-                                                                                            alt="Story Image"
-                                                                                            key={story._id}
-                                                                                            width={500}
-                                                                                            height={500}
-                                                                                            src={story.image}
-                                                                                            loading="lazy"
-                                                                                            placeholder="blur"
-                                                                                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                                                                                            style={{
-                                                                                                position: "absolute",
-                                                                                                width: "100%",
-                                                                                                height: "100%",
-                                                                                                objectFit: "cover",
-                                                                                        }}/>
-                                                                                </div>
-                                                                     </div>     
-
-                                                                     <div id={styles.PFBD}                                     
-                                                                            style={{
-                                                                            position: "relative",                                                  
-                                                                            width: "100%",
-                                                                            height: "400px",
-                                                                            gridArea: "PFBD"
-                                                                            }}>
-                                                                            <div class={styles.PARAGRAPH_10}
-                                                                                    style={{
-                                                                                    position: "relative",                                                  
-                                                                                    width: "100%",
-                                                                                    height: "100%",
-                                                                                    display: "block"
-                                                                                    }}>
-                                                                                    <Image
-                                                                                        className=" rounded-md ... justify-center ..."
-                                                                                        alt="Story Image"
-                                                                                        key={story._id}
-                                                                                        width={500}
-                                                                                        height={500}
-                                                                                        src={story.image}
-                                                                                        loading="lazy"
-                                                                                        placeholder="blur"
-                                                                                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                                                                                        style={{
-                                                                                            position: "absolute",
-                                                                                            width: "100%",
-                                                                                            height: "100%",
-                                                                                            objectFit: "cover",
-                                                                                    }}/>
-                                                                            </div>
-                                                                     </div>                                             
+                                                                                                                
                                                             </div>
                                                 </div>                                          
                                         </div>
