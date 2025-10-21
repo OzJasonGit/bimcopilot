@@ -117,7 +117,7 @@ return (
                                 key="2"
                                 aria-label="Accordion 2"
                                 subtitle={
-                                  <span>
+                                  <span class="text-left">
                                     Press to expand <strong>key 2</strong>
                                   </span>
                                 }
