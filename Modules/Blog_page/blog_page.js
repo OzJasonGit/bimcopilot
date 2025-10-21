@@ -590,6 +590,187 @@ const Blog_page = (stories) => {
                                                                                 <Subform/>
                                                                      </div> 
 
+
+
+
+
+
+
+
+
+                                                                    <div id={styles.NAVIGATION}
+                                                                            style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "100%",   
+                                                                                maxHeight: "0",                                                                  
+                                                                                }}>  
+                                                                        <div className={styles.PARAGRAPH_1}
+                                                                                style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "auto",
+                                                                                gridArea: "1"                                                                            
+                                                                                }}>
+                                                                            <p
+                                                                                id={styles._H4}
+                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                                {parse(story.body1_title || "")}
+                                                                                testing some text 1 
+                                                                            </p>
+                                                                        </div>  
+
+                                                                        <div className={styles.PARAGRAPH_2}
+                                                                                style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "auto",
+                                                                                gridArea: "2"                                                                            
+                                                                                }}>
+                                                                            <p
+                                                                                id={styles._H4}
+                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                                {parse(story.body1_title || "")}
+                                                                                testing some text 2
+                                                                            </p>
+                                                                        </div>   
+
+                                                                        <div className={styles.PARAGRAPH_3}
+                                                                                style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "auto",
+                                                                                gridArea: "3"                                                                            
+                                                                                }}>
+                                                                            <p
+                                                                                id={styles._H4}
+                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                                {parse(story.body1_title || "")}
+                                                                                testing some text 3
+                                                                            </p>
+                                                                        </div>  
+
+                                                                        <div className={styles.PARAGRAPH_4}
+                                                                                style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "auto",
+                                                                                gridArea: "4"                                                                            
+                                                                                }}>
+                                                                            <p
+                                                                                id={styles._H4}
+                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                                {parse(story.body1_title || "")}
+                                                                                testing some text 4
+                                                                            </p>
+                                                                        </div>     
+
+                                                                        <div className={styles.PARAGRAPH_5}
+                                                                                style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "auto",
+                                                                                gridArea: "5"                                                                            
+                                                                                }}>
+                                                                            <p
+                                                                                id={styles._H4}
+                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                                {parse(story.body1_title || "")}
+                                                                                testing some text 5
+                                                                            </p>
+                                                                        </div>   
+
+                                                                        <div className={styles.PARAGRAPH_6}
+                                                                                style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "auto",
+                                                                                gridArea: "6"                                                                            
+                                                                                }}>
+                                                                            <p
+                                                                                id={styles._H4}
+                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                                {parse(story.body1_title || "")}
+                                                                                testing some text 6
+                                                                            </p>
+                                                                        </div>   
+
+                                                                        <div className={styles.PARAGRAPH_7}
+                                                                                style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "auto",
+                                                                                gridArea: "7"                                                                            
+                                                                                }}>
+                                                                            <p
+                                                                                id={styles._H4}
+                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                                {parse(story.body1_title || "")}
+                                                                                testing some text 7
+                                                                            </p>
+                                                                        </div>      
+
+                                                                        <div className={styles.PARAGRAPH_8}
+                                                                                style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "auto",
+                                                                                gridArea: "8"                                                                            
+                                                                                }}>
+                                                                            <p
+                                                                                id={styles._H4}
+                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                                {parse(story.body1_title || "")}
+                                                                                testing some text 8
+                                                                            </p>
+                                                                        </div>    
+
+                                                                        <div className={styles.PARAGRAPH_9}
+                                                                                style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "auto",
+                                                                                gridArea: "9"                                                                            
+                                                                                }}>
+                                                                            <p
+                                                                                id={styles._H4}
+                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                                {parse(story.body1_title || "")}
+                                                                                testing some text 9
+                                                                            </p>
+                                                                        </div>  
+
+                                                                        <div className={styles.PARAGRAPH_10}
+                                                                                style={{
+                                                                                position: "relative",                                   
+                                                                                width: "100%",
+                                                                                height: "auto",
+                                                                                gridArea: "10"                                                                            
+                                                                                }}>
+                                                                            <p
+                                                                                id={styles._H4}
+                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                                {parse(story.body1_title || "")}
+                                                                                testing some text 10
+                                                                            </p>
+                                                                        </div>                        
+                                                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                                                        
 
                                                                                                                 
