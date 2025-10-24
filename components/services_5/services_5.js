@@ -104,7 +104,7 @@ return (
                         {/*<Divider />*/}
                         <div> 
                           <br/>
-                            <Accordion>
+                            <Accordion variant="shadow">
                               <AccordionItem
                                 key="1"
                                 aria-label="Accordion 1"
@@ -113,7 +113,7 @@ return (
                               >
                                 {defaultContent}
                               </AccordionItem>
-                              <AccordionItem
+                              <AccordionItem class=""
                                 key="2"
                                 aria-label="Accordion 2"
                                 subtitle={
