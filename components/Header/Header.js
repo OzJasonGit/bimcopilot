@@ -153,11 +153,14 @@ export default function Header() {
                               justifyItems: "center",
                               alignItems: "center",
                               objectFit: "contain",
+                              left:"-7.5px"
                             }}
                           />
                         </div>
                       </Link>
               </div>
+
+
 
               {/* shadCN Navigation Menu */}
               <div className="content-center ..." 
@@ -169,6 +172,8 @@ export default function Header() {
                           }}>
                 <ShadCN_Header/>
               </div>
+
+
 
               {/* Time and Date */}
               <div className="content-center ..." id={styles.TIME}>
@@ -182,11 +187,8 @@ export default function Header() {
 
 
 
-
-
-
               {/* Sign In/Sign Up or User Dropdown */}
-              <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "100%" }}>
+              <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} style={{ gridArea: "SIGN_IN", position: "relative", height: "100%", width: "100%" }}>
                 <div className="flex justify-end ..." id={styles.SIGNUP_RIGHT} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "200px", left: "4.5px" }}>
                   {isAuthenticated ? (
                     <div className="relative left-[8px]" ref={dropdownRef}>
