@@ -256,7 +256,7 @@
   max-width: 1520px;
   background-color: #171717;
   display: grid;
-  grid-row-gap: 40px;
+  grid-row-gap: 0px;
   grid-template-rows: auto;
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
   grid-template-areas: ". . . MAIN_AREA . . .";
