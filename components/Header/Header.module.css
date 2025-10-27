@@ -290,11 +290,11 @@
   display: grid;
   grid-row-gap: 0;
   grid-column-gap: 40px;
-  grid-template-columns: 50px auto 30px auto auto;
+  grid-template-columns: 50px auto 30px auto auto auto;
   grid-template-rows: auto auto;
   grid-template-areas:
-    "LOGO_HOLDER MENU . TIME MENU_BUTTON"
-    ". . . . SIGN_IN";
+    "LOGO_HOLDER MENU . TIME FAV_BUTTON SIGN_IN"
+    ". . . . . .";
 }
 
 

@@ -183,9 +183,17 @@ export default function Header() {
               </div>
 
               {/* Basket and Favorites */}
-
-
-
+              <div className="flex items-center gap-2" style={{ gridArea: "FAV_BUTTON", position: "relative", alignItems: "center", display: "flex" }}>
+                <button
+                  className="flex items-center justify-center p-2 hover:text-emerald-400 transition-colors duration-200"
+                  aria-label="Favorites"
+                >
+                  <FontAwesomeIcon
+                    icon={faHeart}
+                    className="text-slate-50 w-6 h-6 hover:text-emerald-400"
+                  />
+                </button>
+              </div>
 
               {/* Sign In/Sign Up or User Dropdown */}
               <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} style={{ gridArea: "SIGN_IN", position: "relative", height: "100%", width: "100%" }}>
