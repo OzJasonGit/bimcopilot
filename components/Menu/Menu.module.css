@@ -1248,13 +1248,16 @@
 
         #BUTTON_HOLDER_RIGHT {
             grid-area: MENU_BUTTON;
+            max-width: max-content;
+            left: 70%;
+            top: 25px;
             position: relative;
             display: grid;
             grid-row-gap: 10px;
             grid-column-gap: 20px;
             grid-template-rows: auto;
-            grid-template-columns: 1fr auto auto auto;
-            grid-template-areas: " . FAVOURITES BASKET BURGER";
+            grid-template-columns: auto  auto auto;
+            grid-template-areas: " FAVOURITES BASKET BURGER";
         }
     
     

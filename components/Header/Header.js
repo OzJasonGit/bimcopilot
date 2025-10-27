@@ -183,17 +183,25 @@ export default function Header() {
               </div>
 
               {/* Basket and Favorites */}
-              <div className="flex items-center gap-2" style={{ gridArea: "FAV_BUTTON", position: "relative", alignItems: "center", display: "flex" }}>
-                <button
-                  className="flex items-center justify-center p-2 hover:text-emerald-400 transition-colors duration-200"
-                  aria-label="Favorites"
-                >
-                  <FontAwesomeIcon
-                    icon={faHeart}
-                    className="text-slate-50 w-6 h-6 hover:text-emerald-400"
+              {/* <div className="flex items-center gap-4" style={{ gridArea: "MENU_BUTTON", position: "relative" }}>
+                <Link href="/cart" className="cursor-pointer">
+                  <FontAwesomeIcon 
+                    icon={faHeart} 
+                    size="lg" 
+                    className="text-stone-50 hover:text-red-500 transition-colors duration-300" 
                   />
-                </button>
-              </div>
+                </Link>
+                <Link href="/cart" className="cursor-pointer">
+                  <FontAwesomeIcon 
+                    icon={faCartShopping} 
+                    size="lg" 
+                    className="text-stone-50 hover:text-emerald-400 transition-colors duration-300" 
+                  />
+                </Link>
+              </div> */}
+
+
+
 
               {/* Sign In/Sign Up or User Dropdown */}
               <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} style={{ gridArea: "SIGN_IN", position: "relative", height: "100%", width: "100%" }}>
