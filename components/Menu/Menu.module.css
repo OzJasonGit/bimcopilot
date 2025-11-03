@@ -866,6 +866,20 @@
             z-index: 80;
             /*margin-top: -65px;*/
         }
+
+
+
+        #HEADER {
+            top: 110px;
+            max-width: 1520px;
+            display: grid;
+            grid-column-gap: 20px;
+            grid-row-gap: 40px;
+            grid-template-rows: auto;
+            grid-template-columns: 20px 1fr 20px;
+            grid-template-areas: "BANNER-1 MAIN_AREA BANNER-2 ";
+            z-index: 80;
+        }
     
     
         .burger_dot {
