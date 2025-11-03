@@ -852,8 +852,8 @@
     }
   
     #NAV_MENU {
-      grid-area: MENU;
-      display: grid;
+     
+      display: "grid";
       width: 100%;
       max-width: 600px;
       justify-self: right;

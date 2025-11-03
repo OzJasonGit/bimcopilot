@@ -167,8 +167,7 @@ export default function Header() {
                    id={styles.NAV_MENU}
 
                    style={{ 
-                          gridArea:"MENU",
-                          display: "flex", 
+                          gridArea:"MENU",                         
                           alignItems: "center", 
                           justifyContent: "center" 
                           }}>
