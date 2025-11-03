@@ -183,6 +183,22 @@ export default function Header() {
               </div>
 
               {/* Basket and Favorites */}
+              {/* <div className="flex items-center gap-4" style={{ gridArea: "MENU_BUTTON", position: "relative" }}>
+                <Link href="/cart" className="cursor-pointer">
+                  <FontAwesomeIcon 
+                    icon={faHeart} 
+                    size="lg" 
+                    className="text-stone-50 hover:text-red-500 transition-colors duration-300" 
+                  />
+                </Link>
+                <Link href="/cart" className="cursor-pointer">
+                  <FontAwesomeIcon 
+                    icon={faCartShopping} 
+                    size="lg" 
+                    className="text-stone-50 hover:text-emerald-400 transition-colors duration-300" 
+                  />
+                </Link>
+              </div> */}
 
 
 

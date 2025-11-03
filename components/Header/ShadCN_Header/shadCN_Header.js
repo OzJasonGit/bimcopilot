@@ -104,25 +104,6 @@ export function ShadCN_Header() {
                 boxShadow: 'none !important'
               }}
             >
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              
               Dashboard
             </NavigationMenuTrigger>
             <NavigationMenuContent className="bg-stone-900 border-stone-700">
@@ -180,7 +161,6 @@ export function ShadCN_Header() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-     
         </NavigationMenuList>
       </NavigationMenu>
     </div>
