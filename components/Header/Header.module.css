@@ -1195,88 +1195,155 @@
 /* ---------------------------------------------------------------------------------------*/
 @media all and (min-width: 0px) and (max-width: 480px) {
   .center_holder {
-    width: 100%;
-    display: none;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: rgb(245 245 244);
-    margin: 0;
-  }
-
-  .container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    border-radius: 1.5px;
-  }
-
-  #header {
-    position: fixed;
-    width: 100%;
-    top: 0px;
-    height: 65px;
-    max-width: 100%;
-    background-color: #171717;
-    display: grid;
-    grid-row-gap: 40px;
-    grid-template-rows: auto;
-    grid-template-columns: 20px 0px 0px 1fr 0px 0px 20px;
-    grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
-    z-index: 80;
-  }
-
-
-
-  #TIME {
-    grid-area: TIME;
-    position: relative;
-    display: none;
-    width: 100%;
-
-    min-width: 200px;
-    justify-self: right;
-    grid-template-columns: 1fr 1.5px 1.5fr;
-    grid-template-rows: 0px auto 0px;
-    grid-template-areas:
-      " . . ."
-      " CLOCK B1 HOME"
-      " . . .";
-    background: transparent;
-    top: 2.5px;
-  }
-
-  #FIXED_HEADER {
-    grid-area: MAIN-AREA;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-column-gap: 20px;
-    grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0px auto 0px;
-    grid-template-areas:
-      ". . . . . . . . . . . . ."
-      "LOGO_HOLDER . SIGN_IN SIGN_IN SIGN_IN SIGN_IN SIGN_IN SIGN_IN . . MENU MENU-BUTTON MENU-BUTTON"
-      ". . . . . . . . . . . . .";
-  }
-
-  #NAV_MENU {
-    display: none;
-  }
-
-  #LOGO_LINK {
-    grid-area: LOGO;
-    display: grid;
-    grid-template-rows: 5px auto 5px;
-    grid-template-columns: 1fr 5px 5px;
-    width: 100%;
-    height: 100%;
-    grid-template-areas:
-      ". . ."
-      "LOGO . ."
-      ". . .";
-  }
+      width: 100%;
+      display: flex;
+  
+      -webkit-box-pack: center;
+      justify-content: center;
+      background-color: rgb(245 245 244);
+      margin: 0;
+    }
+  
+    .container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      -webkit-box-pack: center;
+      justify-content: center;
+      border-radius: 1.5px;
+    }
+  
+    #header {
+      position: fixed;
+      width: 100%;
+      top: 0px;
+      height: 65px;
+      max-width: 960px;
+      background-color: transparent;
+      display: grid;
+      grid-row-gap: 40px;
+      grid-template-rows: auto;
+      grid-template-columns: 30px 0px 0px 1fr 0px 0px 30px;
+      grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+      z-index: 80;
+    }
+  
+  
+  
+    #HEADER {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      height: auto;
+      max-width: 1520px;
+      background-color: #171717;
+      display: grid;
+      grid-row-gap: 0;
+      grid-template-rows: auto;
+      grid-template-columns: 30px 1fr 30px;
+      grid-template-areas: ". MAIN_AREA .";
+      z-index: 80;
+      padding: 15px 0;
+    }
+  
+  
+  
+  
+  
+    #FIXED_HEADER {
+      grid-area: MAIN_AREA;
+      display: grid;
+      grid-row-gap: 0;
+      grid-column-gap: 20px;
+      grid-template-columns: 60px 1fr 60px;
+      grid-template-rows: 0 auto 0;
+      grid-template-areas:
+        ". . ."
+        "LOGO_HOLDER . ."
+        ". . .";
+    }
+  
+  
+  
+    #BASKET_CONTAINER {
+      grid-area: MENU_BUTTON;
+      display: grid;
+      grid-row-gap: 0px;
+      grid-column-gap: 0px;
+      grid-template-columns: 1fr 22.5px 20px 22.5px 20px 22.5px;
+      grid-template-rows: 0px auto 7.5px;
+      grid-template-areas:
+        " . . . . . ."
+        " . FAVOURITE . BASKET . BURGER"
+        " . . . . . .";
+    }
+  
+    #TIME {
+      grid-area: TIME;
+      width: 100%;
+      display: none;
+    }
+  
+    #NAV_MENU {
+      grid-area: MENU;
+      display: none;
+    }
+  
+    #SIGNUP_CONTAINER {
+      grid-area: SIGN_IN;
+      display: none;
+    }
+  
+    #COPILOT_HOLDER {
+      position: relative;
+      display: grid;
+      grid-area: COPILOT;
+      height: 100%;
+      width: 100%;
+      grid-template-columns: 10px 1fr 10px;
+      grid-template-rows: 10px auto 10px;
+      grid-column-gap: 10px;
+      grid-template-areas:
+        " . . ."
+        " . COPILOT ."
+        " . . .";
+      top: -17.75px;
+      left: 50px;
+    }
+  
+    #COPILOT {
+      position: relative;
+      height: 42.5px;
+      width: 100%;
+      grid-area: COPILOT;
+    }
+  
+    .burger_dot {
+      border-radius: 100%;
+      background-color: #171717;
+    }
+  
+    #HEADER_MENU_1 {
+      height: 100%;
+      grid-area: AREA;
+      background-color: #171717;
+    }
+  
+  
+  
+    #LOGO {
+      position: relative;
+      grid-area: LOGO;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: -2.5px;
+    }
+  
+    #SIGNUP_CONTAINER {
+      left: -160px;
+    }
 }
 
 /* ---------------------------------------------------------------------------------------*/

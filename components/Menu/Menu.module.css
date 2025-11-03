@@ -1929,362 +1929,331 @@
 @media all and (min-width: 0px) and (max-width: 480px) {
 
     #DRAWER_LEFT {
-
-        height: 100%;
-        z-index: 800000000000000000000000000000000000000000000000;
-        width: 70vw;
-    }
-
-
-
-    .center_holder {
-        width: 100%;
-        display: flex;
-
-        -webkit-box-pack: center;
-        justify-content: center;
-        background-color: aliceblue;
-        margin: 0;
-    }
-
-
-    .container {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        -webkit-box-pack: center;
-        justify-content: center;
-        border-radius: 1.5px;
-    }
-
-
-    .container_2 {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        justify-content: left;
-    }
-
-
-    .container_right {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        justify-content: right;
-        align-items: center;
-    }
-
-
-
-    .hidebar {
-        position: fixed;
-        width: 100%;
-        max-width: 1760px;
-        height: 20px;
-        background-color: aliceblue;
-        z-index: 100;
-    }
-
-
-    #header {
-        position: fixed;
-        width: 100%;
-        top: 0px;
-        height: 65px;
-        max-width: 100%;
-        background-color: transparent;
-        display: grid;
-        grid-row-gap: 40px;
-        grid-template-rows: auto;
-        grid-template-columns: 20px 0px 0px 1fr 0px 0px 20px;
-        grid-template-areas:
-            ". MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA .";
-        z-index: 80;
-    }
-
-
-
-
-    .burger_dot {
-        border-radius: 100%;
-        background-color: #151515;
-
-    }
-
-
-
-    #FIXED_HEADER {
-        grid-area: MAIN-AREA;
-        display: grid;
-        grid-row-gap: 0px;
-        grid-column-gap: 20px;
-        grid-template-columns: 45px 1fr 250px;
-        grid-template-rows: 0px auto 0px;
-        grid-template-areas:
-            " . . ."
-            "LOGO_HOLDER .  MENU-BUTTON"
-            " . . .";
-    }
-
-
-    #NAV_MENU {
-        display: none;
-    }
-
-
-
-
-
-
-
-    #LOGO_LINK {
-        grid-area: LOGO;
-        display: grid;
-        grid-template-rows: 5px auto 5px;
-        grid-template-columns: 1fr 5px 5px;
-        width: 100%;
-        height: 100%;
-        grid-template-areas: ". . ."
-            "LOGO . ."
-            ". . .";
-    }
-
-
-    #LOGO_MOB {
-        grid-area: LOGO_HOLDER;
-        width: 100%;
-        height: 100%;
-        top: 175px;
-    }
-
-
-
-
-
-
-
-
-    #LOGO {
-        grid-area: LOGO;
-        width: 100%;
-        height: 100%;
-    }
-
-
-    #BUTTON_HOLDER_LEFT {
-        grid-area: DATE-HOLDER;
-        display: grid;
-
-        grid-row-gap: 15px;
-        grid-column-gap: 20px;
-        grid-template-rows: 5px auto 10px;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "."
-            "AREA"
-            ".";
-    }
-
-
-
-
-
-    #BUTTON_HOLDER_RIGHT {
-        grid-area: MENU-BUTTON;
-        display: grid;
-        grid-row-gap: 5px;
-        grid-column-gap: 20px;
-        grid-template-rows: 10px auto 10px;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "."
-            "AREA"
-            ".";
-        margin-top: 5px;
-    }
-
-
-
-
-
-
-
-    #B_H_2 {
-        grid-area: BURGER;
-        width: 100%;
-        height: 100%;
-    }
-
-    #BURGER_CONTAINER {
-        display: grid;
-        align-items: flex-end;
-        justify-content: right;
-        width: 100%;
-        height: 100%;
-        grid-area: AREA;
-
-    }
-
-
-
-    #BURGER_MENU {
-        grid-area: AREA;
-    }
-
-
-    #BURGER {
-        grid-area: BURGER;
-    }
-
-
-
-
-    #CLOCK_HOLDER {
-        grid-area: CLOCK-HOLDER;
-        display: grid;
-        grid-template-rows: 15px auto 15px;
-        grid-template-columns: 15px 1fr 15px;
-        grid-template-areas:
-            " . . ."
-            "AREA AREA ."
-            ". . .";
-    }
-
-
-
-
-    #EMPTY {
-        grid-area: EMPTY;
-        display: grid;
-        grid-template-rows: 5px auto 5px;
-        grid-template-columns: 10px 1fr 10px;
-        background-color: #151515;
-        grid-template-areas:
-            " . . ."
-            ". AREA ."
-            ". . .";
-    }
-
-
-    #DATE_CLOCK {
-        grid-area: DATE-HOLDER;
-        display: grid;
-        grid-template-rows: 5px 80px 5px;
-        grid-template-columns: 80px 1fr;
-
-        grid-template-areas:
-            ". ."
-            "LOGO ."
-            ". .";
-    }
-
-    #PFBD_RIGHT_DATE {
-        grid-area: DATE;
-    }
-
-
-    #PFBD_RIGHT_CLOCK {
-        grid-area: CLOCK;
-    }
-
-
-
-
-    #CLOCK {
-
-        padding-top: 0px;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 1rem;
-        color: #151515;
-        text-align: left;
-    }
-
-
-    #DATE {
-
-        padding-top: 0px;
-        padding-bottom: 0px;
-        font-weight: 700;
-        font-style: normal;
-        font-size: 1rem;
-        color: #151515;
-        text-align: left;
-    }
-
-
-
-
-    /*BURGER------------------------------------------------------------------------------*/
-    #burger_test_1 #burger_test_2::before {
-        top: -7px;
-    }
-
-    #burger_test_1 #burger_test_2::after {
-        bottom: -7px;
-    }
-
-    #burger_test_1:hover #burger_test_2::before {
-        top: -10px;
-    }
-
-    #burger_test_1:hover #burge_test_2::after {
-        bottom: -10px;
-    }
-
-    #burger_test_1.active #burger_test_2 {
-        background-color: aliceblue;
-    }
-
-    #burger_test_1.active #burger_test_2::before {
-        top: 0;
-        -webkit-transform: rotateZ(45deg);
-        -moz-transform: rotateZ(45deg);
-        -ms-transform: rotateZ(45deg);
-        -o-transform: rotateZ(45deg);
-        transform: rotateZ(45deg);
-    }
-
-    #burger_test_1.active #burger_test_2::after {
-        bottom: 0;
-        -webkit-transform: rotateZ(-45deg);
-        -moz-transform: rotateZ(-45deg);
-        -ms-transform: rotateZ(-45deg);
-        -o-transform: rotateZ(-45deg);
-        transform: rotateZ(-45deg);
-    }
-
-
-
-    /* Button placement */
-    #burger_test_1 {
-        position: absolute;
-        left: 100%;
-        margin-left: -18px;
-    }
-
-
-    .DRAWER_CSS {
-        width: 250PX;
-
-    }
-
-
-
-    #TIME {
-        display: none;
-    }
+            height: 100%;
+            z-index: 800000000000000000000000000000000000000000000000;
+        }
     
-
-    #CART_HOLDER {
-        position: relative;
-        left: -120px;
-        top: 0.5px;
-    }
-
+    
+        .center_holder {
+            width: 100%;
+            display: flex;
+    
+            -webkit-box-pack: center;
+            justify-content: center;
+            background-color: aliceblue;
+            margin: 0;
+        }
+    
+    
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            border-radius: 1.5px;
+        }
+    
+    
+        .container_2 {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: left;
+        }
+    
+    
+        .container_right {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+    
+    
+    
+        .hidebar {
+            position: fixed;
+            width: 100%;
+            max-width: 960px;
+            height: 20px;
+            background-color: aliceblue;
+            z-index: 100;
+        }
+    
+    
+        #header {
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            height: 65px;
+            max-width: 960px;
+            background-color: transparent;
+            display: grid;
+            grid-row-gap: 40px;
+            grid-template-rows: auto;
+            grid-template-columns: 30px 0px 0px 1fr 0px 0px 30px;
+            grid-template-areas:
+                ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+            z-index: 80;
+        }
+    
+    
+    
+    
+        .burger_dot {
+            border-radius: 100%;
+            background-color: #151515;
+    
+        }
+    
+    
+    
+        #HEADER {
+            top: 110px;
+            max-width: 1520px;
+            display: grid;
+            grid-row-gap: 40px;
+            grid-template-rows: auto;
+            grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+            grid-template-areas: ". BANNER-1 . MAIN_AREA . BANNER-2 .";
+            z-index: 80;
+        }
+    
+    
+    
+    
+    
+        #FIXED_HEADER {
+            grid-area: MAIN_AREA;
+            display: grid;
+            grid-row-gap: 0;
+            grid-column-gap: 20px;
+            grid-template-columns: 60px 1fr 60px;
+            grid-template-rows: 0 auto 0;
+            grid-template-areas:
+                ". . ."
+                "LOGO_HOLDER . MENU_BUTTON "
+                ". . .";
+            margin-top: -204.5px;
+        }
+    
+    
+    
+    
+        #BUTTON_HOLDER_LEFT {
+            grid-area: DATE-HOLDER;
+            display: grid;
+    
+            grid-row-gap: 15px;
+            grid-column-gap: 20px;
+            grid-template-rows: 5px auto 10px;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "."
+                "AREA"
+                ".";
+        }
+    
+    
+    
+    
+    
+        #BUTTON_HOLDER_RIGHT {
+            grid-area: MENU-BUTTON;
+            display: grid;
+            grid-row-gap: 5px;
+            grid-column-gap: 20px;
+            grid-template-rows: 10px auto 10px;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "."
+                "AREA"
+                ".";
+            top: 47px;
+        }
+    
+    
+        #HEADER_MENU_1 {
+            height: 100%;
+            grid-area: AREA;
+            background-color: #151515;
+        }
+    
+    
+        #HEADER_MENU_2 {
+            grid-area: AREA;
+            display: grid;
+            grid-template-rows: 5px auto 5px;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "  ."
+                "BURGER"
+                " .";
+        }
+    
+        #B_H_2 {
+            grid-area: BURGER;
+            width: 100%;
+            height: 100%;
+        }
+    
+        #BURGER_CONTAINER {
+            display: grid;
+            align-items: flex-end;
+            justify-content: right;
+            width: 100%;
+            height: 100%;
+            grid-area: AREA;
+    
+        }
+    
+    
+    
+        #BURGER_MENU {
+            grid-area: AREA;
+        }
+    
+    
+        #BURGER {
+            grid-area: BURGER;
+        }
+    
+    
+    
+    
+        #CLOCK_HOLDER {
+            grid-area: CLOCK-HOLDER;
+            display: grid;
+            grid-template-rows: 15px auto 15px;
+            grid-template-columns: 15px 1fr 15px;
+            grid-template-areas:
+                " . . ."
+                "AREA AREA ."
+                ". . .";
+        }
+    
+    
+    
+    
+        #EMPTY {
+            grid-area: EMPTY;
+            display: grid;
+            grid-template-rows: 5px auto 5px;
+            grid-template-columns: 10px 1fr 10px;
+            background-color: #151515;
+            grid-template-areas:
+                " . . ."
+                ". AREA ."
+                ". . .";
+        }
+    
+    
+        #DATE_CLOCK {
+            grid-area: DATE-HOLDER;
+            display: grid;
+            grid-template-rows: 5px 80px 5px;
+            grid-template-columns: 80px 1fr;
+    
+            grid-template-areas:
+                ". ."
+                "LOGO ."
+                ". .";
+        }
+    
+        #PFBD_RIGHT_DATE {
+            grid-area: DATE;
+        }
+    
+    
+        #PFBD_RIGHT_CLOCK {
+            grid-area: CLOCK;
+        }
+    
+    
+    
+    
+        #CLOCK {
+    
+            padding-top: 0px;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
+            color: #151515;
+            text-align: left;
+        }
+    
+    
+        #DATE {
+    
+            padding-top: 0px;
+            padding-bottom: 0px;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 1rem;
+            color: #151515;
+            text-align: left;
+        }
+    
+    
+    
+    
+        /*BURGER------------------------------------------------------------------------------*/
+        #burger_test_1 #burger_test_2::before {
+            top: -7px;
+        }
+    
+        #burger_test_1 #burger_test_2::after {
+            bottom: -7px;
+        }
+    
+        #burger_test_1:hover #burger_test_2::before {
+            top: -10px;
+        }
+    
+        #burger_test_1:hover #burger_test_2::after {
+            bottom: -10px;
+        }
+    
+        #burger_test_1.active #burger_test_2 {
+            background-color: aliceblue;
+        }
+    
+        #burger_test_1.active #burger_test_2::before {
+            top: 0;
+            -webkit-transform: rotateZ(45deg);
+            -moz-transform: rotateZ(45deg);
+            -ms-transform: rotateZ(45deg);
+            -o-transform: rotateZ(45deg);
+            transform: rotateZ(45deg);
+        }
+    
+        #burger_test_1.active #burger_test_2::after {
+            bottom: 0;
+            -webkit-transform: rotateZ(-45deg);
+            -moz-transform: rotateZ(-45deg);
+            -ms-transform: rotateZ(-45deg);
+            -o-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+        }
+    
+    
+    
+        /* Button placement */
+        #burger_test_1 {
+            position: absolute;
+            left: 100%;
+            margin-left: -18px;
+        }
+    
+    
+        #TIME {
+            display: none;
+        }
 }
 
 /* ---------------------------------------------------------------------------------------*/
