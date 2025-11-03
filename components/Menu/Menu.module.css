@@ -1593,17 +1593,33 @@
     }
 
 
-    #FIXED_HEADER {
-        grid-area: MAIN-AREA;
+
+    #HEADER {
+        top: 110px;
+        max-width: 1520px;
         display: grid;
-        grid-row-gap: 0px;
+        grid-row-gap: 40px;
+        grid-template-rows: auto;
+        grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+        grid-template-areas: ". BANNER-1 . MAIN_AREA . BANNER-2 .";
+        z-index: 80;
+    }
+
+
+   
+
+
+    #FIXED_HEADER {
+        grid-area: MAIN_AREA;
+        display: grid;
+        grid-row-gap: 0;
         grid-column-gap: 20px;
-        grid-template-columns: 60px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 0px auto 0px;
+        grid-template-columns: 60px 1fr 60px;
+        grid-template-rows: 0 auto 0;
         grid-template-areas:
-            ". . . . . . . . . . . . ."
-            "LOGO_HOLDER SIGN_IN SIGN_IN SIGN_IN SIGN_IN . . MENU_BUTTON MENU_BUTTON MENU_BUTTON . . . "
-            ". . . . . . . . . . . . .";
+            ". . ."
+            "LOGO_HOLDER . MENU_BUTTON "
+            ". . .";
         margin-top: -204.5px;
     }
 
