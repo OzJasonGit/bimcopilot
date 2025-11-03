@@ -1083,8 +1083,7 @@
   #TIME {
     grid-area: TIME;
     width: 100%;
-
-   
+    display: none;
   }
 
   #NAV_MENU {
@@ -1092,7 +1091,7 @@
     display: none;
   }
 
-  #SIGNUP {
+  #SIGNUP_CONTAINER {
     grid-area: SIGN_IN;
     display: none;
   }

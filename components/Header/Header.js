@@ -164,6 +164,8 @@ export default function Header() {
 
               {/* shadCN Navigation Menu */}
               <div className="content-center ..." 
+                   id={styles.NAV_MENU}
+
                    style={{ 
                           gridArea:"MENU",
                           display: "flex", 
@@ -174,33 +176,12 @@ export default function Header() {
               </div>
 
 
-
               {/* Time and Date */}
               <div className="content-center ..." id={styles.TIME}>
                 <Clock />
                 <div className="bg-zinc-500 ..." id={styles.B1}></div>
                 <DateComponent />
               </div>
-
-              {/* Basket and Favorites */}
-              {/* <div className="flex items-center gap-4" style={{ gridArea: "MENU_BUTTON", position: "relative" }}>
-                <Link href="/cart" className="cursor-pointer">
-                  <FontAwesomeIcon 
-                    icon={faHeart} 
-                    size="lg" 
-                    className="text-stone-50 hover:text-red-500 transition-colors duration-300" 
-                  />
-                </Link>
-                <Link href="/cart" className="cursor-pointer">
-                  <FontAwesomeIcon 
-                    icon={faCartShopping} 
-                    size="lg" 
-                    className="text-stone-50 hover:text-emerald-400 transition-colors duration-300" 
-                  />
-                </Link>
-              </div> */}
-
-
 
 
               {/* Sign In/Sign Up or User Dropdown */}
