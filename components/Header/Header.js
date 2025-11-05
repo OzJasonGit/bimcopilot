@@ -169,7 +169,9 @@ export default function Header() {
                    style={{ 
                           gridArea:"MENU",                         
                           alignItems: "center", 
-                          justifyContent: "center" 
+                          justifyContent: "center", 
+                          position: "relative",
+                          top: "5.5px"
                           }}>
                 <ShadCN_Header/>
               </div>

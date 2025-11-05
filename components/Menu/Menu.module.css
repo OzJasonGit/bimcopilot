@@ -1606,6 +1606,18 @@
     }
 
 
+#HEADER {
+    top: 110px;
+    max-width: 1520px;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 30px 1fr 30px;
+    grid-template-areas: ". MAIN_AREA .";
+    z-index: 80;
+}
+
+
    
 
 
