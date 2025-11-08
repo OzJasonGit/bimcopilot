@@ -330,7 +330,7 @@
 
 
 #SIGNUP_AND_BASKET {
-  grid-area: LOGO_AND_TIME;
+  grid-area: SIGNIN_AND_BASKET;
     display: grid;
     grid-row-gap: 0px;
     grid-column-gap: 0px;
@@ -381,7 +381,7 @@
 
 
 #TIME {
-  grid-area: TIME;
+  grid-area: LOGO_AND_TIME;
   position: relative;
   display: grid;
   width: 100%;
