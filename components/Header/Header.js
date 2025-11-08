@@ -115,6 +115,9 @@ export default function Header() {
 
   return (
     <>
+      
+
+
       <section id={styles.SHADOW_SECTION} className={styles.center_holder}>
         <div className={styles.HEADER_HOLDER}>
 
@@ -122,14 +125,17 @@ export default function Header() {
 
           <div id={styles.HEADER}>
 
-            <header id={styles.FIXED_HEADER}>
+            <header id={styles.FIXED_HEADER_2}>
 
-              {/* Logo */}
-              <div 
+              {/* Logo & Time */}
+              <div id={styles.LOGO_AND_TIME}>
+
+                {/* Logo */}
+                <div id={styles.LOGO_2}
                    styles={{
                       height:'auto',
                       padding:'12px',
-                      gridArea:'LOGO_HOLDER',
+                      gridArea:'LOGO',
                       justifyItems:'center',
                       width:'100%',
                       position:'relative',
@@ -158,7 +164,18 @@ export default function Header() {
                           />
                         </div>
                       </Link>
+                </div>
+
+                {/* Time and Date */}
+                <div className="content-center ..." id={styles.TIME}>
+                  <Clock />
+                  <div className="bg-zinc-500 ..." id={styles.B1}></div>
+                  <DateComponent />
+                </div>
+
               </div>
+              
+              
 
 
 
@@ -177,12 +194,7 @@ export default function Header() {
               </div>
 
 
-              {/* Time and Date */}
-              <div className="content-center ..." id={styles.TIME}>
-                <Clock />
-                <div className="bg-zinc-500 ..." id={styles.B1}></div>
-                <DateComponent />
-              </div>
+              
 
 
               {/* Sign In/Sign Up or User Dropdown */}
@@ -254,16 +266,11 @@ export default function Header() {
                     </div>
                   )}
                 </div>
-              </div>
-              
-
-              
+              </div>                       
 
             </header>
 
           </div>
-
-
 
         </div>
       </section>
