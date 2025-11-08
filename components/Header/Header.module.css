@@ -308,8 +308,8 @@
   grid-template-rows: auto 20px auto;
   grid-template-areas:
     "LOGO_AND_TIME . . MENU . . SIGNIN_AND_BASKET"
-    "LOGO_AND_TIME . . MENU . . SIGNIN_AND_BASKET"
-    "LOGO_AND_TIME . . MENU . . SIGNIN_AND_BASKET";
+    "LOGO_AND_TIME . . . . . SIGNIN_AND_BASKET"
+    "LOGO_AND_TIME . . . . . SIGNIN_AND_BASKET";
 }
 
 
@@ -325,7 +325,21 @@
       "LOGO . . "
       ". . ."
       "LOGO_AND_TIME LOGO_AND_TIME .";
+}
 
+
+
+#SIGNUP_AND_BASKET {
+  grid-area: LOGO_AND_TIME;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-columns:  1fr 1fr 45px;
+    grid-template-rows: 45px 50px auto;
+    grid-template-areas:
+      " . BASKET BASKET"
+      ". . ."
+      ". SIGNUP SIGNUP ";
 
 }
 
