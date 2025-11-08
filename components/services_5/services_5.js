@@ -6,12 +6,9 @@ import Collapsed_2 from "../../components/Collapse_2/collapse_2";
 import Collapsed_4 from "../../components/Collapse_4/collapse_4";
 import React, { Component } from 'react';
 import Link from "next/link";
-
-import {Accordion, AccordionItem} from "@heroui/react";
-
-
-
-import {Divider} from "@heroui/react";
+import { Accordion, AccordionItem } from "@heroui/react";
+import { Divider } from "@heroui/react";
+import { ChevronDown } from "lucide-react";
 
 export default class Services_5 extends Component {
 
@@ -23,6 +20,27 @@ render() {
 
  const defaultContent =
     "Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam, ut aliquip ex ea commodo consequat.";
+
+ const accordionItems = [
+    {
+      key: "services-1",
+      title: "Architecture, Design & Technology",
+      subtitle: "Press to expand",
+      content: defaultContent,
+    },
+    {
+      key: "services-2",
+      title: "BIM Strategy & Documentation",
+      subtitle: "Press to expand key 2",
+      content: defaultContent,
+    },
+    {
+      key: "services-3",
+      title: "Digital Twin Product Development",
+      subtitle: "Press to expand",
+      content: defaultContent,
+    },
+  ];
 
    
 return (
@@ -104,35 +122,37 @@ return (
                         {/*<Divider />*/}
                         <div> 
                           <br/>
-                            <Accordion variant="shadow">
-                              <AccordionItem
-                                key="1"
-                                aria-label="Accordion 1"
-                                subtitle="Press to expand"
-                                title="Accordion 1"
-                              >
-                                {defaultContent}
-                              </AccordionItem>
-                              <AccordionItem class=""
-                                key="2"
-                                aria-label="Accordion 2"
-                                subtitle={
-                                  <span class="text-left">
-                                    Press to expand <strong>key 2</strong>
-                                  </span>
-                                }
-                                title="Accordion 2"
-                              >
-                                {defaultContent}
-                              </AccordionItem>
-                              <AccordionItem
-                                key="3"
-                                aria-label="Accordion 3"
-                                subtitle="Press to expand"
-                                title="Accordion 3"
-                              >
-                                {defaultContent}
-                              </AccordionItem>
+                            <Accordion 
+                              className="w-full"
+                            >
+                              {accordionItems.map(({key, title, subtitle, content}) => (
+                                <AccordionItem
+                                  key={key}
+                                  aria-label={title}
+                                  title={title}
+                                  subtitle={subtitle}
+                                  indicator={({isOpen}) => (
+                                    <ChevronDown
+                                      className={`w-5 h-5 transition-transform duration-300 text-stone-600 ${
+                                        isOpen ? "rotate-180" : ""
+                                      }`}
+                                    />
+                                  )}
+                                  classNames={{
+                                    base: "border border-stone-200/40 rounded-xl px-6 py-4 mb-4",
+                                    trigger: "px-0 flex justify-between gap-3",
+                                    titleWrapper: "w-full flex flex-col items-start gap-1",
+                                    title: "w-full text-left text-stone-800 font-avant_garde_bold text-lg",
+                                    subtitle: "w-full text-left text-stone-500 text-sm",
+                                    indicator: "text-stone-600",
+                                    content: "text-left text-stone-600 pt-2"
+                                  }}
+                                >
+                                  <p className="text-left text-stone-600 leading-relaxed">
+                                    {content}
+                                  </p>
+                                </AccordionItem>
+                              ))}
                             </Accordion>
 
                           <br/>
