@@ -198,7 +198,8 @@ export default function Header() {
 
 
               {/* Sign In/Sign Up or User Dropdown */}
-              <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} style={{ gridArea: "SIGN_IN", position: "relative", height: "100%", width: "100%", top:"12.5px" }}>
+              <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} 
+                   style={{ gridArea: "SIGNIN_AND_BASKET", position: "relative", height: "100%", width: "100%", top:"12.5px" }}>
                 <div className="flex justify-end ..." id={styles.SIGNUP_RIGHT} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "200px", left: "4.5px" }}>
                   {isAuthenticated ? (
                     <div className="relative left-[8px]" ref={dropdownRef}>
