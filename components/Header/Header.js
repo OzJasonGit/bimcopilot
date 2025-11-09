@@ -188,7 +188,7 @@ export default function Header() {
                           alignItems: "center", 
                           justifyContent: "center", 
                           position: "relative",
-                          top: "20px"
+                          top: "17.5px"
                           }}>
                 <ShadCN_Header/>
               </div>
@@ -199,7 +199,7 @@ export default function Header() {
 
                   {/* Sign In/Sign Up or User Dropdown */}
                   <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} 
-                      style={{ gridArea: "SIGNUP", position: "relative", height: "100%", width: "100%", top:"12.5px" }}>
+                      style={{ gridArea: "SIGNUP", position: "relative", height: "100%", width: "100%", top:"0px" }}>
                       <div className="flex justify-end ..." id={styles.SIGNUP_RIGHT} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "200px", left: "4.5px" }}>
                         {isAuthenticated ? (
                           <div className="relative left-[8px]" ref={dropdownRef}>
