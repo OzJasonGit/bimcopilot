@@ -22,6 +22,19 @@ import parse from "html-react-parser";
 
 
 
+const renderHtml = (content) => {
+  if (content === null || content === undefined) return null;
+
+  const value = typeof content === "string" ? content : String(content);
+
+  try {
+    return parse(value);
+  } catch (error) {
+    console.error("Failed to parse HTML content:", error);
+    return value;
+  }
+};
+
 const Bloghomemain = ({ stories, firstStory }) => {
   const params = useParams();
   const storiesToMap = stories.filter((story, i) => i != 0);
@@ -83,7 +96,9 @@ const Bloghomemain = ({ stories, firstStory }) => {
                             <Image src={text_logo} alt="Logo Text" fill style={{ objectFit: "cover" }} quality={100} loading="lazy" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==" />
                           </div> 
                           <div style={{ gridArea: "TITLE", position: "relative", zIndex: 100}}>
-                            <h3  id={styles._H2}  className="text-center text-stone-50 font-avant_garde_bold opacity-0 translate-y-10 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">{parse(story.title)}</h3>
+                            <h3  id={styles._H2}  className="text-center text-stone-50 font-avant_garde_bold opacity-0 translate-y-10 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                              {renderHtml(story.title)}
+                            </h3>
                           </div>   
                         </div>
                         
@@ -93,13 +108,13 @@ const Bloghomemain = ({ stories, firstStory }) => {
 
                     <div id={styles.BLOG_TEXT}>
                       <h3 id={styles._H2} class=" text-stone-200 ... font-avant_garde_bold ...">
-                        {parse(story.title)}
+                        {renderHtml(story.title)}
                       </h3>
 
                       <br />
 
                       <h4 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
-                        {parse(story.subtitle)}
+                        {renderHtml(story.subtitle)}
                       </h4>
                     </div>
 
