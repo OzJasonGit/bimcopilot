@@ -188,7 +188,7 @@ export default function Header() {
                           alignItems: "center", 
                           justifyContent: "center", 
                           position: "relative",
-                          top: "5.5px"
+                          top: "20px"
                           }}>
                 <ShadCN_Header/>
               </div>

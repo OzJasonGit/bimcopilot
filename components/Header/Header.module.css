@@ -410,7 +410,7 @@
   display: grid;
   width: 100%;
   max-width: 600px;
-  justify-self: right;
+  justify-self: center;
   grid-template-columns: auto 1.5px auto 1.5px auto 1.5px auto;
   grid-template-rows: 10px auto 10px;
   grid-template-areas:
