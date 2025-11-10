@@ -1334,20 +1334,17 @@
   
   
   
+   
+
+
     #HEADER {
-      position: fixed;
-      width: 100%;
-      top: 0;
       height: auto;
       max-width: 1520px;
       background-color: #171717;
-      display: grid;
       grid-row-gap: 0;
-      grid-template-rows: auto;
-      grid-template-columns: 30px 1fr 30px;
+      grid-template-columns: 20px 1fr 20px;
       grid-template-areas: ". MAIN_AREA .";
-      z-index: 80;
-      padding: 15px 0;
+      /* padding: 15px 0; */
     }
   
   
@@ -1365,6 +1362,21 @@
         ". . ."
         "LOGO_HOLDER . ."
         ". . .";
+    }
+
+
+
+    #FIXED_HEADER_2 {
+      grid-area: MAIN_AREA;
+      display: grid;
+      grid-row-gap: 0;
+      grid-column-gap: 40px;
+      grid-template-columns: 40px auto 40px;
+      grid-template-rows: auto 20px auto;
+      grid-template-areas:
+        "LOGO_AND_TIME MENU SIGNIN_AND_BASKET"
+        "LOGO_AND_TIME . SIGNIN_AND_BASKET"
+        "LOGO_AND_TIME . SIGNIN_AND_BASKET";
     }
   
   
