@@ -239,6 +239,7 @@
 
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
+
   .grid_0_bimcopilot {
     position: relative;
     width: 100%;
@@ -247,12 +248,12 @@
     display: grid;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
-    grid-template-rows: 180px auto 0px;
-    grid-template-columns: 0px 1fr 0px;
+    grid-template-rows: 100px;
+    grid-template-columns: 0 1fr 0;
     grid-template-areas:
-      ". .   ."
+      ". . ."
       ". SUB ."
-      ". .   .";
+      ". . .";
   }
 
   #BIMCOPILOT_CONTAINER {

@@ -833,6 +833,8 @@
     margin-bottom: 0px;
   }
 
+ 
+
   #SALES_GRID_HOLDER {
     position: relative;
     width: 100%;
@@ -842,11 +844,10 @@
     grid-column-gap: 60px;
     grid-row-gap: 20px;
     grid-template-columns: 1fr;
-    grid-template-rows: 0px auto auto 0px;
+    grid-template-rows: 0 auto 0;
     grid-template-areas:
       " . "
       "IMAGE"
-      "CHECKOUT"
       " . ";
   }
 
@@ -1203,7 +1204,30 @@
       "IMAGE_2";
   }
 
+
+
+
   #BOUGHT_TOGETHER_GRID {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-area: SUB;
+    grid-column-gap: 40px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0 auto auto 0;
+    grid-template-areas:
+      "."
+      "IMAGE"
+      " DESCRIPTION"
+      " .";
+  }
+
+
+
+
+  #BOUGHT_TOGETHER_GRID{
     position: relative;
     width: 100%;
     height: auto;
@@ -1856,6 +1880,22 @@
       ". . .";
     margin-top: 0px;
   }
-}
+
+
+  #PRODUCT_DESCRIPTION {
+    position: relative;
+    width: 100%;
+    height: auto;
+    grid-area: DESCRIPTION;
+    grid-row-gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "TITLE"
+      "DESCRIPTION"
+      "IMAGES";
+    padding-right: 0px;
+  }
 
 /*SECTION_11////ASTRONAUT///////////////////////////////////////////////////////////////////////////////*/
