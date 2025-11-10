@@ -547,439 +547,495 @@
 
 @media all and (min-width: 960px) and (max-width: 1280px) {
 
+/* HEADER------------------------------------------------------------------------------*/
+  /* ---------------------------------------------------------------------------------------*/
+  /* ---------------------------------------------------------------------------------------*/
+  /* ---------------------------------------------------------------------------------------*/
+  /* HEADER------------------------------------------------------------------------------*/
+  /* ---------------------------------------------------------------------------------------*/
+  /* ---------------------------------------------------------------------------------------*/
+  /* ---------------------------------------------------------------------------------------*/
+
+
   .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 150px;
+  }
+
+  .dropdown a,
+  .dropdown button {
+    display: block;
+    padding: 10px;
+    text-align: left;
+    color: #333;
+    text-decoration: none;
+    background: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .dropdown a:hover,
+  .dropdown button:hover {
+    background-color: #f1f1f1;
+  }
+
+  #_H1 {
+    margin-bottom: 0px;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  #_H2 {
+    margin-bottom: 0px;
+    font-size: 1.15rem;
+    line-height: 1.35rem;
+  }
+
+  #_H3 {
+    margin-bottom: 0px;
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+  }
+
+  #_H4 {
+    margin-bottom: 0px;
+  }
+
+  #_H5 {
+    margin-bottom: -2.5px;
+  }
+
+  #TEXT_OUTLINE {
+    -webkit-text-stroke: 1.85px rgb(120, 120, 120);
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .timeAndDate {
+    display: flex;
+    color: white;
+
+    position: absolute;
+    top: 8vh;
+    left: 80vw;
+  }
+
+  #H_3_SERVICES {
+    margin-bottom: 0%;
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+
+    position: relative;
+    display: inline-block;
+    left: 15px;
+    top: -1.65px;
+
+    &:before,
+    &:after {
+      transition: all 0.25s ease;
+      width: 0%;
+    }
+
+    &:after {
+      content: attr(data-content);
       position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: white;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-      width: 150px;
+      top: 0;
+      left: 0;
+      color: rgb(110 231 183);
+      overflow: hidden;
+      border-radius: 2000px;
     }
-  
-    .dropdown a,
-    .dropdown button {
-      display: block;
-      padding: 10px;
-      text-align: left;
-      color: #333;
-      text-decoration: none;
-      background: none;
-      border: none;
+
+    &:hover:after {
       width: 100%;
-      cursor: pointer;
+      border-radius: 0px;
     }
-  
-    .dropdown a:hover,
-    .dropdown button:hover {
-      background-color: #f1f1f1;
+  }
+
+  #H_3_PRODUCTS {
+    margin-bottom: 0%;
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+    position: relative;
+    display: inline-block;
+    left: 15px;
+    top: -1.65px;
+
+    &:before,
+    &:after {
+      transition: all 0.25s ease;
+      width: 0%;
     }
-  
-    #_H1 {
-      margin-bottom: 0px;
-      font-size: 2rem;
-      line-height: 2rem;
-    }
-  
-    #_H2 {
-      margin-bottom: 0px;
-      font-size: 1.15rem;
-      line-height: 1.35rem;
-    }
-  
-    #_H3 {
-      margin-bottom: 0px;
-      font-size: 0.85rem;
-      line-height: 1.3rem;
-    }
-  
-    #_H4 {
-      margin-bottom: 0px;
-    }
-  
-    #_H5 {
-      margin-bottom: -2.5px;
-    }
-  
-    #TEXT_OUTLINE {
-      -webkit-text-stroke: 1.85px rgb(120, 120, 120);
-    }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    .timeAndDate {
-      display: flex;
-      color: white;
-  
+
+    &:after {
+      content: attr(data-content);
       position: absolute;
-      top: 8vh;
-      left: 80vw;
+      top: 0;
+      left: 0;
+      color: rgb(110 231 183);
+      overflow: hidden;
+      border-radius: 2000px;
     }
-  
-    #H_3_SERVICES {
-      margin-bottom: 0%;
-      font-size: 0.85rem;
-      line-height: 1.3rem;
-  
-      position: relative;
-      display: inline-block;
-      left: 15px;
-      top: -1.65px;
-  
-      &:before,
-      &:after {
-        transition: all 0.25s ease;
-        width: 0%;
-      }
-  
-      &:after {
-        content: attr(data-content);
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: rgb(110 231 183);
-        overflow: hidden;
-        border-radius: 2000px;
-      }
-  
-      &:hover:after {
-        width: 100%;
-        border-radius: 0px;
-      }
-    }
-  
-    #H_3_PRODUCTS {
-      margin-bottom: 0%;
-      font-size: 0.85rem;
-      line-height: 1.3rem;
-      position: relative;
-      display: inline-block;
-      left: 15px;
-      top: -1.65px;
-  
-      &:before,
-      &:after {
-        transition: all 0.25s ease;
-        width: 0%;
-      }
-  
-      &:after {
-        content: attr(data-content);
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: rgb(110 231 183);
-        overflow: hidden;
-        border-radius: 2000px;
-      }
-  
-      &:hover:after {
-        width: 100%;
-        border-radius: 0px;
-      }
-    }
-  
-    #H_3_PROJECTS {
-      margin-bottom: 0%;
-      font-size: 0.85rem;
-      line-height: 1.3rem;
-      position: relative;
-      display: inline-block;
-      left: 15px;
-      top: -1.65px;
-  
-      &:before,
-      &:after {
-        transition: all 0.25s ease;
-        width: 0%;
-      }
-  
-      &:after {
-        content: attr(data-content);
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: rgb(110 231 183);
-        overflow: hidden;
-        border-radius: 2000px;
-      }
-  
-      &:hover:after {
-        width: 100%;
-        border-radius: 0px;
-      }
-    }
-  
-    #H_3_STORIES {
-      margin-bottom: 0%;
-      font-size: 0.85rem;
-      line-height: 1.3rem;
-      position: relative;
-      display: inline-block;
-      left: 15px;
-      top: -1.65px;
-  
-      &:before,
-      &:after {
-        transition: all 0.25s ease;
-        width: 0%;
-      }
-  
-      &:after {
-        content: attr(data-content);
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: rgb(110 231 183);
-        overflow: hidden;
-        border-radius: 2000px;
-      }
-  
-      &:hover:after {
-        width: 100%;
-        border-radius: 0px;
-      }
-    }
-  
-    .center_holder {
-      position: relative;
+
+    &:hover:after {
       width: 100%;
-      display: flex;
-      height: auto;
-      -webkit-box-pack: center;
-      justify-content: center;
-  
-      margin: 0;
-      z-index: 4;
+      border-radius: 0px;
     }
-  
-    .container {
+  }
+
+  #H_3_PROJECTS {
+    margin-bottom: 0%;
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+    position: relative;
+    display: inline-block;
+    left: 15px;
+    top: -1.65px;
+
+    &:before,
+    &:after {
+      transition: all 0.25s ease;
+      width: 0%;
+    }
+
+    &:after {
+      content: attr(data-content);
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: rgb(110 231 183);
+      overflow: hidden;
+      border-radius: 2000px;
+    }
+
+    &:hover:after {
       width: 100%;
-      height: 100%;
-      position: relative;
-      display: flex;
-      -webkit-box-pack: center;
-      justify-content: center;
-      border-radius: 1.5px;
+      border-radius: 0px;
     }
-  
-    .HEADER_HOLDER {
-      grid-area: MAIN_AREA;
-      display: flex;
-      position: fixed;
-      height: 120px;
-      align-items: center;
-      justify-content: center;
+  }
+
+  #H_3_STORIES {
+    margin-bottom: 0%;
+    font-size: 0.85rem;
+    line-height: 1.3rem;
+    position: relative;
+    display: inline-block;
+    left: 15px;
+    top: -1.65px;
+
+    &:before,
+    &:after {
+      transition: all 0.25s ease;
+      width: 0%;
+    }
+
+    &:after {
+      content: attr(data-content);
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: rgb(110 231 183);
+      overflow: hidden;
+      border-radius: 2000px;
+    }
+
+    &:hover:after {
       width: 100%;
-      background-color: #171717;
-      z-index: 10000;
-      /*top: -110px;*/
-  
+      border-radius: 0px;
     }
-  
-    #HEADER {
-      position: fixed;
-      width: 100%;
-      top: 0px;
-      height: auto;
-      max-width: 1520px;
-      background-color: #171717;
-      display: grid;
-      grid-row-gap: 40px;
-      grid-template-rows: auto;
-      grid-template-columns: 40px 1fr 40px;
-      grid-template-areas: ". MAIN_AREA .";
-      z-index: 80;
-      padding: 15px 0;
-      /*margin-top: 20px;*/
-    }
-  
-    .burger_dot {
-      border-radius: 100%;
-      background-color: #171717;
-    }
-  
-    /*#FIXED_HEADER {
-    grid-area: MAIN-AREA;
+  }
+
+  .center_holder {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: auto;
+    -webkit-box-pack: center;
+    justify-content: center;
+
+    margin: 0;
+    z-index: 4;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 1.5px;
+  }
+
+  .HEADER_HOLDER {
+    grid-area: MAIN_AREA;
+    display: flex;
+    position: fixed;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #171717;
+    z-index: 10000;
+    /*top: -110px;*/
+
+  }
+
+  #HEADER {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 80px;
+    max-width: 1520px;
+    background-color: #171717;
     display: grid;
     grid-row-gap: 0px;
+    grid-template-rows: auto;
+    grid-template-columns: 40px 1fr 40px;
+    grid-template-areas: ".  MAIN_AREA  .";
+    z-index: 80;
+    padding: 15px 0;
+    /*margin-top: 20px;*/
+  }
+
+  .burger_dot {
+    border-radius: 100%;
+    background-color: #171717;
+  }
+
+  /*#FIXED_HEADER {
+  grid-area: MAIN-AREA;
+  display: grid;
+  grid-row-gap: 0px;
+  grid-column-gap: 40px;
+  grid-template-columns: 50px 1fr auto 1fr auto 1fr auto ;
+  grid-template-rows:  auto;
+  grid-template-areas:    
+    "LOGO_HOLDER MENU TIME . . . MENU_BUTTON";
+}*/
+
+
+
+
+
+  #FIXED_HEADER {
+    grid-area: MAIN_AREA;
+    display: grid;
+    grid-row-gap: 0;
     grid-column-gap: 40px;
-    grid-template-columns: 50px 1fr auto 1fr auto 1fr auto ;
-    grid-template-rows:  auto;
-    grid-template-areas:    
-      "LOGO_HOLDER MENU TIME . . . MENU_BUTTON";
-  }*/
-  
-  
-  
+    grid-template-columns: 50px auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "LOGO_HOLDER MENU TIME MENU_BUTTON"
+      " . . . SIGN_IN";
+  }
 
 
-    #FIXED_HEADER {
-      grid-area: MAIN_AREA;
-      display: grid;
-      grid-row-gap: 0;
-      grid-column-gap: 40px;
-      grid-template-columns: 50px auto auto auto;
-      grid-template-rows: auto auto;
-      grid-template-areas:
-        "LOGO_HOLDER MENU TIME MENU_BUTTON"
-        " . . . SIGN_IN";
-    }
 
-  
-  
-    #SIGNUP_GRID {
-  
-      position: relative;
-      display: grid;
-      width: 100%;
-      grid-template-columns: 85px 25px 1.5px 25px 85px;
-      grid-template-rows: 0px auto 0px;
-      grid-template-areas:
-        " . . . . ."
-        " SIGNUP . B1 . LOGIN"
-        " . . . . .";
-      background: transparent;
-    }
-  
-  
-  
-  
-  
-  
-  
-  
-    #BASKET_CONTAINER {
-      grid-area: MENU_BUTTON;
-      display: grid;
-      grid-row-gap: 0px;
-      grid-column-gap: 0px;
-      grid-template-columns: 1fr 20px 20px 20px 20px 20px;
-      grid-template-rows: 13px auto 0px;
-      grid-template-areas:
-        " . . . . . ."
-        " . FAVOURITE . BASKET . BURGER"
-        " . . . . . .";
-    }
-  
-  
-  
-  
-    #TIME {
-      grid-area: TIME;
-      position: relative;
-      display: grid;
-      width: 100%;
-      min-width: 200px;
-      justify-self: right;
-      grid-template-columns: 1fr 1.5px 1.5fr;
-      grid-template-rows: auto;
-      grid-template-areas: " CLOCK B1 HOME";
-      background: transparent;
-    }
-  
-  
-  
-  
-  
-    #CLOCK_HOLDER {
-      grid-area: CLOCK;
-      width: 100%;
-      height: 100%;
-    }
-  
-    #NAV_MENU {
-     
-      display: "grid";
-      width: 100%;
-      max-width: 600px;
-      justify-self: right;
-      grid-template-columns: auto 1.5px auto 1.5px auto 1.5px auto;
-      grid-template-rows: 10px auto 10px;
-      grid-template-areas:
-        " . . . . . . ."
-        " SERVICES . STORIES . PROJECTS . PRODUCTS"
-        " . . . . . . .";
-      background: transparent;
-    }
-  
-    #B1 {
-      grid-area: B1;
-    }
-  
-    #SERVICES {
-      grid-area: SERVICES;
-    }
-  
-    #PRODUCTS {
-      grid-area: PRODUCTS;
-    }
-  
-    #PROJECTS {
-      grid-area: PROJECTS;
-    }
-  
-    #STORIES {
-      grid-area: STORIES;
-    }
-  
-    #LOGO_LINK {
-      grid-area: LOGO;
-      display: grid;
-      grid-template-rows: 0px auto 0px;
-      grid-template-columns: 1fr;
-      width: 100%;
-      height: 100%;
-      grid-template-areas:
-        "."
-        "LOGO"
-        ".";
-    }
-  
-    #LOGO {
-      position: relative;
-      grid-area: LOGO;
-      width: 75%;
-      height: 75%;
-      left: -20px;
-      top: 8px;
-    }
-  
-    #LOGO_ICON {
-      grid-area: LOGO_HOLDER;
-      display: grid;
-      grid-template-rows: 7.5px 50px 7.5px;
-      grid-template-columns: 1fr;
-  
-      grid-template-areas:
-        " ."
-        "LOGO "
-        " .";
-      position: relative;
-      top: -4px;
-    }
-  
-    #HOME_ICON {
-      grid-area: HOME;
-    }
-  
-    #ABOUT_ICON {
-      grid-area: ABOUT;
-    }
-  
-    #COPILOT_HOLDER {
-      display: none;
-    }
+  #FIXED_HEADER_2 {
+    grid-area: MAIN_AREA;
+    display: grid;
+    grid-row-gap: 0;
+    grid-column-gap: 40px;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: auto 20px auto;
+    grid-template-areas:
+      "LOGO_AND_TIME MENU SIGNIN_AND_BASKET"
+      "LOGO_AND_TIME . SIGNIN_AND_BASKET"
+      "LOGO_AND_TIME . SIGNIN_AND_BASKET";
+  }
+
+
+
+  #LOGO_AND_TIME {
+    grid-area: LOGO_AND_TIME;
+    display: grid;
+
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-columns: 45px 1fr 1fr;
+    grid-template-rows: 45px 20px auto;
+    grid-template-areas:
+      "LOGO . . "
+      ". . ."
+      "LOGO_AND_TIME LOGO_AND_TIME .";
+  }
+
+
+
+  #SIGNUP_AND_BASKET {
+    grid-area: SIGNIN_AND_BASKET;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-columns: 1fr 1fr 45px;
+    grid-template-rows: 45px 20px auto;
+    grid-template-areas:
+      " . BASKET BASKET"
+      ". . ."
+      ". SIGNUP SIGNUP ";
+
+  }
+
+
+  #SIGNUP_GRID {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 85px 25px 1.5px 25px 85px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-areas:
+      " . . . . ."
+      " SIGNUP . B1 . LOGIN"
+      " . . . . .";
+    background: transparent;
+  }
+
+
+
+
+
+
+
+
+  #BASKET_CONTAINER {
+    grid-area: MENU_BUTTON;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-columns: 1fr 20px 20px 20px 20px 20px;
+    grid-template-rows: 13px auto 0px;
+    grid-template-areas:
+      " . . . . . ."
+      " . FAVOURITE . BASKET . BURGER"
+      " . . . . . .";
+  }
+
+
+
+
+  #TIME {
+    grid-area: LOGO_AND_TIME;
+    position: relative;
+    display: grid;
+    left: -15px;
+    width: 100%;
+    min-width: 200px;
+    justify-self: right;
+    grid-template-columns: 1fr 1.5px 1.5fr;
+    grid-template-rows: auto;
+    grid-template-areas: " CLOCK B1 HOME";
+    background: transparent;
+  }
+
+
+
+
+
+  #CLOCK_HOLDER {
+    grid-area: CLOCK;
+    width: 100%;
+    height: 100%;
+  }
+
+  #NAV_MENU {
+    grid-area: MENU;
+    display: grid;
+    width: 100%;
+    max-width: 600px;
+    justify-self: center;
+    grid-template-columns: auto 1.5px auto 1.5px auto 1.5px auto;
+    grid-template-rows: 10px auto 10px;
+    grid-template-areas:
+      " . . . . . . ."
+      " SERVICES . STORIES . PROJECTS . PRODUCTS"
+      " . . . . . . .";
+    background: transparent;
+  }
+
+  #B1 {
+    grid-area: B1;
+  }
+
+  #SERVICES {
+    grid-area: SERVICES;
+  }
+
+  #PRODUCTS {
+    grid-area: PRODUCTS;
+  }
+
+  #PROJECTS {
+    grid-area: PROJECTS;
+  }
+
+  #STORIES {
+    grid-area: STORIES;
+  }
+
+  #LOGO_LINK {
+    grid-area: LOGO;
+    display: grid;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+      "."
+      "LOGO"
+      ".";
+  }
+
+  #LOGO {
+    position: relative;
+    grid-area: LOGO;
+    width: 75%;
+    height: 75%;
+    left: -20px;
+    top: 8px;
+  }
+
+  #LOGO_ICON {
+    grid-area: LOGO_HOLDER;
+    display: grid;
+    grid-template-rows: 7.5px 50px 7.5px;
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      " ."
+      "LOGO "
+      " .";
+    position: relative;
+    top: -4px;
+  }
+
+  #HOME_ICON {
+    grid-area: HOME;
+  }
+
+  #ABOUT_ICON {
+    grid-area: ABOUT;
+  }
+
+  #COPILOT_HOLDER {
+    display: none;
+  }
 
 }
 
