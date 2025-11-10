@@ -890,7 +890,6 @@
       " . BASKET BASKET"
       ". . ."
       ". SIGNUP SIGNUP ";
-
   }
 
 
@@ -1377,6 +1376,20 @@
         "LOGO_AND_TIME MENU SIGNIN_AND_BASKET"
         "LOGO_AND_TIME . SIGNIN_AND_BASKET"
         "LOGO_AND_TIME . SIGNIN_AND_BASKET";
+    }
+
+
+    #SIGNUP_AND_BASKET {
+      grid-area: SIGNIN_AND_BASKET;
+      display: none;
+      grid-row-gap: 0px;
+      grid-column-gap: 0px;
+      grid-template-columns: 1fr 1fr 45px;
+      grid-template-rows: 45px 20px auto;
+      grid-template-areas:
+        " . BASKET BASKET"
+        ". . ."
+        ". SIGNUP SIGNUP ";
     }
   
   
