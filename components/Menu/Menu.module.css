@@ -1828,6 +1828,12 @@
         display: none;
     }
 
+
+    #CART_HOLDER {
+        position: relative;
+        display: none;
+    }
+
     
 }
 
