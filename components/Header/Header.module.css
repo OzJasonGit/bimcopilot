@@ -1262,7 +1262,7 @@
   }
 
   #SIGNUP_CONTAINER {
-    left: -160px;
+    left: 0px;
   }
 }
 
@@ -1487,7 +1487,7 @@
     }
   
     #SIGNUP_CONTAINER {
-      left: -160px;
+      left: 0px;
     }
 }
 
