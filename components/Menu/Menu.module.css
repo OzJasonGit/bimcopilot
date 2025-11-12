@@ -2030,7 +2030,7 @@
             display: grid;
             grid-row-gap: 40px;
             grid-template-rows: auto;
-            grid-template-columns: 30px 1fr 30px;
+            grid-template-columns: 20px 1fr 20px;
             grid-template-areas: ". MAIN_AREA .";
             z-index: 80;
         }
