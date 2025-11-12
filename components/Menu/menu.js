@@ -269,8 +269,6 @@ const Menu = () => {
 
                 <a id={styles.BURGER} className="content-center ... align-middle ..." onClick={showDrawer}
                   style={{
-
-                    gridArea: 'BURGER',
                     /*top: '90px',*/
                     position: 'relative'
 

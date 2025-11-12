@@ -539,6 +539,11 @@
 }
 
 
+ #BURGER {
+     grid-area: BURGER;
+ }
+
+
 
 
 
@@ -1302,6 +1307,11 @@
             grid-area: AREA;
         }
     
+
+
+        #BURGER {
+            grid-area: BURGER;
+        }
     
         #BURGER_HOLDER {
             grid-area: BURGER;
