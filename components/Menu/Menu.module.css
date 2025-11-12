@@ -2021,14 +2021,17 @@
     
     
     
+    
+    
+    
         #HEADER {
             top: 110px;
             max-width: 1520px;
             display: grid;
             grid-row-gap: 40px;
             grid-template-rows: auto;
-            grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
-            grid-template-areas: ". BANNER-1 . MAIN_AREA . BANNER-2 .";
+            grid-template-columns: 30px 1fr 30px;
+            grid-template-areas: ". MAIN_AREA .";
             z-index: 80;
         }
     
@@ -2047,7 +2050,7 @@
                 ". . ."
                 "LOGO_HOLDER . MENU_BUTTON "
                 ". . .";
-            /*margin-top: -204.5px;*/
+            margin-top: 0px;
         }
     
     
@@ -2262,14 +2265,11 @@
         #TIME {
             display: none;
         }
-
-
-
+    
+    
         #CART_HOLDER {
             position: relative;
-            /*left: -70px;
-                top: 90px*/
-            ;
+            display: none;
         }
 }
 
