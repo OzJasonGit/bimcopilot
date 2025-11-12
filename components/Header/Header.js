@@ -200,41 +200,6 @@ export default function Header() {
 
 
 
-                  {/* favourites/basket */}
-                  <div id={styles.BUTTON_HOLDER_RIGHT} class={styles.container}>
-
-                    <a id={styles.FAVOURITES} className="content-center ... align-middle ..." href="/cart">
-                      <div id={styles.CART_HOLDER} className="content-center ... align-middle ..."
-                      >
-                        <FontAwesomeIcon icon={faHeart} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-red-500" />
-                      </div>
-                    </a>
-
-                    <a id={styles.CART} className="content-center ... align-middle ..." href="/cart">
-                      <div id={styles.CART_HOLDER} className="content-center ... align-middle ..."
-                        style={{
-
-                          paddingLeft: "25px",
-                          gridArea: 'BASKET',
-
-
-                        }}>
-                        <FontAwesomeIcon icon={faCartShopping} size="xl" className="cursor-pointer transition-colors duration-300 text-stone-50 hover:text-emerald-300" />
-                      </div>
-                    </a>
-
-
-                    <a id={styles.BURGER} className="content-center ... align-middle ..." onClick={showDrawer}
-                      style={{
-
-                        gridArea: 'BURGER',
-                        top: '90px',
-                        position: 'relative'
-
-                      }}>
-                      <Hamburger />
-                    </a>
-                  </div>
 
 
 
