@@ -284,21 +284,7 @@ const Menu = () => {
 
 
 
-              {/*<div id={styles.LOGO_MOB} class={styles.container}>
-                      <Image
-                          src={bimcopilot_icon}   
-                          alt="Picture of the author"
-                          loading="lazy"
-                          width={500}
-                          height={500}
-                          style={{
-                            position: "absolute",
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "contain",
-                          }}
-                        />
-                    </div>*/}
+              
             </header>
 
           </div>
