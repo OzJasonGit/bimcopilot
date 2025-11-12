@@ -486,8 +486,8 @@
         grid-template-rows: auto;
         grid-template-columns: auto auto 1fr;
         grid-template-areas: " FAVOURITES BASKET BURGER";
-        /*top: 90px;*/
-}
+        /*top: 90px;
+}*/
 
 
 #BUTTON_HOLDER_RIGHT {
