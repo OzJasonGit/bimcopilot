@@ -464,7 +464,7 @@
 
 
 #BUTTON_HOLDER_RIGHT {
-    grid-area: MENU_BUTTON;
+    grid-area: SIGNIN_AND_BASKET;
     position: relative;
     display: grid;
     grid-row-gap: 10px;
@@ -1224,6 +1224,18 @@
             grid-template-columns: auto auto 1fr;
             grid-template-areas: " FAVOURITES BASKET BURGER";
             /*top: 90px;*/
+        }
+
+
+        #BUTTON_HOLDER_RIGHT {
+            grid-area: SIGNIN_AND_BASKET;
+            position: relative;
+            display: grid;
+            grid-row-gap: 10px;
+            grid-column-gap: 20px;
+            grid-template-rows: auto;
+            grid-template-columns: 1fr auto auto auto;
+            grid-template-areas: " . FAVOURITES BASKET BURGER";
         }
 
 
