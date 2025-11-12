@@ -1169,6 +1169,21 @@
 
 
 
+  #FIXED_HEADER_2 {
+    grid-area: MAIN_AREA;
+    display: grid;
+    grid-row-gap: 0;
+    grid-column-gap: 40px;
+    grid-template-columns: 50px auto 200px;
+    grid-template-rows: auto 20px auto;
+    grid-template-areas:
+      "LOGO_AND_TIME MENU SIGNIN_AND_BASKET"
+      "LOGO_AND_TIME . SIGNIN_AND_BASKET"
+      "LOGO_AND_TIME . SIGNIN_AND_BASKET";
+  }
+
+
+
   #BASKET_CONTAINER {
     grid-area: MENU_BUTTON;
     display: grid;
