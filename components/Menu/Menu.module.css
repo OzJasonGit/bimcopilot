@@ -69,7 +69,7 @@
     grid-area: MAIN-AREA;
     display: flex;
     position: fixed;
-    height: 100%;
+    height: auto;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -838,19 +838,20 @@
     
     
     
+       
+
+
+
         .HEADER_HOLDER {
             grid-area: MAIN-AREA;
             display: flex;
             position: fixed;
-            height: 110px;
+            height: auto;
             align-items: center;
             justify-content: center;
             width: 100%;
             background-color: transparent;
-            z-index: 100000;
-            /*top: -110px;
-            /*margin-top: -70px;*/
-    
+            z-index: 100000;  
         }
     
       
