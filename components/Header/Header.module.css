@@ -1210,6 +1210,7 @@
 
   #SIGNUP_CONTAINER {
     grid-area: SIGN_IN;
+    position: relative;
     display: grid;
     left: 0px;
   }
