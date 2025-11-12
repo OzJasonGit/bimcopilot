@@ -111,32 +111,20 @@
 
 
 
+
+
 #FIXED_HEADER {
     grid-area: MAIN_AREA;
     display: grid;
     grid-row-gap: 0;
-    grid-column-gap: 0px;
-    grid-template-columns: 50px auto 80px auto auto;
+    grid-column-gap: 0;
+    grid-template-columns: 200px auto 200px;
     grid-template-rows: auto auto;
     grid-template-areas:
-        "LOGO_HOLDER MENU . TIME MENU_BUTTON"
-        ". . . SIGN_IN SIGN_IN";
+        "LOGO_HOLDER MENU MENU_BUTTON"
+        " . . SIGN_IN";
 }
 
-
-/*#FIXED_HEADER {
-    grid-area: MAIN-AREA;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-column-gap: 40px;
-    grid-template-columns: 100px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0px auto 0px;
-    grid-template-areas:
-        ". . . . . . . . . . . . ."
-        "LOGO_HOLDER MENU MENU MENU MENU MENU . . SIGN_IN SIGN_IN SIGN_IN MENU-BUTTON MENU-BUTTON"
-        ". . . . . . . . . . . . .";
-    margin-top: -190px;
-}*/
 
 
 
@@ -1594,16 +1582,7 @@
 
 
 
-    #HEADER {
-        top: 110px;
-        max-width: 1520px;
-        display: grid;
-        grid-row-gap: 40px;
-        grid-template-rows: auto;
-        grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
-        grid-template-areas: ". BANNER-1 . MAIN_AREA . BANNER-2 .";
-        z-index: 80;
-    }
+  
 
 
 #HEADER {
