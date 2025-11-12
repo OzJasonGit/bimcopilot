@@ -261,7 +261,7 @@
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
   grid-template-areas: ". . . MAIN_AREA . . .";
   z-index: 80;
-  padding: 15px 0;
+  padding: 10px 0;
   /*margin-top: 20px;*/
 }
 
@@ -810,7 +810,7 @@
     grid-template-columns: 40px 1fr 40px;
     grid-template-areas: ".  MAIN_AREA  .";
     z-index: 80;
-    padding: 15px 0;
+    padding: 10px 0;
     /*margin-top: 20px;*/
   }
 
