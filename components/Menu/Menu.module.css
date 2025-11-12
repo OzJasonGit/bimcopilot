@@ -824,16 +824,18 @@
     
     
     
+      
+
+
         #SHADOW_SECTION_DRAWER {
-            position: relative;
-            width: 100%;
-            display: flex;
-            -webkit-box-pack: center;
-            justify-content: center;
             background-color: transparent;
             z-index: 500000000000000;
-            /*top: 110px;*/
-            /*margin-top: -65px;*/
+            position: relative;
+            top: -120px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            -webkit-box-pack: center;
         }
     
     
