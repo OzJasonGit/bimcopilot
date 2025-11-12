@@ -2079,7 +2079,7 @@
             display: grid;
             grid-row-gap: 5px;
             grid-column-gap: 20px;
-            grid-template-rows: 10px auto 10px;
+            grid-template-rows: 5px auto 10px;
             grid-template-columns: 1fr;
             grid-template-areas:
                 "."
