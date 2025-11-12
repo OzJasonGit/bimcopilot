@@ -87,7 +87,7 @@
 
 
 #HEADER {
-    top: 500px;
+    top: 0px;
     width: 100%;
     max-width: 1520px;
     display: grid;
@@ -877,7 +877,7 @@
 
 
         #HEADER {          
-            top: 500px;
+            top: 0px;
             max-width: 1520px;
             display: grid;
             grid-column-gap: 20px;
