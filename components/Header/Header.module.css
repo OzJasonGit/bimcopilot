@@ -252,7 +252,7 @@
   position: fixed;
   width: 100%;
   top: 0px;
-  height: 80px;
+  height: auto;
   max-width: 1520px;
   background-color: #171717;
   display: grid;
@@ -801,7 +801,7 @@
     position: fixed;
     width: 100%;
     top: 0px;
-    height: 80px;
+    height: auto;
     max-width: 1520px;
     background-color: #171717;
     display: grid;
