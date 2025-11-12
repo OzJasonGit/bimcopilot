@@ -838,7 +838,7 @@
     grid-area: MAIN_AREA;
     display: grid;
     grid-row-gap: 0;
-    grid-column-gap: 40px;
+    grid-column-gap: 20px;
     grid-template-columns: 50px auto auto auto;
     grid-template-rows: auto auto;
     grid-template-areas:
@@ -1195,7 +1195,8 @@
 
   #SIGNUP_CONTAINER {
     grid-area: SIGN_IN;
-    display: none;
+    display: grid;
+    left: 0px;
   }
 
   #COPILOT_HOLDER {
