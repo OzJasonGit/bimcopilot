@@ -227,7 +227,7 @@ export default function CheckoutPage() {
                   </div>
                   <div className="flex justify-between text-gray-400">
                     <span className="text-stone-50">Sales Tax</span>
-                    <span className="text-stone-50">{formatPriceSimple(0)}</span>
+                    <span className="text-stone-50">{formatPrice(0)}</span>
                   </div>
                   <div className="flex justify-between font-semibold text-white border-t border-zinc-700 pt-2">
                     <span className="text-stone-50">Grand Total</span>

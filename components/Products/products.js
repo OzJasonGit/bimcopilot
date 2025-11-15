@@ -187,7 +187,7 @@ export default class Products extends Component {
                         {product.description}
                       </h4>
                       <h4 id={styles._H4} className="text-neutral-700 font-avant_garde_bold">
-                        From {formatPriceSimple(product.commercial_price)}
+                        From {formatPriceWithCurrency(product.commercial_price, currency)}
                       </h4>
                     </Link>
                   </div>
