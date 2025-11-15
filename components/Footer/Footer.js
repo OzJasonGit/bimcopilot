@@ -12,7 +12,11 @@ import Image from 'next/image';
 import Subform from "../Subscribetop/Client/subform";
 
 import logoMobile from './bimcopilot_logo_text_horizontal_white.svg';    
+import logoImage from './bimcopilot_logo.svg';    
 // import rocketShip from './giphy.gif';
+
+
+
 
 import logoARB from './logo_ARB.png';
 import logoRIBA from './logo_RIBA.png';
@@ -41,6 +45,16 @@ export default class Footer extends Component {
                                 //object-fit="cover"                      
                                 alt=""/>
                             </div>  
+
+                            <div id={styles.LOGO_HOLDER}>
+                              <Image
+                                id={styles.IMAGE_1}
+                                src={logoImage}                    
+                                style={{objectFit: "cover", objectPosition:"right"}}
+                                quality={100}
+                                //object-fit="cover"                      
+                                alt=""/>
+                            </div> 
                             <br/>                         
                         </div>
 
