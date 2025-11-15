@@ -25,7 +25,9 @@ async function fetchExchangeRates() {
     // Return fallback rates if API fails
     return getFallbackRates();
   } catch (error) {
-    console.error('Error fetching exchange rates:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error fetching exchange rates:', error);
+    }
     return getFallbackRates();
   }
 }
@@ -90,7 +92,9 @@ export async function getExchangeRates() {
         }
       }
     } catch (e) {
-      console.error('Error reading cached exchange rates:', e);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Error reading cached exchange rates:', e);
+      }
     }
   }
   
@@ -106,7 +110,9 @@ export async function getExchangeRates() {
       localStorage.setItem('exchangeRates', JSON.stringify(rates));
       localStorage.setItem('exchangeRatesTimestamp', now.toString());
     } catch (e) {
-      console.error('Error caching exchange rates:', e);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Error caching exchange rates:', e);
+      }
     }
   }
   
@@ -128,7 +134,9 @@ export async function convertPrice(priceUSD, targetCurrency, rates = null) {
   const rate = exchangeRates[targetCurrency];
   
   if (!rate) {
-    console.warn(`Exchange rate not found for ${targetCurrency}, using USD`);
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(`Exchange rate not found for ${targetCurrency}, using USD`);
+    }
     return priceUSD;
   }
   
@@ -314,7 +322,9 @@ export function getUserCurrency() {
     // Default to USD if we can't determine
     return 'USD';
   } catch (error) {
-    console.error('Error detecting currency:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error detecting currency:', error);
+    }
     return 'USD';
   }
 }
@@ -350,7 +360,9 @@ export function formatPrice(price, currency = null) {
 
     return formatter.format(price);
   } catch (error) {
-    console.error('Error formatting price:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error formatting price:', error);
+    }
     // Fallback formatting
     return `${targetCurrency} ${price.toFixed(2)}`;
   }
@@ -386,7 +398,9 @@ export function formatPriceSimple(price, currency = null) {
 
     return formatter.format(price);
   } catch (error) {
-    console.error('Error formatting price:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error formatting price:', error);
+    }
     return `${targetCurrency} ${price.toFixed(2)}`;
   }
 }
@@ -417,7 +431,9 @@ export async function formatPriceWithCurrency(priceUSD, currencyCode, rates = nu
 
     return formatter.format(convertedPrice);
   } catch (error) {
-    console.error('Error formatting price:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error formatting price:', error);
+    }
     return `${currencyCode} ${priceUSD.toFixed(2)}`;
   }
 }
@@ -461,7 +477,9 @@ export function formatPriceWithCurrencySync(priceUSD, currencyCode) {
 
     return formatter.format(convertedPrice);
   } catch (error) {
-    console.error('Error formatting price:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error formatting price:', error);
+    }
     return `${currencyCode} ${priceUSD.toFixed(2)}`;
   }
 }

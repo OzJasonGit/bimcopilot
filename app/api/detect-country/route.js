@@ -1,8 +1,32 @@
 import { NextResponse } from 'next/server';
 
-// Free IP geolocation API - no API key required
-// Alternative: You can use ipapi.co, ip-api.com, or other free services
-const GEOLOCATION_API = 'https://ipapi.co/json/';
+// Free IP geolocation APIs - try multiple services
+const GEOLOCATION_APIS = [
+  {
+    url: 'https://api.country.is/',
+    parser: (data) => ({
+      countryCode: data.country,
+      countryName: null,
+      currency: null,
+    }),
+  },
+  {
+    url: 'https://ipapi.co/json/',
+    parser: (data) => ({
+      countryCode: data.country_code,
+      countryName: data.country_name,
+      currency: data.currency_code || data.currency,
+    }),
+  },
+  {
+    url: 'https://ipinfo.io/json',
+    parser: (data) => ({
+      countryCode: data.country,
+      countryName: null,
+      currency: null,
+    }),
+  },
+];
 
 // Country to currency mapping
 const COUNTRY_TO_CURRENCY = {
@@ -35,49 +59,68 @@ const COUNTRY_TO_CURRENCY = {
 };
 
 export async function GET(request) {
-  try {
-    // Fetch location data
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout
+  // Try each API in sequence until one works
+  for (const api of GEOLOCATION_APIS) {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 4000); // 4 second timeout per API
 
-    const response = await fetch(GEOLOCATION_API, {
-      signal: controller.signal,
-      headers: {
-        'Accept': 'application/json',
-      },
-    });
+      const response = await fetch(api.url, {
+        signal: controller.signal,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
 
-    clearTimeout(timeoutId);
+      clearTimeout(timeoutId);
 
-    if (!response.ok) {
-      throw new Error(`API responded with status: ${response.status}`);
+      if (!response.ok) {
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`API ${api.url} failed with status ${response.status}, trying next...`);
+        }
+        continue; // Try next API
+      }
+
+      const data = await response.json();
+      const parsed = api.parser(data);
+      
+      if (parsed.countryCode) {
+        const countryCode = parsed.countryCode.toUpperCase();
+        
+        // Get currency from country code mapping
+        const currencyCode = COUNTRY_TO_CURRENCY[countryCode] || parsed.currency || 'USD';
+        
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`✅ Detected country: ${countryCode}, currency: ${currencyCode}`);
+        }
+        
+        // Return country and currency info
+        return NextResponse.json({
+          success: true,
+          country: countryCode,
+          countryName: parsed.countryName,
+          currency: currencyCode,
+          currencyCode: currencyCode,
+        });
+      }
+    } catch (error) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`API ${api.url} error:`, error.message);
+      }
+      continue; // Try next API
     }
-
-    const data = await response.json();
-    const countryCode = (data.country_code || data.country || '').toUpperCase();
-    
-    // Get currency from country code mapping
-    const currencyCode = COUNTRY_TO_CURRENCY[countryCode] || data.currency_code || data.currency || 'USD';
-    
-    // Return country and currency info
-    return NextResponse.json({
-      success: true,
-      country: countryCode,
-      countryName: data.country_name,
-      currency: currencyCode,
-      currencyCode: currencyCode,
-    });
-  } catch (error) {
-    console.error('Error detecting country:', error.message);
-    
-    // Return null if detection fails (will fall back to browser locale detection)
-    return NextResponse.json({
-      success: false,
-      country: null,
-      currency: null,
-      currencyCode: null,
-      error: error.message,
-    });
   }
+  
+  // All APIs failed
+  if (process.env.NODE_ENV === 'development') {
+    console.error('All geolocation APIs failed');
+  }
+  return NextResponse.json({
+    success: false,
+    country: null,
+    currency: null,
+    currencyCode: null,
+    error: 'All geolocation APIs failed',
+  });
 }
 

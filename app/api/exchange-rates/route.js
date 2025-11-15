@@ -39,7 +39,9 @@ export async function GET(request) {
       timestamp: Date.now(),
     });
   } catch (error) {
-    console.error('Error fetching exchange rates:', error.message);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error fetching exchange rates:', error.message);
+    }
     
     // Return fallback rates (approximate rates, should be updated periodically)
     const fallbackRates = {
