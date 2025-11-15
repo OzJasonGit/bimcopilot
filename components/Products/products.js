@@ -59,7 +59,7 @@ export default class Products extends Component {
 
                       <div 
                         
-                        class="rounded-lg ..."
+                        class="rounded-2xl ..."
                         style={{
                           gridArea: 'IMAGE',
                           width: '100%',
