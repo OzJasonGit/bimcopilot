@@ -6,20 +6,53 @@ import { getUserCurrency, formatPriceWithCurrencySync, getExchangeRates } from '
 const CurrencyContext = createContext();
 
 export function CurrencyProvider({ children }) {
+  // Always start with USD to prevent hydration mismatch
   const [currency, setCurrency] = useState('USD');
   const [exchangeRates, setExchangeRates] = useState(null);
   const [ratesLoading, setRatesLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
+
+  // Set mounted flag and immediately load saved currency
+  useEffect(() => {
+    setMounted(true);
+    
+    // Immediately check localStorage for saved currency
+    if (typeof window !== 'undefined') {
+      const savedCurrency = localStorage.getItem('selectedCurrency');
+      if (savedCurrency) {
+        setCurrency(savedCurrency);
+      }
+    }
+  }, []);
 
   // Load currency from localStorage on mount, or detect from location/browser
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const savedCurrency = localStorage.getItem('selectedCurrency');
-      
-      // Always try to detect from location first (unless user manually selected)
-      // Check if user has manually selected (not auto-detected)
-      const wasManuallySelected = localStorage.getItem('currencyManuallySelected') === 'true';
-      
-      if (!wasManuallySelected) {
+    if (!mounted || typeof window === 'undefined') return;
+    
+    const savedCurrency = localStorage.getItem('selectedCurrency');
+    const wasManuallySelected = localStorage.getItem('currencyManuallySelected') === 'true';
+    const wasAutoDetected = localStorage.getItem('currencyAutoDetected') === 'true';
+    
+    // If user manually selected, use saved currency
+    if (wasManuallySelected && savedCurrency) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`💾 Using manually selected currency: ${savedCurrency}`);
+      }
+      setCurrency(savedCurrency);
+      return;
+    }
+    
+    // If already auto-detected and saved, use it
+    if (wasAutoDetected && savedCurrency) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`✅ Using previously auto-detected currency: ${savedCurrency}`);
+      }
+      setCurrency(savedCurrency);
+      return;
+    }
+    
+    // No saved currency or first visit - detect from location
+    if (!savedCurrency || !wasAutoDetected) {
         // Try to detect from user's location
         const detectCurrencyFromLocation = async () => {
           try {
@@ -92,15 +125,8 @@ export function CurrencyProvider({ children }) {
         };
         
         detectCurrencyFromLocation();
-      } else if (savedCurrency) {
-        // User manually selected, use saved currency
-        if (process.env.NODE_ENV === 'development') {
-          console.log(`💾 Using manually selected currency: ${savedCurrency}`);
-        }
-        setCurrency(savedCurrency);
-      }
     }
-  }, []);
+  }, [mounted]);
 
   // Fetch exchange rates on mount and when currency changes
   useEffect(() => {

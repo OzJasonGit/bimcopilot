@@ -16,10 +16,10 @@ const Hamburger = () => {
                 className={`hamburger ${isActive ? "is-active" : ""}`}
                 onClick={toggleClass}>
 
-                <div class={styles.hamburger} id={styles.hamburger-11}>
-                    <span class={styles.line}></span>
-                    <span class={styles.line}></span>
-                    <span class={styles.line}></span>
+                <div className={styles.hamburger} id="hamburger-11">
+                    <span className={styles.line}></span>
+                    <span className={styles.line}></span>
+                    <span className={styles.line}></span>
                 </div>  
             </div>           
         </>     
