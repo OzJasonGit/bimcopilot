@@ -242,7 +242,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-color: #171717;
+  background-color: #f5f5f4;
   z-index: 10000;
   /*top: -110px;*/
 
@@ -254,7 +254,7 @@
   top: 0px;
   height: auto;
   max-width: 1520px;
-  background-color: #171717;
+  background-color: #f5f5f4;
   display: grid;
   grid-row-gap: 0px;
   grid-template-rows: auto;
@@ -267,7 +267,7 @@
 
 .burger_dot {
   border-radius: 100%;
-  background-color: #171717;
+  background-color: #f5f5f4;
 }
 
 /*#FIXED_HEADER {
@@ -791,7 +791,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #171717;
+    background-color: #f5f5f4;
     z-index: 10000;
     /*top: -110px;*/
 
@@ -803,7 +803,7 @@
     top: 0px;
     height: auto;
     max-width: 1520px;
-    background-color: #171717;
+    background-color: #f5f5f4;
     display: grid;
     grid-row-gap: 0px;
     grid-template-rows: auto;
@@ -816,7 +816,7 @@
 
   .burger_dot {
     border-radius: 100%;
-    background-color: #171717;
+    background-color: #f5f5f4;
   }
 
   /*#FIXED_HEADER {
@@ -1140,7 +1140,7 @@
     top: 0;
     height: auto;
     max-width: 1520px;
-    background-color: #171717;
+    background-color: #f5f5f4;
     display: grid;
     grid-row-gap: 0;
     grid-template-rows: auto;
@@ -1241,13 +1241,13 @@
 
   .burger_dot {
     border-radius: 100%;
-    background-color: #171717;
+    background-color: #f5f5f4;
   }
 
   #HEADER_MENU_1 {
     height: 100%;
     grid-area: AREA;
-    background-color: #171717;
+    background-color: #f5f5f4;
   }
 
 
@@ -1356,7 +1356,7 @@
   #HEADER {
     height: auto;
     max-width: 1520px;
-    background-color: #171717;
+    background-color: #f5f5f4;
     grid-row-gap: 0;
     grid-template-columns: 20px 1fr 20px;
     grid-template-areas: ". MAIN_AREA .";
@@ -1466,13 +1466,13 @@
 
   .burger_dot {
     border-radius: 100%;
-    background-color: #171717;
+    background-color: #f5f5f4;
   }
 
   #HEADER_MENU_1 {
     height: 100%;
     grid-area: AREA;
-    background-color: #171717;
+    background-color: #f5f5f4;
   }
 
 
