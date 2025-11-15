@@ -17,6 +17,7 @@ import PayPalButton from '../Payment/PayPalButton';
 import GooglePayButton from '../Payment/GooglePayButton';
 import Invoice from '../Invoice/Invoice';
 import styles from './ProductDetail.module.css';
+import { useFormatPrice } from '@/components/Context/CurrencyContext';
 
 const ProductDetail = ({ slug }) => {
   const [product, setProduct] = useState(null);
@@ -26,6 +27,7 @@ const ProductDetail = ({ slug }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [invoiceData, setInvoiceData] = useState(null);
   const router = useRouter();
+  const formatPrice = useFormatPrice();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -234,7 +236,7 @@ const ProductDetail = ({ slug }) => {
                       onChange={(e) => setSelectedLicense(e.target.value)}
                     />
                     <span className={styles.license_label}>
-                      Student License - ${product.student_price}
+                      Student License - {formatPrice(product.student_price)}
                     </span>
                   </label>
                   <label className={styles.license_option}>
@@ -246,7 +248,7 @@ const ProductDetail = ({ slug }) => {
                       onChange={(e) => setSelectedLicense(e.target.value)}
                     />
                     <span className={styles.license_label}>
-                      Commercial License - ${product.commercial_price}
+                      Commercial License - {formatPrice(product.commercial_price)}
                     </span>
                   </label>
                 </div>
@@ -268,7 +270,7 @@ const ProductDetail = ({ slug }) => {
               
               <div className={styles.price_display}>
                 <span className={styles.price_label}>Total Price:</span>
-                <span className={styles.price_amount}>${totalAmount.toFixed(2)}</span>
+                <span className={styles.price_amount}>{formatPrice(totalAmount)}</span>
               </div>
               
               <div className={styles.action_buttons}>

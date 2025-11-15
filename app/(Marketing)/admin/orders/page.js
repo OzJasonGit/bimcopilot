@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React, { useRef } from 'react';
+import { useFormatPrice, getUserCurrency } from '@/components/Context/CurrencyContext';
 
 const ORDERS_PER_PAGE = 50;
 
@@ -39,6 +40,7 @@ export default function AdminOrders() {
   const [month, setMonth] = useState('');
   const [limit] = useState(ORDERS_PER_PAGE);
   const [colWidths, setColWidths] = useState(DEFAULT_COL_WIDTHS);
+  const formatPrice = useFormatPrice();
   const resizingCol = useRef(null);
   const [search, setSearch] = useState('');
   const [searchInput, setSearchInput] = useState('');
@@ -337,7 +339,7 @@ export default function AdminOrders() {
                             <div key={index} className="mb-1 overflow-hidden text-ellipsis whitespace-nowrap block">
                               <span className="font-medium overflow-hidden text-ellipsis whitespace-nowrap block">{product.title}</span>
                               <span className="text-gray-500 ml-2">x{product.quantity}</span>
-                              <span className="text-gray-500 ml-2">${product.price}</span>
+                              <span className="text-gray-500 ml-2">{formatPrice(product.price)}</span>
                             </div>
                           ))}
                         </div>
@@ -356,7 +358,7 @@ export default function AdminOrders() {
                     </div>
                   </td>
                   <td style={{ width: colWidths.amount }} className="px-2 py-4 whitespace-nowrap overflow-hidden text-ellipsis text-sm text-gray-900">
-                    ${order.amount?.toFixed(2) || '0.00'} {order.currency?.toUpperCase()}
+                    {formatPrice(order.amount || 0)} {order.currency && order.currency !== getUserCurrency() ? `(${order.currency.toUpperCase()})` : ''}
                   </td>
                   <td style={{ width: colWidths.payment }} className="px-2 py-4 whitespace-nowrap overflow-hidden text-ellipsis text-sm text-gray-900">
                     {order.paymentMethod

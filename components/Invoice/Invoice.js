@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useFormatPrice } from '@/components/Context/CurrencyContext';
 
 const colors = {
   accent: '#2563eb',
@@ -10,6 +11,7 @@ const colors = {
 
 const Invoice = ({ orderNumber, date, buyer, products, total, onClose }) => {
   const invoiceRef = useRef();
+  const formatPrice = useFormatPrice();
   const taxRate = 0.0;
   const tax = total * taxRate;
   const grandTotal = total + tax;
@@ -48,8 +50,8 @@ const Invoice = ({ orderNumber, date, buyer, products, total, onClose }) => {
                 <tr key={i} style={i % 2 ? styles.trOdd : styles.trEven}>
                   <td>{p.title}</td>
                   <td style={styles.center}>{p.quantity}</td>
-                  <td style={styles.right}>${p.price.toFixed(2)}</td>
-                  <td style={styles.right}>${(p.price * p.quantity).toFixed(2)}</td>
+                  <td style={styles.right}>{formatPrice(p.price)}</td>
+                  <td style={styles.right}>{formatPrice(p.price * p.quantity)}</td>
                 </tr>
               ))}
             </tbody>
@@ -57,9 +59,9 @@ const Invoice = ({ orderNumber, date, buyer, products, total, onClose }) => {
         </section>
 
         <section style={styles.totals}>
-          <div><span>Subtotal:</span><span>${total.toFixed(2)}</span></div>
-          {tax > 0 && <div><span>Tax:</span><span>${tax.toFixed(2)}</span></div>}
-          <div style={styles.total}><span>Total:</span><span>${grandTotal.toFixed(2)}</span></div>
+          <div><span>Subtotal:</span><span>{formatPrice(total)}</span></div>
+          {tax > 0 && <div><span>Tax:</span><span>{formatPrice(tax)}</span></div>}
+          <div style={styles.total}><span>Total:</span><span>{formatPrice(grandTotal)}</span></div>
         </section>
 
         <div style={styles.buttonRow}>

@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from '@/components/Header/Header';
 import Sidebar from '@/components/Sidebar/sidebar';
+import { CurrencyProvider } from '@/components/Context/CurrencyContext';
 
 export default function AdminLayout({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -69,7 +70,7 @@ export default function AdminLayout({ children }) {
   }
 
   return (
-    <>
+    <CurrencyProvider>
       <Header />
       <div className="flex">
         <div className="w-64 pt-28 fixed h-full bg-gray-900 text-white">
@@ -79,6 +80,6 @@ export default function AdminLayout({ children }) {
           {children}
         </main>
       </div>
-    </>
+    </CurrencyProvider>
   );
 } 

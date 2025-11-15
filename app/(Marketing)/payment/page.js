@@ -5,10 +5,12 @@ import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import handleCheckout from '@/components/Payment/payment';
 import CheckoutButton from '@/components/Payment/checkoutButton';
+import { useFormatPrice } from '@/components/Context/CurrencyContext';
 
 const PaymentPageInner = () => {
   const searchParams = useSearchParams();
   const [product, setProduct] = useState(null);
+  const formatPrice = useFormatPrice();
 
   useEffect(() => {
     const productParam = searchParams.get('product');
@@ -28,7 +30,7 @@ const PaymentPageInner = () => {
     <div style={{ padding: '2rem' }}>
       <h1>Checkout</h1>
       <h2>{product.title}</h2>
-      <p>Price: ${product.price.toFixed(2)}</p>
+      <p>Price: {formatPrice(product.price)}</p>
       <Image 
         src={product.image} 
         alt={product.title} 

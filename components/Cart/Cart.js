@@ -11,12 +11,14 @@ import handleCheckout from '@/components/Payment/payment';
 import { useCart } from '@/components/Context/CartContext';
 import { toast } from 'react-toastify';
 import PayPalButton from '@/components/Payment/PayPalButton';
+import { useFormatPrice } from '@/components/Context/CurrencyContext';
 
 export default function CheckoutPage() {
   
   const { cartItems, removeFromCart, updateQuantity, loadCart, totalPrice, isLoading } = useCart();
   const [selectedItems, setSelectedItems] = useState([]);
   const router = useRouter();
+  const formatPrice = useFormatPrice();
 
   useEffect(() => {
     loadCart();
@@ -174,7 +176,7 @@ export default function CheckoutPage() {
                         <p className="font-semibold text-stone-50"
                             style={{
                             paddingBottom: "5px",}}>{item.title}</p>
-                        <p className="text-sm text-gray-400">${item.price.toFixed(2)} each</p>
+                        <p className="text-sm text-gray-400">{formatPrice(item.price)} each</p>
                       </div>
                     </div>
 
@@ -194,7 +196,7 @@ export default function CheckoutPage() {
                         +
                       </button>
                       <p className="w-20 text-right font-medium text-stone-50">
-                        ${(item.quantity * item.price).toFixed(2)}
+                        {formatPrice(item.quantity * item.price)}
                       </p>
                       <button
                         onClick={() => removeFromCart(item.id || item._id)}
@@ -221,15 +223,15 @@ export default function CheckoutPage() {
                 <div className="border-t border-zinc-700 pt-4 space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-stone-50">Subtotal</span>
-                    <span className="text-stone-50">${currentTotal.toFixed(2)}</span>
+                    <span className="text-stone-50">{formatPrice(currentTotal)}</span>
                   </div>
                   <div className="flex justify-between text-gray-400">
                     <span className="text-stone-50">Sales Tax</span>
-                    <span className="text-stone-50">$0.00</span>
+                    <span className="text-stone-50">{formatPriceSimple(0)}</span>
                   </div>
                   <div className="flex justify-between font-semibold text-white border-t border-zinc-700 pt-2">
                     <span className="text-stone-50">Grand Total</span>
-                    <span className="text-stone-50">${currentTotal.toFixed(2)}</span>
+                    <span className="text-stone-50">{formatPrice(currentTotal)}</span>
                   </div>
                 </div>
                 <div className="space-y-3">
