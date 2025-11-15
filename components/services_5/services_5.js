@@ -62,7 +62,7 @@ return (
                       style={{
                         height:"auto",
                         width:"100%",
-                        padding: "50px",
+                        padding: "60px",
                         overflow: "hidden"
                       }}>
 
