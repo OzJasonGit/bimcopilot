@@ -117,7 +117,7 @@ export default class Footer extends Component {
 
                     </div>
                     <div id={styles.OTHER} class={styles.container}>
-                        <div class=" rounded-md ..."  id={styles.ROCKETSHIP_HOLDER}>   
+                        <div class=" rounded-2xl ..."  id={styles.ROCKETSHIP_HOLDER}>   
                             <Image
                                     src={rocketShip}
                                     alt="Picture of the author"
