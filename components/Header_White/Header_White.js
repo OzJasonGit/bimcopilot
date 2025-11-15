@@ -255,7 +255,7 @@ export default function Header() {
                                 {/* Logout Button */}
                                 <button
                                   onClick={handleLogout}
-                                  className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
+                                  className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-stone-700 hover:text-gray-900 transition-colors duration-200"
                                 >
                                   <span className="flex items-center">
                                     <FontAwesomeIcon icon={faSignOutAlt} className="mr-2 w-4 h-4" />
@@ -268,13 +268,13 @@ export default function Header() {
                         ) : (
                           <div className="content-center ..." id={styles.SIGNUP_GRID}>
                             <Link id={styles.STORIES} href="/signup" style={{ gridArea: "SIGNUP", position: "relative", height: "100%", width: "100%", textAlign: "center", left: "-15.5px" }}>
-                              <h3 id={styles.H_3_STORIES} className="text-center ...  text-slate-50 font-avant_garde_bold" data-content="Signup">
+                              <h3 id={styles.H_3_STORIES} className="text-center ...  text-stone-700 font-avant_garde_bold" data-content="Signup">
                                 Signup
                               </h3>
                             </Link>
                             <div className="bg-zinc-500 ..." id={styles.B1}></div>
                             <Link id={styles.SIGNUP} href="/signin" style={{ gridArea: "LOGIN", position: "relative", height: "100%", width: "100%", textAlign: "center", left: "-15px" }}>
-                              <h3 id={styles.H_3_STORIES} className="text-center ...  text-slate-50 font-avant_garde_bold" data-content="Login">
+                              <h3 id={styles.H_3_STORIES} className="text-center ...  text-stone-700 font-avant_garde_bold" data-content="Login">
                                 Login
                               </h3>
                             </Link>
