@@ -62,7 +62,11 @@ export async function GET(request) {
   // Get client IP from headers (for production)
   const forwarded = request.headers.get('x-forwarded-for');
   const realIp = request.headers.get('x-real-ip');
-  const clientIp = forwarded ? forwarded.split(',')[0] : realIp || null;
+  const cfConnectingIp = request.headers.get('cf-connecting-ip'); // Cloudflare
+  const clientIp = cfConnectingIp || (forwarded ? forwarded.split(',')[0].trim() : null) || realIp || null;
+  
+  // Log for debugging (remove in production if needed)
+  console.log(`[detect-country] Client IP: ${clientIp}, Headers: x-forwarded-for=${forwarded}, x-real-ip=${realIp}, cf-connecting-ip=${cfConnectingIp}`);
   
   // Try each API in sequence until one works
   for (const api of GEOLOCATION_APIS) {
@@ -70,10 +74,16 @@ export async function GET(request) {
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout per API
 
-      // Build URL - some APIs support IP parameter
+      // Build URL - use client IP if available
       let apiUrl = api.url;
-      if (clientIp && api.url.includes('ipapi.co')) {
-        apiUrl = `https://ipapi.co/${clientIp}/json/`;
+      if (clientIp) {
+        if (api.url.includes('ipapi.co')) {
+          apiUrl = `https://ipapi.co/${clientIp}/json/`;
+        } else if (api.url.includes('ipinfo.io')) {
+          apiUrl = `https://ipinfo.io/${clientIp}/json`;
+        } else if (api.url.includes('country.is')) {
+          apiUrl = `https://api.country.is/${clientIp}`;
+        }
       }
 
       const response = await fetch(apiUrl, {
