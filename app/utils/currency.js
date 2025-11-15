@@ -1,7 +1,139 @@
 /**
  * Currency utility functions
  * Detects user's currency based on browser locale and formats prices accordingly
+ * Includes exchange rate fetching and currency conversion
  */
+
+// Cache for exchange rates
+let exchangeRatesCache = null;
+let exchangeRatesTimestamp = null;
+const CACHE_DURATION = 60 * 60 * 1000; // 1 hour
+
+/**
+ * Fetches exchange rates from the API
+ * @returns {Promise<Object>} Exchange rates object
+ */
+async function fetchExchangeRates() {
+  try {
+    const response = await fetch('/api/exchange-rates');
+    const data = await response.json();
+    
+    if (data.success && data.rates) {
+      return data.rates;
+    }
+    
+    // Return fallback rates if API fails
+    return getFallbackRates();
+  } catch (error) {
+    console.error('Error fetching exchange rates:', error);
+    return getFallbackRates();
+  }
+}
+
+/**
+ * Gets fallback exchange rates (used when API fails)
+ * @returns {Object} Fallback exchange rates
+ */
+function getFallbackRates() {
+  return {
+    USD: 1,
+    EUR: 0.92,
+    GBP: 0.79,
+    CAD: 1.35,
+    AUD: 1.52,
+    JPY: 150,
+    CNY: 7.2,
+    INR: 83,
+    BRL: 4.95,
+    MXN: 17,
+    KRW: 1330,
+    SGD: 1.34,
+    HKD: 7.82,
+    NZD: 1.64,
+    CHF: 0.88,
+    SEK: 10.5,
+    NOK: 10.7,
+    DKK: 6.87,
+    PLN: 4.0,
+    RUB: 92,
+    TRY: 32,
+    ZAR: 18.5,
+    AED: 3.67,
+    SAR: 3.75,
+  };
+}
+
+/**
+ * Gets exchange rates (with caching)
+ * @returns {Promise<Object>} Exchange rates object
+ */
+export async function getExchangeRates() {
+  const now = Date.now();
+  
+  // Return cached rates if still valid
+  if (exchangeRatesCache && exchangeRatesTimestamp && (now - exchangeRatesTimestamp) < CACHE_DURATION) {
+    return exchangeRatesCache;
+  }
+  
+  // Check localStorage for cached rates
+  if (typeof window !== 'undefined') {
+    try {
+      const cached = localStorage.getItem('exchangeRates');
+      const cachedTimestamp = localStorage.getItem('exchangeRatesTimestamp');
+      
+      if (cached && cachedTimestamp) {
+        const cachedTime = parseInt(cachedTimestamp, 10);
+        if (now - cachedTime < CACHE_DURATION) {
+          exchangeRatesCache = JSON.parse(cached);
+          exchangeRatesTimestamp = cachedTime;
+          return exchangeRatesCache;
+        }
+      }
+    } catch (e) {
+      console.error('Error reading cached exchange rates:', e);
+    }
+  }
+  
+  // Fetch new rates
+  const rates = await fetchExchangeRates();
+  
+  // Cache the rates
+  exchangeRatesCache = rates;
+  exchangeRatesTimestamp = now;
+  
+  if (typeof window !== 'undefined') {
+    try {
+      localStorage.setItem('exchangeRates', JSON.stringify(rates));
+      localStorage.setItem('exchangeRatesTimestamp', now.toString());
+    } catch (e) {
+      console.error('Error caching exchange rates:', e);
+    }
+  }
+  
+  return rates;
+}
+
+/**
+ * Converts a price from USD to target currency
+ * @param {number} priceUSD - Price in USD
+ * @param {string} targetCurrency - Target currency code
+ * @param {Object} rates - Optional exchange rates (if not provided, will fetch)
+ * @returns {Promise<number>} Converted price
+ */
+export async function convertPrice(priceUSD, targetCurrency, rates = null) {
+  if (!priceUSD || priceUSD === 0) return 0;
+  if (targetCurrency === 'USD') return priceUSD;
+  
+  const exchangeRates = rates || await getExchangeRates();
+  const rate = exchangeRates[targetCurrency];
+  
+  if (!rate) {
+    console.warn(`Exchange rate not found for ${targetCurrency}, using USD`);
+    return priceUSD;
+  }
+  
+  return priceUSD * rate;
+}
 
 /**
  * Detects the user's currency code based on their browser locale
@@ -228,17 +360,21 @@ export function formatPriceSimple(price, currency = null) {
 }
 
 /**
- * Formats a price with a specific currency code
- * @param {number} price - The price value
+ * Formats a price with a specific currency code (with conversion)
+ * @param {number} priceUSD - The price in USD
  * @param {string} currencyCode - Currency code (e.g., 'USD', 'EUR')
- * @returns {string} Formatted price with currency symbol
+ * @param {Object} rates - Optional exchange rates
+ * @returns {Promise<string>} Formatted price with currency symbol
  */
-export function formatPriceWithCurrency(price, currencyCode) {
-  if (price === null || price === undefined) {
+export async function formatPriceWithCurrency(priceUSD, currencyCode, rates = null) {
+  if (priceUSD === null || priceUSD === undefined) {
     return '';
   }
 
   try {
+    // Convert price if not USD
+    const convertedPrice = await convertPrice(priceUSD, currencyCode, rates);
+    
     const locale = navigator.language || navigator.userLanguage || 'en-US';
     const formatter = new Intl.NumberFormat(locale, {
       style: 'currency',
@@ -247,10 +383,54 @@ export function formatPriceWithCurrency(price, currencyCode) {
       maximumFractionDigits: 2,
     });
 
-    return formatter.format(price);
+    return formatter.format(convertedPrice);
   } catch (error) {
     console.error('Error formatting price:', error);
-    return `${currencyCode} ${price.toFixed(2)}`;
+    return `${currencyCode} ${priceUSD.toFixed(2)}`;
+  }
+}
+
+/**
+ * Synchronous version for formatting (uses cached rates or no conversion)
+ * @param {number} priceUSD - The price in USD
+ * @param {string} currencyCode - Currency code
+ * @returns {string} Formatted price
+ */
+export function formatPriceWithCurrencySync(priceUSD, currencyCode) {
+  if (priceUSD === null || priceUSD === undefined) {
+    return '';
+  }
+
+  try {
+    // Try to get cached rates from localStorage
+    let convertedPrice = priceUSD;
+    if (currencyCode !== 'USD' && typeof window !== 'undefined') {
+      try {
+        const cached = localStorage.getItem('exchangeRates');
+        if (cached) {
+          const rates = JSON.parse(cached);
+          const rate = rates[currencyCode];
+          if (rate) {
+            convertedPrice = priceUSD * rate;
+          }
+        }
+      } catch (e) {
+        // Use USD price if conversion fails
+      }
+    }
+    
+    const locale = navigator.language || navigator.userLanguage || 'en-US';
+    const formatter = new Intl.NumberFormat(locale, {
+      style: 'currency',
+      currency: currencyCode,
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+
+    return formatter.format(convertedPrice);
+  } catch (error) {
+    console.error('Error formatting price:', error);
+    return `${currencyCode} ${priceUSD.toFixed(2)}`;
   }
 }
 

@@ -1,12 +1,14 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
-import { getUserCurrency, formatPriceWithCurrency } from '@/app/utils/currency';
+import { getUserCurrency, formatPriceWithCurrencySync, getExchangeRates } from '@/app/utils/currency';
 
 const CurrencyContext = createContext();
 
 export function CurrencyProvider({ children }) {
   const [currency, setCurrency] = useState('USD');
+  const [exchangeRates, setExchangeRates] = useState(null);
+  const [ratesLoading, setRatesLoading] = useState(true);
 
   // Load currency from localStorage on mount, or detect from browser
   useEffect(() => {
@@ -23,6 +25,28 @@ export function CurrencyProvider({ children }) {
     }
   }, []);
 
+  // Fetch exchange rates on mount and when currency changes
+  useEffect(() => {
+    const loadExchangeRates = async () => {
+      try {
+        setRatesLoading(true);
+        const rates = await getExchangeRates();
+        setExchangeRates(rates);
+      } catch (error) {
+        console.error('Error loading exchange rates:', error);
+        // Will use fallback rates from formatPriceWithCurrencySync
+      } finally {
+        setRatesLoading(false);
+      }
+    };
+
+    loadExchangeRates();
+    
+    // Refresh rates every hour
+    const interval = setInterval(loadExchangeRates, 60 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   // Save to localStorage whenever currency changes
   const updateCurrency = useCallback((newCurrency) => {
     setCurrency(newCurrency);
@@ -33,13 +57,21 @@ export function CurrencyProvider({ children }) {
     }
   }, []);
 
-  // Format price function that uses current currency
+  // Format price function that uses current currency with conversion
   const formatPrice = useCallback((price) => {
-    return formatPriceWithCurrency(price, currency);
+    if (price === null || price === undefined) return '';
+    // Use synchronous version that uses cached rates from localStorage
+    return formatPriceWithCurrencySync(price, currency);
   }, [currency]);
 
   return (
-    <CurrencyContext.Provider value={{ currency, setCurrency: updateCurrency, formatPrice }}>
+    <CurrencyContext.Provider value={{ 
+      currency, 
+      setCurrency: updateCurrency, 
+      formatPrice,
+      exchangeRates,
+      ratesLoading
+    }}>
       {children}
     </CurrencyContext.Provider>
   );

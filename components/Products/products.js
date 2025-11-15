@@ -12,7 +12,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
-import { formatPriceWithCurrency } from '@/app/utils/currency';
+import { formatPriceWithCurrencySync } from '@/app/utils/currency';
 
 export default class Products extends Component {
   constructor(props) {
@@ -116,7 +116,7 @@ export default class Products extends Component {
                             <h3 id={styles._H3} 
                                 style={{ marginTop: '4px' }}
                                 className="text-stone-500 font-avant_garde_medium">
-                                From {formatPriceWithCurrency(product.commercial_price, currency)}
+                                From {formatPriceWithCurrencySync(product.commercial_price, currency)}
                             </h3>
                           </Link>
                     </div>
