@@ -10,17 +10,35 @@ export function CurrencyProvider({ children }) {
   const [exchangeRates, setExchangeRates] = useState(null);
   const [ratesLoading, setRatesLoading] = useState(true);
 
-  // Load currency from localStorage on mount, or detect from browser
+  // Load currency from localStorage on mount, or detect from location/browser
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const savedCurrency = localStorage.getItem('selectedCurrency');
       if (savedCurrency) {
         setCurrency(savedCurrency);
       } else {
-        // Detect from browser if no saved preference
-        const detectedCurrency = getUserCurrency();
-        setCurrency(detectedCurrency);
-        localStorage.setItem('selectedCurrency', detectedCurrency);
+        // Try to detect from user's location first
+        const detectCurrencyFromLocation = async () => {
+          try {
+            const response = await fetch('/api/detect-country');
+            const data = await response.json();
+            
+            if (data.success && data.currencyCode) {
+              setCurrency(data.currencyCode);
+              localStorage.setItem('selectedCurrency', data.currencyCode);
+              return;
+            }
+          } catch (error) {
+            console.log('Location detection failed, using browser locale:', error);
+          }
+          
+          // Fallback to browser locale detection
+          const detectedCurrency = getUserCurrency();
+          setCurrency(detectedCurrency);
+          localStorage.setItem('selectedCurrency', detectedCurrency);
+        };
+        
+        detectCurrencyFromLocation();
       }
     }
   }, []);

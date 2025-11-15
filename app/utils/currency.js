@@ -136,6 +136,38 @@ export async function convertPrice(priceUSD, targetCurrency, rates = null) {
 }
 
 /**
+ * Country to currency mapping
+ */
+const COUNTRY_TO_CURRENCY = {
+  'US': 'USD', 'GB': 'GBP', 'CA': 'CAD', 'AU': 'AUD', 'NZ': 'NZD',
+  'DE': 'EUR', 'FR': 'EUR', 'IT': 'EUR', 'ES': 'EUR', 'NL': 'EUR',
+  'BE': 'EUR', 'AT': 'EUR', 'PT': 'EUR', 'FI': 'EUR', 'IE': 'EUR',
+  'GR': 'EUR', 'LU': 'EUR', 'MT': 'EUR', 'CY': 'EUR', 'SK': 'EUR',
+  'SI': 'EUR', 'EE': 'EUR', 'LV': 'EUR', 'LT': 'EUR',
+  'JP': 'JPY', 'CN': 'CNY', 'KR': 'KRW', 'IN': 'INR', 'BR': 'BRL',
+  'MX': 'MXN', 'SG': 'SGD', 'HK': 'HKD', 'TW': 'TWD', 'TH': 'THB',
+  'MY': 'MYR', 'ID': 'IDR', 'PH': 'PHP', 'VN': 'VND', 'PK': 'PKR',
+  'BD': 'BDT', 'LK': 'LKR', 'NP': 'NPR', 'MM': 'MMK', 'KH': 'KHR',
+  'LA': 'LAK',
+  'CH': 'CHF', 'SE': 'SEK', 'NO': 'NOK', 'DK': 'DKK', 'PL': 'PLN',
+  'CZ': 'CZK', 'HU': 'HUF', 'RO': 'RON', 'BG': 'BGN', 'HR': 'HRK',
+  'RS': 'RSD', 'IS': 'ISK',
+  'AE': 'AED', 'SA': 'SAR', 'IL': 'ILS', 'EG': 'EGP', 'JO': 'JOD',
+  'LB': 'LBP', 'QA': 'QAR', 'KW': 'KWD', 'BH': 'BHD', 'OM': 'OMR',
+  'IR': 'IRR', 'IQ': 'IQD',
+  'ZA': 'ZAR', 'NG': 'NGN', 'KE': 'KES', 'ET': 'ETB', 'GH': 'GHS',
+  'UG': 'UGX', 'TZ': 'TZS', 'MA': 'MAD',
+  'AR': 'ARS', 'CL': 'CLP', 'CO': 'COP', 'PE': 'PEN', 'UY': 'UYU',
+  'VE': 'VES', 'BO': 'BOB', 'PY': 'PYG', 'GT': 'GTQ', 'CR': 'CRC',
+  'PA': 'PAB', 'DO': 'DOP', 'JM': 'JMD', 'TT': 'TTD',
+  'FJ': 'FJD', 'PG': 'PGK',
+  'RU': 'RUB', 'TR': 'TRY', 'UA': 'UAH', 'BY': 'BYN', 'KZ': 'KZT',
+  'UZ': 'UZS', 'GE': 'GEL', 'AM': 'AMD', 'AZ': 'AZN', 'KG': 'KGS',
+  'TJ': 'TJS', 'TM': 'TMT', 'MD': 'MDL', 'BA': 'BAM', 'MK': 'MKD',
+  'AL': 'ALL',
+};
+
+/**
  * Detects the user's currency code based on their browser locale
  * @returns {string} Currency code (e.g., 'USD', 'EUR', 'GBP')
  */
