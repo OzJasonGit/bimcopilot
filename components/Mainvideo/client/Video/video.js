@@ -24,9 +24,9 @@ const Video = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              backgroundColor: "white",
+              backgroundColor: "transparent",
               zIndex: 1,
-              borderRadius: "0.5rem",
+              borderRadius: "1rem",
             }}
           >
             <SkeletonLoader />
