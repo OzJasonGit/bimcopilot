@@ -1605,13 +1605,16 @@
 
 
 
-    #BIM_TITLE{
+   
+
+
+    #BIM_TITLE {
         position: relative;
         grid-area: TITLE;
         display: grid;
-        grid-template-columns: 1fr 50px;
+        grid-template-columns: .75fr 50px 50px;
         grid-template-rows: auto;
-        grid-template-areas: "TITLE LOGO";
+        grid-template-areas: "TITLE . LOGO";
     }
 
 
