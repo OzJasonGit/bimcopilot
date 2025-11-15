@@ -116,7 +116,7 @@ return (
                        style={{
                           height:"auto",
                           width:"100%",
-                          paddingLeft: "60px",
+                          paddingLeft: "30px",
                        }}>
                         {/*<Collapsed_4/>*/}
                         {/*<Divider />*/}

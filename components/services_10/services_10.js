@@ -121,10 +121,7 @@ return (
                   <div id={styles.FAQ_PADDING}
                        className=" rounded-xl ... border-solid ... border ... border-stone-800 ... " 
                        style={{ gridArea: "FAQ",
-                                paddingLeft: "60px",
-                                paddingRight: "60px",
-                                paddingTop: "60px",
-                                paddingBottom:"60px"}}>
+                                padding: "80px"}}>
 
                                   <div class=" rounded-xl ..."
                                       id={styles.FAQ_TEXT}>
