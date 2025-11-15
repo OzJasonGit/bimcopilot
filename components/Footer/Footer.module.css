@@ -859,8 +859,7 @@
 /* ---------------------------------------------------------------------------------------*/
 @media all and (min-width: 480px) and (max-width: 960px) {
 
-
-    #_H1 {
+#_H1 {
         margin-bottom: 0px;
         font-size: 20px;
     }
@@ -932,32 +931,36 @@
 
 
 
+
     .footer_holder {
         position: relative;
         width: 100%;
         max-width: 1640px;
         position: relative;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0px;
         background-color: rgb(23 23 23);
         display: grid;
-        grid-column-gap: 40px;
-        grid-row-gap: 40px;
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
         grid-template-rows: 0px auto;
         grid-template-columns: 1fr;
         grid-template-areas: "."
             "MAIN-AREA";
-
     }
+
+
+
 
     #FOOTER {
         grid-area: MAIN-AREA;
         width: 100%;
         display: grid;
         grid-column-gap: 40px;
-        grid-row-gap: 40px;
+        grid-row-gap: 20px;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
+        grid-template-rows: auto auto auto;
         grid-template-areas:
             "IPHONE"
             "OTHER";
@@ -967,15 +970,15 @@
     #IPHONE {
         grid-area: IPHONE;
         display: grid;
-        grid-template-rows: 80px auto auto;
+        grid-template-rows: auto auto auto;
         grid-template-areas:
             "TITLE"
             "MAIN"
             "MAIN";
         grid-template-columns: 1fr;
-        grid-row-gap: 40px;
+        grid-row-gap: 10px;
         width: 100%;
-        height: 500px;
+        height: auto;
         background-color: rgb(23 23 23);
     }
 
@@ -985,12 +988,13 @@
         width: 100%;
         height: auto;
         grid-row-gap: 20px;
-        grid-template-rows: 350px auto 0px;
+        grid-template-rows: 350px auto auto 0px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas:
 
-            ". GIF GIF GIF"
+            "GIF GIF GIF GIF"
             "SOCIAL SOCIAL SOCIAL SOCIAL"
+            "TEXT TEXT TEXT TEXT"
             ". . . .";
     }
 
@@ -1002,10 +1006,18 @@
         grid-column-gap: 10px;
         grid-row-gap: 5px;
         grid-template-rows: 50px 50px;
-        grid-template-columns: auto 32.5px 32.5px 32.5px 32.5px 32.5px;
+        grid-template-columns: 32.5px 32.5px 32.5px 32.5px 32.5px auto;
         grid-template-areas:
-            ". ARB ARB ARB ARB ARB"
-            ". GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN ";
+            "ARB ARB ARB ARB ARB ."
+            "GITHUB MEDIUM DRIBBLE YOUTUBE LINKEDIN .";
+    }
+
+
+
+
+    #COMPANY_TEXT {
+        display: block;
+        grid-area: TEXT;
     }
 
     .container {
@@ -1086,24 +1098,34 @@
     }
 
 
+
+
+
+
+
+
+
     #FOOTER_MAIN {
         grid-area: MAIN;
         display: grid;
-        grid-template-rows: auto 30px auto 30px 60px 40px auto 40px;
-        grid-row-gap: 0px;
-        grid-template-columns: 1fr 1fr 1fr 30px 1fr 1fr;
+        grid-template-rows: auto 20px auto auto auto;
+        grid-template-columns: 1fr;
         grid-template-areas:
-            ". . . TAGLINE TAGLINE TAGLINE"
-            ". . . . . ."
-            "CONTACT CONTACT CONTACT CONTACT CONTACT ."
-            ". . . . . ."
-            "FORM FORM FORM FORM FORM FORM"
-            ". . . . . ."
-            "TC TC TC TC TC TC"
-            ". . . . . .";
+            "CONTACT"
+            "WAITING"
+            "FORM"
+            "."
+            "TC";
+    }
+
+
+
+    #WAITING {
+        grid-area: WAITING;
     }
 
     #COMPANY {
+        display: none;
         grid-area: COMPANY;
     }
 
@@ -1168,26 +1190,42 @@
 
 
 
+
+
+
+
+
+
     #BIM_TITLE {
         position: relative;
         grid-area: TITLE;
         display: grid;
-        grid-template-columns: 400px 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: "TITLE .";
-        left: -10px;
+        grid-template-columns: .75fr 50px 50px;
+        grid-template-rows: auto 40px;
+        grid-template-areas: "TITLE . LOGO"
+            ". . .";
     }
 
 
-   
+
 
 
     #IMAGE_HOLDER {
         grid-area: TITLE;
         position: relative;
-        width: 100%;
+        width: 90%;
         height: 100%;
-        left: -30px;
+        left: -0px;
+        top: 5px;
+    }
+
+    #LOGO_HOLDER {
+        grid-area: LOGO;
+        position: relative;
+        width: 90%;
+        height: 100%;
+        left: -0px;
+
     }
 
 
@@ -1219,7 +1257,6 @@
     .dribbble {
         color: rgb(231 229 228);
     }
-
 
 
 
