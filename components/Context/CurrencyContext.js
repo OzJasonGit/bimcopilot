@@ -41,39 +41,29 @@ export function CurrencyProvider({ children }) {
         setCurrency(savedCurrency);
         if (typeof window !== 'undefined') {
           window.__currencyDebug.result = `manual: ${savedCurrency}`;
-        }
-        return;
-      }
-      
-      // If already auto-detected and saved, use it immediately
-      if (wasAutoDetected && savedCurrency) {
-        console.log(`✅ Using previously auto-detected currency: ${savedCurrency}`);
-        setCurrency(savedCurrency);
-        if (typeof window !== 'undefined') {
-          window.__currencyDebug.result = `auto-detected: ${savedCurrency}`;
           window.__currencyDebug.currentCurrency = savedCurrency;
         }
         return;
       }
       
-      // If saved currency exists (even without auto-detected flag), use it
-      // This handles cases where localStorage was cleared but currency was saved
-      if (savedCurrency && !wasManuallySelected) {
-        console.log(`✅ Using saved currency: ${savedCurrency}`);
+      // Always try IP detection first (even if we have a saved currency)
+      // This ensures we get the correct currency based on actual location
+      // Only skip if manually selected
+      
+      // If saved currency is USD, it might be incorrect - force re-detection
+      // Use saved currency temporarily while detecting (prevents flash) only if it's not USD
+      if (savedCurrency && savedCurrency !== 'USD') {
         setCurrency(savedCurrency);
-        // Mark as auto-detected for future visits
+      } else if (savedCurrency === 'USD' && wasAutoDetected) {
+        // Clear incorrect USD detection and force re-detection
         if (typeof window !== 'undefined') {
-          localStorage.setItem('currencyAutoDetected', 'true');
-          window.__currencyDebug.result = `saved-currency-used: ${savedCurrency}`;
-          window.__currencyDebug.currentCurrency = savedCurrency;
+          localStorage.removeItem('currencyAutoDetected');
+          window.__currencyDebug.forceRedetect = 'USD was incorrectly detected';
         }
-        return;
       }
       
-      // No saved currency or first visit - detect from location
-      if (!savedCurrency || (!wasAutoDetected && !wasManuallySelected)) {
-        // Try to detect from user's location
-        const detectCurrencyFromLocation = async () => {
+      // Try to detect from user's location
+      const detectCurrencyFromLocation = async () => {
           try {
             console.log('🌍 Detecting currency from your IP location...');
             if (typeof window !== 'undefined') {
@@ -159,7 +149,6 @@ export function CurrencyProvider({ children }) {
         };
         
         detectCurrencyFromLocation();
-      }
     };
     
     // Use requestIdleCallback if available, otherwise setTimeout to defer after hydration

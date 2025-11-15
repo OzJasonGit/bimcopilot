@@ -232,6 +232,8 @@ export function getUserCurrency() {
       'ms-MY': 'MYR',
       'sg-SG': 'SGD',
       'ph-PH': 'PHP',
+      'ur-PK': 'PKR',
+      'en-PK': 'PKR',
     };
 
     // Check exact match first
@@ -266,6 +268,7 @@ export function getUserCurrency() {
       'vi': 'VND',
       'id': 'IDR',
       'ms': 'MYR',
+      'ur': 'PKR',
     };
 
     if (languageToCurrency[languageCode]) {
@@ -310,6 +313,7 @@ export function getUserCurrency() {
           'MY': 'MYR',
           'SG': 'SGD',
           'PH': 'PHP',
+          'PK': 'PKR',
         };
         if (regionToCurrency[region]) {
           return regionToCurrency[region];
