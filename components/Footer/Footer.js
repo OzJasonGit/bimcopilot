@@ -40,11 +40,9 @@ export default class Footer extends Component {
                                 quality={100}
                                 //object-fit="cover"                      
                                 alt=""/>
-                            </div>                           
+                            </div>  
+                            <br/>                         
                         </div>
-
-                        <br/>
-                        <br/>
 
                         <div id={styles.FOOTER_MAIN}>
 
