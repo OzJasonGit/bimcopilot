@@ -25,10 +25,23 @@ export function CurrencyProvider({ children }) {
       const wasManuallySelected = localStorage.getItem('currencyManuallySelected') === 'true';
       const wasAutoDetected = localStorage.getItem('currencyAutoDetected') === 'true';
       
+      // Debug: Store detection info in window for debugging (survives console removal)
+      if (typeof window !== 'undefined') {
+        window.__currencyDebug = {
+          savedCurrency,
+          wasManuallySelected,
+          wasAutoDetected,
+          timestamp: new Date().toISOString(),
+        };
+      }
+      
       // If user manually selected, use saved currency immediately
       if (wasManuallySelected && savedCurrency) {
         console.log(`💾 Using manually selected currency: ${savedCurrency}`);
         setCurrency(savedCurrency);
+        if (typeof window !== 'undefined') {
+          window.__currencyDebug.result = `manual: ${savedCurrency}`;
+        }
         return;
       }
       
@@ -36,15 +49,36 @@ export function CurrencyProvider({ children }) {
       if (wasAutoDetected && savedCurrency) {
         console.log(`✅ Using previously auto-detected currency: ${savedCurrency}`);
         setCurrency(savedCurrency);
+        if (typeof window !== 'undefined') {
+          window.__currencyDebug.result = `auto-detected: ${savedCurrency}`;
+          window.__currencyDebug.currentCurrency = savedCurrency;
+        }
+        return;
+      }
+      
+      // If saved currency exists (even without auto-detected flag), use it
+      // This handles cases where localStorage was cleared but currency was saved
+      if (savedCurrency && !wasManuallySelected) {
+        console.log(`✅ Using saved currency: ${savedCurrency}`);
+        setCurrency(savedCurrency);
+        // Mark as auto-detected for future visits
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('currencyAutoDetected', 'true');
+          window.__currencyDebug.result = `saved-currency-used: ${savedCurrency}`;
+          window.__currencyDebug.currentCurrency = savedCurrency;
+        }
         return;
       }
       
       // No saved currency or first visit - detect from location
-      if (!savedCurrency || !wasAutoDetected) {
+      if (!savedCurrency || (!wasAutoDetected && !wasManuallySelected)) {
         // Try to detect from user's location
         const detectCurrencyFromLocation = async () => {
           try {
             console.log('🌍 Detecting currency from your IP location...');
+            if (typeof window !== 'undefined') {
+              window.__currencyDebug.detecting = true;
+            }
             
             // Add timeout to prevent hanging
             const controller = new AbortController();
@@ -75,16 +109,25 @@ export function CurrencyProvider({ children }) {
               if (typeof window !== 'undefined') {
                 localStorage.setItem('selectedCurrency', data.currencyCode);
                 localStorage.setItem('currencyAutoDetected', 'true');
+                window.__currencyDebug.result = `ip-detected: ${data.currencyCode}`;
+                window.__currencyDebug.country = data.country || data.countryName;
               }
               return;
             } else {
               console.warn('⚠️ Location detection returned but no currency found:', data);
+              if (typeof window !== 'undefined') {
+                window.__currencyDebug.ipDetectionFailed = data;
+              }
               // Don't throw, fall through to browser locale detection
             }
           } catch (error) {
             // Log errors (including in production for debugging)
             if (error.name !== 'AbortError') {
               console.warn('⚠️ IP location detection failed:', error.message);
+              if (typeof window !== 'undefined') {
+                window.__currencyDebug.ipError = error.message;
+                window.__currencyDebug.ipErrorName = error.name;
+              }
             }
           }
           
@@ -97,6 +140,7 @@ export function CurrencyProvider({ children }) {
               if (typeof window !== 'undefined') {
                 localStorage.setItem('selectedCurrency', detectedCurrency);
                 localStorage.setItem('currencyAutoDetected', 'true');
+                window.__currencyDebug.result = `browser-locale: ${detectedCurrency}`;
               }
             } else {
               throw new Error('getUserCurrency returned null/undefined');
@@ -108,6 +152,8 @@ export function CurrencyProvider({ children }) {
             if (typeof window !== 'undefined') {
               localStorage.setItem('selectedCurrency', 'USD');
               localStorage.setItem('currencyAutoDetected', 'true');
+              window.__currencyDebug.result = `fallback-usd`;
+              window.__currencyDebug.error = error.message;
             }
           }
         };
