@@ -68,54 +68,56 @@ export function CurrencyProvider({ children }) {
               cache: 'no-store',
               method: 'GET',
               signal: controller.signal,
+              headers: {
+                'Accept': 'application/json',
+              },
             });
             
             clearTimeout(timeoutId);
             
-            if (!response.ok) {
-              throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            // Even if response is not ok, try to parse JSON (might have error details)
+            let data;
+            try {
+              data = await response.json();
+            } catch (parseError) {
+              throw new Error(`Failed to parse response: ${response.status} ${response.statusText}`);
             }
             
-            const data = await response.json();
-            
             if (data && data.success && data.currencyCode) {
-              if (process.env.NODE_ENV === 'development') {
-                console.log(`✅ Auto-selected currency: ${data.currencyCode} (detected from ${data.countryName || data.country || 'your location'})`);
-              }
+              console.log(`✅ Auto-selected currency: ${data.currencyCode} (detected from ${data.countryName || data.country || 'your location'})`);
               setCurrency(data.currencyCode);
               if (typeof window !== 'undefined') {
                 localStorage.setItem('selectedCurrency', data.currencyCode);
                 localStorage.setItem('currencyAutoDetected', 'true');
               }
               return;
-            } else if (process.env.NODE_ENV === 'development') {
+            } else {
               console.warn('⚠️ Location detection returned but no currency found:', data);
+              // Don't throw, fall through to browser locale detection
             }
           } catch (error) {
-            // Ignore abort errors (timeout)
-            if (error.name !== 'AbortError' && process.env.NODE_ENV === 'development') {
+            // Log errors (including in production for debugging)
+            if (error.name !== 'AbortError') {
               console.warn('⚠️ IP location detection failed:', error.message);
             }
           }
           
-          // Fallback to browser locale detection
+          // Fallback to browser locale detection (always runs if IP detection fails)
           try {
             const detectedCurrency = getUserCurrency();
             if (detectedCurrency) {
-              if (process.env.NODE_ENV === 'development') {
-                console.log(`📍 Using browser locale currency: ${detectedCurrency}`);
-              }
+              console.log(`📍 Using browser locale currency: ${detectedCurrency}`);
               setCurrency(detectedCurrency);
               if (typeof window !== 'undefined') {
                 localStorage.setItem('selectedCurrency', detectedCurrency);
                 localStorage.setItem('currencyAutoDetected', 'true');
               }
+            } else {
+              throw new Error('getUserCurrency returned null/undefined');
             }
           } catch (error) {
             // Final fallback to USD
-            if (process.env.NODE_ENV === 'development') {
-              console.warn('⚠️ Browser locale detection failed, using USD:', error.message);
-            }
+            console.warn('⚠️ Browser locale detection failed, using USD:', error.message);
             setCurrency('USD');
             if (typeof window !== 'undefined') {
               localStorage.setItem('selectedCurrency', 'USD');

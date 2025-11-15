@@ -59,29 +59,48 @@ const COUNTRY_TO_CURRENCY = {
 };
 
 export async function GET(request) {
+  // Get client IP from headers (for production)
+  const forwarded = request.headers.get('x-forwarded-for');
+  const realIp = request.headers.get('x-real-ip');
+  const clientIp = forwarded ? forwarded.split(',')[0] : realIp || null;
+  
   // Try each API in sequence until one works
   for (const api of GEOLOCATION_APIS) {
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 4000); // 4 second timeout per API
+      const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout per API
 
-      const response = await fetch(api.url, {
+      // Build URL - some APIs support IP parameter
+      let apiUrl = api.url;
+      if (clientIp && api.url.includes('ipapi.co')) {
+        apiUrl = `https://ipapi.co/${clientIp}/json/`;
+      }
+
+      const response = await fetch(apiUrl, {
         signal: controller.signal,
         headers: {
           'Accept': 'application/json',
+          'User-Agent': 'Mozilla/5.0 (compatible; CurrencyDetector/1.0)',
         },
+        // Add cache control for production
+        cache: 'no-store',
       });
 
       clearTimeout(timeoutId);
 
       if (!response.ok) {
-        if (process.env.NODE_ENV === 'development') {
-          console.log(`API ${api.url} failed with status ${response.status}, trying next...`);
-        }
+        console.log(`[detect-country] API ${api.url} failed with status ${response.status}`);
         continue; // Try next API
       }
 
       const data = await response.json();
+      
+      // Check for error responses
+      if (data.error || data.status === 'fail') {
+        console.log(`[detect-country] API ${api.url} returned error:`, data.error || data.message);
+        continue;
+      }
+      
       const parsed = api.parser(data);
       
       if (parsed.countryCode) {
@@ -90,9 +109,7 @@ export async function GET(request) {
         // Get currency from country code mapping
         const currencyCode = COUNTRY_TO_CURRENCY[countryCode] || parsed.currency || 'USD';
         
-        if (process.env.NODE_ENV === 'development') {
-          console.log(`✅ Detected country: ${countryCode}, currency: ${currencyCode}`);
-        }
+        console.log(`[detect-country] ✅ Detected country: ${countryCode}, currency: ${currencyCode}`);
         
         // Return country and currency info
         return NextResponse.json({
@@ -104,23 +121,20 @@ export async function GET(request) {
         });
       }
     } catch (error) {
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`API ${api.url} error:`, error.message);
-      }
+      // Log errors in production for debugging
+      console.log(`[detect-country] API ${api.url} error:`, error.message || error.name);
       continue; // Try next API
     }
   }
   
-  // All APIs failed
-  if (process.env.NODE_ENV === 'development') {
-    console.error('All geolocation APIs failed');
-  }
+  // All APIs failed - return failure but don't throw error
+  console.log('[detect-country] All geolocation APIs failed, returning fallback');
   return NextResponse.json({
     success: false,
     country: null,
     currency: null,
     currencyCode: null,
     error: 'All geolocation APIs failed',
-  });
+  }, { status: 200 }); // Return 200 so client can handle gracefully
 }
 
