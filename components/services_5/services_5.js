@@ -116,7 +116,7 @@ return (
                        style={{
                           height:"auto",
                           width:"100%",
-                          paddingLeft: "50px",
+                          paddingLeft: "60px",
                        }}>
                         {/*<Collapsed_4/>*/}
                         {/*<Divider />*/}
@@ -134,7 +134,7 @@ return (
                                   indicator={({isOpen}) => (
                                     <ChevronDown
                                       className={`w-5 h-5 transition-transform duration-300 text-stone-600 ${
-                                        isOpen ? "rotate-180" : ""
+                                        isOpen ? "rotate-90" : ""
                                       }`}
                                     />
                                   )}
