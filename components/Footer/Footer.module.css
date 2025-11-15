@@ -1355,7 +1355,7 @@
         background-color: rgb(23 23 23);
         display: grid;
         grid-column-gap: 20px;
-        grid-row-gap: 20px;
+        grid-row-gap: 0px;
         grid-template-rows: 0px auto;
         grid-template-columns: 1fr;
         grid-template-areas: "."
