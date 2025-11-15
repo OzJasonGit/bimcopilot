@@ -1200,7 +1200,7 @@
         position: relative;
         grid-area: TITLE;
         display: grid;
-        grid-template-columns: .75fr 50px 50px;
+        grid-template-columns: .75fr 50px 70px;
         grid-template-rows: auto 40px;
         grid-template-areas: "TITLE . LOGO"
             ". . .";
