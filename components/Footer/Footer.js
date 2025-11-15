@@ -44,6 +44,7 @@ export default class Footer extends Component {
                         </div>
 
                         <br/>
+                        <br/>
 
                         <div id={styles.FOOTER_MAIN}>
 
