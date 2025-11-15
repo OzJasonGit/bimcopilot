@@ -228,37 +228,67 @@
 
 
 @media all and (min-width: 480px) and (max-width: 960px) {
-  .center_holder {
-    width: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    background-color: aliceblue;
-    margin: 0;
+#_H1 {
+    margin-bottom: 0px;
+    font-size: 33.5px;
   }
 
+  #_H1_2 {
+    margin-bottom: 0px;
+    font-size: 1.75rem;
+    line-height: 1.8rem;
+  }
+
+  #_H2 {
+    margin-bottom: 0px;
+    font-size: 30px;
+  }
+
+  #_H3 {
+    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: 19.5px;
+  }
+
+  #_H4 {
+    margin-bottom: 0px;
+  }
+
+  #_H5 {
+    margin-bottom: -2.5px;
+  }
+
+  #TEXT_OUTLINE {
+    -webkit-text-stroke: 0.35px rgb(120, 120, 120);
+    margin-bottom: 0px;
+    font-size: 1.75rem;
+    line-height: 1.8rem;
+  }
+
+  /*ALL///////////////////////////////////////////////////////////////////////////////////////////////////*/
   .grid_0_main {
-    position: relative;
     width: 100%;
+    padding-top: 60px;
+    max-width: 1640px;
     background-color: transparent;
     display: grid;
-    padding-top: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
-    grid-row-gap: 40px;
-    grid-template-rows: 0px auto;
-    grid-template-columns: 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    grid-template-rows: 0px auto 0px;
+    grid-template-columns: 0px 1fr 0px;
     grid-template-areas:
-      "  .  "
-      " MAIN-AREA ";
+      ". . ."
+      "BANNER-1 MAIN-AREA BANNER-2"
+      ". . .";
   }
 
+  /*SECTION_4////TITLE////////////////////////////////////////////////////////////////////////////////////*/
   #MAIN_TEXT_HOLDER {
     grid-area: MAIN-AREA;
     display: grid;
     width: 100%;
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     grid-template-columns: 1fr;
     grid-template-rows: 0px auto 0px;
     grid-template-areas:
@@ -268,6 +298,11 @@
   }
 
   #SUB_TEXT_HOLDER {
+    display: none;
+  }
+
+  #SUB_TEXT_HOLDER_MOBILE {
+    display: flex;
     position: relative;
     grid-area: TEXT;
     top: 0px;
