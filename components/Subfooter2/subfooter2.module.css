@@ -1995,7 +1995,7 @@
             max-width: 1640px;
             background-color: transparent;
             display: grid;
-            grid-column-gap: 20px;
+            grid-column-gap: 30px;
             grid-row-gap: 40px;
             grid-template-rows: auto auto 40px;
             grid-template-columns: 0px 1fr 0px;
@@ -2010,7 +2010,7 @@
             max-width: 1640px;
             background-color: transparent;
             display: grid;
-            grid-column-gap: 20px;
+            grid-column-gap: 30px;
             grid-row-gap: 40px;
             grid-template-rows: 0px auto 0px;
             grid-template-columns: 0px 1fr 0px;
@@ -2033,7 +2033,7 @@
             grid-column-gap: 0px;
             grid-row-gap: 20px;
             grid-template-rows: 100px auto 0px;
-            grid-template-columns: 20px 1fr 20px;
+            grid-template-columns: 30px 1fr 30px;
             grid-template-areas: ". . ."
                 ". SUB ."
                 ". . .";
@@ -2122,8 +2122,8 @@
             background-color: rgb(23 23 23);
             display: grid;
     
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
             grid-row-gap: 20px;
             grid-template-rows: 0px auto;
             grid-template-columns: 1fr;
@@ -2322,7 +2322,7 @@
             max-width: 100%;
             background-color: transparent;
             display: grid;
-            grid-column-gap: 20px;
+            grid-column-gap: 30px;
             grid-row-gap: 20px;
             grid-template-rows: auto auto 20px;
             grid-template-columns: 0px 1fr 0px;
@@ -2422,7 +2422,7 @@
             max-width: 1640px;
             background-color: rgb(241 245 249);
             display: grid;
-            grid-column-gap: 20px;
+            grid-column-gap: 30px;
             grid-row-gap: 40px;
             grid-template-rows: 0px auto 20px;
             grid-template-columns: 0px 1fr 0px;
@@ -2583,7 +2583,7 @@
             max-width: 100%;
             background-color: transparent;
             display: grid;
-            grid-column-gap: 20px;
+            grid-column-gap: 30px;
             grid-row-gap: 20px;
             grid-template-rows: 20px auto 20px;
             grid-template-columns: 0px 1fr 0px;
