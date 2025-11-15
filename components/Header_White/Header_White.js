@@ -1,34 +1,61 @@
-"use client";
+ "use client";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCartShopping,
-  faHeart,
-  faUser,
-  faSignOutAlt
-} from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping, faSignOutAlt, faHeart, faUser } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header_White.module.css";
 import React, { useEffect, useState, useRef } from "react";
-import bimcopilot_icon from "./bimcopilot_logo_black.svg";
+import bimcopilot_icon from "./bimcopilot_logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { ShadCN_Header } from "./ShadCN_Header/shadCN_Header";
+import { padding, width } from "@mui/system";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const Clock = dynamic(() => import("./Clock/clock"), { ssr: false });
 const DateComponent = dynamic(() => import("./Clock/date"), { ssr: false });
 
-export default function HeaderWhite() {
+export default function Header() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef(null); // Ref for the dropdown menu
 
+  // Fetch authentication status and user data
   useEffect(() => {
     const fetchHeaderData = async () => {
       try {
         const response = await fetch("/api/header_route", {
-          credentials: "include",
+          credentials: "include", // Include cookies
         });
+
         if (response.ok) {
           const data = await response.json();
           setIsAuthenticated(data.isAuthenticated);
@@ -36,43 +63,50 @@ export default function HeaderWhite() {
             setUser(data.user);
           }
         } else {
-          setIsAuthenticated(false);
-          setUser(null);
+          console.error("Failed to fetch header data");
         }
       } catch (error) {
-        setIsAuthenticated(false);
-        setUser(null);
+        console.error("Error fetching header data:", error);
       }
     };
+
     fetchHeaderData();
   }, []);
 
+  // Handle logout
   const handleLogout = async () => {
     try {
       const response = await fetch("/api/header_route", {
         method: "POST",
-        credentials: "include",
+        credentials: "include", // Include cookies
       });
+
       if (response.ok) {
         setIsAuthenticated(false);
         setUser(null);
-        setIsDropdownOpen(false);
+        setIsDropdownOpen(false); // Close the dropdown after logout
+        console.log("Logout successful");
+      } else {
+        console.error("Logout failed");
       }
     } catch (error) {
-      // ignore
+      console.error("Error during logout:", error);
     }
   };
 
+  // Toggle dropdown visibility
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsDropdownOpen(false);
       }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -80,126 +114,206 @@ export default function HeaderWhite() {
   }, []);
 
   return (
-    <section id={styles.SHADOW_SECTION} className={styles.center_holder}>
-      <div className={styles.HEADER_HOLDER}>
-        <div id={styles.header}>
-          <header id={styles.FIXED_HEADER}>
-            {/* Logo */}
-            <div id={styles.LOGO_ICON} className={styles.container}>
-              <Link id={styles.LOGO_LINK} href="/.">
-                <div className="" id={styles.LOGO}>
-                  <Image
-                    src={bimcopilot_icon}
-                    alt="BIM Copilot Logo"
-                    width={100}
-                    height={100}
-                    loading="lazy"
-                    style={{
-                      position: "relative",
-                      width: "auto",
-                      height: "100%",
-                      justifyItems: "center",
-                      alignItems: "center",
-                      objectFit: "contain",
-                    }}
-                  />
+    <>
+      
+
+
+      <section id={styles.SHADOW_SECTION} className={styles.center_holder}>
+        <div className={styles.HEADER_HOLDER}>
+
+
+
+          <div id={styles.HEADER}>
+
+            <header id={styles.FIXED_HEADER_2}>
+
+              {/* Logo & Time */}
+              <div id={styles.LOGO_AND_TIME}>
+
+                {/* Logo */}
+                <div id={styles.LOGO_2}
+                   styles={{
+                      height:'auto',
+                      padding:'12px',
+                      gridArea:'LOGO',
+                      justifyItems:'center',
+                      width:'100%',
+                      position:'relative',
+                      left:'-3px'
+                      }}>
+
+                      <Link href="/."
+                            styles={{height:'50px',}}>
+                        <div>
+                          <Image
+                            className="w-16 h-16 fill-current text-stone-50 hover:text-emerald-400 transition-colors duration-300"
+                            src={bimcopilot_icon}
+                            alt="Picture of the author"
+                            width={100}
+                            height={100}
+                            loading="lazy"
+                            style={{
+                              position: "relative",
+                              width: "auto",
+                              height: "100%",
+                              justifyItems: "center",
+                              alignItems: "center",
+                              objectFit: "contain",
+                              left:"-7.5px"
+                            }}
+                          />
+                        </div>
+                      </Link>
                 </div>
-              </Link>
-            </div>
 
-            {/* Navigation Menu */}
-            <div className="content-center ..." id={styles.NAV_MENU}>
-              <Link className="content-center ..." id={styles.SERVICES} href="/services">
-                <h3 id={styles.H_3_SERVICES} className="text-center ...  text-stone-700 font-avant_garde_bold" data-content="Services">
-                  Services
-                </h3>
-              </Link>
-              <Link id={styles.PRODUCTS} href="/products">
-                <h3 id={styles.H_3_PRODUCTS} className="text-center ...  text-stone-700 font-avant_garde_bold" data-content="Shop">
-                  Shop
-                </h3>
-              </Link>
-              <Link id={styles.PROJECTS} href="/copilot_dashboard">
-                <h3 id={styles.H_3_PROJECTS} className="text-center ...  text-stone-700  font-avant_garde_bold" data-content="Copilot_Dashboard">
-                  Copilot_Dashboard
-                </h3>
-              </Link>
-              <Link id={styles.STORIES} href="/bloghome">
-                <h3 id={styles.H_3_STORIES} className="text-center ...  text-stone-700 font-avant_garde_bold" data-content="Stories">
-                  Stories
-                </h3>
-              </Link>
-            </div>
+                {/* Time and Date */}
+                <div className="content-center ..." id={styles.TIME}>
+                  <Clock />
+                  <div className="bg-zinc-500 ..." id={styles.B1}></div>
+                  <DateComponent />
+                </div>
 
-            {/* Time and Date */}
-            <div className="content-center ..." id={styles.TIME}>
-              <Clock />
-              <div className="bg-stone-700 ..." id={styles.B1}></div>
-              <DateComponent />
-            </div>
-
-
-            
-
-            {/* Basket and Favorites */}
-            
-
-            {/* Sign In/Sign Up or User Dropdown */}
-            <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "100%" }}>
-              <div className="flex justify-end ..." id={styles.SIGNUP_RIGHT} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "200px", left: "4.5px" }}>
-                {isAuthenticated ? (
-                  <div className="relative left-[8px]" ref={dropdownRef}>
-                    <div className="flex items-center gap-5">
-                      <span className="text-stone-700 font-medium">Hi, {user?.name}</span>
-                      <button
-                        onClick={toggleDropdown}
-                        className="flex items-center justify-center p-2 rounded-full hover:bg-gray-100/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-                        aria-haspopup="true"
-                        aria-expanded={isDropdownOpen}
-                      >
-                        <FontAwesomeIcon
-                          icon={faUser}
-                          className="text-stone-700 w-6 h-6 hover:text-gray-300 transition-colors duration-200"
-                        />
-                      </button>
-                    </div>
-                    {isDropdownOpen && (
-                      <div
-                        className="absolute right-0 mt-2 w-56 origin-top-right bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <button
-                          onClick={handleLogout}
-                          className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
-                        >
-                          <span className="flex items-center">
-                            <FontAwesomeIcon icon={faSignOutAlt} className="mr-2 w-4 h-4" />
-                            Logout
-                          </span>
-                        </button>
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <div className="content-center ..." id={styles.SIGNUP_GRID}>
-                    <Link id={styles.STORIES} href="/signup" style={{ gridArea: "SIGNUP", position: "relative", height: "100%", width: "100%", textAlign: "center", left: "-15.5px" }}>
-                      <h3 id={styles.H_3_STORIES} className="text-center ...  text-stone-700 font-avant_garde_bold" data-content="Signup">
-                        Signup
-                      </h3>
-                    </Link>
-                    <div className="bg-zinc-500 ..." id={styles.B1}></div>
-                    <Link id={styles.SIGNUP} href="/signin" style={{ gridArea: "LOGIN", position: "relative", height: "100%", width: "100%", textAlign: "center", left: "-15px" }}>
-                      <h3 id={styles.H_3_STORIES} className="text-center ...  text-stone-700 font-avant_garde_bold" data-content="Login">
-                        Login
-                      </h3>
-                    </Link>
-                  </div>
-                )}
               </div>
-            </div>
-          </header>
+              
+              
+
+              {/* shadCN Navigation Menu */}
+              <div className="content-center ..." 
+                   id={styles.NAV_MENU}
+
+                   style={{ 
+                          gridArea:"MENU",                         
+                          alignItems: "center", 
+                          justifyContent: "center", 
+                          position: "relative",
+                          top: "17.5px"
+                          }}>
+                <ShadCN_Header/>
+              </div>
+
+
+              {/* Signup_&_Basket*/}
+              <div id={styles.SIGNUP_AND_BASKET}>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  {/* Sign In/Sign Up or User Dropdown */}
+                  <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} 
+                      style={{ gridArea: "SIGNUP", position: "relative", height: "100%", width: "100%", top:"0px" }}>
+                      <div className="flex justify-end ..." id={styles.SIGNUP_RIGHT} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "200px", left: "4.5px" }}>
+                        {isAuthenticated ? (
+                          <div className="relative left-[8px]" ref={dropdownRef}>
+                            {/* User Icon Button */}
+                            <div className="flex items-center gap-5">
+
+                            <span className="text-slate-50 font-medium">Hi, {user.name}</span>
+
+                            <button
+                              onClick={toggleDropdown}
+                              className="flex items-center justify-center p-2 rounded-full hover:bg-gray-100/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                              aria-haspopup="true"
+                              aria-expanded={isDropdownOpen}
+                              >
+                              <FontAwesomeIcon
+                                icon={faUser}
+                                className="text-slate-50 w-6 h-6 hover:text-gray-300 transition-colors duration-200"
+                                />
+                            </button>
+                                </div>
+
+                            {/* Dropdown Menu */}
+                            {isDropdownOpen && (
+                              <div
+                                className="absolute right-0 mt-2 w-56 origin-top-right bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none"
+                                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the dropdown
+                              >
+                                {/* Profile Link */}
+                                {/* <Link
+                                  href="/profile"
+                                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
+                                >
+                                  <span className="flex items-center">
+                                    <FontAwesomeIcon icon={faUser} className="mr-2 w-4 h-4" />
+                                    Profile
+                                  </span>
+                                </Link> */}
+
+                                {/* Logout Button */}
+                                <button
+                                  onClick={handleLogout}
+                                  className="block w-full text-left px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors duration-200"
+                                >
+                                  <span className="flex items-center">
+                                    <FontAwesomeIcon icon={faSignOutAlt} className="mr-2 w-4 h-4" />
+                                    Logout
+                                  </span>
+                                </button>
+                              </div>
+                            )}
+                          </div>
+                        ) : (
+                          <div className="content-center ..." id={styles.SIGNUP_GRID}>
+                            <Link id={styles.STORIES} href="/signup" style={{ gridArea: "SIGNUP", position: "relative", height: "100%", width: "100%", textAlign: "center", left: "-15.5px" }}>
+                              <h3 id={styles.H_3_STORIES} className="text-center ...  text-slate-50 font-avant_garde_bold" data-content="Signup">
+                                Signup
+                              </h3>
+                            </Link>
+                            <div className="bg-zinc-500 ..." id={styles.B1}></div>
+                            <Link id={styles.SIGNUP} href="/signin" style={{ gridArea: "LOGIN", position: "relative", height: "100%", width: "100%", textAlign: "center", left: "-15px" }}>
+                              <h3 id={styles.H_3_STORIES} className="text-center ...  text-slate-50 font-avant_garde_bold" data-content="Login">
+                                Login
+                              </h3>
+                            </Link>
+                          </div>
+                        )}
+                      </div>
+                  </div>  
+
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+              
+          
+
+
+
+
+
+
+              
+
+
+                                   
+
+            </header>
+
+          </div>
+
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
