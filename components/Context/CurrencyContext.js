@@ -10,55 +10,41 @@ export function CurrencyProvider({ children }) {
   const [currency, setCurrency] = useState('USD');
   const [exchangeRates, setExchangeRates] = useState(null);
   const [ratesLoading, setRatesLoading] = useState(true);
-  const [mounted, setMounted] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false);
 
-  // Set mounted flag and immediately load saved currency
+  // Single effect to handle all currency initialization after hydration
   useEffect(() => {
-    setMounted(true);
+    if (typeof window === 'undefined') return;
     
-    // Immediately check localStorage for saved currency
-    if (typeof window !== 'undefined') {
+    // Mark as hydrated first
+    setIsHydrated(true);
+    
+    // Use requestIdleCallback or setTimeout to defer state updates and prevent hydration issues
+    const initCurrency = () => {
       const savedCurrency = localStorage.getItem('selectedCurrency');
-      if (savedCurrency) {
-        setCurrency(savedCurrency);
-      }
-    }
-  }, []);
-
-  // Load currency from localStorage on mount, or detect from location/browser
-  useEffect(() => {
-    if (!mounted || typeof window === 'undefined') return;
-    
-    const savedCurrency = localStorage.getItem('selectedCurrency');
-    const wasManuallySelected = localStorage.getItem('currencyManuallySelected') === 'true';
-    const wasAutoDetected = localStorage.getItem('currencyAutoDetected') === 'true';
-    
-    // If user manually selected, use saved currency
-    if (wasManuallySelected && savedCurrency) {
-      if (process.env.NODE_ENV === 'development') {
+      const wasManuallySelected = localStorage.getItem('currencyManuallySelected') === 'true';
+      const wasAutoDetected = localStorage.getItem('currencyAutoDetected') === 'true';
+      
+      // If user manually selected, use saved currency immediately
+      if (wasManuallySelected && savedCurrency) {
         console.log(`💾 Using manually selected currency: ${savedCurrency}`);
+        setCurrency(savedCurrency);
+        return;
       }
-      setCurrency(savedCurrency);
-      return;
-    }
-    
-    // If already auto-detected and saved, use it
-    if (wasAutoDetected && savedCurrency) {
-      if (process.env.NODE_ENV === 'development') {
+      
+      // If already auto-detected and saved, use it immediately
+      if (wasAutoDetected && savedCurrency) {
         console.log(`✅ Using previously auto-detected currency: ${savedCurrency}`);
+        setCurrency(savedCurrency);
+        return;
       }
-      setCurrency(savedCurrency);
-      return;
-    }
-    
-    // No saved currency or first visit - detect from location
-    if (!savedCurrency || !wasAutoDetected) {
+      
+      // No saved currency or first visit - detect from location
+      if (!savedCurrency || !wasAutoDetected) {
         // Try to detect from user's location
         const detectCurrencyFromLocation = async () => {
           try {
-            if (process.env.NODE_ENV === 'development') {
-              console.log('🌍 Detecting currency from your IP location...');
-            }
+            console.log('🌍 Detecting currency from your IP location...');
             
             // Add timeout to prevent hanging
             const controller = new AbortController();
@@ -127,8 +113,16 @@ export function CurrencyProvider({ children }) {
         };
         
         detectCurrencyFromLocation();
+      }
+    };
+    
+    // Use requestIdleCallback if available, otherwise setTimeout to defer after hydration
+    if (typeof window.requestIdleCallback !== 'undefined') {
+      window.requestIdleCallback(initCurrency, { timeout: 1000 });
+    } else {
+      setTimeout(initCurrency, 0);
     }
-  }, [mounted]);
+  }, []);
 
   // Fetch exchange rates on mount and when currency changes
   useEffect(() => {
@@ -166,11 +160,21 @@ export function CurrencyProvider({ children }) {
   }, []);
 
   // Format price function that uses current currency with conversion
+  // Only format after hydration to prevent hydration mismatches
   const formatPrice = useCallback((price) => {
     if (price === null || price === undefined) return '';
+    // During SSR or before hydration, return USD format to prevent mismatch
+    if (!isHydrated) {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+      }).format(price);
+    }
     // Use synchronous version that uses cached rates from localStorage
     return formatPriceWithCurrencySync(price, currency);
-  }, [currency]);
+  }, [currency, isHydrated]);
 
   return (
     <CurrencyContext.Provider value={{ 
