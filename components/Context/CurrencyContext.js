@@ -21,7 +21,7 @@ export function CurrencyProvider({ children }) {
     
     // Use requestIdleCallback or setTimeout to defer state updates and prevent hydration issues
     const initCurrency = () => {
-      const savedCurrency = localStorage.getItem('selectedCurrency');
+      let savedCurrency = localStorage.getItem('selectedCurrency');
       const wasManuallySelected = localStorage.getItem('currencyManuallySelected') === 'true';
       const wasAutoDetected = localStorage.getItem('currencyAutoDetected') === 'true';
       
