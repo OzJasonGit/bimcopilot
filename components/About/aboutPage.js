@@ -87,7 +87,7 @@ export default class Aboutpage extends Component {
                   onLoad={this.handleIframeLoad}
                   src="https://app.speckle.systems/projects/d719234282/models/7eb698fe88#embed=%7B%22isEnabled%22%3Atrue%2C%22isTransparent%22%3Atrue%2C%22hideControls%22%3Atrue%2C%22hideSelectionInfo%22%3Atrue%7D"
                   width="100%"
-                  height="110%"
+                  height="120%"
                   frameBorder="0"
                 ></iframe>
               </div>

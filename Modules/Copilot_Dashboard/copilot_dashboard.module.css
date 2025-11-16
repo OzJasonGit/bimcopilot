@@ -2073,31 +2073,6 @@
     height: 350px;
     box-shadow: -125px -160px 200px rgba(236, 236, 238, 0.228);
   }
-  
-  /* Hide Speckle controller on mobile */
-  .grid_0_main_image iframe,
-  .grid_0_main_image > div iframe {
-    overflow: hidden !important;
-    pointer-events: none !important;
-  }
-  
-  /* Hide any overlay controls */
-  .grid_0_main_image > div {
-    overflow: hidden !important;
-    position: relative;
-  }
-  
-  .grid_0_main_image > div::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999;
-    pointer-events: none;
-    background: transparent;
-  }
 
   /*SECTION_7////ABOUT////////////////////////////////////////////////////////////////////////////////////*/
 
