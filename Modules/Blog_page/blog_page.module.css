@@ -1780,6 +1780,20 @@
         justify-content: center;
         background-color: #171717;
         top: 0;
+        overflow-x: hidden;
+    }
+
+
+    #SHADOW_SECTION_TOP {
+        position: relative;
+        width: 100%;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: transparent;
+        z-index: -20000;
+        left: -100vw;
+        overflow-x: hidden;
     }
     
 
