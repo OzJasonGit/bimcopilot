@@ -570,7 +570,7 @@
 
 
 #AVATAR_IMAGE {
-    right: 15px;
+    right: -15px;
 }
 
 
@@ -1171,7 +1171,7 @@
     
     
     #AVATAR_IMAGE {
-        right: 15px;
+        right: -15px;
     }
     
     
