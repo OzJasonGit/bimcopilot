@@ -8,6 +8,7 @@ import PFBD_icon from "./pfbd_logo_white_(Type3).svg";
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+// import CurrencySelector from "@/components/CurrencySelector/CurrencySelector";
 
 const Clock = dynamic(() => import("./Clock/clock"), { ssr: false });
 const DateComponent = dynamic(() => import("./Clock/date"), { ssr: false });
@@ -156,7 +157,10 @@ export default function Header() {
 
               {/* Sign In/Sign Up or User Dropdown */}
               <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "100%" }}>
-                <div className="flex justify-end ..." id={styles.SIGNUP_RIGHT} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "200px", left: "4.5px" }}>
+                <div className="flex justify-end items-center gap-3 ..." id={styles.SIGNUP_RIGHT} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "200px", left: "4.5px" }}>
+                  {/* Currency Selector - Commented out since currency auto-detects from IP */}
+                  {/* <CurrencySelector textColor="text-slate-50" /> */}
+                  
                   {isAuthenticated ? (
                     <div className="relative left-[8px]" ref={dropdownRef}>
                       {/* User Icon Button */}

@@ -12,12 +12,14 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "@/components/ui/button";
+import { formatPriceWithCurrencySync } from '@/app/utils/currency';
 
 export default class Products extends Component {
   constructor(props) {
     super(props);
     this.state = {
       products: [],
+      currency: typeof window !== 'undefined' ? localStorage.getItem('selectedCurrency') || 'USD' : 'USD',
     };
   }
 
@@ -30,10 +32,24 @@ export default class Products extends Component {
     } catch (err) {
       console.error("Error fetching products:", err);
     }
+
+    // Listen for currency changes
+    if (typeof window !== 'undefined') {
+      this.handleCurrencyChange = (event) => {
+        this.setState({ currency: event.detail.currency });
+      };
+      window.addEventListener('currencyChanged', this.handleCurrencyChange);
+    }
+  }
+
+  componentWillUnmount() {
+    if (typeof window !== 'undefined' && this.handleCurrencyChange) {
+      window.removeEventListener('currencyChanged', this.handleCurrencyChange);
+    }
   }
 
   render() {
-    const { products } = this.state;
+    const { products, currency } = this.state;
 
     return (
       <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}>
@@ -100,7 +116,7 @@ export default class Products extends Component {
                             <h3 id={styles._H3} 
                                 style={{ marginTop: '4px' }}
                                 className="text-stone-500 font-avant_garde_medium">
-                                From ${product.commercial_price}
+                                From {formatPriceWithCurrencySync(product.commercial_price, currency)}
                             </h3>
                           </Link>
                     </div>
@@ -171,7 +187,7 @@ export default class Products extends Component {
                         {product.description}
                       </h4>
                       <h4 id={styles._H4} className="text-neutral-700 font-avant_garde_bold">
-                        From ${product.commercial_price}
+                        From {formatPriceWithCurrencySync(product.commercial_price, currency)}
                       </h4>
                     </Link>
                   </div>

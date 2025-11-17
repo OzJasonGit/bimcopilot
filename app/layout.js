@@ -7,6 +7,7 @@ import dynamic from 'next/dynamic';
 import Script from "next/script";
 import Analytics from "./analytics";
 import { GA_TRACKING_ID } from "../lib/gtag";
+import { CurrencyProvider } from '../components/Context/CurrencyContext';
 
 
 
@@ -148,13 +149,13 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${avant_garde_bold.variable}  ${avant_garde_medium.variable} ${geistmono_regular.variable}   ${geistmono_semibold.variable} ${geist_regular.variable} ${geist_semibold.variable} ${geist_medium.variable} ${margin_demo.variable} ${calisga_regular.variable}`}
             >    
-        <>{children}</>
+        <CurrencyProvider>
+          {children}
 
-        <PerformanceMonitor />
+          <PerformanceMonitor />
 
-        <Analytics />
-
-        
+          <Analytics />
+        </CurrencyProvider>
 
       </body>
     </html>

@@ -10,6 +10,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { ShadCN_Header } from "./ShadCN_Header/shadCN_Header";
 import { padding, width } from "@mui/system";
+// import CurrencySelector from "@/components/CurrencySelector/CurrencySelector";
 
 
 
@@ -214,7 +215,10 @@ export default function Header() {
                   {/* Sign In/Sign Up or User Dropdown */}
                   <div className="flex justify-end ..." id={styles.SIGNUP_CONTAINER} 
                       style={{ gridArea: "SIGNUP", position: "relative", height: "100%", width: "100%", top:"0px" }}>
-                      <div className="flex justify-end ..." id={styles.SIGNUP_RIGHT} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "200px", left: "4.5px" }}>
+                      <div className="flex justify-end items-center gap-3 ..." id={styles.SIGNUP_RIGHT} style={{ gridArea: "SIGN", position: "relative", height: "100%", width: "200px", left: "4.5px" }}>
+                        {/* Currency Selector - Commented out since currency auto-detects from IP */}
+                        {/* <CurrencySelector textColor="text-slate-50" /> */}
+                        
                         {isAuthenticated ? (
                           <div className="relative left-[8px]" ref={dropdownRef}>
                             {/* User Icon Button */}

@@ -25,6 +25,7 @@ import {
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { debounce } from "lodash";
+import { useFormatPrice } from '@/components/Context/CurrencyContext';
 
 // SCHEMAS
 const categorySchema = z.object({
@@ -52,6 +53,7 @@ const productSchema = z.object({
 });
 
 export default function Product_Management() {
+  const formatPrice = useFormatPrice();
   // Forms
   const catForm = useForm({
     resolver: zodResolver(categorySchema),
@@ -911,8 +913,8 @@ async function handleCarouselUpload(e) {
               )}
               <p className="mt-4 text-gray-600">{preview.short_description}</p>
               <p className="text-gray-700">
-                <strong>Student:</strong> ${preview.student_price} |{" "}
-                <strong>Commercial:</strong> ${preview.commercial_price}
+                <strong>Student:</strong> {formatPrice(preview.student_price)} |{" "}
+                <strong>Commercial:</strong> {formatPrice(preview.commercial_price)}
               </p>
               <p className="text-gray-600">Tags: {preview.tags || "None"}</p>
               <Button

@@ -33,13 +33,25 @@ const buttonVariants = cva(
   }
 )
 
-const Button = React.forwardRef(({ className, variant, size, asChild = false, ...props }, ref) => {
+const Button = React.forwardRef(({ className, variant, size, asChild = false, htmlType, loading, disabled, ...props }, ref) => {
   const Comp = asChild ? Slot : "button"
+  // Filter out non-native button props
+  const nativeProps = { ...props };
+  if (htmlType && Comp === "button") {
+    nativeProps.type = htmlType;
+  }
+  // Remove loading prop (native buttons don't support it)
+  // If loading is true, disable the button instead
+  if (loading) {
+    nativeProps.disabled = true;
+  } else if (disabled !== undefined) {
+    nativeProps.disabled = disabled;
+  }
   return (
     (<Comp
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size, className }), loading && "opacity-50 cursor-not-allowed")}
       ref={ref}
-      {...props} />)
+      {...nativeProps} />)
   );
 })
 Button.displayName = "Button"

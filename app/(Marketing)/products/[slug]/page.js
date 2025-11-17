@@ -20,6 +20,7 @@ import handleCheckout from '@/components/Payment/payment';
 import PayPalButton from '@/components/Payment/PayPalButton';
 import { CartContext } from '@/components/Context/CartContext';
 import { useContext } from 'react';
+import { useFormatPrice } from '@/components/Context/CurrencyContext';
 
 
 
@@ -34,6 +35,7 @@ const ProductDetailpage = () => {
 const { addToCart } = useContext(CartContext);
   const router = useRouter();
   const [selectedImage, setSelectedImage] = useState(null);
+  const formatPrice = useFormatPrice();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -234,7 +236,7 @@ const { addToCart } = useContext(CartContext);
                 <div style={{ position: 'relative', gridArea: 'C2' }}>
                   <h2 id={styles._H1} 
                       className="text-stone-700 font-avant_garde_bold" style={{ marginBottom: '0px' }}>
-                    ${currentPrice?.toFixed(2)}{' '}
+                    {formatPrice(currentPrice)}{' '}
                     <span id={styles._H3} 
                           className="text-stone-700 font-avant_garde_medium">Tax included.</span>
                   </h2>
