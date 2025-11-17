@@ -17,7 +17,7 @@ function ListItem({ title, children, href, ...props }) {
     <li {...props}>
       <NavigationMenuLink asChild>
         <Link href={href}>
-          <div className="text-sm leading-none font-medium text-stone-50">{title}</div>
+          <div className="text-sm leading-none font-medium text-stone-700">{title}</div>
           <p className="text-stone-400 line-clamp-2 text-sm leading-snug">
             {children}
           </p>
