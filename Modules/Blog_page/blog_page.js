@@ -693,7 +693,7 @@ const Blog_page = (stories) => {
                                         className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
                                         {parse(story.author || "Unknown Author")}
                                     </h3>    
-                                    <br/>
+                 
                                     <h3 
                                         id={styles._H3}
                                         className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
