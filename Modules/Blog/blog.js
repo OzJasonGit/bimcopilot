@@ -8,7 +8,12 @@ import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides_white";
 import Sides_Nav from "../../components/Sides/sides_nav_blog";
 import Header from "../../components/Header/Header";
-import Subfooter from "../../components/Subfooter2/subfooter2";
+
+
+import Subfooter2 from "@/components/Subfooter2/subfooter2";
+
+
+
 import Footer from "../../components/Footer/Footer";
 
 
@@ -970,7 +975,8 @@ const Blogsmain = ({ stories, firstStory }) => {
           </section>
         )
       })}
-      <Subfooter />
+      
+      <Subfooter2 />
       <Footer />
 
     </>
