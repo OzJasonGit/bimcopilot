@@ -1217,13 +1217,17 @@
 
 
 
+    
+
+
     #BIM_TITLE {
         position: relative;
         grid-area: TITLE;
         display: grid;
-        grid-template-columns: .75fr 50px 70px;
+        grid-template-columns: 375px 70px 1fr;
         grid-template-rows: auto 40px;
-        grid-template-areas: "TITLE . LOGO"
+        grid-template-areas:
+            "TITLE LOGO . "
             ". . .";
     }
 
@@ -1666,14 +1670,19 @@
    
 
 
+
+
+
+
     #BIM_TITLE {
         position: relative;
         grid-area: TITLE;
         display: grid;
-        grid-template-columns: .75fr 50px 50px;
+        grid-template-columns: 300px 70px 1fr;
         grid-template-rows: auto 40px;
-        grid-template-areas: "TITLE . LOGO"
-                             ". . .";
+        grid-template-areas:
+            "TITLE LOGO ."
+            ". . .";
     }
 
 
