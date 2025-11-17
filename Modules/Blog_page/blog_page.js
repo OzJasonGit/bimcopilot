@@ -507,12 +507,13 @@ const Blog_page = (stories) => {
                             }}>
 
                             <div className="bg-stone-100 rounded-full overflow-hidden"
+                                id={styles.AVATAR_IMAGE}
                                 style={{
                                     gridArea: "AUTHOR",
                                     height: "110px",
                                     width: "110px",
                                     position: "relative",
-                                    right: "-15px"
+                              
                                 }}>
                                 {/* Test component to verify image loading */}
                                 <AuthorImageTest authorName={story.author} />

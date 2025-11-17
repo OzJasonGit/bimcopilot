@@ -569,6 +569,11 @@
 }
 
 
+#AVATAR_IMAGE {
+    right: 15px;
+}
+
+
 
 #NUMBER_GRID {
     display: grid;  
@@ -1165,7 +1170,9 @@
     
     
     
-    
+    #AVATAR_IMAGE {
+        right: 15px;
+    }
     
     
     
@@ -1910,7 +1917,9 @@
 
 
         
-
+    #AVATAR_IMAGE {
+        right: 0px;
+    }
 
     
 
@@ -2616,6 +2625,12 @@
             "BC "
             " AUTHOR";
         left: 0;
+    }
+
+
+
+    #AVATAR_IMAGE {
+        right: 0px;
     }
 
 
