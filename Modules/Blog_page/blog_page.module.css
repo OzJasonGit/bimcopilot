@@ -2530,6 +2530,7 @@
                 ". . ."
                 " BANNER-1 MAIN_AREA BANNER-2 "
                 ". . .";
+            overflow-x: hidden;
         }
 
 
