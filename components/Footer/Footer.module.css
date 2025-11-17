@@ -404,6 +404,17 @@
 }
 
 
+
+
+#LOGO_HOLDER {
+    grid-area: LOGO;
+    position: relative;
+    width: 90%;
+    height: 100%;
+    left: -0px;
+}
+
+
 #IMAGE_HOLDER {
     grid-area: TITLE;
     position: relative;
@@ -783,6 +794,15 @@
         overflow: hidden;
         grid-area: GIF;
 
+    }
+
+
+    #LOGO_HOLDER {
+        grid-area: LOGO;
+        position: relative;
+        width: 90%;
+        height: 100%;
+        left: -0px;
     }
 
 
@@ -1674,8 +1694,7 @@
         position: relative;
         width: 90%;
         height: 100%;
-        left: -0px;
-        
+        left: -0px;       
     }
 
 
