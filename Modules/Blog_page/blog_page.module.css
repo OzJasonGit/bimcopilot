@@ -2430,6 +2430,19 @@
    
     }/////////////////////////////////////////////////////////////////////*/
 
+
+
+    #SHADOW_SECTION_TITLE {
+        position: relative;
+        width: 100%;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: transparent;
+        z-index: -20000;
+        overflow-x: hidden;
+    }
+
     #MAIN_NAV {
         display: none;
     }
