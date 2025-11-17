@@ -1795,6 +1795,19 @@
         left: -100vw;
         overflow-x: hidden;
     }
+
+
+
+    #SHADOW_SECTION_TITLE {
+        position: relative;
+        width: 100%;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        background-color: transparent;
+        z-index: -20000;
+        overflow-x: hidden;
+    }
     
 
 
