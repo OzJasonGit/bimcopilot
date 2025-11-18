@@ -21,12 +21,31 @@ render() {
  const defaultContent =
     "Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam, ut aliquip ex ea commodo consequat.";
 
+
+ const Architecture_Delivery =
+    <div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      
+    </div>;
+
+
+
+
+
+
+
+
  const accordionItems = [
     {
       key: "services-1",
-      title: "Architecture, Design & Technology",
+      title: "Architecture, Design & Delivery",
       subtitle: "Press to expand",
-      content: defaultContent,
+      content: Architecture_Delivery,
     },
     {
       key: "services-2",

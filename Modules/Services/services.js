@@ -134,7 +134,7 @@ const Servicesmain = ({ stories}) => {
                   Don't leave your profits on the table. Streamline your<a  class="text-stone-700 ... font-avant_garde_bold"> processes</a>, save time, and boost 
                   revenue with <a  class="text-stone-700 ... font-avant_garde_bold">efficient,</a> <a class="text-stone-700 ... font-avant_garde_bold"> automated, </a> 
                   <a class="text-stone-700 ... font-avant_garde_bold">repeatable systems</a>. 
-                  <a  class="text-stone-700 ... font-avant_garde_bold">bimcopilot.com </a> lets you focus on what makes profit, what you enjoy, and what you do best.
+                  <a  class="text-stone-700 ... font-avant_garde_bold"> bimcopilot.com </a> lets you focus on what makes profit, what you enjoy, and what you do best.
 
                   {" "}
                   
