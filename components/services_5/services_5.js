@@ -25,7 +25,7 @@ render() {
  const Architecture_Delivery =
     <div>
       <ul>
-        <li></li>
+        <li>Writing something in this list item</li>
         <li></li>
         <li></li>
         <li></li>
