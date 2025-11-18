@@ -29,8 +29,18 @@ render() {
         <li></li>
         <li></li>
         <li></li>
-      </ul>
-      
+      </ul>    
+    </div>;
+
+
+const BIM_Delivery =
+    <div>
+      <ul className="list-disc pl-6">
+        <li>Writing something in this list item</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>    
     </div>;
 
 
@@ -51,7 +61,7 @@ render() {
       key: "services-2",
       title: "BIM Strategy & Documentation",
       subtitle: "Press to expand key 2",
-      content: defaultContent,
+      content: BIM_Delivery,
     },
     {
       key: "services-3",
