@@ -24,7 +24,7 @@ render() {
 
  const Architecture_Delivery =
     <div>
-      <ul>
+      <ul className="list-disc pl-6">
         <li>Writing something in this list item</li>
         <li></li>
         <li></li>
