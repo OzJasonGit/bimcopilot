@@ -9,7 +9,6 @@ export async function GET(req) {
   try {
     const user = await getCurrentUser();
     if (!user) {
-      console.log('No user found');
       return NextResponse.json({ error: 'Authentication required' }, { status: 401 });
     }
     
@@ -22,7 +21,6 @@ export async function GET(req) {
 
     // If no search param, only admins can view all orders
     if (!search && user.role !== 1) {
-      console.log('Non-admin tried to fetch all orders:', user);
       return NextResponse.json({ error: 'Admin access required' }, { status: 403 });
     }
 
@@ -45,7 +43,9 @@ export async function GET(req) {
           isObjectId = false;
         }
       }
-      const regex = new RegExp(search, 'i');
+      // Escape special regex characters to prevent ReDoS
+      const escapedSearch = search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const regex = new RegExp(escapedSearch, 'i');
       query.$or = [
         { stripeSessionId: regex },
         { paypalOrderId: regex },
@@ -62,10 +62,6 @@ export async function GET(req) {
       }
     }
 
-    console.log('User:', user);
-    console.log('Search param:', search);
-    console.log('Query object:', JSON.stringify(query));
-
     const total = await db.collection(ORDERS_COLLECTION).countDocuments(query);
     const orders = await db.collection(ORDERS_COLLECTION)
       .find(query)
@@ -74,7 +70,6 @@ export async function GET(req) {
       .limit(limit)
       .toArray();
     
-    console.log('Orders returned:', orders);
     return NextResponse.json({ orders, total, page, limit });
   } catch (error) {
     console.error('Error fetching orders:', error);

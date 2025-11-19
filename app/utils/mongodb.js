@@ -25,7 +25,10 @@
 import { MongoClient } from "mongodb";
 import mongoose from "mongoose";
 
-const uri = process.env.MONGODB_URI || "mongodb+srv://oz_nwachukwu:bigROAR2005@bimcopilot.dy1nnak.mongodb.net/bimcopilot?retryWrites=true&w=majority";
+if (!process.env.MONGODB_URI) {
+  throw new Error("MONGODB_URI environment variable is required");
+}
+const uri = process.env.MONGODB_URI;
 const options = {
   serverSelectionTimeoutMS: 10000,
   connectTimeoutMS: 15000,

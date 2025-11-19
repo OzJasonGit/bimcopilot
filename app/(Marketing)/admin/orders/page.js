@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React, { useRef } from 'react';
-import { useFormatPrice, getUserCurrency } from '@/components/Context/CurrencyContext';
+import { useFormatPrice } from '@/components/Context/CurrencyContext';
+import { getUserCurrency } from '@/app/utils/currency';
 
 const ORDERS_PER_PAGE = 50;
 

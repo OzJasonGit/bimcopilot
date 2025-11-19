@@ -11,9 +11,14 @@ export function middleware(req) {
         return NextResponse.redirect(new URL("/signin", req.url));
     }
 
-    try {
-        const user = jwt.decode(token);
+    if (!process.env.JWT_SECRET) {
+        console.error("JWT_SECRET environment variable is not set");
+        return NextResponse.redirect(new URL("/signin", req.url));
+    }
 
+    try {
+        // Verify the token signature, not just decode
+        const user = jwt.verify(token, process.env.JWT_SECRET);
 
         if (!user || user.role !== 1) { 
             return NextResponse.redirect(new URL("/", req.url));

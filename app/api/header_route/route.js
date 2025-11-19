@@ -16,6 +16,10 @@ export async function GET(req) {
     }
 
     // Verify the token
+    if (!process.env.JWT_SECRET) {
+      console.error("JWT_SECRET environment variable is not set");
+      return NextResponse.json({ error: "Server configuration error" }, { status: 500 });
+    }
     let decoded;
     try {
       decoded = jwt.verify(token, process.env.JWT_SECRET);

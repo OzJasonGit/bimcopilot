@@ -27,9 +27,15 @@ export async function POST(req) {
             );
         }
 
+        if (!process.env.JWT_SECRET) {
+            return new NextResponse(
+                JSON.stringify({ error: { message: "Server configuration error" } }),
+                { status: 500 }
+            );
+        }
         const token = jwt.sign(
             { email: existingUser.email, id: existingUser._id, role: existingUser.role },
-            process.env.JWT_SECRET || "test",
+            process.env.JWT_SECRET,
             { expiresIn: "1h" }
         );
 
@@ -42,8 +48,17 @@ export async function POST(req) {
             maxAge: 60 * 60, // 1 hour
         });
 
+        // Return sanitized user data without password hash
+        const { password: _, ...userWithoutPassword } = existingUser;
         const response = new NextResponse(
-            JSON.stringify({ result: existingUser }),
+            JSON.stringify({ 
+                result: {
+                    _id: userWithoutPassword._id,
+                    name: userWithoutPassword.name,
+                    email: userWithoutPassword.email,
+                    role: userWithoutPassword.role
+                }
+            }),
             { status: 200 }
         );
         response.headers.set("Set-Cookie", cookie);

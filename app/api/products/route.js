@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 import { connectToDatabase } from "@/app/utils/mongodb";
+import { getCurrentUser } from "@/app/utils/auth";
 import { v2 as cloudinary } from "cloudinary";
 
 cloudinary.config({
@@ -46,6 +47,10 @@ export async function GET() {
 
 export async function POST(req) {
   try {
+    const user = await getCurrentUser();
+    if (!user || user.role !== 1) {
+      return NextResponse.json({ success: false, message: "Admin access required" }, { status: 403 });
+    }
     await connectToDatabase();
     const data = await req.json();
     if (!data.product_id || !data.title || !data.slug || !data.category || !data.images?.length) {
@@ -66,6 +71,10 @@ export async function POST(req) {
 
 export async function PUT(req) {
   try {
+    const user = await getCurrentUser();
+    if (!user || user.role !== 1) {
+      return NextResponse.json({ success: false, message: "Admin access required" }, { status: 403 });
+    }
     await connectToDatabase();
     const data = await req.json();
     if (!data._id) {
@@ -84,6 +93,10 @@ export async function PUT(req) {
 
 export async function DELETE(req) {
   try {
+    const user = await getCurrentUser();
+    if (!user || user.role !== 1) {
+      return NextResponse.json({ success: false, message: "Admin access required" }, { status: 403 });
+    }
     await connectToDatabase();
     const { searchParams } = new URL(req.url);
     const id = searchParams.get("id");

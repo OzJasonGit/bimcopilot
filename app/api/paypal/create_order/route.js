@@ -4,10 +4,36 @@ export async function POST(req) {
   try {
     const { amount, products = [] } = await req.json();
 
+    // Validate amount
+    if (!amount || typeof amount !== 'number' || amount <= 0) {
+      return NextResponse.json({ error: 'Invalid amount' }, { status: 400 });
+    }
+
+    // Validate products array
+    if (!Array.isArray(products) || products.length === 0) {
+      return NextResponse.json({ error: 'Products array required' }, { status: 400 });
+    }
+
+    // Validate each product
+    for (const product of products) {
+      if (!product.title || typeof product.price !== 'number' || product.price <= 0 || !product.quantity || product.quantity <= 0) {
+        return NextResponse.json({ error: 'Invalid product data' }, { status: 400 });
+      }
+    }
+
     // 1. Get access token
     const clientId = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID;
-    const clientSecret = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_SECRET;
-    const base = 'https://api-m.sandbox.paypal.com'; // Use 'https://api-m.paypal.com' for production
+    const clientSecret = process.env.PAYPAL_CLIENT_SECRET; // Server-side only, never use NEXT_PUBLIC_ for secrets
+    const base = process.env.PAYPAL_ENV === 'production' 
+      ? 'https://api-m.paypal.com' 
+      : 'https://api-m.sandbox.paypal.com';
+    
+    if (!clientId || !clientSecret) {
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      );
+    }
 
     const basicAuth = Buffer.from(`${clientId}:${clientSecret}`).toString('base64');
     const tokenRes = await fetch(`${base}/v1/oauth2/token`, {

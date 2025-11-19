@@ -13,9 +13,11 @@ export async function GET(req) {
         .limit(2)
         .toArray();
 
-    const firstStory = await collection.findOne({  
-        where: {title: id}
-    });
+    // Get the first story (latest by post_number)
+    const firstStory = await collection.findOne(
+        {},
+        { sort: { post_number: -1 } }
+    );
 
     const topStoriesToSlice = await collection.find({}).toArray();
     const topStories = topStoriesToSlice.slice(1, 6);

@@ -1,8 +1,16 @@
 import { connectToDatabase } from "../../utils/mongodb";
 import { NextResponse } from "next/server";
+import { getCurrentUser } from "@/app/utils/auth";
 
 export async function POST(req) {
   try {
+    const user = await getCurrentUser();
+    if (!user || user.role !== 1) {
+      return new NextResponse(
+        JSON.stringify({ success: false, error: "Admin access required" }),
+        { status: 403, headers: { "Content-Type": "application/json" } }
+      );
+    }
     const db = await connectToDatabase();
     const collection = db.collection("stories");
     const data = await req.json();

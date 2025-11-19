@@ -9,7 +9,7 @@ export async function POST(req) {
     const db = await connectToDatabase();
 
     const {firstName, lastName, email, password, confirmPassword}  =  await  req.json();
-    console.log("data from backend", firstName,lastName,email,password,confirmPassword)
+    // Removed sensitive data logging - passwords should never be logged
     const User = db.collection("users");
 
     try {
@@ -31,9 +31,16 @@ export async function POST(req) {
             name: `${firstName} ${lastName}`,
         });
 
+        if (!process.env.JWT_SECRET) {
+            console.error("JWT_SECRET environment variable is not set");
+            return new NextResponse(
+                JSON.stringify({ error: { message: "Server configuration error" } }),
+                { status: 500 }
+            );
+        }
         const token = jwt.sign(
-            { email: result.email, id: result._id },
-            "test",
+            { email: result.email || email, id: result.insertedId, role: 0 },
+            process.env.JWT_SECRET,
             { expiresIn: "1h" }
         );
 

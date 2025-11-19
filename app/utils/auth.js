@@ -13,9 +13,13 @@ export async function getCurrentUser() {
     }
 
     // Verify the token
+    if (!process.env.JWT_SECRET) {
+      console.error("JWT_SECRET environment variable is not set");
+      return null;
+    }
     let decoded;
     try {
-      decoded = jwt.verify(token, process.env.JWT_SECRET || "test");
+      decoded = jwt.verify(token, process.env.JWT_SECRET);
     } catch (error) {
       if (error.name === "TokenExpiredError") {
         return null;
