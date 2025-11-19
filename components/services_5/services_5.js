@@ -43,17 +43,7 @@ const BIM_Management =
       </ul>    
     </div>;
 
-const Production_And_Documentation =
-    <div>
-      <ul className="list-disc pl-6">
-        <li>Writing something in this list item</li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>    
-    </div>;
-
-const Digital_Delivery_and_Automation =
+const AI_and_Automation =
     <div>
       <ul className="list-disc pl-6">
         <li>Writing something in this list item</li>
@@ -64,8 +54,7 @@ const Digital_Delivery_and_Automation =
     </div>;
 
 
-
-const AI_Enabled_Architecture_and_BIM_Services =
+const Specialist_Packages =
     <div>
       <ul className="list-disc pl-6">
         <li>Writing something in this list item</li>
@@ -85,7 +74,7 @@ const AI_Enabled_Architecture_and_BIM_Services =
  const accordionItems = [
     {
       key: "services-1",
-      title: "Architecture, Design-Delivery & Documentation Support",
+      title: "Architecture, Design Delivery & Documentation Support",
       subtitle: "Press to expand",
       content: Architecture_Delivery,
     },
@@ -99,13 +88,13 @@ const AI_Enabled_Architecture_and_BIM_Services =
       key: "services-3",
       title: "Automation & AI Enabled BIM Services",
       subtitle: "Press to expand",
-      content: AI_Enabled_Architecture_and_BIM_Services,
+      content: AI_and_Automation,
     },
     {
       key: "services-4",
       title: "Specialist Packages",
       subtitle: "Press to expand",
-      content: defaultContent,
+      content: Specialist_Packages,
     },
   ];
 
