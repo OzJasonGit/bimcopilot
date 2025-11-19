@@ -33,7 +33,39 @@ render() {
     </div>;
 
 
-const BIM_Delivery =
+const BIM_Management =
+    <div>
+      <ul className="list-disc pl-6">
+        <li>Writing something in this list item</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>    
+    </div>;
+
+const Production_And_Documentation =
+    <div>
+      <ul className="list-disc pl-6">
+        <li>Writing something in this list item</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>    
+    </div>;
+
+const Digital_Delivery_and_Automation =
+    <div>
+      <ul className="list-disc pl-6">
+        <li>Writing something in this list item</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>    
+    </div>;
+
+
+
+const AI_Enabled_Architecture_and_BIM_Services =
     <div>
       <ul className="list-disc pl-6">
         <li>Writing something in this list item</li>
@@ -59,13 +91,37 @@ const BIM_Delivery =
     },
     {
       key: "services-2",
-      title: "BIM Strategy & Documentation",
+      title: "BIM Management & Coordination",
       subtitle: "Press to expand key 2",
-      content: BIM_Delivery,
+      content: BIM_Management,
     },
     {
       key: "services-3",
-      title: "Digital Twin Product Development",
+      title: "Production & Documentation Support",
+      subtitle: "Press to expand",
+      content: Production_And_Documentation,
+    },
+    {
+      key: "services-4",
+      title: "Digital Delivery & Automation",
+      subtitle: "Press to expand",
+      content: Digital_Delivery_and_Automation,
+    },
+    {
+      key: "services-5",
+      title: "AI Enabled Architecture & BIM Services",
+      subtitle: "Press to expand",
+      content: AI_Enabled_Architecture_and_BIM_Services,
+    },
+    {
+      key: "services-6",
+      title: "Compliance, QA & Delivery Risk Mitigation",
+      subtitle: "Press to expand",
+      content: defaultContent,
+    },
+    {
+      key: "services-7",
+      title: "Specialist Packages",
       subtitle: "Press to expand",
       content: defaultContent,
     },
