@@ -25,10 +25,17 @@ render() {
  const Architecture_Delivery =
     <div>
       <ul className="list-disc pl-6">
-        <li>Writing something in this list item</li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Schematic Design Packages</li>
+        <li>Detailed Design / Technical Design Packages</li>
+        <li>Construction Documentation (GA + Detailed Drawings)</li>
+        <li>Coordination with Structural & MEP Engineers</li>
+        <li>RIBA Stage Documentation (0–4)</li>
+        <li>Revit Model Production</li>
+        <li>Drawing Standardization & QA/QC</li>
+        <li>1:5 / 1:10 / 1:20 / 1:25 / 1:50 Technical Detail Packages</li>
+        <li>Drafting Support (Plans, Sections, Elevations, Details)</li>
+        <li>1:5 / 1:10 / 1:20 / 1:25 / 1:50 Technical Detail Packages</li>
+
       </ul>    
     </div>;
 
