@@ -85,42 +85,24 @@ const AI_Enabled_Architecture_and_BIM_Services =
  const accordionItems = [
     {
       key: "services-1",
-      title: "Architecture, Design & Delivery",
+      title: "Architecture, Design-Delivery & Documentation Support",
       subtitle: "Press to expand",
       content: Architecture_Delivery,
     },
     {
       key: "services-2",
-      title: "BIM Management & Coordination",
+      title: "BIM Management Digital Delivery & Coordination",
       subtitle: "Press to expand key 2",
       content: BIM_Management,
     },
     {
       key: "services-3",
-      title: "Production & Documentation Support",
-      subtitle: "Press to expand",
-      content: Production_And_Documentation,
-    },
-    {
-      key: "services-4",
-      title: "Digital Delivery & Automation",
-      subtitle: "Press to expand",
-      content: Digital_Delivery_and_Automation,
-    },
-    {
-      key: "services-5",
-      title: "AI Enabled Architecture & BIM Services",
+      title: "Automation & AI Enabled BIM Services",
       subtitle: "Press to expand",
       content: AI_Enabled_Architecture_and_BIM_Services,
     },
     {
-      key: "services-6",
-      title: "Compliance, QA & Delivery Risk Mitigation",
-      subtitle: "Press to expand",
-      content: defaultContent,
-    },
-    {
-      key: "services-7",
+      key: "services-4",
       title: "Specialist Packages",
       subtitle: "Press to expand",
       content: defaultContent,
