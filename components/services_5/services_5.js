@@ -34,23 +34,22 @@ render() {
         <li>Drawing Standardization & QA/QC</li>
         <li>1:5 / 1:10 / 1:20 / 1:25 / 1:50 Technical Detail Packages</li>
         <li>Drafting Support (Plans, Sections, Elevations, Details)</li>
-        <li>1:5 / 1:10 / 1:20 / 1:25 / 1:50 Technical Detail Packages</li>
-
       </ul>    
     </div>;
 
-
-const BIM_Management =
-    <div>
-      <ul className="list-disc pl-6">
-        <li>Writing something in this list item</li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>    
-    </div>;
 
 const AI_and_Automation =
+    <div>
+      <ul className="list-disc pl-6">
+        <li>AI-Assisted BEP Creation (Adaptive, auto-updating)</li>
+        <li>Custom GPTs for Architectural Firms</li>
+        <li>AI-Driven Model Audits & Reporting</li>
+        <li>Parametric Facade Concepts via AI + Grasshopper</li>
+        <li>AI Knowledge Base Setup for Project Teams</li>
+      </ul>    
+    </div>;
+
+const BIM_Management =
     <div>
       <ul className="list-disc pl-6">
         <li>Writing something in this list item</li>
