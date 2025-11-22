@@ -3,12 +3,13 @@ import styles from "./loader.module.css"
 
 const SkeletonLoader = () => {
   return (
-  <span className={styles.loader}>bimcopilot</span>
+    <div className={styles.loaderContainer}>
+      <div className={styles.spinner}></div>
+    </div>
   )
-
 }
 
-export default  SkeletonLoader ;
+export default SkeletonLoader;
 
 
 
