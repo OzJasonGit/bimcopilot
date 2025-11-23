@@ -1000,8 +1000,7 @@ const Blog_page = (stories) => {
                             <br /> <br />
                             <div
                                 id={styles._H3_2}
-                                className="text-lg ...
-                                 text-stone-400 ... font-avant_garde_medium">
+                                className="text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body3 || "")}
                             </div>
                         </div>

@@ -240,8 +240,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas:
-        ". . TITLE TITLE TITLE TITLE TITLE TITLE TITLE . . ."
-        ". . TEXT TEXT TEXT TEXT TEXT TEXT TEXT . . .";
+        ". . . TITLE TITLE TITLE TITLE . . . . ."
+        ". . . TEXT TEXT TEXT TEXT . . . . .";
 }
 
 /* Quill Editor List Styles for rendered content */
