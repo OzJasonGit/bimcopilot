@@ -1030,14 +1030,10 @@ const Blog_page = (stories) => {
                                 gridArea: "TITLE",
                             }}>
                             <h3
-<<<<<<< HEAD
+
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
                                 {parse(story.body4_title || "")}              
-=======
-                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
-                                id="_H3_2">
-                                {parse(story.body4_title || "")}
->>>>>>> 920cfba153465662544ae3ab804cb4b3c3857b8e
+
                             </h3>
                             <br />
                         </div>
