@@ -492,7 +492,7 @@ const Blog_page = (stories) => {
             </div>
 
 
-
+            {/*Main Blog Hero*/}
             <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}
                 style={{
                     background: "#171717"
@@ -611,7 +611,7 @@ const Blog_page = (stories) => {
                                          marginBottom:"0px",                 
                                         }}>
                                         {parse(story.post_number || "")}
-                                        001
+                                        
                                     </h3>                 
                                 </div>   
                                 <br/>
@@ -793,7 +793,9 @@ const Blog_page = (stories) => {
                                     Introduction
                                     <br /> <br />
                                 </h1>
-                                <p className="text-xl ... text-stone-400 ... font-avant_garde_bold">
+                                <p 
+                                    id={styles._H3_2}
+                                    className=" text-stone-400 ... font-avant_garde_bold">
                                     {parse(story.Slug || "")} {parse(story.Slug || "")}
                                     <br />
                                     {parse(story.introduction || "")}
@@ -1276,6 +1278,19 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}
             style={{

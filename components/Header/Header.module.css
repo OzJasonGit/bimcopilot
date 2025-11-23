@@ -340,7 +340,7 @@
     grid-template-areas:
       " . BASKET BASKET"
       ". . ."
-      ". SIGNUP SIGNUP ";
+      "SIGNUP SIGNUP SIGNUP ";
 
 }
 
@@ -889,7 +889,7 @@
     grid-template-areas:
       " . BASKET BASKET"
       ". . ."
-      ". SIGNUP SIGNUP ";
+      "SIGNUP SIGNUP SIGNUP ";
   }
 
 
