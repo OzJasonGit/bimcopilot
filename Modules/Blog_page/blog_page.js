@@ -42,6 +42,12 @@ const Blog_page = (stories) => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
 
+    const stripHtml = (html) => {
+        if (!html) return "";
+        // Remove HTML tags using regex
+        return html.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim();
+    };
+
     useEffect(() => {
         const fetchStory = async () => {
             if (!slug) return;
@@ -144,7 +150,7 @@ const Blog_page = (stories) => {
                                                 <div id={styles.NAVIGATION_HOLDER}
                                                     style={{
                                                         position: "sticky",
-                                                        top: "200px",
+                                                        top: "0px",
                                                         width: "100%",
                                                         height: "auto",                                        
                                                         }}>
@@ -358,7 +364,7 @@ const Blog_page = (stories) => {
                                             style={{
                                                 position: "relative",
                                                 gridArea: "NAV",
-                                                width: "100%",
+                                                width: "105%",
                                                 height: "100%",
                                                 display: "flex",}}>
                                                 <div
@@ -383,38 +389,56 @@ const Blog_page = (stories) => {
                                                                             style={{
                                                                                 position: "relative",                                   
                                                                                 width: "100%",
-                                                                                height: "100%",   
-                                                                                maxHeight: "0",                                                                  
+                                                                                height: "auto",
+                                                                                display: "flex",
+                                                                                flexDirection: "column",
+                                                                                gap: "8px"                                                                  
                                                                                 }}>  
-                                                                        <div className={styles.PARAGRAPH_1}
-                                                                                style={{
-                                                                                position: "relative",                                   
-                                                                                width: "100%",
-                                                                                height: "auto",
-                                                                                gridArea: "1"                                                                            
-                                                                                }}>
-                                                                            <p
-                                                                                id={styles._H4}
-                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
+                                                                        {story.body1_title && (
+                                                                            <a href="#body1" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parse(story.body1_title || "")}
-                                                                                testing some text 1 
-                                                                            </p>
-                                                                        </div>  
-
-                                                                        <div className={styles.PARAGRAPH_2}
-                                                                                style={{
-                                                                                position: "relative",                                   
-                                                                                width: "100%",
-                                                                                height: "auto",
-                                                                                gridArea: "2"                                                                            
-                                                                                }}>
-                                                                            <p
-                                                                                id={styles._H4}
-                                                                                className="text-xs ... text-neutral-700 ... font-avant_garde_bold">
-                                                                                {parse(story.body1_title || "")}
-                                                                                testing some text 2
-                                                                            </p>
-                                                                        </div>   
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body2_title && (
+                                                                            <a href="#body2" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parse(story.body2_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body3_title && (
+                                                                            <a href="#body3" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parse(story.body3_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body4_title && (
+                                                                            <a href="#body4" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parse(story.body4_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body5_title && (
+                                                                            <a href="#body5" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parse(story.body5_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body6_title && (
+                                                                            <a href="#body6" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parse(story.body6_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body7_title && (
+                                                                            <a href="#body7" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parse(story.body7_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body8_title && (
+                                                                            <a href="#body8" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parse(story.body8_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body9_title && (
+                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parse(story.body9_title || "")}
+                                                                            </a>
+                                                                        )}
 
                                                                            
 
@@ -810,8 +834,6 @@ const Blog_page = (stories) => {
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id={styles._H3_2}>
                                 {parse(story.body1_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
                             <br />
                         </div>
@@ -838,14 +860,9 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",
                             }}>
                             <br /> <br />
-                            <p className="text-lg ... text-stone-400 ... font-avant_garde_medium">
+                            <div className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body1 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat nulla pariatur.
-                            </p>
+                            </div>
                         </div>
 
 
@@ -897,8 +914,6 @@ const Blog_page = (stories) => {
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id={styles._H3_2}>
                                 {parse(story.body2_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
                             <br />
                         </div>
@@ -910,15 +925,10 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",
                             }}>
 
-                            <p
+                            <div
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body2 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat nulla pariatur.
-                            </p>
+                            </div>
                         </div>
 
                     </div>
@@ -950,8 +960,6 @@ const Blog_page = (stories) => {
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body3_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
                             <br />
                         </div>
@@ -989,15 +997,10 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",
                             }}>
                             <br /> <br />
-                            <p
+                            <div
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body3 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat nulla pariatur.
-                            </p>
+                            </div>
                         </div>
 
                     </div>
@@ -1029,8 +1032,6 @@ const Blog_page = (stories) => {
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body4_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
                             <br />
                         </div>
@@ -1042,15 +1043,10 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",
                             }}>
 
-                            <p
+                            <div
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body4 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat nulla pariatur.
-                            </p>
+                            </div>
                         </div>
 
                     </div>
@@ -1083,8 +1079,6 @@ const Blog_page = (stories) => {
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body5_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
                             <br />
                         </div>
@@ -1096,15 +1090,10 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",
                             }}>
 
-                            <p
+                            <div
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body5 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat nulla pariatur.
-                            </p>
+                            </div>
                         </div>
 
                     </div>
@@ -1135,8 +1124,6 @@ const Blog_page = (stories) => {
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body6_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor 
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
                             <br/> 
                         </div>
@@ -1147,15 +1134,10 @@ const Blog_page = (stories) => {
                                 width: "100%",                     
                                 gridArea: "TEXT",}}> 
 
-                            <p  
+                            <div  
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body6 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                                fugiat nulla pariatur. 
-                            </p>                  
+                            </div>                  
                         </div>
 
                     </div>
@@ -1186,8 +1168,6 @@ const Blog_page = (stories) => {
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body7_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor 
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
                             <br/> 
                         </div>
@@ -1198,15 +1178,10 @@ const Blog_page = (stories) => {
                                 width: "100%",                     
                                 gridArea: "TEXT",}}> 
 
-                            <p  
+                            <div  
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body7 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                                fugiat nulla pariatur. 
-                            </p>                  
+                            </div>                  
                         </div>
 
                     </div>
@@ -1247,10 +1222,10 @@ const Blog_page = (stories) => {
                             width: "100%",                     
                             gridArea: "TEXT",}}> 
 
-                        <p  
+                        <div  
                             className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                             {parse(story.body8 || "")}                        
-                        </p>                  
+                        </div>                  
                     </div>
 
                 </div>
@@ -1291,10 +1266,10 @@ const Blog_page = (stories) => {
                                 width: "100%",                     
                                 gridArea: "TEXT",}}> 
 
-                            <p  
+                            <div  
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body9 || "")}                    
-                            </p>                  
+                            </div>                  
                         </div>
 
                     </div>
@@ -1330,14 +1305,11 @@ const Blog_page = (stories) => {
                         Conclusion
                         <br /> <br />
                     </h1>
-                    <p  
-                        className="text-lg ... text-neutral-400 ... font-avant_garde_medium">
-                        {parse(story.Conclusion || "")}   
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                        fugiat nulla pariatur.                
-                    </p>                  
+                    <div  
+                        className="text-lg ... text-neutral-400 ... font-avant_garde_medium"
+                        style={{ width: "100%" }}>
+                        {parse(story.conclusion || "")}                
+                    </div>                  
                 </div>
 
             </div>

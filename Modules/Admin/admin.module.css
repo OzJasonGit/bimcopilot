@@ -3,15 +3,83 @@
     color: #fff;
     margin: 0;
   }
- .section1{
-    width: 50%;
- }
-.formDiv{
-    border: 1px solid  black;
+
+.container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
     position: relative;
     top: 19vh;
-    left: 50%;
+}
+
+.mainContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.formDiv{
+    border: 1px solid  black;
     padding: 2rem;
     border-radius: 25px;
+    background: #fff;
+}
 
+.sidebar {
+    width: 350px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 19vh;
+    height: calc(100vh - 19vh - 4rem);
+    overflow-y: auto;
+}
+
+.sidebarContent {
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 1.5rem;
+    background: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.storiesList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.storyItem {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.storyItem:hover {
+    background-color: #f3f4f6;
+    border-color: #d1d5db;
+}
+
+.storyItemActive {
+    border: 2px solid #3b82f6;
+    background-color: #eff6ff;
+}
+
+.storyItemActive:hover {
+    background-color: #dbeafe;
+}
+
+/* Ensure conclusion field is visible */
+.formDiv {
+    min-height: auto;
+    overflow: visible;
 }
