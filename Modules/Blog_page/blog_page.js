@@ -468,7 +468,7 @@ const Blog_page = (stories) => {
             </div>
 
 
-
+            {/*Main Blog Hero*/}
             <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}
                 style={{
                     background: "#171717"
@@ -587,7 +587,7 @@ const Blog_page = (stories) => {
                                          marginBottom:"0px",                 
                                         }}>
                                         {parse(story.post_number || "")}
-                                        001
+                                        
                                     </h3>                 
                                 </div>   
                                 <br/>
