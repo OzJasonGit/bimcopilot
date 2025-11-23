@@ -236,6 +236,35 @@
 }
 
 
+/* Quill Editor List Styles for rendered content */
+#FIRST_TEXT_HOLDER ul,
+#FIRST_TEXT_HOLDER ol {
+    padding-left: 1.5em !important;
+    margin: 0.5em 0 !important;
+    list-style-position: outside !important;
+}
+
+#FIRST_TEXT_HOLDER ul {
+    list-style-type: disc !important;
+}
+
+#FIRST_TEXT_HOLDER ol {
+    list-style-type: decimal !important;
+}
+
+#FIRST_TEXT_HOLDER li {
+    display: list-item !important;
+    margin: 0.25em 0 !important;
+    padding-left: 0.5em !important;
+}
+
+
+
+
+
+
+
+
 
 #TEXT_HOLDER {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
