@@ -107,7 +107,7 @@ const Blogsmain = ({ stories, firstStory }) => {
       })}
 
 
-
+      {/*Blog Main Image*/}
       {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
@@ -136,7 +136,7 @@ const Blogsmain = ({ stories, firstStory }) => {
 
 
 
-
+      {/*Introduction*/}
       {storiesToMap?.map((story, index) => {
         return (
           <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>

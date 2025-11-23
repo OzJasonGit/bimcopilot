@@ -810,8 +810,6 @@ const Blog_page = (stories) => {
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id={styles._H3_2}>
                                 {parse(story.body1_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
                             <br />
                         </div>
@@ -840,11 +838,6 @@ const Blog_page = (stories) => {
                             <br /> <br />
                             <p className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body1 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat nulla pariatur.
                             </p>
                         </div>
 
@@ -897,8 +890,6 @@ const Blog_page = (stories) => {
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id={styles._H3_2}>
                                 {parse(story.body2_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
                             <br />
                         </div>
@@ -913,11 +904,6 @@ const Blog_page = (stories) => {
                             <p
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body2 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat nulla pariatur.
                             </p>
                         </div>
 
@@ -950,8 +936,6 @@ const Blog_page = (stories) => {
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
                                 {parse(story.body3_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                             </h3>
                             <br />
                         </div>
@@ -992,11 +976,6 @@ const Blog_page = (stories) => {
                             <p
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
                                 {parse(story.body3 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat nulla pariatur.
                             </p>
                         </div>
 
@@ -1028,9 +1007,7 @@ const Blog_page = (stories) => {
                             <h3
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
-                                {parse(story.body4_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                {parse(story.body4_title || "")}              
                             </h3>
                             <br />
                         </div>
@@ -1044,12 +1021,7 @@ const Blog_page = (stories) => {
 
                             <p
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
-                                {parse(story.body4 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat nulla pariatur.
+                                {parse(story.body4 || "")}                              
                             </p>
                         </div>
 
@@ -1082,9 +1054,7 @@ const Blog_page = (stories) => {
                             <h3
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
-                                {parse(story.body5_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                {parse(story.body5_title || "")}                      
                             </h3>
                             <br />
                         </div>
@@ -1098,12 +1068,7 @@ const Blog_page = (stories) => {
 
                             <p
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
-                                {parse(story.body5 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                                fugiat nulla pariatur.
+                                {parse(story.body5 || "")}                               
                             </p>
                         </div>
 
@@ -1134,9 +1099,7 @@ const Blog_page = (stories) => {
                             <h3
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
-                                {parse(story.body6_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor 
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                {parse(story.body6_title || "")}                           
                             </h3>
                             <br/> 
                         </div>
@@ -1149,12 +1112,7 @@ const Blog_page = (stories) => {
 
                             <p  
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
-                                {parse(story.body6 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                                fugiat nulla pariatur. 
+                                {parse(story.body6 || "")}                            
                             </p>                  
                         </div>
 
@@ -1185,9 +1143,7 @@ const Blog_page = (stories) => {
                             <h3
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                 id="_H3_2">
-                                {parse(story.body7_title || "")}
-                                consectetur adipiscing elit, sed do eiusmod tempor 
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                {parse(story.body7_title || "")}                            
                             </h3>
                             <br/> 
                         </div>
@@ -1200,12 +1156,7 @@ const Blog_page = (stories) => {
 
                             <p  
                                 className="text-lg ... text-stone-400 ... font-avant_garde_medium">
-                                {parse(story.body7 || "")}
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                                fugiat nulla pariatur. 
+                                {parse(story.body7 || "")}                          
                             </p>                  
                         </div>
 
@@ -1332,11 +1283,7 @@ const Blog_page = (stories) => {
                     </h1>
                     <p  
                         className="text-lg ... text-neutral-400 ... font-avant_garde_medium">
-                        {parse(story.Conclusion || "")}   
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-                        fugiat nulla pariatur.                
+                        {parse(story.Conclusion || "")}                                 
                     </p>                  
                 </div>
 
