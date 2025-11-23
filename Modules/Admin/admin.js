@@ -1,7 +1,7 @@
 
 "use client";
 import styles from "./admin.module.css"
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Menu from "@/components/Menu/menu";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -10,8 +10,46 @@ import { z } from "zod";
 import dynamic from "next/dynamic";
 import "react-quill/dist/quill.snow.css";
 
-// import QuillNoSSRWrapper from "react-quill";
-const QuillNoSSRWrapper = dynamic(() => import("react-quill"), { ssr: false });
+// Configure Quill with modules including list support
+const QuillNoSSRWrapper = dynamic(
+  () => {
+    return new Promise((resolve) => {
+      import("react-quill").then((ReactQuillModule) => {
+        const ReactQuill = ReactQuillModule.default || ReactQuillModule;
+        
+        // Configure modules with list support - Quill has built-in list support
+        const modules = {
+          toolbar: [
+            [{ 'header': [1, 2, 3, false] }],
+            ['bold', 'italic', 'underline', 'strike'],
+            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            [{ 'indent': '-1'}, { 'indent': '+1' }],
+            [{ 'color': [] }, { 'background': [] }],
+            [{ 'align': [] }],
+            ['link', 'image', 'video'],
+            ['clean']
+          ],
+        };
+
+        const QuillComponent = ({ value, onChange, placeholder, ...props }) => {
+          return (
+            <ReactQuill
+              theme="snow"
+              modules={modules}
+              value={value}
+              onChange={onChange}
+              placeholder={placeholder}
+              {...props}
+            />
+          );
+        };
+        
+        resolve(QuillComponent);
+      });
+    });
+  },
+  { ssr: false }
+);
 
 import { Button } from "@/components/ui/button";
 import {
@@ -204,21 +242,132 @@ export function Admin() {
   });
 
   const [loading, setLoading] = useState(false); // Track loading state
+  const [stories, setStories] = useState([]);
+  const [editingStory, setEditingStory] = useState(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [storiesLoading, setStoriesLoading] = useState(true);
+
+  // Fetch stories on component mount
+  useEffect(() => {
+    fetchStories();
+  }, []);
+
+  const stripHtml = (html) => {
+    if (!html) return "";
+    // Remove HTML tags using regex
+    return html.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim();
+  };
+
+  const fetchStories = async () => {
+    try {
+      setStoriesLoading(true);
+      const res = await fetch("/api/admin_route");
+      if (res.ok) {
+        const result = await res.json();
+        setStories(result.data || []);
+      }
+    } catch (error) {
+      console.error("Error fetching stories:", error);
+    } finally {
+      setStoriesLoading(false);
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setStory((prev) => ({ ...prev, [name]: value }));
   };
+
+  const handleEdit = (story) => {
+    setEditingStory(story);
+    setIsEditing(true);
+    // Populate form with story data
+    form.reset({
+      post_number: story.post_number || "",
+      title: story.title || "",
+      author: story.author || "",
+      subtitle: story.subtitle || "",
+      image: story.image || "",
+      image2: story.image2 || "",
+      avatar: story.avatar || "",
+      slug: story.slug || "",
+      body1_title: story.body1_title || "",
+      body1: story.body1 || "",
+      body2_title: story.body2_title || "",
+      body2: story.body2 || "",
+      body3_title: story.body3_title || "",
+      body3: story.body3 || "",
+      body4_title: story.body4_title || "",
+      body4: story.body4 || "",
+      body5_title: story.body5_title || "",
+      body5: story.body5 || "",
+      body6_title: story.body6_title || "",
+      body6: story.body6 || "",
+      body7_title: story.body7_title || "",
+      body7: story.body7 || "",
+      body8_title: story.body8_title || "",
+      body8: story.body8 || "",
+      body9_title: story.body9_title || "",
+      body9: story.body9 || "",
+      body10_title: story.body10_title || "",
+      body10: story.body10 || "",
+      introduction: story.introduction || "",
+      video: story.video || "",
+      conclusion: story.conclusion || "",
+    });
+    // Scroll to form
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleCancelEdit = () => {
+    setIsEditing(false);
+    setEditingStory(null);
+    form.reset();
+  };
+
+  const handlePublish = async (storyId) => {
+    try {
+      const res = await fetch("/api/admin_route", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          _id: storyId,
+          published: true,
+          publishDate: new Date().toISOString(),
+        }),
+      });
+
+      if (res.ok) {
+        alert("Story published successfully!");
+        fetchStories();
+      } else {
+        const errorData = await res.json().catch(() => ({}));
+        alert(`Error: ${errorData.error || "Failed to publish story"}`);
+      }
+    } catch (error) {
+      console.error("Error publishing story:", error);
+      alert("An unexpected error occurred.");
+    }
+  };
+
   const handleSubmit = async (data) => {
     setLoading(true);
     console.log("Validated data:", data);
     try {
-      const res = await fetch("/api/admin_route", {
-        method: "POST",
+      const url = "/api/admin_route";
+      const method = isEditing ? "PUT" : "POST";
+      const body = isEditing
+        ? JSON.stringify({ ...data, _id: editingStory._id })
+        : JSON.stringify(data);
+
+      const res = await fetch(url, {
+        method,
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body,
       });
 
       if (!res.ok) {
@@ -227,9 +376,11 @@ export function Admin() {
         alert(`Error: ${errorData.error || "Failed to submit story"}`);
       } else {
         const result = await res.json();
-        // console.log("Submission success:", result);
-        alert("Story added successfully!");
+        alert(isEditing ? "Story updated successfully!" : "Story added successfully!");
         form.reset();
+        setIsEditing(false);
+        setEditingStory(null);
+        fetchStories();
       }
     } catch (error) {
       console.error("Submission failed:", error);
@@ -243,10 +394,45 @@ export function Admin() {
   return (
 
     <section >
+      <style dangerouslySetInnerHTML={{__html: `
+        .ql-editor ul,
+        .ql-editor ol {
+          padding-left: 1.5em !important;
+          margin: 0.5em 0 !important;
+          list-style-position: outside !important;
+        }
+        .ql-editor ul {
+          list-style-type: disc !important;
+        }
+        .ql-editor ol {
+          list-style-type: decimal !important;
+        }
+        .ql-editor li {
+          display: list-item !important;
+          margin: 0.25em 0 !important;
+          padding-left: 0.5em !important;
+        }
+      `}} />
       <Menu />
-      <div className={styles.section1}>
+      <div className={styles.container}>
+        {/* Main Content Area - Form */}
+        <div className={styles.mainContent}>
         <div className={styles.formDiv} >
-          <h1 style={{ textAlign: "center", fontSize: "x-large", fontWeight: "600" }}>Stories</h1>
+            <h1 style={{ textAlign: "center", fontSize: "x-large", fontWeight: "600" }}>
+              {isEditing ? "Edit Story" : "Create New Story"}
+            </h1>
+            {isEditing && (
+              <div style={{ marginBottom: "1rem", textAlign: "center" }}>
+                <Button
+                  type="button"
+                  onClick={handleCancelEdit}
+                  variant="outline"
+                  size="sm"
+                >
+                  Cancel Edit
+                </Button>
+              </div>
+            )}
           <Form {...form}>
             <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
 
@@ -869,11 +1055,83 @@ export function Admin() {
               />
 
               <Button type="submit" story={story} handleChange={handleChange} handleSubmit={handleSubmit} disabled={loading} >
-                {loading ? "Submitting..." : "Submit"}
+                {loading ? (isEditing ? "Updating..." : "Submitting...") : (isEditing ? "Update Story" : "Create Story")}
               </Button>
             </form>
           </Form>
 
+          </div>
+        </div>
+
+        {/* Sidebar - Stories List */}
+        <div className={styles.sidebar}>
+          <div className={styles.sidebarContent}>
+            <h2 style={{ fontSize: "1.25rem", fontWeight: "600", marginBottom: "1rem", paddingBottom: "0.75rem", borderBottom: "2px solid #e5e7eb" }}>
+              All Stories
+            </h2>
+            {storiesLoading ? (
+              <p style={{ textAlign: "center", color: "#6b7280", padding: "2rem" }}>Loading stories...</p>
+            ) : stories.length === 0 ? (
+              <p style={{ textAlign: "center", color: "#6b7280", padding: "2rem" }}>No stories found.</p>
+            ) : (
+              <div className={styles.storiesList}>
+                {stories.map((story) => (
+                  <div
+                    key={story._id}
+                    className={`${styles.storyItem} ${editingStory?._id === story._id ? styles.storyItemActive : ""}`}
+                    onClick={() => handleEdit(story)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <div style={{ flex: 1 }}>
+                      <div style={{ fontWeight: "600", marginBottom: "0.25rem", fontSize: "0.95rem" }}>
+                        {stripHtml(story.title) || "Untitled Story"}
+                      </div>
+                      <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.5rem" }}>
+                        Post #: {story.post_number || "N/A"}
+                      </div>
+                      <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.5rem" }}>
+                        Slug: {story.slug || "N/A"}
+                      </div>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                        {story.published ? (
+                          <span style={{ fontSize: "0.75rem", color: "#10b981", fontWeight: "500" }}>● Published</span>
+                        ) : (
+                          <span style={{ fontSize: "0.75rem", color: "#ef4444", fontWeight: "500" }}>● Draft</span>
+                        )}
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginTop: "0.5rem" }}>
+                      <Button
+                        type="button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleEdit(story);
+                        }}
+                        size="sm"
+                        variant="outline"
+                        className="border-blue-600 text-blue-600 hover:bg-blue-50"
+                      >
+                        Enable Edit
+                      </Button>
+                      {!story.published && (
+                        <Button
+                          type="button"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handlePublish(story._id);
+                          }}
+                          size="sm"
+                          className="bg-green-600 hover:bg-green-700 text-white"
+                        >
+                          Publish
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
 

@@ -2,6 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Quill Editor List Styles - Global */
+.ql-editor ul,
+.ql-editor ol {
+    padding-left: 1.5em !important;
+    margin: 0.5em 0 !important;
+    list-style-position: outside !important;
+}
+
+.ql-editor ul {
+    list-style-type: disc !important;
+}
+
+.ql-editor ol {
+    list-style-type: decimal !important;
+}
+
+.ql-editor li {
+    display: list-item !important;
+    margin: 0.25em 0 !important;
+    padding-left: 0.5em !important;
+}
+
+/* Blog Content List Styles - for rendered HTML from Quill */
+/* Only apply to blog content areas, not header/introduction */
+#TEXT_HOLDER ul,
+#TEXT_HOLDER ol,
+#FIRST_TEXT_HOLDER ul,
+#FIRST_TEXT_HOLDER ol,
+#IMAGE_TEXT_HOLDER ul,
+#IMAGE_TEXT_HOLDER ol,
+.blog-content ul,
+.blog-content ol {
+    padding-left: 1.5em !important;
+    margin: 0.5em 0 !important;
+    list-style-position: outside !important;
+}
+
+#TEXT_HOLDER ul,
+#FIRST_TEXT_HOLDER ul,
+#IMAGE_TEXT_HOLDER ul,
+.blog-content ul {
+    list-style-type: disc !important;
+}
+
+#TEXT_HOLDER ol,
+#FIRST_TEXT_HOLDER ol,
+#IMAGE_TEXT_HOLDER ol,
+.blog-content ol {
+    list-style-type: decimal !important;
+}
+
+#TEXT_HOLDER li,
+#FIRST_TEXT_HOLDER li,
+#IMAGE_TEXT_HOLDER li,
+.blog-content li {
+    display: list-item !important;
+    margin: 0.25em 0 !important;
+    padding-left: 0.5em !important;
+}
+
+/* Remove list styles from header/introduction section */
+#MAIN_TAG ul,
+#MAIN_TAG ol,
+#SUBSCRIBE ul,
+#SUBSCRIBE ol,
+#_H3_2 ul,
+#_H3_2 ol {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+}
+
+#MAIN_TAG li,
+#SUBSCRIBE li,
+#_H3_2 li {
+    display: block !important;
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
