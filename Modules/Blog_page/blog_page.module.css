@@ -280,6 +280,31 @@
 
 
 
+/* Quill Editor List Styles for rendered content */
+#IMAGE_TEXT_HOLDER ul,
+#IMAGE_TEXT_HOLDER ol {
+    padding-left: 1.5em !important;
+    margin: 0.5em 0 !important;
+    list-style-position: outside !important;
+}
+
+#IMAGE_TEXT_HOLDER ul {
+    list-style-type: disc !important;
+}
+
+#IMAGE_TEXT_HOLDER ol {
+    list-style-type: decimal !important;
+}
+
+#IMAGE_TEXT_HOLDER li {
+    display: list-item !important;
+    margin: 0.25em 0 !important;
+    padding-left: 0.5em !important;
+}
+
+
+
+
 
 
 .READ_NEXT {
