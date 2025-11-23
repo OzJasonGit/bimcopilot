@@ -587,7 +587,6 @@ const Blog_page = (stories) => {
                                          marginBottom:"0px",                 
                                         }}>
                                         {parse(story.post_number || "")}
-                                        001
                                     </h3>                 
                                 </div>   
                                 <br/>
@@ -1253,44 +1252,61 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}
-            style={{
-                background: "#171717"
-            }}>
-            <div class={styles.grid_0_blog_end}>
-
-            <div id={styles.TEXT_HOLDER}
                 style={{
-                        position: "relative",
-                        display: "grid",
-                        width: "100%",
-                        height: "auto",
-                        gridArea: "MAIN_AREA",}}>
+                    background: "#171717"
+                }}>
+                <div class={styles.grid_0_blog_end}>
 
-                
-            
-                <div  
+                <div id={styles.TEXT_HOLDER}
                     style={{
-                        position: "relative",
-                        width: "100%",                     
-                        gridArea: "TEXT",}}> 
+                            position: "relative",
+                            display: "grid",
+                            width: "100%",
+                            height: "auto",
+                            gridArea: "MAIN_AREA",}}>
 
-                    <h1
-                        id={styles._H1}
-                        className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
-                        Conclusion
-                        <br /> <br />
-                    </h1>
-                    <p  
-                        className="text-lg ... text-neutral-400 ... font-avant_garde_medium">
-                        {parse(story.Conclusion || "")}                                 
-                    </p>                  
+                    
+                
+                    <div  
+                        style={{
+                            position: "relative",
+                            width: "100%",                     
+                            gridArea: "TEXT",}}> 
+
+                        <h1
+                            id={styles._H1}
+                            className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
+                            Conclusion
+                            <br /> <br />
+                        </h1>
+                        <p  
+                            className="text-lg ... text-neutral-400 ... font-avant_garde_medium">
+                            {parse(story.Conclusion || "")}                                 
+                        </p>                  
+                    </div>
+
                 </div>
 
             </div>
-
-        </div>
-            </section>
+        </section>
 
 
 
