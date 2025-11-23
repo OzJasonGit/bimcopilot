@@ -224,7 +224,7 @@ export default function Header() {
                             {/* User Icon Button */}
                             <div className="flex items-center gap-5">
 
-                            <span className="text-stone-700 font-medium">Hi, {user.name}</span>
+                            <span className="text-stone-700 font-medium ... font-avant_garde_bold">Hi, {user.name}</span>
 
                             <button
                               onClick={toggleDropdown}
