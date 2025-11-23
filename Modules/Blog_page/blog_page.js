@@ -833,8 +833,7 @@ const Blog_page = (stories) => {
                             }}>
                          
                             <h3
-                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
-                                id={styles._H3_2}>
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
                                 {parse(story.body1_title || "")}
                             </h3>
                             <br />
@@ -913,8 +912,7 @@ const Blog_page = (stories) => {
                                 gridArea: "TITLE",
                             }}>
                             <h3
-                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
-                                id={styles._H3_2}>
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
                                 {parse(story.body2_title || "")}
                             </h3>
                             <br />
