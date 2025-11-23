@@ -769,7 +769,9 @@ const Blog_page = (stories) => {
                                     Introduction
                                     <br /> <br />
                                 </h1>
-                                <p className="text-xl ... text-stone-400 ... font-avant_garde_bold">
+                                <p 
+                                    id={styles._H3_2}
+                                    className=" text-stone-400 ... font-avant_garde_bold">
                                     {parse(story.Slug || "")} {parse(story.Slug || "")}
                                     <br />
                                     {parse(story.introduction || "")}
