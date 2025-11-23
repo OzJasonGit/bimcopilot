@@ -224,9 +224,9 @@ export default function Header() {
                             {/* User Icon Button */}
                             <div className="flex items-center gap-5">
 
-                            <span className="text-slate-50 font-medium ... font-avant_garde_bold">Hi, {user.name}</span>
+                            <span id={styles._H3} className="text-slate-50 font-medium ... font-avant_garde_bold">Hi, {user.name}</span>
 
-                            <button
+                            <button 
                               onClick={toggleDropdown}
                               className="flex items-center justify-center p-2 rounded-full hover:bg-gray-100/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
                               aria-haspopup="true"
