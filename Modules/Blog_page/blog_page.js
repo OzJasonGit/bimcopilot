@@ -1350,7 +1350,7 @@ const Blog_page = (stories) => {
                         
 
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} > 
-                <div class={styles.grid_0_blog}>
+                <div class={styles.grid_0_read_next}>
                     <div class={styles.READ_NEXT}
                         style={{
                         position: "relative",
