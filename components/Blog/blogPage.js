@@ -139,7 +139,7 @@ const Blogpage = ({ stories, topStories }) => {
                       <div className="rounded-full drop-shadow-2xl border-2 border-emerald-200" id={styles.BLOG_NUMBER}>
                         <div className="content-center">
                           <h5 id={styles._H5} className="text-center text-stone-200 font-avant_garde_bold">
-                            {story.post_number}
+                            {parse(story.post_number || "")}
                           </h5>
                         </div>
                       </div>

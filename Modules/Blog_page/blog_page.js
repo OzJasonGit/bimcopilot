@@ -19,17 +19,76 @@ import { display } from '@mui/system';
 import Subform from "./Client/subform";
 import AuthorImageTest from "@/components/AuthorImageTest";
 
-// Helper function to decode HTML entities and parse HTML content
+// Helper function to get HTML content for dangerouslySetInnerHTML
+// Quill editor outputs HTML directly, so we return it as-is
+// If HTML entities are encoded, we decode them
+const getHtmlContent = (content) => {
+  if (!content) return "";
+  
+  const contentStr = String(content);
+  
+  // If content already has HTML tags like <p> or <h2>, return as-is
+  // If content has encoded entities like &lt; or &gt;, decode them
+  if (contentStr.includes('&lt;') || contentStr.includes('&gt;') || contentStr.includes('&amp;')) {
+    // Decode HTML entities
+    if (typeof window !== 'undefined') {
+      // Client-side: use DOM API to decode (most reliable)
+      const txt = document.createElement("textarea");
+      txt.innerHTML = contentStr;
+      return txt.value;
+    } else {
+      // Server-side: decode manually
+      return contentStr
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&#x27;/g, "'")
+        .replace(/&#x2F;/g, '/');
+    }
+  }
+  
+  // Content already has HTML tags, return as-is
+  return contentStr;
+};
+
+// Helper function to decode HTML entities and parse HTML content (for cases where we need React elements)
 const parseHtml = (content) => {
   if (!content) return "";
   
-  // If content is already a string with HTML tags, parse it directly
-  // html-react-parser handles HTML entities automatically
+  const contentStr = String(content);
+  
+  // Decode HTML entities (handles cases like &lt;p&gt; becoming <p>)
+  const decodeHtml = (html) => {
+    if (typeof window === 'undefined') {
+      // Server-side: use a simple regex-based decoder
+      return html
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&#x27;/g, "'")
+        .replace(/&#x2F;/g, '/');
+    } else {
+      // Client-side: use DOM API (handles all entities correctly)
+      const txt = document.createElement("textarea");
+      txt.innerHTML = html;
+      return txt.value;
+    }
+  };
+  
   try {
-    return parse(String(content));
+    const decoded = decodeHtml(contentStr);
+    return parse(decoded);
   } catch (error) {
-    console.error("Error parsing HTML:", error);
-    return content;
+    console.error("Error parsing HTML:", error, "Content:", contentStr);
+    try {
+      return parse(contentStr);
+    } catch (e) {
+      return contentStr;
+    }
   }
 };
 
@@ -524,17 +583,17 @@ const Blog_page = (stories) => {
                             <div id={styles.MAIN_TAG}>
                                 <div
                                     id={styles._H1}
-                                    className=" text-stone-200 ... font-avant_garde_bold">
-                                    {parseHtml(story.title || "")}
-                                </div>
+                                    className=" text-stone-200 ... font-avant_garde_bold"
+                                    dangerouslySetInnerHTML={{ __html: getHtmlContent(story.title || "") }}
+                                ></div>
                             </div>
 
                             <div id={styles.SUB_TAG}>
                                 <div
                                      id={styles._H3}
-                                    className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium">
-                                    {parseHtml(story.subtitle || "")}
-                                </div>
+                                    className="text-left ... text-xl ... text-stone-400 ... font-avant_garde_medium"
+                                    dangerouslySetInnerHTML={{ __html: getHtmlContent(story.subtitle || "") }}
+                                ></div>
                             </div>
 
                         </div>
@@ -810,11 +869,9 @@ const Blog_page = (stories) => {
                                 </h1>
                                 <p 
                                     id={styles._H3_2}
-                                    className=" text-stone-400 ... font-avant_garde_bold">
-                                    {parseHtml(story.Slug || "")} {parseHtml(story.Slug || "")}
-                                    <br />
-                                    {parseHtml(story.introduction || "")}
-                                </p>
+                                    className=" text-stone-400 ... font-avant_garde_bold"
+                                    dangerouslySetInnerHTML={{ __html: getHtmlContent(story.introduction || "") }}
+                                />
                             </div>
 
                         </div>
@@ -847,10 +904,10 @@ const Blog_page = (stories) => {
                                 gridArea: "TITLE",
                             }}>
                          
-                            <h3
-                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
-                                {parseHtml(story.body1_title || "")}
-                            </h3>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body1_title || "") }}
+                            />
                             <br />
                         </div>
 
@@ -876,9 +933,10 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",
                             }}>
                             <br /> <br />
-                            <div className="text-lg ... text-stone-400 ... font-avant_garde_medium">
-                                {parseHtml(story.body1 || "")}
-                            </div>
+                            <div 
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body1 || "") }}
+                            />
                         </div>
 
 
@@ -926,10 +984,10 @@ const Blog_page = (stories) => {
                                 width: "100%",
                                 gridArea: "TITLE",
                             }}>
-                            <h3
-                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
-                                {parseHtml(story.body2_title || "")}
-                            </h3>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body2_title || "") }}
+                            />
                             <br />
                         </div>
 
@@ -941,9 +999,9 @@ const Blog_page = (stories) => {
                             }}>
 
                             <div
-                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
-                                {parseHtml(story.body2 || "")}
-                            </div>
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body2 || "") }}
+                            />
                         </div>
 
                     </div>
@@ -971,10 +1029,10 @@ const Blog_page = (stories) => {
                                 width: "100%",
                                 gridArea: "TITLE",
                             }}>
-                            <h3
-                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
-                                {parseHtml(story.body3_title || "")}
-                            </h3>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body3_title || "") }}
+                            />
                             <br />
                         </div>
 
@@ -1013,9 +1071,9 @@ const Blog_page = (stories) => {
                             <br /> <br />
                             <div
                                 id={styles._H3_2}
-                                className="text-stone-400 ... font-avant_garde_medium">
-                                {parseHtml(story.body3 || "")}
-                            </div>
+                                className="text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body3 || "") }}
+                            />
                         </div>
 
                     </div>
@@ -1043,12 +1101,10 @@ const Blog_page = (stories) => {
                                 width: "100%",
                                 gridArea: "TITLE",
                             }}>
-                            <h3
-
-                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold">
-                                {parseHtml(story.body4_title || "")}              
-
-                            </h3>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body4_title || "") }}
+                            />
                             <br />
                         </div>
 
@@ -1060,9 +1116,9 @@ const Blog_page = (stories) => {
                             }}>
 
                             <div
-                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
-                                {parseHtml(story.body4 || "")}
-                            </div>
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body4 || "") }}
+                            />
                         </div>
 
                     </div>
@@ -1091,11 +1147,11 @@ const Blog_page = (stories) => {
                                 width: "100%",
                                 gridArea: "TITLE",
                             }}>
-                            <h3
+                            <div
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
-                                id="_H3_2">
-                                {parseHtml(story.body5_title || "")}
-                            </h3>
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body5_title || "") }}
+                            />
                             <br />
                         </div>
 
@@ -1107,9 +1163,9 @@ const Blog_page = (stories) => {
                             }}>
 
                             <div
-                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
-                                {parseHtml(story.body5 || "")}
-                            </div>
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body5 || "") }}
+                            />
                         </div>
 
                     </div>
@@ -1136,11 +1192,11 @@ const Blog_page = (stories) => {
                                 position: "relative",
                                 width: "100%",                     
                                 gridArea: "TITLE",}}>
-                            <h3
+                            <div
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
-                                id="_H3_2">
-                                {parseHtml(story.body6_title || "")}
-                            </h3>
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body6_title || "") }}
+                            />
                             <br/> 
                         </div>
                     
@@ -1151,9 +1207,9 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",}}> 
 
                             <div  
-                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
-                                {parseHtml(story.body6 || "")}
-                            </div>                  
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body6 || "") }}
+                            />                  
                         </div>
 
                     </div>
@@ -1180,11 +1236,11 @@ const Blog_page = (stories) => {
                                 position: "relative",
                                 width: "100%",                     
                                 gridArea: "TITLE",}}>
-                            <h3
+                            <div
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
-                                id="_H3_2">
-                                {parseHtml(story.body7_title || "")}
-                            </h3>
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body7_title || "") }}
+                            />
                             <br/> 
                         </div>
                     
@@ -1195,9 +1251,9 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",}}> 
 
                             <div  
-                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
-                                {parseHtml(story.body7 || "")}
-                            </div>                  
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body7 || "") }}
+                            />                  
                         </div>
 
                     </div>
@@ -1224,11 +1280,11 @@ const Blog_page = (stories) => {
                             position: "relative",
                             width: "100%",                     
                             gridArea: "TITLE",}}>
-                        <h3
+                        <div
                             className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
-                            id="_H3_2">
-                            {parseHtml(story.body8_title || "")}                         
-                        </h3>
+                            id="_H3_2"
+                            dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body8_title || "") }}
+                        />
                         <br/> 
                     </div>
                 
@@ -1239,9 +1295,9 @@ const Blog_page = (stories) => {
                             gridArea: "TEXT",}}> 
 
                         <div  
-                            className="text-lg ... text-stone-400 ... font-avant_garde_medium">
-                            {parseHtml(story.body8 || "")}                        
-                        </div>                  
+                            className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                            dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body8 || "") }}
+                        />                  
                     </div>
 
                 </div>
@@ -1268,11 +1324,11 @@ const Blog_page = (stories) => {
                                 position: "relative",
                                 width: "100%",                     
                                 gridArea: "TITLE",}}>
-                            <h3
+                            <div
                                 className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
-                                id="_H3_2">
-                                {parseHtml(story.body9_title || "")}                        
-                            </h3>
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body9_title || "") }}
+                            />
                             <br/> 
                         </div>
                     
@@ -1283,9 +1339,9 @@ const Blog_page = (stories) => {
                                 gridArea: "TEXT",}}> 
 
                             <div  
-                                className="text-lg ... text-stone-400 ... font-avant_garde_medium">
-                                {parseHtml(story.body9 || "")}                    
-                            </div>                  
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body9 || "") }}
+                            />                  
                         </div>
 
                     </div>
@@ -1336,9 +1392,9 @@ const Blog_page = (stories) => {
                     </h1>
                     <div  
                         className="text-lg ... text-neutral-400 ... font-avant_garde_medium"
-                        style={{ width: "100%" }}>
-                        {parseHtml(story.conclusion || "")}                
-                    </div>                  
+                        style={{ width: "100%" }}
+                        dangerouslySetInnerHTML={{ __html: getHtmlContent(story.conclusion || "") }}
+                    />                  
                 </div>
 
             </div>
