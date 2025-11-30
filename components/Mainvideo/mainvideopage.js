@@ -5,7 +5,34 @@ import Link from "next/link";
 
 import { useRouter } from "next/navigation";
 
-
+// Helper function to get HTML content for dangerouslySetInnerHTML
+// Quill editor outputs HTML directly, so we return it as-is
+const getHtmlContent = (content) => {
+  if (!content) return "";
+  const contentStr = String(content);
+  
+  // If content has encoded entities like &lt; or &gt;, decode them
+  if (contentStr.includes('&lt;') || contentStr.includes('&gt;') || contentStr.includes('&amp;')) {
+    if (typeof window !== 'undefined') {
+      // Client-side: use DOM API to decode
+      const txt = document.createElement("textarea");
+      txt.innerHTML = contentStr;
+      return txt.value;
+    } else {
+      // Server-side: decode manually
+      return contentStr
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'")
+        .replace(/&#x27;/g, "'")
+        .replace(/&#x2F;/g, '/');
+    }
+  }
+  
+  return contentStr;
+};
 
 const Mainvideopage = ({ stories }) => {
   const storiesToMap = stories.filter((story, i) => i != 0);
@@ -33,22 +60,22 @@ const Mainvideopage = ({ stories }) => {
              
 
               <div id={styles.VIDEO_TEXT_HOLDER} class="rounded ...">
-                <div id={styles.V_TITLE_HOLDER}>
+                <div id={styles.V_TITLE_HOLDER}> 
 
 
-                  <h2
+                  <div
                     id={styles._H2}
-                    class=" text-slate-100 ... drop-shadow-xl font-avant_garde_bold">
-                    {stories[0].title}
-                  </h2>
+                    class=" text-slate-100 ... drop-shadow-xl font-avant_garde_bold"
+                    dangerouslySetInnerHTML={{ __html: getHtmlContent(stories[0]?.title || "") }}
+                  ></div>
 
                   <br/> 
                   
-                  <h3
+                  <div
                     id={styles._H3}
-                    class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_medium">
-                    {stories[0].subtitle}
-                  </h3>
+                    class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_medium"
+                    dangerouslySetInnerHTML={{ __html: getHtmlContent(stories[0]?.subtitle || "") }}
+                  ></div>
                 
                              
                 </div>
