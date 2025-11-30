@@ -37,7 +37,7 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 80px;
     grid-template-rows: auto auto;
     column-gap: 15px;
     grid-template-areas:
@@ -70,12 +70,103 @@
   
 }
 
-@media all and (min-width: 480px) {
-  
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 960px) and (max-width: 1280px) {
 
 
     #SUBSCRIBE {
+            position: relative;
+            grid-area: FORM;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 80px;
+            grid-template-rows: auto auto;
+            column-gap: 15px;
+            grid-template-areas:
+                "FORM"
+                "BUTTON";
+        }
+    
+        #FORM {
+            display: contents;
+            grid-area: FORM;
+            width: 100%;
+            height: 100%;
+        }
+    
+        #FORM_ITEM {
+            width: 100%;
+            height: 100%;
+        }
+    
+        #FORM_INPUT {
+            width: 100%;
+            height: 62.5px;
+            margin-bottom: 0;
+        }
+    
+        #FORM_BUTTON {
+            grid-area: BUTTON;
+            width: 100%;
+            height: 62.5px;
+    
+        }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 480px) and (max-width: 960px) {
+
+
+#SUBSCRIBE {
         position: relative;
         grid-area: FORM;
         width: 100%;
@@ -89,14 +180,65 @@
             "BUTTON";
     }
 
+ 
+
+         #FORM_BUTTON {
+             width: 60%;
+         }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 0px) and (max-width: 480px) {
+
+
+    #SUBSCRIBE {
+            position: relative;
+            grid-area: FORM;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            column-gap: 15px;
+            grid-template-areas:
+                "FORM"
+                "BUTTON";
+        }
+    
     #FORM_BUTTON {
         width: auto;
         margin-left: 5%;
     }
+    
+
 }
 
+
+
 @media screen and (max-width: 480px) {
-    #FORM_BUTTON {
-        width: 60%;
-    }
-}
+   
