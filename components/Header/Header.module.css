@@ -238,7 +238,7 @@
   grid-area: MAIN_AREA;
   display: flex;
   position: fixed;
-  height: 120px;
+  height: 130px;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -787,7 +787,7 @@
     grid-area: MAIN_AREA;
     display: flex;
     position: fixed;
-    height: 120px;
+    height: 130px;
     align-items: center;
     justify-content: center;
     width: 100%;
