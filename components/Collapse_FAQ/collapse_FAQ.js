@@ -1,6 +1,6 @@
 'use client'
 
-import styles from './services_5.module.css';
+import styles from './collapse.module.css';
 import Collapsed_Services from "../Collapse_Services/collapse_Services";
 import Collapsed_2 from "../../components/Collapse_2/collapse_2";
 import Collapsed_4 from "../../components/Collapse_4/collapse_4";
