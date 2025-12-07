@@ -104,6 +104,30 @@ const Specialist_Packages =
     },
   ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
 return (
 
@@ -157,61 +181,62 @@ return (
                           </h3>
                         </div>                        
                       </div>
-
               
                     </div>
-                  </div>
-                  <br/>
-                  <br/>
-                  {/*collapse_container*/}
-                  <div id={styles.COLLAPSE_CONTAINER} 
-                       style={{
-                          height:"auto",
-                          width:"100%",
-                          paddingLeft: "30px",
-                       }}>
-                        {/*<Collapsed_4/>*/}
-                        {/*<Divider />*/}
-                        <div> 
-                          <br/>
-                            <Accordion 
-                              className="w-full"
-                            >
-                              {accordionItems.map(({key, title, subtitle, content}) => (
-                                <AccordionItem
-                                  key={key}
-                                  aria-label={title}
-                                  title={title}
-                                  subtitle={subtitle}
-                                  indicator={({isOpen}) => (
-                                    <ChevronDown
-                                      className={`w-5 h-5 transition-transform duration-300 text-stone-600 ${
-                                        isOpen ? "rotate-90" : ""
-                                      }`}
-                                    />
-                                  )}
-                                  classNames={{
-                                    base: "border border-stone-200/40 rounded-xl px-6 py-4 mb-4",
-                                    trigger: "px-0 flex justify-between gap-3",
-                                    titleWrapper: "w-full flex flex-col items-start gap-1",
-                                    title: "w-full text-left text-stone-800 font-avant_garde_bold text-lg",
-                                    subtitle: "w-full text-left text-stone-500 text-sm",
-                                    indicator: "text-stone-600",
-                                    content: "text-left text-stone-600 pt-2"
-                                  }}
+
+
+
+
+                    </div>
+                      <br/>
+                      <br/>
+                      {/*collapse_container*/}
+                      <div id={styles.COLLAPSE_CONTAINER} 
+                          style={{
+                              height:"auto",
+                              width:"100%",
+                              paddingLeft: "30px",
+                          }}>
+                            {/*<Collapsed_4/>*/}
+                            {/*<Divider />*/}
+                            <div> 
+                              <br/>
+                                <Accordion 
+                                  className="w-full"
                                 >
-                                  <p className="text-left text-stone-600 leading-relaxed">
-                                    {content}
-                                  </p>
-                                </AccordionItem>
-                              ))}
-                            </Accordion>
-
-                          <br/>
-                        </div>
-                  </div>
-
-              </div>
+                                  {accordionItems.map(({key, title, subtitle, content}) => (
+                                    <AccordionItem
+                                      key={key}
+                                      aria-label={title}
+                                      title={title}
+                                      subtitle={subtitle}
+                                      indicator={({isOpen}) => (
+                                        <ChevronDown
+                                          className={`w-5 h-5 transition-transform duration-300 text-stone-600 ${
+                                            isOpen ? "rotate-90" : ""
+                                          }`}
+                                        />
+                                      )}
+                                      classNames={{
+                                        base: "border border-stone-200/40 rounded-xl px-6 py-4 mb-4",
+                                        trigger: "px-0 flex justify-between gap-3",
+                                        titleWrapper: "w-full flex flex-col items-start gap-1",
+                                        title: "w-full text-left text-stone-800 font-avant_garde_bold text-lg",
+                                        subtitle: "w-full text-left text-stone-500 text-sm",
+                                        indicator: "text-stone-600",
+                                        content: "text-left text-stone-600 pt-2"
+                                      }}
+                                    >
+                                      <p className="text-left text-stone-600 leading-relaxed">
+                                        {content}
+                                      </p>
+                                    </AccordionItem>
+                                  ))}
+                                </Accordion>
+                              <br/>
+                            </div>
+                      </div>
+                    </div>
             
             </div>
              
