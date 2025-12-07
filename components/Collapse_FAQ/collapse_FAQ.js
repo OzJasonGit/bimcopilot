@@ -1,16 +1,108 @@
-"use client";
+'use client'
 
-import React, { Component, useState } from "react";
-import styles from "./collapse.module.css";
-
-
-import { CaretRightFilled } from "@ant-design/icons";
-import { Collapse } from "antd";
+import styles from './services_5.module.css';
+import Collapsed_Services from "../Collapse_Services/collapse_Services";
+import Collapsed_2 from "../../components/Collapse_2/collapse_2";
+import Collapsed_4 from "../../components/Collapse_4/collapse_4";
+import React, { Component } from 'react';
 import Link from "next/link";
-
 import { Accordion, AccordionItem } from "@heroui/react";
+import { Divider } from "@heroui/react";
 import { ChevronDown } from "lucide-react";
 
+export default class Collapse_FAQ extends Component {
+
+
+
+render() {
+
+
+
+ const defaultContent =
+    "Lorem ipsum dolor sit amet, labore et dolore magna aliqua. Ut enim ad minim veniam, ut aliquip ex ea commodo consequat.";
+
+
+ const Architecture_Delivery =
+    <div>
+      <ul className="list-disc pl-6">
+        <li>Schematic Design Packages</li>
+        <li>Detailed Design / Technical Design Packages</li>
+        <li>Construction Documentation (GA + Detailed Drawings)</li>
+        <li>Coordination with Structural & MEP Engineers</li>
+        <li>RIBA Stage Documentation (0–4)</li>
+        <li>Revit Model Production</li>
+        <li>Drawing Standardization & QA/QC</li>
+        <li>1:5 / 1:10 / 1:20 / 1:25 / 1:50 Technical Detail Packages</li>
+        <li>Drafting Support (Plans, Sections, Elevations, Details)</li>
+      </ul>    
+    </div>;
+
+
+const AI_and_Automation =
+    <div>
+      <ul className="list-disc pl-6">
+        <li>AI-Assisted BEP Creation (Adaptive, auto-updating)</li>
+        <li>Custom GPTs for Architectural Firms</li>
+        <li>AI-Driven Model Audits & Reporting</li>
+        <li>Parametric Facade Concepts via AI + Grasshopper</li>
+        <li>AI Knowledge Base Setup for Project Teams</li>
+      </ul>    
+    </div>;
+
+const BIM_Management =
+    <div>
+      <ul className="list-disc pl-6">
+        <li>Writing something in this list item</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>    
+    </div>;
+
+
+const Specialist_Packages =
+    <div>
+      <ul className="list-disc pl-6">
+        <li>Writing something in this list item</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>    
+    </div>;
+
+
+
+
+
+
+
+
+ const accordionItems = [
+    {
+      key: "services-1",
+      title: "Architecture, Design Delivery & Documentation Support",
+      subtitle: "Press to expand",
+      content: Architecture_Delivery,
+    },
+    {
+      key: "services-2",
+      title: "BIM Management Digital Delivery & Coordination",
+      subtitle: "Press to expand key 2",
+      content: BIM_Management,
+    },
+    {
+      key: "services-3",
+      title: "Automation & AI Enabled BIM Services",
+      subtitle: "Press to expand",
+      content: AI_and_Automation,
+    },
+    {
+      key: "services-4",
+      title: "Specialist Packages",
+      subtitle: "Press to expand",
+      content: Specialist_Packages,
+    },
+  ];
 
 
 
@@ -28,89 +120,6 @@ import { ChevronDown } from "lucide-react";
 
 
 
-export default class collapse_FAQ extends Component {
-
-    render() {
-
-      const Architecture_Delivery =
-        <div>
-          <ul className="list-disc pl-6">
-            <li>Schematic Design Packages</li>
-            <li>Detailed Design / Technical Design Packages</li>
-            <li>Construction Documentation (GA + Detailed Drawings)</li>
-            <li>Coordination with Structural & MEP Engineers</li>
-            <li>RIBA Stage Documentation (0–4)</li>
-            <li>Revit Model Production</li>
-            <li>Drawing Standardization & QA/QC</li>
-            <li>1:5 / 1:10 / 1:20 / 1:25 / 1:50 Technical Detail Packages</li>
-            <li>Drafting Support (Plans, Sections, Elevations, Details)</li>
-          </ul>    
-        </div>;
-
-      const AI_and_Automation =
-        <div>
-          <ul className="list-disc pl-6">
-            <li>AI-Assisted BEP Creation (Adaptive, auto-updating)</li>
-            <li>Custom GPTs for Architectural Firms</li>
-            <li>AI-Driven Model Audits & Reporting</li>
-            <li>Parametric Facade Concepts via AI + Grasshopper</li>
-            <li>AI Knowledge Base Setup for Project Teams</li>
-          </ul>    
-        </div>;
-
-      const BIM_Management =
-        <div>
-          <ul className="list-disc pl-6">
-            <li>Writing something in this list item</li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>    
-        </div>;
-
-      const Specialist_Packages =
-        <div>
-          <ul className="list-disc pl-6">
-            <li>Writing something in this list item</li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>    
-        </div>;
-
-    }
-
-}
-
-
-
-
-const accordionItems = [
-  {
-    key: "services-1",
-    title: "Architecture, Design Delivery & Documentation Support",
-    subtitle: "Press to expand",
-    content: Architecture_Delivery,
-  },
-  {
-    key: "services-2",
-    title: "BIM Management Digital Delivery & Coordination",
-    subtitle: "Press to expand key 2",
-    content: BIM_Management,
-  },
-  {
-    key: "services-3",
-    title: "Automation & AI Enabled BIM Services",
-    subtitle: "Press to expand",
-    content: AI_and_Automation,
-  },
-  {
-    key: "services-4",
-    title: "Specialist Packages",
-    subtitle: "Press to expand",
-    content: Specialist_Packages,
-  },
-];
 
 
 
@@ -119,9 +128,7 @@ const accordionItems = [
 
 
 
-
-
-
+   
 return (
 
    <>
@@ -249,48 +256,8 @@ return (
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
+};
 
 
 
