@@ -557,12 +557,7 @@ const Blog_page = (stories) => {
                                                                             <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body18_title || "")}
                                                                             </a>
-                                                                        )}
-                                                                        {story.body18_title && (
-                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
-                                                                                {parseHtml(story.body18_title || "")}
-                                                                            </a>
-                                                                        )}
+                                                                        )}                           
                                                                         {story.conclusion && (
                                                                             <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.conclusion || "")}
