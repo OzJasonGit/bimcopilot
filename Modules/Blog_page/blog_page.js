@@ -513,6 +513,16 @@ const Blog_page = (stories) => {
                                                                                 {parseHtml(story.body9_title || "")}
                                                                             </a>
                                                                         )}
+                                                                        {story.body10_title && (
+                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parseHtml(story.body10_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body11_title && (
+                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parseHtml(story.body11_title || "")}
+                                                                            </a>
+                                                                        )}
 
                                                                            
 
