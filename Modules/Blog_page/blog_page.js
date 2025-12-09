@@ -1352,17 +1352,456 @@ const Blog_page = (stories) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}
+                style={{
+                    background: "#171717"
+                }}>
+                <div class={styles.grid_0_blog}>
+
+                    <div id={styles.TEXT_HOLDER}
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body10_title || "") }}
+                            />
+                            <br/> 
+                        </div>
+                    
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <div  
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body10 || "") }}
+                            />                  
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_11}
+                style={{
+                    background: "#171717"
+                }}>
+                <div class={styles.grid_0_blog}>
+
+                    <div id={styles.TEXT_HOLDER}
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body11_title || "") }}
+                            />
+                            <br/> 
+                        </div>
+                    
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <div  
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body11 || "") }}
+                            />                  
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_12}
+                style={{
+                    background: "#171717"
+                }}>
+                <div class={styles.grid_0_blog}>
+
+                    <div id={styles.TEXT_HOLDER}
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body12_title || "") }}
+                            />
+                            <br/> 
+                        </div>
+                    
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <div  
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body12 || "") }}
+                            />                  
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_13}
+                style={{
+                    background: "#171717"
+                }}>
+                <div class={styles.grid_0_blog}>
+
+                    <div id={styles.TEXT_HOLDER}
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body13_title || "") }}
+                            />
+                            <br/> 
+                        </div>
+                    
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <div  
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body13 || "") }}
+                            />                  
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_14}
+                style={{
+                    background: "#171717"
+                }}>
+                <div class={styles.grid_0_blog}>
+
+                    <div id={styles.TEXT_HOLDER}
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body14_title || "") }}
+                            />
+                            <br/> 
+                        </div>
+                    
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <div  
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body14 || "") }}
+                            />                  
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_15}
+                style={{
+                    background: "#171717"
+                }}>
+                <div class={styles.grid_0_blog}>
+
+                    <div id={styles.TEXT_HOLDER}
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body15_title || "") }}
+                            />
+                            <br/> 
+                        </div>
+                    
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <div  
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body15 || "") }}
+                            />                  
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_16}
+                style={{
+                    background: "#171717"
+                }}>
+                <div class={styles.grid_0_blog}>
+
+                    <div id={styles.TEXT_HOLDER}
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body16_title || "") }}
+                            />
+                            <br/> 
+                        </div>
+                    
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <div  
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body16 || "") }}
+                            />                  
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_17}
+                style={{
+                    background: "#171717"
+                }}>
+                <div class={styles.grid_0_blog}>
+
+                    <div id={styles.TEXT_HOLDER}
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body17_title || "") }}
+                            />
+                            <br/> 
+                        </div>
+                    
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <div  
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body17 || "") }}
+                            />                  
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+
+
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_18}
+                style={{
+                    background: "#171717"
+                }}>
+                <div class={styles.grid_0_blog}>
+
+                    <div id={styles.TEXT_HOLDER}
+                        style={{
+                                position: "relative",
+                                display: "grid",
+                                width: "100%",
+                                height: "auto",
+                                gridArea: "MAIN_AREA",}}>
+
+                        <div
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TITLE",}}>
+                            <div
+                                className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
+                                id="_H3_2"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body18_title || "") }}
+                            />
+                            <br/> 
+                        </div>
+                    
+                        <div  
+                            style={{
+                                position: "relative",
+                                width: "100%",                     
+                                gridArea: "TEXT",}}> 
+
+                            <div  
+                                className="text-lg ... text-stone-400 ... font-avant_garde_medium"
+                                dangerouslySetInnerHTML={{ __html: getHtmlContent(story.body18 || "") }}
+                            />                  
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.CONCLUSION}
             style={{
                 background: "#171717"
             }}>
