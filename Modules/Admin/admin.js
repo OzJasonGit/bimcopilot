@@ -2215,7 +2215,7 @@ export function Admin() {
 
            <FormField
                 control={form.control}
-                name="body10_title"
+                name="body11_title"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body11_title</FormLabel>
@@ -2224,7 +2224,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10_title here..."
+                        placeholder="Write your body11_title here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2234,7 +2234,7 @@ export function Admin() {
 
               <FormField
                 control={form.control}
-                name="body10"
+                name="body11"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body11</FormLabel>
@@ -2243,7 +2243,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10 here..."
+                        placeholder="Write your body11 here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2256,7 +2256,7 @@ export function Admin() {
 
          <FormField
                 control={form.control}
-                name="body10_title"
+                name="body12_title"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body12_title</FormLabel>
@@ -2265,7 +2265,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10_title here..."
+                        placeholder="Write your body12_title here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2275,7 +2275,7 @@ export function Admin() {
 
               <FormField
                 control={form.control}
-                name="body10"
+                name="body12"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body12</FormLabel>
@@ -2284,7 +2284,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10 here..."
+                        placeholder="Write your body12 here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2298,7 +2298,7 @@ export function Admin() {
 
          <FormField
                 control={form.control}
-                name="body10_title"
+                name="body13_title"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body13_title</FormLabel>
@@ -2307,7 +2307,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10_title here..."
+                        placeholder="Write your body13_title here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2317,7 +2317,7 @@ export function Admin() {
 
               <FormField
                 control={form.control}
-                name="body10"
+                name="body13"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body13</FormLabel>
@@ -2326,7 +2326,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10 here..."
+                        placeholder="Write your body13 here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2340,7 +2340,7 @@ export function Admin() {
 
          <FormField
                 control={form.control}
-                name="body10_title"
+                name="body14_title"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body14_title</FormLabel>
@@ -2349,7 +2349,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10_title here..."
+                        placeholder="Write your body14_title here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2359,7 +2359,7 @@ export function Admin() {
 
               <FormField
                 control={form.control}
-                name="body10"
+                name="body14"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body14</FormLabel>
@@ -2368,7 +2368,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10 here..."
+                        placeholder="Write your body14 here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2383,7 +2383,7 @@ export function Admin() {
 
        <FormField
                 control={form.control}
-                name="body10_title"
+                name="body15_title"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body15_title</FormLabel>
@@ -2392,7 +2392,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10_title here..."
+                        placeholder="Write your body15_title here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2402,7 +2402,7 @@ export function Admin() {
 
               <FormField
                 control={form.control}
-                name="body10"
+                name="body15"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body15</FormLabel>
@@ -2411,7 +2411,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10 here..."
+                        placeholder="Write your body15 here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2427,7 +2427,7 @@ export function Admin() {
 
          <FormField
                 control={form.control}
-                name="body10_title"
+                name="body16_title"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body16_title</FormLabel>
@@ -2436,7 +2436,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10_title here..."
+                        placeholder="Write your body16_title here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2446,7 +2446,7 @@ export function Admin() {
 
               <FormField
                 control={form.control}
-                name="body10"
+                name="body16"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body16</FormLabel>
@@ -2455,7 +2455,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10 here..."
+                        placeholder="Write your body16 here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2470,7 +2470,7 @@ export function Admin() {
 
        <FormField
                 control={form.control}
-                name="body10_title"
+                name="body17_title"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body17_title</FormLabel>
@@ -2479,7 +2479,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10_title here..."
+                        placeholder="Write your body17_title here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2489,7 +2489,7 @@ export function Admin() {
 
               <FormField
                 control={form.control}
-                name="body10"
+                name="body17"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body17</FormLabel>
@@ -2498,7 +2498,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10 here..."
+                        placeholder="Write your body17 here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2513,7 +2513,7 @@ export function Admin() {
 
        <FormField
                 control={form.control}
-                name="body10_title"
+                name="body18_title"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body18_title</FormLabel>
@@ -2522,7 +2522,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10_title here..."
+                        placeholder="Write your body18_title here..."
                       />
                     </FormControl>
                     <FormMessage />
@@ -2532,7 +2532,7 @@ export function Admin() {
 
               <FormField
                 control={form.control}
-                name="body10"
+                name="body18"
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>body18</FormLabel>
@@ -2541,7 +2541,7 @@ export function Admin() {
                         theme="snow"
                         value={field.value || ""} // Bind value to the form's field
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Write your body10 here..."
+                        placeholder="Write your body18 here..."
                       />
                     </FormControl>
                     <FormMessage />
