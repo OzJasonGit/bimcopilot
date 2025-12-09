@@ -523,6 +523,51 @@ const Blog_page = (stories) => {
                                                                                 {parseHtml(story.body11_title || "")}
                                                                             </a>
                                                                         )}
+                                                                        {story.body12_title && (
+                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parseHtml(story.body12_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body13_title && (
+                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parseHtml(story.body13_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body14_title && (
+                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parseHtml(story.body14_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body15_title && (
+                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parseHtml(story.body15_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body16_title && (
+                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parseHtml(story.body16_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body17_title && (
+                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parseHtml(story.body18_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body18_title && (
+                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parseHtml(story.body18_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.body18_title && (
+                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parseHtml(story.body18_title || "")}
+                                                                            </a>
+                                                                        )}
+                                                                        {story.conclusion && (
+                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parseHtml(story.conclusion || "")}
+                                                                            </a>
+                                                                        )}
 
                                                                            
 
