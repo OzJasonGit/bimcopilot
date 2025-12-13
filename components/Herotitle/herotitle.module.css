@@ -74,7 +74,7 @@
 #SUB_TEXT_HOLDER {
   position: relative;
   grid-area: TEXT;
-  top: 60px;
+  top: 20px;
 }
 
 #SUB_TEXT_HOLDER_MOBILE {

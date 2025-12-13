@@ -57,13 +57,14 @@ export default class Products extends Component {
 
       <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}>
 
-
         <div className={styles.grid_0_main}>
+
+          <div className={styles.grid_square}>
+
+          </div>
+
         </div>
-
-        
-        
-
+       
       </section>
 
 
