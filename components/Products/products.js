@@ -52,11 +52,17 @@ export default class Products extends Component {
     const { products, currency } = this.state;
 
     return (
+
+      
+
       <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}>
+
+
+        <div className={styles.grid_0_main}>
+        </div>
 
         
         <div className={styles.grid_0_main}>
-
           {/* Mobile View */}
           <div id={styles.PRODUCTS_HOLDER_MOBILE}>
             <div id={styles.PRODUCTS_HORIZONTAL_MOBILE}>
@@ -229,10 +235,13 @@ export default class Products extends Component {
               </div>
 
           </div>
-
         </div>
 
       </section>
+
+
+
+
     );
   }
 }
