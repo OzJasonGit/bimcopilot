@@ -69,25 +69,30 @@
 
 /* GRID */
 .grid_square {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   pointer-events: none;
 
   /* Mobile defaults */
-  --cols: var(--sm-cols);
-  --rows: var(--sm-rows);
+  --grid-columns: var(--sm-grid-columns);
+  --grid-rows: var(--sm-grid-rows);
 
   /* Geometry */
-  --cell-size: calc(100vw / var(--cols));
-  height: calc(var(--cell-size) * var(--rows));
+  width: 100%;
+  --cell-size: calc(100% / var(--grid-columns));
+  height: calc(var(--cell-size) * var(--grid-rows));
 
   display: grid;
-  grid-template-columns: repeat(var(--cols), 1fr);
-  grid-template-rows: repeat(var(--rows), var(--cell-size));
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  grid-template-rows: repeat(var(--grid-rows), var(--cell-size));
 
-  box-sizing: border-box;
   border: 1px solid var(--grid-line);
+  box-sizing: border-box;
 }
+
+
+
 
 
 
@@ -98,17 +103,16 @@
   inset: 0;
 
   background-image:
-    repeating-linear-gradient(to right,
-      transparent 0,
-      transparent calc(100% / var(--cols) - 1px),
-      var(--grid-line) calc(100% / var(--cols) - 1px),
-      var(--grid-line) calc(100% / var(--cols))),
-    repeating-linear-gradient(to bottom,
-      transparent 0,
-      transparent calc(100% / var(--rows) - 1px),
-      var(--grid-line) calc(100% / var(--rows) - 1px),
-      var(--grid-line) calc(100% / var(--rows)));
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+
+  background-size:
+    calc(100% / var(--grid-columns)) 100%,
+    100% calc(100% / var(--grid-rows));
+
+  background-position: 0 0;
 }
+
 
 
 
