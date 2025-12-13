@@ -67,59 +67,24 @@
 
 
 
-/* GRID */
 .grid_square {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-
-  /* Mobile defaults */
-  --grid-columns: var(--sm-grid-columns);
-  --grid-rows: var(--sm-grid-rows);
-
-  /* Geometry */
-  width: 100%;
-  --cell-size: calc(100% / var(--grid-columns));
-  height: calc(var(--cell-size) * var(--grid-rows));
-
-  display: grid;
-  grid-template-columns: repeat(var(--grid-columns), 1fr);
-  grid-template-rows: repeat(var(--grid-rows), var(--cell-size));
-
-  border: 1px solid var(--grid-line);
-  box-sizing: border-box;
-}
-
-
-
-
-
-
-/* DRAW CELL BORDERS */
-.grid_square::before {
-  content: "";
   position: absolute;
   inset: 0;
+  pointer-events: none;
+  z-index: 0;
 
-  background-image:
-    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  --cell: 96px;
+  /* base square size */
+  --line: rgba(0, 0, 0, 0.18);
 
-  background-size:
-    calc(100% / var(--grid-columns)) 100%,
-    100% calc(100% / var(--grid-rows));
+  background:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
 
-  background-position: 0 0;
+  background-size: var(--cell) var(--cell);
+  background-position: top left;
 }
 
-
-
-
-/* Grid color */
-.grid_square {
-  --grid-line: rgba(0, 0, 0, 0.12);
-}
 
 
 
