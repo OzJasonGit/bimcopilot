@@ -51,46 +51,70 @@
 
 
 
-/* CORE GRID */
-.grid_square {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-
-  /* Defaults (mobile-first) */
-  --grid-columns: var(--sm-grid-columns, 8);
-  --grid-rows: var(--sm-grid-rows, 7);
-
-  /* Derived geometry */
-  --width: 100%;
-  --cell-size: calc(var(--width) / var(--grid-columns));
-  --height: calc(var(--cell-size) * var(--grid-rows));
-
-  height: var(--height);
-
-  display: grid;
-  grid-template-columns: repeat(var(--grid-columns), 1fr);
-  grid-template-rows: repeat(var(--grid-rows), var(--cell-size));
-
-  border: 1px solid var(--grid-line);
-  box-sizing: border-box;
+.grid_square_container {
+  --sm-grid-columns: 8;
+  --sm-grid-rows: 7;
+  --md-grid-columns: 12;
+  --md-grid-rows: 8;
+  --lg-grid-columns: 14;
+  --lg-grid-rows: 6;
 }
 
-/* DRAW THE CELLS */
+
+
+
+
+
+
+
+/* GRID */
+.grid_square {
+  position: relative;
+  width: 100%;
+  pointer-events: none;
+
+  /* Mobile defaults */
+  --cols: var(--sm-cols);
+  --rows: var(--sm-rows);
+
+  /* Geometry */
+  --cell-size: calc(100vw / var(--cols));
+  height: calc(var(--cell-size) * var(--rows));
+
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), var(--cell-size));
+
+  box-sizing: border-box;
+  border: 1px solid var(--grid-line);
+}
+
+
+
+/* DRAW CELL BORDERS */
 .grid_square::before {
   content: "";
   position: absolute;
   inset: 0;
 
   background-image:
-    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    repeating-linear-gradient(to right,
+      transparent 0,
+      transparent calc(100% / var(--cols) - 1px),
+      var(--grid-line) calc(100% / var(--cols) - 1px),
+      var(--grid-line) calc(100% / var(--cols))),
+    repeating-linear-gradient(to bottom,
+      transparent 0,
+      transparent calc(100% / var(--rows) - 1px),
+      var(--grid-line) calc(100% / var(--rows) - 1px),
+      var(--grid-line) calc(100% / var(--rows)));
+}
 
-  background-size:
-    calc(100% / var(--grid-columns)) 100%,
-    100% calc(100% / var(--grid-rows));
 
-  background-position: 0 0;
+
+/* Grid color */
+.grid_square {
+  --grid-line: rgba(255, 255, 255, 0.12);
 }
 
 
