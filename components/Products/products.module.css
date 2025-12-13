@@ -51,7 +51,7 @@
 
 
 
- /* GRID */
+/* GRID */
 .grid_square {
   position: absolute;
   inset: 0;
@@ -62,10 +62,8 @@
   --line: rgba(255, 0, 0, 0.18);
 
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(var(--cell), 1fr)
-  );
+  grid-template-columns: repeat(auto-fit,
+      minmax(var(--cell), 1fr));
 
   /* lock squares */
   grid-auto-rows: var(--cell);
@@ -73,7 +71,6 @@
   border: 1px solid var(--line);
   overflow: hidden;
 }
-
 
 /* vertical lines */
 .grid_square::before {
