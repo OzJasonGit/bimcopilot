@@ -52,13 +52,31 @@
 
 
 .grid_square {
-  display: grid;
-  --sm-grid-rows: 7;
-  --md-grid-rows: 8;
-  --lg-grid-rows: 6;
-  --sm-grid-columns: 8;
-  --md-grid-columns: 12;
-  --sm-height: calc(var(--width) / var(--grid-columns) * var(--grid-rows))
+
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  
+    --columns: 12;
+    --gutter: clamp(16px, 4vw, 32px);
+    --line-color: rgba(255, 0, 0, 0.15);
+  
+    background-image:
+    linear-gradient(to right,
+      var(--line-color) 1px,
+      transparent 1px),
+    linear-gradient(to bottom,
+      var(--line-color) 1px,
+      transparent 1px);
+  
+    background-size:
+      calc((100% - (var(--gutter) * (var(--columns) - 1))) / var(--columns) + var(--gutter)) 100%,
+      100% 8rem;
+  
+    background-position:
+      left top,
+      left top;
+
 }
 
 
