@@ -61,7 +61,7 @@ export default class Products extends Component {
 
           <div className={styles.grid_square_container}
                style={{
-                        height:"600px",  
+                        height:"673px",  
                         gridArea:"MAIN-AREA",
                         position:"relative",                   
                       }}>
