@@ -51,45 +51,47 @@
 
 
 
-/* GRID */
+/* CORE GRID */
 .grid_square {
   position: absolute;
   inset: 0;
-  z-index: 0;
   pointer-events: none;
 
-  --cell: 80px;
-  --line: rgba(255, 0, 0, 0.18);
+  /* Defaults (mobile-first) */
+  --grid-columns: var(--sm-grid-columns, 8);
+  --grid-rows: var(--sm-grid-rows, 7);
+
+  /* Derived geometry */
+  --width: 100%;
+  --cell-size: calc(var(--width) / var(--grid-columns));
+  --height: calc(var(--cell-size) * var(--grid-rows));
+
+  height: var(--height);
 
   display: grid;
-  grid-template-columns: repeat(auto-fit,
-      minmax(var(--cell), 1fr));
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  grid-template-rows: repeat(var(--grid-rows), var(--cell-size));
 
-  /* lock squares */
-  grid-auto-rows: var(--cell);
-
-  border: 1px solid var(--line);
-  overflow: hidden;
+  border: 1px solid var(--grid-line);
+  box-sizing: border-box;
 }
 
-/* vertical lines */
+/* DRAW THE CELLS */
 .grid_square::before {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    repeating-linear-gradient(to right,
-      transparent 0,
-      transparent calc(var(--cell) - 1px),
-      var(--line) calc(var(--cell) - 1px),
-      var(--line) var(--cell)),
-    repeating-linear-gradient(to bottom,
-      transparent 0,
-      transparent calc(var(--cell) - 1px),
-      var(--line) calc(var(--cell) - 1px),
-      var(--line) var(--cell));
-}
 
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+
+  background-size:
+    calc(100% / var(--grid-columns)) 100%,
+    100% calc(100% / var(--grid-rows));
+
+  background-position: 0 0;
+}
 
 
 
