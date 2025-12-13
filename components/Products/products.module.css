@@ -51,24 +51,46 @@
 
 
 
+ /* GRID */
 .grid_square {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 0;
-  
-    --cell: 96px;
-    /* base square size */
-    --line: rgba(255, 0, 0, 0.18);
-  
-    background:
-      linear-gradient(var(--line) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  
-    background-size: var(--cell) var(--cell);
-    background-position: top left;
+  --cell: 80px;
+  --line: rgba(255, 0, 0, 0.18);
 
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--cell), 1fr)
+  );
+
+  /* lock squares */
+  grid-auto-rows: var(--cell);
+
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+
+/* vertical lines */
+.grid_square::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(to right,
+      transparent 0,
+      transparent calc(var(--cell) - 1px),
+      var(--line) calc(var(--cell) - 1px),
+      var(--line) var(--cell)),
+    repeating-linear-gradient(to bottom,
+      transparent 0,
+      transparent calc(var(--cell) - 1px),
+      var(--line) calc(var(--cell) - 1px),
+      var(--line) var(--cell));
 }
 
 
