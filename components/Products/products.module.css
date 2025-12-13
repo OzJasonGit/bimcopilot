@@ -52,6 +52,7 @@
 
 
 .grid_square {
+  display: grid;
   --sm-grid-rows: 7;
   --md-grid-rows: 8;
   --lg-grid-rows: 6;
