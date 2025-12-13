@@ -65,8 +65,8 @@ export default class Products extends Component {
                         gridArea:"MAIN-AREA",
                         position:"relative"                    
                       }}>
-                        <div class="grid-module grid hero-module hero"
-                             style="--sm-grid-rows:7;--md-grid-rows:8;--lg-grid-rows:6;--sm-grid-columns:8;--md-grid-columns:12;--sm-height:calc(var(--width) / var(--grid-columns) * var(--grid-rows))">
+                        <div class="--sm-grid-rows:7 ... --md-grid-rows:8 ... --lg-grid-rows:6 ... --sm-grid-columns:8 ... --md-grid-columns:12 ... --sm-height:calc(var(--width) / var(--grid-columns) * var(--grid-rows))"
+                            >
 
                         </div>
 
