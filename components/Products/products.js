@@ -59,16 +59,20 @@ export default class Products extends Component {
 
         <div className={styles.grid_0_main}>
 
-          <div className={styles.grid_square}
+          <div className={styles.grid_square_container}
                style={{
                         height:"600px",  
                         gridArea:"MAIN-AREA",
                         position:"relative"                    
                       }}>
-                        <div class="--sm-grid-rows:7 ... --md-grid-rows:8 ... --lg-grid-rows:6 ... --sm-grid-columns:8 ... --md-grid-columns:12 ... --sm-height:calc(var(--width) / var(--grid-columns) * var(--grid-rows))"
-                            >
+                      <div className={styles.grid_square}
+                        style={{
+                          height:"100%",  
+                          width:"100%",
+                          position:"absolute"                    
+                        }}>
 
-                        </div>
+                      </div>
 
           </div>
 
