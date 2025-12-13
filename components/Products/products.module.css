@@ -56,26 +56,18 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
+    z-index: 0;
   
-    --columns: 12;
-    --gutter: clamp(16px, 4vw, 32px);
-    --line-color: rgba(255, 0, 0, 0.15);
+    --cell: 96px;
+    /* base square size */
+    --line: rgba(255, 0, 0, 0.18);
   
-    background-image:
-    linear-gradient(to right,
-      var(--line-color) 1px,
-      transparent 1px),
-    linear-gradient(to bottom,
-      var(--line-color) 1px,
-      transparent 1px);
+    background:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
   
-    background-size:
-      calc((100% - (var(--gutter) * (var(--columns) - 1))) / var(--columns) + var(--gutter)) 100%,
-      100% 8rem;
-  
-    background-position:
-      left top,
-      left top;
+    background-size: var(--cell) var(--cell);
+    background-position: top left;
 
 }
 
