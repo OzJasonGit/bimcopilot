@@ -49,6 +49,7 @@ const AI_and_Automation =
       </ul>    
     </div>;
 
+
 const BIM_Management =
     <div>
       <ul className="list-disc pl-6">
@@ -72,37 +73,123 @@ const Specialist_Packages =
 
 
 
+const text_1 = `
+We offer a range of digital products and technical services designed to 
+streamline design workflows, enhance project management and are always adding to our library. 
+These optimize efficiency and our solutions include the following:
+`;
+
+
+const text_2 = `
+Our AI-driven tools automate design, eliminate inefficiencies, 
+and enhance accuracy—helping your business work smarter and faster. 
+From generating complex designs to optimizing workflows, we cut manual work, 
+reduce errors, and lower costs. The result? Faster project delivery, 
+increased precision, and a powerful competitive edge.
+`;
+
+
+const text_3 = `
+We offer both pre-made digital products for instant efficiency and custom 
+solutions tailored to your needs. From AI-driven design automation 
+to BIM optimization, we deliver seamless, high-impact solutions that integrate flawlessly into your business.
+`;
+
+
+const text_4 = `
+Yes, our digital products are designed to integrate seamlessly into your workflow, 
+enhancing BIM, parametric design, and project management without 
+disruption. With intuitive interfaces and automation, they 
+streamline tasks and boost efficiency with a minimal learning curve.
+`;
+
+
+const text_5 = `
+Yes, our automation tools eliminate repetitive design tasks, 
+allowing you to focus on creativity and high-value work. 
+By leveraging AI, parametric design, and smart workflows, 
+our solutions accelerate drafting, modeling, and data management 
+with precision and efficiency. Whether automating complex geometries 
+or streamlining documentation, our tools save hours while maintaining accuracy and design integrity.
+`;
+
+
+const text_6 = `
+Rooted in architecture and design, our expertise go beyond theory. We’ve lived the challenges. 
+By fusing a deep industry knowledge of project delivery with cutting-edge AI, automation, 
+and a bold creative vision, We cultivate a unique and powerful 
+edge which we apply to your projects.
+`;
+
+
+const text_7 = `
+We excel at helping large businesses scale, streamline, and grow. 
+But we also work with solo designers and small firms.  
+Compatibility will be based on culture fit, rather than size. We tailor 
+our tools to aid various workflows with our goal being the same. To sharpen precision, save time, 
+and unlock new opportunities with technology.
+`;
+
+
+const text_8 = `
+ Sustainability drives everything we do—but we go beyond green buildings. 
+ As part of Plastic Free by Design, we focus on cutting plastic waste 
+ and promoting organic food systems. Our digital tools optimize workflows, 
+ reduce waste, and push design toward a smarter, more responsible future. 
+ Technology and sustainability aren’t separate—they’re a powerful force for change.
+`;
+
+
+const text_9 = `
+How do I get started with your services, and what are the pricing options?`;
 
 
 
 
 
- const accordionItems = [
-    {
-      key: "services-1",
-      title: "Architecture, Design Delivery & Documentation Support",
-      subtitle: "Press to expand",
-      content: Architecture_Delivery,
-    },
-    {
-      key: "services-2",
-      title: "BIM Management Digital Delivery & Coordination",
-      subtitle: "Press to expand key 2",
-      content: BIM_Management,
-    },
-    {
-      key: "services-3",
-      title: "Automation & AI Enabled BIM Services",
-      subtitle: "Press to expand",
-      content: AI_and_Automation,
-    },
-    {
-      key: "services-4",
-      title: "Specialist Packages",
-      subtitle: "Press to expand",
-      content: Specialist_Packages,
-    },
-  ];
+
+
+
+
+
+
+
+
+
+
+
+const accordionItems = [
+  {
+    key: "services-1",
+    title: "Architecture, Design Delivery & Documentation Support",
+    subtitle: "Press to expand",
+    content: Architecture_Delivery,
+  },
+  {
+    key: "services-2",
+    title: "BIM Management Digital Delivery & Coordination",
+    subtitle: "Press to expand key 2",
+    content: BIM_Management,
+  },
+  {
+    key: "services-3",
+    title: "Automation & AI Enabled BIM Services",
+    subtitle: "Press to expand",
+    content: AI_and_Automation,
+  },
+  {
+    key: "services-4",
+    title: "Specialist Packages",
+    subtitle: "Press to expand",
+    content: Specialist_Packages,
+  },
+  {
+    key: "services-5",
+    title: "text_1",
+    subtitle: "Press to expand",
+    content: text_1,
+  },
+];
 
 
 
@@ -128,7 +215,29 @@ const Specialist_Packages =
 
 
 
-   
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 return (
 
    <>
