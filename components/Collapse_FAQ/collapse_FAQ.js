@@ -294,30 +294,8 @@ return (
                               Frequently Asked Questions (FAQ)
                         </h2>
                       </div>
-
-                      <div id={styles.COLLAPSE_MESSAGE_2}>
-                        <div id={styles.COLLAPSE_TAG}>
-                          <h3
-                            id={styles._H3}
-                            class="text-left ... text-stone-400 ... font-avant_garde_medium">
-                              {" "}
-                              
-                              We are highly experienced <a class="text-stone-200 ...">RIBA</a> and <a class="text-stone-200 ...">ARB</a> 
-                              <a class="text-stone-400 ..."> registered architects
-                              </a> specializing in cutting-edge <a class="text-stone-200 ...">BIM </a>
-                              solutions powered by <a class="text-stone-200 ...">Artificial Intelligence</a>. 
-                              <br/>We focus on tailoring <a class="text-stone-200 ...">systems</a> conceived from 
-                              <a class="text-stone-200 ..."> real-world 
-                              experience </a>on projects from <a class="text-stone-200 ...">concept</a>, through to 
-                              <a class="text-stone-200 ..."> completion</a>.                  
-                                                                                               
-                          </h3>
-                        </div>                        
-                      </div>
-              
+             
                     </div>
-
-
 
 
                     </div>
