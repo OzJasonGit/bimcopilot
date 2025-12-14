@@ -160,30 +160,6 @@ How do I get started with your services, and what are the pricing options?`;
 
 const accordionItems = [
   {
-    key: "services-1",
-    title: "Architecture, Design Delivery & Documentation Support",
-    subtitle: "Press to expand",
-    content: Architecture_Delivery,
-  },
-  {
-    key: "services-2",
-    title: "BIM Management Digital Delivery & Coordination",
-    subtitle: "Press to expand key 2",
-    content: BIM_Management,
-  },
-  {
-    key: "services-3",
-    title: "Automation & AI Enabled BIM Services",
-    subtitle: "Press to expand",
-    content: AI_and_Automation,
-  },
-  {
-    key: "services-4",
-    title: "Specialist Packages",
-    subtitle: "Press to expand",
-    content: Specialist_Packages,
-  },
-  {
     key: "services-5",
     title: "text_1",
     subtitle: "Press to expand",
@@ -206,6 +182,36 @@ const accordionItems = [
     title: "text_4",
     subtitle: "Press to expand",
     content: text_4,
+  },
+  {
+    key: "services-9",
+    title: "text_5",
+    subtitle: "Press to expand",
+    content: text_5,
+  },
+  {
+    key: "services-10",
+    title: "text_6",
+    subtitle: "Press to expand",
+    content: text_6,
+  },
+  {
+    key: "services-11",
+    title: "text_7",
+    subtitle: "Press to expand",
+    content: text_7,
+  },
+  {
+    key: "services-12",
+    title: "text_8",
+    subtitle: "Press to expand",
+    content: text_8,
+  },
+  {
+    key: "services-13",
+    title: "text_9",
+    subtitle: "Press to expand",
+    content: text_9,
   },
 ];
 
