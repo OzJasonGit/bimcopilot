@@ -108,40 +108,7 @@ return (
         </div>
       </section>
 
-
-
-
-      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
-          <div class={styles.grid_0_faq}>
-             
-              <div id={styles.FAQ_BLOCK}>   
-
-                <div  id={styles.FAQ}>  
-
-                  <div id={styles.FAQ_PADDING}
-                       className=" rounded-xl ... border-solid ... border ... border-stone-800 ... " 
-                       style={{ gridArea: "FAQ",
-                                padding: "80px"}}>
-
-                                  <div class=" rounded-xl ..."
-                                      id={styles.FAQ_TEXT}>
-                                        <h1
-                                          style={{ paddingBottom: "20px" }}
-                                          id={styles._H1}
-                                          class="text-stone-700 ... font-avant_garde_bold ...">
-                                          <a class="text-left ... text-4xl">Frequently Asked <br/> Questions (FAQ) </a>
-                                        </h1> 
-                                    <Collapsed_FAQ/>                                      
-                                  </div>
-                  </div>  
-
-                </div>  
-
-              </div> 
-     
-          </div>
-      </section>
-
+      <Collapsed_FAQ/>  
 
 
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
