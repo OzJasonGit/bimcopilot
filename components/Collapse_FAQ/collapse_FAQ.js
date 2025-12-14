@@ -158,7 +158,7 @@ return (
                         <h2                 
                               id={styles._H2_2}
                               class="text-left ... text-stone-200 ... font-avant_garde_bold">         
-                              Our Services
+                              Frequently Asked Questions (FAQ)
                         </h2>
                       </div>
 
