@@ -189,6 +189,24 @@ const accordionItems = [
     subtitle: "Press to expand",
     content: text_1,
   },
+  {
+    key: "services-6",
+    title: "text_2",
+    subtitle: "Press to expand",
+    content: text_2,
+  },
+  {
+    key: "services-7",
+    title: "text_3",
+    subtitle: "Press to expand",
+    content: text_3,
+  },
+  {
+    key: "services-8",
+    title: "text_4",
+    subtitle: "Press to expand",
+    content: text_4,
+  },
 ];
 
 
