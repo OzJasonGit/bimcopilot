@@ -52,37 +52,41 @@
 
 
 .grid_square_container {
-  --sm-grid-columns: 8;
-  --sm-grid-rows: 7;
-  --md-grid-columns: 12;
-  --md-grid-rows: 8;
-  --lg-grid-columns: 14;
-  --lg-grid-rows: 6;
+  position: relative;
+  width: 100%;
+  height: clamp(320px, 55vw, 620px);
+  --cols: 12;
+  --rows: 6;
 }
-
-
-
-
-
-
-
 
 .grid_square {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-
-  --cell: 96px;
-  /* base square size */
   --line: rgba(0, 0, 0, 0.18);
-
+  border: 1px solid var(--line);
   background:
     linear-gradient(var(--line) 1px, transparent 1px),
     linear-gradient(90deg, var(--line) 1px, transparent 1px);
-
-  background-size: var(--cell) var(--cell);
+  background-size: calc(100% / var(--cols)) calc(100% / var(--rows));
   background-position: top left;
+}
+
+@media all and (max-width: 960px) {
+  .grid_square_container {
+    height: clamp(260px, 70vw, 540px);
+    --cols: 8;
+    --rows: 6;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .grid_square_container {
+    height: clamp(220px, 90vw, 480px);
+    --cols: 6;
+    --rows: 6;
+  }
 }
 
 
