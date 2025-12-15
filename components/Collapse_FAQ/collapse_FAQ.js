@@ -161,13 +161,14 @@ How do I get started with your services, and what are the pricing options?`;
 const accordionItems = [
   {
     key: "services-5",
-    title: "text_1",
+    title: <h3>What types of digital products do you offer?</h3>,
     subtitle: "Press to expand",
     content: text_1,
   },
   {
     key: "services-6",
-    title: "text_2",
+    title: <h3>How can your AI-driven tools help my architecture, design
+           <br/> or manufacturing business? </h3>,
     subtitle: "Press to expand",
     content: text_2,
   },
