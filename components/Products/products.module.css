@@ -65,12 +65,15 @@
   pointer-events: none;
   z-index: 0;
   --line: rgba(0, 0, 0, 0.18);
-  border: 1px solid var(--line);
+  border: none;
+  /* single-pixel outline so all edges close cleanly */
+  box-shadow: inset 0 0 0 0.5px var(--line);
   background:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  background-size: calc(100% / var(--cols)) calc(100% / var(--rows));
-  background-position: top left;
+    linear-gradient(var(--line) 0.5px, transparent 1px),
+    linear-gradient(90deg, var(--line) 0.5px, transparent 1px);
+  /* subtract total outline (0.5px each side) so grid lines meet the outline */
+  background-size: calc((100% - 1px) / var(--cols)) calc((100% - 1px) / var(--rows));
+  background-position: 0.5px 0.5px;
 }
 
 @media all and (max-width: 960px) {
