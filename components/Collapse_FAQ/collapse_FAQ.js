@@ -161,55 +161,62 @@ How do I get started with your services, and what are the pricing options?`;
 const accordionItems = [
   {
     key: "services-5",
-    title: "text_1",
+    title: <h3>What types of digital products do you offer?</h3>,
     subtitle: "Press to expand",
     content: text_1,
   },
   {
     key: "services-6",
-    title: "text_2",
+    title: <h3>How can your AI-driven tools help my architecture, design
+           <br/> or manufacturing business? </h3>,
     subtitle: "Press to expand",
     content: text_2,
   },
   {
     key: "services-7",
-    title: "text_3",
+    title: <h3>Do you offer custom design solutions, or are your 
+           <br/> products pre-made?</h3>,
     subtitle: "Press to expand",
     content: text_3,
   },
   {
     key: "services-8",
-    title: "text_4",
+    title: <h3>Are your digital products easy to integrate into 
+           <br/> my existing workflow? </h3>,
     subtitle: "Press to expand",
     content: text_4,
   },
   {
     key: "services-9",
-    title: "text_5",
+    title: <h3>Can your automation tools help me save time on 
+           <br/> repetitive design tasks? </h3>,
     subtitle: "Press to expand",
     content: text_5,
   },
   {
     key: "services-10",
-    title: "text_6",
+    title: <h3>What makes your services different from other design 
+           <br/> and tech solutions? </h3>,
     subtitle: "Press to expand",
     content: text_6,
   },
   {
     key: "services-11",
-    title: "text_7",
+    title: <h3>Do you work with individual professionals, small firms, or 
+           <br/> large businesses? </h3>,
     subtitle: "Press to expand",
     content: text_7,
   },
   {
     key: "services-12",
-    title: "text_8",
+    title: <h3>How do you incorporate sustainability into your designs? </h3>,
     subtitle: "Press to expand",
     content: text_8,
   },
   {
     key: "services-13",
-    title: "text_9",
+    title: <h3>How do I get started with your services, and what are 
+           <br/> the pricing options?</h3>,
     subtitle: "Press to expand",
     content: text_9,
   },
