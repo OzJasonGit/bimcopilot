@@ -54,9 +54,9 @@
 .grid_square_container {
   position: relative;
   width: 100%;
-  height: clamp(320px, 55vw, 620px);
   --cols: 12;
   --rows: 6;
+  aspect-ratio: calc(var(--cols) / var(--rows));
 }
 
 .grid_square {
@@ -75,17 +75,17 @@
 
 @media all and (max-width: 960px) {
   .grid_square_container {
-    height: clamp(260px, 70vw, 540px);
     --cols: 8;
     --rows: 6;
+    aspect-ratio: calc(var(--cols) / var(--rows));
   }
 }
 
 @media all and (max-width: 640px) {
   .grid_square_container {
-    height: clamp(220px, 90vw, 480px);
     --cols: 6;
     --rows: 6;
+    aspect-ratio: calc(var(--cols) / var(--rows));
   }
 }
 
