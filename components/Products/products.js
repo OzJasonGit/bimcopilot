@@ -92,42 +92,11 @@
 
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from 'react';
 import styles from './products.module.css';
 import { Grid } from '@geist-ui/react';
 
 export default function Products() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    const load = async () => {
-      try {
-        const res = await fetch('/api/products');
-        if (!res.ok) throw new Error(`status ${res.status}`);
-        const data = await res.json();
-        if (!cancelled) {
-          setProducts(Array.isArray(data) ? data : []);
-          setLoading(false);
-        }
-      } catch (err) {
-        if (!cancelled) {
-          setError('Failed to load products');
-          setLoading(false);
-        }
-        console.error('Products fetch error:', err);
-      }
-    };
-    load();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
   return (
     <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}>
       <div className={styles.grid_0_main}>
@@ -157,68 +126,6 @@ export default function Products() {
               pointerEvents: 'none',
             }}
           />
-
-          {/* Products */}
-          <div
-            id={styles.PRODUCTS_HOLDER}
-            aria-live="polite"
-            style={{
-              position: 'absolute',
-              inset: '16px',
-              display: 'flex',
-              justifyContent: 'space-around',
-              alignItems: 'flex-start',
-              gap: '60px',
-              overflow: 'hidden',
-              pointerEvents: 'auto',
-            }}
-          >
-            {loading && <p className="text-sm text-neutral-500">Loading products…</p>}
-            {error && !loading && <p className="text-sm text-red-500">{error}</p>}
-            {!loading && !error && products.length === 0 && (
-              <p className="text-sm text-neutral-500">No products available.</p>
-            )}
-            {!loading &&
-              !error &&
-              products.slice(0, 3).map((product) => (
-                <div
-                  id={styles.PRODUCT_CARD}
-                  key={product._id || product.product_id}
-                  style={{ minWidth: 260, maxWidth: 320 }}
-                >
-                  <div id={styles.PRODUCT} style={{ gridTemplateRows: '340px auto' }}>
-                    <div id={styles.PRODUCT_IMAGE}>
-                      <Image
-                        src={product.images?.[0] || '/placeholder.png'}
-                        alt={product.title || 'Product image'}
-                        fill
-                        sizes="(max-width: 768px) 60vw, 20vw"
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
-                    <div id={styles.TEXT_HOLDER}>
-                      <h3 id={styles._H3} className="text-neutral-800 font-avant_garde_bold">
-                        {product.title}
-                      </h3>
-                      <p id={styles._H5} className="text-neutral-500">
-                        {product.short_description}
-                      </p>
-                      <div className="flex gap-2 text-sm text-neutral-700">
-                        {product.student_price !== undefined && (
-                          <span>Student: ${product.student_price}</span>
-                        )}
-                        {product.commercial_price !== undefined && (
-                          <span>Commercial: ${product.commercial_price}</span>
-                        )}
-                      </div>
-                      <Link href={`/products/${product.slug || product.product_id || ''}`}>
-                        <span className="text-emerald-500 text-sm">View</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-          </div>
         </div>
       </div>
     </section>
