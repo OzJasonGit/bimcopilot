@@ -166,9 +166,9 @@ export default function Products() {
               position: 'absolute',
               inset: '16px',
               display: 'flex',
-              justifyContent: 'center',
+              justifyContent: 'space-around',
               alignItems: 'flex-start',
-              gap: '32px',
+              gap: '60px',
               overflow: 'hidden',
               pointerEvents: 'auto',
             }}
