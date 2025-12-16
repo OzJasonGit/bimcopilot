@@ -159,7 +159,20 @@ export default function Products() {
           />
 
           {/* Products */}
-          <div id={styles.PRODUCTS_HOLDER} aria-live="polite">
+          <div
+            id={styles.PRODUCTS_HOLDER}
+            aria-live="polite"
+            style={{
+              position: 'absolute',
+              inset: '16px',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'flex-start',
+              gap: '32px',
+              overflow: 'hidden',
+              pointerEvents: 'auto',
+            }}
+          >
             {loading && <p className="text-sm text-neutral-500">Loading products…</p>}
             {error && !loading && <p className="text-sm text-red-500">{error}</p>}
             {!loading && !error && products.length === 0 && (
@@ -167,15 +180,19 @@ export default function Products() {
             )}
             {!loading &&
               !error &&
-              products.slice(0, 6).map((product) => (
-                <div id={styles.PRODUCT_CARD} key={product._id || product.product_id}>
-                  <div id={styles.PRODUCT}>
+              products.slice(0, 3).map((product) => (
+                <div
+                  id={styles.PRODUCT_CARD}
+                  key={product._id || product.product_id}
+                  style={{ minWidth: 260, maxWidth: 320 }}
+                >
+                  <div id={styles.PRODUCT} style={{ gridTemplateRows: '340px auto' }}>
                     <div id={styles.PRODUCT_IMAGE}>
                       <Image
                         src={product.images?.[0] || '/placeholder.png'}
                         alt={product.title || 'Product image'}
                         fill
-                        sizes="(max-width: 768px) 50vw, 33vw"
+                        sizes="(max-width: 768px) 60vw, 20vw"
                         style={{ objectFit: 'cover' }}
                       />
                     </div>
