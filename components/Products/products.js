@@ -105,7 +105,7 @@ export default function Products() {
           style={{
             gridArea: 'MAIN-AREA',
             position: 'relative',
-            maxWidth: '1200px',
+            maxWidth: '100%',
             margin: '0 auto',
           }}
         >

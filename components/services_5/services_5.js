@@ -86,8 +86,8 @@ const Specialist_Packages =
     },
     {
       key: "services-2",
-      title: "BIM Management Digital Delivery & Coordination",
-      subtitle: "Press to expand key 2",
+      title: "BIM Management, Digital Delivery & Coordination",
+      subtitle: "Press to expand",
       content: BIM_Management,
     },
     {
