@@ -65,15 +65,15 @@
   pointer-events: none;
   z-index: 0;
   --line: rgba(0, 0, 0, 0.18);
-  /* Geist-style single-pixel outline removed per request */
+  /* single-pixel outline to close all edges */
   border: none;
-  box-shadow: none;
+  box-shadow: inset 0 0 0 1px var(--line);
   background:
     linear-gradient(var(--line) 1px, transparent 1px),
     linear-gradient(90deg, var(--line) 1px, transparent 1px);
-  /* subtract outline to keep 1:1 cells and crisp edges */
-  background-size: calc((100% - 1px) / var(--cols)) calc((100% - 1px) / var(--rows));
-  background-position: 0.5px 0.5px;
+  /* keep lines even by matching exact fractional cells */
+  background-size: calc(100% / var(--cols)) calc(100% / var(--rows));
+  background-position: 0 0;
   background-repeat: repeat;
 }
 
