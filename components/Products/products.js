@@ -136,9 +136,11 @@ export default function Products() {
           style={{
             gridArea: 'MAIN-AREA',
             position: 'relative',
+            maxWidth: '1200px',
+            margin: '0 auto',
           }}
         >
-          {/* Geist grid scaffold */}
+          {/* Geist scaffold */}
           <Grid.Container gap={0} justify="center" height="100%">
             <Grid xs={24} />
           </Grid.Container>
@@ -151,11 +153,13 @@ export default function Products() {
               height: '100%',
               width: '100%',
               position: 'absolute',
+              inset: 0,
+              pointerEvents: 'none',
             }}
           />
 
-          {/* Product content */}
-          <div id={styles.PRODUCTS_HOLDER}>
+          {/* Products */}
+          <div id={styles.PRODUCTS_HOLDER} aria-live="polite">
             {loading && <p className="text-sm text-neutral-500">Loading products…</p>}
             {error && !loading && <p className="text-sm text-red-500">{error}</p>}
             {!loading && !error && products.length === 0 && (
@@ -183,8 +187,12 @@ export default function Products() {
                         {product.short_description}
                       </p>
                       <div className="flex gap-2 text-sm text-neutral-700">
-                        <span>Student: ${product.student_price}</span>
-                        <span>Commercial: ${product.commercial_price}</span>
+                        {product.student_price !== undefined && (
+                          <span>Student: ${product.student_price}</span>
+                        )}
+                        {product.commercial_price !== undefined && (
+                          <span>Commercial: ${product.commercial_price}</span>
+                        )}
                       </div>
                       <Link href={`/products/${product.slug || product.product_id || ''}`}>
                         <span className="text-emerald-500 text-sm">View</span>
