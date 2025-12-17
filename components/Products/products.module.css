@@ -67,7 +67,7 @@
   --line: rgba(0, 0, 0, 0.18);
   /* single-pixel outline to close all edges */
   border: none;
-  box-shadow: inset 0 0 0 1px var(--line);
+  box-shadow: inset 0 0 0 0.5px var(--line);
   background:
     linear-gradient(var(--line) 1px, transparent 1px),
     linear-gradient(90deg, var(--line) 1px, transparent 1px);
