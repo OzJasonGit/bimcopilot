@@ -103,7 +103,6 @@ export default function Products() {
     <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}>
 
       <div className={styles.grid_0_main}>
-
         <div
           className={styles.grid_square_container}
           style={{
@@ -132,8 +131,7 @@ export default function Products() {
               pointerEvents: 'none',
             }}
             
-          />
-          
+          />          
         </div>
       </div>
 
