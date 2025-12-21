@@ -154,6 +154,24 @@
 }
 
 
+.grid_0_main_2 {
+  width: 100%;
+  margin-top: -100%;
+  max-width: 2160px;
+  background-color: transparent;
+  display: grid;
+  position: relative;
+  grid-column-gap: 0px;
+  grid-row-gap: 40px;
+  grid-template-rows: 0px auto 0px;
+  grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+  grid-template-areas:
+    ". . . . . . ."
+    "MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA"
+    ". . . . . . .";
+}
+
+
 
 
 

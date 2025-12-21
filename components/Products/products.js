@@ -134,8 +134,7 @@ export default function Products() {
           </div>
       </div>
 
-      <div className={styles.grid_0_main}>
-
+      <div className={styles.grid_0_main_2}>
         <div
           className={styles.grid_square_container}
           style={{
