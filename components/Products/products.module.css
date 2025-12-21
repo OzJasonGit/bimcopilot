@@ -54,7 +54,7 @@
 .grid_square_container {
   position: relative;
   width: 100%;
-  --cols: 16;
+  --cols: 20;
   --rows: 7;
   aspect-ratio: calc(var(--cols) / var(--rows));
 }
@@ -117,7 +117,7 @@
 
 .grid_0_main {
   width: 100%;
-  max-width: 1520px;
+  max-width: 2160px;
   background-color: transparent;
   display: grid;
   position: relative;
@@ -127,7 +127,7 @@
   grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
   grid-template-areas:
     ". . . . . . ."
-    ". MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA ."
+    "MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA MAIN-AREA"
     ". . . . . . .";
 }
 

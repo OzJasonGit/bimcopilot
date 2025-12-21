@@ -98,8 +98,11 @@ import { Grid } from '@geist-ui/react';
 
 export default function Products() {
   return (
+
+    
     <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}>
       <div className={styles.grid_0_main}>
+
         <div
           className={styles.grid_square_container}
           style={{
@@ -109,6 +112,7 @@ export default function Products() {
             margin: '0 auto',
           }}
         >
+
           {/* Geist scaffold */}
           <Grid.Container gap={0} justify="center" height="100%">
             <Grid xs={24} />
@@ -126,8 +130,22 @@ export default function Products() {
               pointerEvents: 'none',
             }}
           />
+          
         </div>
       </div>
+     
     </section>
+
+    
+
+
+
+
+
+
+
+
+
+
   );
 }
