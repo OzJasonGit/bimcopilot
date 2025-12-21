@@ -67,10 +67,10 @@
   --line: rgba(0, 0, 0, 0.18);
   /* single-pixel outline to close all edges */
   border: none;
-  box-shadow: inset 0 0 0 0.5px var(--line);
+  box-shadow: inset 0 0 0 0.25px var(--line);
   background:
-    linear-gradient(var(--line) 0.5px, transparent 0.5px),
-    linear-gradient(90deg, var(--line) 0.5px, transparent 0.5px);
+    linear-gradient(var(--line) 0.25px, transparent 0.25px),
+    linear-gradient(90deg, var(--line) 0.25px, transparent 0.25px);
   /* keep lines even by matching exact fractional cells */
   background-size: calc(100% / var(--cols)) calc(100% / var(--rows));
   background-position: 0 0;
