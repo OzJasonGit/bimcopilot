@@ -64,13 +64,13 @@
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  --line: rgba(0, 0, 0, 0.05);
+  --line: rgba(0, 0, 0, 0.075);
   /* single-pixel outline to close all edges */
   border: none;
-  box-shadow: inset 0 0 0 0.45px var(--line);
+  box-shadow: inset 0 0 0 0.5px var(--line);
   background:
-    linear-gradient(var(--line) 0.45px, transparent 0.45px),
-    linear-gradient(90deg, var(--line) 0.45px, transparent 0.45px);
+    linear-gradient(var(--line) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, var(--line) 0.5px, transparent 0.5px);
   /* keep lines even by matching exact fractional cells */
   background-size: calc(100% / var(--cols)) calc(100% / var(--rows));
   background-position: 0 0;
