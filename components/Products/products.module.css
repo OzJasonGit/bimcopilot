@@ -55,7 +55,7 @@
   position: relative;
   width: 100%;
   --cols: 16;
-  --rows: 8;
+  --rows: 7;
   aspect-ratio: calc(var(--cols) / var(--rows));
 }
 
