@@ -134,7 +134,7 @@ export default function Products() {
           />          
         </div>
 
-        <div>
+        <div className={styles.grid_0_main}>
         </div>
       </div>
 
