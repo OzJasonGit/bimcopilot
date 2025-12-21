@@ -130,8 +130,38 @@ export default function Products() {
               pointerEvents: 'none',
             }}
           />
-          
         </div>
+
+
+        <div
+          className={styles.grid_square_container}
+          style={{
+            gridArea: 'MAIN-AREA',
+            position: 'relative',
+            maxWidth: '100%',
+            margin: '0 auto',
+          }}
+        >
+
+          {/* Geist scaffold */}
+          <Grid.Container gap={0} justify="center" height="100%">
+            <Grid xs={24} />
+          </Grid.Container>
+
+          {/* Overlay guide */}
+          <div
+            className={styles.grid_square}
+            aria-hidden
+            style={{
+              height: '100%',
+              width: '100%',
+              position: 'absolute',
+              inset: 0,
+              pointerEvents: 'none',
+            }}
+          />
+        </div>
+
       </div>
      
     </section>
