@@ -141,7 +141,7 @@ export default function Products() {
               position: 'absolute',
               maxWidth: '100%',
               zIndex:'1',
-              height:'100px'
+              height:'80vh'
             }}>
         </div>
       </div>   
