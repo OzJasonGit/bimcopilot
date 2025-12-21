@@ -121,6 +121,7 @@ export default function Products() {
           {/* Overlay guide */}
           <div
             className={styles.grid_square}
+
             aria-hidden
             style={{
               height: '100%',
@@ -129,7 +130,11 @@ export default function Products() {
               inset: 0,
               pointerEvents: 'none',
             }}
+            
           />
+          <div>
+            
+          </div>
         </div>
 
 
