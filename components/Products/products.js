@@ -135,10 +135,16 @@ export default function Products() {
       </div>
 
       <div className={styles.grid_0_main}>
-      </div>
-
-      
-     
+        <div className={styles.grid_lines}
+            style={{
+              gridArea: 'MAIN-AREA',
+              position: 'absolute',
+              maxWidth: '100%',
+              zIndex:'1',
+              height:'100px'
+            }}>
+        </div>
+      </div>   
     </section>
 
   
