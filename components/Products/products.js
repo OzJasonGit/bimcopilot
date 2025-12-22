@@ -126,7 +126,7 @@ export default function Products() {
                         style={{
                         height: '100%',
                         width: '100%',                      
-                        gridArea: '7'
+                        gridArea: '8'
                       }}>                  
                   </div>
         </div>
