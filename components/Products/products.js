@@ -145,6 +145,20 @@ export default function Products() {
                     position: 'absolute',
                     gridArea: 'MAIN-AREA'
                   }}>
+                  <div id={styles.BORDER}
+                        style={{
+                        height: '100%',
+                        width: '100%',                      
+                        gridArea: '1'
+                      }}>                  
+                  </div>
+                  <div id={styles.BORDER}
+                        style={{
+                        height: '100%',
+                        width: '100%',                      
+                        gridArea: '7'
+                      }}>                  
+                  </div>
         </div>
 
 
