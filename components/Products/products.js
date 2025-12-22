@@ -111,7 +111,7 @@ export default function Products() {
           style={{
                     height: '100%',
                     width: '100%',
-                    position: 'absolute',
+                    position: 'relative',
                     gridArea: 'MAIN-AREA'
                   }}>
                   <div  id={styles.BORDER}
@@ -162,7 +162,7 @@ export default function Products() {
             
             />          
         </div>
-        
+
       </div>
 
     </section>

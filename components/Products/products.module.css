@@ -200,8 +200,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  -webkit-box-pack: center;
-  justify-content: center;
   background-color: transparent;
   z-index: -20000;
 }
