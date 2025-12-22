@@ -106,6 +106,30 @@ export default function Products() {
             }}>
 
       <div className={styles.grid_0_main}>
+        <div className={styles.horizontal_lines}
+          style={{
+                    height: '100%',
+                    width: '100%',
+                    position: 'absolute',
+                    gridArea: 'MAIN-AREA'
+                  }}>
+                  <div  id={styles.BORDER}
+                        class="border-4 border-dashed ..."
+                        style={{
+                        height: '100%',
+                        width: '100%',                      
+                        gridArea: '1'
+                      }}>                  
+                  </div>
+                  <div  id={styles.BORDER}
+                        class="border-4 border-dashed ..."
+                        style={{
+                        height: '100%',
+                        width: '100%',                      
+                        gridArea: '7'
+                      }}>                  
+                  </div>
+        </div>
         <div
           className={styles.grid_square_container}
           style={{
@@ -138,7 +162,7 @@ export default function Products() {
       </div>
 
       <div className={styles.grid_0_main_2}>
-        <div className={styles.horizontal_lines}
+        {/*<div className={styles.horizontal_lines}
           style={{
                     height: '100%',
                     width: '100%',
@@ -161,7 +185,7 @@ export default function Products() {
                         gridArea: '7'
                       }}>                  
                   </div>
-        </div>
+        </div>*/}
 
 
         <div
