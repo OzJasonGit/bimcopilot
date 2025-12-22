@@ -168,10 +168,11 @@ export default class Products extends Component {
                       alignItems: 'center'
                       }}>
 
-      <div className={styles.grid_0_main}>
+      <div className={styles.grid_0_main}
+              style={{
+                    gridArea:'MAIN-AREA',
+                    }}>  
 
-        
-       
         <div className={styles.gradient}>
         </div>
 
@@ -231,7 +232,6 @@ export default class Products extends Component {
             
             />          
         </div>
-
       </div>
 
       <div className={styles.grid_0_products}>
