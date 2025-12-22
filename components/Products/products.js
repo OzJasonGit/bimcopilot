@@ -119,7 +119,9 @@ export default function Products() {
                         style={{
                         height: '100%',
                         width: '100%',                      
-                        gridArea: '2'
+                        gridArea: '2',
+                        position: 'relative',
+                        top: '-.5px'
                       }}>                  
                   </div>
                   <div  id={styles.BORDER}
