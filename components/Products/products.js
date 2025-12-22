@@ -92,7 +92,7 @@
 
 'use client';
 
-import React from 'react';
+
 import styles from './products.module.css';
 import { Grid } from '@geist-ui/react';
 
