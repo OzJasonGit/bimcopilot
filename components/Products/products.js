@@ -114,19 +114,19 @@ export default function Products() {
                     gridArea: 'MAIN-AREA'
                   }}>
                   <div  id={styles.BORDER}
-                        class="border-4 border-dashed ..."
+                        class="border-t-4 border-dashed ..."
                         style={{
                         height: '100%',
                         width: '100%',                      
-                        gridArea: '1'
+                        gridArea: '2'
                       }}>                  
                   </div>
                   <div  id={styles.BORDER}
-                        class="border-4 border-dashed ..."
+                        class="border-t-4 border-dashed ..."
                         style={{
                         height: '100%',
                         width: '100%',                      
-                        gridArea: '8'
+                        gridArea: '9'
                       }}>                  
                   </div>
         </div>
