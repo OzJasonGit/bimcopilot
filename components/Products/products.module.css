@@ -173,6 +173,26 @@
 
 
 
+.hirizontal_lines {
+  display: grid;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "1"
+    "2"
+    "3"
+    "4"
+    "5"
+    "6"
+    "7"
+    "8"
+    "9";
+}
+
+
+
 
 
 #SHADOW_SECTION_TITLE {

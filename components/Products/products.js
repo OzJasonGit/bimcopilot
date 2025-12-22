@@ -135,7 +135,7 @@ export default function Products() {
       </div>
 
       <div className={styles.grid_0_main_2}>
-        <div 
+        <div className={styles.horizontal_lines}
           style={{
                     height: '100%',
                     width: '100%',
