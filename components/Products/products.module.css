@@ -173,7 +173,7 @@
 
 
 
-.hirizontal_lines {
+.horizontal_lines {
   display: grid;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
