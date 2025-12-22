@@ -96,8 +96,10 @@
 import styles from './products.module.css';
 import { Grid } from '@geist-ui/react';
 import Link from "next/link";
+import Image from "next/image";
 
 import logo from './bimcopilot_logo_white.svg';
+import text_logo from './bimcopilot_logo_text_horizontal_white.svg';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
