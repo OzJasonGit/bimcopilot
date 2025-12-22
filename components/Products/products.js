@@ -115,7 +115,7 @@ export default function Products() {
                     gridArea: 'MAIN-AREA'
                   }}>
                   <div  id={styles.BORDER}
-                        class="border-t-4 border-dashed ..."
+                        class="border-t-2 border-stone-900 ... border-dashed ..."
                         style={{
                         height: '100%',
                         width: '100%',                      
@@ -125,7 +125,7 @@ export default function Products() {
                       }}>                  
                   </div>
                   <div  id={styles.BORDER}
-                        class="border-t-4 border-dashed ..."
+                        class="border-t-2 border-stone-900 ... border-dashed ..."
                         style={{
                         height: '100%',
                         width: '100%',                      
