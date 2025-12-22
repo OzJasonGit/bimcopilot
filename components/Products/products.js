@@ -320,27 +320,7 @@ export default class Products extends Component {
 
 
 
-export default function Products() {
-  return (
 
-    
-    
-
-  
-
-    
-
-
-
-
-
-
-
-
-
-
-  );
-}
 
 
 
