@@ -131,10 +131,20 @@ export default function Products() {
             }}
             
             />          
-          </div>
+        </div>
       </div>
 
       <div className={styles.grid_0_main_2}>
+        <div 
+          style={{
+                    height: '100%',
+                    width: '100%',
+                    position: 'absolute',
+                    gridArea: 'MAIN-AREA'
+                  }}>
+        </div>
+
+
         <div
           className={styles.grid_square_container}
           style={{
@@ -160,9 +170,9 @@ export default function Products() {
                     pointerEvents: 'none',
                   }}>
             </div>     
-        </div>
-        
+        </div>      
       </div>   
+
     </section>
 
   
