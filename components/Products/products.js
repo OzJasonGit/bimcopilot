@@ -100,7 +100,10 @@ export default function Products() {
   return (
 
     
-    <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}>
+    <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}
+      style={{
+              alignItems: 'center'
+            }}>
 
       <div className={styles.grid_0_main}>
         <div
