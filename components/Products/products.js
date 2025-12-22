@@ -96,11 +96,68 @@ import React from 'react';
 import styles from './products.module.css';
 import { Grid } from '@geist-ui/react';
 
-export default function Products() {
-  return (
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { Button } from "@/components/ui/button";
+import { formatPriceWithCurrencySync } from '@/app/utils/currency';
 
-    
-    <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}
+import React, { Component } from 'react';
+import { useState } from "react";
+
+
+
+
+
+export default class Products extends Component {
+   constructor(props) {
+    super(props);
+    this.state = {
+      products: [],
+             currency: typeof window !== 'undefined' ? localStorage.getItem('selectedCurrency') || 'USD' : 'USD',
+      }      
+    };  
+      
+      
+
+    async componentDidMount() {
+    try {
+      const res = await fetch('/api/products');
+      const data = await res.json();
+      const sorted = data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      this.setState({ products: sorted.slice(0, 3) });
+    } catch (err) 
+      
+      
+    {
+      console.error("Error fetching products:", err);
+    }
+
+
+
+    // Listen for currency changes
+    if (typeof window !== 'undefined') {
+        this.handleCurrencyChange = (event) => {
+          this.setState({ currency: event.detail.currency });
+              };
+        window.addEventListener('currencyChanged', this.handleCurrencyChange);
+      }
+    }
+
+
+
+    componentWillUnmount() {
+      if (typeof window !== 'undefined' && this.handleCurrencyChange) {
+        window.removeEventListener('currencyChanged', this.handleCurrencyChange);
+      }
+    }
+
+
+    render() {
+    const { products, currency } = this.state;
+
+    return (
+
+      <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder}
 
       style={{
               alignItems: 'center'
@@ -110,12 +167,62 @@ export default function Products() {
 
         <div className={styles.products}
              style={{
-                  height: '100%',
-                  width: '100%',
-                  position: 'relative',
-                  gridArea: 'MAIN-AREA',
-                  zIndex: '2'
-                  }}>
+                height: '100%',
+                width: '100%',
+                position: 'relative',
+                gridArea: 'MAIN-AREA',
+                zIndex: '2'
+                }}>
+
+                {/* Desktop View */}
+                <div id={styles.PRODUCTS_HOLDER}>
+                    
+                    {products.map((product, index) => (
+                      <div key={index} id={styles.PRODUCT} style={{ gridArea: `AREA_${index + 1}` }}>
+                      
+                        <Link
+                        
+                          href={`/products/${product.slug}`}
+                          className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
+                          style={{ position: "relative", width: "100%", height: "100%" }}>
+
+                          
+                          {/* Image wrapper */}
+                          <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                            <Image
+                              src={product.images?.[0] || "/fallback.jpg"}
+                              alt={product.title}
+                              fill
+                              sizes="(max-width: 640px) 100vw, 256px"
+                              className="object-cover"
+                              priority={false}
+                            />
+                          </div>
+
+
+                          {/* Dark overlay */}
+                          <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 " />
+
+
+                          {/* Icons */}
+                          <div id={styles.PRODUCT_OVERLAY_GRID} style={{ position: "absolute", width: "100%", height: "100%",  left: "0px", top:"0px", zIndex:"30"}}>
+                            <div style={{ gridArea: "LOGO", position: "relative", zIndex: 100}} className=" opacity-0 -translate-x-10 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100">
+                              <Image src={logo} alt="Logo" fill style={{ objectFit: "cover" }} quality={100} loading="lazy" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==" />
+                            </div>
+                            <div style={{ gridArea: "TEXT", position: "relative", zIndex: 100}} className=" opacity-0  translate-x-10 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100" >
+                              <Image src={text_logo} alt="Logo Text" fill style={{ objectFit: "cover" }} quality={100} loading="lazy" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==" />
+                            </div> 
+                            <div style={{ gridArea: "TITLE", position: "relative", zIndex: 100}}>
+                              <h3  id={styles._H2}  className="text-center text-stone-50 font-avant_garde_bold opacity-0 translate-y-10 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">{product.description} </h3>
+                            </div>   
+                          </div>
+                        
+                        </Link>
+
+                      </div>
+                    ))}
+                  
+                </div>
         </div>
 
         <div className={styles.gradient}>
@@ -180,7 +287,44 @@ export default function Products() {
 
       </div>
 
-    </section>
+      </section>
+
+    )
+  } 
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export default function Products() {
+  return (
+
+    
+    
 
   
 
@@ -241,127 +385,3 @@ export default function Products() {
 
 
 
-<div className={styles.grid_0_main}>
-          {/* Mobile View */}
-          <div id={styles.PRODUCTS_HOLDER_MOBILE}>
-            <div id={styles.PRODUCTS_HORIZONTAL_MOBILE}>
-             {products.map((product, index) => (
-              <div id={styles.PRODUCT_CARD} key={index}
-                style={{
-                    width: '100%',                 
-                    alignItems: 'left',
-                  }}>
-
-                    <Link href={`/products/${product.slug}`}
-                          style={{
-                                width: '100%',
-                                height: '265px',                               
-                              }}>
-
-                      <div 
-                        
-                        class="rounded-2xl ..."
-                        style={{
-                          gridArea: 'IMAGE',
-                          width: '100%',
-                          height: '100%',
-                          position: 'relative',                      
-                          overflow: 'hidden',
-                        
-                        }}
-                      >                     
-                        <Image
-                          src={
-                            product.images?.[0] && product.images[0].startsWith('/')
-                              ? product.images[0]
-                              : product.images?.[0] || '/bimcopilot_logo_black.svg'
-                          }
-                          alt={product.title}
-                          fill
-                          style={{ objectFit: 'cover' }}
-                          loading="lazy"
-                          placeholder="blur"
-                          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                        />
-
-                          </div>
-                        </Link>
-
-
-                    <div 
-                      style={{ 
-                          textAlign: 'left', 
-                          marginTop: '10px' }}>
-                          <Link href={`/products/${product.slug}`}>
-                            <h3 id={styles._H3} 
-                                style={{ marginBottom: '4px' }} 
-                                className="text-stone-500 font-avant_garde_bold" >
-                              {product.short_description}
-                            </h3>
-                            <h3 id={styles._H3} 
-                                style={{ marginTop: '4px' }}
-                                className="text-stone-500 font-avant_garde_medium">
-                                From {formatPriceWithCurrencySync(product.commercial_price, currency)}
-                            </h3>
-                          </Link>
-                    </div>
-
-
-
-
-                  </div>
-                  ))}
-
-            </div>
-          </div>
-
-          {/* Desktop View */}
-          <div id={styles.PRODUCTS_HOLDER}>
-              
-              {products.map((product, index) => (
-                <div key={index} id={styles.PRODUCT} style={{ gridArea: `AREA_${index + 1}` }}>
-                 
-                  <Link
-                  
-                    href={`/products/${product.slug}`}
-                    className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
-                    style={{ position: "relative", width: "100%", height: "100%" }}>
-
-                    
-                    {/* Image wrapper */}
-                    <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
-                      <Image
-                        src={product.images?.[0] || "/fallback.jpg"}
-                        alt={product.title}
-                        fill
-                        sizes="(max-width: 640px) 100vw, 256px"
-                        className="object-cover"
-                        priority={false}
-                      />
-                    </div>
-
-
-                    {/* Dark overlay */}
-                    <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 " />
-
-
-                    {/* Icons */}
-                    <div id={styles.PRODUCT_OVERLAY_GRID} style={{ position: "absolute", width: "100%", height: "100%",  left: "0px", top:"0px", zIndex:"30"}}>
-                      <div style={{ gridArea: "LOGO", position: "relative", zIndex: 100}} className=" opacity-0 -translate-x-10 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100">
-                        <Image src={logo} alt="Logo" fill style={{ objectFit: "cover" }} quality={100} loading="lazy" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==" />
-                      </div>
-                      <div style={{ gridArea: "TEXT", position: "relative", zIndex: 100}} className=" opacity-0  translate-x-10 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100" >
-                        <Image src={text_logo} alt="Logo Text" fill style={{ objectFit: "cover" }} quality={100} loading="lazy" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==" />
-                      </div> 
-                      <div style={{ gridArea: "TITLE", position: "relative", zIndex: 100}}>
-                        <h3  id={styles._H2}  className="text-center text-stone-50 font-avant_garde_bold opacity-0 translate-y-10 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">{product.description} </h3>
-                      </div>   
-                    </div>
-                  
-                  </Link>
-
-                </div>
-              ))}
-            
-          </div>
-</div>
