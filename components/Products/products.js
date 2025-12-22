@@ -107,6 +107,10 @@ export default function Products() {
             }}>
 
       <div className={styles.grid_0_main}>
+
+        <div className={styles.gradient}>
+        </div>
+
         <div className={styles.horizontal_lines}
           style={{
                     height: '100%',
@@ -133,7 +137,6 @@ export default function Products() {
                       }}>                  
                   </div>
         </div>
-
 
         <div
           className={styles.grid_square_container}
