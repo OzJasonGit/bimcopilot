@@ -253,7 +253,7 @@
   grid-column-gap: 15px;
   grid-row-gap: 30px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
   grid-template-areas:
     "AREA_1 AREA_2 AREA_3";
   justify-items: center; /* Add this to center the content inside each grid area */

@@ -274,7 +274,7 @@ export default class Products extends Component {
                         style={{
                         height: '100%',
                         width: '100%',                      
-                        gridArea: '8'
+                        gridArea: '9'
                       }}>                  
                   </div>
         </div>
