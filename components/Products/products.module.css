@@ -289,10 +289,9 @@
   height: auto;
   grid-template-columns: 1fr;
   grid-row-gap: 10px;
-  grid-template-rows: 460px auto;
+  grid-template-rows: 420px;
   grid-template-areas:
-    "IMAGE"
-    "TEXT";
+    "IMAGE";
 }
 
 #PRODUCT_OVERLAY_GRID {
