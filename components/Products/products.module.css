@@ -170,11 +170,11 @@
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   grid-template-rows: 0px auto 0px;
-  grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+  grid-template-columns: 1fr minmax(1fr, 1520px) 1fr ;
   grid-template-areas:
-    ". . . . . . ."
-    ". . . MAIN-AREA . . ."
-    ". . . . . . .";
+    ". . ."
+    ". MAIN-AREA ."
+    ". . .";
 }
 
 

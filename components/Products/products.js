@@ -171,6 +171,7 @@ export default class Products extends Component {
       <div className={styles.grid_0_main}
               style={{
                     gridArea:'MAIN-AREA',
+                    width: '100%'
                     }}>  
 
         <div className={styles.holder}
