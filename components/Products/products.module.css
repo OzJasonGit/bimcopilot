@@ -204,6 +204,26 @@
 
 
 
+  .products {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "."
+      "."
+      "PRODUCTS"
+      "PRODUCTS"
+      "PRODUCTS"
+      "PRODUCTS"
+      "PRODUCTS"
+      "PRODUCTS"
+      ".";
+  }
+
+
+
 
 
 
@@ -247,7 +267,7 @@
   justify-content: center;
   align-items: start;
   width: 100%;
-  grid-area: MAIN-AREA;
+  grid-area: PRODUCTS;
   height: auto;
   display: grid;
   grid-column-gap: 15px;
