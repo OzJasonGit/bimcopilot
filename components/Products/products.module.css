@@ -218,7 +218,7 @@
       "PRODUCTS"
       "PRODUCTS"
       "PRODUCTS"
-      "PRODUCTS"
+      "."
       ".";
   }
 
@@ -306,10 +306,9 @@
   position: relative;
   display: grid;
   width: 100%;
-  height: auto;
+  height: 100%;
   grid-template-columns: 1fr;
   grid-row-gap: 10px;
-  grid-template-rows: 420px;
   grid-template-areas:
     "IMAGE";
 }
