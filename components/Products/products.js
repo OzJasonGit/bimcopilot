@@ -183,67 +183,70 @@ export default class Products extends Component {
                     zIndex:'5'                
                     }}>
 
-                    <div className={styles.grid_0_products}>
-                      <div className={styles.products}
-                          style={{
-                              height: '100%',
-                              width: '100%',
-                              position: 'relative',
-                              gridArea: 'MAIN-AREA',
-                              zIndex: '2'
-                              }}>
 
-                              {/* Desktop View */}
-                              <div id={styles.PRODUCTS_HOLDER}>
-                                  
-                                  {products.map((product, index) => (
-                                    <div key={index} id={styles.PRODUCT} style={{ gridArea: `AREA_${index + 1}` }}>
+                    <div className={styles.products_holder}>
+                      <div className={styles.grid_0_products}>
+                        <div className={styles.products}
+                            style={{
+                                height: '100%',
+                                width: '100%',
+                                position: 'relative',
+                                gridArea: 'MAIN-AREA',
+                                zIndex: '2'
+                                }}>
+
+                                {/* Desktop View */}
+                                <div id={styles.PRODUCTS_HOLDER}>
                                     
-                                      <Link
+                                    {products.map((product, index) => (
+                                      <div key={index} id={styles.PRODUCT} style={{ gridArea: `AREA_${index + 1}` }}>
                                       
-                                        href={`/products/${product.slug}`}
-                                        className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
-                                        style={{ position: "relative", width: "100%", height: "100%" }}>
-
+                                        <Link
                                         
-                                        {/* Image wrapper */}
-                                        <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
-                                          <Image
-                                            src={product.images?.[0] || "/fallback.jpg"}
-                                            alt={product.title}
-                                            fill
-                                            sizes="(max-width: 640px) 100vw, 256px"
-                                            className="object-cover"
-                                            priority={false}
-                                          />
-                                        </div>
+                                          href={`/products/${product.slug}`}
+                                          className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
+                                          style={{ position: "relative", width: "100%", height: "100%" }}>
 
-
-                                        {/* Dark overlay */}
-                                        <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 " />
-
-
-                                        {/* Icons */}
-                                        <div id={styles.PRODUCT_OVERLAY_GRID} style={{ position: "absolute", width: "100%", height: "100%",  left: "0px", top:"0px", zIndex:"30"}}>
-                                          <div style={{ gridArea: "LOGO", position: "relative", zIndex: 100}} className=" opacity-0 -translate-x-10 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100">
-                                            <Image src={logo} alt="Logo" fill style={{ objectFit: "cover" }} quality={100} loading="lazy" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==" />
+                                          
+                                          {/* Image wrapper */}
+                                          <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                                            <Image
+                                              src={product.images?.[0] || "/fallback.jpg"}
+                                              alt={product.title}
+                                              fill
+                                              sizes="(max-width: 640px) 100vw, 256px"
+                                              className="object-cover"
+                                              priority={false}
+                                            />
                                           </div>
-                                          <div style={{ gridArea: "TEXT", position: "relative", zIndex: 100}} className=" opacity-0  translate-x-10 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100" >
-                                            <Image src={text_logo} alt="Logo Text" fill style={{ objectFit: "cover" }} quality={100} loading="lazy" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==" />
-                                          </div> 
-                                          <div style={{ gridArea: "TITLE", position: "relative", zIndex: 100}}>
-                                            <h3  id={styles._H2}  className="text-center text-stone-50 font-avant_garde_bold opacity-0 translate-y-10 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">{product.description} </h3>
-                                          </div>   
-                                        </div>
-                                      
-                                      </Link>
 
-                                    </div>
-                                  ))}
-                                
-                              </div>
+
+                                          {/* Dark overlay */}
+                                          <div className="absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-500 group-hover:opacity-100 " />
+
+
+                                          {/* Icons */}
+                                          <div id={styles.PRODUCT_OVERLAY_GRID} style={{ position: "absolute", width: "100%", height: "100%",  left: "0px", top:"0px", zIndex:"30"}}>
+                                            <div style={{ gridArea: "LOGO", position: "relative", zIndex: 100}} className=" opacity-0 -translate-x-10 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100">
+                                              <Image src={logo} alt="Logo" fill style={{ objectFit: "cover" }} quality={100} loading="lazy" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==" />
+                                            </div>
+                                            <div style={{ gridArea: "TEXT", position: "relative", zIndex: 100}} className=" opacity-0  translate-x-10 transition-all duration-500 group-hover:translate-x-0 group-hover:opacity-100" >
+                                              <Image src={text_logo} alt="Logo Text" fill style={{ objectFit: "cover" }} quality={100} loading="lazy" placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==" />
+                                            </div> 
+                                            <div style={{ gridArea: "TITLE", position: "relative", zIndex: 100}}>
+                                              <h3  id={styles._H2}  className="text-center text-stone-50 font-avant_garde_bold opacity-0 translate-y-10 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">{product.description} </h3>
+                                            </div>   
+                                          </div>
+                                        
+                                        </Link>
+
+                                      </div>
+                                    ))}
+                                  
+                                </div>
+                        </div>
                       </div>
-                    </div>
+                    </div>                   
         </div>
 
         <div className={styles.gradient}>
