@@ -58,8 +58,8 @@
 .grid_square_container {
   position: relative;
   width: 100%;
-  --cols: 20;
-  --rows: 9;
+  --cols: 27;
+  --rows: 12;
   aspect-ratio: calc(var(--cols) / var(--rows));
 }
 
@@ -213,6 +213,9 @@
     grid-template-areas:
       "."
       "."
+      "PRODUCTS"
+      "PRODUCTS"
+      "PRODUCTS"
       "PRODUCTS"
       "PRODUCTS"
       "PRODUCTS"
