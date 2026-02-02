@@ -73,19 +73,20 @@
 @media all and (min-width: 480px) {
     #SUBSCRIBE {
         display: grid;
-        grid-template-columns: 1fr auto;
-        grid-template-rows: auto;
-        grid-template-areas: "FORM BUTTON";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "FORM"
+            "BUTTON";
     }
 
     #FORM_BUTTON {
-        width: auto;
-        margin-left: 5%;
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 480px) {
     #FORM_BUTTON {
-        width: 60%;
+        width: 100%;
     }
 }

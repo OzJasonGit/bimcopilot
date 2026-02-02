@@ -27,33 +27,6 @@ export async function GET(req) {
 }
 
 
-
-
-
-
-export async function POST(req) {
-    const db = await connectToDatabase();
-    const collection = db.collection("stories");
-
-    const newStory = {
-        text: "Title of Fourth Story.",
-        author: "John Doe",
-        image: "https://upload.wikimedia.org/wikipedia/en/0/00/Popeye_the_Sailor.png",
-        video: "https://www.youtube.com/watch?v=CBi0HUmTrkI&ab_channel=GordonGoose",
-        timestamp: "2023-11-26T12:03:00Z",
-        post_id: "004",
-        post_number: "4",
-       
-    };
-    
-    await collection.insertOne(newStory);
-    return new NextResponse(newStory, { status: 200 });
-}
-
-
-
-
-
 export async function DELETE(req) {
     const db = await connectToDatabase();
     const collection = db.collection("stories");

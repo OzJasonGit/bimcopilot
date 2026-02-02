@@ -71,10 +71,9 @@ const Subform = () => {
         <Form.Item id={styles.FORM_BUTTON}>
           <Button variant="outline"
                   style={{
-                    width: "100px",
+                    width: "100%",
                     height: "60px",
-                     }}
-                  
+                  }}
                   type="primary"
                   htmlType="submit"
                   loading={isLoading}

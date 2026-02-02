@@ -109,6 +109,18 @@ const getAuthorImage = (authorName) => {
   return 'https://res.cloudinary.com/dbj8h56jj/image/upload/v1753899322/Authors/Oz%20Jason/Oz_Jason_Trimmed_ftxf1x.png';
 };
 
+// Check if body section has actual content (strips HTML tags)
+const hasBodyContent = (title, body) => {
+  const strip = (html) => {
+    if (!html || typeof html !== "string") return "";
+    return String(html).replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim();
+  };
+  return !!(strip(title) || strip(body));
+};
+
+// Check if single content field has actual content
+const hasContent = (html) => hasBodyContent(html, html);
+
 const Blog_page = (stories) => {
     const params = useParams();
     const slug = params?.slug;
@@ -899,6 +911,7 @@ const Blog_page = (stories) => {
                 </div>
             </section>
 
+            {hasContent(story.introduction) && (
             <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}
                 style={{
                     background: "#171717"
@@ -928,7 +941,9 @@ const Blog_page = (stories) => {
                     </div>
                 </div>
             </section>
+            )}
 
+            {hasBodyContent(story.body1_title, story.body1) && (
             <section id={styles.SHADOW_SECTION_TOP} className={styles.center_holder} class={styles.PARAGRAPH_1}
                 style={{
                     background: "#171717"
@@ -1012,7 +1027,9 @@ const Blog_page = (stories) => {
                 </div>
 
             </section>
+            )}
 
+            {hasBodyContent(story.body2_title, story.body2) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_2}
             style={{
                 background: "#171717"
@@ -1058,7 +1075,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
+            {hasBodyContent(story.body3_title, story.body3) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_3}
             style={{
                 background: "#171717"
@@ -1129,7 +1148,9 @@ const Blog_page = (stories) => {
                     </div>
                 </div>
             </section>
+            )}
 
+            {hasBodyContent(story.body4_title, story.body4) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_4}
             style={{
                 background: "#171717"
@@ -1175,7 +1196,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
+            {hasBodyContent(story.body5_title, story.body5) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_5}
                 style={{
                     background: "#171717"
@@ -1222,7 +1245,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
+            {hasBodyContent(story.body6_title, story.body6) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_6}
                 style={{
                     background: "#171717"
@@ -1266,7 +1291,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
+            {hasBodyContent(story.body7_title, story.body7) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_7}
                 style={{
                     background: "#171717"
@@ -1310,7 +1337,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
+            {hasBodyContent(story.body8_title, story.body8) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_8}
             style={{
                 background: "#171717"
@@ -1354,7 +1383,9 @@ const Blog_page = (stories) => {
 
             </div>
             </section>
- 
+            )}
+
+            {hasBodyContent(story.body9_title, story.body9) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_9}
                 style={{
                     background: "#171717"
@@ -1398,10 +1429,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
-
-
-
+            {hasBodyContent(story.body10_title, story.body10) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}
                 style={{
                     background: "#171717"
@@ -1445,11 +1475,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
-
-
-
-
+            {hasBodyContent(story.body11_title, story.body11) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_11}
                 style={{
                     background: "#171717"
@@ -1493,10 +1521,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
-
-
-
+            {hasBodyContent(story.body12_title, story.body12) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_12}
                 style={{
                     background: "#171717"
@@ -1540,12 +1567,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
-
-
-
-
-
+            {hasBodyContent(story.body13_title, story.body13) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_13}
                 style={{
                     background: "#171717"
@@ -1589,15 +1613,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
-
-
-
-
-
-
-
-
+            {hasBodyContent(story.body14_title, story.body14) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_14}
                 style={{
                     background: "#171717"
@@ -1641,12 +1659,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
-
-
-
-
-
+            {hasBodyContent(story.body15_title, story.body15) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_15}
                 style={{
                     background: "#171717"
@@ -1690,11 +1705,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
-
-
-
-
+            {hasBodyContent(story.body16_title, story.body16) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_16}
                 style={{
                     background: "#171717"
@@ -1738,12 +1751,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
-
-
-
-
-
+            {hasBodyContent(story.body17_title, story.body17) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_17}
                 style={{
                     background: "#171717"
@@ -1787,13 +1797,9 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
-
-
-
-
-
-
+            {hasBodyContent(story.body18_title, story.body18) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_18}
                 style={{
                     background: "#171717"
@@ -1837,20 +1843,12 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            )}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+            {hasContent(story.conclusion) && (
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.CONCLUSION}
             style={{
                 background: "#171717"
@@ -1890,6 +1888,7 @@ const Blog_page = (stories) => {
 
         </div>
             </section>
+            )}
 
 
 
