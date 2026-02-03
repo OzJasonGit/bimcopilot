@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Smooth scroll for anchor links (e.g. blog TOC) */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Quill Editor List Styles - Global */
 .ql-editor ul,
 .ql-editor ol {

@@ -318,8 +318,7 @@ const Blog_page = (stories) => {
                                                                                         id={styles._H1}
                                                                                         
                                                                                         class=" text-stone-200 ... font-avant_garde_bold">
-                                                                                        Sustainable, Richer Architects through AI, Analytics and
-                                                                                        Automation
+                                                                                        Sustainable, Richer Architects through BIM, AI, Analytics and Automation
                                                                                     </h1>
                                                                                 </div>
                                                                                 <br/>
@@ -365,83 +364,6 @@ const Blog_page = (stories) => {
                                                                      </div>   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                     <div id={styles.AFFILIATE}                                     
-                                                                            style={{
-                                                                            position: "relative",                                                  
-                                                                            width: "100%",
-                                                                            height: "500px",
-                                                                            gridArea: "AFFILIATE"
-                                                                            }}>
-                                                                                <div class={styles.PARAGRAPH_10}
-                                                                                      style={{
-                                                                                        position: "relative",                                                  
-                                                                                        width: "100%",
-                                                                                        height: "100%",
-                                                                                        display: "block"
-                                                                                        }}>
-                                                                                        <Image
-                                                                                            className=" rounded-md ... justify-center ..."
-                                                                                            alt="Story Image"
-                                                                                            key={story._id}
-                                                                                            width={500}
-                                                                                            height={500}
-                                                                                            src={story.image}
-                                                                                            loading="lazy"
-                                                                                            placeholder="blur"
-                                                                                            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                                                                                            style={{
-                                                                                                position: "absolute",
-                                                                                                width: "100%",
-                                                                                                height: "100%",
-                                                                                                objectFit: "cover",
-                                                                                        }}/>
-                                                                                </div>
-                                                                     </div>     
-
-                                                                     <div id={styles.PFBD}                                     
-                                                                            style={{
-                                                                            position: "relative",                                                  
-                                                                            width: "100%",
-                                                                            height: "400px",
-                                                                            gridArea: "PFBD"
-                                                                            }}>
-                                                                            <div class={styles.PARAGRAPH_10}
-                                                                                    style={{
-                                                                                    position: "relative",                                                  
-                                                                                    width: "100%",
-                                                                                    height: "100%",
-                                                                                    display: "block"
-                                                                                    }}>
-                                                                                    <Image
-                                                                                        className=" rounded-md ... justify-center ..."
-                                                                                        alt="Story Image"
-                                                                                        key={story._id}
-                                                                                        width={500}
-                                                                                        height={500}
-                                                                                        src={story.image}
-                                                                                        loading="lazy"
-                                                                                        placeholder="blur"
-                                                                                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                                                                                        style={{
-                                                                                            position: "absolute",
-                                                                                            width: "100%",
-                                                                                            height: "100%",
-                                                                                            objectFit: "cover",
-                                                                                    }}/>
-                                                                            </div>
-                                                                     </div>                                             
                                                             </div>
                                                 </div>                                          
                                         </div>
@@ -945,6 +867,7 @@ const Blog_page = (stories) => {
             )}
 
             {hasBodyContent(story.body1_title, story.body1) && (
+            <div id="body1" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TOP} className={styles.center_holder} class={styles.PARAGRAPH_1}
                 style={{
                     background: "#171717"
@@ -1028,9 +951,11 @@ const Blog_page = (stories) => {
                 </div>
 
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body2_title, story.body2) && (
+            <div id="body2" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_2}
             style={{
                 background: "#171717"
@@ -1076,9 +1001,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body3_title, story.body3) && (
+            <div id="body3" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_3}
             style={{
                 background: "#171717"
@@ -1149,9 +1076,11 @@ const Blog_page = (stories) => {
                     </div>
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body4_title, story.body4) && (
+            <div id="body4" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_4}
             style={{
                 background: "#171717"
@@ -1197,9 +1126,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body5_title, story.body5) && (
+            <div id="body5" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_5}
                 style={{
                     background: "#171717"
@@ -1246,9 +1177,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body6_title, story.body6) && (
+            <div id="body6" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_6}
                 style={{
                     background: "#171717"
@@ -1292,9 +1225,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body7_title, story.body7) && (
+            <div id="body7" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_7}
                 style={{
                     background: "#171717"
@@ -1338,9 +1273,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body8_title, story.body8) && (
+            <div id="body8" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_8}
             style={{
                 background: "#171717"
@@ -1384,9 +1321,11 @@ const Blog_page = (stories) => {
 
             </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body9_title, story.body9) && (
+            <div id="body9" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_9}
                 style={{
                     background: "#171717"
@@ -1430,9 +1369,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body10_title, story.body10) && (
+            <div id="body10" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_10}
                 style={{
                     background: "#171717"
@@ -1476,9 +1417,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body11_title, story.body11) && (
+            <div id="body11" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_11}
                 style={{
                     background: "#171717"
@@ -1522,9 +1465,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body12_title, story.body12) && (
+            <div id="body12" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_12}
                 style={{
                     background: "#171717"
@@ -1568,9 +1513,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body13_title, story.body13) && (
+            <div id="body13" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_13}
                 style={{
                     background: "#171717"
@@ -1614,9 +1561,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body14_title, story.body14) && (
+            <div id="body14" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_14}
                 style={{
                     background: "#171717"
@@ -1660,9 +1609,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body15_title, story.body15) && (
+            <div id="body15" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_15}
                 style={{
                     background: "#171717"
@@ -1706,9 +1657,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body16_title, story.body16) && (
+            <div id="body16" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_16}
                 style={{
                     background: "#171717"
@@ -1752,9 +1705,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body17_title, story.body17) && (
+            <div id="body17" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_17}
                 style={{
                     background: "#171717"
@@ -1798,9 +1753,11 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
             {hasBodyContent(story.body18_title, story.body18) && (
+            <div id="body18" style={{ scrollMarginTop: "1.5rem" }}>
             <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} class={styles.PARAGRAPH_18}
                 style={{
                     background: "#171717"
@@ -1844,6 +1801,7 @@ const Blog_page = (stories) => {
 
                 </div>
             </section>
+            </div>
             )}
 
 

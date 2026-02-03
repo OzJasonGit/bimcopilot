@@ -47,7 +47,6 @@ const Subform = () => {
         style={{ marginBottom: "0", height: "100%", width: "100%" }}
       >
         <Form.Item id={styles.FORM_ITEM}
-          
           name="email"
           rules={[
             {
@@ -66,17 +65,15 @@ const Subform = () => {
             placeholder="Enter your email"
           />
         </Form.Item>
-        <br/>
+        
+
 
         <Form.Item id={styles.FORM_BUTTON}>
           <Button variant="outline"
-                  style={{
-                    width: "100%",
-                    height: "60px",
-                  }}
                   type="primary"
                   htmlType="submit"
                   loading={isLoading}
+                  style={{ width: '100%', height: '62.5px', minHeight: '62.5px', boxSizing: 'border-box' }}
                   >Click Here!
           </Button>
         </Form.Item>

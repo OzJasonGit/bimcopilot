@@ -31,72 +31,93 @@
     -webkit-text-stroke: 0.175px rgb(120, 120, 120);
 }
 
+/* Stacked: input on top, button directly below — same width and height */
 #SUBSCRIBE {
     position: relative;
-    grid-area: FORM;
     width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    column-gap: 15px;
-    grid-template-areas:
-        "FORM";
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
 }
 
 #FORM {
-    display: grid;
-    grid-area: FORM;  
+    display: flex;
+    flex-direction: column;
+    
     width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 62.5px 10px;
-    column-gap: 15px;
-    grid-template-areas:
-        "INPUT"
-        "BUTTON";
+    min-width: 0;
+}
+
+/* Form items: full width, stacked one above the other */
+#FORM_ITEM,
+#FORM_BUTTON {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0;
 }
 
 #FORM_ITEM {
-    grid-area: INPUT;
-    width: 100%;
-    height: 62.5px;   
+    margin-bottom: 0 !important;
 }
-
 
 #FORM_BUTTON {
-    grid-area: BUTTON;
-    width: 100%;
-    height: 62.5px;
+    margin-bottom: 0 !important;
 }
 
-
-#FORM_INPUT {
-    width: 100%;
-    height: 62.5px;
-    margin-bottom: 0;
+/* Ant Design: force full width so button matches input */
+#FORM_ITEM.ant-form-item,
+#FORM_BUTTON.ant-form-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
 }
 
-
-
-@media all and (min-width: 480px) {
-    #SUBSCRIBE {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas:
-            "INPUT"
-            "BUTTON";
-    }
-
-    #FORM_BUTTON {
-        width: 100%;
-    }
+#FORM_ITEM .ant-form-item-control,
+#FORM_BUTTON .ant-form-item-control {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
 }
 
-@media screen and (max-width: 480px) {
-    #FORM_BUTTON {
-        width: 100%;
-    }
+#FORM_ITEM .ant-form-item-control-input,
+#FORM_BUTTON .ant-form-item-control-input {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+#FORM_ITEM .ant-form-item-control-input-content,
+#FORM_BUTTON .ant-form-item-control-input-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+}
+
+/* Input: same size as button below */
+#FORM_INPUT,
+#FORM_ITEM .ant-input,
+#FORM_ITEM .ant-input-affix-wrapper {
+    width: 100% !important;
+    height: 62.5px !important;
+    min-height: 62.5px !important;
+    margin: 0 !important;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Button: same width and height as search bar (override inline-flex) */
+#FORM_BUTTON button,
+#FORM_BUTTON .ant-form-item-control-input-content > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 62.5px !important;
+    min-height: 62.5px !important;
+    margin: 0 !important;
+    padding: 0 1rem;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: block !important;
 }

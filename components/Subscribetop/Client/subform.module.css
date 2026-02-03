@@ -31,6 +31,7 @@
     -webkit-text-stroke: 0.175px rgb(120, 120, 120);
 }
 
+/* Side-by-side: input + button, same row. Button fixed width/height until breakpoint. */
 #SUBSCRIBE {
     position: relative;
     grid-area: FORM;
@@ -38,11 +39,10 @@
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 120px;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto;
     column-gap: 15px;
-    grid-template-areas:
-        "FORM"
-        "BUTTON";
+    row-gap: 0;
+    grid-template-areas: "FORM BUTTON";
 }
 
 #FORM {
@@ -66,53 +66,50 @@
 #FORM_BUTTON {
     grid-area: BUTTON;
     width: 100%;
+    min-width: 120px;
     height: 62.5px;
-  
+    flex-shrink: 0;
 }
 
 
+/* Same layout and button size until breakpoint: 120px button, 62.5px height */
 @media all and (min-width: 960px) and (max-width: 1280px) {
-
-
     #SUBSCRIBE {
-            position: relative;
-            grid-area: FORM;
-            width: 100%;
-            height: 100%;
-            display: grid;
-            grid-template-columns: 1fr 80px;
-            grid-template-rows: auto auto;
-            column-gap: 15px;
-            grid-template-areas:
-                "FORM"
-                "BUTTON";
-        }
-    
-        #FORM {
-            display: contents;
-            grid-area: FORM;
-            width: 100%;
-            height: 100%;
-        }
-    
-        #FORM_ITEM {
-            width: 100%;
-            height: 100%;
-        }
-    
-        #FORM_INPUT {
-            width: 100%;
-            height: 62.5px;
-            margin-bottom: 0;
-        }
-    
-        #FORM_BUTTON {
-            grid-area: BUTTON;
-            width: 100%;
-            height: 62.5px;
-    
-        }
+        position: relative;
+        grid-area: FORM;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 120px;
+        grid-template-rows: auto;
+        column-gap: 15px;
+        grid-template-areas: "FORM BUTTON";
+    }
 
+    #FORM {
+        display: contents;
+        grid-area: FORM;
+        width: 100%;
+        height: 100%;
+    }
+
+    #FORM_ITEM {
+        width: 100%;
+        height: 100%;
+    }
+
+    #FORM_INPUT {
+        width: 100%;
+        height: 62.5px;
+        margin-bottom: 0;
+    }
+
+    #FORM_BUTTON {
+        grid-area: BUTTON;
+        width: 100%;
+        min-width: 120px;
+        height: 62.5px;
+    }
 }
 
 
