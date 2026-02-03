@@ -125,7 +125,7 @@ const Blog_page = (stories) => {
     const params = useParams();
     const slug = params?.slug;
     const [story, setStory] = useState(null);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true); 
     const [error, setError] = useState("");
 
     const stripHtml = (html) => {
@@ -134,6 +134,7 @@ const Blog_page = (stories) => {
         return html.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim();
     };
 
+    
     useEffect(() => {
         const fetchStory = async () => {
             if (!slug) return;
