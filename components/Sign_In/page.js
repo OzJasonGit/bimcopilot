@@ -229,9 +229,15 @@ const SignIn = () => {
                           </div>
                         <br/>
 
-                        <div className=" flex justify-center" id={styles.GOOGLE_BUTTON}>
+                        <div
+                          className="w-full flex"
+                          id={styles.GOOGLE_BUTTON}
+                          style={{ width: "100%", minHeight: "40px", height: "40px" }}
+                        >
                           <GoogleLogin
                             onSuccess={googleSuccess}
+                            size="large"
+                            width="400"
                             onError={() => {
                               toast.error("Google Login failed.");
                             }}

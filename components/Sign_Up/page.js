@@ -2,7 +2,7 @@
 
 import styles from './sign_up.module.css';
 import React, { useState } from "react";
-import { useRouter } from "next/navigation"; 
+import { useRouter } from "next/navigation";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
@@ -18,7 +18,7 @@ import Cookies from "js-cookie"; // Import js-cookie for handling cookies
 
 
 const Signup = () => {
-  const router = useRouter(); 
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -49,10 +49,10 @@ const Signup = () => {
         const { token } = data;
 
         // Store token in HTTP-only cookie (valid for 7 days)
-        Cookies.set("token", token, { expires: 7, path: "/" }); 
-        setTimeout(()=>(
+        Cookies.set("token", token, { expires: 7, path: "/" });
+        setTimeout(() => (
           router.push("/")
-        ),1500)
+        ), 1500)
       }
     } catch (error) {
       toast.error(error.response?.data?.message || "Signup failed!");
@@ -80,7 +80,7 @@ const Signup = () => {
       }
 
       toast.success("Google Login Successful!");
-      router.push("/"); 
+      router.push("/");
     } catch (error) {
       toast.error("Google Login Failed!");
     }
@@ -88,9 +88,9 @@ const Signup = () => {
 
   return (
     <>
-      <Menu/>
-      <Header/>
-      <Sides/>
+      <Menu />
+      <Header />
+      <Sides />
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -130,23 +130,32 @@ const Signup = () => {
                   </div>
                 ) : (
                   <>
-                    <h2 id={styles._H2} className="text-left text-stone-400 font-avant_garde_bold">Sign Up to Bimcopilot</h2>
+                  <h2 id={styles._H2} className="text-left text-stone-400 font-avant_garde_bold">Sign Up to Bimcopilot</h2>
+                  ß
 
 
-                    
-                    <div className="mt-4 w-full flex justify-center" id={styles.GOOGLE_BUTTON}>
-                      <GoogleLogin onSuccess={googleSuccess} onError={() => toast.error("Google Login Failed!")} />
+                    <div
+                      className=" w-full flex "
+                      id={styles.GOOGLE_BUTTON}
+                      style={{ width: "100%", minHeight: "40px", height: "40px" }}
+                    >
+                      <GoogleLogin
+                        onSuccess={googleSuccess}
+                        onError={() => toast.error("Google Login Failed!")}
+                        size="large"
+                        width="400"
+                      />
                     </div>
 
                     <form onSubmit={handleSubmit}>
 
-                      <br/>
+
                       <div id={styles.BREAKLINE}>
                         <div id={styles.LINE_1}
-                            style={{
-                              width: "100%",
-                              height: "1px",
-                            }}>
+                          style={{
+                            width: "100%",
+                            height: "1px",
+                          }}>
                         </div>
 
                         <div id={styles.TEXT}>
@@ -154,15 +163,15 @@ const Signup = () => {
                         </div>
 
                         <div id={styles.LINE_2}
-                            style={{
-                              width: "100%",
-                              height: "1px",
-                            }}>
+                          style={{
+                            width: "100%",
+                            height: "1px",
+                          }}>
                         </div>
                       </div>
-                    <br/>
+                      <br />
 
-                      {["email", "userName", "password", "confirmPassword" ].map((field) => (
+                      {["email", "userName", "password", "confirmPassword"].map((field) => (
                         <div key={field} className="mb-4">
                           <label htmlFor={field} className="text-left text-stone-400 font-avant_garde_bold" id={styles._H3}>
                             {field.replace(/([A-Z])/g, " $1").replace(/^./, (str) => str.toUpperCase())}
@@ -181,13 +190,13 @@ const Signup = () => {
                         </div>
                       ))}
 
-                      <Button  variant="outline"
-                               id={styles.FORM_BUTTON} type="submit" disabled={isLoading}>
-                        Create an Account 
+                      <Button variant="outline"
+                        id={styles.FORM_BUTTON} type="submit" disabled={isLoading}>
+                        Create an Account
                       </Button>
                     </form>
 
-                    
+
                   </>
                 )}
               </div>
@@ -196,8 +205,8 @@ const Signup = () => {
         </div>
       </section>
 
-      <Subfooter2/>
-      <Footer/>
+      <Subfooter2 />
+      <Footer />
     </>
   );
 };

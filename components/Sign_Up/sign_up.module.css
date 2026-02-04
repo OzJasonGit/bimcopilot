@@ -72,6 +72,7 @@
     ". . . . . . ."
     ". . . SUB . . ."
     ". . . . . . .";
+  scroll-margin-top: 120px;
 }
 
 
@@ -99,6 +100,28 @@
 #GOOGLE_BUTTON {
   margin-top: 20px;
   width: 100%;
+  min-height: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Match input field size: 40px height, full width */
+#GOOGLE_BUTTON > div {
+  width: 100% !important;
+  min-width: 100% !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+#GOOGLE_BUTTON iframe {
+  width: 100% !important;
+  height: 40px !important;
+  min-height: 40px !important;
 }
 
 
@@ -324,6 +347,11 @@
 
 /*ALL/////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media all and (min-width: 480px) and (max-width: 960px) {
+  /* Header is fixed; add top padding so form isn't hidden under it */
+  #SHADOW_SECTION_BLOG {
+    padding-top: 120px;
+  }
+
   .center_holder {
     width: 100%;
     display: flex;
@@ -442,6 +470,11 @@
 /*BREAKPOINT_1////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 @media all and (min-width: 0px) and (max-width: 480px) {
+  /* Header is fixed; add top padding so form isn't hidden under it */
+  #SHADOW_SECTION_BLOG {
+    padding-top: 120px;
+  }
+
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
 
   /*FONTS/////////////////////////////////////////////////////////////////////////////////////////////////*/
