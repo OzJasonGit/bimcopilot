@@ -1,9 +1,41 @@
 import { NextResponse } from 'next/server';
 
-// Free IP geolocation APIs - try multiple services
+// Free IP geolocation APIs - try multiple services (order: most reliable first)
 const GEOLOCATION_APIS = [
   {
-    url: 'https://api.country.is/',
+    id: 'apip.cc',
+    url: 'https://apip.cc/json',
+    urlWithIp: (ip) => `https://apip.cc/api-json/${ip}`,
+    parser: (data) => ({
+      countryCode: data.CountryCode || data.country_code,
+      countryName: data.CountryName || data.country_name,
+      currency: data.Currency || data.currency,
+    }),
+  },
+  {
+    id: 'ipwho.is',
+    url: 'https://ipwho.is/',
+    urlWithIp: (ip) => `https://ipwho.is/${encodeURIComponent(ip)}`,
+    parser: (data) => ({
+      countryCode: data.country_code,
+      countryName: data.country,
+      currency: null,
+    }),
+  },
+  {
+    id: 'ip-api.com',
+    url: 'http://ip-api.com/json/?fields=status,country,countryCode',
+    urlWithIp: (ip) => `http://ip-api.com/json/${encodeURIComponent(ip)}?fields=status,country,countryCode`,
+    parser: (data) => ({
+      countryCode: data.countryCode,
+      countryName: data.country,
+      currency: null,
+    }),
+  },
+  {
+    id: 'ipinfo.io',
+    url: 'https://ipinfo.io/json',
+    urlWithIp: (ip) => `https://ipinfo.io/${encodeURIComponent(ip)}/json`,
     parser: (data) => ({
       countryCode: data.country,
       countryName: null,
@@ -11,22 +43,23 @@ const GEOLOCATION_APIS = [
     }),
   },
   {
+    id: 'ipapi.co',
     url: 'https://ipapi.co/json/',
+    urlWithIp: (ip) => `https://ipapi.co/${encodeURIComponent(ip)}/json/`,
     parser: (data) => ({
       countryCode: data.country_code,
       countryName: data.country_name,
       currency: data.currency_code || data.currency,
     }),
   },
-  {
-    url: 'https://ipinfo.io/json',
-    parser: (data) => ({
-      countryCode: data.country,
-      countryName: null,
-      currency: null,
-    }),
-  },
 ];
+
+// Don't send localhost IP to APIs (they often 404/403); use "current IP" endpoint instead
+function isLocalhost(ip) {
+  if (!ip) return true;
+  const s = String(ip).trim().toLowerCase();
+  return s === '::1' || s === '127.0.0.1' || s === 'localhost';
+}
 
 // Country to currency mapping
 const COUNTRY_TO_CURRENCY = {
@@ -59,92 +92,61 @@ const COUNTRY_TO_CURRENCY = {
 };
 
 export async function GET(request) {
-  // Get client IP from headers (for production)
   const forwarded = request.headers.get('x-forwarded-for');
   const realIp = request.headers.get('x-real-ip');
-  const cfConnectingIp = request.headers.get('cf-connecting-ip'); // Cloudflare
+  const cfConnectingIp = request.headers.get('cf-connecting-ip');
   const clientIp = cfConnectingIp || (forwarded ? forwarded.split(',')[0].trim() : null) || realIp || null;
-  
-  // Log for debugging (remove in production if needed)
-  console.log(`[detect-country] Client IP: ${clientIp}, Headers: x-forwarded-for=${forwarded}, x-real-ip=${realIp}, cf-connecting-ip=${cfConnectingIp}`);
-  
-  // Try each API in sequence until one works
+  const useClientIp = clientIp && !isLocalhost(clientIp);
+
   for (const api of GEOLOCATION_APIS) {
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 second timeout per API
+      const timeoutId = setTimeout(() => controller.abort(), 5000);
 
-      // Build URL - use client IP if available
-      let apiUrl = api.url;
-      if (clientIp) {
-        if (api.url.includes('ipapi.co')) {
-          apiUrl = `https://ipapi.co/${clientIp}/json/`;
-        } else if (api.url.includes('ipinfo.io')) {
-          apiUrl = `https://ipinfo.io/${clientIp}/json`;
-        } else if (api.url.includes('country.is')) {
-          apiUrl = `https://api.country.is/${clientIp}`;
-        }
-      }
+      const apiUrl = useClientIp && api.urlWithIp
+        ? api.urlWithIp(clientIp)
+        : api.url;
 
       const response = await fetch(apiUrl, {
         signal: controller.signal,
         headers: {
-          'Accept': 'application/json',
-          'User-Agent': 'Mozilla/5.0 (compatible; CurrencyDetector/1.0)',
+          Accept: 'application/json',
+          'User-Agent': 'Mozilla/5.0 (compatible; Bimcopilot/1.0)',
         },
-        // Add cache control for production
         cache: 'no-store',
       });
 
       clearTimeout(timeoutId);
 
-      if (!response.ok) {
-        console.log(`[detect-country] API ${api.url} failed with status ${response.status}`);
-        continue; // Try next API
-      }
+      if (!response.ok) continue;
 
       const data = await response.json();
-      
-      // Check for error responses
-      if (data.error || data.status === 'fail') {
-        console.log(`[detect-country] API ${api.url} returned error:`, data.error || data.message);
-        continue;
-      }
-      
+      if (data.error || data.status === 'fail' || (data.success === false && !data.country_code)) continue;
+
       const parsed = api.parser(data);
-      
-      if (parsed.countryCode) {
-        const countryCode = parsed.countryCode.toUpperCase();
-        
-        // Get currency from country code mapping
-        const currencyCode = COUNTRY_TO_CURRENCY[countryCode] || parsed.currency || 'USD';
-        
-        console.log(`[detect-country] ✅ Detected country: ${countryCode}, currency: ${currencyCode}`);
-        
-        // Return country and currency info
-        return NextResponse.json({
-          success: true,
-          country: countryCode,
-          countryName: parsed.countryName,
-          currency: currencyCode,
-          currencyCode: currencyCode,
-        });
-      }
-    } catch (error) {
-      // Log errors in production for debugging
-      console.log(`[detect-country] API ${api.url} error:`, error.message || error.name);
-      continue; // Try next API
+      if (!parsed.countryCode) continue;
+
+      const countryCode = parsed.countryCode.toUpperCase();
+      const currencyCode = COUNTRY_TO_CURRENCY[countryCode] || parsed.currency || 'USD';
+
+      return NextResponse.json({
+        success: true,
+        country: countryCode,
+        countryName: parsed.countryName,
+        currency: currencyCode,
+        currencyCode: currencyCode,
+      });
+    } catch {
+      continue;
     }
   }
-  
-  // All APIs failed - return failure but don't throw error
-  console.log('[detect-country] All geolocation APIs failed, returning fallback');
+
   return NextResponse.json({
     success: false,
     country: null,
     currency: null,
     currencyCode: null,
     error: 'All geolocation APIs failed',
-  }, { status: 200 }); // Return 200 so client can handle gracefully
+  }, { status: 200 });
 }
 

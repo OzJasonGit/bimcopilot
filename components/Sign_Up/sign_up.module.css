@@ -100,28 +100,38 @@
 #GOOGLE_BUTTON {
   margin-top: 20px;
   width: 100%;
+  min-width: 100%;
   min-height: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
 }
 
-/* Match input field size: 40px height, full width */
+/* Match input field size: full width, 40px height (Safari: force flex child to fill) */
 #GOOGLE_BUTTON > div {
   width: 100% !important;
   min-width: 100% !important;
+  max-width: 100% !important;
   height: 40px !important;
   min-height: 40px !important;
   display: flex !important;
   justify-content: center;
   align-items: center;
+  flex: 1 1 100% !important;
+  box-sizing: border-box !important;
 }
 
+/* Safari: iframe must fill container so "Sign in with Google" text isn't truncated */
 #GOOGLE_BUTTON iframe {
   width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
   height: 40px !important;
   min-height: 40px !important;
+  -webkit-flex: 1 1 100%;
+  flex: 1 1 100%;
 }
 
 

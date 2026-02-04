@@ -2,7 +2,7 @@
 
 import styles from "@/components/Sign_In/sign_in.module.css";
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
@@ -14,7 +14,7 @@ import Footer from "@/components/Footer/Footer";
 import Menu from "@/components/Menu/menu";
 import Sides from "@/components/Sides/sides";
 
-export default function ResetPasswordPage() {
+function ResetPasswordContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const token = searchParams.get("token");
@@ -173,5 +173,17 @@ export default function ResetPasswordPage() {
       <Subfooter2 />
       <Footer />
     </>
+  );
+}
+
+export default function ResetPasswordPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex items-center justify-center min-h-[50vh] text-stone-400">
+        Loading…
+      </div>
+    }>
+      <ResetPasswordContent />
+    </Suspense>
   );
 }

@@ -235,7 +235,11 @@ const SignIn = () => {
                           </div>
                         <br/>
 
-                        <div className="w-full flex" id={styles.GOOGLE_BUTTON}>
+                        <div
+                          className="w-full flex"
+                          id={styles.GOOGLE_BUTTON}
+                          style={{ width: "100%", minWidth: "100%", height: "40px" }}
+                        >
                           <GoogleLogin
                             onSuccess={googleSuccess}
                             size="large"
