@@ -5,6 +5,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Subfooter2 from "@/components/Subfooter2/subfooter2";
@@ -190,6 +191,11 @@ const SignIn = () => {
                             }}
                           />
                         </div>
+                        <div className="text-right mb-2">
+                          <Link href="/forgot-password" className="text-stone-400 hover:text-stone-200 text-sm">
+                            Forgot password?
+                          </Link>
+                        </div>
                         <Button
                           variant="outline"
                           id={styles.FORM_BUTTON}
@@ -229,11 +235,7 @@ const SignIn = () => {
                           </div>
                         <br/>
 
-                        <div
-                          className="w-full flex"
-                          id={styles.GOOGLE_BUTTON}
-                          style={{ width: "100%", minHeight: "40px", height: "40px" }}
-                        >
+                        <div className="w-full flex" id={styles.GOOGLE_BUTTON}>
                           <GoogleLogin
                             onSuccess={googleSuccess}
                             size="large"
