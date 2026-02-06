@@ -21,7 +21,7 @@ const Signup = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const googleButtonRef = useRef(null);
-  const [googleWidth, setGoogleWidth] = useState(400);
+  const [googleWidth, setGoogleWidth] = useState(0);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -94,7 +94,7 @@ const Signup = () => {
 
     const updateWidth = () => {
       const nextWidth = Math.floor(el.getBoundingClientRect().width || 0);
-      if (nextWidth > 0) setGoogleWidth(Math.max(200, nextWidth));
+      if (nextWidth > 0) setGoogleWidth(Math.max(240, nextWidth));
     };
 
     updateWidth();
@@ -163,12 +163,15 @@ const Signup = () => {
                       id={styles.GOOGLE_BUTTON}
                       style={{ width: "100%", minHeight: "40px", height: "40px" }}
                     >
-                      <GoogleLogin
-                        onSuccess={googleSuccess}
-                        onError={() => toast.error("Google Login Failed!")}
-                        size="large"
-                        width={googleWidth}
-                      />
+                      {googleWidth > 0 && (
+                        <GoogleLogin
+                          key={googleWidth}
+                          onSuccess={googleSuccess}
+                          onError={() => toast.error("Google Login Failed!")}
+                          size="large"
+                          width={googleWidth}
+                        />
+                      )}
                     </div>
 
                     <form onSubmit={handleSubmit}>
