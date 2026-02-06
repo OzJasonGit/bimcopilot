@@ -4,6 +4,8 @@ import { connectToDatabase } from "../../utils/mongodb";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { sendEmail, getAppUrl } from "../../utils/sendEmail";
+import { getWelcomeEmail } from "../../utils/emailTemplates";
 
 export async function POST(req) {
     try {
@@ -86,6 +88,23 @@ export async function POST(req) {
             role: 0,
             password: hashedPassword,
         });
+
+        // Send welcome email (non-blocking for signup success)
+        try {
+            const appUrl = getAppUrl();
+            const { subject, text, html } = getWelcomeEmail({
+                name: `${firstName.trim()} ${lastName.trim()}`,
+                appUrl,
+            });
+            await sendEmail({
+                to: email.toLowerCase().trim(),
+                subject,
+                text,
+                html,
+            });
+        } catch (emailError) {
+            console.error("Welcome email failed:", emailError);
+        }
 
         // Generate JWT token
         if (!process.env.JWT_SECRET) {

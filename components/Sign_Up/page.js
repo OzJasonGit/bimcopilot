@@ -1,7 +1,7 @@
 "use client";
 
 import styles from './sign_up.module.css';
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import axios from "axios";
@@ -20,6 +20,8 @@ import Cookies from "js-cookie"; // Import js-cookie for handling cookies
 const Signup = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
+  const googleButtonRef = useRef(null);
+  const [googleWidth, setGoogleWidth] = useState(400);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -86,6 +88,27 @@ const Signup = () => {
     }
   };
 
+  useEffect(() => {
+    const el = googleButtonRef.current;
+    if (!el) return;
+
+    const updateWidth = () => {
+      const nextWidth = Math.floor(el.getBoundingClientRect().width || 0);
+      if (nextWidth > 0) setGoogleWidth(Math.max(200, nextWidth));
+    };
+
+    updateWidth();
+
+    if (typeof ResizeObserver !== "undefined") {
+      const observer = new ResizeObserver(updateWidth);
+      observer.observe(el);
+      return () => observer.disconnect();
+    }
+
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
   return (
     <>
       <Menu />
@@ -135,6 +158,7 @@ const Signup = () => {
 
 
                     <div
+                      ref={googleButtonRef}
                       className=" w-full flex "
                       id={styles.GOOGLE_BUTTON}
                       style={{ width: "100%", minHeight: "40px", height: "40px" }}
@@ -143,7 +167,7 @@ const Signup = () => {
                         onSuccess={googleSuccess}
                         onError={() => toast.error("Google Login Failed!")}
                         size="large"
-                        width="400"
+                        width={googleWidth}
                       />
                     </div>
 

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { connectToDatabase } from "../../utils/mongodb";
 import { sendEmail, getAppUrl } from "../../utils/sendEmail";
+import { getPasswordResetEmail } from "../../utils/emailTemplates";
 import crypto from "crypto";
 
 const RESET_TOKEN_EXPIRY_HOURS = 1;
@@ -38,16 +39,17 @@ export async function POST(req) {
     const baseUrl = getAppUrl();
     const resetLink = `${baseUrl}/reset-password?token=${token}`;
 
+    const { subject, text, html } = getPasswordResetEmail({
+      name: user?.name,
+      resetLink,
+      expiresHours: RESET_TOKEN_EXPIRY_HOURS,
+    });
+
     const { success, error } = await sendEmail({
       to: user.email,
-      subject: "Reset your Bimcopilot password",
-      text: `You requested a password reset. Click the link below to set a new password (valid for ${RESET_TOKEN_EXPIRY_HOURS} hour(s)):\n\n${resetLink}\n\nIf you didn't request this, you can ignore this email.`,
-      html: `
-        <p>You requested a password reset for your Bimcopilot account.</p>
-        <p>Click the link below to set a new password (valid for ${RESET_TOKEN_EXPIRY_HOURS} hour(s)):</p>
-        <p><a href="${resetLink}">Reset password</a></p>
-        <p>If you didn't request this, you can ignore this email.</p>
-      `,
+      subject,
+      text,
+      html,
     });
 
     if (!success) {

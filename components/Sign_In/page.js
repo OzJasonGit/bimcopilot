@@ -2,7 +2,7 @@
 
 import styles from './sign_in.module.css';
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -20,6 +20,8 @@ const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
 const SignIn = () => {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
+  const googleButtonRef = useRef(null);
+  const [googleWidth, setGoogleWidth] = useState(400);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -90,6 +92,27 @@ const SignIn = () => {
     }
   };
 
+  useEffect(() => {
+    const el = googleButtonRef.current;
+    if (!el) return;
+
+    const updateWidth = () => {
+      const nextWidth = Math.floor(el.getBoundingClientRect().width || 0);
+      if (nextWidth > 0) setGoogleWidth(Math.max(200, nextWidth));
+    };
+
+    updateWidth();
+
+    if (typeof ResizeObserver !== "undefined") {
+      const observer = new ResizeObserver(updateWidth);
+      observer.observe(el);
+      return () => observer.disconnect();
+    }
+
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
   return (
     <>
       <Menu />
@@ -117,9 +140,7 @@ const SignIn = () => {
           <div id={styles.SIGN_IN}>
             {GOOGLE_CLIENT_ID ? (
             <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
-              <div style={{ gridArea: "SIGN_IN", 
-                            width: "400px"
-                          }}>
+              <div style={{ gridArea: "SIGN_IN", width: "100%", maxWidth: "400px" }}>
                 <div className={`${isLoading && "flex justify-left items-center"}`}>
                   {isLoading ? (
                     <div role="status">
@@ -243,6 +264,7 @@ const SignIn = () => {
                             <br/>
 
                             <div
+                              ref={googleButtonRef}
                               className="w-full flex"
                               id={styles.GOOGLE_BUTTON}
                               style={{ width: "100%", minWidth: "100%", height: "40px" }}
@@ -250,7 +272,7 @@ const SignIn = () => {
                               <GoogleLogin
                                 onSuccess={googleSuccess}
                                 size="large"
-                                width="400"
+                                width={googleWidth}
                                 onError={() => {
                                   toast.error("Google Login failed.");
                                 }}
