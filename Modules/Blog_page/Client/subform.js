@@ -65,7 +65,7 @@ const Subform = () => {
             placeholder="Enter your email"
           />
         </Form.Item>
-        
+         
 
 
         <Form.Item id={styles.FORM_BUTTON}>
