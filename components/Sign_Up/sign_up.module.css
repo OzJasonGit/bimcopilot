@@ -99,7 +99,7 @@
 
 #GOOGLE_BUTTON {
   margin-top: 20px;
-  width: 100%;
+  width: 100% !important;
   min-width: 100%;
   min-height: 40px;
   height: 40px;
