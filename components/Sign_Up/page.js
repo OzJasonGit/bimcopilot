@@ -159,8 +159,7 @@ const Signup = () => {
 
                     <div
                       ref={googleButtonRef}
-                      className=" w-full flex "
-                      id={styles.GOOGLE_BUTTON}
+                      className={`${styles.googleButton} w-full flex`}
                       style={{ width: "100%", minHeight: "40px", height: "40px" }}
                     >
                       {googleWidth > 0 && (
