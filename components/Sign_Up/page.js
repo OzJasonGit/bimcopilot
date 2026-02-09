@@ -99,14 +99,32 @@ const Signup = () => {
 
     updateWidth();
 
+    // Run a few delayed measures to catch late layout in production
+    const timeouts = [50, 250, 500, 1000].map((ms) =>
+      setTimeout(updateWidth, ms)
+    );
+
+    let raf1 = requestAnimationFrame(() => {
+      updateWidth();
+      raf1 = requestAnimationFrame(updateWidth);
+    });
+
     if (typeof ResizeObserver !== "undefined") {
       const observer = new ResizeObserver(updateWidth);
       observer.observe(el);
-      return () => observer.disconnect();
+      return () => {
+        observer.disconnect();
+        timeouts.forEach((t) => clearTimeout(t));
+        cancelAnimationFrame(raf1);
+      };
     }
 
     window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
+    return () => {
+      window.removeEventListener("resize", updateWidth);
+      timeouts.forEach((t) => clearTimeout(t));
+      cancelAnimationFrame(raf1);
+    };
   }, []);
 
   return (
@@ -154,7 +172,6 @@ const Signup = () => {
                 ) : (
                   <>
                   <h2 id={styles._H2} className="text-left text-stone-400 font-avant_garde_bold">Sign Up to Bimcopilot</h2>
-                  ß
 
 
                     <div
