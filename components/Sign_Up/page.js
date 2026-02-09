@@ -1,9 +1,9 @@
 "use client";
 
 import styles from './sign_up.module.css';
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { GoogleLogin, GoogleOAuthProvider } from "@react-oauth/google";
+import { GoogleOAuthProvider, useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -20,9 +20,6 @@ import Cookies from "js-cookie"; // Import js-cookie for handling cookies
 const Signup = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
-  const googleButtonRef = useRef(null);
-  const googleWidthSourceRef = useRef(null);
-  const [googleWidth, setGoogleWidth] = useState(0);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -65,11 +62,10 @@ const Signup = () => {
     }
   };
 
-  const googleSuccess = async (res) => {
+  const googleSuccess = async (accessToken) => {
     try {
-      const { credential } = res;
       const response = await axios.post("/api/google_login", {
-        token: credential,
+        accessToken,
       });
 
       const { user, token } = response.data;
@@ -89,46 +85,17 @@ const Signup = () => {
     }
   };
 
-  useEffect(() => {
-    const el = googleButtonRef.current;
-    if (!el) return;
-
-    const updateWidth = () => {
-      const sourceEl = googleWidthSourceRef.current || el;
-      if (!sourceEl) return;
-      const nextWidth = Math.floor(sourceEl.getBoundingClientRect().width || 0);
-      if (nextWidth > 0) setGoogleWidth(Math.max(240, nextWidth));
-    };
-
-    updateWidth();
-
-    // Run a few delayed measures to catch late layout in production
-    const timeouts = [50, 250, 500, 1000].map((ms) =>
-      setTimeout(updateWidth, ms)
-    );
-
-    let raf1 = requestAnimationFrame(() => {
-      updateWidth();
-      raf1 = requestAnimationFrame(updateWidth);
-    });
-
-    if (typeof ResizeObserver !== "undefined") {
-      const observer = new ResizeObserver(updateWidth);
-      observer.observe(el);
-      return () => {
-        observer.disconnect();
-        timeouts.forEach((t) => clearTimeout(t));
-        cancelAnimationFrame(raf1);
-      };
-    }
-
-    window.addEventListener("resize", updateWidth);
-    return () => {
-      window.removeEventListener("resize", updateWidth);
-      timeouts.forEach((t) => clearTimeout(t));
-      cancelAnimationFrame(raf1);
-    };
-  }, []);
+  const startGoogleLogin = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      if (!tokenResponse?.access_token) {
+        toast.error("Google Login Failed!");
+        return;
+      }
+      await googleSuccess(tokenResponse.access_token);
+    },
+    onError: () => toast.error("Google Login Failed!"),
+    scope: "openid email profile",
+  });
 
   return (
     <>
@@ -177,21 +144,14 @@ const Signup = () => {
                   <h2 id={styles._H2} className="text-left text-stone-400 font-avant_garde_bold">Sign Up to Bimcopilot</h2>
 
 
-                    <div
-                      ref={googleButtonRef}
-                      className={`${styles.googleButton} w-full flex`}
-                      style={{ width: "100%", minHeight: "40px", height: "40px" }}
+                    <button
+                      type="button"
+                      className={styles.googleCustomButton}
+                      onClick={() => startGoogleLogin()}
                     >
-                      {googleWidth > 0 && (
-                        <GoogleLogin
-                          key={googleWidth}
-                          onSuccess={googleSuccess}
-                          onError={() => toast.error("Google Login Failed!")}
-                          size="large"
-                          width={googleWidth}
-                        />
-                      )}
-                    </div>
+                      <span className={styles.googleIcon} aria-hidden="true" />
+                      <span>Sign in with Google</span>
+                    </button>
 
                     <form onSubmit={handleSubmit}>
 
@@ -227,7 +187,6 @@ const Signup = () => {
                             type={field.includes("password") ? "password" : "text"}
                             id={field}
                             name={field}
-                            ref={field === "email" ? googleWidthSourceRef : undefined}
                             value={formData[field]}
                             onChange={handleChange}
                             className="mt-1 border rounded-md"

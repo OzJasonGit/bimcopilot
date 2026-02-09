@@ -97,79 +97,38 @@
   height: 50px;
 }
 
-#GOOGLE_BUTTON {
+.googleCustomButton {
   margin-top: 20px;
   width: 100% !important;
-  min-width: 100%;
-  min-height: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
-/* Prefer module class for reliable scoping in production */
-.googleButton {
-  margin-top: 20px;
-  width: 100% !important;
-  min-width: 100%;
-  min-height: 40px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
+.googleCustomButton:hover {
+  background-color: #f9fafb;
 }
 
-/* Match input field size: full width, 40px height (Safari: force flex child to fill) */
-#GOOGLE_BUTTON > div {
-  width: 100% !important;
-  min-width: 100% !important;
-  max-width: 100% !important;
-  height: 40px !important;
-  min-height: 40px !important;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 100% !important;
-  box-sizing: border-box !important;
+.googleCustomButton:active {
+  background-color: #f3f4f6;
 }
 
-/* Match input field size: full width, 40px height (Safari: force flex child to fill) */
-.googleButton > div {
-  width: 100% !important;
-  min-width: 100% !important;
-  max-width: 100% !important;
-  height: 40px !important;
-  min-height: 40px !important;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 100% !important;
-  box-sizing: border-box !important;
-}
-
-/* Safari: iframe must fill container so "Sign in with Google" text isn't truncated */
-#GOOGLE_BUTTON iframe {
-  width: 100% !important;
-  min-width: 100% !important;
-  max-width: 100% !important;
-  height: 40px !important;
-  min-height: 40px !important;
-  -webkit-flex: 1 1 100%;
-  flex: 1 1 100%;
-}
-
-/* Safari: iframe must fill container so "Sign in with Google" text isn't truncated */
-.googleButton iframe {
-  width: 100% !important;
-  min-width: 100% !important;
-  max-width: 100% !important;
-  height: 40px !important;
-  min-height: 40px !important;
-  -webkit-flex: 1 1 100%;
-  flex: 1 1 100%;
+.googleIcon {
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%23FFC107' d='M43.611 20.083H42V20H24v8h11.303C33.644 32.853 29.2 36 24 36c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.968 3.032l5.657-5.657C34.045 6.053 29.241 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.651-.389-3.917z'/%3E%3Cpath fill='%23FF3D00' d='M6.306 14.691l6.571 4.818C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.968 3.032l5.657-5.657C34.045 6.053 29.241 4 24 4c-7.691 0-14.384 4.356-17.694 10.691z'/%3E%3Cpath fill='%234CAF50' d='M24 44c5.145 0 9.86-1.977 13.409-5.197l-6.19-5.238C29.206 35.091 26.715 36 24 36c-5.176 0-9.612-3.126-11.283-7.573l-6.522 5.025C9.505 39.556 16.227 44 24 44z'/%3E%3Cpath fill='%231976D2' d='M43.611 20.083H42V20H24v8h11.303c-1.053 2.853-3.298 5.182-6.094 6.565l.003-.002 6.19 5.238C33.911 41.381 44 36 44 24c0-1.341-.138-2.651-.389-3.917z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 

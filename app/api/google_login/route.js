@@ -6,19 +6,47 @@ import jwt from "jsonwebtoken";
 const client = new OAuth2Client(process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID);
 
 export async function POST(req) {
-  const { token } = await req.json();
+  const { token, accessToken } = await req.json();
   const db = await connectToDatabase();
   const User = db.collection("users");
 
   try {
-    // Verify Google ID token
-    const ticket = await client.verifyIdToken({
-      idToken: token,
-      audience: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
-    });
+    let sub;
+    let name;
+    let email;
+    let picture;
 
-    const payload = ticket.getPayload();
-    const { sub, name, email, picture } = payload;
+    if (token) {
+      // Verify Google ID token
+      const ticket = await client.verifyIdToken({
+        idToken: token,
+        audience: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
+      });
+
+      const payload = ticket.getPayload();
+      ({ sub, name, email, picture } = payload);
+    } else if (accessToken) {
+      const userInfoRes = await fetch(
+        "https://www.googleapis.com/oauth2/v3/userinfo",
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
+
+      if (!userInfoRes.ok) {
+        throw new Error("Failed to fetch Google user info");
+      }
+
+      const userInfo = await userInfoRes.json();
+      ({ sub, name, email, picture } = userInfo);
+    } else {
+      return NextResponse.json(
+        { message: "Missing Google token" },
+        { status: 400 }
+      );
+    }
 
     // Check if the user already exists
     let user = await User.findOne({ email });
