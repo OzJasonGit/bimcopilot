@@ -21,6 +21,7 @@ const Signup = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const googleButtonRef = useRef(null);
+  const googleWidthSourceRef = useRef(null);
   const [googleWidth, setGoogleWidth] = useState(0);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -93,7 +94,9 @@ const Signup = () => {
     if (!el) return;
 
     const updateWidth = () => {
-      const nextWidth = Math.floor(el.getBoundingClientRect().width || 0);
+      const sourceEl = googleWidthSourceRef.current || el;
+      if (!sourceEl) return;
+      const nextWidth = Math.floor(sourceEl.getBoundingClientRect().width || 0);
       if (nextWidth > 0) setGoogleWidth(Math.max(240, nextWidth));
     };
 
@@ -224,6 +227,7 @@ const Signup = () => {
                             type={field.includes("password") ? "password" : "text"}
                             id={field}
                             name={field}
+                            ref={field === "email" ? googleWidthSourceRef : undefined}
                             value={formData[field]}
                             onChange={handleChange}
                             className="mt-1 border rounded-md"
