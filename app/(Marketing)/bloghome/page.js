@@ -5,17 +5,26 @@ import axios from "axios";
 import SkeletonLoader from "@/components/Loader/loader";
 
 
+const PAGE_SIZE = 9;
+
 const Bloghome = () => {
   const [data, setData] = useState(null);
+  const [page, setPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://www.bimcopilot.com/api/bloghome_route");
+        setIsLoading(true);
+        const res = await axios.get("/api/bloghome_route", {
+          params: { page, limit: PAGE_SIZE },
+        });
         const { responseData } = res.data;
         setData(responseData);
       } catch (error) {
         console.error("Error fetching data:", error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -24,13 +33,21 @@ const Bloghome = () => {
     return () => {
       // Cleanup code if needed
     };
-  }, []); // Empty dependency array ensures the effect runs only once after the initial render
+  }, [page]); // Refetch when page changes
 
   if (!data) {
     return <SkeletonLoader />;
   }
 
-  return <Bloghomemain stories={data.data} />;
+  return (
+    <Bloghomemain
+      stories={data.data}
+      currentPage={data.page}
+      totalPages={data.totalPages}
+      onPageChange={(nextPage) => setPage(nextPage)}
+      isLoading={isLoading}
+    />
+  );
 };
 
 export default Bloghome;

@@ -4,14 +4,24 @@ import { NextResponse } from "next/server";
 
 export async function GET(req) {
     const db = await connectToDatabase();
-
     const collection = db.collection("stories");
 
-    const data = await collection
-        .find({})
-        .sort({ post_number: -1 })
-        .limit(20)
-        .toArray();
+    const { searchParams } = new URL(req.url);
+    const pageParam = Number(searchParams.get("page") || 1);
+    const limitParam = Number(searchParams.get("limit") || 9);
+    const page = Number.isFinite(pageParam) && pageParam > 0 ? pageParam : 1;
+    const limit = Number.isFinite(limitParam) && limitParam > 0 ? limitParam : 9;
+    const skip = (page - 1) * limit;
+
+    const [data, totalCount] = await Promise.all([
+        collection
+            .find({})
+            .sort({ post_number: -1 })
+            .skip(skip)
+            .limit(limit)
+            .toArray(),
+        collection.countDocuments(),
+    ]);
 
     const firstStory = await collection.findOne({});
     const topStoriesToSlice = await collection.find({}).toArray();
@@ -21,6 +31,10 @@ export async function GET(req) {
         data,
         firstStory,
         topStories,
+        page,
+        limit,
+        totalCount,
+        totalPages: Math.ceil(totalCount / limit),
     };
     return new NextResponse(JSON.stringify({ responseData }));
 }
