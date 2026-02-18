@@ -323,24 +323,24 @@
   grid-template-columns: 45px 1fr 1fr;
   grid-template-rows: 45px 20px auto;
   grid-template-areas:
-      "LOGO . . "
-      ". . ."
-      "LOGO_AND_TIME LOGO_AND_TIME .";
+    "LOGO . . "
+    ". . ."
+    "LOGO_AND_TIME LOGO_AND_TIME LOGO_AND_TIME";
 }
 
 
 
 #SIGNUP_AND_BASKET {
   grid-area: SIGNIN_AND_BASKET;
-    display: grid;
-    grid-row-gap: 0px;
-    grid-column-gap: 0px;
-    grid-template-columns:  1fr 1fr 45px;
-    grid-template-rows: 45px 20px auto;
-    grid-template-areas:
-      " . BASKET BASKET"
-      ". . ."
-      "SIGNUP SIGNUP SIGNUP ";
+  display: grid;
+  grid-row-gap: 0px;
+  grid-column-gap: 0px;
+  grid-template-columns: 1fr 1fr 45px;
+  grid-template-rows: 45px 20px auto;
+  grid-template-areas:
+    " . BASKET BASKET"
+    ". . ."
+    "SIGNUP SIGNUP SIGNUP ";
 
 }
 
@@ -372,10 +372,10 @@
   grid-column-gap: 0px;
   grid-template-columns: 1fr 20px 20px 20px 20px 20px;
   grid-template-rows: 13px auto 0px;
-  grid-template-areas: 
-      " . . . . . ."
-      " . FAVOURITE . BASKET . BURGER"
-      " . . . . . .";
+  grid-template-areas:
+    " . . . . . ."
+    " . FAVOURITE . BASKET . BURGER"
+    " . . . . . .";
 }
 
 
@@ -385,11 +385,11 @@
   grid-area: LOGO_AND_TIME;
   position: relative;
   display: grid;
-  left: -15px;
+  left: -25px;
   width: 100%;
   min-width: 200px;
   justify-self: right;
-  grid-template-columns: 1fr 1.5px 1.5fr;
+  grid-template-columns: 1fr 1.5px 1fr;
   grid-template-rows: auto;
   grid-template-areas: " CLOCK B1 HOME";
   background: transparent;
@@ -547,7 +547,7 @@
 
 @media all and (min-width: 960px) and (max-width: 1280px) {
 
-/* HEADER------------------------------------------------------------------------------*/
+  /* HEADER------------------------------------------------------------------------------*/
   /* ---------------------------------------------------------------------------------------*/
   /* ---------------------------------------------------------------------------------------*/
   /* ---------------------------------------------------------------------------------------*/
@@ -874,7 +874,7 @@
     grid-template-areas:
       "LOGO . . "
       ". . ."
-      "LOGO_AND_TIME LOGO_AND_TIME .";
+      "LOGO_AND_TIME LOGO_AND_TIME LOGO_AND_TIME";
   }
 
 
@@ -1134,24 +1134,24 @@
 
 
 
-#HEADER {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  height: auto;
-  max-width: 1520px;
-  background-color: #171717;
-  display: grid;
-  grid-row-gap: 0;
-  grid-template-rows: auto;
-  grid-template-columns: 30px 1fr 30px;
-  grid-template-areas: ". MAIN_AREA .";
-  z-index: 80;
-  padding: 15px 0;
-}
+  #HEADER {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: auto;
+    max-width: 1520px;
+    background-color: #171717;
+    display: grid;
+    grid-row-gap: 0;
+    grid-template-rows: auto;
+    grid-template-columns: 30px 1fr 30px;
+    grid-template-areas: ". MAIN_AREA .";
+    z-index: 80;
+    padding: 15px 0;
+  }
 
 
- 
+
 
 
   #FIXED_HEADER {
@@ -1314,181 +1314,181 @@
 /* ---------------------------------------------------------------------------------------*/
 @media all and (min-width: 0px) and (max-width: 480px) {
   .center_holder {
-      width: 100%;
-      display: flex;
-  
-      -webkit-box-pack: center;
-      justify-content: center;
-      background-color: rgb(245 245 244);
-      margin: 0;
-    }
-  
-    .container {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      display: flex;
-      -webkit-box-pack: center;
-      justify-content: center;
-      border-radius: 1.5px;
-    }
-  
-    #header {
-      position: fixed;
-      width: 100%;
-      top: 0px;
-      height: 65px;
-      max-width: 960px;
-      background-color: transparent;
-      display: grid;
-      grid-row-gap: 40px;
-      grid-template-rows: auto;
-      grid-template-columns: 30px 0px 0px 1fr 0px 0px 30px;
-      grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
-      z-index: 80;
-    }
-  
-  
-  
-   
+    width: 100%;
+    display: flex;
 
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(245 245 244);
+    margin: 0;
+  }
 
-    #HEADER {
-      height: auto;
-      max-width: 1520px;
-      background-color: #171717;
-      grid-row-gap: 0;
-      grid-template-columns: 20px 1fr 20px;
-      grid-template-areas: ". MAIN_AREA .";
-      /* padding: 15px 0; */
-    }
-  
-  
-  
-  
-  
-    #FIXED_HEADER {
-      grid-area: MAIN_AREA;
-      display: grid;
-      grid-row-gap: 0;
-      grid-column-gap: 20px;
-      grid-template-columns: 60px 1fr 60px;
-      grid-template-rows: 0 auto 0;
-      grid-template-areas:
-        ". . ."
-        "LOGO_HOLDER . ."
-        ". . .";
-    }
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 1.5px;
+  }
+
+  #header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    height: 65px;
+    max-width: 960px;
+    background-color: transparent;
+    display: grid;
+    grid-row-gap: 40px;
+    grid-template-rows: auto;
+    grid-template-columns: 30px 0px 0px 1fr 0px 0px 30px;
+    grid-template-areas: ". BANNER-1  . MAIN-AREA . BANNER-2 .";
+    z-index: 80;
+  }
 
 
 
-    #FIXED_HEADER_2 {
-      grid-area: MAIN_AREA;
-      display: grid;
-      grid-row-gap: 0;
-      grid-column-gap: 40px;
-      grid-template-columns: 40px auto 40px;
-      grid-template-rows: auto 20px auto;
-      grid-template-areas:
-        "LOGO_AND_TIME MENU SIGNIN_AND_BASKET"
-        "LOGO_AND_TIME . SIGNIN_AND_BASKET"
-        "LOGO_AND_TIME . SIGNIN_AND_BASKET";
-    }
 
 
-    #SIGNUP_AND_BASKET {
-      grid-area: SIGNIN_AND_BASKET;
-      display: none;
-      grid-row-gap: 0px;
-      grid-column-gap: 0px;
-      grid-template-columns: 1fr 1fr 45px;
-      grid-template-rows: 45px 20px auto;
-      grid-template-areas:
-        " . BASKET BASKET"
-        ". . ."
-        ". SIGNUP SIGNUP ";
-    }
-  
-  
-  
-    #BASKET_CONTAINER {
-      grid-area: MENU_BUTTON;
-      display: grid;
-      grid-row-gap: 0px;
-      grid-column-gap: 0px;
-      grid-template-columns: 1fr 22.5px 20px 22.5px 20px 22.5px;
-      grid-template-rows: 0px auto 7.5px;
-      grid-template-areas:
-        " . . . . . ."
-        " . FAVOURITE . BASKET . BURGER"
-        " . . . . . .";
-    }
-  
-    #TIME {
-      grid-area: TIME;
-      width: 100%;
-      display: none;
-    }
-  
-    #NAV_MENU {
-      grid-area: MENU;
-      display: none;
-    }
-  
-    #SIGNUP_CONTAINER {
-      grid-area: SIGN_IN;
-      display: none;
-    }
-  
-    #COPILOT_HOLDER {
-      position: relative;
-      display: grid;
-      grid-area: COPILOT;
-      height: 100%;
-      width: 100%;
-      grid-template-columns: 10px 1fr 10px;
-      grid-template-rows: 10px auto 10px;
-      grid-column-gap: 10px;
-      grid-template-areas:
-        " . . ."
-        " . COPILOT ."
-        " . . .";
-      top: -17.75px;
-      left: 50px;
-    }
-  
-    #COPILOT {
-      position: relative;
-      height: 42.5px;
-      width: 100%;
-      grid-area: COPILOT;
-    }
-  
-    .burger_dot {
-      border-radius: 100%;
-      background-color: #171717;
-    }
-  
-    #HEADER_MENU_1 {
-      height: 100%;
-      grid-area: AREA;
-      background-color: #171717;
-    }
-  
-  
-  
-    #LOGO {
-      position: relative;
-      grid-area: LOGO;
-      width: 100%;
-      height: 100%;
-      left: 0px;
-      top: -2.5px;
-    }
-  
-    #SIGNUP_CONTAINER {
-      left: 0px;
-    }
+
+  #HEADER {
+    height: auto;
+    max-width: 1520px;
+    background-color: #171717;
+    grid-row-gap: 0;
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-areas: ". MAIN_AREA .";
+    /* padding: 15px 0; */
+  }
+
+
+
+
+
+  #FIXED_HEADER {
+    grid-area: MAIN_AREA;
+    display: grid;
+    grid-row-gap: 0;
+    grid-column-gap: 20px;
+    grid-template-columns: 60px 1fr 60px;
+    grid-template-rows: 0 auto 0;
+    grid-template-areas:
+      ". . ."
+      "LOGO_HOLDER . ."
+      ". . .";
+  }
+
+
+
+  #FIXED_HEADER_2 {
+    grid-area: MAIN_AREA;
+    display: grid;
+    grid-row-gap: 0;
+    grid-column-gap: 40px;
+    grid-template-columns: 40px auto 40px;
+    grid-template-rows: auto 20px auto;
+    grid-template-areas:
+      "LOGO_AND_TIME MENU SIGNIN_AND_BASKET"
+      "LOGO_AND_TIME . SIGNIN_AND_BASKET"
+      "LOGO_AND_TIME . SIGNIN_AND_BASKET";
+  }
+
+
+  #SIGNUP_AND_BASKET {
+    grid-area: SIGNIN_AND_BASKET;
+    display: none;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-columns: 1fr 1fr 45px;
+    grid-template-rows: 45px 20px auto;
+    grid-template-areas:
+      " . BASKET BASKET"
+      ". . ."
+      ". SIGNUP SIGNUP ";
+  }
+
+
+
+  #BASKET_CONTAINER {
+    grid-area: MENU_BUTTON;
+    display: grid;
+    grid-row-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-columns: 1fr 22.5px 20px 22.5px 20px 22.5px;
+    grid-template-rows: 0px auto 7.5px;
+    grid-template-areas:
+      " . . . . . ."
+      " . FAVOURITE . BASKET . BURGER"
+      " . . . . . .";
+  }
+
+  #TIME {
+    grid-area: TIME;
+    width: 100%;
+    display: none;
+  }
+
+  #NAV_MENU {
+    grid-area: MENU;
+    display: none;
+  }
+
+  #SIGNUP_CONTAINER {
+    grid-area: SIGN_IN;
+    display: none;
+  }
+
+  #COPILOT_HOLDER {
+    position: relative;
+    display: grid;
+    grid-area: COPILOT;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: 10px auto 10px;
+    grid-column-gap: 10px;
+    grid-template-areas:
+      " . . ."
+      " . COPILOT ."
+      " . . .";
+    top: -17.75px;
+    left: 50px;
+  }
+
+  #COPILOT {
+    position: relative;
+    height: 42.5px;
+    width: 100%;
+    grid-area: COPILOT;
+  }
+
+  .burger_dot {
+    border-radius: 100%;
+    background-color: #171717;
+  }
+
+  #HEADER_MENU_1 {
+    height: 100%;
+    grid-area: AREA;
+    background-color: #171717;
+  }
+
+
+
+  #LOGO {
+    position: relative;
+    grid-area: LOGO;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: -2.5px;
+  }
+
+  #SIGNUP_CONTAINER {
+    left: 0px;
+  }
 }
 
 /* ---------------------------------------------------------------------------------------*/
