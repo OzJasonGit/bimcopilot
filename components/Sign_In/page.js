@@ -17,6 +17,34 @@ import Sides from "../../components/Sides/sides";
 
 const GOOGLE_CLIENT_ID = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID;
 
+const GoogleLoginButton = ({ onAccessToken }) => {
+  const startGoogleLogin = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      if (!tokenResponse?.access_token) {
+        toast.error("Google Login failed.");
+        return;
+      }
+      await onAccessToken(tokenResponse.access_token);
+    },
+    onError: () => {
+      toast.error("Google Login failed.");
+    },
+    scope: "openid email profile",
+    ux_mode: "popup",
+  });
+
+  return (
+    <button
+      type="button"
+      className={styles.googleCustomButton}
+      onClick={() => startGoogleLogin()}
+    >
+      <span className={styles.googleIcon} aria-hidden="true" />
+      <span>Sign in with Google</span>
+    </button>
+  );
+};
+
 const SignInForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
@@ -77,20 +105,6 @@ const SignInForm = () => {
       console.error("Google login failed!", error);
     }
   };
-
-  const startGoogleLogin = useGoogleLogin({
-    onSuccess: async (tokenResponse) => {
-      if (!tokenResponse?.access_token) {
-        toast.error("Google Login failed.");
-        return;
-      }
-      await googleSuccess(tokenResponse.access_token);
-    },
-    onError: () => {
-      toast.error("Google Login failed.");
-    },
-    scope: "openid email profile",
-  });
 
   return (
     <div style={{ gridArea: "SIGN_IN", width: "100%", maxWidth: "400px" }}>
@@ -214,14 +228,9 @@ const SignInForm = () => {
                   </div>
                   <br />
 
-                  <button
-                    type="button"
-                    className={styles.googleCustomButton}
-                    onClick={() => startGoogleLogin()}
-                  >
-                    <span className={styles.googleIcon} aria-hidden="true" />
-                    <span>Sign in with Google</span>
-                  </button>
+                  <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
+                    <GoogleLoginButton onAccessToken={googleSuccess} />
+                  </GoogleOAuthProvider>
                 </>
               )}
             </form>
@@ -255,13 +264,7 @@ const SignIn = () => {
       <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
         <div className={styles.grid_0_blogimageholder}>
           <div id={styles.SIGN_IN}>
-            {GOOGLE_CLIENT_ID ? (
-              <GoogleOAuthProvider clientId={GOOGLE_CLIENT_ID}>
-                <SignInForm />
-              </GoogleOAuthProvider>
-            ) : (
-              <SignInForm />
-            )}
+            <SignInForm />
           </div>
         </div>
       </section>

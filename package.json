@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "analyze": "npm run build && npx @next/bundle-analyzer",
-    "performance": "node scripts/performance-optimize.js"
+    "performance": "node scripts/performance-optimize.js",
+    "postinstall": "node scripts/patch-next-config.js"
   },
   "dependencies": {
     "@ant-design/icons": "^5.6.1",

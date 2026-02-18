@@ -35,9 +35,10 @@ const renderHtml = (content) => {
   }
 };
 
-const Bloghomemain = ({ stories, firstStory }) => {
+const Bloghomemain = ({ stories, firstStory, currentPage, totalPages, onPageChange, isLoading }) => {
   const params = useParams();
-  const storiesToMap = stories.filter((story, i) => i != 0);
+  const storiesToMap = stories;
+  const pageNumbers = Array.from({ length: totalPages || 1 }, (_, i) => i + 1);
 
 
   return (
@@ -126,6 +127,36 @@ const Bloghomemain = ({ stories, firstStory }) => {
               })}
             </div>
           </div>
+        </div>
+
+        <div className={styles.pagination}>
+          <button
+            type="button"
+            className={styles.pageButton}
+            onClick={() => onPageChange(Math.max(1, currentPage - 1))}
+            disabled={isLoading || currentPage <= 1}
+          >
+            Prev
+          </button>
+          {pageNumbers.map((pageNumber) => (
+            <button
+              key={pageNumber}
+              type="button"
+              className={`${styles.pageButton} ${pageNumber === currentPage ? styles.pageButtonActive : ""}`}
+              onClick={() => onPageChange(pageNumber)}
+              disabled={isLoading || pageNumber === currentPage}
+            >
+              {pageNumber}
+            </button>
+          ))}
+          <button
+            type="button"
+            className={styles.pageButton}
+            onClick={() => onPageChange(Math.min(totalPages, currentPage + 1))}
+            disabled={isLoading || currentPage >= totalPages}
+          >
+            Next
+          </button>
         </div>
       </section>
 
