@@ -1,4 +1,9 @@
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { withNextVideo } from "next-video/process";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
@@ -31,12 +36,13 @@ const nextConfig = {
         'framer-motion'
       ],
       webpackBuildWorker: true,
-      turbo: {
-        rules: {
-          '*.svg': {
-            loaders: ['@svgr/webpack'],
-            as: '*.js',
-          },
+    },
+    turbopack: {
+      root: __dirname,
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
         },
       },
     },
@@ -46,7 +52,6 @@ const nextConfig = {
     compress: true,
     poweredByHeader: false,
     generateEtags: false,
-    swcMinify: true,
     webpack: (config, { dev, isServer }) => {
       // Optimize bundle splitting
       if (!dev && !isServer) {
