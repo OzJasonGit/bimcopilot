@@ -54,6 +54,9 @@ export function ShadCN_Header() {
 
           {/* Services Menu */}
           <NavigationMenuItem>
+
+
+
             <NavigationMenuTrigger
               className="text-stone-50 bg-transparent hover:bg-stone-700/30 font-avant_garde_bold border-none shadow-none data-[state=open]:bg-stone-700/30 data-[state=open]:text-stone-50 focus:bg-stone-700/30 focus:text-stone-50"
               style={{
@@ -70,10 +73,10 @@ export function ShadCN_Header() {
 
 
 
-            <NavigationMenuContent className="bg-stone-900 border-stone-700">
+            {/*<NavigationMenuContent className="bg-stone-900 border-stone-700">
               <ul className="grid w-[300px] gap-2 p-4">
-
-                {/*<li>
+                
+                <li>
                   <NavigationMenuLink asChild>
                     <Link href="/services" className="flex flex-col items-start gap-1 p-2 rounded hover:bg-stone-800/50">
                       <div className="font-avant_garde_bold text-stone-50 text-sm">Our Services</div>
@@ -82,12 +85,34 @@ export function ShadCN_Header() {
                       </div>
                     </Link>
                   </NavigationMenuLink>
-                </li>*/}
+                </li>
 
-
+                
               </ul>
-            </NavigationMenuContent>
+            </NavigationMenuContent>*/}
+
+
+
           </NavigationMenuItem>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -141,6 +166,18 @@ export function ShadCN_Header() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
           {/* Copilot Dashboard Menu */}
           <NavigationMenuItem>
             <NavigationMenuTrigger
@@ -180,6 +217,26 @@ export function ShadCN_Header() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
