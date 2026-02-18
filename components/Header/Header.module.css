@@ -807,8 +807,8 @@
     display: grid;
     grid-row-gap: 0px;
     grid-template-rows: auto;
-    grid-template-columns: 40px 1fr 40px;
-    grid-template-areas: ".  MAIN_AREA  .";
+    grid-template-columns: 20px 120px 20px 1fr 20px 120px 20px;
+    grid-template-areas: ". . . MAIN_AREA . . .";
     z-index: 80;
     padding: 10px 0;
     /*margin-top: 20px;*/
@@ -838,7 +838,7 @@
     grid-area: MAIN_AREA;
     display: grid;
     grid-row-gap: 0;
-    grid-column-gap: 20px;
+    grid-column-gap: 40px;
     grid-template-columns: 50px auto auto auto;
     grid-template-rows: auto auto;
     grid-template-areas:
@@ -853,7 +853,7 @@
     display: grid;
     grid-row-gap: 0;
     grid-column-gap: 40px;
-    grid-template-columns: 200px auto 200px;
+    grid-template-columns: 250px auto 200px;
     grid-template-rows: auto 20px auto;
     grid-template-areas:
       "LOGO_AND_TIME MENU SIGNIN_AND_BASKET"
@@ -890,6 +890,7 @@
       " . BASKET BASKET"
       ". . ."
       "SIGNUP SIGNUP SIGNUP ";
+
   }
 
 
@@ -933,11 +934,11 @@
     grid-area: LOGO_AND_TIME;
     position: relative;
     display: grid;
-    left: -15px;
+    left: -5px;
     width: 100%;
     min-width: 200px;
     justify-self: right;
-    grid-template-columns: 1fr 1.5px 1.5fr;
+    grid-template-columns: 1fr 1.5px 1fr;
     grid-template-rows: auto;
     grid-template-areas: " CLOCK B1 HOME";
     background: transparent;
@@ -1035,6 +1036,7 @@
   #COPILOT_HOLDER {
     display: none;
   }
+
 
 }
 
