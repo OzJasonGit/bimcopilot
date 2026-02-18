@@ -1,20 +1,13 @@
 
 import "./globals.css";
 import localFont from 'next/font/local';
-import dynamic from 'next/dynamic';
 
 // app/layout.js
 import Script from "next/script";
 import Analytics from "./analytics";
 import { GA_TRACKING_ID } from "../lib/gtag";
 import { CurrencyProvider } from '../components/Context/CurrencyContext';
-
-
-
-// Dynamic import for performance monitor
-const PerformanceMonitor = dynamic(() => import('../components/PerformanceMonitor'), {
-  ssr: false
-});
+import PerformanceMonitorClient from '../components/PerformanceMonitorClient';
 
 const avant_garde_bold = localFont
   ({
@@ -152,7 +145,7 @@ export default function RootLayout({ children }) {
         <CurrencyProvider>
           {children}
 
-          <PerformanceMonitor />
+          <PerformanceMonitorClient />
 
           <Analytics />
         </CurrencyProvider>

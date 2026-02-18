@@ -7,7 +7,7 @@ import { ObjectId } from "mongodb";
 // GET /api/header - Fetch user authentication status and details
 export async function GET(req) {
   try {
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const token = cookieStore.get("token")?.value;
 
     if (!token) {
@@ -66,7 +66,7 @@ export async function GET(req) {
 export async function POST() {
   try {
     // Clear the token cookie
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     cookieStore.delete("token");
 
     return NextResponse.json(

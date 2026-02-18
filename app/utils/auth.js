@@ -5,7 +5,7 @@ import { connectToDatabase } from "./mongodb";
 
 export async function getCurrentUser() {
   try {
-    const cookieStore = cookies();
+    const cookieStore = await cookies();
     const token = cookieStore.get("token")?.value;
 
     if (!token) {
