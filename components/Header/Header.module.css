@@ -933,7 +933,7 @@
     grid-area: LOGO_AND_TIME;
     position: relative;
     display: grid;
-    left: -5px;
+    left: -15px;
     width: 100%;
     min-width: 200px;
     justify-self: right;
