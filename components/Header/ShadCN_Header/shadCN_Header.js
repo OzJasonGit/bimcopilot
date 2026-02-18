@@ -68,7 +68,7 @@ export function ShadCN_Header() {
             <NavigationMenuTrigger
               className="text-stone-50 bg-transparent hover:bg-stone-700/30 font-avant_garde_bold border-none shadow-none data-[state=open]:bg-stone-700/30 data-[state=open]:text-stone-50 focus:bg-stone-700/30 focus:text-stone-50"
               style={{
-                color: '#f5f5f4',
+                color: '#3f3e3eff',
                 fontSize: '14px',
                 backgroundColor: 'transparent !important',
                 border: 'none !important',
