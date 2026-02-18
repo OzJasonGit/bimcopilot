@@ -63,35 +63,7 @@ export function ShadCN_Header() {
 
 
 
-          {/* Shop/Products Menu */}
-          <NavigationMenuItem>
-            <NavigationMenuTrigger
-              className="text-stone-50 bg-transparent hover:bg-stone-700/30 font-avant_garde_bold border-none shadow-none data-[state=open]:bg-stone-700/30 data-[state=open]:text-stone-50 focus:bg-stone-700/30 focus:text-stone-50"
-              style={{
-                color: '#3f3e3eff',
-                fontSize: '14px',
-                backgroundColor: 'transparent !important',
-                border: 'none !important',
-                boxShadow: 'none !important'
-              }}
-            >
-              Shop
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-stone-900 border-stone-700">
-              <ul className="grid w-[300px] gap-2 p-4">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/products" className="flex flex-col items-start gap-1 p-2 rounded hover:bg-stone-800/50">
-                      <div className="font-avant_garde_bold text-stone-50 text-sm">All Products</div>
-                      <div className="text-stone-400 text-xs">
-                        Browse our BIM and technology products
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
+
 
 
 
@@ -135,7 +107,7 @@ export function ShadCN_Header() {
                 boxShadow: 'none !important'
               }}
             >
-              Services
+              Shop
             </NavigationMenuTrigger>
 
 
@@ -161,6 +133,61 @@ export function ShadCN_Header() {
 
 
 
+          </NavigationMenuItem>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          {/* Shop/Products Menu */}
+          <NavigationMenuItem>
+            <NavigationMenuTrigger
+              className="text-stone-50 bg-transparent hover:bg-stone-700/30 font-avant_garde_bold border-none shadow-none data-[state=open]:bg-stone-700/30 data-[state=open]:text-stone-50 focus:bg-stone-700/30 focus:text-stone-50"
+              style={{
+                color: '#3f3e3eff',
+                fontSize: '14px',
+                backgroundColor: 'transparent !important',
+                border: 'none !important',
+                boxShadow: 'none !important'
+              }}
+            >
+              Services
+            </NavigationMenuTrigger>
+            <NavigationMenuContent className="bg-stone-900 border-stone-700">
+              <ul className="grid w-[300px] gap-2 p-4">
+                <li>
+                  <NavigationMenuLink asChild>
+                    <Link href="/products" className="flex flex-col items-start gap-1 p-2 rounded hover:bg-stone-800/50">
+                      <div className="font-avant_garde_bold text-stone-50 text-sm">All Products</div>
+                      <div className="text-stone-400 text-xs">
+                        Browse our BIM and technology products
+                      </div>
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
+              </ul>
+            </NavigationMenuContent>
           </NavigationMenuItem>
 
 
