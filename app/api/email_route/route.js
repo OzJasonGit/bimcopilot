@@ -1,5 +1,6 @@
 import { connectToDatabase } from '../../utils/mongodb';
 import Email from '../../../Modules/Email/email';
+import { addSubscriberToKit } from '../../utils/kit';
 
 export async function POST(req) {
     try {
@@ -17,6 +18,17 @@ export async function POST(req) {
 
         // Save the email document in the 'emails' collection
         await db.collection('emails').insertOne(newEmail);
+
+        // Add to Kit (newsletter list) – non-blocking
+        try {
+            await addSubscriberToKit({
+                email: emailData.email,
+                firstName: emailData.firstName || emailData.first_name,
+            });
+        } catch (kitError) {
+            console.error('Kit newsletter sync failed:', kitError);
+        }
+
         return new Response(JSON.stringify({ message: 'Email saved successfully' }), { status: 201 });
     } catch (error) {
         console.error('Error:', error);

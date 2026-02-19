@@ -6,6 +6,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { sendEmail, getAppUrl } from "../../utils/sendEmail";
 import { getWelcomeEmail } from "../../utils/emailTemplates";
+import { addSubscriberToKit } from "../../utils/kit";
 
 export async function POST(req) {
     try {
@@ -89,21 +90,34 @@ export async function POST(req) {
             password: hashedPassword,
         });
 
+        const trimmedEmail = email.toLowerCase().trim();
+        const fullName = `${firstName.trim()} ${lastName.trim()}`;
+
         // Send welcome email (non-blocking for signup success)
         try {
             const appUrl = getAppUrl();
             const { subject, text, html } = getWelcomeEmail({
-                name: `${firstName.trim()} ${lastName.trim()}`,
+                name: fullName,
                 appUrl,
             });
             await sendEmail({
-                to: email.toLowerCase().trim(),
+                to: trimmedEmail,
                 subject,
                 text,
                 html,
             });
         } catch (emailError) {
             console.error("Welcome email failed:", emailError);
+        }
+
+        // Add to Kit (newsletter/automations) – non-blocking
+        try {
+            await addSubscriberToKit({
+                email: trimmedEmail,
+                firstName: firstName.trim(),
+            });
+        } catch (kitError) {
+            console.error("Kit signup sync failed:", kitError);
         }
 
         // Generate JWT token
