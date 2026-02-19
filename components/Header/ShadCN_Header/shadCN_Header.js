@@ -161,7 +161,7 @@ export function ShadCN_Header() {
 
 
           {/* Shop/Products Menu */}
-          {/*<NavigationMenuItem>
+          <NavigationMenuItem>
             <NavigationMenuTrigger
               className="text-stone-50 bg-transparent hover:bg-stone-700/30 font-avant_garde_bold border-none shadow-none data-[state=open]:bg-stone-700/30 data-[state=open]:text-stone-50 focus:bg-stone-700/30 focus:text-stone-50"
               style={{
@@ -174,7 +174,9 @@ export function ShadCN_Header() {
             >
               Services
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="bg-stone-900 border-stone-700">
+
+
+            {/*<NavigationMenuContent className="bg-stone-900 border-stone-700">
               <ul className="grid w-[300px] gap-2 p-4">
                 <li>
                   <NavigationMenuLink asChild>
@@ -187,8 +189,10 @@ export function ShadCN_Header() {
                   </NavigationMenuLink>
                 </li>
               </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>*/}
+            </NavigationMenuContent>*/}
+
+
+          </NavigationMenuItem>
 
 
 
