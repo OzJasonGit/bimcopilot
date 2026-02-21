@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import dynamic from "next/dynamic";
-import "react-quill/dist/quill.snow.css";
+import "quill/dist/quill.snow.css";
 
 // Configure Quill with modules including list and table support
 const QuillNoSSRWrapper = dynamic(
