@@ -155,11 +155,21 @@ const Bloghomemain = ({ stories, firstStory }) => {
                   disabled={currentPage <= 1}
                   aria-label="Previous page"
                 >
-                  Previous
+                  Prev
                 </button>
-                <span className={styles.paginationInfo}>
-                  Page {currentPage} of {totalPages}
-                </span>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <button
+                    key={page}
+                    type="button"
+                    className={currentPage === page ? `${styles.paginationBtn} ${styles.paginationPageActive}` : styles.paginationBtn}
+                    onClick={() => goToPage(page)}
+                    disabled={currentPage === page}
+                    aria-label={`Page ${page}`}
+                    aria-current={currentPage === page ? "page" : undefined}
+                  >
+                    {page}
+                  </button>
+                ))}
                 <button
                   type="button"
                   className={styles.paginationBtn}
