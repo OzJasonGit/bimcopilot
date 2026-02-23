@@ -89,6 +89,41 @@ const Bloghomemain = ({ stories, firstStory }) => {
         <div class={styles.grid_0_blogimageholder}>
           <div class={styles.grid_0_blogimage}>
             <div className={styles.blogGridMain}>
+            {totalPages >= 1 && storiesToMap.length > 0 && (
+              <div className={`${styles.pagination} ${styles.paginationTop}`} aria-label="Blog pagination (top)">
+                <button
+                  type="button"
+                  className={styles.paginationBtn}
+                  onClick={() => goToPage(currentPage - 1)}
+                  disabled={currentPage <= 1}
+                  aria-label="Previous page"
+                >
+                  Prev
+                </button>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <button
+                    key={`top-${page}`}
+                    type="button"
+                    className={currentPage === page ? `${styles.paginationBtn} ${styles.paginationPageActive}` : styles.paginationBtn}
+                    onClick={() => goToPage(page)}
+                    disabled={currentPage === page}
+                    aria-label={`Page ${page}`}
+                    aria-current={currentPage === page ? "page" : undefined}
+                  >
+                    {page}
+                  </button>
+                ))}
+                <button
+                  type="button"
+                  className={styles.paginationBtn}
+                  onClick={() => goToPage(currentPage + 1)}
+                  disabled={currentPage >= totalPages}
+                  aria-label="Next page"
+                >
+                  Next
+                </button>
+              </div>
+            )}
             <div id={styles.BLOGIMAGE_HOLDER}>
               {paginatedStories.map((story, index) => {
                 return (

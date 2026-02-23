@@ -223,7 +223,7 @@ const Blog_page = (stories) => {
                                    
                                     gridArea: "MAIN_AREA",
                                     width: "100%",
-                                    height: "320vh",
+                                    height: "100vh",
                                     display: "grid",                                 
                                     }}>
                                         <div 
