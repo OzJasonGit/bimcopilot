@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import styles from './bloghome.module.css';
 import { useRouter } from "next/navigation";
 import { useParams, useNavigate } from "next/navigation";
@@ -41,6 +41,8 @@ const PER_PAGE = 9; // 3x3 grid
 const Bloghomemain = ({ stories, firstStory }) => {
   const params = useParams();
   const [currentPage, setCurrentPage] = useState(1);
+  const isFirstRender = useRef(true);
+  const blogSectionRef = useRef(null);
 
   const storiesToMap = useMemo(() => (Array.isArray(stories) ? [...stories] : []), [stories]);
   const totalPages = Math.max(1, Math.ceil(storiesToMap.length / PER_PAGE));
@@ -53,6 +55,27 @@ const Bloghomemain = ({ stories, firstStory }) => {
     const p = Math.max(1, Math.min(page, totalPages));
     setCurrentPage(p);
   };
+
+  // Scroll to top when user changes page (not on initial load)
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    if (typeof window === "undefined") return;
+    const scrollToTop = () => {
+      // Prefer scrolling the blog section into view so the new content is at top
+      if (blogSectionRef.current) {
+        blogSectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      }
+    };
+    const id = requestAnimationFrame(() => {
+      requestAnimationFrame(scrollToTop);
+    });
+    return () => cancelAnimationFrame(id);
+  }, [currentPage]);
 
   return (
 
@@ -67,7 +90,7 @@ const Bloghomemain = ({ stories, firstStory }) => {
 
 
 
-      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+      <section ref={blogSectionRef} id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_blogimageholder}>
           <div class={styles.grid_0_blogimage}>
             <div className={styles.blogGridMain}>
