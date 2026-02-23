@@ -56,7 +56,7 @@ const Bloghomemain = ({ stories, firstStory }) => {
     setCurrentPage(p);
   };
 
-  // Scroll to top when user changes page (not on initial load)
+  // Scroll to top when user changes page (not on initial load). Uses instant scroll + multiple targets so it works in production.
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false;
@@ -64,17 +64,12 @@ const Bloghomemain = ({ stories, firstStory }) => {
     }
     if (typeof window === "undefined") return;
     const scrollToTop = () => {
-      // Prefer scrolling the blog section into view so the new content is at top
-      if (blogSectionRef.current) {
-        blogSectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-      } else {
-        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-      }
+      window.scrollTo(0, 0);
+      if (document.documentElement) document.documentElement.scrollTop = 0;
+      if (document.body) document.body.scrollTop = 0;
     };
-    const id = requestAnimationFrame(() => {
-      requestAnimationFrame(scrollToTop);
-    });
-    return () => cancelAnimationFrame(id);
+    const t = setTimeout(scrollToTop, 50);
+    return () => clearTimeout(t);
   }, [currentPage]);
 
   return (
