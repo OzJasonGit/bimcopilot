@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useMemo } from "react";
 import styles from './bloghome.module.css';
 import { useRouter } from "next/navigation";
 import { useParams, useNavigate } from "next/navigation";
@@ -35,10 +36,23 @@ const renderHtml = (content) => {
   }
 };
 
+const PER_PAGE = 9; // 3x3 grid
+
 const Bloghomemain = ({ stories, firstStory }) => {
   const params = useParams();
-  const storiesToMap = stories.filter((story, i) => i != 0);
+  const [currentPage, setCurrentPage] = useState(1);
 
+  const storiesToMap = useMemo(() => (Array.isArray(stories) ? [...stories] : []), [stories]);
+  const totalPages = Math.max(1, Math.ceil(storiesToMap.length / PER_PAGE));
+  const paginatedStories = useMemo(
+    () => storiesToMap.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE),
+    [storiesToMap, currentPage]
+  );
+
+  const goToPage = (page) => {
+    const p = Math.max(1, Math.min(page, totalPages));
+    setCurrentPage(p);
+  };
 
   return (
 
@@ -56,8 +70,9 @@ const Bloghomemain = ({ stories, firstStory }) => {
       <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_blogimageholder}>
           <div class={styles.grid_0_blogimage}>
+            <div className={styles.blogGridMain}>
             <div id={styles.BLOGIMAGE_HOLDER}>
-              {storiesToMap.map((story, index) => {
+              {paginatedStories.map((story, index) => {
                 return (
 
                   <div id={styles.BLOGIMAGE}>
@@ -124,6 +139,32 @@ const Bloghomemain = ({ stories, firstStory }) => {
 
                 )
               })}
+            </div>
+            {totalPages >= 1 && storiesToMap.length > 0 && (
+              <div className={styles.pagination} aria-label="Blog pagination">
+                <button
+                  type="button"
+                  className={styles.paginationBtn}
+                  onClick={() => goToPage(currentPage - 1)}
+                  disabled={currentPage <= 1}
+                  aria-label="Previous page"
+                >
+                  Previous
+                </button>
+                <span className={styles.paginationInfo}>
+                  Page {currentPage} of {totalPages}
+                </span>
+                <button
+                  type="button"
+                  className={styles.paginationBtn}
+                  onClick={() => goToPage(currentPage + 1)}
+                  disabled={currentPage >= totalPages}
+                  aria-label="Next page"
+                >
+                  Next
+                </button>
+              </div>
+            )}
             </div>
           </div>
         </div>

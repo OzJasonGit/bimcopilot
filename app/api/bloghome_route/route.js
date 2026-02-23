@@ -10,7 +10,6 @@ export async function GET(req) {
     const data = await collection
         .find({})
         .sort({ post_number: -1 })
-        .limit(20)
         .toArray();
 
     const firstStory = await collection.findOne({});
