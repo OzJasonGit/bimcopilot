@@ -84,19 +84,25 @@ const Bloghomemain = ({ stories, firstStory }) => {
                        style={{ position: "relative", width: "100%", height: "auto" }}>
 
                         <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
-                          <Image 
-                          alt="Picture of the author"
+                          <Image
+                          alt={story.title ? String(story.title).replace(/<[^>]*>/g, "").slice(0, 60) : "Blog"}
                           key={story.slug}
-                          loading='lazy'
+                          loading="lazy"
                           width={500}
                           height={500}
-                          src={story.image}
+                          src={story.image || "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500' viewBox='0 0 500 500'%3E%3Crect fill='%23222' width='500' height='500'/%3E%3Ctext fill='%23666' x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16'%3ENo image%3C/text%3E%3C/svg%3E"}
+                          unoptimized={typeof story.image === "string" && (story.image.includes(".gif") || story.image.includes("cloudinary.com"))}
                           style={{
                             position: "absolute",
                             width: "100%",
                             height: "100%",
                             objectFit: "cover",
-                          }} />
+                          }}
+                          onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500' viewBox='0 0 500 500'%3E%3Crect fill='%23222' width='500' height='500'/%3E%3Ctext fill='%23666' x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16'%3ENo image%3C/text%3E%3C/svg%3E";
+                          }}
+                          />
                         </div>
 
                         {/* Dark overlay */}
