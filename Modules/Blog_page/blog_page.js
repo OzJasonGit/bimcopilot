@@ -404,112 +404,101 @@ const Blog_page = ({ stories: storiesProp, initialStory, relatedStories = [] }) 
                                                                                 flexDirection: "column",
                                                                                 gap: "8px"                                                                  
                                                                                 }}>  
-                                                                        {story.body1_title && (
+                                                                        {hasBodyContent(story.body1_title, story.body1) && (
                                                                             <a href="#body1" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body1_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body2_title && (
+                                                                        {hasBodyContent(story.body2_title, story.body2) && (
                                                                             <a href="#body2" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body2_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body3_title && (
+                                                                        {hasBodyContent(story.body3_title, story.body3) && (
                                                                             <a href="#body3" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body3_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body4_title && (
+                                                                        {hasBodyContent(story.body4_title, story.body4) && (
                                                                             <a href="#body4" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body4_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body5_title && (
+                                                                        {hasBodyContent(story.body5_title, story.body5) && (
                                                                             <a href="#body5" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body5_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body6_title && (
+                                                                        {hasBodyContent(story.body6_title, story.body6) && (
                                                                             <a href="#body6" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body6_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body7_title && (
+                                                                        {hasBodyContent(story.body7_title, story.body7) && (
                                                                             <a href="#body7" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body7_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body8_title && (
+                                                                        {hasBodyContent(story.body8_title, story.body8) && (
                                                                             <a href="#body8" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body8_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body9_title && (
+                                                                        {hasBodyContent(story.body9_title, story.body9) && (
                                                                             <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body9_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body10_title && (
-                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                        {hasBodyContent(story.body10_title, story.body10) && (
+                                                                            <a href="#body10" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body10_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body11_title && (
-                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                        {hasBodyContent(story.body11_title, story.body11) && (
+                                                                            <a href="#body11" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body11_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body12_title && (
-                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                        {hasBodyContent(story.body12_title, story.body12) && (
+                                                                            <a href="#body12" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body12_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body13_title && (
-                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                        {hasBodyContent(story.body13_title, story.body13) && (
+                                                                            <a href="#body13" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body13_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body14_title && (
-                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                        {hasBodyContent(story.body14_title, story.body14) && (
+                                                                            <a href="#body14" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body14_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body15_title && (
-                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                        {hasBodyContent(story.body15_title, story.body15) && (
+                                                                            <a href="#body15" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body15_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body16_title && (
-                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                        {hasBodyContent(story.body16_title, story.body16) && (
+                                                                            <a href="#body16" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body16_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body17_title && (
-                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
-                                                                                {parseHtml(story.body18_title || "")}
+                                                                        {hasBodyContent(story.body17_title, story.body17) && (
+                                                                            <a href="#body17" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                                {parseHtml(story.body17_title || "")}
                                                                             </a>
                                                                         )}
-                                                                        {story.body18_title && (
-                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                        {hasBodyContent(story.body18_title, story.body18) && (
+                                                                            <a href="#body18" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
                                                                                 {parseHtml(story.body18_title || "")}
                                                                             </a>
                                                                         )}                           
-                                                                        {story.conclusion && (
-                                                                            <a href="#body9" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word", paddingBottom: "4px" }}>
+                                                                        {hasContent(story.conclusion) && (
+                                                                            <a href="#conclusion" style={{ fontSize: "0.75rem", color: "#a3a3a3", textDecoration: "none", display: "block", lineHeight: "1.5", wordBreak: "break-word",paddingTop: "100px", paddingBottom: "10px" }}>
                                                                                 {parseHtml(story.conclusion || "")}
                                                                             </a>
                                                                         )}
-
-                                                                           
-
-                                                                       
- 
-
-                                                                      
-
-                                                                        
-
-                                                                                               
                                                                     </div>
 
                                                                                                      
@@ -1813,7 +1802,7 @@ const Blog_page = ({ stories: storiesProp, initialStory, relatedStories = [] }) 
             style={{
                 background: "#171717"
             }}>
-            <div class={styles.grid_0_blog_end}>
+            <div id="conclusion" class={styles.grid_0_blog_end}>
 
             <div id={styles.TEXT_HOLDER}
                 style={{
