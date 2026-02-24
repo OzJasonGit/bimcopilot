@@ -4,17 +4,17 @@ import { getStories } from "../../lib/blog-data";
 export const dynamic = "force-dynamic";
 
 export const metadata = {
-  title: "Blog | BIM, AI & Architecture",
-  description: "Stories and guides on BIM, AI, and architecture for architects and BIM managers.",
+  title: "Stories | BIM, AI & Architecture",
+  description: "Explore stories on BIM, AI, and architecture—guides, workflows, and insights for architects and BIM managers.",
 };
 
-export default async function Bloghome() {
+export default async function StoriesIndex() {
   let stories = [];
   let error = null;
   try {
     stories = await getStories();
   } catch (err) {
-    console.error("Bloghome getStories error:", err);
+    console.error("Stories getStories error:", err);
     error = err.message || "Stories unavailable";
   }
 

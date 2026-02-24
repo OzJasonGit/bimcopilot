@@ -1,64 +1,51 @@
-"use client";
+import { getStoryBySlug, getRelatedStories } from "../../../lib/blog-data";
+import BlogPostClient from "./BlogPostClient";
+import BlogPostSchema from "./BlogPostSchema";
+import { notFound } from "next/navigation";
 
-import Blog from "@/Modules/Blog/blog";
-import Blog_page from "@/Modules/Blog_page/blog_page"
-import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import Menu from "@/components/Menu/menu";
-import Header from "@/components/Header/Header";
-import Subfooter from "@/components/Subfooter2/subfooter2";
-import Footer from "@/components/Footer/Footer";
-import Image from "next/image";
-import Sides from "@/components/Sides/sides";
-import parse from "html-react-parser";
-import SkeletonLoader from "@/components/Loader/loader";
+export const dynamic = "force-dynamic";
 
-const BlogPost = () => {
-  const params = useParams();
+function serialize(doc) {
+  if (!doc) return null;
+  const o = { ...doc };
+  if (o._id && typeof o._id === "object" && o._id.toString) o._id = o._id.toString();
+  return o;
+}
+
+export async function generateMetadata({ params }) {
   const slug = params?.slug;
-  const [story, setStory] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  if (!slug) return { title: "Blog" };
+  const story = await getStoryBySlug(slug);
+  if (!story) return { title: "Blog" };
+  const title = typeof story.title === "string" ? story.title.replace(/<[^>]*>/g, "").trim() : "Blog post";
+  const description = typeof story.subtitle === "string" ? story.subtitle.replace(/<[^>]*>/g, "").trim().slice(0, 160) : undefined;
+  return {
+    title: title || "Blog post",
+    description: description || undefined,
+    openGraph: { title: title || "Blog post", description: description || undefined },
+  };
+}
 
-  useEffect(() => {
-    const fetchStory = async () => {
-      if (!slug) return;
-      try {
-        const res = await axios.get(`/api/blog/${slug}`);
-        if (res.data?.story) {
-          setStory(res.data.story);
-        } else {
-          setError("Story data format is invalid");
-        }
-      } catch (error) {
-        console.error("Error fetching story:", error);
-        setError("Failed to load story");
-      } finally {
-        setLoading(false);
-      }
-    };
+export default async function BlogPost({ params }) {
+  const slug = params?.slug;
+  if (!slug) notFound();
 
-    fetchStory();
-  }, [slug]);
+  const [story, relatedList] = await Promise.all([
+    getStoryBySlug(slug),
+    getRelatedStories(slug, 3),
+  ]);
 
-  if (loading) return <SkeletonLoader />;
-  if (error) return <div className="error-message">{error}</div>;
-  if (!story) return <div>Story not found</div>;
+  if (!story) notFound();
+
+  const serializedStory = serialize(story);
 
   return (
     <>
-      <Menu />
-      <Header />
-      <Sides />
-      
-    <Blog_page/>
-    {/* <Blog/> */}
-
-      <Subfooter />
-      <Footer />
+      <BlogPostSchema story={serializedStory} />
+      <BlogPostClient
+        story={serializedStory}
+        relatedStories={relatedList.map(serialize)}
+      />
     </>
   );
-};
-
-export default BlogPost;
+}

@@ -121,11 +121,11 @@ const hasBodyContent = (title, body) => {
 // Check if single content field has actual content
 const hasContent = (html) => hasBodyContent(html, html);
 
-const Blog_page = (stories) => {
+const Blog_page = ({ stories: storiesProp, initialStory, relatedStories = [] }) => {
     const params = useParams();
     const slug = params?.slug;
-    const [story, setStory] = useState(null);
-    const [loading, setLoading] = useState(true); 
+    const [story, setStory] = useState(initialStory ?? null);
+    const [loading, setLoading] = useState(!initialStory); 
     const [error, setError] = useState("");
 
     const stripHtml = (html) => {
@@ -134,22 +134,23 @@ const Blog_page = (stories) => {
         return html.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim();
     };
 
-    
     useEffect(() => {
+        if (initialStory && initialStory.slug === slug) {
+            setStory(initialStory);
+            setLoading(false);
+            return;
+        }
         const fetchStory = async () => {
             if (!slug) return;
             try {
                 const res = await axios.get(`/api/blog/${slug}`);
                 if (res.data?.story) {
                     setStory(res.data.story);
-                    // Debug: Log the story data to see what fields are available
-                    console.log("Story data:", res.data.story);
-                    console.log("Author field:", res.data.story.author);
                 } else {
                     setError("Story data format is invalid");
                 }
-            } catch (error) {
-                console.error("Error fetching story:", error);
+            } catch (err) {
+                console.error("Error fetching story:", err);
                 setError("Failed to load story");
             } finally {
                 setLoading(false);
@@ -157,14 +158,14 @@ const Blog_page = (stories) => {
         };
 
         fetchStory();
-    }, [slug]);
+    }, [slug, initialStory]);
 
     if (loading) return <SkeletonLoader />;
     if (error) return <div className="error-message">{error}</div>;
     if (!story) return <div>Story not found</div>;
 
 
-    const storiesToMap = stories?.data?.filter((story, i) => story._id == params.slug) || [];
+    const storiesToMap = storiesProp?.data?.filter((s, i) => s._id === story._id || s.slug === story.slug) || [];
     const router = useRouter();
     return (
 
@@ -1863,6 +1864,26 @@ const Blog_page = (stories) => {
                 </p>
             </div>*/}
 
+            {Array.isArray(story.faq) && story.faq.length > 0 && (
+            <section id={styles.SHADOW_SECTION_TITLE} className={styles.center_holder} style={{ background: "#171717" }} aria-labelledby="faq-heading">
+                <div class={styles.grid_0_blog}>
+                    <div id={styles.TEXT_HOLDER} style={{ position: "relative", display: "grid", width: "100%", height: "auto", gridArea: "MAIN_AREA" }}>
+                        <h2 id="faq-heading" className={`${styles._H1} text-3xl text-stone-200 font-avant_garde_bold`} style={{ marginBottom: "1rem" }}>Frequently Asked Questions</h2>
+                        <dl style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                            {story.faq.map((item, idx) => (
+                                <div key={idx} style={{ paddingBottom: "0.75rem", borderBottom: "1px solid rgb(64 64 64)" }}>
+                                    <dt className="text-lg text-stone-200 font-avant_garde_bold" style={{ marginBottom: "0.25rem" }}>
+                                        {typeof (item.question || item.q) === "string" ? (item.question || item.q).replace(/<[^>]*>/g, "").trim() : (item.question || item.q)}
+                                    </dt>
+                                    <dd className="text-base text-stone-400 font-avant_garde_medium" dangerouslySetInnerHTML={{ __html: getHtmlContent(item.answer || item.a || "") }} />
+                                </div>
+                            ))}
+                        </dl>
+                    </div>
+                </div>
+            </section>
+            )}
+
 
 
                         
@@ -1881,12 +1902,26 @@ const Blog_page = (stories) => {
                                 position: "relative",
                                 gridArea: "READ_1"
                                 }}>
-                                    <h1 id={styles._H1}
+                                    <h2 id={styles._H1}
                                         className="text-3xl ... text-stone-200 ... font-avant_garde_bold"
                                         >
                                             Read Next...
-                                    </h1>
+                                    </h2>
                         </div>
+                        {Array.isArray(relatedStories) && relatedStories.length > 0 && (
+                            <nav aria-label="Related posts" style={{ gridArea: "READ_1", marginTop: "1rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                                {relatedStories.map((related) => (
+                                    <Link
+                                        key={related.slug || related._id}
+                                        href={`/blog/${related.slug}`}
+                                        className="text-lg text-stone-300 hover:text-emerald-400 font-avant_garde_medium transition-colors"
+                                        style={{ textDecoration: "none" }}
+                                    >
+                                        {typeof related.title === "string" ? related.title.replace(/<[^>]*>/g, "").trim() : related.title}
+                                    </Link>
+                                ))}
+                            </nav>
+                        )}
                     </div>                    
                 </div>                           
             </section>
