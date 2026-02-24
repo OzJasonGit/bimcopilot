@@ -1,10 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect, useRef } from "react";
-import styles from './bloghome.module.css';
-import { useRouter } from "next/navigation";
-import { useParams, useNavigate } from "next/navigation";
-
+import styles from "./bloghome.module.css";
 import Menu from "../../components/Menu/menu";
 import Sides from "../../components/Sides/sides";
 import Header from "../../components/Header/Header";
@@ -12,16 +8,14 @@ import Subfooter from "../../components/Subfooter2/subfooter2";
 import Footer from "../../components/Footer/Footer";
 import Subscribetop from "../../components/Subscribetop/subscribetop";
 
-import logo from './bimcopilot_logo_white.svg';
-import text_logo from './bimcopilot_logo_text_horizontal_white.svg';
+import logo from "./bimcopilot_logo_white.svg";
+import text_logo from "./bimcopilot_logo_text_horizontal_white.svg";
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import parse from "html-react-parser";
-
-
-
 
 const renderHtml = (content) => {
   if (content === null || content === undefined) return null;
@@ -36,41 +30,24 @@ const renderHtml = (content) => {
   }
 };
 
-const PER_PAGE = 9; // 3x3 grid
+const Bloghomemain = ({ stories, currentPage = 1, totalPages = 1 }) => {
+  const pathname = usePathname();
+  const storiesToMap = Array.isArray(stories) ? stories : [];
 
-const Bloghomemain = ({ stories, firstStory }) => {
-  const params = useParams();
-  const [currentPage, setCurrentPage] = useState(1);
-  const isFirstRender = useRef(true);
-  const blogSectionRef = useRef(null);
+  const buildPageHref = (page) => {
+    const safeTotalPages = Math.max(1, totalPages || 1);
+    const clampedPage = Math.max(1, Math.min(page, safeTotalPages));
 
-  const storiesToMap = useMemo(() => (Array.isArray(stories) ? [...stories] : []), [stories]);
-  const totalPages = Math.max(1, Math.ceil(storiesToMap.length / PER_PAGE));
-  const paginatedStories = useMemo(
-    () => storiesToMap.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE),
-    [storiesToMap, currentPage]
-  );
+    if (!pathname) return "#";
 
-  const goToPage = (page) => {
-    const p = Math.max(1, Math.min(page, totalPages));
-    setCurrentPage(p);
-  };
-
-  // Scroll to top when user changes page (not on initial load). Uses instant scroll + multiple targets so it works in production.
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
+    if (clampedPage === 1) {
+      return pathname;
     }
-    if (typeof window === "undefined") return;
-    const scrollToTop = () => {
-      window.scrollTo(0, 0);
-      if (document.documentElement) document.documentElement.scrollTop = 0;
-      if (document.body) document.body.scrollTop = 0;
-    };
-    const t = setTimeout(scrollToTop, 50);
-    return () => clearTimeout(t);
-  }, [currentPage]);
+
+    const searchParams = new URLSearchParams();
+    searchParams.set("page", String(clampedPage));
+    return `${pathname}?${searchParams.toString()}`;
+  };
 
   return (
 
@@ -82,50 +59,59 @@ const Bloghomemain = ({ stories, firstStory }) => {
 
       <Subscribetop />
 
-
-
-
-      <section ref={blogSectionRef} id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
+      <section id={styles.SHADOW_SECTION_BLOG} class={styles.center_holder}>
         <div class={styles.grid_0_blogimageholder}>
           <div class={styles.grid_0_blogimage}>
             <div className={styles.blogGridMain}>
             {totalPages >= 1 && storiesToMap.length > 0 && (
               <div className={`${styles.pagination} ${styles.paginationTop}`} aria-label="Blog pagination (top)">
-                <button
-                  type="button"
-                  className={styles.paginationBtn}
-                  onClick={() => goToPage(currentPage - 1)}
-                  disabled={currentPage <= 1}
-                  aria-label="Previous page"
-                >
-                  Prev
-                </button>
+                {currentPage > 1 ? (
+                  <Link
+                    href={buildPageHref(currentPage - 1)}
+                    className={styles.paginationBtn}
+                    aria-label="Previous page"
+                    rel="prev"
+                  >
+                    Prev
+                  </Link>
+                ) : (
+                  <span className={styles.paginationBtn} aria-disabled="true">
+                    Prev
+                  </span>
+                )}
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <button
+                  <Link
                     key={`top-${page}`}
-                    type="button"
-                    className={currentPage === page ? `${styles.paginationBtn} ${styles.paginationPageActive}` : styles.paginationBtn}
-                    onClick={() => goToPage(page)}
-                    disabled={currentPage === page}
+                    href={buildPageHref(page)}
+                    className={
+                      currentPage === page
+                        ? `${styles.paginationBtn} ${styles.paginationPageActive}`
+                        : styles.paginationBtn
+                    }
                     aria-label={`Page ${page}`}
                     aria-current={currentPage === page ? "page" : undefined}
                   >
                     {page}
-                  </button>
+                  </Link>
                 ))}
-                <button
-                  type="button"
-                  className={styles.paginationBtn}
-                  onClick={() => goToPage(currentPage + 1)}
-                  disabled={currentPage >= totalPages}
-                  aria-label="Next page"
-                >
-                  Next
-                </button>
+                {currentPage < totalPages ? (
+                  <Link
+                    href={buildPageHref(currentPage + 1)}
+                    className={styles.paginationBtn}
+                    aria-label="Next page"
+                    rel="next"
+                  >
+                    Next
+                  </Link>
+                ) : (
+                  <span className={styles.paginationBtn} aria-disabled="true">
+                    Next
+                  </span>
+                )}
               </div>
             )}
             <div id={styles.BLOGIMAGE_HOLDER}>
-              {paginatedStories.map((story, index) => {
+              {storiesToMap.map((story, index) => {
                 return (
 
                   <div id={styles.BLOGIMAGE}>
@@ -201,37 +187,49 @@ const Bloghomemain = ({ stories, firstStory }) => {
             </div>
             {totalPages >= 1 && storiesToMap.length > 0 && (
               <div className={styles.pagination} aria-label="Blog pagination">
-                <button
-                  type="button"
-                  className={styles.paginationBtn}
-                  onClick={() => goToPage(currentPage - 1)}
-                  disabled={currentPage <= 1}
-                  aria-label="Previous page"
-                >
-                  Prev
-                </button>
+                {currentPage > 1 ? (
+                  <Link
+                    href={buildPageHref(currentPage - 1)}
+                    className={styles.paginationBtn}
+                    aria-label="Previous page"
+                    rel="prev"
+                  >
+                    Prev
+                  </Link>
+                ) : (
+                  <span className={styles.paginationBtn} aria-disabled="true">
+                    Prev
+                  </span>
+                )}
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <button
+                  <Link
                     key={page}
-                    type="button"
-                    className={currentPage === page ? `${styles.paginationBtn} ${styles.paginationPageActive}` : styles.paginationBtn}
-                    onClick={() => goToPage(page)}
-                    disabled={currentPage === page}
+                    href={buildPageHref(page)}
+                    className={
+                      currentPage === page
+                        ? `${styles.paginationBtn} ${styles.paginationPageActive}`
+                        : styles.paginationBtn
+                    }
                     aria-label={`Page ${page}`}
                     aria-current={currentPage === page ? "page" : undefined}
                   >
                     {page}
-                  </button>
+                  </Link>
                 ))}
-                <button
-                  type="button"
-                  className={styles.paginationBtn}
-                  onClick={() => goToPage(currentPage + 1)}
-                  disabled={currentPage >= totalPages}
-                  aria-label="Next page"
-                >
-                  Next
-                </button>
+                {currentPage < totalPages ? (
+                  <Link
+                    href={buildPageHref(currentPage + 1)}
+                    className={styles.paginationBtn}
+                    aria-label="Next page"
+                    rel="next"
+                  >
+                    Next
+                  </Link>
+                ) : (
+                  <span className={styles.paginationBtn} aria-disabled="true">
+                    Next
+                  </span>
+                )}
               </div>
             )}
             </div>
