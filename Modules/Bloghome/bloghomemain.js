@@ -64,7 +64,7 @@ const Bloghomemain = ({ stories, currentPage = 1, totalPages = 1 }) => {
           <div class={styles.grid_0_blogimage}>
             <div className={styles.blogGridMain}>
             {totalPages >= 1 && storiesToMap.length > 0 && (
-              <div className={`${styles.pagination} ${styles.paginationTop}`} aria-label="Blog pagination (top)">
+              <div className={`${styles.pagination} ${styles.paginationTop}`} style={{ paddingBottom: "4rem" }} aria-label="Blog pagination (top)">
                 {currentPage > 1 ? (
                   <Link
                     href={buildPageHref(currentPage - 1)}
