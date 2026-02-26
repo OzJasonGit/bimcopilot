@@ -22,10 +22,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { debounce } from "lodash";
 import { useFormatPrice } from '@/components/Context/CurrencyContext';
+import { productToSpecShape, specShapeToInternal } from "@/app/lib/product-schema";
 
 // SCHEMAS
 const categorySchema = z.object({
@@ -35,21 +37,30 @@ const categorySchema = z.object({
     .regex(/^[a-z0-9-]+$/i, "Slug must contain only letters, numbers, or hyphens"),
 });
 
+// Product object per spec: product_id, name, status, short_description, long_description, outcome_promise, category, tags, primary_image, gallery_images, requirements, current_version, last_updated, seo_title, seo_meta_description, stripe_product_id
 const productSchema = z.object({
   product_id: z.string().min(1, "Product ID is required"),
-  title: z.string().min(2, "Title must be at least 2 characters"),
+  name: z.string().min(2, "Name must be at least 2 characters"),
   slug: z.string()
     .min(2, "Slug must be at least 2 characters")
     .regex(/^[a-z0-9-]+$/i, "Slug must contain only letters, numbers, or hyphens"),
   short_description: z.string().min(5, "Short description must be at least 5 characters"),
-  description: z.string().min(5, "Description must be at least 5 characters"),
-  license_type: z.enum(["student", "commercial"]),
-  student_price: z.coerce.number().positive("Student price must be positive"),
-  commercial_price: z.coerce.number().positive("Commercial price must be positive"),
+  long_description: z.string().min(5, "Long description must be at least 5 characters"),
+  license_type: z.enum(["student", "commercial"]).optional(),
+  student_price: z.coerce.number().min(0).optional(),
+  commercial_price: z.coerce.number().min(0).optional(),
   category: z.string().min(1, "Category is required"),
   tags: z.string().optional(),
-  main_image: z.string().url("Main image must be a valid URL").optional().or(z.literal("")),
-  images: z.array(z.string().url("Image must be a valid URL")).optional(),
+  primary_image: z.string().url("Primary image must be a valid URL").optional().or(z.literal("")),
+  gallery_images: z.array(z.string().url("Image must be a valid URL")).optional(),
+  status: z.enum(["Draft", "Published"]).optional(),
+  outcome_promise: z.string().optional(),
+  requirements: z.string().optional(),
+  current_version: z.string().optional(),
+  last_updated: z.string().optional(),
+  seo_title: z.string().optional(),
+  seo_meta_description: z.string().optional(),
+  stripe_product_id: z.string().optional(),
 });
 
 export default function Product_Management() {
@@ -63,17 +74,25 @@ export default function Product_Management() {
     resolver: zodResolver(productSchema),
     defaultValues: {
       product_id: "",
-      title: "",
+      name: "",
       slug: "",
       short_description: "",
-      description: "",
+      long_description: "",
       license_type: "student",
       student_price: 0,
       commercial_price: 0,
       category: "",
       tags: "",
-      main_image: "",
-      images: [],
+      primary_image: "",
+      gallery_images: [],
+      status: "Published",
+      outcome_promise: "",
+      requirements: "",
+      current_version: "",
+      last_updated: "",
+      seo_title: "",
+      seo_meta_description: "",
+      stripe_product_id: "",
     },
   });
 
@@ -159,8 +178,8 @@ export default function Product_Management() {
 
   useEffect(() => {
     const subscription = prodForm.watch((value, { name }) => {
-      if (name === "title" && value.title) {
-        prodForm.setValue("slug", generateSlug(value.title));
+      if (name === "name" && value.name) {
+        prodForm.setValue("slug", generateSlug(value.name));
       }
     });
     return () => subscription.unsubscribe();
@@ -192,7 +211,7 @@ async function handleMainImageUpload(e) {
     if (!res.ok || data.error) {
       throw new Error(data.error?.message || "Failed to upload image");
     }
-    prodForm.setValue("main_image", data.secure_url);
+    prodForm.setValue("primary_image", data.secure_url);
   } catch (error) {
     console.error("Main image upload error:", error);
     toast.error(error.message || "Failed to upload main image");
@@ -230,7 +249,7 @@ async function handleCarouselUpload(e) {
       }
       urls.push(data.secure_url);
     }
-    prodForm.setValue("images", [...prodForm.getValues("images"), ...urls].slice(0, 5));
+    prodForm.setValue("gallery_images", [...prodForm.getValues("gallery_images"), ...urls].slice(0, 5));
   } catch (error) {
     console.error("Carousel image upload error:", error);
     toast.error(error.message || "Failed to upload carousel images");
@@ -241,8 +260,8 @@ async function handleCarouselUpload(e) {
 }
 
   function removeCarouselImage(idx) {
-    const currentImages = prodForm.getValues("images");
-    prodForm.setValue("images", currentImages.filter((_, i) => i !== idx));
+    const currentImages = prodForm.getValues("gallery_images");
+    prodForm.setValue("gallery_images", currentImages.filter((_, i) => i !== idx));
   }
 
   // CATEGORY CRUD
@@ -297,7 +316,7 @@ async function handleCarouselUpload(e) {
       // Validate product_id uniqueness
       let product_id = data.product_id.trim();
       if (!product_id) {
-        product_id = (data.title.replace(/\s+/g, "-").toLowerCase() + "-" + Date.now()).slice(0, 32);
+        product_id = (data.name.replace(/\s+/g, "-").toLowerCase() + "-" + Date.now()).slice(0, 32);
         prodForm.setValue("product_id", product_id);
         data.product_id = product_id;
       } else {
@@ -312,10 +331,19 @@ async function handleCarouselUpload(e) {
 
       const formattedData = {
         ...data,
-        student_price: Number(data.student_price),
-        commercial_price: Number(data.commercial_price),
+        student_price: Number(data.student_price ?? 0),
+        commercial_price: Number(data.commercial_price ?? 0),
         tags: data.tags ? data.tags.split(",").map((t) => t.trim()).join(",") : "",
-        images: data.images || [],
+        gallery_images: data.gallery_images || [],
+        status: data.status || "Published",
+        outcome_promise: data.outcome_promise || "",
+        requirements: data.requirements || "",
+        current_version: data.current_version || "",
+        last_updated: data.last_updated || "",
+        seo_title: data.seo_title || "",
+        seo_meta_description: data.seo_meta_description || "",
+        stripe_product_id: data.stripe_product_id || "",
+        primary_image: data.primary_image || "",
       };
 
       const validation = productSchema.safeParse(formattedData);
@@ -327,10 +355,14 @@ async function handleCarouselUpload(e) {
         throw new Error(errors);
       }
 
+      // Map spec shape to internal (title, description, main_image, images) for API/DB
+      const payload = specShapeToInternal(formattedData);
+      if (editingProd?._id) payload._id = editingProd._id;
+
       const res = await fetch("/api/products", {
         method: editingProd ? "PUT" : "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formattedData),
+        body: JSON.stringify(payload),
       });
 
       if (!res.ok) {
@@ -392,10 +424,11 @@ async function handleCarouselUpload(e) {
       );
     }
     if (searchQuery) {
+      const q = searchQuery.toLowerCase();
       result = result.filter(
         (p) =>
-          p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          p.product_id.toLowerCase().includes(searchQuery.toLowerCase())
+          (p.name || p.title || "").toLowerCase().includes(q) ||
+          (p.product_id || "").toLowerCase().includes(q)
       );
     }
     return result;
@@ -508,35 +541,84 @@ async function handleCarouselUpload(e) {
             </h3>
             <Form {...prodForm}>
               <form onSubmit={prodForm.handleSubmit(submitProduct)} className="space-y-4">
-                {[
-                  "product_id",
-                  "title",
-                  "slug",
-                  "short_description",
-                  "description",
-                  "tags",
-                ].map((f) => (
-                  <FormField
-                    key={f}
-                    control={prodForm.control}
-                    name={f}
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-gray-600">
-                          {f.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase())}
-                        </FormLabel>
-                        <FormControl>
-                          <Input
-                            {...field}
-                            className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md"
-                            placeholder={`Enter ${f.replace(/_/g, " ")}`}
-                          />
-                        </FormControl>
-                        <FormMessage className="text-red-500" />
-                      </FormItem>
-                    )}
-                  />
-                ))}
+                <FormField
+                  control={prodForm.control}
+                  name="product_id"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Product ID (primary)</FormLabel>
+                      <FormControl>
+                        <Input {...field} className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md" placeholder="e.g. iso19650-bep-template-pack" />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Name</FormLabel>
+                      <FormControl>
+                        <Input {...field} className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md" placeholder="e.g. ISO 19650 BEP Template Pack" />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="slug"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Slug</FormLabel>
+                      <FormControl>
+                        <Input {...field} className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md" placeholder="Auto-generated from name" />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="short_description"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Short description</FormLabel>
+                      <FormControl>
+                        <Input {...field} className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md" placeholder="e.g. A plug-and-play BEP template pack aligned to ISO 19650." />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="long_description"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Long description</FormLabel>
+                      <FormControl>
+                        <Textarea {...field} className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md min-h-[100px]" placeholder="e.g. Includes BEP structure, MIDP/TIDP examples, naming rules, and checklists..." />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="tags"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Tags (link)</FormLabel>
+                      <FormControl>
+                        <Input {...field} className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md" placeholder="e.g. ISO 19650, BEP, MIDP, TIDP, Naming" />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
                 <FormField
                   control={prodForm.control}
                   name="license_type"
@@ -620,10 +702,151 @@ async function handleCarouselUpload(e) {
                 />
                 <FormField
                   control={prodForm.control}
-                  name="main_image"
+                  name="status"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-600">Main Image</FormLabel>
+                      <FormLabel className="text-gray-600">Status</FormLabel>
+                      <Select onValueChange={field.onChange} value={field.value || "Published"}>
+                        <FormControl>
+                          <SelectTrigger className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md">
+                            <SelectValue placeholder="Status" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="Draft">Draft</SelectItem>
+                          <SelectItem value="Published">Published</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="outcome_promise"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Outcome / Promise</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md"
+                          placeholder="e.g. Write a credible BEP in hours, not days."
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="requirements"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Requirements</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md"
+                          placeholder="e.g. Word/Google Docs + basic ISO 19650 familiarity"
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="current_version"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Current version</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md"
+                          placeholder="e.g. v1.0"
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="last_updated"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Last updated</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          type="date"
+                          className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md"
+                          placeholder="e.g. 2026-02-25"
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="seo_title"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">SEO title</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md"
+                          placeholder="e.g. ISO 19650 BEP Template Pack (Download)"
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="seo_meta_description"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">SEO meta description</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          {...field}
+                          className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md min-h-[80px]"
+                          placeholder="e.g. Download an ISO 19650-aligned BEP template pack with MIDP/TIDP examples and naming rules."
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="stripe_product_id"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Stripe product id</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md"
+                          placeholder="e.g. prod_XXXX"
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="primary_image"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Primary image</FormLabel>
                       <FormControl>
                         <Input
                           type="file"
@@ -642,10 +865,10 @@ async function handleCarouselUpload(e) {
                       )}
                       {field.value && (
                         <div className="mt-2">
-                          <p className="text-sm text-gray-600">Main Image Preview:</p>
+                          <p className="text-sm text-gray-600">Primary image preview:</p>
                           <img
                             src={field.value}
-                            alt="Main Image Preview"
+                            alt="Primary image preview"
                             className="w-40 h-40 object-cover rounded-md shadow-sm"
                             onError={(e) => {
                               e.target.src = "https://via.placeholder.com/150";
@@ -659,10 +882,10 @@ async function handleCarouselUpload(e) {
                 />
                 <FormField
                   control={prodForm.control}
-                  name="images"
+                  name="gallery_images"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-gray-600">Carousel Images (Optional, up to 5)</FormLabel>
+                      <FormLabel className="text-gray-600">Gallery images (optional, up to 5)</FormLabel>
                       <FormControl>
                         <Input
                           type="file"
@@ -682,7 +905,7 @@ async function handleCarouselUpload(e) {
                       )}
                       {field.value?.length > 0 && (
                         <div className="mt-2">
-                          <p className="text-sm text-gray-600">Carousel Images Preview:</p>
+                          <p className="text-sm text-gray-600">Gallery images preview:</p>
                           <div className="flex flex-wrap gap-3">
                             {field.value.map((img, idx) => (
                               <div key={idx} className="relative">
@@ -814,7 +1037,7 @@ async function handleCarouselUpload(e) {
                 >
                   <div className="flex justify-between items-center">
                     <div>
-                      <strong className="text-gray-800">{p.title}</strong>
+                      <strong className="text-gray-800">{p.name || p.title}</strong>
                       <p className="text-sm text-gray-600">ID: {p.product_id}</p>
                     </div>
                     <div className="flex gap-2">
@@ -824,10 +1047,28 @@ async function handleCarouselUpload(e) {
                         className="border-gray-300 text-gray-700 hover:bg-gray-100 rounded-md"
                         onClick={(e) => {
                           e.stopPropagation();
+                          const spec = productToSpecShape(p);
                           prodForm.reset({
-                            ...p,
-                            main_image: p.main_image || "",
-                            images: p.images || [],
+                            product_id: p.product_id,
+                            name: spec.name ?? p.title ?? "",
+                            slug: p.slug ?? "",
+                            short_description: p.short_description ?? "",
+                            long_description: spec.long_description ?? p.description ?? "",
+                            category: p.category ?? "",
+                            tags: p.tags ?? "",
+                            primary_image: spec.primary_image ?? p.main_image ?? "",
+                            gallery_images: spec.gallery_images ?? p.images ?? [],
+                            status: p.status ?? "Published",
+                            outcome_promise: p.outcome_promise ?? "",
+                            requirements: p.requirements ?? "",
+                            current_version: p.current_version ?? "",
+                            last_updated: p.last_updated ?? "",
+                            seo_title: p.seo_title ?? "",
+                            seo_meta_description: p.seo_meta_description ?? "",
+                            stripe_product_id: p.stripe_product_id ?? "",
+                            license_type: p.license_type ?? "student",
+                            student_price: p.student_price ?? 0,
+                            commercial_price: p.commercial_price ?? 0,
                           });
                           setEditingProd(p);
                         }}
@@ -876,7 +1117,7 @@ async function handleCarouselUpload(e) {
           {/* Product Preview */}
           {preview && (
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="text-lg font-semibold mb-4 text-gray-700">Preview: {preview.title}</h4>
+              <h4 className="text-lg font-semibold mb-4 text-gray-700">Preview: {preview.name || preview.title}</h4>
               {preview.images?.length > 0 && (
                 <Button
                   variant="outline"
