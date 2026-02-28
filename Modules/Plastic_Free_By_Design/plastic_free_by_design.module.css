@@ -12,14 +12,14 @@
 }
 
 #_H2 {
-  margin-bottom: 0px;
+  margin: 0;
   font-size: 1.25rem;
   line-height: 1.6rem;
 }
 
 
 #_H3 {
-  margin-bottom: 0px;
+  margin: 0;
   font-size: 0.85rem;
   line-height: 1.3rem;
 }
@@ -191,6 +191,7 @@
 /* 5th product — span 2 columns and taller */
 .cardLarge {
   grid-column: span 2;
+  grid-row: span 2;
 }
 
 /* Featured card positioning */
@@ -207,20 +208,25 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-.cardLarge .imageWrapper {
-  aspect-ratio: 2 / 1.4; /* wide and tall */
+.cardLarge #imageWrapper {
+  aspect-ratio: 1 / 1;
 }
 
 .image {
   object-fit: cover;
-  border-radius: 8px;
+  object-position: center;
 }
 
 /* Text section under the image */
 .text {
   padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .title {
@@ -233,7 +239,7 @@
 .subtitle {
   color: #aaa;
   font-size: 0.9rem;
-  margin-top: 6px;
+  margin: 0;
 }
 
 /* Loading */

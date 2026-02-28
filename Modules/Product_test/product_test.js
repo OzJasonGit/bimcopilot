@@ -24,10 +24,10 @@ const Products = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-  const chunkIntoGroupsOfFive = (array) => {
+  const chunkIntoGroupsOfSix = (array) => {
     const groups = [];
-    for (let i = 0; i < array.length; i += 5) {
-      groups.push(array.slice(i, i + 5));
+    for (let i = 0; i < array.length; i += 6) {
+      groups.push(array.slice(i, i + 6));
     }
     return groups;
   };
@@ -58,7 +58,9 @@ const Products = () => {
     fetchProducts();
   }, []);
 
-  const productGroups = chunkIntoGroupsOfFive(products);
+  const productGroups = chunkIntoGroupsOfSix(products);
+  const featuredGroups = productGroups.filter((group) => group.length === 6);
+  const remainderProducts = productGroups.find((group) => group.length < 6) || [];
 
   return (
     <>
@@ -75,7 +77,7 @@ const Products = () => {
         <section className={styles.center_holder}>
           <div className={styles.grid_0_product}>
             <div className={styles.grid}>
-              {productGroups.map((group, groupIndex) => {
+              {featuredGroups.map((group, groupIndex) => {
                 const isEvenGroup = groupIndex % 2 === 0;
 
                 return (
@@ -93,7 +95,7 @@ const Products = () => {
                               className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                               style={{ position: "relative", width: "100%", height: "auto" }}>
 
-                          <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                          <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
                             <Image
                               src={product.image}
                               alt={product.title}
@@ -141,7 +143,7 @@ const Products = () => {
                                     className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                                     style={{ position: "relative", width: "100%", height: "auto" }}>
 
-                                <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                                <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
                                   <Image
                                     src={group[3].image}
                                     alt={group[3].title}
@@ -179,7 +181,7 @@ const Products = () => {
                                     className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                                     style={{ position: "relative", width: "100%", height: "auto" }}>
 
-                                <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                                <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
                                   <Image
                                     src={group[4].image}
                                     alt={group[4].title}
@@ -210,6 +212,26 @@ const Products = () => {
                                 <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[4].subtitle)}</p>
                               </div>
                             </div>
+                            {group[5] && (
+                              <div id={styles.ROW_2} key={group[5].id} className={styles.card}>
+                                <Link href={`/products/${group[5].slug}`}
+                                      className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
+                                      style={{ position: "relative", width: "100%", height: "auto" }}>
+                                  <div id={styles.imageWrapper} className="transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
+                                    <Image
+                                      src={group[5].image}
+                                      alt={group[5].title}
+                                      fill
+                                      className={styles.image}
+                                    />
+                                  </div>
+                                </Link>
+                                <div className={styles.text}>
+                                  <h2 id={styles._H2} className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(group[5].title)}</h2>
+                                  <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[5].subtitle)}</p>
+                                </div>
+                              </div>
+                            )}
                           </>
                           
                         ) : (
@@ -239,7 +261,7 @@ const Products = () => {
                                     className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                                     style={{ position: "relative", width: "100%", height: "auto" }}>
 
-                                <div id={styles.imageWrapper} className="transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                                <div id={styles.imageWrapper} className="transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
                                   <Image
                                     src={group[4].image}
                                     alt={group[4].title}
@@ -278,13 +300,13 @@ const Products = () => {
 
 
 
-                            <div key={group[3].id} className={styles.card}>
+                            <div id={styles.ROW_2} key={group[3].id} className={styles.card}>
                               <Link href={`/products/${group[3].slug}`}
                                   className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                                   style={{ position: "relative", width: "100%", height: "auto" }}>
 
                                   {/* Image wrapper */}
-                                  <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                                  <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
                                     <Image
                                       src={group[3].image}
                                       alt={group[3].title}
@@ -315,6 +337,26 @@ const Products = () => {
                                 <p className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[3].subtitle)}</p>
                               </div>
                             </div>
+                            {group[5] && (
+                              <div id={styles.ROW_2} key={group[5].id} className={styles.card}>
+                                <Link href={`/products/${group[5].slug}`}
+                                  className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
+                                  style={{ position: "relative", width: "100%", height: "auto" }}>
+                                    <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
+                                      <Image
+                                        src={group[5].image}
+                                        alt={group[5].title}
+                                        fill
+                                        className={styles.image}
+                                      />
+                                    </div>
+                                </Link>
+                                <div className={styles.text}>
+                                  <h2 className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(group[5].title)}</h2>
+                                  <p className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(group[5].subtitle)}</p>
+                                </div>
+                              </div>
+                            )}
 
 
                           </>
@@ -328,6 +370,30 @@ const Products = () => {
                   </React.Fragment>
                 );
               })}
+
+              {/* Remainder products (non-featured) to prevent broken big-card alignment */}
+              {remainderProducts.map((product) => (
+                <div id={styles.ROW_1} key={product.id} className={styles.card}>
+                  <Link
+                    href={`/products/${product.slug}`}
+                    className="group overflow-hidden rounded-2xl cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
+                    style={{ position: "relative", width: "100%", height: "auto" }}
+                  >
+                    <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
+                      <Image
+                        src={product.image}
+                        alt={product.title}
+                        fill
+                        className={styles.image}
+                      />
+                    </div>
+                  </Link>
+                  <div className={styles.text}>
+                    <h2 id={styles._H2} className={styles.title} class=" text-stone-200 ... font-avant_garde_bold ...">{parse(product.title)} </h2>
+                    <p id={styles._H3} className={styles.subtitle} class=" text-stone-200 ... font-avant_garde_medium ...">{parse(product.subtitle)}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

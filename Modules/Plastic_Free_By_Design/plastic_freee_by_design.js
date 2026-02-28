@@ -182,7 +182,7 @@ const PFBD = () => {
                               className="group overflow-hidden cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                               style={{ position: "relative", width: "100%", height: "auto" }}>
 
-                          <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                          <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
                             <Image
                               src={product.image}
                               alt={product.title}
@@ -230,7 +230,7 @@ const PFBD = () => {
                                     className="group overflow-hidden cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                                     style={{ position: "relative", width: "100%", height: "auto" }}>
 
-                                <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                                <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
                                   <Image
                                     src={group[3].image}
                                     alt={group[3].title}
@@ -268,7 +268,7 @@ const PFBD = () => {
                                     className="group overflow-hidden cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                                     style={{ position: "relative", width: "100%", height: "auto" }}>
 
-                                <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                                <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
                                   <Image
                                     src={group[4].image}
                                     alt={group[4].title}
@@ -328,7 +328,7 @@ const PFBD = () => {
                                     className="group overflow-hidden cursor-pointer transition-all duration-500 shadow-none hover:shadow-xl"
                                     style={{ position: "relative", width: "100%", height: "auto" }}>
 
-                                <div id={styles.imageWrapper} className="transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                                <div id={styles.imageWrapper} className="transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
                                   <Image
                                     src={group[4].image}
                                     alt={group[4].title}
@@ -373,7 +373,7 @@ const PFBD = () => {
                                   style={{ position: "relative", width: "100%", height: "auto" }}>
 
                                   {/* Image wrapper */}
-                                  <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
+                                  <div id={styles.imageWrapper} className=" transition-transform duration-500 ease-in-out transform-gpu origin-center scale-100 group-hover:scale-105 ">
                                     <Image
                                       src={group[3].image}
                                       alt={group[3].title}
