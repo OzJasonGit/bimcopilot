@@ -42,8 +42,8 @@ jobs:
             # Pull latest changes from git
             git pull origin main
             npm install -f
-            npm run build  # Assuming you have a build script defined in your package.json
-            pm2 start next  # Restart PM2 process
-            systemctl restart apache2  # Restart Apache server
+            npm run build
+            pm2 restart next || pm2 start npm --name next -- start  # Restart existing app or start if not running
+            systemctl restart apache2
 
             # End of script
