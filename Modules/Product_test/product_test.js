@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import Image from 'next/image';
@@ -22,7 +22,10 @@ import styles from './products.module.css';
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const sectionRef = useRef(null);
   const router = useRouter();
+  const PRODUCTS_PER_PAGE = 12; // 10 small + 2 large (two 6-item blocks)
 
   const chunkIntoGroupsOfSix = (array) => {
     const groups = [];
@@ -58,9 +61,49 @@ const Products = () => {
     fetchProducts();
   }, []);
 
-  const productGroups = chunkIntoGroupsOfSix(products);
+  const totalPages = Math.max(1, Math.ceil(products.length / PRODUCTS_PER_PAGE));
+  const start = (currentPage - 1) * PRODUCTS_PER_PAGE;
+  const pagedProducts = products.slice(start, start + PRODUCTS_PER_PAGE);
+  const productGroups = chunkIntoGroupsOfSix(pagedProducts);
   const featuredGroups = productGroups.filter((group) => group.length === 6);
   const remainderProducts = productGroups.find((group) => group.length < 6) || [];
+
+  useEffect(() => {
+    if (currentPage > totalPages) setCurrentPage(totalPages);
+  }, [currentPage, totalPages]);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+    sectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, [currentPage]);
+
+  const renderPagination = (isTop = false) => (
+    <div className={`${styles.paginationWrap} ${isTop ? styles.paginationTop : ""}`}>
+      <button
+        className={styles.pageBtn}
+        disabled={currentPage === 1}
+        onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+      >
+        Prev
+      </button>
+      {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+        <button
+          key={page}
+          className={`${styles.pageBtn} ${currentPage === page ? styles.pageBtnActive : ""}`}
+          onClick={() => setCurrentPage(page)}
+        >
+          {page}
+        </button>
+      ))}
+      <button
+        className={styles.pageBtn}
+        disabled={currentPage === totalPages}
+        onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+      >
+        Next
+      </button>
+    </div>
+  );
 
   return (
     <>
@@ -74,8 +117,10 @@ const Products = () => {
           <div className={styles.spinner}></div>
         </div>
       ) : (
-        <section className={styles.center_holder}>
+        <section ref={sectionRef} className={styles.center_holder}>
           <div className={styles.grid_0_product}>
+            <div className={styles.productsGridMain}>
+            {pagedProducts.length > 0 && renderPagination(true)}
             <div className={styles.grid}>
               {featuredGroups.map((group, groupIndex) => {
                 const isEvenGroup = groupIndex % 2 === 0;
@@ -394,6 +439,8 @@ const Products = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            {pagedProducts.length > 0 && renderPagination(false)}
             </div>
           </div>
         </section>
