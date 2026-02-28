@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { connectToDatabase } from "@/app/utils/mongodb";
 import { getCurrentUser } from "@/app/utils/auth";
 import { specShapeToInternal } from "@/app/lib/product-schema";
+import { stockStatusFromQuantity } from "@/app/lib/product-stock";
 import { v2 as cloudinary } from "cloudinary";
 
 cloudinary.config({
@@ -32,6 +33,8 @@ const ProductSchema = new mongoose.Schema({
   seo_title: { type: String },
   seo_meta_description: { type: String },
   stripe_product_id: { type: String },
+  stock_status: { type: String, enum: ["in_stock", "out_of_stock", "low_stock", "pre_order"] },
+  stock_quantity: { type: Number, min: 0 },
 }, { timestamps: true });
 const Product = mongoose.models.Product || mongoose.model("Product", ProductSchema);
 
@@ -69,6 +72,9 @@ export async function POST(req) {
       return NextResponse.json({ success: false, message: "Required fields are missing (product_id, name/title, slug, category)" }, { status: 400 });
     }
     if (!Array.isArray(data.images)) data.images = [];
+    if (data.stock_quantity != null) {
+      data.stock_status = stockStatusFromQuantity(data.stock_quantity);
+    }
     const exists = await Product.findOne({ slug: data.slug });
     if (exists) {
       return NextResponse.json({ success: false, message: "Product with this slug already exists" }, { status: 400 });
@@ -95,6 +101,9 @@ export async function PUT(req) {
     }
     data = specShapeToInternal(data);
     if (!Array.isArray(data.images)) delete data.images; // don't overwrite when not sent
+    if (data.stock_quantity != null) {
+      data.stock_status = stockStatusFromQuantity(data.stock_quantity);
+    }
     const updated = await Product.findByIdAndUpdate(data._id, data, { new: true, runValidators: true });
     if (!updated) {
       return NextResponse.json({ success: false, message: "Product not found" }, { status: 404 });

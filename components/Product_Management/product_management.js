@@ -23,11 +23,17 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
 import { debounce } from "lodash";
 import { useFormatPrice } from '@/components/Context/CurrencyContext';
+import Link from "next/link";
 import { productToSpecShape, specShapeToInternal } from "@/app/lib/product-schema";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import styles from "./product_management.module.css";
 
 // SCHEMAS
 const categorySchema = z.object({
@@ -61,6 +67,8 @@ const productSchema = z.object({
   seo_title: z.string().optional(),
   seo_meta_description: z.string().optional(),
   stripe_product_id: z.string().optional(),
+  stock_status: z.enum(["in_stock", "out_of_stock", "low_stock", "pre_order"]).optional(),
+  stock_quantity: z.coerce.number().min(0).optional(),
 });
 
 export default function Product_Management() {
@@ -93,6 +101,8 @@ export default function Product_Management() {
       seo_title: "",
       seo_meta_description: "",
       stripe_product_id: "",
+      stock_status: "in_stock",
+      stock_quantity: 0,
     },
   });
 
@@ -111,9 +121,20 @@ export default function Product_Management() {
   const [mainImageUploading, setMainImageUploading] = useState(false);
   const [carouselUploading, setCarouselUploading] = useState(false);
   const [formError, setFormError] = useState("");
+  const [addMode, setAddMode] = useState(false);
+  const [categoriesOpen, setCategoriesOpen] = useState(false);
+  const [filterCategory, setFilterCategory] = useState("all");
+  const [filterStatus, setFilterStatus] = useState("all");
+  const [filterStock, setFilterStock] = useState("all");
+  const [airtableConfigured, setAirtableConfigured] = useState(null);
+  const [airtableSyncing, setAirtableSyncing] = useState(false);
+  const [airtableImporting, setAirtableImporting] = useState(false);
+  const [selectedIds, setSelectedIds] = useState(() => new Set());
+  const [bulkDeleting, setBulkDeleting] = useState(false);
   const mainImageInput = useRef();
   const carouselInput = useRef();
-  const itemsPerPage = 10;
+  const itemsPerPage = 25;
+  const productPanelOpen = addMode || editingProd !== null;
 
   // Cloudinary config
   const CLOUDINARY_CLOUD_NAME = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
@@ -124,6 +145,65 @@ export default function Product_Management() {
   // Auto-generate slug
   const generateSlug = (text) =>
     text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+
+  // Check if Airtable is configured (GET returns 503 when not configured)
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/airtable/products")
+      .then((r) => {
+        if (cancelled) return;
+        setAirtableConfigured(r.status === 503 ? false : r.ok);
+      })
+      .catch(() => { if (!cancelled) setAirtableConfigured(false); });
+    return () => { cancelled = true; };
+  }, []);
+
+  const handleSyncToAirtable = async () => {
+    setAirtableSyncing(true);
+    try {
+      const res = await fetch("/api/airtable/products", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "sync" }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok) {
+        toast.success(data.message || "Synced to Airtable.");
+      } else {
+        toast.error(data.error || "Sync failed.");
+      }
+    } catch (e) {
+      toast.error(e.message || "Sync failed.");
+    } finally {
+      setAirtableSyncing(false);
+    }
+  };
+
+  const handleImportFromAirtable = async () => {
+    setAirtableImporting(true);
+    try {
+      const res = await fetch("/api/airtable/products", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "import" }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok) {
+        toast.success(data.message || "Imported from Airtable.");
+        const prodRes = await fetch("/api/products");
+        if (prodRes.ok) {
+          const list = await prodRes.json();
+          setProducts(Array.isArray(list) ? list : []);
+        }
+      } else {
+        toast.error(data.error || "Import failed.");
+      }
+    } catch (e) {
+      toast.error(e.message || "Import failed.");
+    } finally {
+      setAirtableImporting(false);
+    }
+  };
 
   // Load initial data
   useEffect(() => {
@@ -344,6 +424,8 @@ async function handleCarouselUpload(e) {
         seo_meta_description: data.seo_meta_description || "",
         stripe_product_id: data.stripe_product_id || "",
         primary_image: data.primary_image || "",
+        stock_status: data.stock_status || "in_stock",
+        stock_quantity: Number(data.stock_quantity ?? 0),
       };
 
       const validation = productSchema.safeParse(formattedData);
@@ -373,6 +455,7 @@ async function handleCarouselUpload(e) {
       toast.success(`Product ${editingProd ? "updated" : "added"} successfully`);
       prodForm.reset();
       setEditingProd(null);
+      setAddMode(false);
       setProducts(
         await fetch("/api/products")
           .then((r) => r.json())
@@ -401,10 +484,85 @@ async function handleCarouselUpload(e) {
       toast.success("Product deleted");
       setProducts((prev) => prev.filter((p) => p.product_id !== id));
       if (preview?.product_id === id) setPreview(null);
+      setSelectedIds((prev) => { const next = new Set(prev); next.delete(id); return next; });
     } catch (error) {
       toast.error(error.message || "Failed to delete product");
     } finally {
       setLoading(false);
+    }
+  };
+
+  const toggleSelect = (id) => {
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
+
+  const toggleSelectAllOnPage = () => {
+    const pageIds = paginatedProducts.map((p) => p.product_id);
+    const allSelected = pageIds.length > 0 && pageIds.every((id) => selectedIds.has(id));
+    setSelectedIds((prev) => {
+      const next = new Set(prev);
+      if (allSelected) pageIds.forEach((id) => next.delete(id));
+      else pageIds.forEach((id) => next.add(id));
+      return next;
+    });
+  };
+
+  const clearSelection = () => setSelectedIds(new Set());
+
+  const bulkDeleteSelected = async () => {
+    const ids = Array.from(selectedIds);
+    if (!ids.length) return;
+    if (!confirm(`Delete ${ids.length} selected product(s)? This cannot be undone.`)) return;
+    setBulkDeleting(true);
+    let ok = 0;
+    let fail = 0;
+    for (const id of ids) {
+      try {
+        const res = await fetch(`/api/products?id=${encodeURIComponent(id)}`, { method: "DELETE" });
+        if (res.ok) ok++;
+        else fail++;
+      } catch {
+        fail++;
+      }
+    }
+    setBulkDeleting(false);
+    const idSet = new Set(ids);
+    clearSelection();
+    if (preview && idSet.has(preview.product_id)) setPreview(null);
+    if (ok) toast.success(`${ok} product(s) deleted.`);
+    if (fail) toast.error(`${fail} product(s) failed to delete.`);
+    if (ok) {
+      const res = await fetch("/api/products");
+      const data = await res.json();
+      setProducts(Array.isArray(data) ? data : data.data ?? []);
+    }
+  };
+
+  const bulkSyncSelectedToAirtable = async () => {
+    const ids = Array.from(selectedIds);
+    if (!ids.length) return;
+    setAirtableSyncing(true);
+    try {
+      const res = await fetch("/api/airtable/products", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "sync", productIds: ids }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok) {
+        toast.success(data.message || `Synced ${ids.length} product(s) to Airtable.`);
+      } else {
+        toast.error(data.error || "Sync failed.");
+      }
+    } catch (e) {
+      toast.error(e.message || "Sync failed.");
+    } finally {
+      setAirtableSyncing(false);
     }
   };
 
@@ -431,8 +589,17 @@ async function handleCarouselUpload(e) {
           (p.product_id || "").toLowerCase().includes(q)
       );
     }
+    if (filterCategory && filterCategory !== "all") {
+      result = result.filter((p) => (p.category || "") === filterCategory);
+    }
+    if (filterStatus && filterStatus !== "all") {
+      result = result.filter((p) => (p.status || "Published") === filterStatus);
+    }
+    if (filterStock && filterStock !== "all") {
+      result = result.filter((p) => (p.stock_status || "in_stock") === filterStock);
+    }
     return result;
-  }, [products, filterTags, searchQuery]);
+  }, [products, filterTags, searchQuery, filterCategory, filterStatus, filterStock]);
 
   // Pagination
   const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
@@ -448,99 +615,243 @@ async function handleCarouselUpload(e) {
     setFormError("");
   };
 
+  const closePanel = () => {
+    setAddMode(false);
+    setEditingProd(null);
+    prodForm.reset();
+    setFormError("");
+  };
+
+  const truncate = (str, len = 35) => {
+    if (!str || typeof str !== "string") return "—";
+    const s = str.replace(/\s+/g, " ").trim();
+    return s.length > len ? s.slice(0, len) + "…" : s;
+  };
+
+  const defaultProductValues = {
+    product_id: "", name: "", slug: "", short_description: "", long_description: "",
+    license_type: "student", student_price: 0, commercial_price: 0, category: "", tags: "",
+    primary_image: "", gallery_images: [], status: "Published", outcome_promise: "",
+    requirements: "", current_version: "", last_updated: "", seo_title: "", seo_meta_description: "", stripe_product_id: "",
+    stock_status: "in_stock", stock_quantity: 0,
+  };
+
   return (
-    <div className="container mx-auto p-6 bg-gray-50 min-h-screen">
+    <div className={styles.container}>
       {loading && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
           <div className="text-white text-lg">Loading...</div>
         </div>
       )}
-
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">Product Management Dashboard</h1>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Left: Forms */}
-        <div className="space-y-8">
-          {/* Category Form */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-4 text-gray-700">
-              {editingCat ? "Edit Category" : "Add Category"}
-            </h3>
-            <Form {...catForm}>
-              <form onSubmit={catForm.handleSubmit(submitCategory)} className="space-y-4">
-                <FormField
-                  control={catForm.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-gray-600">Category Name</FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md"
-                          placeholder="Enter category name"
-                        />
-                      </FormControl>
-                      <FormMessage className="text-red-500" />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={catForm.control}
-                  name="slug"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel className="text-gray-600">Slug</FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md"
-                          placeholder="Auto-generated slug"
-                        />
-                      </FormControl>
-                      <FormMessage className="text-red-500" />
-                    </FormItem>
-                  )}
-                />
-                <div className="flex gap-3">
-                  <Button
-                    type="submit"
-                    className="bg-blue-600 hover:bg-blue-700 text-white rounded-md px-4 py-2 transition"
-                  >
-                    {editingCat ? "Update" : "Submit"}
-                  </Button>
-                  {editingCat && (
-                    <>
-                      <Button
-                        type="button"
-                        variant="destructive"
-                        className="bg-red-600 hover:bg-red-700 text-white rounded-md px-4 py-2 transition"
-                        onClick={() => deleteCategory(editingCat.slug)}
-                      >
-                        Delete
-                      </Button>
-                      <Button
-                        type="button"
-                        variant="outline"
-                        className="border-gray-300 text-gray-700 hover:bg-gray-100 rounded-md px-4 py-2 transition"
-                        onClick={() => cancelEditing(catForm, setEditingCat)}
-                      >
-                        Cancel
-                      </Button>
-                    </>
-                  )}
-                </div>
-              </form>
-            </Form>
+      <header className={styles.toolbar}>
+        <div className={styles.toolbarInner }>
+          <div>
+            <h1 className={styles.toolbarTitle}>Products</h1>
+            <p className={styles.toolbarSubtitle}>Manage your product catalog</p>
           </div>
-
-          {/* Product Form */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-4 text-gray-700">
-              {editingProd ? "Edit Product" : "Add Product"}
-            </h3>
-            <Form {...prodForm}>
-              <form onSubmit={prodForm.handleSubmit(submitProduct)} className="space-y-4">
+          <div className={styles.toolbarActions}>
+            <Input
+              type="text"
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="h-9 w-40 sm:w-52 border-gray-200 rounded-md bg-white"
+            />
+            <Select value={filterCategory} onValueChange={setFilterCategory}>
+              <SelectTrigger className="h-9 w-36 border-gray-200 rounded-md bg-white">
+                <SelectValue placeholder="Category" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All categories</SelectItem>
+                {categories.map((c) => (
+                  <SelectItem key={c.slug} value={c.slug}>{c.name}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <Select value={filterStatus} onValueChange={setFilterStatus}>
+              <SelectTrigger className="h-9 w-28 border-gray-200 rounded-md bg-white">
+                <SelectValue placeholder="Status" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All</SelectItem>
+                <SelectItem value="Published">Published</SelectItem>
+                <SelectItem value="Draft">Draft</SelectItem>
+              </SelectContent>
+            </Select>
+            <Select value={filterStock} onValueChange={setFilterStock}>
+              <SelectTrigger className="h-9 w-28 border-gray-200 rounded-md bg-white">
+                <SelectValue placeholder="Stock" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All stock</SelectItem>
+                <SelectItem value="in_stock">In stock</SelectItem>
+                <SelectItem value="out_of_stock">Out of stock</SelectItem>
+                <SelectItem value="low_stock">Low stock</SelectItem>
+                <SelectItem value="pre_order">Pre-order</SelectItem>
+              </SelectContent>
+            </Select>
+            <Button
+              className="h-9 rounded-md"
+              onClick={() => { setAddMode(true); setEditingProd(null); prodForm.reset(defaultProductValues); }}
+            >
+              Add product
+            </Button>
+            <Button variant="outline" className="h-9 rounded-md border-gray-200" onClick={() => setCategoriesOpen(true)}>
+              Categories
+            </Button>
+            {airtableConfigured === true && (
+              <>
+                <Button
+                  variant="outline"
+                  className="h-9 rounded-md border-gray-200"
+                  onClick={handleSyncToAirtable}
+                  disabled={airtableSyncing}
+                >
+                  {airtableSyncing ? "Syncing…" : "Sync to Airtable"}
+                </Button>
+                <Button
+                  variant="outline"
+                  className="h-9 rounded-md border-gray-200"
+                  onClick={handleImportFromAirtable}
+                  disabled={airtableImporting}
+                >
+                  {airtableImporting ? "Importing…" : "Import from Airtable"}
+                </Button>
+              </>
+            )}
+          </div>
+        </div>
+      </header>
+      {selectedIds.size > 0 && (
+        <div className={styles.bulkBar}>
+          <span className="text-sm font-medium text-blue-800">{selectedIds.size} selected</span>
+          <Button variant="outline" size="sm" className="h-8" onClick={clearSelection}>
+            Clear selection
+          </Button>
+          <Button variant="destructive" size="sm" className="h-8" onClick={bulkDeleteSelected} disabled={bulkDeleting}>
+            {bulkDeleting ? "Deleting…" : "Delete selected"}
+          </Button>
+          {airtableConfigured === true && (
+            <Button variant="outline" size="sm" className="h-8" onClick={bulkSyncSelectedToAirtable} disabled={airtableSyncing}>
+              {airtableSyncing ? "Syncing…" : "Sync selected to Airtable"}
+            </Button>
+          )}
+        </div>
+      )}
+      <div className={styles.tableWrap}>
+        <div className={styles.tableCard}>
+          <div className={styles.tableScroll}>
+          <table className={styles.table}>
+            <thead className={styles.thead}>
+              <tr>
+                <th className={styles.th} style={{ width: 40 }}>
+                  <input
+                    type="checkbox"
+                    checked={paginatedProducts.length > 0 && paginatedProducts.every((p) => selectedIds.has(p.product_id))}
+                    onChange={toggleSelectAllOnPage}
+                    aria-label="Select all on page"
+                    className="h-4 w-4 rounded border-gray-300"
+                  />
+                </th>
+                <th className={styles.th} style={{ width: 48 }} />
+                <th className={styles.th}>Name</th>
+                <th className={styles.th} style={{ width: 112 }}>Status</th>
+                <th className={styles.th}>Category</th>
+                <th className={styles.th} style={{ maxWidth: 140 }}>Tags</th>
+                <th className={styles.th} style={{ minWidth: 120 }}>Short description</th>
+                <th className={styles.th} style={{ minWidth: 100 }}>Outcome/Promise</th>
+                <th className={styles.th} style={{ minWidth: 100 }}>Requirements</th>
+                <th className={styles.th} style={{ width: 96 }}>Version</th>
+                <th className={styles.th} style={{ width: 112 }}>Updated</th>
+                <th className={styles.th} style={{ minWidth: 120 }}>SEO title</th>
+                <th className={styles.th} style={{ width: 100 }}>Stripe ID</th>
+                <th className={styles.th} style={{ width: 100 }}>Stock</th>
+                <th className={styles.th} style={{ width: 72 }}>Qty</th>
+                <th className={styles.th} style={{ width: 100 }}>Actions</th>
+              </tr>
+            </thead>
+            <tbody className={styles.tbody}>
+              {paginatedProducts.length === 0 && (
+                <tr><td colSpan={16} className={`${styles.td} ${styles.emptyState}`}>No products yet. Click &quot;Add product&quot; to create one.</td></tr>
+              )}
+              {paginatedProducts.map((p) => (
+                <tr key={p.product_id} className={styles.tr}>
+                  <td className={styles.td} style={{ width: 40 }}>
+                    <input
+                      type="checkbox"
+                      checked={selectedIds.has(p.product_id)}
+                      onChange={() => toggleSelect(p.product_id)}
+                      aria-label={`Select ${p.name || p.title || p.product_id}`}
+                      className="h-4 w-4 rounded border-gray-300"
+                    />
+                  </td>
+                  <td className={styles.td}>
+                    <div className={styles.thumb}>
+                      {(p.main_image || p.primary_image) && (
+                        <img src={p.main_image || p.primary_image} alt="" onError={(e) => { e.target.onerror = null; e.target.style.display = "none"; }} />
+                      )}
+                    </div>
+                  </td>
+                  <td className={styles.td}>
+                    <div className={styles.nameCell}>{(p.name || p.title) || "—"}</div>
+                    <div className={styles.productId}>{p.product_id}</div>
+                  </td>
+                  <td className={styles.td}>
+                    <span className={`${styles.statusPill} ${p.status === "Published" ? styles.statusPublished : styles.statusDraft}`}>
+                      {p.status || "Published"}
+                    </span>
+                  </td>
+                  <td className={styles.td}>{p.category || "—"}</td>
+                  <td className={styles.td} style={{ maxWidth: 140 }} title={p.tags || ""}>{p.tags ? (String(p.tags).length > 40 ? String(p.tags).slice(0, 40) + "…" : p.tags) : "—"}</td>
+                  <td className={styles.td} title={p.short_description || ""}>{truncate((p.short_description || "").replace(/<[^>]*>/g, ""), 40)}</td>
+                  <td className={styles.td} title={p.outcome_promise || ""}>{truncate((p.outcome_promise || "").replace(/<[^>]*>/g, ""), 35)}</td>
+                  <td className={styles.td} title={p.requirements || ""}>{truncate((p.requirements || "").replace(/<[^>]*>/g, ""), 35)}</td>
+                  <td className={styles.td}>{p.current_version || "—"}</td>
+                  <td className={styles.td}>{p.last_updated || "—"}</td>
+                  <td className={styles.td} title={p.seo_title || ""}>{truncate((p.seo_title || "").replace(/<[^>]*>/g, ""), 40)}</td>
+                  <td className={styles.td} style={{ fontSize: "0.75rem" }} title={p.stripe_product_id || ""}>{p.stripe_product_id ? truncate(p.stripe_product_id, 18) : "—"}</td>
+                  <td className={styles.td}>
+                    <span className={`${styles.statusPill} ${(p.stock_status || "in_stock") === "in_stock" ? styles.statusPublished : (p.stock_status || "") === "out_of_stock" ? "bg-red-50 text-red-700" : (p.stock_status || "") === "low_stock" ? "bg-amber-50 text-amber-700" : "bg-slate-100 text-slate-600"}`} style={{ fontSize: "0.7rem" }}>
+                      {(p.stock_status || "in_stock") === "in_stock" ? "In stock" : (p.stock_status || "") === "out_of_stock" ? "Out of stock" : (p.stock_status || "") === "low_stock" ? "Low stock" : (p.stock_status || "") === "pre_order" ? "Pre-order" : "In stock"}
+                    </span>
+                  </td>
+                  <td className={styles.td}>{p.stock_quantity != null && p.stock_quantity !== "" ? Number(p.stock_quantity) : "—"}</td>
+                  <td className={styles.td}>
+                    <div className="flex items-center gap-1 flex-wrap">
+                      <Link href={`/products/${p.slug || p.product_id}`} target="_blank" rel="noopener noreferrer">
+                        <Button variant="ghost" size="sm" className="h-8 text-gray-600 hover:text-gray-900">View</Button>
+                      </Link>
+                      <Button variant="ghost" size="sm" className="h-8 text-gray-600 hover:text-gray-900" onClick={() => { setAddMode(false); const spec = productToSpecShape(p); prodForm.reset({ product_id: p.product_id, name: spec.name ?? p.title ?? "", slug: p.slug ?? "", short_description: p.short_description ?? "", long_description: spec.long_description ?? p.description ?? "", category: p.category ?? "", tags: p.tags ?? "", primary_image: spec.primary_image ?? p.main_image ?? "", gallery_images: spec.gallery_images ?? p.images ?? [], status: p.status ?? "Published", outcome_promise: p.outcome_promise ?? "", requirements: p.requirements ?? "", current_version: p.current_version ?? "", last_updated: p.last_updated ?? "", seo_title: p.seo_title ?? "", seo_meta_description: p.seo_meta_description ?? "", stripe_product_id: p.stripe_product_id ?? "", stock_status: p.stock_status ?? "in_stock", stock_quantity: p.stock_quantity ?? 0, license_type: p.license_type ?? "student", student_price: p.student_price ?? 0, commercial_price: p.commercial_price ?? 0 }); setEditingProd(p); }}>Edit</Button>
+                      <Button variant="ghost" size="sm" className="h-8 text-red-600 hover:text-red-700 hover:bg-red-50" onClick={() => deleteProduct(p.product_id)}>Delete</Button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          </div>
+        </div>
+        {totalPages > 1 && (
+          <div className={styles.paginationWrap}>
+            <p className={styles.paginationInfo}>Page {currentPage} of {totalPages}</p>
+            <div className="flex gap-2">
+              <Button variant="outline" size="sm" disabled={currentPage === 1} onClick={() => setCurrentPage((c) => c - 1)}>Previous</Button>
+              <Button variant="outline" size="sm" disabled={currentPage === totalPages} onClick={() => setCurrentPage((c) => c + 1)}>Next</Button>
+            </div>
+          </div>
+        )}
+      </div>
+      {productPanelOpen && (
+        <div className={styles.panelOverlay}>
+          <div className={styles.panelBackdrop} onClick={closePanel} aria-hidden />
+          <div className={styles.panel}>
+            <div className={styles.panelHeader}>
+              <h2 className={styles.panelTitle}>{addMode ? "New product" : `Edit: ${editingProd?.name || editingProd?.title || "Product"}`}</h2>
+              <Button variant="ghost" size="sm" onClick={closePanel}>Close</Button>
+            </div>
+            <div className={styles.panelBody}>
+              <Form {...prodForm}>
+                <form onSubmit={prodForm.handleSubmit(submitProduct)} className="space-y-4">
                 <FormField
                   control={prodForm.control}
                   name="product_id"
@@ -843,6 +1154,48 @@ async function handleCarouselUpload(e) {
                 />
                 <FormField
                   control={prodForm.control}
+                  name="stock_status"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Stock status</FormLabel>
+                      <Select onValueChange={field.onChange} value={field.value || "in_stock"}>
+                        <FormControl>
+                          <SelectTrigger className="border-gray-300 rounded-md">
+                            <SelectValue placeholder="Stock status" />
+                          </SelectTrigger>
+                        </FormControl>
+                        <SelectContent>
+                          <SelectItem value="in_stock">In stock</SelectItem>
+                          <SelectItem value="out_of_stock">Out of stock</SelectItem>
+                          <SelectItem value="low_stock">Low stock</SelectItem>
+                          <SelectItem value="pre_order">Pre-order</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
+                  name="stock_quantity"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-gray-600">Items in stock (quantity)</FormLabel>
+                      <FormControl>
+                        <Input
+                          type="number"
+                          min={0}
+                          {...field}
+                          className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md"
+                          placeholder="0"
+                        />
+                      </FormControl>
+                      <FormMessage className="text-red-500" />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={prodForm.control}
                   name="primary_image"
                   render={({ field }) => (
                     <FormItem>
@@ -944,231 +1297,66 @@ async function handleCarouselUpload(e) {
                   </Button>
                   {editingProd && (
                     <>
-                      <Button
-                        type="button"
-                        variant="destructive"
-                        className="bg-red-600 hover:bg-red-700 text-white rounded-md px-4 py-2 transition"
-                        onClick={() => deleteProduct(editingProd.product_id)}
-                      >
-                        Delete
-                      </Button>
-                      <Button
-                        type="button"
-                        variant="outline"
-                        className="border-gray-300 text-gray-700 hover:bg-gray-100 rounded-md px-4 py-2 transition"
-                        onClick={() => cancelEditing(prodForm, setEditingProd)}
-                      >
-                        Cancel
-                      </Button>
+                      <Button type="button" variant="destructive" className="bg-red-600 hover:bg-red-700 text-white rounded-md px-4 py-2 transition" onClick={() => deleteProduct(editingProd.product_id)}>Delete</Button>
+                      <Button type="button" variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-100 rounded-md px-4 py-2 transition" onClick={() => { cancelEditing(prodForm, setEditingProd); closePanel(); }}>Cancel</Button>
                     </>
                   )}
                 </div>
               </form>
             </Form>
-          </div>
-        </div>
-
-        {/* Right: Lists + Preview */}
-        <div className="space-y-8">
-          {/* Search and Tag Filter */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <Input
-              type="text"
-              placeholder="Search products..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="mb-4 border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md py-2 px-4"
-            />
-            <Input
-              type="text"
-              placeholder="Filter by tags (comma-separated)"
-              onChange={(e) => handleTagFilter(e.target.value)}
-              className="border-gray-300 focus:ring-2 focus:ring-blue-500 rounded-md py-2 px-4"
-            />
-          </div>
-
-          {/* Category List */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h4 className="text-lg font-semibold mb-4 text-gray-700">Categories</h4>
-            {categories.length === 0 && <p className="text-gray-500">No categories available</p>}
-            <ul className="space-y-3">
-              {categories.map((c) => (
-                <li
-                  key={c.slug}
-                  className="flex justify-between items-center p-3 bg-gray-100 rounded-md hover:bg-gray-200 transition"
-                >
-                  <span className="text-gray-700">{c.name}</span>
-                  <div className="flex gap-2">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-gray-300 text-gray-700 hover:bg-gray-100 rounded-md"
-                      onClick={() => {
-                        catForm.reset(c);
-                        setEditingCat(c);
-                      }}
-                    >
-                      Edit
-                    </Button>
-                    <Button
-                      variant="destructive"
-                      size="sm"
-                      className="bg-red-600 hover:bg-red-700 text-white rounded-md"
-                      onClick={() => deleteCategory(c.slug)}
-                    >
-                      Delete
-                    </Button>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Product List */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h4 className="text-lg font-semibold mb-4 text-gray-700">Products</h4>
-            {paginatedProducts.length === 0 && <p className="text-gray-500">No products available</p>}
-            <ul className="space-y-3">
-              {paginatedProducts.map((p) => (
-                <li
-                  key={p.product_id}
-                  className="p-3 bg-gray-100 rounded-md hover:bg-gray-200 transition cursor-pointer"
-                  onClick={() => setPreview(p)}
-                >
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <strong className="text-gray-800">{p.name || p.title}</strong>
-                      <p className="text-sm text-gray-600">ID: {p.product_id}</p>
-                    </div>
-                    <div className="flex gap-2">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="border-gray-300 text-gray-700 hover:bg-gray-100 rounded-md"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          const spec = productToSpecShape(p);
-                          prodForm.reset({
-                            product_id: p.product_id,
-                            name: spec.name ?? p.title ?? "",
-                            slug: p.slug ?? "",
-                            short_description: p.short_description ?? "",
-                            long_description: spec.long_description ?? p.description ?? "",
-                            category: p.category ?? "",
-                            tags: p.tags ?? "",
-                            primary_image: spec.primary_image ?? p.main_image ?? "",
-                            gallery_images: spec.gallery_images ?? p.images ?? [],
-                            status: p.status ?? "Published",
-                            outcome_promise: p.outcome_promise ?? "",
-                            requirements: p.requirements ?? "",
-                            current_version: p.current_version ?? "",
-                            last_updated: p.last_updated ?? "",
-                            seo_title: p.seo_title ?? "",
-                            seo_meta_description: p.seo_meta_description ?? "",
-                            stripe_product_id: p.stripe_product_id ?? "",
-                            license_type: p.license_type ?? "student",
-                            student_price: p.student_price ?? 0,
-                            commercial_price: p.commercial_price ?? 0,
-                          });
-                          setEditingProd(p);
-                        }}
-                      >
-                        Edit
-                      </Button>
-                      <Button
-                        variant="destructive"
-                        size="sm"
-                        className="bg-red-600 hover:bg-red-700 text-white rounded-md"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          deleteProduct(p.product_id);
-                        }}
-                      >
-                        Delete
-                      </Button>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-            {totalPages > 1 && (
-              <div className="flex justify-between items-center mt-4">
-                <Button
-                  disabled={currentPage === 1}
-                  onClick={() => setCurrentPage((p) => p - 1)}
-                  className="bg-gray-200 text-gray-700 hover:bg-gray-300 rounded-md px-4 py-2 transition"
-                >
-                  Previous
-                </Button>
-                <span className="text-gray-600">
-                  Page {currentPage} of {totalPages}
-                </span>
-                <Button
-                  disabled={currentPage === totalPages}
-                  onClick={() => setCurrentPage((p) => p + 1)}
-                  className="bg-gray-200 text-gray-700 hover:bg-gray-300 rounded-md px-4 py-2 transition"
-                >
-                  Next
-                </Button>
-              </div>
-            )}
-          </div>
-
-          {/* Product Preview */}
-          {preview && (
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="text-lg font-semibold mb-4 text-gray-700">Preview: {preview.name || preview.title}</h4>
-              {preview.images?.length > 0 && (
-                <Button
-                  variant="outline"
-                  onClick={() => setShowCarousel((show) => !show)}
-                  className="mb-4 border-gray-300 text-gray-700 hover:bg-gray-100 rounded-md"
-                >
-                  {showCarousel ? "Hide Carousel" : "Show Carousel"}
-                </Button>
-              )}
-              {showCarousel && preview.images?.length > 0 ? (
-                <Carousel showThumbs={false} showStatus={false} className="rounded-md overflow-hidden">
-                  {preview.images.map((u, i) => (
-                    <div key={i}>
-                      <img
-                        src={u}
-                        alt={`Preview ${i}`}
-                        className="w-full h-64 object-cover"
-                        onError={(e) => {
-                          e.target.src = "https://via.placeholder.com/150";
-                        }}
-                      />
-                    </div>
-                  ))}
-                </Carousel>
-              ) : (
-                <img
-                  src={preview.main_image}
-                  alt="Product Preview"
-                  className="w-full max-w-xs h-48 object-cover rounded-md shadow-sm"
-                  onError={(e) => {
-                    e.target.src = "https://via.placeholder.com/150";
-                  }}
-                />
-              )}
-              <p className="mt-4 text-gray-600">{preview.short_description}</p>
-              <p className="text-gray-700">
-                <strong>Student:</strong> {formatPrice(preview.student_price)} |{" "}
-                <strong>Commercial:</strong> {formatPrice(preview.commercial_price)}
-              </p>
-              <p className="text-gray-600">Tags: {preview.tags || "None"}</p>
-              <Button
-                variant="outline"
-                onClick={() => setPreview(null)}
-                className="mt-4 border-gray-300 text-gray-700 hover:bg-gray-100 rounded-md"
-              >
-                Clear Preview
-              </Button>
             </div>
-          )}
+          </div>
         </div>
-      </div>
+      )}
+      <Dialog open={categoriesOpen} onOpenChange={setCategoriesOpen}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle>Categories</DialogTitle>
+          </DialogHeader>
+          <div className="space-y-4">
+            <Form {...catForm}>
+              <form onSubmit={catForm.handleSubmit(submitCategory)} className="space-y-4">
+                <FormField control={catForm.control} name="name" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-gray-600">Category Name</FormLabel>
+                    <FormControl><Input {...field} className="border-gray-300 rounded-md" placeholder="Enter category name" /></FormControl>
+                    <FormMessage className="text-red-500" />
+                  </FormItem>
+                )} />
+                <FormField control={catForm.control} name="slug" render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-gray-600">Slug</FormLabel>
+                    <FormControl><Input {...field} className="border-gray-300 rounded-md" placeholder="Auto-generated" /></FormControl>
+                    <FormMessage className="text-red-500" />
+                  </FormItem>
+                )} />
+                <div className="flex gap-3">
+                  <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white rounded-md">{editingCat ? "Update" : "Submit"}</Button>
+                  {editingCat && (
+                    <>
+                      <Button type="button" variant="destructive" size="sm" onClick={() => deleteCategory(editingCat.slug)}>Delete</Button>
+                      <Button type="button" variant="outline" size="sm" onClick={() => cancelEditing(catForm, setEditingCat)}>Cancel</Button>
+                    </>
+                  )}
+                </div>
+              </form>
+            </Form>
+            <h4 className="text-sm font-semibold text-gray-700 mt-4">Existing categories</h4>
+            {categories.length === 0 && <p className="text-gray-500 text-sm">No categories yet.</p>}
+            <ul className="space-y-2 max-h-48 overflow-y-auto">
+              {categories.map((c) => (
+                <li key={c.slug} className="flex justify-between items-center p-2 bg-gray-50 rounded-md text-sm">
+                  <span className="text-gray-700">{c.name}</span>
+                  <div className="flex gap-1">
+                    <Button variant="ghost" size="sm" className="h-8" onClick={() => { catForm.reset(c); setEditingCat(c); }}>Edit</Button>
+                    <Button variant="ghost" size="sm" className="h-8 text-red-600 hover:text-red-700" onClick={() => deleteCategory(c.slug)}>Delete</Button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

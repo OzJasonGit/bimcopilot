@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { connectToDatabase } from '@/app/utils/mongodb';
 import { getCurrentUser } from '@/app/utils/auth';
 import { ObjectId } from 'mongodb';
+import { decrementProductStock } from '@/app/lib/product-stock';
 
 const ORDERS_COLLECTION = 'orders';
 
@@ -98,6 +99,20 @@ export async function POST(req) {
     };
 
     const result = await db.collection(ORDERS_COLLECTION).insertOne(order);
+
+    if (order.status === 'paid' && Array.isArray(order.products) && order.products.length > 0) {
+      for (const item of order.products) {
+        const id = item.id ?? item._id?.toString?.() ?? item.product_id;
+        const qty = Math.max(1, Number(item.quantity) || 1);
+        if (id) {
+          try {
+            await decrementProductStock(db, id, qty);
+          } catch (err) {
+            console.error('Stock decrement failed for product', id, err);
+          }
+        }
+      }
+    }
     
     return NextResponse.json({ 
       success: true, 

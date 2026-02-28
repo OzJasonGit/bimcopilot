@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <aside className="w-64 h-screen bg-[#151515] text-white fixed left-0  p-4">
+    <aside className="w-64 bg-[#151515] text-white fixed left-0 top-[130px] bottom-0 p-4 z-10">
       <h2 className="text-lg font-semibold mb-4">Admin Panel</h2>
       <nav>
         <ul>

@@ -24,6 +24,8 @@ const ProductSchema = new mongoose.Schema({
   seo_title: { type: String },
   seo_meta_description: { type: String },
   stripe_product_id: { type: String },
+  stock_status: { type: String, enum: ["in_stock", "out_of_stock", "low_stock", "pre_order"] },
+  stock_quantity: { type: Number, min: 0 },
 }, { timestamps: true });
 
 const Product = mongoose.models.Product || mongoose.model('Product', ProductSchema);

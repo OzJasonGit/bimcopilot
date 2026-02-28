@@ -61,8 +61,9 @@ export default function CheckoutPage() {
 
     const itemsToBuy = cartItems.filter((item) => selectedItems.includes(item.id || item._id));
     
-    // Convert cart items to products format
+    // Convert cart items to products format (include id for stock decrement on payment)
     const products = itemsToBuy.map(item => ({
+      id: item.id || item._id,
       title: item.title,
       price: item.price,
       image: item.image,
@@ -94,6 +95,7 @@ export default function CheckoutPage() {
     
     // Convert cart items to products format for Apple Pay
     const products = itemsToBuy.map(item => ({
+      id: item.id || item._id,
       title: item.title,
       price: item.price,
       image: item.image,
@@ -245,6 +247,7 @@ export default function CheckoutPage() {
                   <PayPalButton
                     amount={currentTotal}
                     products={cartItems.filter((item) => selectedItems.includes(item.id || item._id)).map(item => ({
+                      id: item.id || item._id,
                       title: item.title,
                       price: item.price,
                       image: item.image,

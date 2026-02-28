@@ -22,6 +22,8 @@ export const PRODUCT_FIELDS = [
   { key: "seo_title", label: "SEO title", type: "string", required: false },
   { key: "seo_meta_description", label: "SEO meta description", type: "string", required: false },
   { key: "stripe_product_id", label: "Stripe product id", type: "string", required: false },
+  { key: "stock_status", label: "Stock status", type: "enum", required: false, options: ["in_stock", "out_of_stock", "low_stock", "pre_order"] },
+  { key: "stock_quantity", label: "Items in stock", type: "number", required: false },
 ];
 
 /** Map spec field names to internal/DB field names (for APIs that still use title/description/main_image/images) */

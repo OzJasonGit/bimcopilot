@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { connectToDatabase } from '@/app/utils/mongodb';
 import stripeLib from 'stripe';
 import { ObjectId } from 'mongodb';
+import { decrementProductStock } from '@/app/lib/product-stock';
 
 const stripe = stripeLib(process.env.STRIPE_SECRET_KEY);
 const ORDERS_COLLECTION = 'orders';
@@ -46,7 +47,9 @@ export async function POST(req) {
         
         if (orderId) {
           console.log('Updating existing order with ID:', orderId);
-          // Update existing order
+          // Only update and decrement if order is still pending (avoid double-decrement on webhook retries)
+          const order = await db.collection(ORDERS_COLLECTION).findOne({ _id: new ObjectId(orderId) });
+          const wasPending = order?.status === 'pending' || order?.paymentStatus === 'pending';
           const updateResult = await db.collection(ORDERS_COLLECTION).updateOne(
             { _id: new ObjectId(orderId) },
             { 
@@ -60,6 +63,21 @@ export async function POST(req) {
             }
           );
           console.log('Order update result:', updateResult);
+
+          if (wasPending && (updateResult.modifiedCount === 1 || updateResult.matchedCount === 1)) {
+            const products = order?.products || [];
+            for (const item of products) {
+              const id = item.id ?? item._id?.toString?.() ?? item.product_id;
+              const qty = Math.max(1, Number(item.quantity) || 1);
+              if (id) {
+                try {
+                  await decrementProductStock(db, id, qty);
+                } catch (err) {
+                  console.error('Stock decrement failed for product', id, err);
+                }
+              }
+            }
+          }
         } else {
           console.log('Creating new order for session:', session.id);
           // Create new order (fallback)
@@ -83,9 +101,33 @@ export async function POST(req) {
         }
         break;
 
-      case 'payment_intent.succeeded':
-        console.log('Payment succeeded:', event.data.object.id);
+      case 'payment_intent.succeeded': {
+        const paymentIntent = event.data.object;
+        const orderId = paymentIntent.metadata?.orderId;
+        if (orderId) {
+          const order = await db.collection(ORDERS_COLLECTION).findOne({ _id: new ObjectId(orderId) });
+          const wasPending = order?.status === 'pending' || order?.paymentStatus === 'pending';
+          if (wasPending) {
+            await db.collection(ORDERS_COLLECTION).updateOne(
+              { _id: new ObjectId(orderId) },
+              { $set: { status: 'paid', paymentStatus: 'completed', stripePaymentIntentId: paymentIntent.id, amount: paymentIntent.amount / 100, updatedAt: new Date() } }
+            );
+            const products = order?.products || [];
+            for (const item of products) {
+              const id = item.id ?? item._id?.toString?.() ?? item.product_id;
+              const qty = Math.max(1, Number(item.quantity) || 1);
+              if (id) {
+                try {
+                  await decrementProductStock(db, id, qty);
+                } catch (err) {
+                  console.error('Stock decrement failed for product', id, err);
+                }
+              }
+            }
+          }
+        }
         break;
+      }
 
       case 'payment_intent.payment_failed':
         console.log('Payment failed:', event.data.object.id);

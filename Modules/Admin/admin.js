@@ -1603,7 +1603,7 @@ export function Admin() {
 
   return (
 
-    <section >
+    <section className={styles.adminSection}>
       <style dangerouslySetInnerHTML={{__html: `
         .ql-editor ul,
         .ql-editor ol {

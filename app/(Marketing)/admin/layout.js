@@ -72,12 +72,16 @@ export default function AdminLayout({ children }) {
   return (
     <CurrencyProvider>
       <Header />
-      <div className="flex">
-        <div className="w-64 pt-28 fixed h-full bg-gray-900 text-white">
-          <Sidebar />
-        </div>
-        <main className="ml-64 p-6 w-full pt-24">
-          {children}
+      {/* Full viewport below header: no page scroll, only main content scrolls */}
+      <div
+        className="flex relative"
+        style={{ marginTop: "120px", height: "calc(100vh - 120px)", overflow: "hidden" }}
+      >
+        <Sidebar />
+        <main className="ml-64 flex-1 min-h-0 flex flex-col overflow-hidden p-6">
+          <div className="flex-1 min-h-0 flex flex-col">
+            {children}
+          </div>
         </main>
       </div>
     </CurrencyProvider>
