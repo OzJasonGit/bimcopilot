@@ -384,14 +384,14 @@
 #TIME {
   grid-area: LOGO_AND_TIME;
   position: relative;
-  display: grid;
-  left: -15px;
+  display: flex;
+  left: 0;
   width: 100%;
   min-width: 200px;
   justify-self: right;
-  grid-template-columns: 1fr 1.5px 1.5fr;
-  grid-template-rows: auto;
-  grid-template-areas: " CLOCK B1 HOME";
+  gap: 10px;
+  align-items: center;
+  white-space: nowrap;
   background: transparent;
 }
 
@@ -422,6 +422,18 @@
 
 #B1 {
   grid-area: B1;
+  width: 1px;
+  height: 1.05em;
+  background-color: rgb(113, 113, 122);
+  justify-self: center;
+  align-self: center;
+}
+
+#TIME_DIVIDER {
+  width: 1px;
+  height: 1.05em;
+  background-color: rgb(113, 113, 122);
+  align-self: center;
 }
 
 #SERVICES {
@@ -932,14 +944,14 @@
   #TIME {
     grid-area: LOGO_AND_TIME;
     position: relative;
-    display: grid;
-    left: -15px;
+    display: flex;
+    left: 0;
     width: 100%;
     min-width: 200px;
     justify-self: right;
-    grid-template-columns: 1fr 1.5px 1.5fr;
-    grid-template-rows: auto;
-    grid-template-areas: " CLOCK B1 HOME";
+    gap: 10px;
+    align-items: center;
+    white-space: nowrap;
     background: transparent;
   }
 
@@ -970,6 +982,18 @@
 
   #B1 {
     grid-area: B1;
+    width: 1px;
+    height: 1.05em;
+    background-color: rgb(113, 113, 122);
+    justify-self: center;
+    align-self: center;
+  }
+
+  #TIME_DIVIDER {
+    width: 1px;
+    height: 1.05em;
+    background-color: rgb(113, 113, 122);
+    align-self: center;
   }
 
   #SERVICES {
