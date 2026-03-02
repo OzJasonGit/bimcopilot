@@ -1,5 +1,10 @@
 import { connectToDatabase } from "../utils/mongodb";
 
+function toPlain(value) {
+  if (value == null) return value;
+  return JSON.parse(JSON.stringify(value));
+}
+
 /**
  * Server-only: fetch all stories for blog index (SSR/crawlable).
  */
@@ -10,7 +15,7 @@ export async function getStories() {
     .find({})
     .sort({ post_number: -1 })
     .toArray();
-  return data || [];
+  return toPlain(data || []);
 }
 
 /**
@@ -20,7 +25,7 @@ export async function getStoryBySlug(slug) {
   if (!slug) return null;
   const db = await connectToDatabase();
   const story = await db.collection("stories").findOne({ slug });
-  return story;
+  return toPlain(story);
 }
 
 /**
@@ -34,5 +39,5 @@ export async function getRelatedStories(currentSlug, limit = 3) {
     .sort({ post_number: -1 })
     .limit(limit)
     .toArray();
-  return list || [];
+  return toPlain(list || []);
 }

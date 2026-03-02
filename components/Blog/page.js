@@ -1,43 +1,50 @@
 
 import { useState, useEffect } from "react";
 import React from "react";
-// import Blogpage from "./blogPage";
-import axios from "axios";
 import SkeltonLoader2 from "../Loader/loader2";
-const Blogpage = React.lazy(()=> import("./blogPage"))
-import "./blogPage"
+import Blogpage from "./blogPage";
 
 const Blog = () => {
   const [data, setData] = useState(null);
   const [firstStory, setFirstStory] = useState(null);
   const [topStories, setTopStories] = useState(null);
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
+    let mounted = true;
+
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://www.bimcopilot.com/api");
-        const { responseData } = res.data;
+        const res = await fetch("/api", { cache: "no-store" });
+        if (!res.ok) throw new Error("Failed to load stories");
+        const json = await res.json();
+        const responseData = json?.responseData || {};
+        if (!mounted) return;
         setData(responseData);
-        setFirstStory(responseData.firstStory);
-        setTopStories(responseData.topStories);
+        setFirstStory(responseData.firstStory || null);
+        setTopStories(responseData.topStories || []);
       } catch (error) {
         console.error("Error fetching data:", error);
+        if (!mounted) return;
+        setData({ data: [] });
+        setFirstStory(null);
+        setTopStories([]);
+      } finally {
+        if (mounted) setLoaded(true);
       }
     };
 
     fetchData();
 
-    // Cleanup function
     return () => {
-      // Cleanup code if needed
+      mounted = false;
     };
-  }, []); // Empty dependency array ensures the effect runs only once after the initial render
+  }, []);
 
-         if (!data || !firstStory || !topStories) {
-     return <SkeltonLoader2/>
-   }
+  if (!loaded) return <SkeltonLoader2 />;
+
   return (
     <>
-      <Blogpage stories={data} topStories={topStories} />
+      <Blogpage stories={data || { data: [] }} topStories={topStories || []} />
     </>
   );
 };

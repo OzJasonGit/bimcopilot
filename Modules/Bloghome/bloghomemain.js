@@ -33,6 +33,7 @@ const renderHtml = (content) => {
 const Bloghomemain = ({ stories, currentPage = 1, totalPages = 1 }) => {
   const pathname = usePathname();
   const storiesToMap = Array.isArray(stories) ? stories : [];
+  const getStoryDate = (story) => story?.date || story?.timestamp || story?.publishDate || "";
 
   const buildPageHref = (page) => {
     const safeTotalPages = Math.max(1, totalPages || 1);
@@ -176,6 +177,11 @@ const Bloghomemain = ({ stories, currentPage = 1, totalPages = 1 }) => {
                       <h4 id={styles._H3} class="text-stone-400 ... font-avant_garde_bold ...">
                         {renderHtml(story.subtitle)}
                       </h4>
+                      {getStoryDate(story) && (
+                        <h5 id={styles._H4} class="text-stone-500 ... font-avant_garde_medium ...">
+                          {renderHtml(getStoryDate(story))}
+                        </h5>
+                      )}
                     </div>
 
                   </div>

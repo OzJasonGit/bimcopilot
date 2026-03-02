@@ -17,6 +17,7 @@ const Blogpage = ({ stories, topStories }) => {
     [];
 
   const mainStory = stories?.data?.[0] || {};
+  const getStoryDate = (story) => story?.date || story?.timestamp || story?.publishDate || "N/A";
 
   return (
     <section id={styles.SHADOW_SECTION_BLOG} className={styles.center_holder}>
@@ -49,7 +50,7 @@ const Blogpage = ({ stories, topStories }) => {
                                   <div id={styles.POST_NUMBER_HOLDER_2} className="content-center">
                                     <h1
                                       id={styles._H1}
-                                      className="text-center text-5xl text-stone-200 font-avant_garde_bold">
+                                      className="text-center mt-4 text-5xl text-stone-200 font-avant_garde_bold">
                                       {parse(mainStory.post_number.toString() || "")}
                                     </h1>
                                   </div>
@@ -138,7 +139,7 @@ const Blogpage = ({ stories, topStories }) => {
                     <div id={styles.BLOG_SMALL_1}>
                       <div className="rounded-full drop-shadow-2xl border-2 border-emerald-200" id={styles.BLOG_NUMBER}>
                         <div className="content-center">
-                          <h5 id={styles._H5} className="text-center text-stone-200 font-avant_garde_bold">
+                          <h5 id={styles._H5} className="text-center mt-1 text-stone-200 font-avant_garde_bold">
                             {parse(story.post_number || "")}
                           </h5>
                         </div>
@@ -162,7 +163,7 @@ const Blogpage = ({ stories, topStories }) => {
 
                       <div id={styles.TIMESTAMP}>
                         <h4 id={styles._H4} className="text-sm text-right text-stone-400 drop-shadow-xl font-avant_garde_medium">
-                          {parse(story.timestamp || "N/A")}
+                          {parse(getStoryDate(story))}
                         </h4>
                       </div>
 

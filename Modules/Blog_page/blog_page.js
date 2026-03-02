@@ -770,11 +770,17 @@ const Blog_page = ({ stories: storiesProp, initialStory, relatedStories = [] }) 
                                     <h3 
                                         id={styles._H3}
                                         className=" text-stone-400 ... font-avant_garde_bold ... text-right ...">
-                                        {story.publishDate ? new Date(story.publishDate).toLocaleDateString('en-US', {
-                                            day: 'numeric',
-                                            month: 'long',
-                                            year: 'numeric'
-                                        }) : "23rd January 2025"}
+                                        {(() => {
+                                            const rawDate = story.date || story.timestamp || story.publishDate;
+                                            if (!rawDate) return "N/A";
+                                            const parsed = new Date(rawDate);
+                                            if (Number.isNaN(parsed.getTime())) return String(rawDate);
+                                            return parsed.toLocaleDateString("en-US", {
+                                                day: "numeric",
+                                                month: "long",
+                                                year: "numeric",
+                                            });
+                                        })()}
                                     </h3>   
 
                                                  

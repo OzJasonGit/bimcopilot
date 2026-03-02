@@ -128,7 +128,8 @@ export default class Products extends Component {
     try {
       const res = await fetch('/api/products');
       const data = await res.json();
-      const sorted = data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+      const list = Array.isArray(data) ? data : (Array.isArray(data?.data) ? data.data : []);
+      const sorted = list.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
       this.setState({ products: sorted.slice(0, 3) });
     } catch (err) 
       
@@ -159,6 +160,12 @@ export default class Products extends Component {
 
     render() {
     const { products, currency } = this.state;
+    const resolveImage = (product) =>
+      product?.images?.[0] ||
+      product?.gallery_images?.[0] ||
+      product?.main_image ||
+      product?.primary_image ||
+      "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23202020'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' fill='%23888888' font-family='Arial' font-size='18'%3ENo image%3C/text%3E%3C/svg%3E";
 
     return (
 
@@ -222,7 +229,7 @@ export default class Products extends Component {
                                           {/* Image wrapper */}
                                           <div className="relative w-full h-full transition-transform duration-500 ease-in-out transform-gpu origin-center scale-110 group-hover:scale-100 ">
                                             <Image
-                                              src={product.images?.[0] || "/fallback.jpg"}
+                                              src={resolveImage(product)}
                                               alt={product.title}
                                               fill
                                               sizes="(max-width: 640px) 100vw, 256px"

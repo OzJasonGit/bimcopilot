@@ -1159,6 +1159,7 @@ const formSchema = z.object({
   author: z.string().min(2, {
     message: "Author name must be at least 2 characters.",
   }),
+  date: z.string().optional(),
   subtitle: z.string().optional(),
   image: z.string().url({
     message: "Image must be a valid URL.",
@@ -1338,6 +1339,7 @@ export function Admin() {
       post_number: "",
       title: "",
       author: "",
+      date: "",
       subtitle: "",
       image: "",
       image2: "",
@@ -1389,6 +1391,7 @@ export function Admin() {
       post_number: "",
       title: "",
       author: "",
+      date: "",
       subtitle: "",
       image: "",
       image2: "",
@@ -1480,6 +1483,7 @@ export function Admin() {
       post_number: story.post_number || "",
       title: story.title || "",
       author: story.author || "",
+      date: story.date || story.timestamp || story.publishDate || "",
       subtitle: story.subtitle || "",
       image: story.image || "",
       image2: story.image2 || "",
@@ -1754,6 +1758,19 @@ export function Admin() {
                         onChange={(content) => field.onChange(content)} // Update the form's state on change
                         placeholder="Write your subtitle here..."
                       />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="date"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Date</FormLabel>
+                    <FormControl>
+                      <Input placeholder="e.g. Mar 02, 2026" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -2640,6 +2657,9 @@ export function Admin() {
                       </div>
                       <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.5rem" }}>
                         Slug: {story.slug || "N/A"}
+                      </div>
+                      <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.5rem" }}>
+                        Date: {story.date || story.timestamp || "N/A"}
                       </div>
                       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                         {story.published ? (

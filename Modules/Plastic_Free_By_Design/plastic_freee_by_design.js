@@ -24,6 +24,46 @@ import text_logo from './bimcopilot_logo_text_horizontal_white.svg';
 
 import styles from './plastic_free_by_design.module.css';
 
+const FALLBACK_IMAGE =
+  "data:image/svg+xml;utf8," +
+  encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800"><rect width="800" height="800" fill="#202020"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#8a8a8a" font-family="Arial, sans-serif" font-size="32">No Image</text></svg>'
+  );
+
+function normalizeImageValue(value) {
+  if (!value) return null;
+
+  if (typeof value === 'string') {
+    const trimmed = value.trim();
+    return trimmed || null;
+  }
+
+  if (Array.isArray(value)) {
+    for (const item of value) {
+      const normalized = normalizeImageValue(item);
+      if (normalized) return normalized;
+    }
+    return null;
+  }
+
+  if (typeof value === 'object') {
+    if (typeof value.url === 'string' && value.url.trim()) return value.url.trim();
+    if (typeof value.src === 'string' && value.src.trim()) return value.src.trim();
+  }
+
+  return null;
+}
+
+function resolveProductImage(product) {
+  return (
+    normalizeImageValue(product?.images) ||
+    normalizeImageValue(product?.gallery_images) ||
+    normalizeImageValue(product?.main_image) ||
+    normalizeImageValue(product?.primary_image) ||
+    FALLBACK_IMAGE
+  );
+}
+
 
 const PFBD = () => {
   const [products, setProducts] = useState([]);
@@ -49,8 +89,8 @@ const PFBD = () => {
           list.map(p => ({
             id: p._id,
             slug: p.slug ?? p._id,
-            image: p.images?.[0] ?? '/images/placeholder.jpg',
-            title: p.title ?? 'Untitled',
+            image: resolveProductImage(p),
+            title: p.title ?? p.name ?? 'Untitled',
             subtitle: p.short_description ?? 'No description',
           }))
         );

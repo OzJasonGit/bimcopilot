@@ -37,6 +37,10 @@ const getHtmlContent = (content) => {
 const Mainvideopage = ({ stories }) => {
   const storiesToMap = stories.filter((story, i) => i != 0);
   const router = useRouter();
+  const headline = stories?.[0]?.title || "The Ethics of AI in Architecture: What Every Firm Should Know";
+  const subheadline =
+    stories?.[0]?.subtitle ||
+    "Bias, authorship, accountability, data governance, and environmental responsibility in the age of AI-enhanced design.";
 
     return (
 
@@ -66,7 +70,7 @@ const Mainvideopage = ({ stories }) => {
                   <div
                     id={styles._H2}
                     class=" text-slate-100 ... drop-shadow-xl font-avant_garde_bold"
-                    dangerouslySetInnerHTML={{ __html: getHtmlContent(stories[0]?.title || "") }}
+                    dangerouslySetInnerHTML={{ __html: getHtmlContent(headline) }}
                   ></div>
 
                   <br/> 
@@ -74,7 +78,7 @@ const Mainvideopage = ({ stories }) => {
                   <div
                     id={styles._H3}
                     class="text-xl ... text-stone-400 ... drop-shadow-xl font-avant_garde_medium"
-                    dangerouslySetInnerHTML={{ __html: getHtmlContent(stories[0]?.subtitle || "") }}
+                    dangerouslySetInnerHTML={{ __html: getHtmlContent(subheadline) }}
                   ></div>
                 
                              
