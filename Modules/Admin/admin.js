@@ -1449,16 +1449,14 @@ export function Admin() {
     if (!value) return "";
     const parsed = new Date(value);
     if (Number.isNaN(parsed.getTime())) return String(value);
-    return parsed.toLocaleString("en-US", {
+    return parsed.toLocaleDateString("en-US", {
       day: "numeric",
       month: "short",
       year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
     });
   };
 
-  const toDateTimeLocalValue = (value) => {
+  const toDateInputValue = (value) => {
     if (!value) return "";
     const parsed = new Date(value);
     if (Number.isNaN(parsed.getTime())) return "";
@@ -1480,7 +1478,7 @@ export function Admin() {
     if (isEditing) return;
     const currentDate = form.getValues("date");
     if (!currentDate) {
-      form.setValue("date", new Date().toISOString(), { shouldDirty: false });
+      form.setValue("date", new Date().toISOString().split("T")[0], { shouldDirty: false });
     }
   }, [form, isEditing]);
 
@@ -1607,7 +1605,7 @@ export function Admin() {
     setLoading(true);
     const payload = {
       ...data,
-      date: data.date || new Date().toISOString(),
+      date: data.date || new Date().toISOString().split("T")[0],
     };
     console.log("Validated data:", payload);
     try {
@@ -1819,7 +1817,7 @@ export function Admin() {
                             variant={dateMode === "auto" ? "default" : "outline"}
                             onClick={() => {
                               setDateMode("auto");
-                              field.onChange(new Date().toISOString());
+                              field.onChange(new Date().toISOString().split("T")[0]);
                             }}
                           >
                             Auto now
@@ -1837,12 +1835,10 @@ export function Admin() {
                       <FormControl>
                         {dateMode === "manual" ? (
                           <Input
-                            type="datetime-local"
-                            value={toDateTimeLocalValue(field.value)}
+                            type="date"
+                            value={toDateInputValue(field.value)}
                             onChange={(e) => {
-                              const next = e.target.value
-                                ? new Date(e.target.value).toISOString()
-                                : "";
+                              const next = e.target.value || "";
                               field.onChange(next);
                             }}
                           />
@@ -1857,8 +1853,8 @@ export function Admin() {
                       </FormControl>
                       <p className="text-xs text-gray-500">
                         {dateMode === "auto"
-                          ? "Uses the current date/time automatically."
-                          : "Pick any date/time manually."}
+                          ? "Uses the current date automatically."
+                          : "Pick any date manually."}
                       </p>
                       <FormMessage />
                     </FormItem>

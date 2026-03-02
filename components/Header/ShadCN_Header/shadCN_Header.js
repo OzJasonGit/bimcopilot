@@ -49,27 +49,6 @@ export function ShadCN_Header() {
     <div className="dark-theme-nav mt-5" style={{ color: '#f5f5f4' }}>
       <NavigationMenu disableViewport>
         <NavigationMenuList className="bg-transparent">
-          {/* Services Menu */}
-          <NavigationMenuItem className="relative">
-            <NavigationMenuTrigger className={triggerClassName}>
-              Services
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className={dropdownContentClassName}>
-              <ul className="grid w-[300px] gap-2 p-4">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/services" className={dropdownLinkClassName}>
-                      <div className="font-avant_garde_bold text-stone-50 text-sm">Our Services</div>
-                      <div className="text-stone-400 text-xs">
-                        RIBA and ARB registered architects specializing in BIM solutions
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
-          </NavigationMenuItem>
-
           {/* Shop/Products Menu */}
           <NavigationMenuItem className="relative">
             <NavigationMenuTrigger className={triggerClassName}>
@@ -83,6 +62,27 @@ export function ShadCN_Header() {
                       <div className="font-avant_garde_bold text-stone-50 text-sm">All Products</div>
                       <div className="text-stone-400 text-xs">
                         Browse our BIM and technology products
+                      </div>
+                    </Link>
+                  </NavigationMenuLink>
+                </li>
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          {/* Services Menu */}
+          <NavigationMenuItem className="relative">
+            <NavigationMenuTrigger className={triggerClassName}>
+              Services
+            </NavigationMenuTrigger>
+            <NavigationMenuContent className={dropdownContentClassName}>
+              <ul className="grid w-[300px] gap-2 p-4">
+                <li>
+                  <NavigationMenuLink asChild>
+                    <Link href="/services" className={dropdownLinkClassName}>
+                      <div className="font-avant_garde_bold text-stone-50 text-sm">Our Services</div>
+                      <div className="text-stone-400 text-xs">
+                        RIBA and ARB registered architects specializing in BIM solutions
                       </div>
                     </Link>
                   </NavigationMenuLink>
