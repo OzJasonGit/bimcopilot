@@ -1443,11 +1443,46 @@ export function Admin() {
   const [editingStory, setEditingStory] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [storiesLoading, setStoriesLoading] = useState(true);
+  const [dateMode, setDateMode] = useState("auto");
+
+  const formatDateForDisplay = (value) => {
+    if (!value) return "";
+    const parsed = new Date(value);
+    if (Number.isNaN(parsed.getTime())) return String(value);
+    return parsed.toLocaleString("en-US", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  };
+
+  const toDateTimeLocalValue = (value) => {
+    if (!value) return "";
+    const parsed = new Date(value);
+    if (Number.isNaN(parsed.getTime())) return "";
+    const pad = (n) => String(n).padStart(2, "0");
+    const year = parsed.getFullYear();
+    const month = pad(parsed.getMonth() + 1);
+    const day = pad(parsed.getDate());
+    const hours = pad(parsed.getHours());
+    const minutes = pad(parsed.getMinutes());
+    return `${year}-${month}-${day}T${hours}:${minutes}`;
+  };
 
   // Fetch stories on component mount
   useEffect(() => {
     fetchStories();
   }, []);
+
+  useEffect(() => {
+    if (isEditing) return;
+    const currentDate = form.getValues("date");
+    if (!currentDate) {
+      form.setValue("date", new Date().toISOString(), { shouldDirty: false });
+    }
+  }, [form, isEditing]);
 
   const stripHtml = (html) => {
     if (!html) return "";
@@ -1478,6 +1513,7 @@ export function Admin() {
   const handleEdit = (story) => {
     setEditingStory(story);
     setIsEditing(true);
+    setDateMode("manual");
     // Populate form with story data
     form.reset({
       post_number: story.post_number || "",
@@ -1536,6 +1572,7 @@ export function Admin() {
   const handleCancelEdit = () => {
     setIsEditing(false);
     setEditingStory(null);
+    setDateMode("auto");
     form.reset();
   };
 
@@ -1568,13 +1605,17 @@ export function Admin() {
 
   const handleSubmit = async (data) => {
     setLoading(true);
-    console.log("Validated data:", data);
+    const payload = {
+      ...data,
+      date: data.date || new Date().toISOString(),
+    };
+    console.log("Validated data:", payload);
     try {
       const url = "/api/admin_route";
       const method = isEditing ? "PUT" : "POST";
       const body = isEditing
-        ? JSON.stringify({ ...data, _id: editingStory._id })
-        : JSON.stringify(data);
+        ? JSON.stringify({ ...payload, _id: editingStory._id })
+        : JSON.stringify(payload);
 
       const res = await fetch(url, {
         method,
@@ -1763,19 +1804,84 @@ export function Admin() {
                   </FormItem>
                 )}
               />
-              <FormField
-                control={form.control}
-                name="date"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Date</FormLabel>
-                    <FormControl>
-                      <Input placeholder="e.g. Mar 02, 2026" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+              <div className="grid gap-4 md:grid-cols-2">
+                <FormField
+                  control={form.control}
+                  name="date"
+                  render={({ field }) => (
+                    <FormItem>
+                      <div className="mb-2 flex items-center justify-between gap-2">
+                        <FormLabel>Date</FormLabel>
+                        <div className="flex items-center gap-2">
+                          <Button
+                            type="button"
+                            size="sm"
+                            variant={dateMode === "auto" ? "default" : "outline"}
+                            onClick={() => {
+                              setDateMode("auto");
+                              field.onChange(new Date().toISOString());
+                            }}
+                          >
+                            Auto now
+                          </Button>
+                          <Button
+                            type="button"
+                            size="sm"
+                            variant={dateMode === "manual" ? "default" : "outline"}
+                            onClick={() => setDateMode("manual")}
+                          >
+                            Manual
+                          </Button>
+                        </div>
+                      </div>
+                      <FormControl>
+                        {dateMode === "manual" ? (
+                          <Input
+                            type="datetime-local"
+                            value={toDateTimeLocalValue(field.value)}
+                            onChange={(e) => {
+                              const next = e.target.value
+                                ? new Date(e.target.value).toISOString()
+                                : "";
+                              field.onChange(next);
+                            }}
+                          />
+                        ) : (
+                          <Input
+                            readOnly
+                            value={formatDateForDisplay(field.value)}
+                            placeholder="Auto current date"
+                            className="bg-gray-50"
+                          />
+                        )}
+                      </FormControl>
+                      <p className="text-xs text-gray-500">
+                        {dateMode === "auto"
+                          ? "Uses the current date/time automatically."
+                          : "Pick any date/time manually."}
+                      </p>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="author"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Author</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Author name"
+                          value={field.value || ""}
+                          onChange={field.onChange}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
               <FormField
                 control={form.control}
                 name="image"
@@ -2578,24 +2684,6 @@ export function Admin() {
                     <FormLabel>Video URL</FormLabel>
                     <FormControl>
                       <Input placeholder="Enter video URL (optional)" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="author"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Author</FormLabel>
-                    <FormControl>
-                      <QuillNoSSRWrapper
-                        theme="snow"
-                        value={field.value || ""} // Bind value to the form's field
-                        onChange={(content) => field.onChange(content)} // Update the form's state on change
-                        placeholder="Author name"
-                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
