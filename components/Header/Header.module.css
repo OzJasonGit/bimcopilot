@@ -389,7 +389,7 @@
   width: 100%;
   min-width: 200px;
   justify-self: right;
-  gap: 10px;
+  gap: 30px;
   align-items: center;
   white-space: nowrap;
   background: transparent;
@@ -437,14 +437,13 @@
 }
 
 .timeDividerLine {
-  width: 2px;
-  min-width: 2px;
-  height: 1.3rem;
-  border-left: 2px solid rgb(212, 212, 216);
-  background-color: transparent;
+  width: 1px;
+  min-width: 1px;
+  height: 1.05em;
+  background-color: rgb(113, 113, 122);
   display: inline-block;
   align-self: center;
-  opacity: 0.95;
+  opacity: 0.55;
 }
 
 #SERVICES {
@@ -960,7 +959,7 @@
     width: 100%;
     min-width: 200px;
     justify-self: right;
-    gap: 10px;
+    gap: 14px;
     align-items: center;
     white-space: nowrap;
     background: transparent;
@@ -1008,14 +1007,13 @@
   }
 
   .timeDividerLine {
-    width: 2px;
-    min-width: 2px;
-    height: 1.3rem;
-    border-left: 2px solid rgb(212, 212, 216);
-    background-color: transparent;
+    width: 1px;
+    min-width: 1px;
+    height: 1.05em;
+    background-color: rgb(113, 113, 122);
     display: inline-block;
     align-self: center;
-    opacity: 0.95;
+    opacity: 0.55;
   }
 
   #SERVICES {
