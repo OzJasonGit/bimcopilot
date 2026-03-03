@@ -9,7 +9,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 
 function ListItem({ title, children, href, ...props }) {
@@ -28,6 +27,11 @@ function ListItem({ title, children, href, ...props }) {
 }
 
 export function ShadCN_Header() {
+  const directLinkClassName =
+    "relative inline-flex h-9 items-center rounded-md px-3 text-[14px] text-stone-50 " +
+    "font-avant_garde_bold transition-all duration-300 ease-out " +
+    "hover:-translate-y-[1px] hover:text-emerald-300 focus:outline-none focus:text-emerald-300";
+
   const triggerClassName =
     "relative h-9 rounded-md border-none bg-transparent px-3 text-[14px] text-stone-50 shadow-none " +
     "font-avant_garde_bold transition-all duration-300 ease-out " +
@@ -49,25 +53,13 @@ export function ShadCN_Header() {
     <div className="dark-theme-nav mt-5" style={{ color: '#f5f5f4' }}>
       <NavigationMenu disableViewport>
         <NavigationMenuList className="bg-transparent">
-          {/* Shop/Products Menu */}
+          {/* Shop Link (No Dropdown) */}
           <NavigationMenuItem className="relative">
-            <NavigationMenuTrigger className={triggerClassName}>
-              Shop
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className={dropdownContentClassName}>
-              <ul className="grid w-[300px] gap-2 p-4">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/products" className={dropdownLinkClassName}>
-                      <div className="font-avant_garde_bold text-stone-50 text-sm">All Products</div>
-                      <div className="text-stone-400 text-xs">
-                        Browse our BIM and technology products
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
+            <NavigationMenuLink asChild>
+              <Link href="/products" className={directLinkClassName}>
+                Shop
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
 
           {/* Services Menu */}
@@ -122,25 +114,13 @@ export function ShadCN_Header() {
             </NavigationMenuContent>
           </NavigationMenuItem>
 
-          {/* Blog/Stories Menu */}
+          {/* Stories Link (No Dropdown) */}
           <NavigationMenuItem className="relative">
-            <NavigationMenuTrigger className={triggerClassName}>
-              Stories
-            </NavigationMenuTrigger>
-            <NavigationMenuContent className={dropdownContentClassName}>
-              <ul className="grid w-[300px] gap-2 p-4">
-                <li>
-                  <NavigationMenuLink asChild>
-                    <Link href="/bloghome" className={dropdownLinkClassName}>
-                      <div className="font-avant_garde_bold text-stone-50 text-sm">Our Blog</div>
-                      <div className="text-stone-400 text-xs">
-                        Latest insights on BIM, AI, and architecture
-                      </div>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-              </ul>
-            </NavigationMenuContent>
+            <NavigationMenuLink asChild>
+              <Link href="/bloghome" className={directLinkClassName}>
+                Stories
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
