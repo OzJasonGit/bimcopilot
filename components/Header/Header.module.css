@@ -436,6 +436,17 @@
   align-self: center;
 }
 
+.timeDividerLine {
+  width: 2px;
+  min-width: 2px;
+  height: 1.3rem;
+  border-left: 2px solid rgb(212, 212, 216);
+  background-color: transparent;
+  display: inline-block;
+  align-self: center;
+  opacity: 0.95;
+}
+
 #SERVICES {
   grid-area: SERVICES;
 }
@@ -994,6 +1005,17 @@
     height: 1.05em;
     background-color: rgb(113, 113, 122);
     align-self: center;
+  }
+
+  .timeDividerLine {
+    width: 2px;
+    min-width: 2px;
+    height: 1.3rem;
+    border-left: 2px solid rgb(212, 212, 216);
+    background-color: transparent;
+    display: inline-block;
+    align-self: center;
+    opacity: 0.95;
   }
 
   #SERVICES {

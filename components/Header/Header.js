@@ -170,7 +170,7 @@ export default function Header() {
                 {/* Time and Date */}
                 <div className="content-center ..." id={styles.TIME}>
                   <Clock />  
-                  <div id={styles.TIME_DIVIDER}></div>
+                  <span className={styles.timeDividerLine} aria-hidden="true"></span>
                   <DateComponent />
                 </div>
               </div>
