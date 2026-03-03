@@ -42,13 +42,10 @@ export function ShadCN_Header() {
     "font-avant_garde_medium transition-all duration-300 ease-out " +
     "hover:-translate-y-[1px] hover:bg-white/85 hover:text-black " +
     "focus:bg-white/85 focus:text-black focus:outline-none " +
-    "data-[state=open]:bg-white/85 data-[state=open]:text-black " +
-    "after:absolute after:left-3 after:right-3 after:bottom-1 after:h-px " +
-    "after:origin-left after:scale-x-0 after:bg-black/60 after:transition-transform after:duration-300 " +
-    "hover:after:scale-x-100 data-[state=open]:after:scale-x-100";
+    "data-[state=open]:bg-white/85 data-[state=open]:text-black";
 
   const dropdownContentClassName =
-    "absolute left-1/2 top-full z-50 mt-2 w-[300px] -translate-x-1/2 rounded-xl border border-white/20 bg-stone-900/95 shadow-[0_12px_40px_rgba(0,0,0,0.45)] backdrop-blur-md";
+    "w-[300px] min-h-[110px] rounded-sm border border-white/20 bg-stone-900/95 shadow-[0_12px_40px_rgba(0,0,0,0.45)] backdrop-blur-md";
 
   const dropdownLinkClassName =
     "group flex flex-col items-start gap-1 rounded-md p-2 " +
@@ -56,10 +53,10 @@ export function ShadCN_Header() {
 
   return (
     <div className="dark-theme-nav mt-5" style={{ color: '#f5f5f4' }}>
-      <NavigationMenu disableViewport>
+      <NavigationMenu>
         <NavigationMenuList className="bg-transparent">
           {/* Shop Link (No Dropdown) */}
-          <NavigationMenuItem className="relative">
+          <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link href="/products" className={directLinkClassName}>
                 <span className={directLinkTextClassName} data-text="Shop">
@@ -70,7 +67,7 @@ export function ShadCN_Header() {
           </NavigationMenuItem>
 
           {/* Services Menu */}
-          <NavigationMenuItem className="relative">
+          <NavigationMenuItem>
             <NavigationMenuTrigger className={triggerClassName}>
               Services
             </NavigationMenuTrigger>
@@ -91,7 +88,7 @@ export function ShadCN_Header() {
           </NavigationMenuItem>
 
           {/* Copilot Dashboard Menu */}
-          <NavigationMenuItem className="relative">
+          <NavigationMenuItem>
             <NavigationMenuTrigger className={triggerClassName}>
               Dashboard
             </NavigationMenuTrigger>
@@ -122,7 +119,7 @@ export function ShadCN_Header() {
           </NavigationMenuItem>
 
           {/* Stories Link (No Dropdown) */}
-          <NavigationMenuItem className="relative">
+          <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link href="/bloghome" className={directLinkClassName}>
                 <span className={directLinkTextClassName} data-text="Stories">

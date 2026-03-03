@@ -53,7 +53,7 @@ const NavigationMenuContent = React.forwardRef(({ className, ...props }, ref) =>
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "left-0 top-0 w-full origin-top data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in-0 data-[motion^=to-]:fade-out-0 data-[motion^=from-]:zoom-in-95 data-[motion^=to-]:zoom-out-95 data-[motion=from-end]:slide-in-from-right-2 data-[motion=from-start]:slide-in-from-left-2 data-[motion=to-end]:slide-out-to-right-2 data-[motion=to-start]:slide-out-to-left-2 data-[motion^=from-]:duration-200 data-[motion^=to-]:duration-150 ease-[cubic-bezier(0.16,1,0.3,1)] md:absolute md:w-auto",
+      "left-0 top-0 w-full origin-top data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in-0 data-[motion^=to-]:fade-out-0 data-[motion^=from-]:zoom-in-95 data-[motion^=to-]:zoom-out-95 data-[motion^=from-]:duration-320 data-[motion^=to-]:duration-240 ease-[cubic-bezier(0.16,1,0.3,1)] md:absolute md:w-auto",
       className
     )}
     {...props} />
