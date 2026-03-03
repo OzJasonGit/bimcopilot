@@ -29,7 +29,7 @@ function ListItem({ title, children, href, ...props }) {
 export function ShadCN_Header() {
   const directLinkClassName =
     "relative inline-flex h-9 items-center rounded-md px-3 text-[14px] text-stone-50 " +
-    "font-avant_garde_bold transition-all duration-300 ease-out hover:-translate-y-[1px] focus:outline-none";
+    "font-avant_garde_medium transition-all duration-300 ease-out hover:-translate-y-[1px] focus:outline-none";
 
   const directLinkTextClassName =
     "relative inline-block leading-none " +
@@ -39,7 +39,7 @@ export function ShadCN_Header() {
 
   const triggerClassName =
     "relative h-9 rounded-md border-none bg-transparent px-3 text-[14px] text-stone-50 shadow-none " +
-    "font-avant_garde_bold transition-all duration-300 ease-out " +
+    "font-avant_garde_medium transition-all duration-300 ease-out " +
     "hover:-translate-y-[1px] hover:bg-white/85 hover:text-black " +
     "focus:bg-white/85 focus:text-black focus:outline-none " +
     "data-[state=open]:bg-white/85 data-[state=open]:text-black " +
