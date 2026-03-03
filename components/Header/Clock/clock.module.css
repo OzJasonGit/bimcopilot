@@ -35,8 +35,10 @@
 
 #DATE {
   grid-area: HOME;
-  width: 100%;
+  width: auto;
+  min-width: max-content;
   height: 100%;
   position: relative;
   left: 0;
+  overflow: visible;
 }
