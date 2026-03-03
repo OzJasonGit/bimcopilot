@@ -29,8 +29,13 @@ function ListItem({ title, children, href, ...props }) {
 export function ShadCN_Header() {
   const directLinkClassName =
     "relative inline-flex h-9 items-center rounded-md px-3 text-[14px] text-stone-50 " +
-    "font-avant_garde_bold transition-all duration-300 ease-out " +
-    "hover:-translate-y-[1px] hover:text-emerald-300 focus:outline-none focus:text-emerald-300";
+    "font-avant_garde_bold transition-all duration-300 ease-out hover:-translate-y-[1px] focus:outline-none";
+
+  const directLinkTextClassName =
+    "relative inline-block leading-none " +
+    "after:content-[attr(data-text)] after:absolute after:inset-0 after:w-0 after:overflow-hidden " +
+    "after:whitespace-nowrap after:text-emerald-300 after:transition-[width] after:duration-300 after:ease-out " +
+    "hover:after:w-full focus-visible:after:w-full";
 
   const triggerClassName =
     "relative h-9 rounded-md border-none bg-transparent px-3 text-[14px] text-stone-50 shadow-none " +
@@ -57,7 +62,9 @@ export function ShadCN_Header() {
           <NavigationMenuItem className="relative">
             <NavigationMenuLink asChild>
               <Link href="/products" className={directLinkClassName}>
-                Shop
+                <span className={directLinkTextClassName} data-text="Shop">
+                  Shop
+                </span>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -118,7 +125,9 @@ export function ShadCN_Header() {
           <NavigationMenuItem className="relative">
             <NavigationMenuLink asChild>
               <Link href="/bloghome" className={directLinkClassName}>
-                Stories
+                <span className={directLinkTextClassName} data-text="Stories">
+                  Stories
+                </span>
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
