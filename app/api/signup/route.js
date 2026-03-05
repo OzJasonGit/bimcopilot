@@ -6,6 +6,7 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { sendEmail, getAppUrl } from "../../utils/sendEmail";
 import { getWelcomeEmail } from "../../utils/emailTemplates";
+import { addSignupSubscriberToKit } from "../../utils/convertkit";
 
 export async function POST(req) {
     try {
@@ -89,19 +90,30 @@ export async function POST(req) {
             password: hashedPassword,
         });
 
-        // Send welcome email (non-blocking for signup success)
+        // Send welcome email via Kit (if configured) or SMTP (fallback)
+        const normalizedEmail = email.toLowerCase().trim();
+        const fullName = `${firstName.trim()} ${lastName.trim()}`;
         try {
-            const appUrl = getAppUrl();
-            const { subject, text, html } = getWelcomeEmail({
-                name: `${firstName.trim()} ${lastName.trim()}`,
-                appUrl,
-            });
-            await sendEmail({
-                to: email.toLowerCase().trim(),
-                subject,
-                text,
-                html,
-            });
+            if (process.env.CONVERTKIT_API_KEY && process.env.CONVERTKIT_TAG_ID) {
+                const ck = await addSignupSubscriberToKit({
+                    email: normalizedEmail,
+                    firstName: firstName.trim(),
+                    lastName: lastName.trim(),
+                });
+                if (!ck.success) console.error("Kit welcome failed:", ck.error);
+            } else {
+                const appUrl = getAppUrl();
+                const { subject, text, html } = getWelcomeEmail({
+                    name: fullName,
+                    appUrl,
+                });
+                await sendEmail({
+                    to: normalizedEmail,
+                    subject,
+                    text,
+                    html,
+                });
+            }
         } catch (emailError) {
             console.error("Welcome email failed:", emailError);
         }

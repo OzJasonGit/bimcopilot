@@ -34,8 +34,18 @@ const SignupForm = () => {
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const passwordsMatch = formData.password === formData.confirmPassword;
+  const confirmPasswordTouched = formData.confirmPassword.length > 0;
+  const showConfirmPasswordError = confirmPasswordTouched && !passwordsMatch;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (formData.password !== formData.confirmPassword) {
+      toast.error("Passwords do not match.");
+      return;
+    }
+
     setIsLoading(true);
 
     try {
@@ -154,7 +164,7 @@ const SignupForm = () => {
             </div>
             <br />
 
-            {["email", "userName", "password", "confirmPassword"].map((field) => (
+            {["userName","email", "password", "confirmPassword"].map((field) => (
               <div key={field} className="mb-4">
                 <label htmlFor={field} className="text-left text-stone-400 font-avant_garde_bold" id={styles._H3}>
                   {field.replace(/([A-Z])/g, " $1").replace(/^./, (str) => str.toUpperCase())}
@@ -168,8 +178,22 @@ const SignupForm = () => {
                   onChange={handleChange}
                   className="mt-1 border rounded-md"
                   required
-                  style={{ width: "100%", height: "40px", padding: "15px" }}
+                  style={{
+                    width: "100%",
+                    height: "40px",
+                    padding: "15px",
+                    ...(field === "confirmPassword" && showConfirmPasswordError
+                      ? { borderColor: "var(--destructive, #dc2626)", borderWidth: "1px" }
+                      : {}),
+                  }}
+                  aria-invalid={field === "confirmPassword" && showConfirmPasswordError}
+                  aria-describedby={field === "confirmPassword" && showConfirmPasswordError ? "confirmPassword-error" : undefined}
                 />
+                {field === "confirmPassword" && showConfirmPasswordError && (
+                  <p id="confirmPassword-error" className="mt-1 text-sm text-red-600" role="alert">
+                    Passwords do not match.
+                  </p>
+                )}
               </div>
             ))}
 
