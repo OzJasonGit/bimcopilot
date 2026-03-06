@@ -1,95 +1,363 @@
-#_body{
-    background: #000;
-    color: #fff;
-    margin: 0;
-  }
-
-/* Fill layout and allow scroll so Stories form/list are scrollable */
-.adminSection {
-    height: 100%;
-    min-height: 0;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-.container {
-    display: flex;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1600px;
-    margin: 0 auto;
-    flex: 1 1 auto;
-    min-height: 0;
-    align-items: flex-start;
-  }
-
-.mainContent {
-    flex: 1;
-    min-width: 0;
+#_body {
+  background: #000;
+  color: #fff;
+  margin: 0;
 }
 
-.formDiv{
-    border: 1px solid  black;
-    padding: 2rem;
-    border-radius: 25px;
-    background: #fff;
+.adminSection {
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(1200px 450px at 15% 0%, rgba(59, 130, 246, 0.1), transparent 60%),
+    radial-gradient(900px 300px at 90% 5%, rgba(16, 185, 129, 0.08), transparent 60%),
+    #f4f6fb;
+}
+
+.container {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1700px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  align-items: flex-start;
+}
+
+.mainContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.formDiv {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 10px 30px rgba(15, 23, 42, 0.06),
+    0 2px 8px rgba(15, 23, 42, 0.04);
+  min-height: auto;
+  overflow: visible;
+}
+
+.editorToolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.28);
+}
+
+.editorTitle {
+  text-align: left;
+  font-size: 1.45rem;
+  font-weight: 700;
+  margin: 0;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.editorSubtitle {
+  margin: 0.3rem 0 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.editorToolbarActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.storyForm :global(.space-y-8 > * + *) {
+  margin-top: 1.15rem !important;
+}
+
+.storyForm :global(label) {
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.86rem;
+  letter-spacing: 0.01em;
+}
+
+.storyForm :global(input),
+.storyForm :global(textarea) {
+  border-radius: 12px !important;
+  border: 1px solid #dbe2ec !important;
+  background: #f9fbff !important;
+  transition: all 0.2s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.storyForm :global(input:focus),
+.storyForm :global(textarea:focus) {
+  outline: none !important;
+  border-color: #60a5fa !important;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.18) !important;
+  background: #ffffff !important;
+}
+
+.storyForm :global(.ql-toolbar.ql-snow) {
+  border: 1px solid #dbe2ec !important;
+  border-radius: 12px 12px 0 0 !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+}
+
+.storyForm :global(.ql-container.ql-snow) {
+  border: 1px solid #dbe2ec !important;
+  border-top: 0 !important;
+  border-radius: 0 0 12px 12px !important;
+  background: #ffffff !important;
+  min-height: 86px;
+}
+
+.storyForm :global(.ql-editor) {
+  color: #111827 !important;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.storyForm :global(button[type="submit"]) {
+  background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.storyForm :global(button[type="submit"]:hover) {
+  filter: brightness(1.03);
+}
+
+.submitBar {
+  position: sticky;
+  bottom: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 0.25rem 0.25rem;
+  margin-top: 1rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), #fff 28%);
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
 }
 
 .sidebar {
-    width: 350px;
-    flex-shrink: 0;
-    position: sticky;
-    top: 0;
-    max-height: calc(100vh - 120px - 4rem);
-    overflow-y: auto;
-  }
+  width: 390px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  max-height: calc(100vh - 120px - 3rem);
+  overflow-y: auto;
+}
 
 .sidebarContent {
-    border: 1px solid black;
-    border-radius: 25px;
-    padding: 1.5rem;
-    background: #fff;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 20px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.sidebarTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: #111827;
+}
+
+.storyStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.storyStatCard {
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.5rem 0.6rem;
+}
+
+.storyStatLabel {
+  display: block;
+  font-size: 0.7rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+}
+
+.storyStatValue {
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.storyControls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.storySearchInput {
+  border-radius: 10px !important;
+  border-color: #d8e1ee !important;
+  background: #f8fbff !important;
+}
+
+.storyFilterRow {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
 }
 
 .storiesList {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    flex: 1;
-    overflow-y: auto;
-    padding-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.2rem;
 }
 
 .storyItem {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background-color: #f9fafb;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 0.85rem;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5eaf2;
+  transition: all 0.22s ease;
 }
 
 .storyItem:hover {
-    background-color: #f3f4f6;
-    border-color: #d1d5db;
+  transform: translateY(-1px);
+  border-color: #c8d7ec;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.07);
 }
 
 .storyItemActive {
-    border: 2px solid #3b82f6;
-    background-color: #eff6ff;
+  border: 1px solid #3b82f6;
+  background: linear-gradient(180deg, #f8fbff 0%, #eff6ff 100%);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
 }
 
-.storyItemActive:hover {
-    background-color: #dbeafe;
+.storyItemContent {
+  flex: 1;
 }
 
-/* Ensure conclusion field is visible */
-.formDiv {
-    min-height: auto;
-    overflow: visible;
+.storyItemTitle {
+  font-weight: 700;
+  margin-bottom: 0.32rem;
+  font-size: 0.93rem;
+  color: #0f172a;
+  line-height: 1.35;
+}
+
+.storyMeta {
+  font-size: 0.73rem;
+  color: #64748b;
+  margin-bottom: 0.35rem;
+}
+
+.storyStatusWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.storyStatusPublished,
+.storyStatusDraft {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.storyStatusPublished {
+  color: #047857;
+  background: #d1fae5;
+}
+
+.storyStatusDraft {
+  color: #b45309;
+  background: #fef3c7;
+}
+
+.storyItemActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 1350px) {
+  .container {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .sidebar {
+    width: 360px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-height: none;
+    position: relative;
+  }
+
+  .storyStatsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .formDiv {
+    border-radius: 16px;
+    padding: 1rem;
+  }
+
+  .editorToolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .editorToolbarActions {
+    justify-content: flex-start;
+  }
+
+  .storyStatsGrid {
+    grid-template-columns: 1fr;
+  }
 }

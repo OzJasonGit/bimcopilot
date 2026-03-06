@@ -7,6 +7,7 @@ import { faLinkedin, faSquareXTwitter, faSquareFacebook, faSquareReddit  } from 
 
 import styles from "./blog_page.module.css"
 import Link from "next/link";
+import Head from "next/head";
 import Video from "@/Modules/Blog/client/Video/video";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -135,7 +136,7 @@ const Blog_page = ({ stories: storiesProp, initialStory, relatedStories = [] }) 
     };
 
     useEffect(() => {
-        if (initialStory && initialStory.slug === slug) {
+        if (initialStory && (!slug || initialStory.slug === slug)) {
             setStory(initialStory);
             setLoading(false);
             return;

@@ -1,7 +1,7 @@
 
 "use client";
 import styles from "./admin.module.css"
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 import Menu from "@/components/Menu/menu";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -10,8 +10,8 @@ import { z } from "zod";
 import dynamic from "next/dynamic";
 import "react-quill/dist/quill.snow.css";
 
-// Configure Quill with modules including list and table support
-const QuillNoSSRWrapper = dynamic(
+// Configure Quill with modules including list and table support (exported for New Stories)
+export const QuillNoSSRWrapper = dynamic(
   () => {
     return new Promise((resolve) => {
       if (typeof window === 'undefined') {
@@ -769,43 +769,189 @@ const QuillNoSSRWrapper = dynamic(
               });
             });
             
-            // Intercept backspace/delete in paragraph after table to prevent deleting content above
-            const pAfterTableForHandler = wrapper.nextSibling;
-            if (pAfterTableForHandler && pAfterTableForHandler.tagName === 'P') {
-              pAfterTableForHandler.addEventListener('keydown', function(e) {
-                if (e.key === 'Backspace') {
-                  const sel = window.getSelection();
-                  if (sel.rangeCount > 0) {
-                    const range = sel.getRangeAt(0);
-                    // If cursor is at the very start of paragraph after table
-                    if (range.startContainer === pAfterTableForHandler && 
-                        range.startOffset === 0 && 
-                        range.collapsed) {
-                      // Check if there's content before the table
-                      const pBefore = wrapper.previousSibling;
-                      if (pBefore && pBefore.tagName === 'P' && pBefore.textContent.trim() === '') {
-                        // Empty paragraph before, allow deletion (will delete empty p)
-                        return;
-                      }
-                      // Prevent default to stop deletion of content above table
-                      e.preventDefault();
-                      e.stopPropagation();
-                      // Just ensure cursor stays in place
-                      const newRange = document.createRange();
-                      newRange.setStart(pAfterTableForHandler, 0);
-                      newRange.collapse(true);
-                      sel.removeAllRanges();
-                      sel.addRange(newRange);
-                    }
-                  }
-                }
-              }, true);
-            }
+            // No longer intercept Backspace in paragraph after table - allow normal editing
             
             // Update Quill
             quill.update('user');
           }
         };
+        
+        // Custom paste handler: clean Google Docs / Word HTML and preserve tables
+        const Clipboard = Quill.import('modules/clipboard');
+        const Delta = Quill.import('delta');
+        
+        function addTableDeleteSupport(wrapper, quill) {
+          const editor = quill.root;
+          const table = wrapper.querySelector('table');
+          if (!table) return;
+          let isTableSelected = false;
+          
+          const deleteButton = document.createElement('button');
+          deleteButton.className = 'ql-table-delete-button';
+          deleteButton.innerHTML = '×';
+          deleteButton.setAttribute('title', 'Delete Table');
+          deleteButton.style.cssText = 'position:absolute;top:-12px;right:-12px;width:24px;height:24px;background:#dc2626;color:white;border:none;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;display:none;z-index:20;box-shadow:0 2px 4px rgba(0,0,0,0.2)';
+          deleteButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (wrapper.nextSibling && wrapper.nextSibling.tagName === 'P' && !wrapper.nextSibling.textContent.trim()) wrapper.nextSibling.remove();
+            if (wrapper.previousSibling && wrapper.previousSibling.tagName === 'P' && !wrapper.previousSibling.textContent.trim()) wrapper.previousSibling.remove();
+            wrapper.remove();
+            quill.update('user');
+          });
+          wrapper.appendChild(deleteButton);
+          
+          wrapper.addEventListener('click', function(e) {
+            if (e.target.tagName === 'TD' || e.target.closest('td') || e.target === deleteButton) return;
+            e.stopPropagation();
+            isTableSelected = true;
+            wrapper.classList.add('ql-table-selected');
+            deleteButton.style.display = 'flex';
+          });
+          
+          editor.addEventListener('click', function(e) {
+            if (!wrapper.contains(e.target) && e.target !== deleteButton) {
+              isTableSelected = false;
+              wrapper.classList.remove('ql-table-selected');
+              deleteButton.style.display = 'none';
+            }
+          }, true);
+          
+          wrapper.addEventListener('keydown', function(e) {
+            if (isTableSelected && (e.key === 'Backspace' || e.key === 'Delete')) {
+              e.preventDefault();
+              e.stopPropagation();
+              if (wrapper.nextSibling && wrapper.nextSibling.tagName === 'P' && !wrapper.nextSibling.textContent.trim()) wrapper.nextSibling.remove();
+              if (wrapper.previousSibling && wrapper.previousSibling.tagName === 'P' && !wrapper.previousSibling.textContent.trim()) wrapper.previousSibling.remove();
+              wrapper.remove();
+              isTableSelected = false;
+              quill.update('user');
+            }
+          });
+          
+          // When user explicitly selects the table (not just cursor in text) and presses Backspace/Delete
+          const boundKeydown = function(e) {
+            if (e.key !== 'Backspace' && e.key !== 'Delete') return;
+            const sel = window.getSelection();
+            if (!sel.rangeCount || !sel.containsNode) return;
+            if (!sel.containsNode(wrapper, true)) return;
+            e.preventDefault();
+            e.stopPropagation();
+            if (wrapper.nextSibling && wrapper.nextSibling.tagName === 'P' && !wrapper.nextSibling.textContent.trim()) wrapper.nextSibling.remove();
+            if (wrapper.previousSibling && wrapper.previousSibling.tagName === 'P' && !wrapper.previousSibling.textContent.trim()) wrapper.previousSibling.remove();
+            wrapper.remove();
+            editor.removeEventListener('keydown', boundKeydown, true);
+            quill.update('user');
+          };
+          editor.addEventListener('keydown', boundKeydown, true);
+          
+          table.querySelectorAll('td, th').forEach((cell) => {
+            cell.addEventListener('input', function() { quill.update('user'); });
+          });
+        }
+        
+        function cleanAndNormalizePasteHtml(html) {
+          html = html
+            .replace(/<!--[\s\S]*?-->/g, '')
+            .replace(/<meta[^>]*>/gi, '')
+            .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
+            .replace(/<o:p>[\s\S]*?<\/o:p>/gi, '')
+            .replace(/<span[^>]*>\s*<\/span>/gi, '')
+            .trim();
+          const temp = document.createElement('div');
+          temp.innerHTML = html;
+          const tables = temp.querySelectorAll('table');
+          tables.forEach((table) => {
+            if (table.closest('.ql-table-wrapper')) return;
+            const wrapper = document.createElement('div');
+            wrapper.className = 'ql-table-wrapper';
+            wrapper.style.cssText = 'margin:15px 0;position:relative;display:block;width:100%';
+            wrapper.setAttribute('contenteditable', 'false');
+            wrapper.setAttribute('draggable', 'true');
+            table.classList.add('ql-table-inserted');
+            table.style.cssText = 'width:100%;border-collapse:collapse;border:1px solid #333;display:table';
+            table.querySelectorAll('td, th').forEach((cell) => {
+              cell.setAttribute('contenteditable', 'true');
+              cell.style.border = '1px solid #333';
+              cell.style.padding = '8px';
+            });
+            table.parentNode.insertBefore(wrapper, table);
+            wrapper.appendChild(table);
+          });
+          return temp.innerHTML;
+        }
+        
+        class PasteCleanClipboard extends Clipboard {
+          onPaste(e) {
+            e.preventDefault();
+            const quill = this.quill;
+            const range = quill.getSelection(true) || { index: quill.getLength(), length: 0 };
+            const types = e.clipboardData.types || [];
+            const hasHtml = types.includes('text/html');
+            let html = hasHtml ? e.clipboardData.getData('text/html') : null;
+            const plain = e.clipboardData.getData('text/plain');
+            
+            if (html) {
+              html = cleanAndNormalizePasteHtml(html);
+            }
+            
+            if (html && (html.includes('<table') || html.includes('<TABLE'))) {
+              // Paste HTML with tables via DOM to preserve structure
+              const editor = quill.root;
+              const sel = window.getSelection();
+              if (sel.rangeCount > 0) {
+                const nativeRange = sel.getRangeAt(0);
+                nativeRange.deleteContents();
+                const temp = document.createElement('div');
+                temp.innerHTML = html;
+                const frag = document.createDocumentFragment();
+                const toInsert = [];
+                while (temp.firstChild) {
+                  const c = temp.firstChild;
+                  toInsert.push(c);
+                  frag.appendChild(c);
+                }
+                nativeRange.insertNode(frag);
+                const lastNode = toInsert[toInsert.length - 1];
+                const pAfter = document.createElement('p');
+                pAfter.innerHTML = '<br>';
+                if (lastNode && lastNode.parentNode) {
+                  lastNode.parentNode.insertBefore(pAfter, lastNode.nextSibling);
+                } else {
+                  editor.appendChild(pAfter);
+                }
+                // Add delete support to pasted tables
+                const wrappersToEnhance = [];
+                toInsert.forEach((n) => {
+                  if (n.nodeType === 1) {
+                    if (n.classList && n.classList.contains('ql-table-wrapper')) wrappersToEnhance.push(n);
+                    wrappersToEnhance.push(...(n.querySelectorAll ? Array.from(n.querySelectorAll('.ql-table-wrapper')) : []));
+                  }
+                });
+                [...new Set(wrappersToEnhance)].forEach((w) => addTableDeleteSupport(w, quill));
+                quill.update('user');
+                const newLen = quill.getLength();
+                quill.setSelection(Math.min(range.index + 1, newLen - 1), 0, 'silent');
+                quill.scrollIntoView();
+                return;
+              }
+            }
+            
+            // Plain text or simple HTML: use default conversion (cleaned HTML reduces duplication)
+            const content = html || plain;
+            if (!content) return;
+            const delta = html ? this.convert(html) : new Delta().insert(plain);
+            quill.updateContents(
+              new Delta().retain(range.index).delete(range.length).concat(delta),
+              'user'
+            );
+            const len = delta.ops ? delta.ops.reduce((s, op) => s + (typeof op.insert === 'string' ? op.insert.length : 1), 0) : plain.length;
+            quill.setSelection(range.index + len, 0, 'silent');
+            quill.scrollIntoView();
+          }
+        }
+        
+        Quill.register('modules/clipboard', PasteCleanClipboard, true);
         
         // Configure modules with custom table support
         const modules = {
@@ -1444,6 +1590,8 @@ export function Admin() {
   const [isEditing, setIsEditing] = useState(false);
   const [storiesLoading, setStoriesLoading] = useState(true);
   const [dateMode, setDateMode] = useState("auto");
+  const [storySearch, setStorySearch] = useState("");
+  const [statusFilter, setStatusFilter] = useState("all");
 
   const formatDateForDisplay = (value) => {
     if (!value) return "";
@@ -1487,6 +1635,31 @@ export function Admin() {
     // Remove HTML tags using regex
     return html.replace(/<[^>]*>/g, "").replace(/&nbsp;/g, " ").trim();
   };
+
+  const storyStats = useMemo(() => {
+    const published = stories.filter((item) => item?.published).length;
+    const drafts = stories.length - published;
+    return { total: stories.length, published, drafts };
+  }, [stories]);
+
+  const filteredStories = useMemo(() => {
+    const query = storySearch.trim().toLowerCase();
+    return stories.filter((item) => {
+      const matchesStatus =
+        statusFilter === "all" ||
+        (statusFilter === "published" && item?.published) ||
+        (statusFilter === "draft" && !item?.published);
+
+      if (!matchesStatus) return false;
+      if (!query) return true;
+
+      const title = stripHtml(item?.title || "").toLowerCase();
+      const slug = String(item?.slug || "").toLowerCase();
+      const post = String(item?.post_number || "").toLowerCase();
+
+      return title.includes(query) || slug.includes(query) || post.includes(query);
+    });
+  }, [stories, statusFilter, storySearch]);
 
   const fetchStories = async () => {
     try {
@@ -1572,6 +1745,11 @@ export function Admin() {
     setEditingStory(null);
     setDateMode("auto");
     form.reset();
+  };
+
+  const handleCreateNew = () => {
+    handleCancelEdit();
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handlePublish = async (storyId) => {
@@ -1671,23 +1849,40 @@ export function Admin() {
         {/* Main Content Area - Form */}
         <div className={styles.mainContent}>
         <div className={styles.formDiv} >
-            <h1 style={{ textAlign: "center", fontSize: "x-large", fontWeight: "600" }}>
-              {isEditing ? "Edit Story" : "Create New Story"}
-            </h1>
-            {isEditing && (
-              <div style={{ marginBottom: "1rem", textAlign: "center" }}>
+            <div className={styles.editorToolbar}>
+              <div>
+                <h1 className={styles.editorTitle}>
+                  {isEditing ? "Edit Story" : "Create New Story"}
+                </h1>
+                <p className={styles.editorSubtitle}>
+                  {isEditing
+                    ? "Update content and publish when you're ready."
+                    : "Draft and publish a new story from one workspace."}
+                </p>
+              </div>
+              <div className={styles.editorToolbarActions}>
                 <Button
                   type="button"
-                  onClick={handleCancelEdit}
+                  onClick={fetchStories}
                   variant="outline"
                   size="sm"
                 >
-                  Cancel Edit
+                  Refresh List
                 </Button>
+                {isEditing && (
+                  <Button
+                    type="button"
+                    onClick={handleCancelEdit}
+                    variant="outline"
+                    size="sm"
+                  >
+                    Cancel Edit
+                  </Button>
+                )}
               </div>
-            )}
+            </div>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
+            <form onSubmit={form.handleSubmit(handleSubmit)} className={`${styles.storyForm} space-y-8`}>
 
               <FormField
                 control={form.control}
@@ -2704,9 +2899,14 @@ export function Admin() {
                 )}
               />
 
-              <Button type="submit" story={story} handleChange={handleChange} handleSubmit={handleSubmit} disabled={loading} >
-                {loading ? (isEditing ? "Updating..." : "Submitting...") : (isEditing ? "Update Story" : "Create Story")}
-              </Button>
+              <div className={styles.submitBar}>
+                <Button type="submit" story={story} handleChange={handleChange} handleSubmit={handleSubmit} disabled={loading}>
+                  {loading ? (isEditing ? "Updating..." : "Submitting...") : (isEditing ? "Update Story" : "Create Story")}
+                </Button>
+                <Button type="button" variant="outline" onClick={handleCreateNew}>
+                  New Story
+                </Button>
+              </div>
             </form>
           </Form>
 
@@ -2716,44 +2916,95 @@ export function Admin() {
         {/* Sidebar - Stories List */}
         <div className={styles.sidebar}>
           <div className={styles.sidebarContent}>
-            <h2 style={{ fontSize: "1.25rem", fontWeight: "600", marginBottom: "1rem", paddingBottom: "0.75rem", borderBottom: "2px solid #e5e7eb" }}>
-              All Stories
-            </h2>
+            <div className={styles.sidebarHeader}>
+              <h2 className={styles.sidebarTitle}>Story Management</h2>
+              <Button type="button" size="sm" variant="outline" onClick={handleCreateNew}>
+                + New Story
+              </Button>
+            </div>
+            <div className={styles.storyStatsGrid}>
+              <div className={styles.storyStatCard}>
+                <span className={styles.storyStatLabel}>Total</span>
+                <strong className={styles.storyStatValue}>{storyStats.total}</strong>
+              </div>
+              <div className={styles.storyStatCard}>
+                <span className={styles.storyStatLabel}>Published</span>
+                <strong className={styles.storyStatValue}>{storyStats.published}</strong>
+              </div>
+              <div className={styles.storyStatCard}>
+                <span className={styles.storyStatLabel}>Drafts</span>
+                <strong className={styles.storyStatValue}>{storyStats.drafts}</strong>
+              </div>
+            </div>
+            <div className={styles.storyControls}>
+              <Input
+                className={styles.storySearchInput}
+                value={storySearch}
+                onChange={(e) => setStorySearch(e.target.value)}
+                placeholder="Search by title, slug, post #"
+              />
+              <div className={styles.storyFilterRow}>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant={statusFilter === "all" ? "default" : "outline"}
+                  onClick={() => setStatusFilter("all")}
+                >
+                  All
+                </Button>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant={statusFilter === "published" ? "default" : "outline"}
+                  onClick={() => setStatusFilter("published")}
+                >
+                  Published
+                </Button>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant={statusFilter === "draft" ? "default" : "outline"}
+                  onClick={() => setStatusFilter("draft")}
+                >
+                  Drafts
+                </Button>
+              </div>
+            </div>
             {storiesLoading ? (
               <p style={{ textAlign: "center", color: "#6b7280", padding: "2rem" }}>Loading stories...</p>
-            ) : stories.length === 0 ? (
+            ) : filteredStories.length === 0 ? (
               <p style={{ textAlign: "center", color: "#6b7280", padding: "2rem" }}>No stories found.</p>
             ) : (
               <div className={styles.storiesList}>
-                {stories.map((story) => (
+                {filteredStories.map((story) => (
                   <div
                     key={story._id}
                     className={`${styles.storyItem} ${editingStory?._id === story._id ? styles.storyItemActive : ""}`}
                     onClick={() => handleEdit(story)}
                     style={{ cursor: "pointer" }}
                   >
-                    <div style={{ flex: 1 }}>
-                      <div style={{ fontWeight: "600", marginBottom: "0.25rem", fontSize: "0.95rem" }}>
+                    <div className={styles.storyItemContent}>
+                      <div className={styles.storyItemTitle}>
                         {stripHtml(story.title) || "Untitled Story"}
                       </div>
-                      <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.5rem" }}>
+                      <div className={styles.storyMeta}>
                         Post #: {story.post_number || "N/A"}
                       </div>
-                      <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.5rem" }}>
+                      <div className={styles.storyMeta}>
                         Slug: {story.slug || "N/A"}
                       </div>
-                      <div style={{ fontSize: "0.75rem", color: "#6b7280", marginBottom: "0.5rem" }}>
+                      <div className={styles.storyMeta}>
                         Date: {story.date || story.timestamp || "N/A"}
                       </div>
-                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                      <div className={styles.storyStatusWrap}>
                         {story.published ? (
-                          <span style={{ fontSize: "0.75rem", color: "#10b981", fontWeight: "500" }}>● Published</span>
+                          <span className={styles.storyStatusPublished}>Published</span>
                         ) : (
-                          <span style={{ fontSize: "0.75rem", color: "#ef4444", fontWeight: "500" }}>● Draft</span>
+                          <span className={styles.storyStatusDraft}>Draft</span>
                         )}
                       </div>
                     </div>
-                    <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginTop: "0.5rem" }}>
+                    <div className={styles.storyItemActions}>
                       <Button
                         type="button"
                         onClick={(e) => {
@@ -2764,7 +3015,7 @@ export function Admin() {
                         variant="outline"
                         className="border-blue-600 text-blue-600 hover:bg-blue-50"
                       >
-                        Enable Edit
+                        Edit
                       </Button>
                       {!story.published && (
                         <Button

@@ -8,7 +8,12 @@ const Sidebar = () => {
         <ul>
           <li className="mb-2">
             <Link href="/admin">
-              <span className="block px-4 py-2 rounded hover:bg-gray-700">Stories</span>
+              <span className="block px-4 py-2 rounded hover:bg-gray-700">Stories (Legacy)</span>
+            </Link>
+          </li>
+          <li className="mb-2">
+            <Link href="/admin/new-stories">
+              <span className="block px-4 py-2 rounded hover:bg-gray-700">New Stories Studio</span>
             </Link>
           </li>
            <li className="mb-2">
