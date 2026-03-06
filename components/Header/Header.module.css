@@ -385,6 +385,7 @@
   grid-area: LOGO_AND_TIME;
   position: relative;
   display: flex;
+  flex-wrap: nowrap;
   left: 0;
   width: 100%;
   min-width: 200px;
@@ -393,6 +394,11 @@
   align-items: center;
   white-space: nowrap;
   background: transparent;
+}
+
+#TIME > div {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 
@@ -955,6 +961,7 @@
     grid-area: LOGO_AND_TIME;
     position: relative;
     display: flex;
+    flex-wrap: nowrap;
     left: 0;
     width: 100%;
     min-width: 200px;
@@ -963,6 +970,11 @@
     align-items: center;
     white-space: nowrap;
     background: transparent;
+  }
+
+  #TIME > div {
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
 
