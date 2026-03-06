@@ -21,8 +21,7 @@ const SignupForm = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    userName: "",
     email: "",
     password: "",
     confirmPassword: "",
@@ -48,8 +47,29 @@ const SignupForm = () => {
 
     setIsLoading(true);
 
+    const namePart = (formData.userName || "").trim().split(/\s+/).filter(Boolean);
+    const firstName = namePart[0] || "";
+    const lastName = namePart.slice(1).join(" ") || (firstName || "");
+
+    const payload = {
+      firstName: firstName || formData.userName?.trim() || "",
+      lastName: lastName || firstName || "",
+      email: formData.email,
+      password: formData.password,
+      confirmPassword: formData.confirmPassword,
+    };
+
+    console.log("[signup] Sending payload keys:", Object.keys(payload));
+    console.log("[signup] Payload (no passwords):", {
+      firstName: payload.firstName,
+      lastName: payload.lastName,
+      email: payload.email,
+      hasPassword: !!payload.password,
+      hasConfirmPassword: !!payload.confirmPassword,
+    });
+
     try {
-      const { data } = await axios.post("/api/signup", formData);
+      const { data } = await axios.post("/api/signup", payload);
 
       if (data.error) {
         toast.error(data.error?.message || "Something went wrong!");
@@ -65,8 +85,10 @@ const SignupForm = () => {
         ), 1500)
       }
     } catch (error) {
-      toast.error(error.response?.data?.message || "Signup failed!");
-      console.log("Signup failed!", error);
+      const msg = error.response?.data?.error?.message || error.response?.data?.message || "Signup failed!";
+      toast.error(typeof msg === "string" ? msg : "Signup failed!");
+      console.error("[signup] Request failed:", error.response?.status, error.response?.data);
+      console.error("[signup] Full error:", error);
     } finally {
       setIsLoading(false);
     }

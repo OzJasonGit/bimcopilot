@@ -77,7 +77,11 @@ async function addTagToSubscriber(subscriberId, tagId) {
   const data = await res.json().catch(() => ({}));
 
   if (!res.ok && res.status !== 200) {
-    const msg = data?.errors?.[0] || data?.message || res.statusText || "Add tag failed";
+    const raw = data?.errors?.[0] || data?.message || res.statusText || "Add tag failed";
+    const msg =
+      res.status === 404
+        ? `Tag not found. Check that CONVERTKIT_TAG_ID (${tagId}) exists in your Kit account under Subscribers → Tags.`
+        : raw;
     return { success: false, error: msg };
   }
 

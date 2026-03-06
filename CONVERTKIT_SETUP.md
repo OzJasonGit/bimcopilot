@@ -2,13 +2,24 @@
 
 When a user signs up in your app, they can receive a welcome email sequence from Kit. The flow uses the **Kit API v4**: create subscriber → add tag → Kit runs a Visual Automation that subscribes them to your welcome sequence.
 
-## 1. Get your API key
+## 1. Get your API key (must be V4)
 
-Go to [Settings > Developer](https://app.kit.com/account_settings/developer_settings) in your Kit account and copy your **API key**.
+Go to [Settings > Developer](https://app.kit.com/account_settings/developer_settings) in your Kit account.
 
-## 2. Create a tag in Kit
+- Find the **V4 Keys** section (not “API key” / “API secret” from an OAuth app or the legacy V3 section).
+- Click **“Add a new key”**, give it a name (e.g. “Bimcopilot signup”), then **copy the key** right away (Kit only shows it once).
+- Put that single value in `CONVERTKIT_API_KEY`.
 
-In Kit, create a tag (e.g. **"New App Signup"**). You’ll use this tag as the trigger for your welcome automation. Note the **Tag ID** (e.g. from the tag’s URL or settings).
+**If you see “API key” and “API secret”:** those are usually for OAuth apps or V3. They do **not** work with this integration. You must use a key created under **V4 Keys → Add a new key**. If you don’t see “V4 Keys”, your plan might not expose it; contact Kit support or use the SMTP fallback for welcome emails instead.
+
+## 2. Create a tag and get its ID
+
+In Kit, go to **Subscribers → Tags** (or **Audience → Tags**). Create a tag (e.g. **"New App Signup"**). You need the **Tag ID** (a number):
+
+- Open the tag (click it) and check the URL: `.../tags/**12345**` — the number is the tag ID.
+- Or in some views the ID is shown in the tag list or tag settings.
+
+Set `CONVERTKIT_TAG_ID` to that number only (e.g. `CONVERTKIT_TAG_ID=12345`). If the ID is wrong or the tag was deleted, you’ll get **"Not Found"** when testing.
 
 ## 3. Set up a Visual Automation in Kit
 
@@ -72,3 +83,20 @@ Then in Kit: **Subscribers** should show the new subscriber with your tag, and y
 ### Option C: Check env
 
 Ensure both are set (restart the server after changing). Confirm `.env` has `CONVERTKIT_API_KEY` and `CONVERTKIT_TAG_ID` and restart the dev server.
+
+---
+
+## No email received after signup?
+
+1. **Check the server terminal** after a signup. You should see one of:
+   - `[signup] Sending welcome via Kit...` then either `Kit: subscriber added and tagged` or `Kit welcome failed: ...`
+   - `[signup] Kit not configured, using SMTP...` then either `Welcome email sent via SMTP` or `SMTP welcome failed (is SMTP configured?): ...`
+
+2. **If you use Kit:** The welcome email is sent by Kit’s **Visual Automation**, not instantly by the API. In Kit go to **Automate → Visual Automations** and ensure:
+   - You have an automation whose trigger is **“Is added to a Tag”** and that tag is the one you use (`CONVERTKIT_TAG_ID`).
+   - The automation has an action **“Subscribe to a sequence”** with your welcome emails.
+   - The automation is **Active**. Then check **Subscribers** to confirm the new signup has that tag.
+
+3. **If you use SMTP (no Kit or Kit failed):** Set in `.env`: `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, and optionally `SMTP_FROM`. Restart the server and sign up again; check the terminal for `Welcome email sent via SMTP` or the error message.
+
+4. **“The API key is invalid”:** You must use a **V4** API key from **Developer → V4 Keys → Add a new key**. The “API key” and “API secret” shown elsewhere (e.g. for an app or V3) are not the same and will be rejected. Create a new key under **V4 Keys** and set that value as `CONVERTKIT_API_KEY`.

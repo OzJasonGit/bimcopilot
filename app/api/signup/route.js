@@ -10,12 +10,31 @@ import { addSignupSubscriberToKit } from "../../utils/convertkit";
 
 export async function POST(req) {
     try {
+        const body = await req.json();
+        const { firstName, lastName, email, password, confirmPassword } = body;
+
+        console.log("[signup] Request body keys:", Object.keys(body));
+        console.log("[signup] Parsed:", {
+            firstName: firstName ? `${String(firstName).slice(0, 20)}...` : "(empty)",
+            lastName: lastName ? `${String(lastName).slice(0, 20)}...` : "(empty)",
+            email: email ? `${String(email).slice(0, 30)}...` : "(empty)",
+            hasPassword: !!password,
+            hasConfirmPassword: !!confirmPassword,
+        });
+
         const db = await connectToDatabase();
-        const { firstName, lastName, email, password, confirmPassword } = await req.json();
         const User = db.collection("users");
 
         // Input validation
         if (!firstName || !lastName || !email || !password || !confirmPassword) {
+            const missing = [
+                !firstName && "firstName",
+                !lastName && "lastName",
+                !email && "email",
+                !password && "password",
+                !confirmPassword && "confirmPassword",
+            ].filter(Boolean);
+            console.log("[signup] 400: All fields required. Missing:", missing);
             return new NextResponse(
                 JSON.stringify({ error: { message: "All fields are required" } }),
                 { status: 400 }
@@ -24,6 +43,7 @@ export async function POST(req) {
 
         // Validate name length
         if (firstName.trim().length < 1 || firstName.trim().length > 50) {
+            console.log("[signup] 400: First name invalid length:", firstName.trim().length);
             return new NextResponse(
                 JSON.stringify({ error: { message: "First name must be between 1 and 50 characters" } }),
                 { status: 400 }
@@ -31,6 +51,7 @@ export async function POST(req) {
         }
 
         if (lastName.trim().length < 1 || lastName.trim().length > 50) {
+            console.log("[signup] 400: Last name invalid length:", lastName.trim().length);
             return new NextResponse(
                 JSON.stringify({ error: { message: "Last name must be between 1 and 50 characters" } }),
                 { status: 400 }
@@ -40,6 +61,7 @@ export async function POST(req) {
         // Validate email format
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
+            console.log("[signup] 400: Invalid email format");
             return new NextResponse(
                 JSON.stringify({ error: { message: "Invalid email format" } }),
                 { status: 400 }
@@ -48,6 +70,7 @@ export async function POST(req) {
 
         // Validate password strength
         if (password.length < 8) {
+            console.log("[signup] 400: Password too short:", password.length);
             return new NextResponse(
                 JSON.stringify({ error: { message: "Password must be at least 8 characters long" } }),
                 { status: 400 }
@@ -56,6 +79,7 @@ export async function POST(req) {
 
         // Check for password complexity (at least one letter and one number)
         if (!/[a-zA-Z]/.test(password) || !/[0-9]/.test(password)) {
+            console.log("[signup] 400: Password missing letter or number");
             return new NextResponse(
                 JSON.stringify({ error: { message: "Password must contain at least one letter and one number" } }),
                 { status: 400 }
@@ -64,6 +88,7 @@ export async function POST(req) {
 
         // Check if passwords match
         if (password !== confirmPassword) {
+            console.log("[signup] 400: Passwords do not match");
             return new NextResponse(
                 JSON.stringify({ error: { message: "Passwords do not match" } }),
                 { status: 400 }
@@ -71,8 +96,9 @@ export async function POST(req) {
         }
 
         // Check if user already exists
-        const existingUser = await User.findOne({ email });
+        const existingUser = await User.findOne({ email: email.toLowerCase().trim() });
         if (existingUser) {
+            console.log("[signup] 409: User already exists:", email);
             return new NextResponse(
                 JSON.stringify({ error: { message: "User already exists" } }),
                 { status: 409 }
@@ -95,27 +121,44 @@ export async function POST(req) {
         const fullName = `${firstName.trim()} ${lastName.trim()}`;
         try {
             if (process.env.CONVERTKIT_API_KEY && process.env.CONVERTKIT_TAG_ID) {
+                console.log("[signup] Sending welcome via Kit (subscriber + tag)");
                 const ck = await addSignupSubscriberToKit({
                     email: normalizedEmail,
                     firstName: firstName.trim(),
                     lastName: lastName.trim(),
                 });
-                if (!ck.success) console.error("Kit welcome failed:", ck.error);
+                if (ck.success) {
+                    console.log("[signup] Kit: subscriber added and tagged. Welcome email depends on your Kit automation.");
+                } else {
+                    console.error("[signup] Kit welcome failed:", ck.error);
+                    // Fallback: try SMTP so user still gets an email
+                    const appUrl = getAppUrl();
+                    const { subject, text, html } = getWelcomeEmail({ name: fullName, appUrl });
+                    const smtp = await sendEmail({ to: normalizedEmail, subject, text, html });
+                    if (smtp.success) console.log("[signup] SMTP fallback: welcome email sent.");
+                    else console.error("[signup] SMTP fallback failed:", smtp.error);
+                }
             } else {
+                console.log("[signup] Kit not configured, using SMTP for welcome email");
                 const appUrl = getAppUrl();
                 const { subject, text, html } = getWelcomeEmail({
                     name: fullName,
                     appUrl,
                 });
-                await sendEmail({
+                const smtp = await sendEmail({
                     to: normalizedEmail,
                     subject,
                     text,
                     html,
                 });
+                if (smtp.success) {
+                    console.log("[signup] Welcome email sent via SMTP.");
+                } else {
+                    console.error("[signup] SMTP welcome failed (is SMTP configured?):", smtp.error);
+                }
             }
         } catch (emailError) {
-            console.error("Welcome email failed:", emailError);
+            console.error("[signup] Welcome email error:", emailError);
         }
 
         // Generate JWT token
