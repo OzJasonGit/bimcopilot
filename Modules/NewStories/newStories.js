@@ -118,6 +118,7 @@ export default function NewStories() {
   const [notice, setNotice] = useState({ type: "", message: "" });
   const [visibleBodyCount, setVisibleBodyCount] = useState(1);
   const [showEditor, setShowEditor] = useState(false);
+  const [publishingId, setPublishingId] = useState(null);
   const titleWatch = form.watch("title");
   const formValues = form.watch();
 
@@ -278,6 +279,8 @@ export default function NewStories() {
   }
 
   async function handlePublish(storyId) {
+    setPublishingId(storyId);
+    setNotice({ type: "", message: "" });
     try {
       const res = await fetch("/api/admin_route", {
         method: "PUT",
@@ -290,10 +293,18 @@ export default function NewStories() {
         return;
       }
       setNotice({ type: "success", message: "Story published successfully." });
-      await fetchStories();
+      setStories((prev) =>
+        prev.map((s) =>
+          String(s._id) === String(storyId)
+            ? { ...s, published: true, publishDate: new Date().toISOString() }
+            : s
+        )
+      );
     } catch (error) {
       console.error("Error publishing story:", error);
       setNotice({ type: "error", message: "Unexpected error while publishing." });
+    } finally {
+      setPublishingId(null);
     }
   }
 
@@ -391,7 +402,14 @@ export default function NewStories() {
                   <div className={styles.storyGridActions}>
                     <Button type="button" size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleEdit(story); }}>Edit</Button>
                     {!story.published && (
-                      <Button type="button" size="sm" onClick={(e) => { e.stopPropagation(); handlePublish(story._id); }}>Publish</Button>
+                      <Button
+                        type="button"
+                        size="sm"
+                        disabled={publishingId === story._id}
+                        onClick={(e) => { e.stopPropagation(); handlePublish(story._id); }}
+                      >
+                        {publishingId === story._id ? "Publishing…" : "Publish"}
+                      </Button>
                     )}
                   </div>
                 </article>
