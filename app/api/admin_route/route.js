@@ -2,6 +2,7 @@ import { connectToDatabase } from "../../utils/mongodb";
 import { NextResponse } from "next/server";
 import { getCurrentUser } from "@/app/utils/auth";
 import { ObjectId } from "mongodb";
+import { getPostNumberNumeric } from "@/app/utils/postNumber";
 
 export async function GET(req) {
   try {
@@ -16,7 +17,7 @@ export async function GET(req) {
     const collection = db.collection("stories");
     const stories = await collection
       .find({})
-      .sort({ post_number: -1 })
+      .sort({ sortOrder: -1, post_number: -1 })
       .toArray();
     return new NextResponse(
       JSON.stringify({ success: true, data: stories }),
@@ -43,8 +44,8 @@ export async function POST(req) {
     const db = await connectToDatabase();
     const collection = db.collection("stories");
     const data = await req.json();
-    // Insert data
-    const result = await collection.insertOne(data);
+    const sortOrder = getPostNumberNumeric(data.post_number);
+    const result = await collection.insertOne({ ...data, sortOrder });
     return new NextResponse(
       JSON.stringify({ success: true, data: result }),
       { status: 200, headers: { "Content-Type": "application/json" } }
@@ -80,6 +81,10 @@ export async function PUT(req) {
 
     // Remove _id from updateData if it exists
     delete updateData._id;
+
+    if (updateData.post_number !== undefined) {
+      updateData.sortOrder = getPostNumberNumeric(updateData.post_number);
+    }
     
     const result = await collection.updateOne(
       { _id: new ObjectId(_id) },

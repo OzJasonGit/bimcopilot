@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "@/Modules/Blog_page/blog_page.module.css";
+import { getPostNumberDisplay } from "@/app/utils/postNumber";
 
 const getHtmlContent = (content) => {
   if (!content) return "";
@@ -78,7 +79,7 @@ export default function StoryPreview({ story }) {
               </div>
               <div id={styles.NUMBER_GRID} style={{ gridArea: "NUMBER", height: "100%", width: "100%", display: "grid", position: "relative" }}>
                 <div id={styles.NUMBER} style={{ gridArea: "NUMBER", height: "100%", width: "100%", position: "relative" }}>
-                  <h3 className="text-6xl text-stone-200 font-avant_garde_bold" style={{ marginBottom: "0px" }}>{story.post_number || ""}</h3>
+                  <h3 className="text-6xl text-stone-200 font-avant_garde_bold" style={{ marginBottom: "0px" }}>{getPostNumberDisplay(story.post_number)}</h3>
                 </div>
               </div>
               <div id={styles.NAME} style={{ gridArea: "NAME", height: "auto", width: "100%", left: "5px", position: "relative" }}>

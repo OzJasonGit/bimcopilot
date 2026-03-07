@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import logoImage from "./bimcopilot_logo_text_vertical_white_shadow.svg";
 import parse from "html-react-parser";
+import { getPostNumberDisplay } from "@/app/utils/postNumber";
 
 const Blogpage = ({ stories, topStories }) => {
   const params = useParams();
@@ -51,7 +52,7 @@ const Blogpage = ({ stories, topStories }) => {
                                     <h1
                                       id={styles._H1}
                                       className="text-center mt-4 text-5xl text-stone-200 font-avant_garde_bold">
-                                      {parse(mainStory.post_number.toString() || "")}
+                                      {getPostNumberDisplay(mainStory.post_number)}
                                     </h1>
                                   </div>
                                 </div>
@@ -140,7 +141,7 @@ const Blogpage = ({ stories, topStories }) => {
                       <div className="rounded-full drop-shadow-2xl border-2 border-emerald-200" id={styles.BLOG_NUMBER}>
                         <div className="content-center">
                           <h5 id={styles._H5} className="text-center mt-1 text-stone-200 font-avant_garde_bold">
-                            {parse(story.post_number || "")}
+                            {getPostNumberDisplay(story.post_number)}
                           </h5>
                         </div>
                       </div>

@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import ImageUploadField from "@/components/ImageUploadField/ImageUploadField";
+import { getPostNumberDisplay } from "@/app/utils/postNumber";
 
 const MAX_BODY_SECTIONS = 18;
 
@@ -119,6 +120,9 @@ export default function NewStories() {
   const [visibleBodyCount, setVisibleBodyCount] = useState(1);
   const [showEditor, setShowEditor] = useState(false);
   const [publishingId, setPublishingId] = useState(null);
+  const [reorderingId, setReorderingId] = useState(null);
+  const [reindexing, setReindexing] = useState(false);
+  const [viewMode, setViewMode] = useState("grid"); // "grid" | "list"
   const titleWatch = form.watch("title");
   const formValues = form.watch();
 
@@ -215,7 +219,7 @@ export default function NewStories() {
     setNotice({ type: "", message: "" });
     setVisibleBodyCount(getVisibleBodyCount(story));
     form.reset({
-      post_number: story.post_number || "",
+      post_number: getPostNumberDisplay(story.post_number) || story.post_number || "",
       title: story.title || "",
       slug: story.slug || "",
       author: story.author || "",
@@ -308,6 +312,50 @@ export default function NewStories() {
     }
   }
 
+  async function handleReorder(storyId, direction) {
+    setReorderingId(storyId);
+    setNotice({ type: "", message: "" });
+    try {
+      const res = await fetch("/api/admin_route/reorder", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ storyId, direction }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setNotice({ type: "error", message: data.error || "Failed to reorder." });
+        return;
+      }
+      setNotice({ type: "success", message: "Order updated." });
+      await fetchStories();
+    } catch (error) {
+      console.error("Reorder error:", error);
+      setNotice({ type: "error", message: "Failed to reorder." });
+    } finally {
+      setReorderingId(null);
+    }
+  }
+
+  async function handleReindex() {
+    setReindexing(true);
+    setNotice({ type: "", message: "" });
+    try {
+      const res = await fetch("/api/admin_route/reindex", { method: "POST" });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setNotice({ type: "error", message: data.error || "Failed to reindex." });
+        return;
+      }
+      setNotice({ type: "success", message: data.message || "Order reindexed." });
+      await fetchStories();
+    } catch (error) {
+      console.error("Reindex error:", error);
+      setNotice({ type: "error", message: "Failed to reindex." });
+    } finally {
+      setReindexing(false);
+    }
+  }
+
   async function handleSubmit(data) {
     setLoading(true);
     setNotice({ type: "", message: "" });
@@ -368,6 +416,35 @@ export default function NewStories() {
                 <Button type="button" size="sm" variant={statusFilter === "draft" ? "default" : "outline"} onClick={() => setStatusFilter("draft")}>Drafts</Button>
               </div>
               <Button onClick={handleAddNewStory} className={styles.addStoryBtn}>Add New Story</Button>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                disabled={reindexing || stories.length === 0}
+                onClick={handleReindex}
+              >
+                {reindexing ? "Reindexing…" : "Reindex Order"}
+              </Button>
+              <div className={styles.viewToggle}>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant={viewMode === "grid" ? "default" : "outline"}
+                  onClick={() => setViewMode("grid")}
+                  title="Grid view"
+                >
+                  ⊞
+                </Button>
+                <Button
+                  type="button"
+                  size="sm"
+                  variant={viewMode === "list" ? "default" : "outline"}
+                  onClick={() => setViewMode("list")}
+                  title="List view"
+                >
+                  ≡
+                </Button>
+              </div>
             </div>
           </div>
           <div className={styles.statsRow}>
@@ -375,16 +452,16 @@ export default function NewStories() {
             <div><span>Published</span><strong>{storyStats.published}</strong></div>
             <div><span>Drafts</span><strong>{storyStats.drafts}</strong></div>
           </div>
-          <div className={styles.storiesGrid}>
+          <div className={viewMode === "list" ? styles.storiesList : styles.storiesGrid}>
             {storiesLoading ? (
               <p className={styles.empty}>Loading stories...</p>
             ) : filteredStories.length === 0 ? (
               <p className={styles.empty}>No stories found. Click &quot;Add New Story&quot; to create one.</p>
             ) : (
-              filteredStories.map((story) => (
+              filteredStories.map((story, idx) => (
                 <article
                   key={story._id}
-                  className={styles.storyGridCard}
+                  className={viewMode === "list" ? styles.storyListCard : styles.storyGridCard}
                   onClick={() => handleEdit(story)}
                 >
                   <div className={styles.storyGridThumb}>
@@ -394,12 +471,34 @@ export default function NewStories() {
                   </div>
                   <div className={styles.storyGridBody}>
                     <h3>{stripHtml(story.title) || "Untitled Story"}</h3>
-                    <p className={styles.storyMeta}>Post #{story.post_number || "N/A"} · /{story.slug || "no-slug"}</p>
+                    <p className={styles.storyMeta}>Post #{stripHtml(story.post_number || "") || "N/A"} · /{story.slug || "no-slug"}</p>
                     <span className={story.published ? styles.published : styles.draft}>
                       {story.published ? "Published" : "Draft"}
                     </span>
                   </div>
                   <div className={styles.storyGridActions}>
+                    <div className={styles.reorderBtns}>
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="ghost"
+                        disabled={idx === 0 || reorderingId === story._id}
+                        onClick={(e) => { e.stopPropagation(); handleReorder(story._id, "up"); }}
+                        title="Move up"
+                      >
+                        ↑
+                      </Button>
+                      <Button
+                        type="button"
+                        size="sm"
+                        variant="ghost"
+                        disabled={idx === filteredStories.length - 1 || reorderingId === story._id}
+                        onClick={(e) => { e.stopPropagation(); handleReorder(story._id, "down"); }}
+                        title="Move down"
+                      >
+                        ↓
+                      </Button>
+                    </div>
                     <Button type="button" size="sm" variant="outline" onClick={(e) => { e.stopPropagation(); handleEdit(story); }}>Edit</Button>
                     {!story.published && (
                       <Button

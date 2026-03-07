@@ -493,7 +493,19 @@
   gap: 1rem;
 }
 
-.storyGridCard {
+.storiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.viewToggle {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.storyGridCard,
+.storyListCard {
   display: flex;
   flex-direction: column;
   border: 1px solid #e5e7eb;
@@ -504,9 +516,46 @@
   transition: 0.2s ease;
 }
 
-.storyGridCard:hover {
+.storyGridCard:hover,
+.storyListCard:hover {
   border-color: #93c5fd;
   box-shadow: 0 6px 20px rgba(30, 64, 175, 0.1);
+}
+
+/* List view: horizontal row layout */
+.storyListCard {
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+}
+
+.storyListCard .storyGridThumb {
+  width: 100px;
+  min-width: 100px;
+  aspect-ratio: 16/9;
+  flex-shrink: 0;
+}
+
+.storyListCard .storyGridBody {
+  flex: 1;
+  min-width: 0;
+  padding: 0.75rem 1rem;
+  border-top: none;
+}
+
+.storyListCard .storyGridBody h3 {
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.storyListCard .storyGridActions {
+  flex-shrink: 0;
+  border-top: none;
+  border-left: 1px solid #f3f4f6;
+  padding: 0.5rem 1rem;
 }
 
 .storyGridThumb {
@@ -544,7 +593,19 @@
   padding: 0.5rem 1rem;
   border-top: 1px solid #f3f4f6;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 0.5rem;
+}
+
+.reorderBtns {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.reorderBtns button {
+  min-width: 1.75rem;
+  padding: 0.2rem 0.35rem;
 }
 
 /* Preview dialog - full website layout */

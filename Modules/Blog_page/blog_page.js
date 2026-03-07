@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import parse from "html-react-parser";
+import { getPostNumberDisplay } from "@/app/utils/postNumber";
 import SkeletonLoader from "@/components/Loader/loader";
 import { display } from '@mui/system';
 
@@ -660,7 +661,7 @@ const Blog_page = ({ stories: storiesProp, initialStory, relatedStories = [] }) 
                                          style={{
                                          marginBottom:"0px",                 
                                         }}>
-                                        {parseHtml(story.post_number || "")}
+                                        {getPostNumberDisplay(story.post_number)}
                                         
                                     </h3>                 
                                 </div>   
