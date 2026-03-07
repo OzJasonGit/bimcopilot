@@ -18,6 +18,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import ImageUploadField from "@/components/ImageUploadField/ImageUploadField";
 
 const MAX_BODY_SECTIONS = 18;
 
@@ -44,7 +45,7 @@ const formSchema = z.object({
   author: z.string().min(2, "Author must be at least 2 characters"),
   date: z.string().optional(),
   subtitle: z.string().optional(),
-  image: z.string().min(1, "Main image URL is required"),
+  image: z.string().min(1, "Main image is required"),
   image2: z.string().optional(),
   avatar: z.string().optional(),
   introduction: z.string().min(3, "Introduction is required"),
@@ -517,9 +518,14 @@ export default function NewStories() {
                   name="image"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Main Image URL</FormLabel>
                       <FormControl>
-                        <Input placeholder="https://..." {...field} />
+                        <ImageUploadField
+                          label="Main Image"
+                          value={field.value}
+                          onChange={field.onChange}
+                          placeholder="Or paste URL..."
+                          folder="Stories_Main"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -530,9 +536,14 @@ export default function NewStories() {
                   name="image2"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Secondary Image URL</FormLabel>
                       <FormControl>
-                        <Input placeholder="https://..." {...field} />
+                        <ImageUploadField
+                          label="Secondary Image"
+                          value={field.value}
+                          onChange={field.onChange}
+                          placeholder="Or paste URL..."
+                          folder="Stories_Secondary"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -543,9 +554,14 @@ export default function NewStories() {
                   name="avatar"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Author Avatar URL</FormLabel>
                       <FormControl>
-                        <Input placeholder="https://..." {...field} />
+                        <ImageUploadField
+                          label="Author Avatar"
+                          value={field.value}
+                          onChange={field.onChange}
+                          placeholder="Or paste URL..."
+                          folder="Stories_Avatars"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>

@@ -12,7 +12,7 @@ export async function getStories() {
   const db = await connectToDatabase();
   const collection = db.collection("stories");
   const data = await collection
-    .find({})
+    .find({ published: true })
     .sort({ post_number: -1 })
     .toArray();
   return toPlain(data || []);
@@ -24,7 +24,7 @@ export async function getStories() {
 export async function getStoryBySlug(slug) {
   if (!slug) return null;
   const db = await connectToDatabase();
-  const story = await db.collection("stories").findOne({ slug });
+  const story = await db.collection("stories").findOne({ slug, published: true });
   return toPlain(story);
 }
 
@@ -35,7 +35,7 @@ export async function getRelatedStories(currentSlug, limit = 3) {
   const db = await connectToDatabase();
   const list = await db
     .collection("stories")
-    .find({ slug: { $ne: currentSlug } })
+    .find({ slug: { $ne: currentSlug }, published: true })
     .sort({ post_number: -1 })
     .limit(limit)
     .toArray();

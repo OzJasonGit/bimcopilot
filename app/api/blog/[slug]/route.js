@@ -5,7 +5,7 @@ export async function GET(req, { params }) {
     const { slug } = params;
     const db = await connectToDatabase();
 
-    const story = await db.collection("stories").findOne({ slug });
+    const story = await db.collection("stories").findOne({ slug, published: true });
 
     if (!story) {
         return new NextResponse(JSON.stringify({ error: "Story not found" }), { status: 404 });

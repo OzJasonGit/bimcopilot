@@ -7,19 +7,19 @@ export async function GET(req) {
 
     const collection = db.collection("stories");
 
+    const publishedQuery = { published: true };
     const data = await collection
-        .find({})
+        .find(publishedQuery)
         .sort({ post_number: -1 })
         .limit(2)
         .toArray();
 
-    // Get the first story (latest by post_number)
     const firstStory = await collection.findOne(
-        {},
+        publishedQuery,
         { sort: { post_number: -1 } }
     );
 
-    const topStoriesToSlice = await collection.find({}).toArray();
+    const topStoriesToSlice = await collection.find(publishedQuery).toArray();
     const topStories = topStoriesToSlice.slice(1, 6);
 
     const responseData = {
