@@ -44,8 +44,9 @@ export async function POST(req) {
     const db = await connectToDatabase();
     const collection = db.collection("stories");
     const data = await req.json();
-    const sortOrder = getPostNumberNumeric(data.post_number);
-    const result = await collection.insertOne({ ...data, sortOrder });
+    const top = await collection.findOne({}, { sort: { sortOrder: -1 }, projection: { sortOrder: 1 } });
+    const nextSortOrder = (top?.sortOrder ?? 9999) + 1;
+    const result = await collection.insertOne({ ...data, sortOrder: nextSortOrder });
     return new NextResponse(
       JSON.stringify({ success: true, data: result }),
       { status: 200, headers: { "Content-Type": "application/json" } }
@@ -104,6 +105,48 @@ export async function PUT(req) {
     );
   } catch (error) {
     console.error("Error in PUT /api/admin_route:", error);
+    return new NextResponse(
+      JSON.stringify({ success: false, error: "Internal server error" }),
+      { status: 500, headers: { "Content-Type": "application/json" } }
+    );
+  }
+}
+
+export async function DELETE(req) {
+  try {
+    const user = await getCurrentUser();
+    if (!user || user.role !== 1) {
+      return new NextResponse(
+        JSON.stringify({ success: false, error: "Admin access required" }),
+        { status: 403, headers: { "Content-Type": "application/json" } }
+      );
+    }
+    const db = await connectToDatabase();
+    const collection = db.collection("stories");
+    const { _id } = await req.json().catch(() => ({}));
+
+    if (!_id) {
+      return new NextResponse(
+        JSON.stringify({ success: false, error: "Story ID is required" }),
+        { status: 400, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    const result = await collection.deleteOne({ _id: new ObjectId(_id) });
+
+    if (result.deletedCount === 0) {
+      return new NextResponse(
+        JSON.stringify({ success: false, error: "Story not found" }),
+        { status: 404, headers: { "Content-Type": "application/json" } }
+      );
+    }
+
+    return new NextResponse(
+      JSON.stringify({ success: true }),
+      { status: 200, headers: { "Content-Type": "application/json" } }
+    );
+  } catch (error) {
+    console.error("Error in DELETE /api/admin_route:", error);
     return new NextResponse(
       JSON.stringify({ success: false, error: "Internal server error" }),
       { status: 500, headers: { "Content-Type": "application/json" } }

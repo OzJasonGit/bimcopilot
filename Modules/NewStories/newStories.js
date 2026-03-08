@@ -20,6 +20,14 @@ import {
 import { Input } from "@/components/ui/input";
 import ImageUploadField from "@/components/ImageUploadField/ImageUploadField";
 import { getPostNumberDisplay } from "@/app/utils/postNumber";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogFooter,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 const MAX_BODY_SECTIONS = 18;
 
@@ -122,7 +130,13 @@ export default function NewStories() {
   const [publishingId, setPublishingId] = useState(null);
   const [reorderingId, setReorderingId] = useState(null);
   const [reindexing, setReindexing] = useState(false);
+  const [deletingId, setDeletingId] = useState(null);
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [deleteTarget, setDeleteTarget] = useState(null);
+  const [deleteConfirmText, setDeleteConfirmText] = useState("");
   const [viewMode, setViewMode] = useState("grid"); // "grid" | "list"
+
+  const deleteConfirmValid = deleteConfirmText.trim().toLowerCase() === "delete";
   const titleWatch = form.watch("title");
   const formValues = form.watch();
 
@@ -336,6 +350,49 @@ export default function NewStories() {
     }
   }
 
+  function openDeleteDialog(story, e) {
+    e?.stopPropagation();
+    setDeleteTarget(story);
+    setDeleteConfirmText("");
+    setDeleteDialogOpen(true);
+  }
+
+  function closeDeleteDialog() {
+    setDeleteDialogOpen(false);
+    setDeleteTarget(null);
+    setDeleteConfirmText("");
+  }
+
+  async function confirmDelete() {
+    if (!deleteTarget || !deleteConfirmValid) return;
+    const storyId = deleteTarget._id;
+    closeDeleteDialog();
+    setDeletingId(storyId);
+    setNotice({ type: "", message: "" });
+    try {
+      const res = await fetch("/api/admin_route", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ _id: storyId }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setNotice({ type: "error", message: data.error || "Failed to delete story." });
+        return;
+      }
+      setNotice({ type: "success", message: "Story deleted." });
+      setStories((prev) => prev.filter((s) => String(s._id) !== String(storyId)));
+      if (editingStory && String(editingStory._id) === String(storyId)) {
+        handleCreateNew();
+      }
+    } catch (error) {
+      console.error("Delete error:", error);
+      setNotice({ type: "error", message: "Failed to delete story." });
+    } finally {
+      setDeletingId(null);
+    }
+  }
+
   async function handleReindex() {
     setReindexing(true);
     setNotice({ type: "", message: "" });
@@ -396,6 +453,42 @@ export default function NewStories() {
 
   return (
     <section className={styles.page}>
+      <Dialog open={deleteDialogOpen} onOpenChange={(open) => !open && closeDeleteDialog()}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Delete story</DialogTitle>
+            <DialogDescription>
+              This action cannot be undone. Type <strong>delete</strong> below to confirm deletion of
+              {deleteTarget && (
+                <span className="block mt-2 font-medium text-foreground truncate max-w-full">
+                  &quot;{stripHtml(deleteTarget.title) || "Untitled Story"}&quot;
+                </span>
+              )}
+            </DialogDescription>
+          </DialogHeader>
+          <Input
+            placeholder="Type delete to confirm"
+            value={deleteConfirmText}
+            onChange={(e) => setDeleteConfirmText(e.target.value)}
+            className="mt-2"
+            autoComplete="off"
+          />
+          <DialogFooter>
+            <Button type="button" variant="outline" onClick={closeDeleteDialog}>
+              Cancel
+            </Button>
+            <Button
+              type="button"
+              variant="destructive"
+              disabled={!deleteConfirmValid}
+              onClick={confirmDelete}
+            >
+              Delete story
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
       {!showEditor ? (
         <div className={styles.storiesListLayout}>
           <div className={styles.toolbar}>
@@ -510,6 +603,17 @@ export default function NewStories() {
                         {publishingId === story._id ? "Publishing…" : "Publish"}
                       </Button>
                     )}
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="ghost"
+                      disabled={deletingId === story._id}
+                      onClick={(e) => openDeleteDialog(story, e)}
+                      title="Delete story"
+                      className={styles.deleteBtn}
+                    >
+                      {deletingId === story._id ? "…" : "Delete"}
+                    </Button>
                   </div>
                 </article>
               ))
