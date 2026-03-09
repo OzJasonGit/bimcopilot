@@ -36,14 +36,14 @@
   display: none;
 }
 
-/* Overlay to completely hide Cal.com iframe scrollbar - wider to eliminate any thin line */
+/* Overlay to completely hide Cal.com iframe scrollbar and top-right corner artifact */
 .calEmbedWrapper::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 24px;
-  height: 100%;
+  top: -2px;
+  right: -2px;
+  width: 28px;
+  height: calc(100% + 4px);
   background: #1a1a1a;
   pointer-events: none;
   border-radius: 0 12px 12px 0;
@@ -99,6 +99,7 @@
   padding: 1.5rem;
   border: 1px solid #2a2a2a;
   border-right: none;
+  overflow: hidden;
 }
 
 .warning {
