@@ -33,16 +33,16 @@
 }
 
 .calEmbedWrapper::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
-/* Overlay to visually hide Cal.com iframe scrollbar (iframe content can't be styled) */
+/* Overlay to completely hide Cal.com iframe scrollbar - wider to eliminate any thin line */
 .calEmbedWrapper::after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  width: 14px;
+  width: 24px;
   height: 100%;
   background: #1a1a1a;
   pointer-events: none;
@@ -54,7 +54,8 @@
   min-height: 550px !important;
   width: 450px !important;
   max-width: 450px;
-  border: 0;
+  border: 0 !important;
+  outline: none !important;
 }
 
 /* Hide scrollbars in our embed container */
@@ -97,6 +98,7 @@
   border-radius: 12px;
   padding: 1.5rem;
   border: 1px solid #2a2a2a;
+  border-right: none;
 }
 
 .warning {
