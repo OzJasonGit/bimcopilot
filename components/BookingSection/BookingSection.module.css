@@ -33,7 +33,7 @@
 }
 
 .calEmbedWrapper::-webkit-scrollbar {
-  display: none;
+  display: none; 
 }
 
 /* Overlay to visually hide Cal.com iframe scrollbar (iframe content can't be styled) */
