@@ -65,10 +65,7 @@ export default function BookingSection() {
 
         <div className={styles.left}>
           <div className={styles.calendar}>
-            <div className={styles.warning}>
-              BIM Copilot is experiencing a high volume of bookings, so slots are limited. For
-              faster service, email info@bimcopilot.com for a same-day response.
-            </div>
+
             <div className={styles.calEmbedWrapper}>
               <Cal
                 calLink={calLink}
