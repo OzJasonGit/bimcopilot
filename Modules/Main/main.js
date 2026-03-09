@@ -13,6 +13,7 @@ import Blog from "@/components/Blog/page";
 import Mainvideo from "@/components/Mainvideo/page";
 import Subfooter from "@/components/Subfooter/subfooter";
 import Subfooter2 from "@/components/Subfooter2/subfooter2";
+import BookingSection from "@/components/BookingSection/BookingSection";
 import SkeletonLoader from "@/components/Loader/loader";
 import SkeletonLoader2 from "@/components/Loader/loader2";
 
@@ -54,6 +55,7 @@ const Main = ({ }) => {
           <Mainvideo />
           <Subfooter /> 
           <Subfooter2 />
+          <BookingSection />
           <Footer />
 
         </>

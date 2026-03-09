@@ -1,0 +1,242 @@
+.section {
+  width: 100%;
+  background: #171717;
+  padding: 4rem 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.left {
+  min-width: 0;
+}
+
+.right {
+  /* Empty left column - calendar sits in .left (right grid column) */
+}
+
+.calEmbedWrapper {
+  min-height: 500px;
+  width: 100%;
+}
+
+.calEmbedWrapper > div,
+.calEmbedWrapper iframe {
+  min-height: 500px !important;
+  width: 100% !important;
+  border: 0;
+}
+
+.setupHint {
+  padding: 1.5rem;
+  color: #a3a3a3;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.setupHint p {
+  margin: 0 0 0.5rem;
+}
+
+.setupSteps {
+  font-size: 0.8rem;
+  color: #737373;
+  margin-top: 0.75rem !important;
+}
+
+.setupHint code {
+  background: #262626;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.8em;
+}
+
+.calendar {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #2a2a2a;
+}
+
+.warning {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  color: #fca5a5;
+  line-height: 1.4;
+}
+
+.calendarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.chevron {
+  background: transparent;
+  border: none;
+  color: #a3a3a3;
+  cursor: pointer;
+  padding: 0.35rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s, background 0.15s;
+}
+
+.chevron:hover {
+  color: #fff;
+  background: #2a2a2a;
+}
+
+.monthYear {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.weekday {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #737373;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.dateGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.35rem;
+}
+
+.dateCell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #a3a3a3;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.dateCell.currentMonth {
+  color: #fff;
+}
+
+.dateCell.currentMonth:hover {
+  background: #2a2a2a;
+  color: #fff;
+}
+
+.dateCell.selected {
+  background: #fff;
+  color: #0f0f0f;
+}
+
+.dateCell.selected:hover {
+  background: #f5f5f5;
+  color: #0f0f0f;
+}
+
+.timeSection {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #2a2a2a;
+}
+
+.timeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.selectedDay {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.timeFormatToggle {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.timeFormatToggle button {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #3a3a3a;
+  background: transparent;
+  color: #737373;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.timeFormatToggle button:hover {
+  color: #fff;
+  border-color: #525252;
+}
+
+.timeFormatToggle button.active {
+  background: #2a2a2a;
+  color: #fff;
+  border-color: #3a3a3a;
+}
+
+.timeSlots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timeSlot {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: #262626;
+  color: #fff;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.timeSlot:hover {
+  background: #333;
+  border-color: #525252;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .right {
+    display: none;
+  }
+}
