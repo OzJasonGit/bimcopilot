@@ -89,7 +89,7 @@ const SignInForm = () => {
     onError: () => {
       toast.error("Google Login failed.");
     },
-    scope: "openid email profile",
+    scope: "openid email profile", 
   });
 
   return (
