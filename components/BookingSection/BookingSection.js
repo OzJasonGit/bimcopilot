@@ -39,35 +39,32 @@ export default function BookingSection() {
   if (!CALCOM_LINK || !calLink) {
 
 
-
-
-
-
-
-    return (
-      <section className={styles.SHADOW_SECTION_TAG}>
-        <div className={styles.container}>
-          <div className={styles.left}>
-            <div className={styles.calendar}>
-              <div className={styles.setupHint}>
-                <p>Connect your Cal.com account to enable booking.</p>
-                <p className={styles.setupSteps}>
-                  Add <code>NEXT_PUBLIC_CALCOM_LINK</code> to your <code>.env</code> with your Cal.com
-                  scheduling link (e.g. <code>https://cal.com/your-username</code> or{" "}
-                  <code>your-username/30min</code>).
-                </p>
+    /* return (
+          <section id={styles.SHADOW_SECTION_TAG}>
+            <div className={styles.grid_0_main}>
+              <div className={styles.left}>
+                <div className={styles.calendar}>
+                  <div className={styles.setupHint}>
+                    <p>Connect your Cal.com account to enable booking.</p>
+                    <p className={styles.setupSteps}>
+                      Add <code>NEXT_PUBLIC_CALCOM_LINK</code> to your <code>.env</code> with your Cal.com
+                      scheduling link (e.g. <code>https://cal.com/your-username</code> or{" "}
+                      <code>your-username/30min</code>).
+                    </p>
+                  </div>
+                </div>
               </div>
+              <div className={styles.right} />
             </div>
-          </div>
-          <div className={styles.right} />
-        </div>
-      </section>
-    );
+          </section>
+        );*/
+
+
   }
 
   return (
-    <section className={styles.SHADOW_SECTION_TAG}>
-      <div className={styles.container}>
+    <section id={styles.SHADOW_SECTION_TAG}>
+      <div className={styles.grid_0_main}>
         <div className={styles.right} />
 
         <div className={styles.left}>
