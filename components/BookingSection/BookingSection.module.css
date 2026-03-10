@@ -26,6 +26,32 @@
 }
 
 
+.grid {
+  grid-area: MAIN-AREA;
+  display: grid;
+  grid-column-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: ". . . . . . . . CAL CAL CAL CAL";
+}
+
+
+
+
+.calendar {
+  width: fit-content;
+  grid-area: CAL;
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #2a2a2a;
+  border-right: none;
+  overflow: hidden;
+}
+
+
+
+
 
 
 
@@ -51,15 +77,9 @@
   align-items: start;
 }
 
-.left {
-  min-width: 0;
-  display: flex;
-  justify-content: flex-end;
-}
 
-.right {
-  /* Empty left column - calendar sits in .left (right grid column) */
-}
+
+
 
 .calEmbedWrapper {
   position: relative;
@@ -130,15 +150,7 @@
   font-size: 0.8em;
 }
 
-.calendar {
-  width: fit-content;
-  background: #1a1a1a;
-  border-radius: 12px;
-  padding: 1.5rem;
-  border: 1px solid #2a2a2a;
-  border-right: none;
-  overflow: hidden;
-}
+
 
 .warning {
   background: rgba(239, 68, 68, 0.08);
