@@ -64,12 +64,11 @@ export default function BookingSection() {
 
   return (
     <section id={styles.SHADOW_SECTION_TAG}>
+
       <div className={styles.grid_0_main}>
-        <div className={styles.right} />
+        <div className={styles.grid}>
 
-        <div className={styles.left}>
           <div className={styles.calendar}>
-
             <div className={styles.calEmbedWrapper}>
               <Cal
                 calLink={calLink}
@@ -81,8 +80,10 @@ export default function BookingSection() {
               />
             </div>
           </div>
+
         </div>
       </div>
+
     </section>
   );
 
