@@ -66,7 +66,7 @@ export default function BookingSection() {
   }
 
   return (
-    <section className={styles.section}>
+    <section className={styles.SHADOW_SECTION_TAG}>
       <div className={styles.container}>
         <div className={styles.right} />
 
