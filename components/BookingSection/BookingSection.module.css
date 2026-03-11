@@ -94,9 +94,10 @@
 
 .calEmbedWrapper {
   position: relative;
-  width: 450px;
-  min-height: 550px;
+  width: 460px;
+  min-height: 660px;
   flex-shrink: 0;
+  overflow: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -105,24 +106,24 @@
   display: none;
 }
 
-/* Overlay to completely hide Cal.com/Cal.eu iframe scrollbar (iframe content can't be styled) */
+/* Narrow overlay only over scrollbar so Confirm button stays visible */
 .calEmbedWrapper::after {
   content: "";
   position: absolute;
-  top: -2px;
-  right: -2px;
-  width: 36px;
-  height: calc(100% + 4px);
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 100%;
   background: #1a1a1a;
   pointer-events: none;
   border-radius: 0 12px 12px 0;
 }
 
-.calEmbedWrapper>div,
+.calEmbedWrapper > div,
 .calEmbedWrapper iframe {
-  min-height: 550px !important;
-  width: 450px !important;
-  max-width: 450px;
+  min-height: 660px !important;
+  width: 468px !important;
+  max-width: 468px;
   border: 0 !important;
   outline: none !important;
 }
