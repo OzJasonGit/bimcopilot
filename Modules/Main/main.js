@@ -55,7 +55,7 @@ const Main = ({ }) => {
           <Mainvideo />
           <Subfooter /> 
           <Subfooter2 />
-          <BookingSection />
+          <BookingSection />  
           <Footer />
 
         </>
