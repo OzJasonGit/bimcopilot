@@ -5,6 +5,8 @@ import Cal, { getCalApi } from "@calcom/embed-react";
 import styles from "./BookingSection.module.css";
 
 const CALCOM_LINK = process.env.NEXT_PUBLIC_CALCOM_LINK;
+const CAL_EMBED_URL = "https://app.cal.eu/embed/embed.js";
+const CAL_ORIGIN = "https://app.cal.eu";
 
 function getCalLink(value) {
   if (!value || typeof value !== "string") return null;
@@ -27,7 +29,7 @@ export default function BookingSection() {
   useEffect(() => {
     if (!calLink) return;
     (async function () {
-      const cal = await getCalApi();
+      const cal = await getCalApi({ embedJsUrl: CAL_EMBED_URL });
       cal("ui", {
         theme: "dark",
         layout: "month_view",
@@ -72,7 +74,8 @@ export default function BookingSection() {
             <div className={styles.calEmbedWrapper}>
               <Cal
                 calLink={calLink}
-                embedJsUrl="https://cal.com/embed.js"
+                embedJsUrl={CAL_EMBED_URL}
+                calOrigin={CAL_ORIGIN}
                 config={{
                   theme: "dark",
                   layout: "month_view",
