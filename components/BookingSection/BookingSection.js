@@ -72,9 +72,15 @@ export default function BookingSection() {
 
           <div className={styles.tag}>
             <div>
-              <h2>See if Bimcopilot is the
+              <h2
+                class="text-6xl ... text-stone-50 ... font-avant_garde_bold">
+                See if Bimcopilot is the
                 right for you
               </h2>
+              <h3
+                class="text-base ... text-stone-700 ... font-avant_garde_medium">
+                Schedule a 15 minute discovery tour through Bimcopilot.
+              </h3>
             </div>
 
           </div>
