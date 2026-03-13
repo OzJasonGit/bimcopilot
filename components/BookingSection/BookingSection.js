@@ -77,6 +77,7 @@ export default function BookingSection() {
                 See if Bimcopilot is the
                 right for you
               </h2>
+              <br />
               <h3
                 class="text-base ... text-stone-700 ... font-avant_garde_medium">
                 Schedule a 15 minute discovery tour through Bimcopilot.
