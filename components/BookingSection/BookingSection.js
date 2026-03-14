@@ -84,7 +84,7 @@ export default function BookingSection() {
               </h2>
               <br />
               <h3
-                class="text-base ... text-stone-200 ... font-avant_garde_medium">
+                class="text-base ... text-stone-400 ... font-avant_garde_medium">
                 Schedule a 15 minute discovery tour through Bimcopilot.
               </h3>
             </div>
