@@ -70,11 +70,13 @@ export default function BookingSection() {
       <div className={styles.grid_0_main}>
         <div className={styles.grid}>
 
-          <div className={styles.tag}
-            style={{
-              gridArea: "TEXT"
-            }}>
-            <div>
+          <div className={styles.tag}>
+
+            <div
+              className={styles.text}
+              style={{
+                gridArea: "TEXT"
+              }}>
               <h2
                 class="text-6xl ... text-stone-50 ... font-avant_garde_bold">
                 See if Bimcopilot is the
