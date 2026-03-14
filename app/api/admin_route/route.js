@@ -15,10 +15,10 @@ export async function GET(req) {
     }
     const db = await connectToDatabase();
     const collection = db.collection("stories");
-    const stories = await collection
-      .find({})
-      .sort({ sortOrder: -1, post_number: -1 })
-      .toArray();
+    const raw = await collection.find({}).toArray();
+    const stories = raw.sort(
+      (a, b) => getPostNumberNumeric(b.post_number) - getPostNumberNumeric(a.post_number)
+    );
     return new NextResponse(
       JSON.stringify({ success: true, data: stories }),
       { status: 200, headers: { "Content-Type": "application/json" } }
