@@ -1,4 +1,5 @@
 import { connectToDatabase } from "../utils/mongodb";
+import { getPostNumberNumeric } from "../utils/postNumber";
 
 function toPlain(value) {
   if (value == null) return value;
@@ -7,14 +8,15 @@ function toPlain(value) {
 
 /**
  * Server-only: fetch all stories for blog index (SSR/crawlable).
+ * Sorted by latest post number first so new stories show without reindex.
  */
 export async function getStories() {
   const db = await connectToDatabase();
   const collection = db.collection("stories");
-  const data = await collection
-    .find({ published: true })
-    .sort({ sortOrder: -1, post_number: -1 })
-    .toArray();
+  const raw = await collection.find({ published: true }).toArray();
+  const data = raw.sort(
+    (a, b) => getPostNumberNumeric(b.post_number) - getPostNumberNumeric(a.post_number)
+  );
   return toPlain(data || []);
 }
 
@@ -30,14 +32,17 @@ export async function getStoryBySlug(slug) {
 
 /**
  * Server-only: fetch other stories (for related posts), excluding the given slug.
+ * Sorted by latest post number first.
  */
 export async function getRelatedStories(currentSlug, limit = 3) {
   const db = await connectToDatabase();
-  const list = await db
+  const raw = await db
     .collection("stories")
     .find({ slug: { $ne: currentSlug }, published: true })
-    .sort({ sortOrder: -1, post_number: -1 })
-    .limit(limit)
     .toArray();
+  const sorted = raw.sort(
+    (a, b) => getPostNumberNumeric(b.post_number) - getPostNumberNumeric(a.post_number)
+  );
+  const list = sorted.slice(0, limit);
   return toPlain(list || []);
 }
