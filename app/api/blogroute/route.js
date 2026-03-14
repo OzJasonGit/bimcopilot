@@ -1,24 +1,18 @@
 import { connectToDatabase } from "../../utils/mongodb";
 import { NextResponse } from "next/server";
-
+import { getPostNumberNumeric } from "../../utils/postNumber";
 
 export async function GET(req) {
     const db = await connectToDatabase();
-
     const collection = db.collection("stories");
-
     const publishedQuery = { published: true };
-    const sortOpt = { sortOrder: -1, post_number: -1 };
-    const data = await collection
-        .find(publishedQuery)
-        .sort(sortOpt)
-        .limit(2)
-        .toArray();
-
-    const firstStory = await collection.findOne(publishedQuery, { sort: sortOpt });
-
-    const topStoriesToSlice = await collection.find(publishedQuery).sort(sortOpt).toArray();
-    const topStories = topStoriesToSlice.slice(1, 6);
+    const raw = await collection.find(publishedQuery).toArray();
+    const sorted = raw.sort(
+        (a, b) => getPostNumberNumeric(b.post_number) - getPostNumberNumeric(a.post_number)
+    );
+    const data = sorted.slice(0, 2);
+    const firstStory = sorted[0] ?? null;
+    const topStories = sorted.slice(1, 6);
 
     const responseData = {
         data,

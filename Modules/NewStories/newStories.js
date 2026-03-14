@@ -458,9 +458,9 @@ export default function NewStories() {
           <DialogHeader>
             <DialogTitle>Delete story</DialogTitle>
             <DialogDescription>
-              This action cannot be undone. Type <strong>delete</strong> below to confirm deletion of
+              This action cannot be undone. Type <strong>delete</strong> below to confirm deletion of{" "}
               {deleteTarget && (
-                <span className="block mt-2 font-medium text-foreground truncate max-w-full">
+                <span className="block mt-2 font-medium text-foreground truncate max-w-full" title={stripHtml(deleteTarget.title) || "Untitled Story"}>
                   &quot;{stripHtml(deleteTarget.title) || "Untitled Story"}&quot;
                 </span>
               )}
